@@ -1,0 +1,73 @@
+
+hello:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 98 23 00 00    	lea    0x2398,%eax
+    1110:	c7 00 c0 11 00 00    	movl   $0x11c0,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 7e 00 00 00       	call   11a0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <main>:
+    1130:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1134:	83 e4 f0             	and    $0xfffffff0,%esp
+    1137:	ff 71 fc             	pushl  -0x4(%ecx)
+    113a:	55                   	push   %ebp
+    113b:	89 e5                	mov    %esp,%ebp
+    113d:	51                   	push   %ecx
+    113e:	83 ec 10             	sub    $0x10,%esp
+    1141:	68 55 11 00 00       	push   $0x1155
+    1146:	e8 65 00 00 00       	call   11b0 <printf@plt>
+    114b:	8b 4d fc             	mov    -0x4(%ebp),%ecx
+    114e:	31 c0                	xor    %eax,%eax
+    1150:	c9                   	leave  
+    1151:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    1154:	c3                   	ret    
+    1155:	48                   	dec    %eax
+    1156:	65 6c                	gs insb (%dx),%es:(%edi)
+    1158:	6c                   	insb   (%dx),%es:(%edi)
+    1159:	6f                   	outsl  %ds:(%esi),(%dx)
+    115a:	20 48 65             	and    %cl,0x65(%eax)
+    115d:	6c                   	insb   (%dx),%es:(%edi)
+    115e:	65 6e                	outsb  %gs:(%esi),(%dx)
+    1160:	4f                   	dec    %edi
+    1161:	53                   	push   %ebx
+	...
+
+Disassembly of section .plt:
+
+00001190 <__main@plt-0x10>:
+    1190:	ff 35 84 23 00 00    	pushl  0x2384
+    1196:	ff 25 88 23 00 00    	jmp    *0x2388
+    119c:	00 00                	add    %al,(%eax)
+	...
+
+000011a0 <__main@plt>:
+    11a0:	ff 25 8c 23 00 00    	jmp    *0x238c
+    11a6:	68 00 00 00 00       	push   $0x0
+    11ab:	e9 e0 ff ff ff       	jmp    1190 <main+0x60>
+
+000011b0 <printf@plt>:
+    11b0:	ff 25 90 23 00 00    	jmp    *0x2390
+    11b6:	68 08 00 00 00       	push   $0x8
+    11bb:	e9 d0 ff ff ff       	jmp    1190 <main+0x60>
+
+000011c0 <__syscall_fast@plt>:
+    11c0:	ff 25 94 23 00 00    	jmp    *0x2394
+    11c6:	68 10 00 00 00       	push   $0x10
+    11cb:	e9 c0 ff ff ff       	jmp    1190 <main+0x60>
