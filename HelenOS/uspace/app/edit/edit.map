@@ -1,0 +1,222 @@
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x45a8 edit.o
+ .debug_abbrev  0x0000000000000000      0x3bf edit.o
+ .debug_loc     0x0000000000000000     0x22e4 edit.o
+ .debug_aranges
+                0x0000000000000000       0x28 edit.o
+ .debug_ranges  0x0000000000000000      0x760 edit.o
+ .debug_line    0x0000000000000000      0xbdd edit.o
+ .debug_str     0x0000000000000000     0x162a edit.o
+ .comment       0x0000000000000000       0x12 edit.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 edit.o
+ .eh_frame      0x0000000000000000      0x3dc edit.o
+ .debug_info    0x0000000000000000      0xad6 sheet.o
+ .debug_abbrev  0x0000000000000000      0x31b sheet.o
+ .debug_loc     0x0000000000000000      0x6e9 sheet.o
+ .debug_aranges
+                0x0000000000000000       0x20 sheet.o
+ .debug_ranges  0x0000000000000000       0x78 sheet.o
+ .debug_line    0x0000000000000000      0x263 sheet.o
+ .debug_str     0x0000000000000000      0x41c sheet.o
+ .comment       0x0000000000000000       0x12 sheet.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sheet.o
+ .eh_frame      0x0000000000000000      0x240 sheet.o
+ .debug_info    0x0000000000000000      0x451 search.o
+ .debug_abbrev  0x0000000000000000      0x180 search.o
+ .debug_loc     0x0000000000000000      0x1b6 search.o
+ .debug_aranges
+                0x0000000000000000       0x20 search.o
+ .debug_line    0x0000000000000000      0x175 search.o
+ .debug_str     0x0000000000000000      0x31c search.o
+ .comment       0x0000000000000000       0x12 search.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 search.o
+ .eh_frame      0x0000000000000000       0xb8 search.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x3a40
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130     0x1c5a edit.o
+ *fill*         0x0000000000002d8a        0x6 
+ .text.startup  0x0000000000002d90     0x1273 edit.o
+                0x0000000000002d90                main
+ *fill*         0x0000000000004003        0xd 
+ .text          0x0000000000004010      0x626 sheet.o
+                0x0000000000004010                sheet_create
+                0x0000000000004070                sheet_insert
+                0x0000000000004140                sheet_delete
+                0x0000000000004220                sheet_copy_out
+                0x00000000000042a0                sheet_get_cell_pt
+                0x0000000000004350                sheet_get_row_width
+                0x0000000000004450                sheet_get_num_rows
+                0x0000000000004490                spt_get_coord
+                0x0000000000004520                spt_equal
+                0x0000000000004540                spt_next_char
+                0x0000000000004580                spt_prev_char
+                0x00000000000045c0                sheet_place_tag
+                0x00000000000045f0                sheet_remove_tag
+                0x0000000000004620                tag_get_pt
+ *fill*         0x0000000000004636        0xa 
+ .text          0x0000000000004640      0x2ae search.o
+                0x0000000000004640                search_init
+                0x00000000000047c0                search_next_match
+                0x00000000000048b0                search_fini
+                0x00000000000048e0                char_exact_equals
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000048ee      0x1cf edit.o
+                                        0x1d0 (size before relaxing)
+ *fill*         0x0000000000004abd        0x3 
+ .rodata.str1.4
+                0x0000000000004ac0       0x6c edit.o
+                                         0x69 (size before relaxing)
+ .rodata        0x0000000000004b2c       0x44 edit.o
+
+.rel.plt        0x0000000000004b70      0x128
+ *(.rel.plt)
+ .rel.plt       0x0000000000004b70      0x128 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000004c98       0x18
+ *(.rel.*)
+ .rel.got       0x0000000000004c98        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000004c98       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000004cb0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000004cb0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000004cb0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000004cb0      0x260
+ *(.plt)
+ .plt           0x0000000000004cb0      0x260 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004cc0                console_get_size
+                0x0000000000004cd0                putchar
+                0x0000000000004ce0                __main
+                0x0000000000004cf0                str_to_awstr
+                0x0000000000004d00                wstr_length
+                0x0000000000004d10                printf
+                0x0000000000004d20                memmove
+                0x0000000000004d30                str_decode
+                0x0000000000004d40                memcpy
+                0x0000000000004d50                malloc
+                0x0000000000004d60                console_get_event
+                0x0000000000004d70                console_cursor_visibility
+                0x0000000000004d80                strtol
+                0x0000000000004d90                console_init
+                0x0000000000004da0                clipboard_put_str
+                0x0000000000004db0                assert_abort
+                0x0000000000004dc0                calloc
+                0x0000000000004dd0                console_clear
+                0x0000000000004de0                str_dup
+                0x0000000000004df0                clipboard_get_str
+                0x0000000000004e00                str_decode_reverse
+                0x0000000000004e10                realloc
+                0x0000000000004e20                fread
+                0x0000000000004e30                console_set_style
+                0x0000000000004e40                fopen
+                0x0000000000004e50                wstr_to_astr
+                0x0000000000004e60                fclose
+                0x0000000000004e70                asprintf
+                0x0000000000004e80                console_flush
+                0x0000000000004e90                str_size
+                0x0000000000004ea0                str_length
+                0x0000000000004eb0                console_set_pos
+                0x0000000000004ec0                fwrite
+                0x0000000000004ed0                str_to_wstr
+                0x0000000000004ee0                chr_encode
+                0x0000000000004ef0                __syscall_fast
+                0x0000000000004f00                free
+
+.dynsym         0x0000000000004f10      0x2b0
+ *(.dynsym)
+ .dynsym        0x0000000000004f10      0x2b0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x00000000000051c0      0x1db
+ *(.dynstr)
+ .dynstr        0x00000000000051c0      0x1db /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x000000000000539c      0x148
+ *(.hash)
+ .hash          0x000000000000539c      0x148 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x00000000000054e4       0x13
+ *(.interp)
+ .interp        0x00000000000054e4       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000064f7                . = (. + 0x1000)
+
+.dynamic        0x00000000000064f8       0xa8
+ *(.dynamic)
+ .dynamic       0x00000000000064f8       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000064f8                _DYNAMIC
+
+.data           0x00000000000065a0        0x0
+ *(.data)
+ .data          0x00000000000065a0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000065a0        0x0 edit.o
+ .data          0x00000000000065a0        0x0 sheet.o
+ .data          0x00000000000065a0        0x0 search.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000065a0        0x0
+ *(.got)
+ .got           0x00000000000065a0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000065a0       0xa0
+ *(.got.plt)
+ .got.plt       0x00000000000065a0       0xa0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000065a0                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000006640       0x94
+ *(.dynbss)
+ .dynbss        0x0000000000006640       0x1c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000006640                stdout
+                0x0000000000006650                stdin
+                0x0000000000006658                __syscall_fast_func
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000665c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x000000000000665c        0x4 
+ .bss           0x0000000000006660       0x74 edit.o
+ .bss           0x00000000000066d4        0x0 sheet.o
+ .bss           0x00000000000066d4        0x0 search.o
+
+/DISCARD/
+ *(*)
+LOAD edit.o
+LOAD sheet.o
+LOAD search.o
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(edit elf32-i386)

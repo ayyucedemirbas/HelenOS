@@ -1,0 +1,361 @@
+# DO NOT DELETE
+
+common.o: ../../lib/c/include/sys/types.h
+common.o: ../../lib/c/arch/ia32/include/libarch/types.h
+common.o: ../../lib/c/arch/ia32/include/libarch/common.h
+common.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+common.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+common.o: ../../lib/draw/drawctx.h ../../lib/c/include/stdbool.h
+common.o: ../../../abi/include/abi/bool.h ../../lib/softrend/compose.h
+common.o: ../../lib/c/include/io/pixel.h ../../lib/draw/surface.h
+common.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+common.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+common.o: ../../lib/c/arch/ia32/include/libarch/config.h
+common.o: ../../lib/draw/source.h ../../lib/softrend/transform.h
+common.o: ../../lib/softrend/filter.h ../../lib/draw/path.h
+common.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+common.o: ../../lib/c/include/stddef.h ../../lib/draw/font.h common.h
+button.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+button.o: ../../lib/c/include/sys/types.h
+button.o: ../../lib/c/arch/ia32/include/libarch/types.h
+button.o: ../../lib/c/arch/ia32/include/libarch/common.h
+button.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+button.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+button.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+button.o: ../../../abi/include/abi/bool.h ../../lib/c/include/malloc.h
+button.o: ../../lib/draw/drawctx.h ../../lib/softrend/compose.h
+button.o: ../../lib/c/include/io/pixel.h ../../lib/draw/surface.h
+button.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+button.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+button.o: ../../lib/c/arch/ia32/include/libarch/config.h
+button.o: ../../lib/draw/source.h ../../lib/softrend/transform.h
+button.o: ../../lib/softrend/filter.h ../../lib/draw/path.h
+button.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+button.o: ../../lib/c/include/stddef.h ../../lib/draw/font.h
+button.o: ../../lib/draw/font/embedded.h ../../lib/draw/font.h
+button.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+button.o: common.h window.h ../../lib/c/include/async.h
+button.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+button.o: ../../lib/c/include/atomic.h
+button.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+button.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+button.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+button.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+button.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+button.o: ../../lib/c/include/fibril.h
+button.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+button.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+button.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+button.o: ../../../abi/include/abi/ddi/irq.h
+button.o: ../../../abi/include/abi/ipc/event.h
+button.o: ../../../abi/include/abi/ipc/interfaces.h
+button.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+button.o: ../../lib/c/include/adt/prodcons.h
+button.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/ipc/window.h
+button.o: ../../lib/c/include/ipc/vfs.h ../../lib/c/include/io/window.h
+button.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+button.o: ../../lib/c/include/io/kbd_event.h ../../lib/c/include/io/keycode.h
+button.o: ../../lib/c/include/io/pos_event.h widget.h button.h connection.h
+canvas.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/types.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/common.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+canvas.o: ../../lib/softrend/transform.h ../../lib/c/include/stdbool.h
+canvas.o: ../../../abi/include/abi/bool.h ../../lib/draw/source.h
+canvas.o: ../../lib/softrend/filter.h ../../lib/c/include/io/pixelmap.h
+canvas.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+canvas.o: ../../lib/c/include/sys/time.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/config.h
+canvas.o: ../../lib/c/include/io/pixel.h ../../lib/draw/surface.h
+canvas.o: ../../lib/draw/drawctx.h ../../lib/softrend/compose.h
+canvas.o: ../../lib/draw/path.h ../../lib/c/include/adt/list.h
+canvas.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+canvas.o: ../../lib/draw/font.h window.h ../../lib/c/include/async.h
+canvas.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+canvas.o: ../../lib/c/include/atomic.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+canvas.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+canvas.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+canvas.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+canvas.o: ../../lib/c/include/fibril.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+canvas.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+canvas.o: ../../../abi/include/abi/ddi/irq.h
+canvas.o: ../../../abi/include/abi/ipc/event.h
+canvas.o: ../../../abi/include/abi/ipc/interfaces.h
+canvas.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+canvas.o: ../../lib/c/include/adt/prodcons.h
+canvas.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/ipc/window.h
+canvas.o: ../../lib/c/include/ipc/vfs.h ../../lib/c/include/io/window.h
+canvas.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+canvas.o: ../../lib/c/include/io/kbd_event.h ../../lib/c/include/io/keycode.h
+canvas.o: ../../lib/c/include/io/pos_event.h widget.h canvas.h connection.h
+connection.o: ../../lib/c/include/mem.h ../../lib/c/include/sys/types.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/types.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/common.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+connection.o: ../../lib/c/include/cc.h ../../lib/c/include/malloc.h
+connection.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+connection.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+connection.o: ../../lib/c/include/stddef.h ../../lib/c/include/adt/prodcons.h
+connection.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/fibril.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+connection.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+connection.o: ../../lib/c/include/sys/time.h ../../lib/c/include/io/window.h
+connection.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+connection.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+connection.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+connection.o: ../../../abi/include/abi/proc/task.h
+connection.o: ../../lib/c/include/futex.h ../../../abi/include/abi/ddi/irq.h
+connection.o: ../../../abi/include/abi/ipc/event.h
+connection.o: ../../../abi/include/abi/ipc/interfaces.h
+connection.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+connection.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+connection.o: ../../lib/c/include/io/kbd_event.h
+connection.o: ../../lib/c/include/io/keycode.h
+connection.o: ../../lib/c/include/io/pos_event.h window.h
+connection.o: ../../lib/c/include/ipc/window.h ../../lib/c/include/ipc/vfs.h
+connection.o: ../../lib/draw/surface.h ../../lib/c/include/io/pixelmap.h
+connection.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+connection.o: ../../lib/c/arch/ia32/include/libarch/config.h
+connection.o: ../../lib/c/include/io/pixel.h widget.h connection.h
+grid.o: ../../lib/c/include/assert.h ../../lib/c/include/mem.h
+grid.o: ../../lib/c/include/sys/types.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/types.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/common.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+grid.o: ../../lib/c/include/cc.h ../../lib/c/include/malloc.h
+grid.o: ../../lib/draw/surface.h ../../lib/c/include/stdbool.h
+grid.o: ../../../abi/include/abi/bool.h ../../lib/c/include/io/pixelmap.h
+grid.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+grid.o: ../../lib/c/include/sys/time.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/config.h
+grid.o: ../../lib/c/include/io/pixel.h window.h ../../lib/c/include/async.h
+grid.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+grid.o: ../../lib/c/include/atomic.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+grid.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+grid.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+grid.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+grid.o: ../../lib/c/include/fibril.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+grid.o: ../../lib/c/include/adt/list.h ../../lib/c/include/stddef.h
+grid.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+grid.o: ../../../abi/include/abi/ddi/irq.h
+grid.o: ../../../abi/include/abi/ipc/event.h
+grid.o: ../../../abi/include/abi/ipc/interfaces.h
+grid.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+grid.o: ../../lib/c/include/adt/prodcons.h ../../lib/c/include/fibril_synch.h
+grid.o: ../../lib/c/include/ipc/window.h ../../lib/c/include/ipc/vfs.h
+grid.o: ../../lib/c/include/io/window.h ../../lib/c/include/loc.h
+grid.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/io/kbd_event.h
+grid.o: ../../lib/c/include/io/keycode.h ../../lib/c/include/io/pos_event.h
+grid.o: widget.h grid.h
+label.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+label.o: ../../lib/c/include/sys/types.h
+label.o: ../../lib/c/arch/ia32/include/libarch/types.h
+label.o: ../../lib/c/arch/ia32/include/libarch/common.h
+label.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+label.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+label.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+label.o: ../../../abi/include/abi/bool.h ../../lib/c/include/malloc.h
+label.o: ../../lib/draw/drawctx.h ../../lib/softrend/compose.h
+label.o: ../../lib/c/include/io/pixel.h ../../lib/draw/surface.h
+label.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+label.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+label.o: ../../lib/c/arch/ia32/include/libarch/config.h
+label.o: ../../lib/draw/source.h ../../lib/softrend/transform.h
+label.o: ../../lib/softrend/filter.h ../../lib/draw/path.h
+label.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+label.o: ../../lib/c/include/stddef.h ../../lib/draw/font.h
+label.o: ../../lib/draw/font/embedded.h ../../lib/draw/font.h
+label.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+label.o: window.h ../../lib/c/include/async.h
+label.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+label.o: ../../lib/c/include/atomic.h
+label.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+label.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+label.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+label.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+label.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+label.o: ../../lib/c/include/fibril.h
+label.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+label.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+label.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+label.o: ../../../abi/include/abi/ddi/irq.h
+label.o: ../../../abi/include/abi/ipc/event.h
+label.o: ../../../abi/include/abi/ipc/interfaces.h
+label.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+label.o: ../../lib/c/include/adt/prodcons.h
+label.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/ipc/window.h
+label.o: ../../lib/c/include/ipc/vfs.h ../../lib/c/include/io/window.h
+label.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+label.o: ../../lib/c/include/io/kbd_event.h ../../lib/c/include/io/keycode.h
+label.o: ../../lib/c/include/io/pos_event.h widget.h label.h connection.h
+minimal.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/types.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/common.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+minimal.o: ../../lib/draw/surface.h ../../lib/c/include/stdbool.h
+minimal.o: ../../../abi/include/abi/bool.h ../../lib/c/include/io/pixelmap.h
+minimal.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+minimal.o: ../../lib/c/include/sys/time.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/config.h
+minimal.o: ../../lib/c/include/io/pixel.h window.h
+minimal.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+minimal.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+minimal.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+minimal.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+minimal.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+minimal.o: ../../lib/c/include/fibril.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+minimal.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+minimal.o: ../../lib/c/include/stddef.h
+minimal.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+minimal.o: ../../../abi/include/abi/ddi/irq.h
+minimal.o: ../../../abi/include/abi/ipc/event.h
+minimal.o: ../../../abi/include/abi/ipc/interfaces.h
+minimal.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+minimal.o: ../../lib/c/include/adt/prodcons.h
+minimal.o: ../../lib/c/include/fibril_synch.h
+minimal.o: ../../lib/c/include/ipc/window.h ../../lib/c/include/ipc/vfs.h
+minimal.o: ../../lib/c/include/io/window.h ../../lib/c/include/loc.h
+minimal.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/io/kbd_event.h
+minimal.o: ../../lib/c/include/io/keycode.h
+minimal.o: ../../lib/c/include/io/pos_event.h widget.h minimal.h
+terminal.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+terminal.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/types.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/common.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+terminal.o: ../../lib/c/include/io/chargrid.h
+terminal.o: ../../lib/c/include/io/charfield.h ../../lib/c/include/stdbool.h
+terminal.o: ../../../abi/include/abi/bool.h ../../lib/c/include/io/color.h
+terminal.o: ../../lib/c/include/io/style.h ../../lib/c/include/io/pixel.h
+terminal.o: ../../lib/draw/surface.h ../../lib/c/include/io/pixelmap.h
+terminal.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+terminal.o: ../../lib/c/include/sys/time.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/config.h
+terminal.o: ../../lib/draw/gfx/font-8x16.h ../../lib/c/include/io/con_srv.h
+terminal.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+terminal.o: ../../lib/c/include/stddef.h ../../lib/c/include/async.h
+terminal.o: ../../lib/c/include/ipc/common.h
+terminal.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+terminal.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+terminal.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+terminal.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+terminal.o: ../../lib/c/include/fibril.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+terminal.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+terminal.o: ../../../abi/include/abi/ddi/irq.h
+terminal.o: ../../../abi/include/abi/ipc/event.h
+terminal.o: ../../../abi/include/abi/ipc/interfaces.h
+terminal.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+terminal.o: ../../lib/c/include/fibril_synch.h
+terminal.o: ../../lib/c/include/io/concaps.h
+terminal.o: ../../lib/c/include/io/cons_event.h
+terminal.o: ../../lib/c/include/io/kbd_event.h
+terminal.o: ../../lib/c/include/io/keycode.h
+terminal.o: ../../lib/c/include/io/pos_event.h
+terminal.o: ../../lib/c/include/io/console.h ../../lib/c/include/stdio.h
+terminal.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+terminal.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+terminal.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+terminal.o: ../../lib/c/include/task.h ../../lib/c/include/types/task.h
+terminal.o: ../../lib/c/include/adt/prodcons.h window.h
+terminal.o: ../../lib/c/include/ipc/window.h ../../lib/c/include/ipc/vfs.h
+terminal.o: ../../lib/c/include/io/window.h ../../lib/c/include/loc.h
+terminal.o: ../../lib/c/include/ipc/loc.h widget.h terminal.h
+terminal.o: ../../lib/draw/font.h ../../lib/draw/source.h
+terminal.o: ../../lib/softrend/transform.h ../../lib/softrend/filter.h
+widget.o: widget.h ../../lib/c/include/sys/types.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/types.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/common.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+widget.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+widget.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+widget.o: ../../lib/c/include/stddef.h ../../lib/c/include/io/window.h
+widget.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+widget.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+widget.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+widget.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+widget.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+widget.o: ../../lib/c/include/fibril.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+widget.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+widget.o: ../../lib/c/include/sys/time.h ../../../abi/include/abi/ddi/irq.h
+widget.o: ../../../abi/include/abi/ipc/event.h
+widget.o: ../../../abi/include/abi/ipc/interfaces.h
+widget.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+widget.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+widget.o: ../../lib/c/include/io/kbd_event.h ../../lib/c/include/io/keycode.h
+widget.o: ../../lib/c/include/io/pos_event.h
+window.o: ../../lib/c/include/stdbool.h
+window.o: ../../lib/c/arch/ia32/include/libarch/types.h
+window.o: ../../lib/c/arch/ia32/include/libarch/common.h
+window.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+window.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+window.o: ../../../abi/include/abi/bool.h ../../lib/c/include/errno.h
+window.o: ../../../abi/include/abi/errno.h ../../lib/c/include/stdio.h
+window.o: ../../lib/c/include/sys/types.h ../../lib/c/include/stdarg.h
+window.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+window.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+window.o: ../../../abi/include/abi/kio.h ../../lib/c/include/as.h
+window.o: ../../../abi/include/abi/mm/as.h
+window.o: ../../lib/c/arch/ia32/include/libarch/config.h
+window.o: ../../lib/c/include/malloc.h ../../lib/c/include/fibril.h
+window.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+window.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+window.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+window.o: ../../lib/c/include/stddef.h
+window.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+window.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+window.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+window.o: ../../lib/c/include/task.h ../../../abi/include/abi/proc/task.h
+window.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+window.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+window.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+window.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+window.o: ../../lib/c/include/futex.h ../../lib/c/include/sys/time.h
+window.o: ../../../abi/include/abi/ddi/irq.h
+window.o: ../../../abi/include/abi/ipc/event.h
+window.o: ../../../abi/include/abi/ipc/interfaces.h
+window.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+window.o: ../../lib/c/include/types/task.h ../../lib/c/include/adt/prodcons.h
+window.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/loc.h
+window.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/io/pixel.h
+window.o: ../../lib/draw/source.h ../../lib/softrend/transform.h
+window.o: ../../lib/softrend/filter.h ../../lib/c/include/io/pixelmap.h
+window.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+window.o: ../../lib/draw/surface.h ../../lib/draw/font.h
+window.o: ../../lib/draw/drawctx.h ../../lib/softrend/compose.h
+window.o: ../../lib/draw/path.h ../../lib/draw/font/embedded.h
+window.o: ../../lib/draw/font.h common.h connection.h widget.h
+window.o: ../../lib/c/include/io/window.h ../../lib/c/include/io/kbd_event.h
+window.o: ../../lib/c/include/io/keycode.h ../../lib/c/include/io/pos_event.h
+window.o: window.h ../../lib/c/include/ipc/window.h
+window.o: ../../lib/c/include/ipc/vfs.h
+# DO NOT DELETE

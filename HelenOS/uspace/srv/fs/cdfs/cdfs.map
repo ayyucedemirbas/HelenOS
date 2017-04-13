@@ -1,0 +1,298 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../lib/block/libblock.a(block.o)
+                              cdfs_ops.o (block_init)
+../../../lib/fs/libfs.a(libfs.o)
+                              cdfs.o (fs_register)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0xc7e cdfs.o
+ .debug_abbrev  0x0000000000000000      0x1e6 cdfs.o
+ .debug_loc     0x0000000000000000       0xe2 cdfs.o
+ .debug_aranges
+                0x0000000000000000       0x20 cdfs.o
+ .debug_ranges  0x0000000000000000       0x28 cdfs.o
+ .debug_line    0x0000000000000000      0x257 cdfs.o
+ .debug_str     0x0000000000000000      0xdef cdfs.o
+ .comment       0x0000000000000000       0x12 cdfs.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 cdfs.o
+ .eh_frame      0x0000000000000000       0x58 cdfs.o
+ .debug_info    0x0000000000000000     0x3488 cdfs_ops.o
+ .debug_abbrev  0x0000000000000000      0x42f cdfs_ops.o
+ .debug_loc     0x0000000000000000     0x26d2 cdfs_ops.o
+ .debug_aranges
+                0x0000000000000000       0x20 cdfs_ops.o
+ .debug_ranges  0x0000000000000000      0x3e8 cdfs_ops.o
+ .debug_line    0x0000000000000000      0x89d cdfs_ops.o
+ .debug_str     0x0000000000000000     0x14d0 cdfs_ops.o
+ .comment       0x0000000000000000       0x12 cdfs_ops.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 cdfs_ops.o
+ .eh_frame      0x0000000000000000      0x5bc cdfs_ops.o
+ .debug_info    0x0000000000000000     0x2a1c ../../../lib/block/libblock.a(block.o)
+ .debug_abbrev  0x0000000000000000      0x46d ../../../lib/block/libblock.a(block.o)
+ .debug_loc     0x0000000000000000     0x1930 ../../../lib/block/libblock.a(block.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../../lib/block/libblock.a(block.o)
+ .debug_ranges  0x0000000000000000      0x5c8 ../../../lib/block/libblock.a(block.o)
+ .debug_line    0x0000000000000000      0x8ef ../../../lib/block/libblock.a(block.o)
+ .debug_str     0x0000000000000000     0x11f7 ../../../lib/block/libblock.a(block.o)
+ .comment       0x0000000000000000       0x12 ../../../lib/block/libblock.a(block.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../lib/block/libblock.a(block.o)
+ .eh_frame      0x0000000000000000      0x444 ../../../lib/block/libblock.a(block.o)
+ .debug_info    0x0000000000000000     0x284f ../../../lib/fs/libfs.a(libfs.o)
+ .debug_abbrev  0x0000000000000000      0x3d8 ../../../lib/fs/libfs.a(libfs.o)
+ .debug_loc     0x0000000000000000     0x19c1 ../../../lib/fs/libfs.a(libfs.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../lib/fs/libfs.a(libfs.o)
+ .debug_ranges  0x0000000000000000      0x3c8 ../../../lib/fs/libfs.a(libfs.o)
+ .debug_line    0x0000000000000000      0x617 ../../../lib/fs/libfs.a(libfs.o)
+ .debug_str     0x0000000000000000     0x1608 ../../../lib/fs/libfs.a(libfs.o)
+ .comment       0x0000000000000000       0x12 ../../../lib/fs/libfs.a(libfs.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../lib/fs/libfs.a(libfs.o)
+ .eh_frame      0x0000000000000000      0x150 ../../../lib/fs/libfs.a(libfs.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x4a9c
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130        0x0 cdfs.o
+ .text.startup  0x0000000000001130      0x176 cdfs.o
+                0x0000000000001130                main
+ *fill*         0x00000000000012a6        0xa 
+ .text          0x00000000000012b0     0x184b cdfs_ops.o
+                0x0000000000002ae0                cdfs_init
+ *fill*         0x0000000000002afb        0x5 
+ .text          0x0000000000002b00     0x189f ../../../lib/block/libblock.a(block.o)
+                0x0000000000002b40                block_init
+                0x0000000000002d10                block_bb_read
+                0x0000000000002e60                block_bb_get
+                0x0000000000002ee0                block_cache_init
+                0x0000000000003020                block_cache_fini
+                0x00000000000031d0                block_fini
+                0x00000000000032f0                block_put
+                0x00000000000035f0                block_get
+                0x0000000000003b70                block_seqread
+                0x0000000000003d30                block_read_direct
+                0x0000000000003e10                block_write_direct
+                0x0000000000003ef0                block_sync_cache
+                0x0000000000003fa0                block_get_bsize
+                0x0000000000004030                block_get_nblocks
+                0x00000000000040c0                block_read_bytes_direct
+                0x00000000000042f0                block_read_toc
+ .text.unlikely
+                0x000000000000439f       0x1a ../../../lib/block/libblock.a(block.o)
+ *fill*         0x00000000000043b9        0x7 
+ .text          0x00000000000043c0     0x1535 ../../../lib/fs/libfs.a(libfs.o)
+                0x0000000000005570                fs_register
+                0x00000000000056b0                fs_node_initialize
+                0x00000000000056d0                fs_instance_create
+                0x00000000000057d0                fs_instance_get
+                0x0000000000005850                fs_instance_destroy
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000058f5       0x66 cdfs.o
+ *fill*         0x000000000000595b        0x1 
+ .rodata.str1.4
+                0x000000000000595c       0x71 cdfs.o
+ .rodata.str1.1
+                0x00000000000059cd       0x36 cdfs_ops.o
+ *fill*         0x0000000000005a03        0x1 
+ .rodata.str1.4
+                0x0000000000005a04       0x4b cdfs_ops.o
+ .rodata.str1.1
+                0x0000000000005a4f       0x4f ../../../lib/block/libblock.a(block.o)
+ *fill*         0x0000000000005a9e        0x2 
+ .rodata.str1.4
+                0x0000000000005aa0       0xe8 ../../../lib/block/libblock.a(block.o)
+                                         0xe7 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000005b88        0xc ../../../lib/fs/libfs.a(libfs.o)
+ .rodata        0x0000000000005b94       0x38 ../../../lib/fs/libfs.a(libfs.o)
+
+.rel.plt        0x0000000000005bcc      0x230
+ *(.rel.plt)
+ .rel.plt       0x0000000000005bcc      0x230 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000005dfc       0x10
+ *(.rel.*)
+ .rel.got       0x0000000000005dfc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000005dfc       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000005e0c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000005e0c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000005e0c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.unlikely
+                0x0000000000005e0c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000005e10      0x470
+ *(.plt)
+ .plt           0x0000000000005e10      0x470 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005e20                __main
+                0x0000000000005e30                task_retval
+                0x0000000000005e40                loc_service_connect
+                0x0000000000005e50                printf
+                0x0000000000005e60                async_hangup
+                0x0000000000005e70                async_data_write_forward_fast
+                0x0000000000005e80                async_forward_slow
+                0x0000000000005e90                async_wait_for
+                0x0000000000005ea0                str_uint32_t
+                0x0000000000005eb0                hash_table_create
+                0x0000000000005ec0                async_data_write_start
+                0x0000000000005ed0                hash_table_insert
+                0x0000000000005ee0                __errno
+                0x0000000000005ef0                bd_write_blocks
+                0x0000000000005f00                bd_get_num_blocks
+                0x0000000000005f10                service_connect_blocking
+                0x0000000000005f20                async_data_read_finalize
+                0x0000000000005f30                async_share_in_start
+                0x0000000000005f40                bd_close
+                0x0000000000005f50                memcpy
+                0x0000000000005f60                async_clone_establish
+                0x0000000000005f70                malloc
+                0x0000000000005f80                bd_open
+                0x0000000000005f90                async_req_fast
+                0x0000000000005fa0                async_answer_0
+                0x0000000000005fb0                async_send_fast
+                0x0000000000005fc0                stacktrace_print
+                0x0000000000005fd0                __umoddi3
+                0x0000000000005fe0                __udivdi3
+                0x0000000000005ff0                bd_read_blocks
+                0x0000000000006000                utf16_to_str
+                0x0000000000006010                strtol
+                0x0000000000006020                async_exchange_end
+                0x0000000000006030                str_chr
+                0x0000000000006040                fibril_mutex_trylock
+                0x0000000000006050                assert_abort
+                0x0000000000006060                calloc
+                0x0000000000006070                bd_read_toc
+                0x0000000000006080                fibril_mutex_unlock
+                0x0000000000006090                str_dup
+                0x00000000000060a0                fibril_mutex_initialize
+                0x00000000000060b0                async_answer_4
+                0x00000000000060c0                async_clone_receive
+                0x00000000000060d0                async_answer_5
+                0x00000000000060e0                memcmp
+                0x00000000000060f0                async_create_callback_port
+                0x0000000000006100                str_cmp
+                0x0000000000006110                hash_table_remove_item
+                0x0000000000006120                memset
+                0x0000000000006130                async_data_read_receive
+                0x0000000000006140                bd_get_block_size
+                0x0000000000006150                async_data_write_void
+                0x0000000000006160                async_get_call_timeout
+                0x0000000000006170                str_size
+                0x0000000000006180                str_lcmp
+                0x0000000000006190                bd_sync_cache
+                0x00000000000061a0                async_answer_1
+                0x00000000000061b0                async_exchange_begin
+                0x00000000000061c0                hash_table_apply
+                0x00000000000061d0                async_answer_3
+                0x00000000000061e0                hash_table_find
+                0x00000000000061f0                async_data_write_accept
+                0x0000000000006200                fibril_rwlock_initialize
+                0x0000000000006210                async_forget
+                0x0000000000006220                fibril_switch
+                0x0000000000006230                __syscall_fast
+                0x0000000000006240                async_set_fallback_port_handler
+                0x0000000000006250                hash_table_destroy
+                0x0000000000006260                free
+                0x0000000000006270                fibril_mutex_lock
+
+.dynsym         0x0000000000006280      0x4b0
+ *(.dynsym)
+ .dynsym        0x0000000000006280      0x4b0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000006730      0x490
+ *(.dynstr)
+ .dynstr        0x0000000000006730      0x490 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000006bc0      0x240
+ *(.hash)
+ .hash          0x0000000000006bc0      0x240 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000006e00       0x13
+ *(.interp)
+ .interp        0x0000000000006e00       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007e13                . = (. + 0x1000)
+
+.dynamic        0x0000000000007e14       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000007e14       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007e14                _DYNAMIC
+
+.data           0x0000000000007ec0       0xf0
+ *(.data)
+ .data          0x0000000000007ec0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000007ec0       0x20 cdfs.o
+ .data          0x0000000000007ee0       0x8c cdfs_ops.o
+                0x0000000000007ee0                cdfs_ops
+                0x0000000000007f00                cdfs_libfs_ops
+ .data          0x0000000000007f6c       0x2c ../../../lib/block/libblock.a(block.o)
+ .data          0x0000000000007f98       0x18 ../../../lib/fs/libfs.a(libfs.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000007fb0        0x0
+ *(.got)
+ .got           0x0000000000007fb0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000007fb0      0x124
+ *(.got.plt)
+ .got.plt       0x0000000000007fb0      0x124 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007fb0                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x00000000000080d8       0x38
+ *(.dynbss)
+ *fill*         0x00000000000080d8        0x0 
+ .dynbss        0x00000000000080d8        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000080d8                __syscall_fast_func
+                0x00000000000080dc                async_futex
+ *(COMMON)
+ *(.bss)
+ .bss           0x00000000000080e0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x00000000000080e0        0x0 cdfs.o
+ .bss           0x00000000000080e0       0x20 cdfs_ops.o
+ .bss           0x0000000000008100        0x0 ../../../lib/block/libblock.a(block.o)
+ .bss           0x0000000000008100       0x10 ../../../lib/fs/libfs.a(libfs.o)
+
+/DISCARD/
+ *(*)
+LOAD cdfs.o
+LOAD cdfs_ops.o
+LOAD ../../../lib/block/libblock.a
+LOAD ../../../lib/fs/libfs.a
+LOAD ../../../lib/c/libc.so.0
+LOAD ../../../lib/softint/libsoftint.so.0
+OUTPUT(cdfs elf32-i386)

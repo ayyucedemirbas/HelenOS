@@ -1,0 +1,124 @@
+# DO NOT DELETE
+
+shapes.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+shapes.o: ../../lib/c/arch/ia32/include/libarch/types.h
+shapes.o: ../../lib/c/arch/ia32/include/libarch/common.h
+shapes.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+shapes.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+shapes.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+shapes.o: ../../lib/c/arch/ia32/include/libarch/config.h tetris.h
+scores.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+scores.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/types.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/common.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+scores.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+scores.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+scores.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+scores.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+scores.o: ../../lib/c/include/io/console.h ../../lib/c/include/sys/time.h
+scores.o: ../../lib/c/include/io/concaps.h ../../lib/c/include/io/kbd_event.h
+scores.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+scores.o: ../../lib/c/include/stddef.h ../../lib/c/include/io/keycode.h
+scores.o: ../../lib/c/include/io/cons_event.h
+scores.o: ../../lib/c/include/io/pos_event.h ../../lib/c/include/async.h
+scores.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+scores.o: ../../lib/c/include/atomic.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+scores.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+scores.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+scores.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+scores.o: ../../lib/c/include/fibril.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+scores.o: ../../../abi/include/abi/ddi/irq.h
+scores.o: ../../../abi/include/abi/ipc/event.h
+scores.o: ../../../abi/include/abi/ipc/interfaces.h
+scores.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+scores.o: ../../lib/c/include/vfs/vfs.h ../../lib/c/include/ipc/vfs.h
+scores.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/vfs/vfs_mtab.h
+scores.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+scores.o: ../../lib/c/include/time.h
+scores.o: ../../lib/c/arch/ia32/include/libarch/config.h
+scores.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+scores.o: ../../lib/c/include/fcntl.h ../../lib/c/include/err.h screen.h
+scores.o: tetris.h scores.h
+tetris.o: ../../lib/c/include/sys/time.h ../../lib/c/include/sys/types.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/types.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/common.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+tetris.o: ../../lib/c/include/err.h ../../lib/c/include/stdio.h
+tetris.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+tetris.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+tetris.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+tetris.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+tetris.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+tetris.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+tetris.o: ../../lib/c/include/time.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/config.h
+tetris.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+tetris.o: ../../lib/c/include/getopt.h scores.h screen.h
+tetris.o: ../../lib/c/include/io/console.h ../../lib/c/include/io/concaps.h
+tetris.o: ../../lib/c/include/io/kbd_event.h ../../lib/c/include/adt/list.h
+tetris.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+tetris.o: ../../lib/c/include/io/keycode.h
+tetris.o: ../../lib/c/include/io/cons_event.h
+tetris.o: ../../lib/c/include/io/pos_event.h ../../lib/c/include/async.h
+tetris.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+tetris.o: ../../lib/c/include/atomic.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+tetris.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+tetris.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+tetris.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+tetris.o: ../../lib/c/include/fibril.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+tetris.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+tetris.o: ../../../abi/include/abi/ddi/irq.h
+tetris.o: ../../../abi/include/abi/ipc/event.h
+tetris.o: ../../../abi/include/abi/ipc/interfaces.h
+tetris.o: ../../../abi/include/abi/fourcc.h ../../../common.h tetris.h
+screen.o: ../../lib/c/include/err.h ../../lib/c/include/stdio.h
+screen.o: ../../lib/c/include/sys/types.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/types.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/common.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+screen.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+screen.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+screen.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+screen.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+screen.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+screen.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/config.h
+screen.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+screen.o: ../../lib/c/include/vfs/vfs.h ../../lib/c/include/ipc/vfs.h
+screen.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+screen.o: ../../lib/c/include/atomic.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+screen.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+screen.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+screen.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+screen.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/adt/list.h
+screen.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+screen.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+screen.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+screen.o: ../../../abi/include/abi/ddi/irq.h
+screen.o: ../../../abi/include/abi/ipc/event.h
+screen.o: ../../../abi/include/abi/ipc/interfaces.h
+screen.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+screen.o: ../../lib/c/include/vfs/vfs_mtab.h ../../lib/c/include/io/console.h
+screen.o: ../../lib/c/include/io/concaps.h ../../lib/c/include/io/kbd_event.h
+screen.o: ../../lib/c/include/io/keycode.h
+screen.o: ../../lib/c/include/io/cons_event.h
+screen.o: ../../lib/c/include/io/pos_event.h ../../lib/c/include/io/style.h
+screen.o: screen.h tetris.h
+# DO NOT DELETE

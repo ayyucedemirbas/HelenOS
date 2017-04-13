@@ -1,0 +1,676 @@
+# DO NOT DELETE
+
+ehci_batch.o: ../../../../lib/c/include/assert.h
+ehci_batch.o: ../../../../lib/c/include/errno.h
+ehci_batch.o: ../../../../../abi/include/abi/errno.h
+ehci_batch.o: ../../../../lib/c/include/macros.h
+ehci_batch.o: ../../../../lib/c/include/mem.h
+ehci_batch.o: ../../../../lib/c/include/sys/types.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+ehci_batch.o: ../../../../lib/c/include/cc.h
+ehci_batch.o: ../../../../lib/c/include/stdbool.h
+ehci_batch.o: ../../../../../abi/include/abi/bool.h
+ehci_batch.o: ../../../../lib/c/include/str_error.h
+ehci_batch.o: ../../../../lib/usb/include/usb/usb.h
+ehci_batch.o: ../../../../lib/c/include/byteorder.h
+ehci_batch.o: ../../../../lib/c/include/stdint.h
+ehci_batch.o: ../../../../lib/usb/include/usb/debug.h
+ehci_batch.o: ../../../../lib/c/include/stdio.h
+ehci_batch.o: ../../../../lib/c/include/stdarg.h
+ehci_batch.o: ../../../../lib/c/include/str.h
+ehci_batch.o: ../../../../lib/c/include/io/verify.h
+ehci_batch.o: ../../../../../abi/include/abi/kio.h
+ehci_batch.o: ../../../../lib/c/include/io/log.h
+ehci_batch.o: ../../../../lib/c/include/inttypes.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ehci_batch.o: ../../../../../abi/include/abi/log.h
+ehci_batch.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+ehci_batch.o: ../../../../lib/c/include/align.h
+ehci_batch.o: ../../../../lib/c/include/as.h
+ehci_batch.o: ../../../../../abi/include/abi/mm/as.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+ehci_batch.o: ../../../../lib/c/include/ddi.h
+ehci_batch.o: ../../../../lib/c/include/sys/time.h
+ehci_batch.o: ../../../../../abi/include/abi/ddi/irq.h
+ehci_batch.o: ../../../../lib/c/include/device/hw_res.h
+ehci_batch.o: ../../../../lib/c/include/ipc/dev_iface.h
+ehci_batch.o: ../../../../lib/c/include/malloc.h
+ehci_batch.o: ../../../../lib/c/include/unistd.h
+ehci_batch.o: ../../../../lib/c/include/time.h
+ehci_batch.o: ../../../../lib/c/include/async.h
+ehci_batch.o: ../../../../lib/c/include/ipc/common.h
+ehci_batch.o: ../../../../../abi/include/abi/ipc/ipc.h
+ehci_batch.o: ../../../../lib/c/include/atomic.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+ehci_batch.o: ../../../../lib/c/include/atomicdflt.h
+ehci_batch.o: ../../../../../abi/include/abi/proc/task.h
+ehci_batch.o: ../../../../lib/c/include/futex.h
+ehci_batch.o: ../../../../lib/c/include/libc.h
+ehci_batch.o: ../../../../../abi/include/abi/syscall.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+ehci_batch.o: ../../../../lib/c/include/fibril.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ehci_batch.o: ../../../../lib/c/include/adt/list.h
+ehci_batch.o: ../../../../lib/c/include/stddef.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+ehci_batch.o: ../../../../../abi/include/abi/ipc/event.h
+ehci_batch.o: ../../../../../abi/include/abi/ipc/interfaces.h
+ehci_batch.o: ../../../../../abi/include/abi/fourcc.h ../../../../../common.h
+ehci_batch.o: ../../../../lib/c/include/device/hw_res_parsed.h
+ehci_batch.o: ../../../../lib/c/include/device/pio_window.h
+ehci_batch.o: ../../../../lib/c/include/task.h
+ehci_batch.o: ../../../../lib/c/include/types/task.h
+ehci_batch.o: ../../../../lib/c/include/stdlib.h
+ehci_batch.o: ../../../../lib/c/include/stacktrace.h ehci_batch.h
+ehci_batch.o: ../../../../lib/usbhost/include/usb/host/usb_transfer_batch.h
+ehci_batch.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+ehci_batch.o: ../../../../lib/c/include/fibril_synch.h
+ehci_batch.o: ../../../../lib/drv/include/usbhc_iface.h
+ehci_batch.o: ../../../../lib/drv/include/ddf/driver.h
+ehci_batch.o: ../../../../lib/c/include/ipc/devman.h
+ehci_batch.o: ../../../../lib/drv/include/dev_iface.h hw_struct/queue_head.h
+ehci_batch.o: hw_struct/link_pointer.h hw_struct/transfer_descriptor.h
+ehci_batch.o: hw_struct/mem_access.h
+ehci_batch.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+ehci_batch.o: ../../../../lib/c/include/trace.h
+ehci_batch.o: hw_struct/transfer_descriptor.h ehci_endpoint.h
+ehci_batch.o: ../../../../lib/usbhost/include/usb/host/hcd.h
+ehci_batch.o: ../../../../lib/usbhost/include/usb/host/usb_bus.h
+ehci_endpoint.o: ../../../../lib/c/include/assert.h
+ehci_endpoint.o: ../../../../lib/c/include/stdlib.h
+ehci_endpoint.o: ../../../../lib/c/include/unistd.h
+ehci_endpoint.o: ../../../../lib/c/include/sys/types.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+ehci_endpoint.o: ../../../../lib/c/include/time.h
+ehci_endpoint.o: ../../../../lib/c/include/sys/time.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+ehci_endpoint.o: ../../../../lib/c/include/malloc.h
+ehci_endpoint.o: ../../../../lib/c/include/stacktrace.h
+ehci_endpoint.o: ../../../../lib/c/include/stdbool.h
+ehci_endpoint.o: ../../../../../abi/include/abi/bool.h
+ehci_endpoint.o: ../../../../lib/usb/include/usb/debug.h
+ehci_endpoint.o: ../../../../lib/c/include/stdio.h
+ehci_endpoint.o: ../../../../lib/c/include/stdarg.h
+ehci_endpoint.o: ../../../../lib/c/include/str.h
+ehci_endpoint.o: ../../../../lib/c/include/mem.h
+ehci_endpoint.o: ../../../../lib/c/include/cc.h
+ehci_endpoint.o: ../../../../lib/c/include/io/verify.h
+ehci_endpoint.o: ../../../../../abi/include/abi/kio.h
+ehci_endpoint.o: ../../../../lib/c/include/io/log.h
+ehci_endpoint.o: ../../../../lib/c/include/inttypes.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ehci_endpoint.o: ../../../../../abi/include/abi/log.h
+ehci_endpoint.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+ehci_endpoint.o: ../../../../lib/c/include/align.h
+ehci_endpoint.o: ../../../../lib/c/include/as.h
+ehci_endpoint.o: ../../../../../abi/include/abi/mm/as.h
+ehci_endpoint.o: ../../../../lib/c/include/ddi.h
+ehci_endpoint.o: ../../../../../abi/include/abi/ddi/irq.h
+ehci_endpoint.o: ../../../../lib/c/include/device/hw_res.h
+ehci_endpoint.o: ../../../../lib/c/include/ipc/dev_iface.h
+ehci_endpoint.o: ../../../../lib/c/include/async.h
+ehci_endpoint.o: ../../../../lib/c/include/ipc/common.h
+ehci_endpoint.o: ../../../../../abi/include/abi/ipc/ipc.h
+ehci_endpoint.o: ../../../../lib/c/include/atomic.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+ehci_endpoint.o: ../../../../lib/c/include/atomicdflt.h
+ehci_endpoint.o: ../../../../lib/c/include/stdint.h
+ehci_endpoint.o: ../../../../../abi/include/abi/proc/task.h
+ehci_endpoint.o: ../../../../lib/c/include/futex.h
+ehci_endpoint.o: ../../../../lib/c/include/libc.h
+ehci_endpoint.o: ../../../../../abi/include/abi/syscall.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+ehci_endpoint.o: ../../../../lib/c/include/fibril.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ehci_endpoint.o: ../../../../lib/c/include/adt/list.h
+ehci_endpoint.o: ../../../../lib/c/include/stddef.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+ehci_endpoint.o: ../../../../../abi/include/abi/ipc/event.h
+ehci_endpoint.o: ../../../../../abi/include/abi/ipc/interfaces.h
+ehci_endpoint.o: ../../../../../abi/include/abi/fourcc.h
+ehci_endpoint.o: ../../../../../common.h
+ehci_endpoint.o: ../../../../lib/c/include/device/hw_res_parsed.h
+ehci_endpoint.o: ../../../../lib/c/include/device/pio_window.h
+ehci_endpoint.o: ../../../../lib/c/include/task.h
+ehci_endpoint.o: ../../../../lib/c/include/types/task.h
+ehci_endpoint.o: ../../../../lib/c/include/errno.h
+ehci_endpoint.o: ../../../../../abi/include/abi/errno.h ehci_endpoint.h
+ehci_endpoint.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+ehci_endpoint.o: ../../../../lib/c/include/fibril_synch.h
+ehci_endpoint.o: ../../../../lib/usb/include/usb/usb.h
+ehci_endpoint.o: ../../../../lib/c/include/byteorder.h
+ehci_endpoint.o: ../../../../lib/usbhost/include/usb/host/hcd.h
+ehci_endpoint.o: ../../../../lib/usbhost/include/usb/host/usb_bus.h
+ehci_endpoint.o: ../../../../lib/usbhost/include/usb/host/usb_transfer_batch.h
+ehci_endpoint.o: ../../../../lib/drv/include/usbhc_iface.h
+ehci_endpoint.o: ../../../../lib/drv/include/ddf/driver.h
+ehci_endpoint.o: ../../../../lib/c/include/ipc/devman.h
+ehci_endpoint.o: ../../../../lib/drv/include/dev_iface.h
+ehci_endpoint.o: hw_struct/queue_head.h hw_struct/link_pointer.h
+ehci_endpoint.o: hw_struct/transfer_descriptor.h hw_struct/mem_access.h
+ehci_endpoint.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+ehci_endpoint.o: ../../../../lib/c/include/trace.h
+ehci_endpoint.o: hw_struct/transfer_descriptor.h hc.h ehci_regs.h
+ehci_endpoint.o: ../../../../lib/c/include/macros.h ehci_rh.h
+ehci_endpoint.o: ../../../../lib/usb/include/usb/classes/hub.h
+ehci_endpoint.o: ../../../../lib/usbvirt/include/usbvirt/virthub_base.h
+ehci_endpoint.o: ../../../../lib/usbvirt/include/usbvirt/device.h
+ehci_endpoint.o: ../../../../lib/usbdev/include/usb/dev/request.h
+ehci_endpoint.o: ../../../../lib/c/include/l18n/langs.h
+ehci_endpoint.o: ../../../../lib/usbdev/include/usb/dev/pipes.h
+ehci_endpoint.o: ../../../../lib/usb/include/usb/descriptor.h
+ehci_endpoint.o: ../../../../lib/drv/include/usb_iface.h
+ehci_endpoint.o: ../../../../lib/usb/include/usb/request.h
+ehci_endpoint.o: hw_struct/link_pointer.h endpoint_list.h
+ehci_rh.o: ../../../../lib/c/include/assert.h
+ehci_rh.o: ../../../../lib/c/include/errno.h
+ehci_rh.o: ../../../../../abi/include/abi/errno.h
+ehci_rh.o: ../../../../lib/c/include/mem.h
+ehci_rh.o: ../../../../lib/c/include/sys/types.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+ehci_rh.o: ../../../../lib/c/include/cc.h
+ehci_rh.o: ../../../../lib/c/include/str_error.h
+ehci_rh.o: ../../../../lib/usb/include/usb/classes/hub.h
+ehci_rh.o: ../../../../lib/usb/include/usb/debug.h
+ehci_rh.o: ../../../../lib/c/include/stdio.h
+ehci_rh.o: ../../../../lib/c/include/stdarg.h ../../../../lib/c/include/str.h
+ehci_rh.o: ../../../../lib/c/include/stdbool.h
+ehci_rh.o: ../../../../../abi/include/abi/bool.h
+ehci_rh.o: ../../../../lib/c/include/io/verify.h
+ehci_rh.o: ../../../../../abi/include/abi/kio.h
+ehci_rh.o: ../../../../lib/c/include/io/log.h
+ehci_rh.o: ../../../../lib/c/include/inttypes.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ehci_rh.o: ../../../../../abi/include/abi/log.h
+ehci_rh.o: ../../../../lib/usb/include/usb/descriptor.h
+ehci_rh.o: ../../../../lib/usb/include/usb/request.h
+ehci_rh.o: ../../../../lib/usb/include/usb/usb.h
+ehci_rh.o: ../../../../lib/c/include/byteorder.h
+ehci_rh.o: ../../../../lib/c/include/stdint.h
+ehci_rh.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+ehci_rh.o: ../../../../lib/c/include/adt/list.h
+ehci_rh.o: ../../../../lib/c/include/stddef.h
+ehci_rh.o: ../../../../lib/c/include/fibril_synch.h
+ehci_rh.o: ../../../../lib/c/include/fibril.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+ehci_rh.o: ../../../../lib/c/include/libc.h
+ehci_rh.o: ../../../../../abi/include/abi/syscall.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+ehci_rh.o: ../../../../lib/c/include/sys/time.h
+ehci_rh.o: ../../../../lib/c/include/atomic.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+ehci_rh.o: ../../../../lib/c/include/atomicdflt.h
+ehci_rh.o: ../../../../lib/usbvirt/include/usbvirt/device.h
+ehci_rh.o: ../../../../lib/usbdev/include/usb/dev/request.h
+ehci_rh.o: ../../../../lib/c/include/l18n/langs.h
+ehci_rh.o: ../../../../lib/usbdev/include/usb/dev/pipes.h
+ehci_rh.o: ../../../../lib/drv/include/usb_iface.h
+ehci_rh.o: ../../../../lib/drv/include/ddf/driver.h
+ehci_rh.o: ../../../../lib/c/include/async.h
+ehci_rh.o: ../../../../lib/c/include/ipc/common.h
+ehci_rh.o: ../../../../../abi/include/abi/ipc/ipc.h
+ehci_rh.o: ../../../../../abi/include/abi/proc/task.h
+ehci_rh.o: ../../../../lib/c/include/futex.h
+ehci_rh.o: ../../../../../abi/include/abi/ddi/irq.h
+ehci_rh.o: ../../../../../abi/include/abi/ipc/event.h
+ehci_rh.o: ../../../../../abi/include/abi/ipc/interfaces.h
+ehci_rh.o: ../../../../../abi/include/abi/fourcc.h ../../../../../common.h
+ehci_rh.o: ../../../../lib/c/include/ipc/devman.h
+ehci_rh.o: ../../../../lib/c/include/malloc.h
+ehci_rh.o: ../../../../lib/c/include/ipc/dev_iface.h
+ehci_rh.o: ../../../../lib/c/include/unistd.h
+ehci_rh.o: ../../../../lib/c/include/time.h
+ehci_rh.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+ehci_rh.o: ../../../../lib/drv/include/dev_iface.h ehci_rh.h
+ehci_rh.o: ../../../../lib/usbhost/include/usb/host/usb_transfer_batch.h
+ehci_rh.o: ../../../../lib/drv/include/usbhc_iface.h
+ehci_rh.o: ../../../../lib/usbvirt/include/usbvirt/virthub_base.h ehci_regs.h
+ehci_rh.o: ../../../../lib/c/include/macros.h ../../../../lib/c/include/ddi.h
+ehci_rh.o: ../../../../lib/c/include/device/hw_res.h
+ehci_rh.o: ../../../../lib/c/include/device/hw_res_parsed.h
+ehci_rh.o: ../../../../lib/c/include/device/pio_window.h
+ehci_rh.o: ../../../../lib/c/include/task.h
+ehci_rh.o: ../../../../lib/c/include/types/task.h
+endpoint_list.o: ../../../../lib/c/include/assert.h
+endpoint_list.o: ../../../../lib/c/include/errno.h
+endpoint_list.o: ../../../../../abi/include/abi/errno.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+endpoint_list.o: ../../../../lib/c/include/trace.h
+endpoint_list.o: ../../../../lib/usb/include/usb/debug.h
+endpoint_list.o: ../../../../lib/c/include/stdio.h
+endpoint_list.o: ../../../../lib/c/include/sys/types.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+endpoint_list.o: ../../../../lib/c/include/stdarg.h
+endpoint_list.o: ../../../../lib/c/include/str.h
+endpoint_list.o: ../../../../lib/c/include/mem.h
+endpoint_list.o: ../../../../lib/c/include/cc.h
+endpoint_list.o: ../../../../lib/c/include/stdbool.h
+endpoint_list.o: ../../../../../abi/include/abi/bool.h
+endpoint_list.o: ../../../../lib/c/include/io/verify.h
+endpoint_list.o: ../../../../../abi/include/abi/kio.h
+endpoint_list.o: ../../../../lib/c/include/io/log.h
+endpoint_list.o: ../../../../lib/c/include/inttypes.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+endpoint_list.o: ../../../../../abi/include/abi/log.h endpoint_list.h
+endpoint_list.o: ../../../../lib/c/include/adt/list.h
+endpoint_list.o: ../../../../lib/c/include/stddef.h
+endpoint_list.o: ../../../../lib/c/include/fibril_synch.h
+endpoint_list.o: ../../../../lib/c/include/fibril.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+endpoint_list.o: ../../../../lib/c/include/libc.h
+endpoint_list.o: ../../../../../abi/include/abi/syscall.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+endpoint_list.o: ../../../../lib/c/include/sys/time.h
+endpoint_list.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+endpoint_list.o: ../../../../lib/c/include/align.h
+endpoint_list.o: ../../../../lib/c/include/as.h
+endpoint_list.o: ../../../../../abi/include/abi/mm/as.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+endpoint_list.o: ../../../../lib/c/include/ddi.h
+endpoint_list.o: ../../../../../abi/include/abi/ddi/irq.h
+endpoint_list.o: ../../../../lib/c/include/device/hw_res.h
+endpoint_list.o: ../../../../lib/c/include/ipc/dev_iface.h
+endpoint_list.o: ../../../../lib/c/include/malloc.h
+endpoint_list.o: ../../../../lib/c/include/unistd.h
+endpoint_list.o: ../../../../lib/c/include/time.h
+endpoint_list.o: ../../../../lib/c/include/async.h
+endpoint_list.o: ../../../../lib/c/include/ipc/common.h
+endpoint_list.o: ../../../../../abi/include/abi/ipc/ipc.h
+endpoint_list.o: ../../../../lib/c/include/atomic.h
+endpoint_list.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+endpoint_list.o: ../../../../lib/c/include/atomicdflt.h
+endpoint_list.o: ../../../../lib/c/include/stdint.h
+endpoint_list.o: ../../../../../abi/include/abi/proc/task.h
+endpoint_list.o: ../../../../lib/c/include/futex.h
+endpoint_list.o: ../../../../../abi/include/abi/ipc/event.h
+endpoint_list.o: ../../../../../abi/include/abi/ipc/interfaces.h
+endpoint_list.o: ../../../../../abi/include/abi/fourcc.h
+endpoint_list.o: ../../../../../common.h
+endpoint_list.o: ../../../../lib/c/include/device/hw_res_parsed.h
+endpoint_list.o: ../../../../lib/c/include/device/pio_window.h
+endpoint_list.o: ../../../../lib/c/include/task.h
+endpoint_list.o: ../../../../lib/c/include/types/task.h
+endpoint_list.o: ../../../../lib/c/include/stdlib.h
+endpoint_list.o: ../../../../lib/c/include/stacktrace.h ehci_endpoint.h
+endpoint_list.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+endpoint_list.o: ../../../../lib/usb/include/usb/usb.h
+endpoint_list.o: ../../../../lib/c/include/byteorder.h
+endpoint_list.o: ../../../../lib/usbhost/include/usb/host/hcd.h
+endpoint_list.o: ../../../../lib/usbhost/include/usb/host/usb_bus.h
+endpoint_list.o: ../../../../lib/usbhost/include/usb/host/usb_transfer_batch.h
+endpoint_list.o: ../../../../lib/drv/include/usbhc_iface.h
+endpoint_list.o: ../../../../lib/drv/include/ddf/driver.h
+endpoint_list.o: ../../../../lib/c/include/ipc/devman.h
+endpoint_list.o: ../../../../lib/drv/include/dev_iface.h
+endpoint_list.o: hw_struct/queue_head.h hw_struct/link_pointer.h
+endpoint_list.o: hw_struct/transfer_descriptor.h hw_struct/mem_access.h
+endpoint_list.o: hw_struct/transfer_descriptor.h
+hc.o: ../../../../lib/c/include/assert.h ../../../../lib/c/include/async.h
+hc.o: ../../../../lib/c/include/ipc/common.h
+hc.o: ../../../../lib/c/include/sys/types.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+hc.o: ../../../../../abi/include/abi/ipc/ipc.h
+hc.o: ../../../../lib/c/include/atomic.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+hc.o: ../../../../lib/c/include/atomicdflt.h
+hc.o: ../../../../lib/c/include/stdint.h ../../../../lib/c/include/stdbool.h
+hc.o: ../../../../../abi/include/abi/bool.h
+hc.o: ../../../../../abi/include/abi/proc/task.h
+hc.o: ../../../../lib/c/include/futex.h ../../../../lib/c/include/libc.h
+hc.o: ../../../../../abi/include/abi/syscall.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+hc.o: ../../../../lib/c/include/fibril.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hc.o: ../../../../lib/c/include/adt/list.h ../../../../lib/c/include/stddef.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+hc.o: ../../../../lib/c/include/sys/time.h
+hc.o: ../../../../../abi/include/abi/ddi/irq.h
+hc.o: ../../../../../abi/include/abi/ipc/event.h
+hc.o: ../../../../../abi/include/abi/ipc/interfaces.h
+hc.o: ../../../../../abi/include/abi/fourcc.h ../../../../../common.h
+hc.o: ../../../../lib/c/include/errno.h
+hc.o: ../../../../../abi/include/abi/errno.h
+hc.o: ../../../../lib/c/include/macros.h ../../../../lib/c/include/mem.h
+hc.o: ../../../../lib/c/include/cc.h ../../../../lib/c/include/stdlib.h
+hc.o: ../../../../lib/c/include/unistd.h ../../../../lib/c/include/time.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+hc.o: ../../../../lib/c/include/malloc.h
+hc.o: ../../../../lib/c/include/stacktrace.h
+hc.o: ../../../../lib/c/include/str_error.h
+hc.o: ../../../../lib/usb/include/usb/debug.h
+hc.o: ../../../../lib/c/include/stdio.h ../../../../lib/c/include/stdarg.h
+hc.o: ../../../../lib/c/include/str.h ../../../../lib/c/include/io/verify.h
+hc.o: ../../../../../abi/include/abi/kio.h ../../../../lib/c/include/io/log.h
+hc.o: ../../../../lib/c/include/inttypes.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+hc.o: ../../../../../abi/include/abi/log.h
+hc.o: ../../../../lib/usb/include/usb/usb.h
+hc.o: ../../../../lib/c/include/byteorder.h
+hc.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+hc.o: ../../../../lib/c/include/align.h ../../../../lib/c/include/as.h
+hc.o: ../../../../../abi/include/abi/mm/as.h ../../../../lib/c/include/ddi.h
+hc.o: ../../../../lib/c/include/device/hw_res.h
+hc.o: ../../../../lib/c/include/ipc/dev_iface.h
+hc.o: ../../../../lib/c/include/device/hw_res_parsed.h
+hc.o: ../../../../lib/c/include/device/pio_window.h
+hc.o: ../../../../lib/c/include/task.h ../../../../lib/c/include/types/task.h
+hc.o: ehci_batch.h
+hc.o: ../../../../lib/usbhost/include/usb/host/usb_transfer_batch.h
+hc.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+hc.o: ../../../../lib/c/include/fibril_synch.h
+hc.o: ../../../../lib/drv/include/usbhc_iface.h
+hc.o: ../../../../lib/drv/include/ddf/driver.h
+hc.o: ../../../../lib/c/include/ipc/devman.h
+hc.o: ../../../../lib/drv/include/dev_iface.h hw_struct/queue_head.h
+hc.o: hw_struct/link_pointer.h hw_struct/transfer_descriptor.h
+hc.o: hw_struct/mem_access.h
+hc.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+hc.o: ../../../../lib/c/include/trace.h hw_struct/transfer_descriptor.h hc.h
+hc.o: ../../../../lib/usbhost/include/usb/host/hcd.h
+hc.o: ../../../../lib/usbhost/include/usb/host/usb_bus.h ehci_regs.h
+hc.o: ehci_rh.h ../../../../lib/usb/include/usb/classes/hub.h
+hc.o: ../../../../lib/usbvirt/include/usbvirt/virthub_base.h
+hc.o: ../../../../lib/usbvirt/include/usbvirt/device.h
+hc.o: ../../../../lib/usbdev/include/usb/dev/request.h
+hc.o: ../../../../lib/c/include/l18n/langs.h
+hc.o: ../../../../lib/usbdev/include/usb/dev/pipes.h
+hc.o: ../../../../lib/usb/include/usb/descriptor.h
+hc.o: ../../../../lib/drv/include/usb_iface.h
+hc.o: ../../../../lib/usb/include/usb/request.h hw_struct/link_pointer.h
+hc.o: endpoint_list.h ehci_endpoint.h
+hw_struct/queue_head.o: ../../../../lib/c/include/assert.h
+hw_struct/queue_head.o: ../../../../lib/usb/include/usb/usb.h
+hw_struct/queue_head.o: ../../../../lib/c/include/stdbool.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/bool.h
+hw_struct/queue_head.o: ../../../../lib/c/include/sys/types.h
+hw_struct/queue_head.o: ../../../../lib/c/include/byteorder.h
+hw_struct/queue_head.o: ../../../../lib/c/include/stdint.h
+hw_struct/queue_head.o: ../../../../lib/c/include/mem.h
+hw_struct/queue_head.o: ../../../../lib/c/include/cc.h
+hw_struct/queue_head.o: ../../../../lib/c/include/macros.h
+hw_struct/queue_head.o: hw_struct/mem_access.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+hw_struct/queue_head.o: ../../../../lib/c/include/trace.h
+hw_struct/queue_head.o: hw_struct/queue_head.h
+hw_struct/queue_head.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+hw_struct/queue_head.o: ../../../../lib/c/include/adt/list.h
+hw_struct/queue_head.o: ../../../../lib/c/include/stddef.h
+hw_struct/queue_head.o: ../../../../lib/c/include/fibril_synch.h
+hw_struct/queue_head.o: ../../../../lib/c/include/fibril.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+hw_struct/queue_head.o: ../../../../lib/c/include/libc.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/syscall.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+hw_struct/queue_head.o: ../../../../lib/c/include/sys/time.h
+hw_struct/queue_head.o: ../../../../lib/c/include/atomic.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+hw_struct/queue_head.o: ../../../../lib/c/include/atomicdflt.h
+hw_struct/queue_head.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+hw_struct/queue_head.o: ../../../../lib/c/include/align.h
+hw_struct/queue_head.o: ../../../../lib/c/include/as.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/mm/as.h
+hw_struct/queue_head.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+hw_struct/queue_head.o: ../../../../lib/c/include/ddi.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/ddi/irq.h
+hw_struct/queue_head.o: ../../../../lib/c/include/device/hw_res.h
+hw_struct/queue_head.o: ../../../../lib/c/include/ipc/dev_iface.h
+hw_struct/queue_head.o: ../../../../lib/c/include/malloc.h
+hw_struct/queue_head.o: ../../../../lib/c/include/unistd.h
+hw_struct/queue_head.o: ../../../../lib/c/include/time.h
+hw_struct/queue_head.o: ../../../../lib/c/include/async.h
+hw_struct/queue_head.o: ../../../../lib/c/include/ipc/common.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/ipc/ipc.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/proc/task.h
+hw_struct/queue_head.o: ../../../../lib/c/include/futex.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/ipc/event.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/ipc/interfaces.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/fourcc.h
+hw_struct/queue_head.o: ../../../../../common.h
+hw_struct/queue_head.o: ../../../../lib/c/include/device/hw_res_parsed.h
+hw_struct/queue_head.o: ../../../../lib/c/include/device/pio_window.h
+hw_struct/queue_head.o: ../../../../lib/c/include/str.h
+hw_struct/queue_head.o: ../../../../lib/c/include/task.h
+hw_struct/queue_head.o: ../../../../lib/c/include/stdarg.h
+hw_struct/queue_head.o: ../../../../lib/c/include/types/task.h
+hw_struct/queue_head.o: ../../../../lib/c/include/errno.h
+hw_struct/queue_head.o: ../../../../../abi/include/abi/errno.h
+hw_struct/queue_head.o: ../../../../lib/c/include/stdlib.h
+hw_struct/queue_head.o: ../../../../lib/c/include/stacktrace.h
+hw_struct/queue_head.o: hw_struct/link_pointer.h
+hw_struct/queue_head.o: hw_struct/transfer_descriptor.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/assert.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/errno.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/errno.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/macros.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/mem.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/sys/types.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/cc.h
+hw_struct/transfer_descriptor.o: ../../../../lib/usb/include/usb/usb.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/stdbool.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/bool.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/byteorder.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/stdint.h
+hw_struct/transfer_descriptor.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/align.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/as.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/mm/as.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/ddi.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/sys/time.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/ddi/irq.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/device/hw_res.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/ipc/dev_iface.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/malloc.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/unistd.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/time.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/async.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/ipc/common.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/ipc/ipc.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/atomic.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/atomicdflt.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/proc/task.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/futex.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/libc.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/syscall.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/fibril.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/adt/list.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/stddef.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/ipc/event.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/ipc/interfaces.h
+hw_struct/transfer_descriptor.o: ../../../../../abi/include/abi/fourcc.h
+hw_struct/transfer_descriptor.o: ../../../../../common.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/device/hw_res_parsed.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/device/pio_window.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/str.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/task.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/stdarg.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/types/task.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/stdlib.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/stacktrace.h
+hw_struct/transfer_descriptor.o: hw_struct/mem_access.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+hw_struct/transfer_descriptor.o: ../../../../lib/c/include/trace.h
+hw_struct/transfer_descriptor.o: hw_struct/transfer_descriptor.h
+hw_struct/transfer_descriptor.o: hw_struct/link_pointer.h
+main.o: ../../../../lib/drv/include/ddf/driver.h
+main.o: ../../../../lib/c/include/async.h
+main.o: ../../../../lib/c/include/ipc/common.h
+main.o: ../../../../lib/c/include/sys/types.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+main.o: ../../../../../abi/include/abi/ipc/ipc.h
+main.o: ../../../../lib/c/include/atomic.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+main.o: ../../../../lib/c/include/atomicdflt.h
+main.o: ../../../../lib/c/include/stdint.h
+main.o: ../../../../lib/c/include/stdbool.h
+main.o: ../../../../../abi/include/abi/bool.h
+main.o: ../../../../../abi/include/abi/proc/task.h
+main.o: ../../../../lib/c/include/futex.h ../../../../lib/c/include/libc.h
+main.o: ../../../../../abi/include/abi/syscall.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+main.o: ../../../../lib/c/include/fibril.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+main.o: ../../../../lib/c/include/adt/list.h
+main.o: ../../../../lib/c/include/assert.h ../../../../lib/c/include/stddef.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+main.o: ../../../../lib/c/include/sys/time.h
+main.o: ../../../../../abi/include/abi/ddi/irq.h
+main.o: ../../../../../abi/include/abi/ipc/event.h
+main.o: ../../../../../abi/include/abi/ipc/interfaces.h
+main.o: ../../../../../abi/include/abi/fourcc.h ../../../../../common.h
+main.o: ../../../../lib/c/include/ipc/devman.h
+main.o: ../../../../lib/c/include/malloc.h ../../../../lib/c/include/mem.h
+main.o: ../../../../lib/c/include/cc.h
+main.o: ../../../../lib/c/include/ipc/dev_iface.h
+main.o: ../../../../lib/c/include/unistd.h ../../../../lib/c/include/time.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+main.o: ../../../../lib/drv/include/dev_iface.h
+main.o: ../../../../lib/drv/include/ddf/interrupt.h
+main.o: ../../../../lib/c/include/ddi.h
+main.o: ../../../../lib/c/include/device/hw_res.h
+main.o: ../../../../lib/c/include/device/hw_res_parsed.h
+main.o: ../../../../lib/c/include/device/pio_window.h
+main.o: ../../../../lib/c/include/str.h ../../../../lib/c/include/task.h
+main.o: ../../../../lib/c/include/stdarg.h
+main.o: ../../../../lib/c/include/types/task.h
+main.o: ../../../../lib/c/include/fibril_synch.h
+main.o: ../../../../lib/drv/include/ddf/driver.h
+main.o: ../../../../lib/c/include/errno.h
+main.o: ../../../../../abi/include/abi/errno.h
+main.o: ../../../../lib/c/include/str_error.h
+main.o: ../../../../lib/c/include/io/logctl.h
+main.o: ../../../../lib/c/include/io/log.h
+main.o: ../../../../lib/c/include/inttypes.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+main.o: ../../../../lib/c/include/io/verify.h
+main.o: ../../../../../abi/include/abi/log.h
+main.o: ../../../../lib/drv/include/usb_iface.h
+main.o: ../../../../lib/usb/include/usb/usb.h
+main.o: ../../../../lib/c/include/byteorder.h
+main.o: ../../../../lib/usb/include/usb/debug.h
+main.o: ../../../../lib/c/include/stdio.h
+main.o: ../../../../../abi/include/abi/kio.h
+main.o: ../../../../lib/usbhost/include/usb/host/ddf_helpers.h
+main.o: ../../../../lib/usbhost/include/usb/host/hcd.h
+main.o: ../../../../lib/usbhost/include/usb/host/endpoint.h
+main.o: ../../../../lib/usbhost/include/usb/host/usb_bus.h
+main.o: ../../../../lib/usbhost/include/usb/host/usb_transfer_batch.h
+main.o: ../../../../lib/drv/include/usbhc_iface.h res.h hc.h ehci_regs.h
+main.o: ../../../../lib/c/include/macros.h ehci_rh.h
+main.o: ../../../../lib/usb/include/usb/classes/hub.h
+main.o: ../../../../lib/usbvirt/include/usbvirt/virthub_base.h
+main.o: ../../../../lib/usbvirt/include/usbvirt/device.h
+main.o: ../../../../lib/usbdev/include/usb/dev/request.h
+main.o: ../../../../lib/c/include/l18n/langs.h
+main.o: ../../../../lib/usbdev/include/usb/dev/pipes.h
+main.o: ../../../../lib/usb/include/usb/descriptor.h
+main.o: ../../../../lib/usb/include/usb/request.h hw_struct/link_pointer.h
+main.o: endpoint_list.h
+main.o: ../../../../lib/usbhost/include/usb/host/utils/malloc32.h
+main.o: ../../../../lib/c/include/align.h ../../../../lib/c/include/as.h
+main.o: ../../../../../abi/include/abi/mm/as.h
+main.o: ../../../../lib/c/include/stdlib.h
+main.o: ../../../../lib/c/include/stacktrace.h ehci_endpoint.h
+main.o: hw_struct/queue_head.h hw_struct/link_pointer.h
+main.o: hw_struct/transfer_descriptor.h hw_struct/mem_access.h
+main.o: ../../../../lib/c/arch/ia32/include/libarch/barrier.h
+main.o: ../../../../lib/c/include/trace.h hw_struct/transfer_descriptor.h
+res.o: ../../../../lib/c/include/errno.h
+res.o: ../../../../../abi/include/abi/errno.h
+res.o: ../../../../lib/c/include/str_error.h
+res.o: ../../../../lib/c/include/assert.h ../../../../lib/c/include/devman.h
+res.o: ../../../../lib/c/include/ipc/devman.h
+res.o: ../../../../lib/c/include/ipc/common.h
+res.o: ../../../../lib/c/include/sys/types.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/types.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/common.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/stddef.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/stdint.h
+res.o: ../../../../../abi/include/abi/ipc/ipc.h
+res.o: ../../../../lib/c/include/atomic.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/atomic.h
+res.o: ../../../../lib/c/include/atomicdflt.h
+res.o: ../../../../lib/c/include/stdint.h ../../../../lib/c/include/stdbool.h
+res.o: ../../../../../abi/include/abi/bool.h
+res.o: ../../../../../abi/include/abi/proc/task.h
+res.o: ../../../../lib/c/include/futex.h ../../../../lib/c/include/libc.h
+res.o: ../../../../../abi/include/abi/syscall.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/syscall.h
+res.o: ../../../../lib/c/include/adt/list.h
+res.o: ../../../../lib/c/include/stddef.h ../../../../lib/c/include/malloc.h
+res.o: ../../../../lib/c/include/mem.h ../../../../lib/c/include/cc.h
+res.o: ../../../../lib/c/include/ipc/loc.h ../../../../lib/c/include/async.h
+res.o: ../../../../lib/c/include/fibril.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/fibril.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/tls.h
+res.o: ../../../../lib/c/include/sys/time.h
+res.o: ../../../../../abi/include/abi/ddi/irq.h
+res.o: ../../../../../abi/include/abi/ipc/event.h
+res.o: ../../../../../abi/include/abi/ipc/interfaces.h
+res.o: ../../../../../abi/include/abi/fourcc.h ../../../../../common.h
+res.o: ../../../../lib/c/include/ddi.h
+res.o: ../../../../lib/c/include/device/hw_res.h
+res.o: ../../../../lib/c/include/ipc/dev_iface.h
+res.o: ../../../../lib/c/include/unistd.h ../../../../lib/c/include/time.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/config.h
+res.o: ../../../../lib/c/include/device/hw_res_parsed.h
+res.o: ../../../../lib/c/include/device/pio_window.h
+res.o: ../../../../lib/c/include/str.h ../../../../lib/c/include/task.h
+res.o: ../../../../lib/c/include/stdarg.h
+res.o: ../../../../lib/c/include/types/task.h
+res.o: ../../../../lib/usb/include/usb/debug.h
+res.o: ../../../../lib/c/include/stdio.h
+res.o: ../../../../lib/c/include/io/verify.h
+res.o: ../../../../../abi/include/abi/kio.h
+res.o: ../../../../lib/c/include/io/log.h
+res.o: ../../../../lib/c/include/inttypes.h
+res.o: ../../../../lib/c/arch/ia32/include/libarch/inttypes.h
+res.o: ../../../../../abi/include/abi/log.h
+res.o: ../../../../lib/drv/include/pci_dev_iface.h
+res.o: ../../../../lib/drv/include/ddf/driver.h
+res.o: ../../../../lib/drv/include/dev_iface.h res.h ehci_regs.h
+res.o: ../../../../lib/c/include/byteorder.h
+res.o: ../../../../lib/c/include/macros.h
+# DO NOT DELETE

@@ -1,0 +1,1533 @@
+
+sata_bd:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 e0 39 00 00    	lea    0x39e0,%eax
+    1110:	c7 00 70 21 00 00    	movl   $0x2170,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 4e 0e 00 00       	call   1f70 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <sata_bd_open>:
+    1130:	55                   	push   %ebp
+    1131:	31 c0                	xor    %eax,%eax
+    1133:	89 e5                	mov    %esp,%ebp
+    1135:	5d                   	pop    %ebp
+    1136:	c3                   	ret    
+    1137:	89 f6                	mov    %esi,%esi
+    1139:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001140 <sata_bd_close>:
+    1140:	55                   	push   %ebp
+    1141:	31 c0                	xor    %eax,%eax
+    1143:	89 e5                	mov    %esp,%ebp
+    1145:	5d                   	pop    %ebp
+    1146:	c3                   	ret    
+    1147:	89 f6                	mov    %esi,%esi
+    1149:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001150 <sata_bd_get_block_size>:
+    1150:	55                   	push   %ebp
+    1151:	89 e5                	mov    %esp,%ebp
+    1153:	8b 45 08             	mov    0x8(%ebp),%eax
+    1156:	8b 00                	mov    (%eax),%eax
+    1158:	8b 40 04             	mov    0x4(%eax),%eax
+    115b:	8b 90 14 01 00 00    	mov    0x114(%eax),%edx
+    1161:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1164:	89 10                	mov    %edx,(%eax)
+    1166:	31 c0                	xor    %eax,%eax
+    1168:	5d                   	pop    %ebp
+    1169:	c3                   	ret    
+    116a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+00001170 <sata_bd_get_num_blocks>:
+    1170:	55                   	push   %ebp
+    1171:	89 e5                	mov    %esp,%ebp
+    1173:	53                   	push   %ebx
+    1174:	8b 45 08             	mov    0x8(%ebp),%eax
+    1177:	8b 00                	mov    (%eax),%eax
+    1179:	8b 40 04             	mov    0x4(%eax),%eax
+    117c:	8b 98 10 01 00 00    	mov    0x110(%eax),%ebx
+    1182:	8b 88 0c 01 00 00    	mov    0x10c(%eax),%ecx
+    1188:	8b 45 0c             	mov    0xc(%ebp),%eax
+    118b:	89 08                	mov    %ecx,(%eax)
+    118d:	89 58 04             	mov    %ebx,0x4(%eax)
+    1190:	5b                   	pop    %ebx
+    1191:	31 c0                	xor    %eax,%eax
+    1193:	5d                   	pop    %ebp
+    1194:	c3                   	ret    
+    1195:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1199:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000011a0 <sata_bd_connection>:
+    11a0:	55                   	push   %ebp
+    11a1:	ba 28 3b 00 00       	mov    $0x3b28,%edx
+    11a6:	89 e5                	mov    %esp,%ebp
+    11a8:	57                   	push   %edi
+    11a9:	56                   	push   %esi
+    11aa:	53                   	push   %ebx
+    11ab:	83 ec 1c             	sub    $0x1c,%esp
+    11ae:	83 cb ff             	or     $0xffffffff,%ebx
+    11b1:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    11b4:	8b 45 08             	mov    0x8(%ebp),%eax
+    11b7:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    11ba:	31 c0                	xor    %eax,%eax
+    11bc:	8b 77 08             	mov    0x8(%edi),%esi
+    11bf:	eb 19                	jmp    11da <sata_bd_connection+0x3a>
+    11c1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    11c8:	89 d9                	mov    %ebx,%ecx
+    11ca:	40                   	inc    %eax
+    11cb:	81 c2 20 01 00 00    	add    $0x120,%edx
+    11d1:	89 cb                	mov    %ecx,%ebx
+    11d3:	3d 00 01 00 00       	cmp    $0x100,%eax
+    11d8:	74 16                	je     11f0 <sata_bd_connection+0x50>
+    11da:	3b 32                	cmp    (%edx),%esi
+    11dc:	75 ea                	jne    11c8 <sata_bd_connection+0x28>
+    11de:	89 c1                	mov    %eax,%ecx
+    11e0:	40                   	inc    %eax
+    11e1:	81 c2 20 01 00 00    	add    $0x120,%edx
+    11e7:	89 cb                	mov    %ecx,%ebx
+    11e9:	3d 00 01 00 00       	cmp    $0x100,%eax
+    11ee:	75 ea                	jne    11da <sata_bd_connection+0x3a>
+    11f0:	83 f9 ff             	cmp    $0xffffffff,%ecx
+    11f3:	74 23                	je     1218 <sata_bd_connection+0x78>
+    11f5:	8d 04 c9             	lea    (%ecx,%ecx,8),%eax
+    11f8:	89 7d 0c             	mov    %edi,0xc(%ebp)
+    11fb:	c1 e0 05             	shl    $0x5,%eax
+    11fe:	05 38 3b 00 00       	add    $0x3b38,%eax
+    1203:	89 45 10             	mov    %eax,0x10(%ebp)
+    1206:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1209:	89 45 08             	mov    %eax,0x8(%ebp)
+    120c:	83 c4 1c             	add    $0x1c,%esp
+    120f:	5b                   	pop    %ebx
+    1210:	5e                   	pop    %esi
+    1211:	5f                   	pop    %edi
+    1212:	5d                   	pop    %ebp
+    1213:	e9 48 0e 00 00       	jmp    2060 <bd_conn@plt>
+    1218:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    121b:	c7 45 0c f2 ff ff ff 	movl   $0xfffffff2,0xc(%ebp)
+    1222:	89 45 08             	mov    %eax,0x8(%ebp)
+    1225:	83 c4 1c             	add    $0x1c,%esp
+    1228:	5b                   	pop    %ebx
+    1229:	5e                   	pop    %esi
+    122a:	5f                   	pop    %edi
+    122b:	5d                   	pop    %ebp
+    122c:	e9 0f 0e 00 00       	jmp    2040 <async_answer_0@plt>
+    1231:	eb 0d                	jmp    1240 <scan_device_tree>
+    1233:	90                   	nop
+    1234:	90                   	nop
+    1235:	90                   	nop
+    1236:	90                   	nop
+    1237:	90                   	nop
+    1238:	90                   	nop
+    1239:	90                   	nop
+    123a:	90                   	nop
+    123b:	90                   	nop
+    123c:	90                   	nop
+    123d:	90                   	nop
+    123e:	90                   	nop
+    123f:	90                   	nop
+
+00001240 <scan_device_tree>:
+    1240:	55                   	push   %ebp
+    1241:	89 e5                	mov    %esp,%ebp
+    1243:	56                   	push   %esi
+    1244:	53                   	push   %ebx
+    1245:	89 c6                	mov    %eax,%esi
+    1247:	83 ec 18             	sub    $0x18,%esp
+    124a:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    124f:	8d 1c c0             	lea    (%eax,%eax,8),%ebx
+    1252:	c1 e3 05             	shl    $0x5,%ebx
+    1255:	81 c3 20 3a 00 00    	add    $0x3a20,%ebx
+    125b:	53                   	push   %ebx
+    125c:	56                   	push   %esi
+    125d:	e8 1e 07 00 00       	call   1980 <ahci_get_sess>
+    1262:	83 c4 10             	add    $0x10,%esp
+    1265:	89 83 04 01 00 00    	mov    %eax,0x104(%ebx)
+    126b:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    1270:	8d 04 c0             	lea    (%eax,%eax,8),%eax
+    1273:	c1 e0 05             	shl    $0x5,%eax
+    1276:	8b 90 24 3b 00 00    	mov    0x3b24(%eax),%edx
+    127c:	85 d2                	test   %edx,%edx
+    127e:	0f 84 c0 00 00 00    	je     1344 <scan_device_tree+0x104>
+    1284:	05 24 3a 00 00       	add    $0x3a24,%eax
+    1289:	51                   	push   %ecx
+    128a:	50                   	push   %eax
+    128b:	68 00 01 00 00       	push   $0x100
+    1290:	52                   	push   %edx
+    1291:	e8 8a 07 00 00       	call   1a20 <ahci_get_sata_device_name>
+    1296:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    129b:	5b                   	pop    %ebx
+    129c:	5a                   	pop    %edx
+    129d:	8d 04 c0             	lea    (%eax,%eax,8),%eax
+    12a0:	c1 e0 05             	shl    $0x5,%eax
+    12a3:	8d 90 34 3b 00 00    	lea    0x3b34(%eax),%edx
+    12a9:	8b 88 24 3b 00 00    	mov    0x3b24(%eax),%ecx
+    12af:	52                   	push   %edx
+    12b0:	51                   	push   %ecx
+    12b1:	e8 5a 08 00 00       	call   1b10 <ahci_get_block_size>
+    12b6:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    12bb:	8d 04 c0             	lea    (%eax,%eax,8),%eax
+    12be:	5b                   	pop    %ebx
+    12bf:	c1 e0 05             	shl    $0x5,%eax
+    12c2:	5a                   	pop    %edx
+    12c3:	8b 88 24 3b 00 00    	mov    0x3b24(%eax),%ecx
+    12c9:	8d 90 2c 3b 00 00    	lea    0x3b2c(%eax),%edx
+    12cf:	52                   	push   %edx
+    12d0:	51                   	push   %ecx
+    12d1:	e8 ba 07 00 00       	call   1a90 <ahci_get_num_blocks>
+    12d6:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    12db:	8d 04 c0             	lea    (%eax,%eax,8),%eax
+    12de:	c1 e0 05             	shl    $0x5,%eax
+    12e1:	05 38 3b 00 00       	add    $0x3b38,%eax
+    12e6:	89 04 24             	mov    %eax,(%esp)
+    12e9:	e8 a2 0d 00 00       	call   2090 <bd_srvs_init@plt>
+    12ee:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    12f3:	8d 04 c0             	lea    (%eax,%eax,8),%eax
+    12f6:	c1 e0 05             	shl    $0x5,%eax
+    12f9:	8d 90 20 3a 00 00    	lea    0x3a20(%eax),%edx
+    12ff:	c7 80 38 3b 00 00 20 	movl   $0x3920,0x3b38(%eax)
+    1306:	39 00 00 
+    1309:	89 92 1c 01 00 00    	mov    %edx,0x11c(%edx)
+    130f:	8b 8a 14 01 00 00    	mov    0x114(%edx),%ecx
+    1315:	5b                   	pop    %ebx
+    1316:	8b 9a 0c 01 00 00    	mov    0x10c(%edx),%ebx
+    131c:	8d 90 24 3a 00 00    	lea    0x3a24(%eax),%edx
+    1322:	8b 80 20 3a 00 00    	mov    0x3a20(%eax),%eax
+    1328:	51                   	push   %ecx
+    1329:	53                   	push   %ebx
+    132a:	52                   	push   %edx
+    132b:	50                   	push   %eax
+    132c:	68 60 1c 00 00       	push   $0x1c60
+    1331:	e8 8a 0c 00 00       	call   1fc0 <printf@plt>
+    1336:	a1 00 3a 00 00       	mov    0x3a00,%eax
+    133b:	83 c4 20             	add    $0x20,%esp
+    133e:	40                   	inc    %eax
+    133f:	a3 00 3a 00 00       	mov    %eax,0x3a00
+    1344:	50                   	push   %eax
+    1345:	50                   	push   %eax
+    1346:	8d 45 ec             	lea    -0x14(%ebp),%eax
+    1349:	50                   	push   %eax
+    134a:	56                   	push   %esi
+    134b:	e8 30 0e 00 00       	call   2180 <devman_fun_get_child@plt>
+    1350:	83 c4 10             	add    $0x10,%esp
+    1353:	89 c6                	mov    %eax,%esi
+    1355:	83 f8 ff             	cmp    $0xffffffff,%eax
+    1358:	74 7e                	je     13d8 <scan_device_tree+0x198>
+    135a:	85 c0                	test   %eax,%eax
+    135c:	75 5a                	jne    13b8 <scan_device_tree+0x178>
+    135e:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1361:	8b 75 ec             	mov    -0x14(%ebp),%esi
+    1364:	53                   	push   %ebx
+    1365:	50                   	push   %eax
+    1366:	8d 45 f0             	lea    -0x10(%ebp),%eax
+    1369:	50                   	push   %eax
+    136a:	56                   	push   %esi
+    136b:	e8 30 0c 00 00       	call   1fa0 <devman_dev_get_functions@plt>
+    1370:	83 c4 10             	add    $0x10,%esp
+    1373:	89 c6                	mov    %eax,%esi
+    1375:	85 c0                	test   %eax,%eax
+    1377:	75 6f                	jne    13e8 <scan_device_tree+0x1a8>
+    1379:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+    137c:	31 db                	xor    %ebx,%ebx
+    137e:	85 c9                	test   %ecx,%ecx
+    1380:	74 17                	je     1399 <scan_device_tree+0x159>
+    1382:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1388:	8b 45 f0             	mov    -0x10(%ebp),%eax
+    138b:	8b 04 98             	mov    (%eax,%ebx,4),%eax
+    138e:	43                   	inc    %ebx
+    138f:	e8 ac fe ff ff       	call   1240 <scan_device_tree>
+    1394:	39 5d f4             	cmp    %ebx,-0xc(%ebp)
+    1397:	77 ef                	ja     1388 <scan_device_tree+0x148>
+    1399:	83 ec 0c             	sub    $0xc,%esp
+    139c:	8b 55 f0             	mov    -0x10(%ebp),%edx
+    139f:	52                   	push   %edx
+    13a0:	e8 fb 0d 00 00       	call   21a0 <free@plt>
+    13a5:	83 c4 10             	add    $0x10,%esp
+    13a8:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    13ab:	89 f0                	mov    %esi,%eax
+    13ad:	5b                   	pop    %ebx
+    13ae:	5e                   	pop    %esi
+    13af:	5d                   	pop    %ebp
+    13b0:	c3                   	ret    
+    13b1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    13b8:	50                   	push   %eax
+    13b9:	50                   	push   %eax
+    13ba:	68 ec 1d 00 00       	push   $0x1dec
+    13bf:	68 90 1c 00 00       	push   $0x1c90
+    13c4:	e8 f7 0b 00 00       	call   1fc0 <printf@plt>
+    13c9:	83 c4 10             	add    $0x10,%esp
+    13cc:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    13cf:	89 f0                	mov    %esi,%eax
+    13d1:	5b                   	pop    %ebx
+    13d2:	5e                   	pop    %esi
+    13d3:	5d                   	pop    %ebp
+    13d4:	c3                   	ret    
+    13d5:	8d 76 00             	lea    0x0(%esi),%esi
+    13d8:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    13db:	31 f6                	xor    %esi,%esi
+    13dd:	89 f0                	mov    %esi,%eax
+    13df:	5b                   	pop    %ebx
+    13e0:	5e                   	pop    %esi
+    13e1:	5d                   	pop    %ebp
+    13e2:	c3                   	ret    
+    13e3:	90                   	nop
+    13e4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    13e8:	50                   	push   %eax
+    13e9:	50                   	push   %eax
+    13ea:	68 ec 1d 00 00       	push   $0x1dec
+    13ef:	68 c8 1c 00 00       	push   $0x1cc8
+    13f4:	e8 c7 0b 00 00       	call   1fc0 <printf@plt>
+    13f9:	83 c4 10             	add    $0x10,%esp
+    13fc:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    13ff:	89 f0                	mov    %esi,%eax
+    1401:	5b                   	pop    %ebx
+    1402:	5e                   	pop    %esi
+    1403:	5d                   	pop    %ebp
+    1404:	c3                   	ret    
+    1405:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1409:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001410 <sata_bd_write_blocks>:
+    1410:	55                   	push   %ebp
+    1411:	89 e5                	mov    %esp,%ebp
+    1413:	57                   	push   %edi
+    1414:	56                   	push   %esi
+    1415:	53                   	push   %ebx
+    1416:	8b 45 08             	mov    0x8(%ebp),%eax
+    1419:	8b 55 14             	mov    0x14(%ebp),%edx
+    141c:	8b 00                	mov    (%eax),%eax
+    141e:	8b 40 04             	mov    0x4(%eax),%eax
+    1421:	8b b0 14 01 00 00    	mov    0x114(%eax),%esi
+    1427:	0f af f2             	imul   %edx,%esi
+    142a:	3b 75 1c             	cmp    0x1c(%ebp),%esi
+    142d:	77 19                	ja     1448 <sata_bd_write_blocks+0x38>
+    142f:	8b 80 04 01 00 00    	mov    0x104(%eax),%eax
+    1435:	5b                   	pop    %ebx
+    1436:	89 45 08             	mov    %eax,0x8(%ebp)
+    1439:	5e                   	pop    %esi
+    143a:	5f                   	pop    %edi
+    143b:	5d                   	pop    %ebp
+    143c:	e9 af 07 00 00       	jmp    1bf0 <ahci_write_blocks>
+    1441:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1448:	5b                   	pop    %ebx
+    1449:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    144e:	5e                   	pop    %esi
+    144f:	5f                   	pop    %edi
+    1450:	5d                   	pop    %ebp
+    1451:	c3                   	ret    
+    1452:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1459:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001460 <sata_bd_read_blocks>:
+    1460:	55                   	push   %ebp
+    1461:	89 e5                	mov    %esp,%ebp
+    1463:	57                   	push   %edi
+    1464:	56                   	push   %esi
+    1465:	53                   	push   %ebx
+    1466:	8b 45 08             	mov    0x8(%ebp),%eax
+    1469:	8b 55 14             	mov    0x14(%ebp),%edx
+    146c:	8b 00                	mov    (%eax),%eax
+    146e:	8b 40 04             	mov    0x4(%eax),%eax
+    1471:	8b b0 14 01 00 00    	mov    0x114(%eax),%esi
+    1477:	0f af f2             	imul   %edx,%esi
+    147a:	3b 75 1c             	cmp    0x1c(%ebp),%esi
+    147d:	77 19                	ja     1498 <sata_bd_read_blocks+0x38>
+    147f:	8b 80 04 01 00 00    	mov    0x104(%eax),%eax
+    1485:	5b                   	pop    %ebx
+    1486:	89 45 08             	mov    %eax,0x8(%ebp)
+    1489:	5e                   	pop    %esi
+    148a:	5f                   	pop    %edi
+    148b:	5d                   	pop    %ebp
+    148c:	e9 ef 06 00 00       	jmp    1b80 <ahci_read_blocks>
+    1491:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1498:	5b                   	pop    %ebx
+    1499:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    149e:	5e                   	pop    %esi
+    149f:	5f                   	pop    %edi
+    14a0:	5d                   	pop    %ebp
+    14a1:	c3                   	ret    
+    14a2:	66 90                	xchg   %ax,%ax
+    14a4:	66 90                	xchg   %ax,%ax
+    14a6:	66 90                	xchg   %ax,%ax
+    14a8:	66 90                	xchg   %ax,%ax
+    14aa:	66 90                	xchg   %ax,%ax
+    14ac:	66 90                	xchg   %ax,%ax
+    14ae:	66 90                	xchg   %ax,%ax
+
+000014b0 <main>:
+    14b0:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    14b4:	83 e4 f0             	and    $0xfffffff0,%esp
+    14b7:	ff 71 fc             	pushl  -0x4(%ecx)
+    14ba:	55                   	push   %ebp
+    14bb:	89 e5                	mov    %esp,%ebp
+    14bd:	57                   	push   %edi
+    14be:	56                   	push   %esi
+    14bf:	53                   	push   %ebx
+    14c0:	51                   	push   %ecx
+    14c1:	81 ec 30 04 00 00    	sub    $0x430,%esp
+    14c7:	6a 00                	push   $0x0
+    14c9:	68 a0 11 00 00       	push   $0x11a0
+    14ce:	e8 bd 0c 00 00       	call   2190 <async_set_fallback_port_handler@plt>
+    14d3:	c7 04 24 f0 1d 00 00 	movl   $0x1df0,(%esp)
+    14da:	e8 11 0c 00 00       	call   20f0 <loc_server_register@plt>
+    14df:	83 c4 10             	add    $0x10,%esp
+    14e2:	89 85 d4 fb ff ff    	mov    %eax,-0x42c(%ebp)
+    14e8:	85 c0                	test   %eax,%eax
+    14ea:	0f 88 fb 00 00 00    	js     15eb <main+0x13b>
+    14f0:	8d bd e8 fb ff ff    	lea    -0x418(%ebp),%edi
+    14f6:	c7 05 00 3a 00 00 00 	movl   $0x0,0x3a00
+    14fd:	00 00 00 
+    1500:	52                   	push   %edx
+    1501:	6a 00                	push   $0x0
+    1503:	57                   	push   %edi
+    1504:	68 f8 1d 00 00       	push   $0x1df8
+    1509:	e8 32 0c 00 00       	call   2140 <devman_fun_get_handle@plt>
+    150e:	83 c4 10             	add    $0x10,%esp
+    1511:	85 c0                	test   %eax,%eax
+    1513:	0f 85 7c 01 00 00    	jne    1695 <main+0x1e5>
+    1519:	8b 85 e8 fb ff ff    	mov    -0x418(%ebp),%eax
+    151f:	e8 1c fd ff ff       	call   1240 <scan_device_tree>
+    1524:	50                   	push   %eax
+    1525:	8d 85 e4 fb ff ff    	lea    -0x41c(%ebp),%eax
+    152b:	6a 01                	push   $0x1
+    152d:	50                   	push   %eax
+    152e:	68 fa 1d 00 00       	push   $0x1dfa
+    1533:	e8 48 0a 00 00       	call   1f80 <loc_category_get_id@plt>
+    1538:	83 c4 10             	add    $0x10,%esp
+    153b:	89 85 d4 fb ff ff    	mov    %eax,-0x42c(%ebp)
+    1541:	85 c0                	test   %eax,%eax
+    1543:	0f 85 2d 01 00 00    	jne    1676 <main+0x1c6>
+    1549:	31 f6                	xor    %esi,%esi
+    154b:	bb 28 3b 00 00       	mov    $0x3b28,%ebx
+    1550:	83 3d 00 3a 00 00 00 	cmpl   $0x0,0x3a00
+    1557:	7f 32                	jg     158b <main+0xdb>
+    1559:	e9 a5 00 00 00       	jmp    1603 <main+0x153>
+    155e:	66 90                	xchg   %ax,%ax
+    1560:	8b 85 e4 fb ff ff    	mov    -0x41c(%ebp),%eax
+    1566:	51                   	push   %ecx
+    1567:	51                   	push   %ecx
+    1568:	50                   	push   %eax
+    1569:	8b 03                	mov    (%ebx),%eax
+    156b:	50                   	push   %eax
+    156c:	e8 4f 0b 00 00       	call   20c0 <loc_service_add_to_cat@plt>
+    1571:	83 c4 10             	add    $0x10,%esp
+    1574:	85 c0                	test   %eax,%eax
+    1576:	0f 85 ca 00 00 00    	jne    1646 <main+0x196>
+    157c:	46                   	inc    %esi
+    157d:	81 c3 20 01 00 00    	add    $0x120,%ebx
+    1583:	39 35 00 3a 00 00    	cmp    %esi,0x3a00
+    1589:	7e 78                	jle    1603 <main+0x153>
+    158b:	83 ec 0c             	sub    $0xc,%esp
+    158e:	8b 83 f8 fe ff ff    	mov    -0x108(%ebx),%eax
+    1594:	50                   	push   %eax
+    1595:	68 f5 1d 00 00       	push   $0x1df5
+    159a:	68 ff 1d 00 00       	push   $0x1dff
+    159f:	68 00 04 00 00       	push   $0x400
+    15a4:	57                   	push   %edi
+    15a5:	e8 36 0a 00 00       	call   1fe0 <snprintf@plt>
+    15aa:	83 c4 18             	add    $0x18,%esp
+    15ad:	53                   	push   %ebx
+    15ae:	57                   	push   %edi
+    15af:	e8 3c 0a 00 00       	call   1ff0 <loc_service_register@plt>
+    15b4:	83 c4 10             	add    $0x10,%esp
+    15b7:	85 c0                	test   %eax,%eax
+    15b9:	74 a5                	je     1560 <main+0xb0>
+    15bb:	89 85 d4 fb ff ff    	mov    %eax,-0x42c(%ebp)
+    15c1:	50                   	push   %eax
+    15c2:	50                   	push   %eax
+    15c3:	57                   	push   %edi
+    15c4:	68 80 1d 00 00       	push   $0x1d80
+    15c9:	e8 f2 09 00 00       	call   1fc0 <printf@plt>
+    15ce:	83 c4 10             	add    $0x10,%esp
+    15d1:	8b 95 d4 fb ff ff    	mov    -0x42c(%ebp),%edx
+    15d7:	89 95 d4 fb ff ff    	mov    %edx,-0x42c(%ebp)
+    15dd:	89 d0                	mov    %edx,%eax
+    15df:	8d 65 f0             	lea    -0x10(%ebp),%esp
+    15e2:	59                   	pop    %ecx
+    15e3:	5b                   	pop    %ebx
+    15e4:	5e                   	pop    %esi
+    15e5:	5f                   	pop    %edi
+    15e6:	5d                   	pop    %ebp
+    15e7:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    15ea:	c3                   	ret    
+    15eb:	83 ec 0c             	sub    $0xc,%esp
+    15ee:	68 04 1d 00 00       	push   $0x1d04
+    15f3:	e8 c8 09 00 00       	call   1fc0 <printf@plt>
+    15f8:	83 c4 10             	add    $0x10,%esp
+    15fb:	8b 85 d4 fb ff ff    	mov    -0x42c(%ebp),%eax
+    1601:	eb dc                	jmp    15df <main+0x12f>
+    1603:	83 ec 0c             	sub    $0xc,%esp
+    1606:	68 cc 1d 00 00       	push   $0x1dcc
+    160b:	e8 b0 09 00 00       	call   1fc0 <printf@plt>
+    1610:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+    1617:	e8 94 09 00 00       	call   1fb0 <task_retval@plt>
+    161c:	83 c8 ff             	or     $0xffffffff,%eax
+    161f:	f0 0f c1 05 e4 39 00 	lock xadd %eax,0x39e4
+    1626:	00 
+    1627:	83 c4 10             	add    $0x10,%esp
+    162a:	48                   	dec    %eax
+    162b:	0f 88 89 00 00 00    	js     16ba <main+0x20a>
+    1631:	83 ec 0c             	sub    $0xc,%esp
+    1634:	6a 03                	push   $0x3
+    1636:	e8 25 0b 00 00       	call   2160 <fibril_switch@plt>
+    163b:	83 c4 10             	add    $0x10,%esp
+    163e:	8b 85 d4 fb ff ff    	mov    -0x42c(%ebp),%eax
+    1644:	eb 99                	jmp    15df <main+0x12f>
+    1646:	69 f6 20 01 00 00    	imul   $0x120,%esi,%esi
+    164c:	52                   	push   %edx
+    164d:	89 85 d4 fb ff ff    	mov    %eax,-0x42c(%ebp)
+    1653:	ff b6 20 3a 00 00    	pushl  0x3a20(%esi)
+    1659:	68 f0 1d 00 00       	push   $0x1df0
+    165e:	68 a8 1d 00 00       	push   $0x1da8
+    1663:	e8 58 09 00 00       	call   1fc0 <printf@plt>
+    1668:	83 c4 10             	add    $0x10,%esp
+    166b:	8b 95 d4 fb ff ff    	mov    -0x42c(%ebp),%edx
+    1671:	e9 61 ff ff ff       	jmp    15d7 <main+0x127>
+    1676:	50                   	push   %eax
+    1677:	50                   	push   %eax
+    1678:	68 f0 1d 00 00       	push   $0x1df0
+    167d:	68 58 1d 00 00       	push   $0x1d58
+    1682:	e8 39 09 00 00       	call   1fc0 <printf@plt>
+    1687:	83 c4 10             	add    $0x10,%esp
+    168a:	8b 85 d4 fb ff ff    	mov    -0x42c(%ebp),%eax
+    1690:	e9 4a ff ff ff       	jmp    15df <main+0x12f>
+    1695:	83 ec 0c             	sub    $0xc,%esp
+    1698:	68 2c 1d 00 00       	push   $0x1d2c
+    169d:	e8 1e 09 00 00       	call   1fc0 <printf@plt>
+    16a2:	c7 85 d4 fb ff ff f6 	movl   $0xfffffef6,-0x42c(%ebp)
+    16a9:	fe ff ff 
+    16ac:	83 c4 10             	add    $0x10,%esp
+    16af:	8b 85 d4 fb ff ff    	mov    -0x42c(%ebp),%eax
+    16b5:	e9 25 ff ff ff       	jmp    15df <main+0x12f>
+    16ba:	50                   	push   %eax
+    16bb:	6a 0b                	push   $0xb
+    16bd:	6a 00                	push   $0x0
+    16bf:	6a 00                	push   $0x0
+    16c1:	6a 00                	push   $0x0
+    16c3:	6a 00                	push   $0x0
+    16c5:	6a 00                	push   $0x0
+    16c7:	68 e4 39 00 00       	push   $0x39e4
+    16cc:	ff 15 e0 39 00 00    	call   *0x39e0
+    16d2:	83 c4 20             	add    $0x20,%esp
+    16d5:	e9 57 ff ff ff       	jmp    1631 <main+0x181>
+    16da:	66 90                	xchg   %ax,%ax
+    16dc:	66 90                	xchg   %ax,%ax
+    16de:	66 90                	xchg   %ax,%ax
+
+000016e0 <remote_ahci_write_blocks>:
+    16e0:	55                   	push   %ebp
+    16e1:	89 e5                	mov    %esp,%ebp
+    16e3:	56                   	push   %esi
+    16e4:	53                   	push   %ebx
+    16e5:	83 ec 10             	sub    $0x10,%esp
+    16e8:	8b 75 0c             	mov    0xc(%ebp),%esi
+    16eb:	8b 5d 14             	mov    0x14(%ebp),%ebx
+    16ee:	8b 46 0c             	mov    0xc(%esi),%eax
+    16f1:	85 c0                	test   %eax,%eax
+    16f3:	74 53                	je     1748 <remote_ahci_write_blocks+0x68>
+    16f5:	50                   	push   %eax
+    16f6:	8d 45 ec             	lea    -0x14(%ebp),%eax
+    16f9:	50                   	push   %eax
+    16fa:	8d 45 e8             	lea    -0x18(%ebp),%eax
+    16fd:	50                   	push   %eax
+    16fe:	8d 45 f0             	lea    -0x10(%ebp),%eax
+    1701:	50                   	push   %eax
+    1702:	e8 19 09 00 00       	call   2020 <async_share_out_receive@plt>
+    1707:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    170a:	5a                   	pop    %edx
+    170b:	59                   	pop    %ecx
+    170c:	50                   	push   %eax
+    170d:	8b 45 f0             	mov    -0x10(%ebp),%eax
+    1710:	50                   	push   %eax
+    1711:	e8 6a 09 00 00       	call   2080 <async_share_out_finalize@plt>
+    1716:	58                   	pop    %eax
+    1717:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    171a:	50                   	push   %eax
+    171b:	8b 43 10             	mov    0x10(%ebx),%eax
+    171e:	50                   	push   %eax
+    171f:	8b 43 0c             	mov    0xc(%ebx),%eax
+    1722:	8b 53 08             	mov    0x8(%ebx),%edx
+    1725:	52                   	push   %edx
+    1726:	50                   	push   %eax
+    1727:	8b 45 08             	mov    0x8(%ebp),%eax
+    172a:	50                   	push   %eax
+    172b:	ff 56 10             	call   *0x10(%esi)
+    172e:	83 c4 18             	add    $0x18,%esp
+    1731:	50                   	push   %eax
+    1732:	8b 45 10             	mov    0x10(%ebp),%eax
+    1735:	50                   	push   %eax
+    1736:	e8 05 09 00 00       	call   2040 <async_answer_0@plt>
+    173b:	83 c4 10             	add    $0x10,%esp
+    173e:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1741:	5b                   	pop    %ebx
+    1742:	5e                   	pop    %esi
+    1743:	5d                   	pop    %ebp
+    1744:	c3                   	ret    
+    1745:	8d 76 00             	lea    0x0(%esi),%esi
+    1748:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    174b:	52                   	push   %edx
+    174c:	52                   	push   %edx
+    174d:	6a f5                	push   $0xfffffff5
+    174f:	51                   	push   %ecx
+    1750:	e8 eb 08 00 00       	call   2040 <async_answer_0@plt>
+    1755:	83 c4 10             	add    $0x10,%esp
+    1758:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    175b:	5b                   	pop    %ebx
+    175c:	5e                   	pop    %esi
+    175d:	5d                   	pop    %ebp
+    175e:	c3                   	ret    
+    175f:	90                   	nop
+
+00001760 <remote_ahci_read_blocks>:
+    1760:	55                   	push   %ebp
+    1761:	89 e5                	mov    %esp,%ebp
+    1763:	56                   	push   %esi
+    1764:	53                   	push   %ebx
+    1765:	83 ec 10             	sub    $0x10,%esp
+    1768:	8b 75 0c             	mov    0xc(%ebp),%esi
+    176b:	8b 5d 14             	mov    0x14(%ebp),%ebx
+    176e:	8b 46 0c             	mov    0xc(%esi),%eax
+    1771:	85 c0                	test   %eax,%eax
+    1773:	74 53                	je     17c8 <remote_ahci_read_blocks+0x68>
+    1775:	50                   	push   %eax
+    1776:	8d 45 ec             	lea    -0x14(%ebp),%eax
+    1779:	50                   	push   %eax
+    177a:	8d 45 e8             	lea    -0x18(%ebp),%eax
+    177d:	50                   	push   %eax
+    177e:	8d 45 f0             	lea    -0x10(%ebp),%eax
+    1781:	50                   	push   %eax
+    1782:	e8 99 08 00 00       	call   2020 <async_share_out_receive@plt>
+    1787:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    178a:	5a                   	pop    %edx
+    178b:	59                   	pop    %ecx
+    178c:	50                   	push   %eax
+    178d:	8b 45 f0             	mov    -0x10(%ebp),%eax
+    1790:	50                   	push   %eax
+    1791:	e8 ea 08 00 00       	call   2080 <async_share_out_finalize@plt>
+    1796:	58                   	pop    %eax
+    1797:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    179a:	50                   	push   %eax
+    179b:	8b 43 10             	mov    0x10(%ebx),%eax
+    179e:	50                   	push   %eax
+    179f:	8b 43 0c             	mov    0xc(%ebx),%eax
+    17a2:	8b 53 08             	mov    0x8(%ebx),%edx
+    17a5:	52                   	push   %edx
+    17a6:	50                   	push   %eax
+    17a7:	8b 45 08             	mov    0x8(%ebp),%eax
+    17aa:	50                   	push   %eax
+    17ab:	ff 56 0c             	call   *0xc(%esi)
+    17ae:	83 c4 18             	add    $0x18,%esp
+    17b1:	50                   	push   %eax
+    17b2:	8b 45 10             	mov    0x10(%ebp),%eax
+    17b5:	50                   	push   %eax
+    17b6:	e8 85 08 00 00       	call   2040 <async_answer_0@plt>
+    17bb:	83 c4 10             	add    $0x10,%esp
+    17be:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    17c1:	5b                   	pop    %ebx
+    17c2:	5e                   	pop    %esi
+    17c3:	5d                   	pop    %ebp
+    17c4:	c3                   	ret    
+    17c5:	8d 76 00             	lea    0x0(%esi),%esi
+    17c8:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    17cb:	52                   	push   %edx
+    17cc:	52                   	push   %edx
+    17cd:	6a f5                	push   $0xfffffff5
+    17cf:	51                   	push   %ecx
+    17d0:	e8 6b 08 00 00       	call   2040 <async_answer_0@plt>
+    17d5:	83 c4 10             	add    $0x10,%esp
+    17d8:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    17db:	5b                   	pop    %ebx
+    17dc:	5e                   	pop    %esi
+    17dd:	5d                   	pop    %ebp
+    17de:	c3                   	ret    
+    17df:	90                   	nop
+
+000017e0 <remote_ahci_get_block_size>:
+    17e0:	55                   	push   %ebp
+    17e1:	89 e5                	mov    %esp,%ebp
+    17e3:	83 ec 18             	sub    $0x18,%esp
+    17e6:	8b 45 0c             	mov    0xc(%ebp),%eax
+    17e9:	8b 40 08             	mov    0x8(%eax),%eax
+    17ec:	85 c0                	test   %eax,%eax
+    17ee:	74 40                	je     1830 <remote_ahci_get_block_size+0x50>
+    17f0:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    17f3:	52                   	push   %edx
+    17f4:	52                   	push   %edx
+    17f5:	8d 55 f4             	lea    -0xc(%ebp),%edx
+    17f8:	52                   	push   %edx
+    17f9:	51                   	push   %ecx
+    17fa:	ff d0                	call   *%eax
+    17fc:	83 c4 10             	add    $0x10,%esp
+    17ff:	85 c0                	test   %eax,%eax
+    1801:	74 15                	je     1818 <remote_ahci_get_block_size+0x38>
+    1803:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1806:	52                   	push   %edx
+    1807:	52                   	push   %edx
+    1808:	50                   	push   %eax
+    1809:	51                   	push   %ecx
+    180a:	e8 31 08 00 00       	call   2040 <async_answer_0@plt>
+    180f:	83 c4 10             	add    $0x10,%esp
+    1812:	c9                   	leave  
+    1813:	c3                   	ret    
+    1814:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1818:	8b 55 f4             	mov    -0xc(%ebp),%edx
+    181b:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    181e:	50                   	push   %eax
+    181f:	52                   	push   %edx
+    1820:	6a 00                	push   $0x0
+    1822:	51                   	push   %ecx
+    1823:	e8 f8 08 00 00       	call   2120 <async_answer_1@plt>
+    1828:	83 c4 10             	add    $0x10,%esp
+    182b:	c9                   	leave  
+    182c:	c3                   	ret    
+    182d:	8d 76 00             	lea    0x0(%esi),%esi
+    1830:	50                   	push   %eax
+    1831:	50                   	push   %eax
+    1832:	8b 45 10             	mov    0x10(%ebp),%eax
+    1835:	6a f5                	push   $0xfffffff5
+    1837:	50                   	push   %eax
+    1838:	e8 03 08 00 00       	call   2040 <async_answer_0@plt>
+    183d:	83 c4 10             	add    $0x10,%esp
+    1840:	c9                   	leave  
+    1841:	c3                   	ret    
+    1842:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1849:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001850 <remote_ahci_get_num_blocks>:
+    1850:	55                   	push   %ebp
+    1851:	89 e5                	mov    %esp,%ebp
+    1853:	83 ec 18             	sub    $0x18,%esp
+    1856:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1859:	8b 40 04             	mov    0x4(%eax),%eax
+    185c:	85 c0                	test   %eax,%eax
+    185e:	74 40                	je     18a0 <remote_ahci_get_num_blocks+0x50>
+    1860:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    1863:	52                   	push   %edx
+    1864:	52                   	push   %edx
+    1865:	8d 55 f0             	lea    -0x10(%ebp),%edx
+    1868:	52                   	push   %edx
+    1869:	51                   	push   %ecx
+    186a:	ff d0                	call   *%eax
+    186c:	83 c4 10             	add    $0x10,%esp
+    186f:	85 c0                	test   %eax,%eax
+    1871:	74 15                	je     1888 <remote_ahci_get_num_blocks+0x38>
+    1873:	51                   	push   %ecx
+    1874:	51                   	push   %ecx
+    1875:	50                   	push   %eax
+    1876:	8b 45 10             	mov    0x10(%ebp),%eax
+    1879:	50                   	push   %eax
+    187a:	e8 c1 07 00 00       	call   2040 <async_answer_0@plt>
+    187f:	83 c4 10             	add    $0x10,%esp
+    1882:	c9                   	leave  
+    1883:	c3                   	ret    
+    1884:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1888:	8b 45 f0             	mov    -0x10(%ebp),%eax
+    188b:	8b 55 10             	mov    0x10(%ebp),%edx
+    188e:	50                   	push   %eax
+    188f:	6a 00                	push   $0x0
+    1891:	6a 00                	push   $0x0
+    1893:	52                   	push   %edx
+    1894:	e8 07 08 00 00       	call   20a0 <async_answer_2@plt>
+    1899:	83 c4 10             	add    $0x10,%esp
+    189c:	c9                   	leave  
+    189d:	c3                   	ret    
+    189e:	66 90                	xchg   %ax,%ax
+    18a0:	50                   	push   %eax
+    18a1:	50                   	push   %eax
+    18a2:	8b 45 10             	mov    0x10(%ebp),%eax
+    18a5:	6a f5                	push   $0xfffffff5
+    18a7:	50                   	push   %eax
+    18a8:	e8 93 07 00 00       	call   2040 <async_answer_0@plt>
+    18ad:	83 c4 10             	add    $0x10,%esp
+    18b0:	c9                   	leave  
+    18b1:	c3                   	ret    
+    18b2:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    18b9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000018c0 <remote_ahci_get_sata_device_name>:
+    18c0:	55                   	push   %ebp
+    18c1:	89 e5                	mov    %esp,%ebp
+    18c3:	57                   	push   %edi
+    18c4:	56                   	push   %esi
+    18c5:	53                   	push   %ebx
+    18c6:	83 ec 1c             	sub    $0x1c,%esp
+    18c9:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    18cc:	8b 07                	mov    (%edi),%eax
+    18ce:	85 c0                	test   %eax,%eax
+    18d0:	74 76                	je     1948 <remote_ahci_get_sata_device_name+0x88>
+    18d2:	8b 45 14             	mov    0x14(%ebp),%eax
+    18d5:	83 ec 0c             	sub    $0xc,%esp
+    18d8:	8b 70 08             	mov    0x8(%eax),%esi
+    18db:	56                   	push   %esi
+    18dc:	e8 2f 07 00 00       	call   2010 <malloc@plt>
+    18e1:	83 c4 10             	add    $0x10,%esp
+    18e4:	89 c3                	mov    %eax,%ebx
+    18e6:	85 c0                	test   %eax,%eax
+    18e8:	74 76                	je     1960 <remote_ahci_get_sata_device_name+0xa0>
+    18ea:	50                   	push   %eax
+    18eb:	8b 45 08             	mov    0x8(%ebp),%eax
+    18ee:	53                   	push   %ebx
+    18ef:	56                   	push   %esi
+    18f0:	50                   	push   %eax
+    18f1:	ff 17                	call   *(%edi)
+    18f3:	89 c7                	mov    %eax,%edi
+    18f5:	58                   	pop    %eax
+    18f6:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    18f9:	5a                   	pop    %edx
+    18fa:	50                   	push   %eax
+    18fb:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    18fe:	50                   	push   %eax
+    18ff:	e8 cc 07 00 00       	call   20d0 <async_data_read_receive@plt>
+    1904:	83 c4 10             	add    $0x10,%esp
+    1907:	84 c0                	test   %al,%al
+    1909:	74 05                	je     1910 <remote_ahci_get_sata_device_name+0x50>
+    190b:	3b 75 e0             	cmp    -0x20(%ebp),%esi
+    190e:	74 20                	je     1930 <remote_ahci_get_sata_device_name+0x70>
+    1910:	83 ec 0c             	sub    $0xc,%esp
+    1913:	53                   	push   %ebx
+    1914:	e8 87 08 00 00       	call   21a0 <free@plt>
+    1919:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    191c:	58                   	pop    %eax
+    191d:	5a                   	pop    %edx
+    191e:	57                   	push   %edi
+    191f:	51                   	push   %ecx
+    1920:	e8 1b 07 00 00       	call   2040 <async_answer_0@plt>
+    1925:	83 c4 10             	add    $0x10,%esp
+    1928:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    192b:	5b                   	pop    %ebx
+    192c:	5e                   	pop    %esi
+    192d:	5f                   	pop    %edi
+    192e:	5d                   	pop    %ebp
+    192f:	c3                   	ret    
+    1930:	50                   	push   %eax
+    1931:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1934:	56                   	push   %esi
+    1935:	53                   	push   %ebx
+    1936:	50                   	push   %eax
+    1937:	e8 c4 06 00 00       	call   2000 <async_data_read_finalize@plt>
+    193c:	83 c4 10             	add    $0x10,%esp
+    193f:	eb cf                	jmp    1910 <remote_ahci_get_sata_device_name+0x50>
+    1941:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1948:	8b 7d 10             	mov    0x10(%ebp),%edi
+    194b:	56                   	push   %esi
+    194c:	56                   	push   %esi
+    194d:	6a f5                	push   $0xfffffff5
+    194f:	57                   	push   %edi
+    1950:	e8 eb 06 00 00       	call   2040 <async_answer_0@plt>
+    1955:	83 c4 10             	add    $0x10,%esp
+    1958:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    195b:	5b                   	pop    %ebx
+    195c:	5e                   	pop    %esi
+    195d:	5f                   	pop    %edi
+    195e:	5d                   	pop    %ebp
+    195f:	c3                   	ret    
+    1960:	8b 5d 10             	mov    0x10(%ebp),%ebx
+    1963:	51                   	push   %ecx
+    1964:	51                   	push   %ecx
+    1965:	6a fe                	push   $0xfffffffe
+    1967:	53                   	push   %ebx
+    1968:	e8 d3 06 00 00       	call   2040 <async_answer_0@plt>
+    196d:	83 c4 10             	add    $0x10,%esp
+    1970:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1973:	5b                   	pop    %ebx
+    1974:	5e                   	pop    %esi
+    1975:	5f                   	pop    %edi
+    1976:	5d                   	pop    %ebp
+    1977:	c3                   	ret    
+    1978:	90                   	nop
+    1979:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00001980 <ahci_get_sess>:
+    1980:	55                   	push   %ebp
+    1981:	89 e5                	mov    %esp,%ebp
+    1983:	57                   	push   %edi
+    1984:	56                   	push   %esi
+    1985:	53                   	push   %ebx
+    1986:	81 ec 10 04 00 00    	sub    $0x410,%esp
+    198c:	8d 9d e8 fb ff ff    	lea    -0x418(%ebp),%ebx
+    1992:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    1995:	8b 75 08             	mov    0x8(%ebp),%esi
+    1998:	c7 07 00 00 00 00    	movl   $0x0,(%edi)
+    199e:	68 00 04 00 00       	push   $0x400
+    19a3:	53                   	push   %ebx
+    19a4:	56                   	push   %esi
+    19a5:	e8 06 08 00 00       	call   21b0 <devman_fun_get_name@plt>
+    19aa:	83 c4 10             	add    $0x10,%esp
+    19ad:	85 c0                	test   %eax,%eax
+    19af:	75 57                	jne    1a08 <ahci_get_sess+0x88>
+    19b1:	83 ec 0c             	sub    $0xc,%esp
+    19b4:	53                   	push   %ebx
+    19b5:	e8 46 07 00 00       	call   2100 <str_size@plt>
+    19ba:	83 c4 10             	add    $0x10,%esp
+    19bd:	83 f8 05             	cmp    $0x5,%eax
+    19c0:	76 46                	jbe    1a08 <ahci_get_sess+0x88>
+    19c2:	52                   	push   %edx
+    19c3:	6a 05                	push   $0x5
+    19c5:	68 05 1e 00 00       	push   $0x1e05
+    19ca:	53                   	push   %ebx
+    19cb:	e8 40 07 00 00       	call   2110 <str_lcmp@plt>
+    19d0:	83 c4 10             	add    $0x10,%esp
+    19d3:	85 c0                	test   %eax,%eax
+    19d5:	75 31                	jne    1a08 <ahci_get_sess+0x88>
+    19d7:	50                   	push   %eax
+    19d8:	50                   	push   %eax
+    19d9:	6a 01                	push   $0x1
+    19db:	56                   	push   %esi
+    19dc:	e8 af 05 00 00       	call   1f90 <devman_device_connect@plt>
+    19e1:	83 c4 10             	add    $0x10,%esp
+    19e4:	89 c6                	mov    %eax,%esi
+    19e6:	85 c0                	test   %eax,%eax
+    19e8:	74 20                	je     1a0a <ahci_get_sess+0x8a>
+    19ea:	83 ec 0c             	sub    $0xc,%esp
+    19ed:	53                   	push   %ebx
+    19ee:	e8 bd 06 00 00       	call   20b0 <str_dup@plt>
+    19f3:	83 c4 10             	add    $0x10,%esp
+    19f6:	89 07                	mov    %eax,(%edi)
+    19f8:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    19fb:	89 f0                	mov    %esi,%eax
+    19fd:	5b                   	pop    %ebx
+    19fe:	5e                   	pop    %esi
+    19ff:	5f                   	pop    %edi
+    1a00:	5d                   	pop    %ebp
+    1a01:	c3                   	ret    
+    1a02:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1a08:	31 f6                	xor    %esi,%esi
+    1a0a:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1a0d:	89 f0                	mov    %esi,%eax
+    1a0f:	5b                   	pop    %ebx
+    1a10:	5e                   	pop    %esi
+    1a11:	5f                   	pop    %edi
+    1a12:	5d                   	pop    %ebp
+    1a13:	c3                   	ret    
+    1a14:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1a1a:	8d bf 00 00 00 00    	lea    0x0(%edi),%edi
+
+00001a20 <ahci_get_sata_device_name>:
+    1a20:	55                   	push   %ebp
+    1a21:	89 e5                	mov    %esp,%ebp
+    1a23:	57                   	push   %edi
+    1a24:	56                   	push   %esi
+    1a25:	53                   	push   %ebx
+    1a26:	83 ec 28             	sub    $0x28,%esp
+    1a29:	8b 7d 08             	mov    0x8(%ebp),%edi
+    1a2c:	8b 75 0c             	mov    0xc(%ebp),%esi
+    1a2f:	57                   	push   %edi
+    1a30:	e8 fb 06 00 00       	call   2130 <async_exchange_begin@plt>
+    1a35:	83 c4 10             	add    $0x10,%esp
+    1a38:	85 c0                	test   %eax,%eax
+    1a3a:	74 44                	je     1a80 <ahci_get_sata_device_name+0x60>
+    1a3c:	89 c3                	mov    %eax,%ebx
+    1a3e:	50                   	push   %eax
+    1a3f:	6a 00                	push   $0x0
+    1a41:	6a 00                	push   $0x0
+    1a43:	6a 00                	push   $0x0
+    1a45:	56                   	push   %esi
+    1a46:	6a 00                	push   $0x0
+    1a48:	68 0e 04 00 00       	push   $0x40e
+    1a4d:	53                   	push   %ebx
+    1a4e:	e8 fd 05 00 00       	call   2050 <async_send_fast@plt>
+    1a53:	83 c4 1c             	add    $0x1c,%esp
+    1a56:	8b 55 10             	mov    0x10(%ebp),%edx
+    1a59:	89 c7                	mov    %eax,%edi
+    1a5b:	56                   	push   %esi
+    1a5c:	52                   	push   %edx
+    1a5d:	53                   	push   %ebx
+    1a5e:	e8 7d 06 00 00       	call   20e0 <async_data_read_start@plt>
+    1a63:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1a66:	59                   	pop    %ecx
+    1a67:	5b                   	pop    %ebx
+    1a68:	50                   	push   %eax
+    1a69:	57                   	push   %edi
+    1a6a:	e8 61 05 00 00       	call   1fd0 <async_wait_for@plt>
+    1a6f:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1a72:	83 c4 10             	add    $0x10,%esp
+    1a75:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1a78:	5b                   	pop    %ebx
+    1a79:	5e                   	pop    %esi
+    1a7a:	5f                   	pop    %edi
+    1a7b:	5d                   	pop    %ebp
+    1a7c:	c3                   	ret    
+    1a7d:	8d 76 00             	lea    0x0(%esi),%esi
+    1a80:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1a85:	eb ee                	jmp    1a75 <ahci_get_sata_device_name+0x55>
+    1a87:	89 f6                	mov    %esi,%esi
+    1a89:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001a90 <ahci_get_num_blocks>:
+    1a90:	55                   	push   %ebp
+    1a91:	89 e5                	mov    %esp,%ebp
+    1a93:	57                   	push   %edi
+    1a94:	56                   	push   %esi
+    1a95:	53                   	push   %ebx
+    1a96:	83 ec 38             	sub    $0x38,%esp
+    1a99:	8b 55 08             	mov    0x8(%ebp),%edx
+    1a9c:	52                   	push   %edx
+    1a9d:	e8 8e 06 00 00       	call   2130 <async_exchange_begin@plt>
+    1aa2:	83 c4 10             	add    $0x10,%esp
+    1aa5:	85 c0                	test   %eax,%eax
+    1aa7:	74 57                	je     1b00 <ahci_get_num_blocks+0x70>
+    1aa9:	89 c6                	mov    %eax,%esi
+    1aab:	50                   	push   %eax
+    1aac:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1aaf:	6a 00                	push   $0x0
+    1ab1:	6a 00                	push   $0x0
+    1ab3:	6a 00                	push   $0x0
+    1ab5:	50                   	push   %eax
+    1ab6:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1ab9:	50                   	push   %eax
+    1aba:	6a 00                	push   $0x0
+    1abc:	6a 00                	push   $0x0
+    1abe:	6a 00                	push   $0x0
+    1ac0:	6a 01                	push   $0x1
+    1ac2:	68 0e 04 00 00       	push   $0x40e
+    1ac7:	56                   	push   %esi
+    1ac8:	e8 63 05 00 00       	call   2030 <async_req_fast@plt>
+    1acd:	83 c4 24             	add    $0x24,%esp
+    1ad0:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1ad3:	56                   	push   %esi
+    1ad4:	e8 97 05 00 00       	call   2070 <async_exchange_end@plt>
+    1ad9:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1adc:	83 c4 10             	add    $0x10,%esp
+    1adf:	85 c0                	test   %eax,%eax
+    1ae1:	75 0e                	jne    1af1 <ahci_get_num_blocks+0x61>
+    1ae3:	8b 55 0c             	mov    0xc(%ebp),%edx
+    1ae6:	8b 75 e0             	mov    -0x20(%ebp),%esi
+    1ae9:	8b 4d e4             	mov    -0x1c(%ebp),%ecx
+    1aec:	89 0a                	mov    %ecx,(%edx)
+    1aee:	89 72 04             	mov    %esi,0x4(%edx)
+    1af1:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1af4:	5b                   	pop    %ebx
+    1af5:	5e                   	pop    %esi
+    1af6:	5f                   	pop    %edi
+    1af7:	5d                   	pop    %ebp
+    1af8:	c3                   	ret    
+    1af9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1b00:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1b05:	eb ea                	jmp    1af1 <ahci_get_num_blocks+0x61>
+    1b07:	89 f6                	mov    %esi,%esi
+    1b09:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001b10 <ahci_get_block_size>:
+    1b10:	55                   	push   %ebp
+    1b11:	89 e5                	mov    %esp,%ebp
+    1b13:	53                   	push   %ebx
+    1b14:	83 ec 30             	sub    $0x30,%esp
+    1b17:	8b 55 08             	mov    0x8(%ebp),%edx
+    1b1a:	52                   	push   %edx
+    1b1b:	e8 10 06 00 00       	call   2130 <async_exchange_begin@plt>
+    1b20:	83 c4 10             	add    $0x10,%esp
+    1b23:	85 c0                	test   %eax,%eax
+    1b25:	74 49                	je     1b70 <ahci_get_block_size+0x60>
+    1b27:	89 c3                	mov    %eax,%ebx
+    1b29:	50                   	push   %eax
+    1b2a:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1b2d:	6a 00                	push   $0x0
+    1b2f:	6a 00                	push   $0x0
+    1b31:	6a 00                	push   $0x0
+    1b33:	6a 00                	push   $0x0
+    1b35:	50                   	push   %eax
+    1b36:	6a 00                	push   $0x0
+    1b38:	6a 00                	push   $0x0
+    1b3a:	6a 00                	push   $0x0
+    1b3c:	6a 02                	push   $0x2
+    1b3e:	68 0e 04 00 00       	push   $0x40e
+    1b43:	53                   	push   %ebx
+    1b44:	e8 e7 04 00 00       	call   2030 <async_req_fast@plt>
+    1b49:	83 c4 24             	add    $0x24,%esp
+    1b4c:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    1b4f:	53                   	push   %ebx
+    1b50:	e8 1b 05 00 00       	call   2070 <async_exchange_end@plt>
+    1b55:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1b58:	83 c4 10             	add    $0x10,%esp
+    1b5b:	85 c0                	test   %eax,%eax
+    1b5d:	75 08                	jne    1b67 <ahci_get_block_size+0x57>
+    1b5f:	8b 55 0c             	mov    0xc(%ebp),%edx
+    1b62:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+    1b65:	89 0a                	mov    %ecx,(%edx)
+    1b67:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1b6a:	c9                   	leave  
+    1b6b:	c3                   	ret    
+    1b6c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1b70:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1b75:	eb f0                	jmp    1b67 <ahci_get_block_size+0x57>
+    1b77:	89 f6                	mov    %esi,%esi
+    1b79:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001b80 <ahci_read_blocks>:
+    1b80:	55                   	push   %ebp
+    1b81:	89 e5                	mov    %esp,%ebp
+    1b83:	56                   	push   %esi
+    1b84:	53                   	push   %ebx
+    1b85:	83 ec 1c             	sub    $0x1c,%esp
+    1b88:	8b 45 08             	mov    0x8(%ebp),%eax
+    1b8b:	8b 75 0c             	mov    0xc(%ebp),%esi
+    1b8e:	50                   	push   %eax
+    1b8f:	e8 9c 05 00 00       	call   2130 <async_exchange_begin@plt>
+    1b94:	83 c4 10             	add    $0x10,%esp
+    1b97:	85 c0                	test   %eax,%eax
+    1b99:	74 4d                	je     1be8 <ahci_read_blocks+0x68>
+    1b9b:	89 c3                	mov    %eax,%ebx
+    1b9d:	8b 55 14             	mov    0x14(%ebp),%edx
+    1ba0:	50                   	push   %eax
+    1ba1:	6a 00                	push   $0x0
+    1ba3:	52                   	push   %edx
+    1ba4:	56                   	push   %esi
+    1ba5:	6a 00                	push   $0x0
+    1ba7:	6a 03                	push   $0x3
+    1ba9:	68 0e 04 00 00       	push   $0x40e
+    1bae:	53                   	push   %ebx
+    1baf:	e8 9c 04 00 00       	call   2050 <async_send_fast@plt>
+    1bb4:	83 c4 1c             	add    $0x1c,%esp
+    1bb7:	8b 4d 18             	mov    0x18(%ebp),%ecx
+    1bba:	6a 03                	push   $0x3
+    1bbc:	51                   	push   %ecx
+    1bbd:	53                   	push   %ebx
+    1bbe:	89 c6                	mov    %eax,%esi
+    1bc0:	e8 8b 05 00 00       	call   2150 <async_share_out_start@plt>
+    1bc5:	89 1c 24             	mov    %ebx,(%esp)
+    1bc8:	e8 a3 04 00 00       	call   2070 <async_exchange_end@plt>
+    1bcd:	5b                   	pop    %ebx
+    1bce:	58                   	pop    %eax
+    1bcf:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1bd2:	50                   	push   %eax
+    1bd3:	56                   	push   %esi
+    1bd4:	e8 f7 03 00 00       	call   1fd0 <async_wait_for@plt>
+    1bd9:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    1bdc:	83 c4 10             	add    $0x10,%esp
+    1bdf:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1be2:	5b                   	pop    %ebx
+    1be3:	5e                   	pop    %esi
+    1be4:	5d                   	pop    %ebp
+    1be5:	c3                   	ret    
+    1be6:	66 90                	xchg   %ax,%ax
+    1be8:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1bed:	eb f0                	jmp    1bdf <ahci_read_blocks+0x5f>
+    1bef:	90                   	nop
+
+00001bf0 <ahci_write_blocks>:
+    1bf0:	55                   	push   %ebp
+    1bf1:	89 e5                	mov    %esp,%ebp
+    1bf3:	56                   	push   %esi
+    1bf4:	53                   	push   %ebx
+    1bf5:	83 ec 1c             	sub    $0x1c,%esp
+    1bf8:	8b 45 08             	mov    0x8(%ebp),%eax
+    1bfb:	8b 75 0c             	mov    0xc(%ebp),%esi
+    1bfe:	50                   	push   %eax
+    1bff:	e8 2c 05 00 00       	call   2130 <async_exchange_begin@plt>
+    1c04:	83 c4 10             	add    $0x10,%esp
+    1c07:	85 c0                	test   %eax,%eax
+    1c09:	74 4d                	je     1c58 <ahci_write_blocks+0x68>
+    1c0b:	89 c3                	mov    %eax,%ebx
+    1c0d:	8b 55 14             	mov    0x14(%ebp),%edx
+    1c10:	50                   	push   %eax
+    1c11:	6a 00                	push   $0x0
+    1c13:	52                   	push   %edx
+    1c14:	56                   	push   %esi
+    1c15:	6a 00                	push   $0x0
+    1c17:	6a 04                	push   $0x4
+    1c19:	68 0e 04 00 00       	push   $0x40e
+    1c1e:	53                   	push   %ebx
+    1c1f:	e8 2c 04 00 00       	call   2050 <async_send_fast@plt>
+    1c24:	83 c4 1c             	add    $0x1c,%esp
+    1c27:	8b 4d 18             	mov    0x18(%ebp),%ecx
+    1c2a:	6a 03                	push   $0x3
+    1c2c:	51                   	push   %ecx
+    1c2d:	53                   	push   %ebx
+    1c2e:	89 c6                	mov    %eax,%esi
+    1c30:	e8 1b 05 00 00       	call   2150 <async_share_out_start@plt>
+    1c35:	89 1c 24             	mov    %ebx,(%esp)
+    1c38:	e8 33 04 00 00       	call   2070 <async_exchange_end@plt>
+    1c3d:	5b                   	pop    %ebx
+    1c3e:	58                   	pop    %eax
+    1c3f:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1c42:	50                   	push   %eax
+    1c43:	56                   	push   %esi
+    1c44:	e8 87 03 00 00       	call   1fd0 <async_wait_for@plt>
+    1c49:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    1c4c:	83 c4 10             	add    $0x10,%esp
+    1c4f:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1c52:	5b                   	pop    %ebx
+    1c53:	5e                   	pop    %esi
+    1c54:	5d                   	pop    %ebp
+    1c55:	c3                   	ret    
+    1c56:	66 90                	xchg   %ax,%ax
+    1c58:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1c5d:	eb f0                	jmp    1c4f <ahci_write_blocks+0x5f>
+    1c5f:	90                   	nop
+    1c60:	44                   	inc    %esp
+    1c61:	65 76 69             	gs jbe 1ccd <ahci_write_blocks+0xdd>
+    1c64:	63 65 20             	arpl   %sp,0x20(%ebp)
+    1c67:	25 73 20 2d 20       	and    $0x202d2073,%eax
+    1c6c:	25 73 20 2c 20       	and    $0x202c2073,%eax
+    1c71:	62 6c 6f 63          	bound  %ebp,0x63(%edi,%ebp,2)
+    1c75:	6b 73 3a 20          	imul   $0x20,0x3a(%ebx),%esi
+    1c79:	25 6c 75 2c 20       	and    $0x202c756c,%eax
+    1c7e:	62 6c 6f 63          	bound  %ebp,0x63(%edi,%ebp,2)
+    1c82:	6b 5f 73 69          	imul   $0x69,0x73(%edi),%ebx
+    1c86:	7a 65                	jp     1ced <ahci_write_blocks+0xfd>
+    1c88:	3a 20                	cmp    (%eax),%ah
+    1c8a:	25 6c 75 0a 00       	and    $0xa756c,%eax
+    1c8f:	00 73 61             	add    %dh,0x61(%ebx)
+    1c92:	74 61                	je     1cf5 <ahci_write_blocks+0x105>
+    1c94:	5f                   	pop    %edi
+    1c95:	62 64 3a 20          	bound  %esp,0x20(%edx,%edi,1)
+    1c99:	46                   	inc    %esi
+    1c9a:	61                   	popa   
+    1c9b:	69 6c 65 64 20 67 65 	imul   $0x74656720,0x64(%ebp,%eiz,2),%ebp
+    1ca2:	74 
+    1ca3:	74 69                	je     1d0e <ahci_write_blocks+0x11e>
+    1ca5:	6e                   	outsb  %ds:(%esi),(%dx)
+    1ca6:	67 20 63 68          	and    %ah,0x68(%bp,%di)
+    1caa:	69 6c 64 20 64 65 76 	imul   $0x69766564,0x20(%esp,%eiz,2),%ebp
+    1cb1:	69 
+    1cb2:	63 65 20             	arpl   %sp,0x20(%ebp)
+    1cb5:	66 6f                	outsw  %ds:(%esi),(%dx)
+    1cb7:	72 20                	jb     1cd9 <ahci_write_blocks+0xe9>
+    1cb9:	66 75 6e             	data16 jne 1d2a <ahci_write_blocks+0x13a>
+    1cbc:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+    1cc0:	6e                   	outsb  %ds:(%esi),(%dx)
+    1cc1:	20 25 73 2e 0a 00    	and    %ah,0xa2e73
+    1cc7:	00 73 61             	add    %dh,0x61(%ebx)
+    1cca:	74 61                	je     1d2d <ahci_write_blocks+0x13d>
+    1ccc:	5f                   	pop    %edi
+    1ccd:	62 64 3a 20          	bound  %esp,0x20(%edx,%edi,1)
+    1cd1:	46                   	inc    %esi
+    1cd2:	61                   	popa   
+    1cd3:	69 6c 65 64 20 67 65 	imul   $0x74656720,0x64(%ebp,%eiz,2),%ebp
+    1cda:	74 
+    1cdb:	74 69                	je     1d46 <ahci_write_blocks+0x156>
+    1cdd:	6e                   	outsb  %ds:(%esi),(%dx)
+    1cde:	67 20 6c 69          	and    %ch,0x69(%si)
+    1ce2:	73 74                	jae    1d58 <ahci_write_blocks+0x168>
+    1ce4:	20 6f 66             	and    %ch,0x66(%edi)
+    1ce7:	20 66 75             	and    %ah,0x75(%esi)
+    1cea:	6e                   	outsb  %ds:(%esi),(%dx)
+    1ceb:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+    1cef:	6e                   	outsb  %ds:(%esi),(%dx)
+    1cf0:	73 20                	jae    1d12 <ahci_write_blocks+0x122>
+    1cf2:	66 6f                	outsw  %ds:(%esi),(%dx)
+    1cf4:	72 20                	jb     1d16 <ahci_write_blocks+0x126>
+    1cf6:	64 65 76 69          	fs gs jbe 1d63 <ahci_write_blocks+0x173>
+    1cfa:	63 65 20             	arpl   %sp,0x20(%ebp)
+    1cfd:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    1d02:	00 00                	add    %al,(%eax)
+    1d04:	73 61                	jae    1d67 <ahci_write_blocks+0x177>
+    1d06:	74 61                	je     1d69 <ahci_write_blocks+0x179>
+    1d08:	5f                   	pop    %edi
+    1d09:	62 64 3a 20          	bound  %esp,0x20(%edx,%edi,1)
+    1d0d:	55                   	push   %ebp
+    1d0e:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d0f:	61                   	popa   
+    1d10:	62 6c 65 20          	bound  %ebp,0x20(%ebp,%eiz,2)
+    1d14:	74 6f                	je     1d85 <ahci_write_blocks+0x195>
+    1d16:	20 72 65             	and    %dh,0x65(%edx)
+    1d19:	67 69 73 74 65 72 20 	imul   $0x64207265,0x74(%bp,%di),%esi
+    1d20:	64 
+    1d21:	72 69                	jb     1d8c <ahci_write_blocks+0x19c>
+    1d23:	76 65                	jbe    1d8a <ahci_write_blocks+0x19a>
+    1d25:	72 2e                	jb     1d55 <ahci_write_blocks+0x165>
+    1d27:	0a 00                	or     (%eax),%al
+    1d29:	00 00                	add    %al,(%eax)
+    1d2b:	00 73 61             	add    %dh,0x61(%ebx)
+    1d2e:	74 61                	je     1d91 <ahci_write_blocks+0x1a1>
+    1d30:	5f                   	pop    %edi
+    1d31:	62 64 3a 20          	bound  %esp,0x20(%edx,%edi,1)
+    1d35:	45                   	inc    %ebp
+    1d36:	72 72                	jb     1daa <ahci_write_blocks+0x1ba>
+    1d38:	6f                   	outsl  %ds:(%esi),(%dx)
+    1d39:	72 20                	jb     1d5b <ahci_write_blocks+0x16b>
+    1d3b:	72 65                	jb     1da2 <ahci_write_blocks+0x1b2>
+    1d3d:	73 6f                	jae    1dae <ahci_write_blocks+0x1be>
+    1d3f:	6c                   	insb   (%dx),%es:(%edi)
+    1d40:	76 69                	jbe    1dab <ahci_write_blocks+0x1bb>
+    1d42:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d43:	67 20 72 6f          	and    %dh,0x6f(%bp,%si)
+    1d47:	6f                   	outsl  %ds:(%esi),(%dx)
+    1d48:	74 20                	je     1d6a <ahci_write_blocks+0x17a>
+    1d4a:	66 75 6e             	data16 jne 1dbb <ahci_write_blocks+0x1cb>
+    1d4d:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+    1d51:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d52:	2e 0a 00             	or     %cs:(%eax),%al
+    1d55:	00 00                	add    %al,(%eax)
+    1d57:	00 25 73 3a 20 46    	add    %ah,0x46203a73
+    1d5d:	61                   	popa   
+    1d5e:	69 6c 65 64 20 72 65 	imul   $0x73657220,0x64(%ebp,%eiz,2),%ebp
+    1d65:	73 
+    1d66:	6f                   	outsl  %ds:(%esi),(%dx)
+    1d67:	6c                   	insb   (%dx),%es:(%edi)
+    1d68:	76 69                	jbe    1dd3 <ahci_write_blocks+0x1e3>
+    1d6a:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d6b:	67 20 63 61          	and    %ah,0x61(%bp,%di)
+    1d6f:	74 65                	je     1dd6 <ahci_write_blocks+0x1e6>
+    1d71:	67 6f                	outsl  %ds:(%si),(%dx)
+    1d73:	72 79                	jb     1dee <ahci_write_blocks+0x1fe>
+    1d75:	20 27                	and    %ah,(%edi)
+    1d77:	64 69 73 6b 27 2e 0a 	imul   $0xa2e27,%fs:0x6b(%ebx),%esi
+    1d7e:	00 
+    1d7f:	00 73 61             	add    %dh,0x61(%ebx)
+    1d82:	74 61                	je     1de5 <ahci_write_blocks+0x1f5>
+    1d84:	5f                   	pop    %edi
+    1d85:	62 64 3a 20          	bound  %esp,0x20(%edx,%edi,1)
+    1d89:	55                   	push   %ebp
+    1d8a:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d8b:	61                   	popa   
+    1d8c:	62 6c 65 20          	bound  %ebp,0x20(%ebp,%eiz,2)
+    1d90:	74 6f                	je     1e01 <ahci_write_blocks+0x211>
+    1d92:	20 72 65             	and    %dh,0x65(%edx)
+    1d95:	67 69 73 74 65 72 20 	imul   $0x64207265,0x74(%bp,%di),%esi
+    1d9c:	64 
+    1d9d:	65 76 69             	gs jbe 1e09 <ahci_write_blocks+0x219>
+    1da0:	63 65 20             	arpl   %sp,0x20(%ebp)
+    1da3:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    1da8:	25 73 3a 20 46       	and    $0x46203a73,%eax
+    1dad:	61                   	popa   
+    1dae:	69 6c 65 64 20 61 64 	imul   $0x64646120,0x64(%ebp,%eiz,2),%ebp
+    1db5:	64 
+    1db6:	69 6e 67 20 25 73 20 	imul   $0x20732520,0x67(%esi),%ebp
+    1dbd:	74 6f                	je     1e2e <remote_ahci_iface_ops+0x1a>
+    1dbf:	20 63 61             	and    %ah,0x61(%ebx)
+    1dc2:	74 65                	je     1e29 <remote_ahci_iface_ops+0x15>
+    1dc4:	67 6f                	outsl  %ds:(%si),(%dx)
+    1dc6:	72 79                	jb     1e41 <remote_ahci_iface_ops+0x2d>
+    1dc8:	2e 00 00             	add    %al,%cs:(%eax)
+    1dcb:	00 73 61             	add    %dh,0x61(%ebx)
+    1dce:	74 61                	je     1e31 <remote_ahci_iface_ops+0x1d>
+    1dd0:	5f                   	pop    %edi
+    1dd1:	62 64 3a 20          	bound  %esp,0x20(%edx,%edi,1)
+    1dd5:	41                   	inc    %ecx
+    1dd6:	63 63 65             	arpl   %sp,0x65(%ebx)
+    1dd9:	70 74                	jo     1e4f <remote_ahci_iface_ops+0x3b>
+    1ddb:	69 6e 67 20 63 6f 6e 	imul   $0x6e6f6320,0x67(%esi),%ebp
+    1de2:	6e                   	outsb  %ds:(%esi),(%dx)
+    1de3:	65 63 74 69 6f       	arpl   %si,%gs:0x6f(%ecx,%ebp,2)
+    1de8:	6e                   	outsb  %ds:(%esi),(%dx)
+    1de9:	73 0a                	jae    1df5 <ahci_write_blocks+0x205>
+    1deb:	00 78 78             	add    %bh,0x78(%eax)
+    1dee:	78 00                	js     1df0 <ahci_write_blocks+0x200>
+    1df0:	73 61                	jae    1e53 <remote_ahci_iface_ops+0x3f>
+    1df2:	74 61                	je     1e55 <remote_ahci_iface_ops+0x41>
+    1df4:	5f                   	pop    %edi
+    1df5:	62 64 00 2f          	bound  %esp,0x2f(%eax,%eax,1)
+    1df9:	00 64 69 73          	add    %ah,0x73(%ecx,%ebp,2)
+    1dfd:	6b 00 25             	imul   $0x25,(%eax),%eax
+    1e00:	73 2f                	jae    1e31 <remote_ahci_iface_ops+0x1d>
+    1e02:	25 73 00 61 68       	and    $0x68610073,%eax
+    1e07:	63 69 5f             	arpl   %bp,0x5f(%ecx)
+    1e0a:	00                   	.byte 0x0
+    1e0b:	90                   	nop
+
+00001e0c <remote_ahci_iface>:
+    1e0c:	05 00 00 00 14 1e 00 00                             ........
+
+00001e14 <remote_ahci_iface_ops>:
+    1e14:	c0 18 00 00 50 18 00 00 e0 17 00 00 60 17 00 00     ....P.......`...
+    1e24:	e0 16 00 00                                         ....
+
+Disassembly of section .plt:
+
+00001f60 <__main@plt-0x10>:
+    1f60:	ff 35 44 39 00 00    	pushl  0x3944
+    1f66:	ff 25 48 39 00 00    	jmp    *0x3948
+    1f6c:	00 00                	add    %al,(%eax)
+	...
+
+00001f70 <__main@plt>:
+    1f70:	ff 25 4c 39 00 00    	jmp    *0x394c
+    1f76:	68 00 00 00 00       	push   $0x0
+    1f7b:	e9 e0 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001f80 <loc_category_get_id@plt>:
+    1f80:	ff 25 50 39 00 00    	jmp    *0x3950
+    1f86:	68 08 00 00 00       	push   $0x8
+    1f8b:	e9 d0 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001f90 <devman_device_connect@plt>:
+    1f90:	ff 25 54 39 00 00    	jmp    *0x3954
+    1f96:	68 10 00 00 00       	push   $0x10
+    1f9b:	e9 c0 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001fa0 <devman_dev_get_functions@plt>:
+    1fa0:	ff 25 58 39 00 00    	jmp    *0x3958
+    1fa6:	68 18 00 00 00       	push   $0x18
+    1fab:	e9 b0 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001fb0 <task_retval@plt>:
+    1fb0:	ff 25 5c 39 00 00    	jmp    *0x395c
+    1fb6:	68 20 00 00 00       	push   $0x20
+    1fbb:	e9 a0 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001fc0 <printf@plt>:
+    1fc0:	ff 25 60 39 00 00    	jmp    *0x3960
+    1fc6:	68 28 00 00 00       	push   $0x28
+    1fcb:	e9 90 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001fd0 <async_wait_for@plt>:
+    1fd0:	ff 25 64 39 00 00    	jmp    *0x3964
+    1fd6:	68 30 00 00 00       	push   $0x30
+    1fdb:	e9 80 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001fe0 <snprintf@plt>:
+    1fe0:	ff 25 68 39 00 00    	jmp    *0x3968
+    1fe6:	68 38 00 00 00       	push   $0x38
+    1feb:	e9 70 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00001ff0 <loc_service_register@plt>:
+    1ff0:	ff 25 6c 39 00 00    	jmp    *0x396c
+    1ff6:	68 40 00 00 00       	push   $0x40
+    1ffb:	e9 60 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002000 <async_data_read_finalize@plt>:
+    2000:	ff 25 70 39 00 00    	jmp    *0x3970
+    2006:	68 48 00 00 00       	push   $0x48
+    200b:	e9 50 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002010 <malloc@plt>:
+    2010:	ff 25 74 39 00 00    	jmp    *0x3974
+    2016:	68 50 00 00 00       	push   $0x50
+    201b:	e9 40 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002020 <async_share_out_receive@plt>:
+    2020:	ff 25 78 39 00 00    	jmp    *0x3978
+    2026:	68 58 00 00 00       	push   $0x58
+    202b:	e9 30 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002030 <async_req_fast@plt>:
+    2030:	ff 25 7c 39 00 00    	jmp    *0x397c
+    2036:	68 60 00 00 00       	push   $0x60
+    203b:	e9 20 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002040 <async_answer_0@plt>:
+    2040:	ff 25 80 39 00 00    	jmp    *0x3980
+    2046:	68 68 00 00 00       	push   $0x68
+    204b:	e9 10 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002050 <async_send_fast@plt>:
+    2050:	ff 25 84 39 00 00    	jmp    *0x3984
+    2056:	68 70 00 00 00       	push   $0x70
+    205b:	e9 00 ff ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002060 <bd_conn@plt>:
+    2060:	ff 25 88 39 00 00    	jmp    *0x3988
+    2066:	68 78 00 00 00       	push   $0x78
+    206b:	e9 f0 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002070 <async_exchange_end@plt>:
+    2070:	ff 25 8c 39 00 00    	jmp    *0x398c
+    2076:	68 80 00 00 00       	push   $0x80
+    207b:	e9 e0 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002080 <async_share_out_finalize@plt>:
+    2080:	ff 25 90 39 00 00    	jmp    *0x3990
+    2086:	68 88 00 00 00       	push   $0x88
+    208b:	e9 d0 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002090 <bd_srvs_init@plt>:
+    2090:	ff 25 94 39 00 00    	jmp    *0x3994
+    2096:	68 90 00 00 00       	push   $0x90
+    209b:	e9 c0 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000020a0 <async_answer_2@plt>:
+    20a0:	ff 25 98 39 00 00    	jmp    *0x3998
+    20a6:	68 98 00 00 00       	push   $0x98
+    20ab:	e9 b0 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000020b0 <str_dup@plt>:
+    20b0:	ff 25 9c 39 00 00    	jmp    *0x399c
+    20b6:	68 a0 00 00 00       	push   $0xa0
+    20bb:	e9 a0 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000020c0 <loc_service_add_to_cat@plt>:
+    20c0:	ff 25 a0 39 00 00    	jmp    *0x39a0
+    20c6:	68 a8 00 00 00       	push   $0xa8
+    20cb:	e9 90 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000020d0 <async_data_read_receive@plt>:
+    20d0:	ff 25 a4 39 00 00    	jmp    *0x39a4
+    20d6:	68 b0 00 00 00       	push   $0xb0
+    20db:	e9 80 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000020e0 <async_data_read_start@plt>:
+    20e0:	ff 25 a8 39 00 00    	jmp    *0x39a8
+    20e6:	68 b8 00 00 00       	push   $0xb8
+    20eb:	e9 70 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000020f0 <loc_server_register@plt>:
+    20f0:	ff 25 ac 39 00 00    	jmp    *0x39ac
+    20f6:	68 c0 00 00 00       	push   $0xc0
+    20fb:	e9 60 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002100 <str_size@plt>:
+    2100:	ff 25 b0 39 00 00    	jmp    *0x39b0
+    2106:	68 c8 00 00 00       	push   $0xc8
+    210b:	e9 50 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002110 <str_lcmp@plt>:
+    2110:	ff 25 b4 39 00 00    	jmp    *0x39b4
+    2116:	68 d0 00 00 00       	push   $0xd0
+    211b:	e9 40 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002120 <async_answer_1@plt>:
+    2120:	ff 25 b8 39 00 00    	jmp    *0x39b8
+    2126:	68 d8 00 00 00       	push   $0xd8
+    212b:	e9 30 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002130 <async_exchange_begin@plt>:
+    2130:	ff 25 bc 39 00 00    	jmp    *0x39bc
+    2136:	68 e0 00 00 00       	push   $0xe0
+    213b:	e9 20 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002140 <devman_fun_get_handle@plt>:
+    2140:	ff 25 c0 39 00 00    	jmp    *0x39c0
+    2146:	68 e8 00 00 00       	push   $0xe8
+    214b:	e9 10 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002150 <async_share_out_start@plt>:
+    2150:	ff 25 c4 39 00 00    	jmp    *0x39c4
+    2156:	68 f0 00 00 00       	push   $0xf0
+    215b:	e9 00 fe ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002160 <fibril_switch@plt>:
+    2160:	ff 25 c8 39 00 00    	jmp    *0x39c8
+    2166:	68 f8 00 00 00       	push   $0xf8
+    216b:	e9 f0 fd ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002170 <__syscall_fast@plt>:
+    2170:	ff 25 cc 39 00 00    	jmp    *0x39cc
+    2176:	68 00 01 00 00       	push   $0x100
+    217b:	e9 e0 fd ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002180 <devman_fun_get_child@plt>:
+    2180:	ff 25 d0 39 00 00    	jmp    *0x39d0
+    2186:	68 08 01 00 00       	push   $0x108
+    218b:	e9 d0 fd ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+00002190 <async_set_fallback_port_handler@plt>:
+    2190:	ff 25 d4 39 00 00    	jmp    *0x39d4
+    2196:	68 10 01 00 00       	push   $0x110
+    219b:	e9 c0 fd ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000021a0 <free@plt>:
+    21a0:	ff 25 d8 39 00 00    	jmp    *0x39d8
+    21a6:	68 18 01 00 00       	push   $0x118
+    21ab:	e9 b0 fd ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>
+
+000021b0 <devman_fun_get_name@plt>:
+    21b0:	ff 25 dc 39 00 00    	jmp    *0x39dc
+    21b6:	68 20 01 00 00       	push   $0x120
+    21bb:	e9 a0 fd ff ff       	jmp    1f60 <remote_ahci_iface_ops+0x14c>

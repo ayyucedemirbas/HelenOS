@@ -1,0 +1,466 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/hound/libhound.a(client.o)
+                              main.o (hound_context_create_playback)
+../../lib/hound/libhound.a(protocol.o)
+                              ../../lib/hound/libhound.a(client.o) (hound_service_connect)
+../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                              dplay.o (audio_pcm_open_default)
+../../lib/drv/libdrv.a(log.o)
+                              ../../lib/drv/libdrv.a(remote_audio_pcm.o) (ddf_msg)
+../../lib/pcm/libpcm.a(format.o)
+                              main.o (AUDIO_FORMAT_DEFAULT)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x148d dplay.o
+ .debug_abbrev  0x0000000000000000      0x2f2 dplay.o
+ .debug_loc     0x0000000000000000      0x72c dplay.o
+ .debug_aranges
+                0x0000000000000000       0x20 dplay.o
+ .debug_ranges  0x0000000000000000      0x148 dplay.o
+ .debug_line    0x0000000000000000      0x42b dplay.o
+ .debug_str     0x0000000000000000     0x108c dplay.o
+ .comment       0x0000000000000000       0x12 dplay.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 dplay.o
+ .eh_frame      0x0000000000000000       0x88 dplay.o
+ .debug_info    0x0000000000000000      0xd29 drec.o
+ .debug_abbrev  0x0000000000000000      0x265 drec.o
+ .debug_loc     0x0000000000000000      0x293 drec.o
+ .debug_aranges
+                0x0000000000000000       0x20 drec.o
+ .debug_ranges  0x0000000000000000       0x78 drec.o
+ .debug_line    0x0000000000000000      0x309 drec.o
+ .debug_str     0x0000000000000000      0xf49 drec.o
+ .comment       0x0000000000000000       0x12 drec.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 drec.o
+ .eh_frame      0x0000000000000000       0x88 drec.o
+ .debug_info    0x0000000000000000      0xe93 main.o
+ .debug_abbrev  0x0000000000000000      0x2d4 main.o
+ .debug_loc     0x0000000000000000      0x7a2 main.o
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+ .debug_ranges  0x0000000000000000      0x118 main.o
+ .debug_line    0x0000000000000000      0x388 main.o
+ .debug_str     0x0000000000000000      0xcf3 main.o
+ .comment       0x0000000000000000       0x12 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .eh_frame      0x0000000000000000       0xb0 main.o
+ .debug_info    0x0000000000000000      0x448 wave.o
+ .debug_abbrev  0x0000000000000000      0x152 wave.o
+ .debug_loc     0x0000000000000000       0xc8 wave.o
+ .debug_aranges
+                0x0000000000000000       0x20 wave.o
+ .debug_ranges  0x0000000000000000       0x18 wave.o
+ .debug_line    0x0000000000000000      0x163 wave.o
+ .debug_str     0x0000000000000000      0x4da wave.o
+ .comment       0x0000000000000000       0x12 wave.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 wave.o
+ .eh_frame      0x0000000000000000       0x8c wave.o
+ .debug_info    0x0000000000000000     0x1644 ../../lib/hound/libhound.a(client.o)
+ .debug_abbrev  0x0000000000000000      0x36c ../../lib/hound/libhound.a(client.o)
+ .debug_loc     0x0000000000000000      0xd26 ../../lib/hound/libhound.a(client.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/hound/libhound.a(client.o)
+ .debug_ranges  0x0000000000000000      0x2b0 ../../lib/hound/libhound.a(client.o)
+ .debug_line    0x0000000000000000      0x520 ../../lib/hound/libhound.a(client.o)
+ .debug_str     0x0000000000000000      0xecc ../../lib/hound/libhound.a(client.o)
+ .comment       0x0000000000000000       0x12 ../../lib/hound/libhound.a(client.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/hound/libhound.a(client.o)
+ .eh_frame      0x0000000000000000      0x340 ../../lib/hound/libhound.a(client.o)
+ .debug_info    0x0000000000000000     0x1b52 ../../lib/hound/libhound.a(protocol.o)
+ .debug_abbrev  0x0000000000000000      0x3aa ../../lib/hound/libhound.a(protocol.o)
+ .debug_loc     0x0000000000000000      0xa27 ../../lib/hound/libhound.a(protocol.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/hound/libhound.a(protocol.o)
+ .debug_ranges  0x0000000000000000      0x218 ../../lib/hound/libhound.a(protocol.o)
+ .debug_line    0x0000000000000000      0x58e ../../lib/hound/libhound.a(protocol.o)
+ .debug_str     0x0000000000000000     0x156a ../../lib/hound/libhound.a(protocol.o)
+ .comment       0x0000000000000000       0x12 ../../lib/hound/libhound.a(protocol.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/hound/libhound.a(protocol.o)
+ .eh_frame      0x0000000000000000      0x318 ../../lib/hound/libhound.a(protocol.o)
+ .debug_info    0x0000000000000000     0x2298 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_abbrev  0x0000000000000000      0x3d2 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_loc     0x0000000000000000      0xef5 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_ranges  0x0000000000000000       0xb8 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_line    0x0000000000000000      0x647 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_str     0x0000000000000000     0x198d ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .comment       0x0000000000000000       0x12 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .eh_frame      0x0000000000000000      0x63c ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_info    0x0000000000000000      0x183 ../../lib/drv/libdrv.a(log.o)
+ .debug_abbrev  0x0000000000000000      0x108 ../../lib/drv/libdrv.a(log.o)
+ .debug_loc     0x0000000000000000       0x20 ../../lib/drv/libdrv.a(log.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/drv/libdrv.a(log.o)
+ .debug_line    0x0000000000000000       0xe4 ../../lib/drv/libdrv.a(log.o)
+ .debug_str     0x0000000000000000      0x233 ../../lib/drv/libdrv.a(log.o)
+ .comment       0x0000000000000000       0x12 ../../lib/drv/libdrv.a(log.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/drv/libdrv.a(log.o)
+ .eh_frame      0x0000000000000000       0x58 ../../lib/drv/libdrv.a(log.o)
+ .debug_info    0x0000000000000000     0x126d ../../lib/pcm/libpcm.a(format.o)
+ .debug_abbrev  0x0000000000000000      0x289 ../../lib/pcm/libpcm.a(format.o)
+ .debug_loc     0x0000000000000000     0x21d6 ../../lib/pcm/libpcm.a(format.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/pcm/libpcm.a(format.o)
+ .debug_ranges  0x0000000000000000      0x5b0 ../../lib/pcm/libpcm.a(format.o)
+ .debug_line    0x0000000000000000      0x51b ../../lib/pcm/libpcm.a(format.o)
+ .debug_str     0x0000000000000000      0x565 ../../lib/pcm/libpcm.a(format.o)
+ .comment       0x0000000000000000       0x12 ../../lib/pcm/libpcm.a(format.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/pcm/libpcm.a(format.o)
+ .eh_frame      0x0000000000000000      0x11c ../../lib/pcm/libpcm.a(format.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001140     0x7f44
+ *(.text .text.*)
+ .text          0x0000000000001140        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001140      0x9cc dplay.o
+                0x00000000000012a0                dplay
+ *fill*         0x0000000000001b0c        0x4 
+ .text          0x0000000000001b10      0x463 drec.o
+                0x0000000000001c00                drecord
+ *fill*         0x0000000000001f73        0xd 
+ .text          0x0000000000001f80      0x26f main.o
+ *fill*         0x00000000000021ef        0x1 
+ .text.startup  0x00000000000021f0      0x4ca main.o
+                0x00000000000021f0                main
+ *fill*         0x00000000000026ba        0x6 
+ .text          0x00000000000026c0      0x2cb wave.o
+                0x00000000000026c0                wav_parse_header
+                0x00000000000028b0                wav_init_header
+ *fill*         0x000000000000298b        0x5 
+ .text          0x0000000000002990      0xb4f ../../lib/hound/libhound.a(client.o)
+                0x0000000000002990                hound_context_create_playback
+                0x0000000000002a90                hound_context_create_capture
+                0x0000000000002b90                hound_context_destroy
+                0x0000000000002c70                hound_context_get_available_targets
+                0x0000000000002cf0                hound_context_get_connected_targets
+                0x0000000000002d70                hound_context_connect_target
+                0x0000000000002e90                hound_context_disconnect_target
+                0x0000000000002f00                hound_stream_create
+                0x0000000000002fe0                hound_stream_destroy
+                0x0000000000003060                hound_stream_write
+                0x00000000000030b0                hound_stream_read
+                0x0000000000003100                hound_stream_drain
+                0x0000000000003130                hound_write_main_stream
+                0x00000000000031e0                hound_read_main_stream
+                0x0000000000003290                hound_write_replace_main_stream
+                0x00000000000032e0                hound_context_set_main_stream_params
+                0x0000000000003310                hound_write_immediate
+ *fill*         0x00000000000034df        0x1 
+ .text          0x00000000000034e0     0x10b8 ../../lib/hound/libhound.a(protocol.o)
+                0x00000000000034e0                hound_service_connect
+                0x0000000000003530                hound_service_disconnect
+                0x0000000000003550                hound_service_register_context
+                0x0000000000003640                hound_service_unregister_context
+                0x00000000000036b0                hound_service_get_list
+                0x00000000000039b0                hound_service_connect_source_sink
+                0x0000000000003ad0                hound_service_disconnect_source_sink
+                0x0000000000003bc0                hound_service_stream_enter
+                0x0000000000003c20                hound_service_stream_exit
+                0x0000000000003c50                hound_service_stream_drain
+                0x0000000000003c80                hound_service_stream_write
+                0x0000000000003c90                hound_service_stream_read
+                0x0000000000003ca0                hound_service_set_server_iface
+                0x0000000000003cb0                hound_connection_handler
+                0x0000000000004450                hound_server_register
+                0x00000000000044a0                hound_server_unregister
+                0x00000000000044b0                hound_server_set_device_change_callback
+                0x00000000000044c0                hound_server_devices_iterate
+ *fill*         0x0000000000004598        0x8 
+ .text          0x00000000000045a0     0x1116 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                0x0000000000004c60                audio_pcm_cap_str
+                0x0000000000004c80                audio_pcm_event_str
+                0x0000000000004ca0                audio_pcm_open_default
+                0x0000000000004d40                audio_pcm_open
+                0x0000000000004d80                audio_pcm_open_service
+                0x0000000000004da0                audio_pcm_close
+                0x0000000000004dc0                audio_pcm_get_info_str
+                0x0000000000004eb0                audio_pcm_query_cap
+                0x0000000000004f10                audio_pcm_get_buffer_pos
+                0x0000000000004f90                audio_pcm_test_format
+                0x00000000000050c0                audio_pcm_register_event_callback
+                0x0000000000005150                audio_pcm_unregister_event_callback
+                0x00000000000051a0                audio_pcm_get_buffer
+                0x0000000000005250                audio_pcm_release_buffer
+                0x00000000000052a0                audio_pcm_start_playback_fragment
+                0x0000000000005330                audio_pcm_last_playback_fragment
+                0x0000000000005380                audio_pcm_start_playback
+                0x0000000000005410                audio_pcm_stop_playback_immediate
+                0x0000000000005460                audio_pcm_stop_playback
+                0x00000000000054b0                audio_pcm_start_capture_fragment
+                0x0000000000005540                audio_pcm_start_capture
+                0x00000000000055d0                audio_pcm_last_capture_fragment
+                0x0000000000005620                audio_pcm_stop_capture_immediate
+                0x0000000000005670                audio_pcm_stop_capture
+ *fill*         0x00000000000056b6        0xa 
+ .text          0x00000000000056c0       0x2e ../../lib/drv/libdrv.a(log.o)
+                0x00000000000056c0                ddf_log_init
+                0x00000000000056d0                ddf_msg
+ *fill*         0x00000000000056ee        0x2 
+ .text          0x00000000000056f0     0x173f ../../lib/pcm/libpcm.a(format.o)
+                0x0000000000005960                pcm_format_same
+                0x00000000000059c0                pcm_format_silence
+                0x00000000000061a0                pcm_format_convert_and_mix
+                0x0000000000006e10                pcm_format_mix
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000006e2f      0x21f dplay.o
+                                        0x221 (size before relaxing)
+ *fill*         0x000000000000704e        0x2 
+ .rodata.str1.4
+                0x0000000000007050      0x2f5 dplay.o
+ *fill*         0x0000000000007345       0x1b 
+ .rodata        0x0000000000007360       0xac dplay.o
+ .rodata.str1.1
+                0x000000000000740c       0x94 drec.o
+                                         0xee (size before relaxing)
+ .rodata.str1.4
+                0x00000000000074a0       0xda drec.o
+                                        0x11e (size before relaxing)
+ *fill*         0x000000000000757a        0x2 
+ .rodata        0x000000000000757c        0xc drec.o
+ .rodata.str1.4
+                0x0000000000007588      0x344 main.o
+                                        0x3d1 (size before relaxing)
+ .rodata.str1.1
+                0x00000000000078cc       0xda main.o
+                                        0x20f (size before relaxing)
+ *fill*         0x00000000000079a6       0x1a 
+ .rodata        0x00000000000079c0       0xb0 main.o
+ .rodata.str1.1
+                0x0000000000007a70       0xb4 wave.o
+                                         0xbb (size before relaxing)
+ *fill*         0x0000000000007b24       0x1c 
+ .rodata        0x0000000000007b40       0x4c wave.o
+ .rodata.str1.1
+                0x0000000000007b8c       0x2f ../../lib/hound/libhound.a(client.o)
+                                         0x3d (size before relaxing)
+ .rodata.str1.1
+                0x0000000000007bbb       0x3f ../../lib/hound/libhound.a(protocol.o)
+                                         0x45 (size before relaxing)
+ *fill*         0x0000000000007bfa        0x2 
+ .rodata        0x0000000000007bfc       0x20 ../../lib/hound/libhound.a(protocol.o)
+ .rodata.str1.1
+                0x0000000000007c1c      0x1ba ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                                        0x1c4 (size before relaxing)
+ *fill*         0x0000000000007dd6        0x2 
+ .rodata.str1.4
+                0x0000000000007dd8       0x88 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .rodata        0x0000000000007e60     0x1070 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                0x0000000000008e94                remote_audio_pcm_iface
+ .rodata.str1.1
+                0x0000000000008ed0       0x16 ../../lib/pcm/libpcm.a(format.o)
+                                         0x1a (size before relaxing)
+ *fill*         0x0000000000008ee6       0x1a 
+ .rodata        0x0000000000008f00      0x144 ../../lib/pcm/libpcm.a(format.o)
+                0x000000000000902c                AUDIO_FORMAT_ANY
+                0x0000000000009038                AUDIO_FORMAT_DEFAULT
+ .rodata.cst4   0x0000000000009044       0x40 ../../lib/pcm/libpcm.a(format.o)
+
+.rel.plt        0x0000000000009084      0x240
+ *(.rel.plt)
+ .rel.plt       0x0000000000009084      0x240 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x00000000000092c4       0x18
+ *(.rel.*)
+ .rel.got       0x00000000000092c4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x00000000000092c4       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x00000000000092dc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x00000000000092dc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x00000000000092dc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x00000000000092e0      0x490
+ *(.plt)
+ .plt           0x00000000000092e0      0x490 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000092f0                __main
+                0x0000000000009300                loc_category_get_id
+                0x0000000000009310                devman_device_connect
+                0x0000000000009320                loc_service_connect
+                0x0000000000009330                printf
+                0x0000000000009340                async_hangup
+                0x0000000000009350                async_wait_for
+                0x0000000000009360                getopt_long
+                0x0000000000009370                log_init
+                0x0000000000009380                async_data_write_start
+                0x0000000000009390                loc_service_register
+                0x00000000000093a0                async_data_read_finalize
+                0x00000000000093b0                async_share_in_start
+                0x00000000000093c0                memcpy
+                0x00000000000093d0                malloc
+                0x00000000000093e0                fibril_condvar_signal
+                0x00000000000093f0                async_req_fast
+                0x0000000000009400                loc_service_get_id
+                0x0000000000009410                async_data_read_receive_call
+                0x0000000000009420                as_area_destroy
+                0x0000000000009430                async_answer_0
+                0x0000000000009440                fibril_condvar_wait
+                0x0000000000009450                async_send_fast
+                0x0000000000009460                __udivdi3
+                0x0000000000009470                log_msgv
+                0x0000000000009480                async_exchange_end
+                0x0000000000009490                loc_service_get_name
+                0x00000000000094a0                assert_abort
+                0x00000000000094b0                calloc
+                0x00000000000094c0                fibril_condvar_initialize
+                0x00000000000094d0                loc_register_cat_change_cb
+                0x00000000000094e0                async_data_write_receive_call
+                0x00000000000094f0                fseek
+                0x0000000000009500                fibril_mutex_unlock
+                0x0000000000009510                async_callback_receive_start
+                0x0000000000009520                loc_service_unregister
+                0x0000000000009530                fibril_mutex_initialize
+                0x0000000000009540                async_create_callback_port
+                0x0000000000009550                str_cmp
+                0x0000000000009560                fread
+                0x0000000000009570                task_get_id
+                0x0000000000009580                fopen
+                0x0000000000009590                memset
+                0x00000000000095a0                async_data_read_receive
+                0x00000000000095b0                ftell
+                0x00000000000095c0                async_data_read_start
+                0x00000000000095d0                fclose
+                0x00000000000095e0                getchar
+                0x00000000000095f0                async_share_in_receive
+                0x0000000000009600                async_usleep
+                0x0000000000009610                getuptime
+                0x0000000000009620                asprintf
+                0x0000000000009630                loc_server_register
+                0x0000000000009640                loc_category_get_svcs
+                0x0000000000009650                async_get_call_timeout
+                0x0000000000009660                str_size
+                0x0000000000009670                str_lcmp
+                0x0000000000009680                async_answer_1
+                0x0000000000009690                async_exchange_begin
+                0x00000000000096a0                str_error
+                0x00000000000096b0                fwrite
+                0x00000000000096c0                devman_fun_get_handle
+                0x00000000000096d0                async_share_in_finalize
+                0x00000000000096e0                async_answer_3
+                0x00000000000096f0                async_data_write_finalize
+                0x0000000000009700                async_data_write_accept
+                0x0000000000009710                async_forget
+                0x0000000000009720                fibril_create_generic
+                0x0000000000009730                fibril_add_ready
+                0x0000000000009740                __syscall_fast
+                0x0000000000009750                free
+                0x0000000000009760                fibril_mutex_lock
+
+.dynsym         0x0000000000009770      0x4e0
+ *(.dynsym)
+ .dynsym        0x0000000000009770      0x4e0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000009c50      0x4d0
+ *(.dynstr)
+ .dynstr        0x0000000000009c50      0x4d0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x000000000000a120      0x24c
+ *(.hash)
+ .hash          0x000000000000a120      0x24c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x000000000000a36c       0x13
+ *(.interp)
+ .interp        0x000000000000a36c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000b37f                . = (. + 0x1000)
+
+.dynamic        0x000000000000b380       0xa8
+ *(.dynamic)
+ .dynamic       0x000000000000b380       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000b380                _DYNAMIC
+
+.data           0x000000000000b428        0x4
+ *(.data)
+ .data          0x000000000000b428        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x000000000000b428        0x0 dplay.o
+ .data          0x000000000000b428        0x0 drec.o
+ .data          0x000000000000b428        0x0 main.o
+ .data          0x000000000000b428        0x0 wave.o
+ .data          0x000000000000b428        0x0 ../../lib/hound/libhound.a(client.o)
+ .data          0x000000000000b428        0x4 ../../lib/hound/libhound.a(protocol.o)
+                0x000000000000b428                HOUND_SERVICE
+ .data          0x000000000000b42c        0x0 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .data          0x000000000000b42c        0x0 ../../lib/drv/libdrv.a(log.o)
+ .data          0x000000000000b42c        0x0 ../../lib/pcm/libpcm.a(format.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x000000000000b42c        0x0
+ *(.got)
+ .got           0x000000000000b42c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x000000000000b42c      0x12c
+ *(.got.plt)
+ .got.plt       0x000000000000b42c      0x12c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000b42c                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x000000000000b560     0x8031
+ *(.dynbss)
+ .dynbss        0x000000000000b560        0xc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000b560                optarg
+                0x000000000000b564                optind
+                0x000000000000b568                __syscall_fast_func
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000b56c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x000000000000b56c        0x0 dplay.o
+ .bss           0x000000000000b56c        0x0 drec.o
+ *fill*         0x000000000000b56c       0x14 
+ .bss           0x000000000000b580     0x8000 main.o
+ .bss           0x0000000000013580        0x0 wave.o
+ .bss           0x0000000000013580        0x0 ../../lib/hound/libhound.a(client.o)
+ .bss           0x0000000000013580        0xc ../../lib/hound/libhound.a(protocol.o)
+ .bss           0x000000000001358c        0x5 ../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .bss           0x0000000000013591        0x0 ../../lib/drv/libdrv.a(log.o)
+ .bss           0x0000000000013591        0x0 ../../lib/pcm/libpcm.a(format.o)
+
+/DISCARD/
+ *(*)
+LOAD dplay.o
+LOAD drec.o
+LOAD main.o
+LOAD wave.o
+LOAD ../../lib/hound/libhound.a
+LOAD ../../lib/drv/libdrv.a
+LOAD ../../lib/pcm/libpcm.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(wavplay elf32-i386)

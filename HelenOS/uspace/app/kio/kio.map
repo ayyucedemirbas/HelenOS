@@ -1,0 +1,218 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/clui/libclui.a(tinput.o)
+                              kio.o (tinput_new)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0xfe7 kio.o
+ .debug_abbrev  0x0000000000000000      0x2cf kio.o
+ .debug_loc     0x0000000000000000      0x650 kio.o
+ .debug_aranges
+                0x0000000000000000       0x28 kio.o
+ .debug_ranges  0x0000000000000000       0xc8 kio.o
+ .debug_line    0x0000000000000000      0x3e5 kio.o
+ .debug_str     0x0000000000000000      0xbbd kio.o
+ .comment       0x0000000000000000       0x12 kio.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kio.o
+ .eh_frame      0x0000000000000000       0xb0 kio.o
+ .debug_info    0x0000000000000000     0x3960 ../../lib/clui/libclui.a(tinput.o)
+ .debug_abbrev  0x0000000000000000      0x4c3 ../../lib/clui/libclui.a(tinput.o)
+ .debug_loc     0x0000000000000000     0x31b7 ../../lib/clui/libclui.a(tinput.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/clui/libclui.a(tinput.o)
+ .debug_ranges  0x0000000000000000      0x808 ../../lib/clui/libclui.a(tinput.o)
+ .debug_line    0x0000000000000000      0x9b8 ../../lib/clui/libclui.a(tinput.o)
+ .debug_str     0x0000000000000000     0x1212 ../../lib/clui/libclui.a(tinput.o)
+ .comment       0x0000000000000000       0x12 ../../lib/clui/libclui.a(tinput.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/clui/libclui.a(tinput.o)
+ .eh_frame      0x0000000000000000      0x224 ../../lib/clui/libclui.a(tinput.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x2b04
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x301 kio.o
+ *fill*         0x0000000000001431        0xf 
+ .text.startup  0x0000000000001440      0x23e kio.o
+                0x0000000000001440                main
+ *fill*         0x000000000000167e        0x2 
+ .text          0x0000000000001680     0x21ea ../../lib/clui/libclui.a(tinput.o)
+                0x0000000000001dd0                tinput_new
+                0x0000000000001e30                tinput_destroy
+                0x0000000000001e60                tinput_set_prompt
+                0x0000000000001ea0                tinput_set_compl_ops
+                0x0000000000001eb0                tinput_read_i
+                0x0000000000003850                tinput_read
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x000000000000386a       0x58 kio.o
+                                         0x5d (size before relaxing)
+ *fill*         0x00000000000038c2        0x2 
+ .rodata.str1.4
+                0x00000000000038c4       0xcc kio.o
+                                         0xca (size before relaxing)
+ .rodata.str1.1
+                0x0000000000003990       0x1e ../../lib/clui/libclui.a(tinput.o)
+                                         0x23 (size before relaxing)
+ *fill*         0x00000000000039ae        0x2 
+ .rodata        0x00000000000039b0      0x284 ../../lib/clui/libclui.a(tinput.o)
+
+.rel.plt        0x0000000000003c34      0x1a0
+ *(.rel.plt)
+ .rel.plt       0x0000000000003c34      0x1a0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000003dd4       0x20
+ *(.rel.*)
+ .rel.got       0x0000000000003dd4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000003dd4       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000003df4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000003df4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000003df4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000003e00      0x350
+ *(.plt)
+ .plt           0x0000000000003e00      0x350 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003e10                console_get_size
+                0x0000000000003e20                putchar
+                0x0000000000003e30                __main
+                0x0000000000003e40                sysinfo_get_value
+                0x0000000000003e50                async_event_unmask
+                0x0000000000003e60                wstr_length
+                0x0000000000003e70                physmem_map
+                0x0000000000003e80                printf
+                0x0000000000003e90                memmove
+                0x0000000000003ea0                __errno
+                0x0000000000003eb0                console_get_pos
+                0x0000000000003ec0                str_width
+                0x0000000000003ed0                str_decode
+                0x0000000000003ee0                str_ndup
+                0x0000000000003ef0                qsort
+                0x0000000000003f00                memcpy
+                0x0000000000003f10                malloc
+                0x0000000000003f20                kio_update
+                0x0000000000003f30                fflush
+                0x0000000000003f40                console_get_event
+                0x0000000000003f50                console_init
+                0x0000000000003f60                clipboard_put_str
+                0x0000000000003f70                calloc
+                0x0000000000003f80                fprintf
+                0x0000000000003f90                fibril_mutex_unlock
+                0x0000000000003fa0                str_dup
+                0x0000000000003fb0                clipboard_get_str
+                0x0000000000003fc0                prodcons_initialize
+                0x0000000000003fd0                realloc
+                0x0000000000003fe0                str_cmp
+                0x0000000000003ff0                prodcons_consume
+                0x0000000000004000                console_set_style
+                0x0000000000004010                fopen
+                0x0000000000004020                wstr_to_astr
+                0x0000000000004030                console_flush
+                0x0000000000004040                fsync
+                0x0000000000004050                str_size
+                0x0000000000004060                fputc
+                0x0000000000004070                str_length
+                0x0000000000004080                console_set_pos
+                0x0000000000004090                str_error
+                0x00000000000040a0                kio_command
+                0x00000000000040b0                str_to_wstr
+                0x00000000000040c0                prodcons_produce
+                0x00000000000040d0                fibril_create_generic
+                0x00000000000040e0                fibril_add_ready
+                0x00000000000040f0                fileno
+                0x0000000000004100                __syscall_fast
+                0x0000000000004110                str_lsize
+                0x0000000000004120                async_event_subscribe
+                0x0000000000004130                free
+                0x0000000000004140                fibril_mutex_lock
+
+.dynsym         0x0000000000004150      0x3b0
+ *(.dynsym)
+ .dynsym        0x0000000000004150      0x3b0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000004500      0x2ae
+ *(.dynstr)
+ .dynstr        0x0000000000004500      0x2ae /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000047b0      0x188
+ *(.hash)
+ .hash          0x00000000000047b0      0x188 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000004938       0x13
+ *(.interp)
+ .interp        0x0000000000004938       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000594b                . = (. + 0x1000)
+
+.dynamic        0x000000000000594c       0xa8
+ *(.dynamic)
+ .dynamic       0x000000000000594c       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000594c                _DYNAMIC
+
+.data           0x00000000000059f4       0x14
+ *(.data)
+ .data          0x00000000000059f4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000059f4       0x14 kio.o
+ .data          0x0000000000005a08        0x0 ../../lib/clui/libclui.a(tinput.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000005a08        0x0
+ *(.got)
+ .got           0x0000000000005a08        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000005a08       0xdc
+ *(.got.plt)
+ .got.plt       0x0000000000005a08       0xdc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005a08                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000005b00       0x80
+ *(.dynbss)
+ .dynbss        0x0000000000005b00       0x24 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005b00                stdout
+                0x0000000000005b10                stdin
+                0x0000000000005b18                __syscall_fast_func
+                0x0000000000005b20                stderr
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000005b24        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x0000000000005b24       0x1c 
+ .bss           0x0000000000005b40       0x40 kio.o
+ .bss           0x0000000000005b80        0x0 ../../lib/clui/libclui.a(tinput.o)
+
+/DISCARD/
+ *(*)
+LOAD kio.o
+LOAD ../../lib/clui/libclui.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(kio elf32-i386)

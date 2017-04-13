@@ -1,0 +1,753 @@
+# DO NOT DELETE
+
+tester.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+tester.o: ../../lib/c/arch/ia32/include/libarch/types.h
+tester.o: ../../lib/c/arch/ia32/include/libarch/common.h
+tester.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+tester.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+tester.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+tester.o: ../../lib/c/arch/ia32/include/libarch/config.h
+tester.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+tester.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+tester.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+tester.o: ../../../abi/include/abi/bool.h ../../lib/c/include/io/verify.h
+tester.o: ../../../abi/include/abi/kio.h ../../lib/c/include/io/log.h
+tester.o: ../../lib/c/include/inttypes.h
+tester.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+tester.o: ../../../abi/include/abi/log.h tester.h
+tester.o: ../../lib/c/include/stacktrace.h thread/thread1.def
+tester.o: thread/setjmp1.def print/print1.def print/print2.def
+tester.o: print/print3.def print/print4.def print/print5.def print/print6.def
+tester.o: console/console1.def stdio/stdio1.def stdio/stdio2.def
+tester.o: stdio/logger1.def stdio/logger2.def fault/fault1.def
+tester.o: fault/fault2.def fault/fault3.def float/float1.def float/float2.def
+tester.o: float/softfloat1.def vfs/vfs1.def ipc/ping_pong.def ipc/starve.def
+tester.o: loop/loop1.def mm/malloc1.def mm/malloc2.def mm/malloc3.def
+tester.o: mm/mapping1.def mm/pager1.def hw/serial/serial1.def
+tester.o: hw/misc/virtchar1.def
+util.o: util.h ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+util.o: ../../lib/c/arch/ia32/include/libarch/types.h
+util.o: ../../lib/c/arch/ia32/include/libarch/common.h
+util.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+util.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+util.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+util.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+util.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+util.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+util.o: tester.h ../../lib/c/include/stacktrace.h util_functions.def
+thread/thread1.o: ../../lib/c/include/atomic.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+thread/thread1.o: ../../lib/c/include/atomicdflt.h
+thread/thread1.o: ../../lib/c/include/stdint.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+thread/thread1.o: ../../lib/c/include/stdbool.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+thread/thread1.o: ../../../abi/include/abi/bool.h
+thread/thread1.o: ../../lib/c/include/thread.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+thread/thread1.o: ../../lib/c/include/sys/types.h
+thread/thread1.o: ../../../abi/include/abi/proc/thread.h
+thread/thread1.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+thread/thread1.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+thread/thread1.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+thread/thread1.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+thread/thread1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+thread/thread1.o: ../../lib/c/include/inttypes.h
+thread/thread1.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h tester.h
+thread/thread1.o: ../../lib/c/include/stacktrace.h
+thread/setjmp1.o: ../../lib/c/include/setjmp.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+thread/setjmp1.o: ../../lib/c/include/sys/types.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+thread/setjmp1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+thread/setjmp1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+thread/setjmp1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+thread/setjmp1.o: ../../lib/c/include/malloc.h
+thread/setjmp1.o: ../../lib/c/include/stacktrace.h
+thread/setjmp1.o: ../../lib/c/include/stdbool.h
+thread/setjmp1.o: ../../../abi/include/abi/bool.h tester.h
+thread/setjmp1.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+thread/setjmp1.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+thread/setjmp1.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+thread/setjmp1.o: ../../../abi/include/abi/kio.h
+print/print1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+print/print1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+print/print1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+print/print1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+print/print1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+print/print1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+print/print1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+print/print1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+print/print1.o: ../../lib/c/include/io/verify.h
+print/print1.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+print/print1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+print/print1.o: ../../lib/c/arch/ia32/include/libarch/config.h tester.h
+print/print1.o: ../../lib/c/include/stacktrace.h
+print/print2.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+print/print2.o: ../../lib/c/arch/ia32/include/libarch/types.h
+print/print2.o: ../../lib/c/arch/ia32/include/libarch/common.h
+print/print2.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+print/print2.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+print/print2.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+print/print2.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+print/print2.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+print/print2.o: ../../lib/c/include/io/verify.h
+print/print2.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+print/print2.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+print/print2.o: ../../lib/c/arch/ia32/include/libarch/config.h tester.h
+print/print2.o: ../../lib/c/include/stacktrace.h
+print/print3.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+print/print3.o: ../../lib/c/arch/ia32/include/libarch/types.h
+print/print3.o: ../../lib/c/arch/ia32/include/libarch/common.h
+print/print3.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+print/print3.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+print/print3.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+print/print3.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+print/print3.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+print/print3.o: ../../lib/c/include/io/verify.h
+print/print3.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+print/print3.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+print/print3.o: ../../lib/c/arch/ia32/include/libarch/config.h
+print/print3.o: ../../lib/c/include/macros.h tester.h
+print/print3.o: ../../lib/c/include/stacktrace.h
+print/print4.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+print/print4.o: ../../lib/c/arch/ia32/include/libarch/types.h
+print/print4.o: ../../lib/c/arch/ia32/include/libarch/common.h
+print/print4.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+print/print4.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+print/print4.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+print/print4.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+print/print4.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+print/print4.o: ../../lib/c/include/io/verify.h
+print/print4.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+print/print4.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+print/print4.o: ../../lib/c/arch/ia32/include/libarch/config.h tester.h
+print/print4.o: ../../lib/c/include/stacktrace.h
+print/print5.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+print/print5.o: ../../lib/c/arch/ia32/include/libarch/types.h
+print/print5.o: ../../lib/c/arch/ia32/include/libarch/common.h
+print/print5.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+print/print5.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+print/print5.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+print/print5.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+print/print5.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+print/print5.o: ../../lib/c/include/io/verify.h
+print/print5.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+print/print5.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+print/print5.o: ../../lib/c/arch/ia32/include/libarch/config.h tester.h
+print/print5.o: ../../lib/c/include/stacktrace.h
+print/print6.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+print/print6.o: ../../lib/c/arch/ia32/include/libarch/types.h
+print/print6.o: ../../lib/c/arch/ia32/include/libarch/common.h
+print/print6.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+print/print6.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+print/print6.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+print/print6.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+print/print6.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+print/print6.o: ../../lib/c/include/io/verify.h
+print/print6.o: ../../../abi/include/abi/kio.h ../../lib/c/include/unistd.h
+print/print6.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+print/print6.o: ../../lib/c/arch/ia32/include/libarch/config.h tester.h
+print/print6.o: ../../lib/c/include/stacktrace.h
+console/console1.o: ../../lib/c/include/stdio.h
+console/console1.o: ../../lib/c/include/sys/types.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+console/console1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+console/console1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+console/console1.o: ../../lib/c/include/stdbool.h
+console/console1.o: ../../../abi/include/abi/bool.h
+console/console1.o: ../../lib/c/include/io/verify.h
+console/console1.o: ../../../abi/include/abi/kio.h
+console/console1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+console/console1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+console/console1.o: ../../lib/c/include/malloc.h
+console/console1.o: ../../lib/c/include/stacktrace.h
+console/console1.o: ../../lib/c/include/io/console.h
+console/console1.o: ../../lib/c/include/io/concaps.h
+console/console1.o: ../../lib/c/include/io/kbd_event.h
+console/console1.o: ../../lib/c/include/adt/list.h
+console/console1.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+console/console1.o: ../../lib/c/include/io/keycode.h
+console/console1.o: ../../lib/c/include/io/cons_event.h
+console/console1.o: ../../lib/c/include/io/pos_event.h
+console/console1.o: ../../lib/c/include/async.h
+console/console1.o: ../../lib/c/include/ipc/common.h
+console/console1.o: ../../../abi/include/abi/ipc/ipc.h
+console/console1.o: ../../lib/c/include/atomic.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+console/console1.o: ../../lib/c/include/atomicdflt.h
+console/console1.o: ../../lib/c/include/stdint.h
+console/console1.o: ../../../abi/include/abi/proc/task.h
+console/console1.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+console/console1.o: ../../../abi/include/abi/syscall.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+console/console1.o: ../../lib/c/include/fibril.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+console/console1.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+console/console1.o: ../../../abi/include/abi/ddi/irq.h
+console/console1.o: ../../../abi/include/abi/ipc/event.h
+console/console1.o: ../../../abi/include/abi/ipc/interfaces.h
+console/console1.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+console/console1.o: ../../lib/c/include/io/color.h
+console/console1.o: ../../lib/c/include/io/style.h
+console/console1.o: ../../lib/c/include/vfs/vfs.h
+console/console1.o: ../../lib/c/include/ipc/vfs.h
+console/console1.o: ../../lib/c/include/ipc/loc.h
+console/console1.o: ../../lib/c/include/vfs/vfs_mtab.h tester.h
+stdio/stdio1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+stdio/stdio1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+stdio/stdio1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+stdio/stdio1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+stdio/stdio1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+stdio/stdio1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+stdio/stdio1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+stdio/stdio1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+stdio/stdio1.o: ../../lib/c/include/io/verify.h
+stdio/stdio1.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+stdio/stdio1.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+stdio/stdio1.o: ../../lib/c/include/sys/time.h
+stdio/stdio1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+stdio/stdio1.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+stdio/stdio1.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+stdio/stdio1.o: tester.h
+stdio/stdio2.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+stdio/stdio2.o: ../../lib/c/arch/ia32/include/libarch/types.h
+stdio/stdio2.o: ../../lib/c/arch/ia32/include/libarch/common.h
+stdio/stdio2.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+stdio/stdio2.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+stdio/stdio2.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+stdio/stdio2.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+stdio/stdio2.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+stdio/stdio2.o: ../../lib/c/include/io/verify.h
+stdio/stdio2.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+stdio/stdio2.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+stdio/stdio2.o: ../../lib/c/include/sys/time.h
+stdio/stdio2.o: ../../lib/c/arch/ia32/include/libarch/config.h
+stdio/stdio2.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+stdio/stdio2.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+stdio/stdio2.o: tester.h
+stdio/logger1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+stdio/logger1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+stdio/logger1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+stdio/logger1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+stdio/logger1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+stdio/logger1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+stdio/logger1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+stdio/logger1.o: ../../lib/c/include/stdbool.h
+stdio/logger1.o: ../../../abi/include/abi/bool.h
+stdio/logger1.o: ../../lib/c/include/io/verify.h
+stdio/logger1.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+stdio/logger1.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+stdio/logger1.o: ../../lib/c/include/sys/time.h
+stdio/logger1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+stdio/logger1.o: ../../lib/c/include/malloc.h
+stdio/logger1.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/errno.h
+stdio/logger1.o: ../../../abi/include/abi/errno.h
+stdio/logger1.o: ../../lib/c/include/io/log.h ../../lib/c/include/inttypes.h
+stdio/logger1.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+stdio/logger1.o: ../../../abi/include/abi/log.h tester.h
+stdio/logger2.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/types.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/common.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+stdio/logger2.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+stdio/logger2.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+stdio/logger2.o: ../../lib/c/include/stdbool.h
+stdio/logger2.o: ../../../abi/include/abi/bool.h
+stdio/logger2.o: ../../lib/c/include/io/verify.h
+stdio/logger2.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+stdio/logger2.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+stdio/logger2.o: ../../lib/c/include/sys/time.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/config.h
+stdio/logger2.o: ../../lib/c/include/malloc.h
+stdio/logger2.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/errno.h
+stdio/logger2.o: ../../../abi/include/abi/errno.h
+stdio/logger2.o: ../../lib/c/include/io/log.h ../../lib/c/include/inttypes.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+stdio/logger2.o: ../../../abi/include/abi/log.h ../../lib/c/include/async.h
+stdio/logger2.o: ../../lib/c/include/ipc/common.h
+stdio/logger2.o: ../../../abi/include/abi/ipc/ipc.h
+stdio/logger2.o: ../../lib/c/include/atomic.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+stdio/logger2.o: ../../lib/c/include/atomicdflt.h
+stdio/logger2.o: ../../lib/c/include/stdint.h
+stdio/logger2.o: ../../../abi/include/abi/proc/task.h
+stdio/logger2.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+stdio/logger2.o: ../../../abi/include/abi/syscall.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+stdio/logger2.o: ../../lib/c/include/fibril.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+stdio/logger2.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+stdio/logger2.o: ../../lib/c/include/stddef.h
+stdio/logger2.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+stdio/logger2.o: ../../../abi/include/abi/ddi/irq.h
+stdio/logger2.o: ../../../abi/include/abi/ipc/event.h
+stdio/logger2.o: ../../../abi/include/abi/ipc/interfaces.h
+stdio/logger2.o: ../../../abi/include/abi/fourcc.h ../../../common.h tester.h
+fault/fault1.o: tester.h ../../lib/c/include/sys/types.h
+fault/fault1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+fault/fault1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+fault/fault1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+fault/fault1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+fault/fault1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+fault/fault1.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/stdio.h
+fault/fault1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+fault/fault1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+fault/fault1.o: ../../lib/c/include/io/verify.h
+fault/fault1.o: ../../../abi/include/abi/kio.h
+fault/fault2.o: tester.h ../../lib/c/include/sys/types.h
+fault/fault2.o: ../../lib/c/arch/ia32/include/libarch/types.h
+fault/fault2.o: ../../lib/c/arch/ia32/include/libarch/common.h
+fault/fault2.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+fault/fault2.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+fault/fault2.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+fault/fault2.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/stdio.h
+fault/fault2.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+fault/fault2.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+fault/fault2.o: ../../lib/c/include/io/verify.h
+fault/fault2.o: ../../../abi/include/abi/kio.h
+fault/fault3.o: tester.h ../../lib/c/include/sys/types.h
+fault/fault3.o: ../../lib/c/arch/ia32/include/libarch/types.h
+fault/fault3.o: ../../lib/c/arch/ia32/include/libarch/common.h
+fault/fault3.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+fault/fault3.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+fault/fault3.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+fault/fault3.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/stdio.h
+fault/fault3.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+fault/fault3.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+fault/fault3.o: ../../lib/c/include/io/verify.h
+fault/fault3.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+fault/fault3.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+fault/fault3.o: ../../lib/c/include/sys/time.h
+fault/fault3.o: ../../lib/c/arch/ia32/include/libarch/config.h
+fault/fault3.o: ../../lib/c/include/malloc.h
+float/float1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+float/float1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+float/float1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+float/float1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+float/float1.o: ../../lib/c/include/io/verify.h
+float/float1.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+float/float1.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+float/float1.o: ../../lib/c/include/sys/time.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+float/float1.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+float/float1.o: ../../lib/c/include/atomic.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+float/float1.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+float/float1.o: ../../lib/c/include/thread.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+float/float1.o: ../../../abi/include/abi/proc/thread.h
+float/float1.o: ../../lib/c/include/inttypes.h
+float/float1.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h tester.h
+float/float2.o: ../../lib/c/include/stdbool.h
+float/float2.o: ../../lib/c/arch/ia32/include/libarch/types.h
+float/float2.o: ../../lib/c/arch/ia32/include/libarch/common.h
+float/float2.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+float/float2.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+float/float2.o: ../../../abi/include/abi/bool.h ../../lib/c/include/stdio.h
+float/float2.o: ../../lib/c/include/sys/types.h ../../lib/c/include/stdarg.h
+float/float2.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+float/float2.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+float/float2.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+float/float2.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+float/float2.o: ../../lib/c/include/sys/time.h
+float/float2.o: ../../lib/c/arch/ia32/include/libarch/config.h
+float/float2.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+float/float2.o: ../../lib/math/include/math.h
+float/float2.o: ../../lib/math/arch/ia32/include/libarch/math.h
+float/float2.o: ../../lib/math/include/acos.h
+float/float2.o: ../../lib/math/include/mathtypes.h
+float/float2.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+float/float2.o: ../../lib/math/include/asin.h ../../lib/math/include/atan.h
+float/float2.o: ../../lib/math/include/atan2.h ../../lib/math/include/ceil.h
+float/float2.o: ../../lib/math/include/cosh.h ../../lib/math/include/exp.h
+float/float2.o: ../../lib/math/include/fabs.h ../../lib/math/include/floor.h
+float/float2.o: ../../lib/math/include/fmod.h ../../lib/math/include/frexp.h
+float/float2.o: ../../lib/math/include/ldexp.h ../../lib/math/include/log.h
+float/float2.o: ../../lib/math/include/log10.h ../../lib/math/include/modf.h
+float/float2.o: ../../lib/math/include/pow.h ../../lib/math/include/sinh.h
+float/float2.o: ../../lib/math/include/sqrt.h ../../lib/math/include/tan.h
+float/float2.o: ../../lib/math/include/tanh.h ../../lib/math/include/trig.h
+float/float2.o: ../../lib/math/include/trunc.h tester.h
+float/softfloat1.o: ../../lib/c/include/stdio.h
+float/softfloat1.o: ../../lib/c/include/sys/types.h
+float/softfloat1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+float/softfloat1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+float/softfloat1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+float/softfloat1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+float/softfloat1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+float/softfloat1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+float/softfloat1.o: ../../lib/c/include/stdbool.h
+float/softfloat1.o: ../../../abi/include/abi/bool.h
+float/softfloat1.o: ../../lib/c/include/io/verify.h
+float/softfloat1.o: ../../../abi/include/abi/kio.h
+float/softfloat1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+float/softfloat1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+float/softfloat1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+float/softfloat1.o: ../../lib/c/include/malloc.h
+float/softfloat1.o: ../../lib/c/include/stacktrace.h
+float/softfloat1.o: ../../lib/math/include/mathtypes.h
+float/softfloat1.o: ../../lib/c/include/byteorder.h
+float/softfloat1.o: ../../lib/c/include/stdint.h ../../lib/softfloat/add.h
+float/softfloat1.o: ../../lib/softfloat/sub.h ../../lib/softfloat/mul.h
+float/softfloat1.o: ../../lib/softfloat/div.h
+float/softfloat1.o: ../../lib/softfloat/comparison.h
+float/softfloat1.o: ../../lib/softfloat/conversion.h tester.h
+vfs/vfs1.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+vfs/vfs1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+vfs/vfs1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+vfs/vfs1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+vfs/vfs1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+vfs/vfs1.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+vfs/vfs1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+vfs/vfs1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+vfs/vfs1.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+vfs/vfs1.o: ../../lib/c/include/vfs/vfs.h ../../lib/c/include/ipc/vfs.h
+vfs/vfs1.o: ../../lib/c/include/ipc/common.h
+vfs/vfs1.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+vfs/vfs1.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+vfs/vfs1.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+vfs/vfs1.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+vfs/vfs1.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/adt/list.h
+vfs/vfs1.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+vfs/vfs1.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+vfs/vfs1.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+vfs/vfs1.o: ../../../abi/include/abi/ddi/irq.h
+vfs/vfs1.o: ../../../abi/include/abi/ipc/event.h
+vfs/vfs1.o: ../../../abi/include/abi/ipc/interfaces.h
+vfs/vfs1.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+vfs/vfs1.o: ../../lib/c/include/vfs/vfs_mtab.h ../../lib/c/include/fcntl.h
+vfs/vfs1.o: ../../lib/c/include/dirent.h ../../lib/c/include/loc.h
+vfs/vfs1.o: ../../lib/c/include/sys/stat.h tester.h
+ipc/ping_pong.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/types.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/common.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+ipc/ping_pong.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+ipc/ping_pong.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+ipc/ping_pong.o: ../../lib/c/include/stdbool.h
+ipc/ping_pong.o: ../../../abi/include/abi/bool.h
+ipc/ping_pong.o: ../../lib/c/include/io/verify.h
+ipc/ping_pong.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+ipc/ping_pong.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+ipc/ping_pong.o: ../../lib/c/include/sys/time.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/config.h
+ipc/ping_pong.o: ../../lib/c/include/malloc.h
+ipc/ping_pong.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/ns.h
+ipc/ping_pong.o: ../../lib/c/include/ipc/services.h
+ipc/ping_pong.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+ipc/ping_pong.o: ../../lib/c/include/task.h
+ipc/ping_pong.o: ../../../abi/include/abi/proc/task.h
+ipc/ping_pong.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+ipc/ping_pong.o: ../../../abi/include/abi/ipc/ipc.h
+ipc/ping_pong.o: ../../lib/c/include/atomic.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+ipc/ping_pong.o: ../../lib/c/include/atomicdflt.h
+ipc/ping_pong.o: ../../lib/c/include/stdint.h ../../lib/c/include/futex.h
+ipc/ping_pong.o: ../../lib/c/include/libc.h
+ipc/ping_pong.o: ../../../abi/include/abi/syscall.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+ipc/ping_pong.o: ../../lib/c/include/fibril.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ipc/ping_pong.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+ipc/ping_pong.o: ../../lib/c/include/stddef.h
+ipc/ping_pong.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+ipc/ping_pong.o: ../../../abi/include/abi/ddi/irq.h
+ipc/ping_pong.o: ../../../abi/include/abi/ipc/event.h
+ipc/ping_pong.o: ../../../abi/include/abi/ipc/interfaces.h
+ipc/ping_pong.o: ../../lib/c/include/types/task.h ../../lib/c/include/errno.h
+ipc/ping_pong.o: ../../../abi/include/abi/errno.h tester.h
+ipc/starve.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/types.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/common.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+ipc/starve.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+ipc/starve.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+ipc/starve.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+ipc/starve.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+ipc/starve.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+ipc/starve.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/config.h
+ipc/starve.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+ipc/starve.o: ../../lib/c/include/io/console.h
+ipc/starve.o: ../../lib/c/include/io/concaps.h
+ipc/starve.o: ../../lib/c/include/io/kbd_event.h
+ipc/starve.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+ipc/starve.o: ../../lib/c/include/stddef.h ../../lib/c/include/io/keycode.h
+ipc/starve.o: ../../lib/c/include/io/cons_event.h
+ipc/starve.o: ../../lib/c/include/io/pos_event.h ../../lib/c/include/async.h
+ipc/starve.o: ../../lib/c/include/ipc/common.h
+ipc/starve.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+ipc/starve.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+ipc/starve.o: ../../../abi/include/abi/proc/task.h
+ipc/starve.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+ipc/starve.o: ../../../abi/include/abi/syscall.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+ipc/starve.o: ../../lib/c/include/fibril.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ipc/starve.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+ipc/starve.o: ../../../abi/include/abi/ddi/irq.h
+ipc/starve.o: ../../../abi/include/abi/ipc/event.h
+ipc/starve.o: ../../../abi/include/abi/ipc/interfaces.h
+ipc/starve.o: ../../../abi/include/abi/fourcc.h ../../../common.h tester.h
+loop/loop1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+loop/loop1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+loop/loop1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+loop/loop1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+loop/loop1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+loop/loop1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+loop/loop1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+loop/loop1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+loop/loop1.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+loop/loop1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+loop/loop1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+loop/loop1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+loop/loop1.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+loop/loop1.o: tester.h
+mm/common.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+mm/common.o: ../../lib/c/arch/ia32/include/libarch/types.h
+mm/common.o: ../../lib/c/arch/ia32/include/libarch/common.h
+mm/common.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+mm/common.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mm/common.o: ../../lib/c/include/as.h ../../../abi/include/abi/mm/as.h
+mm/common.o: ../../lib/c/arch/ia32/include/libarch/config.h
+mm/common.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+mm/common.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+mm/common.o: ../../lib/c/include/stddef.h ../../lib/c/include/stdio.h
+mm/common.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+mm/common.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+mm/common.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+mm/common.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+mm/common.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+mm/common.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/errno.h
+mm/common.o: ../../../abi/include/abi/errno.h tester.h mm/common.h
+mm/malloc1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+mm/malloc1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+mm/malloc1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+mm/malloc1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+mm/malloc1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mm/malloc1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+mm/malloc1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+mm/malloc1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+mm/malloc1.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+mm/malloc1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+mm/malloc1.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+mm/malloc1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+mm/malloc1.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+mm/malloc1.o: mm/common.h ../../lib/c/include/adt/list.h
+mm/malloc1.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+mm/malloc1.o: tester.h
+mm/malloc2.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+mm/malloc2.o: ../../lib/c/arch/ia32/include/libarch/types.h
+mm/malloc2.o: ../../lib/c/arch/ia32/include/libarch/common.h
+mm/malloc2.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+mm/malloc2.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mm/malloc2.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+mm/malloc2.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+mm/malloc2.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+mm/malloc2.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+mm/malloc2.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+mm/malloc2.o: ../../lib/c/include/sys/time.h
+mm/malloc2.o: ../../lib/c/arch/ia32/include/libarch/config.h
+mm/malloc2.o: ../../lib/c/include/stdlib.h ../../lib/c/include/malloc.h
+mm/malloc2.o: ../../lib/c/include/stacktrace.h tester.h
+mm/malloc3.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+mm/malloc3.o: ../../lib/c/arch/ia32/include/libarch/types.h
+mm/malloc3.o: ../../lib/c/arch/ia32/include/libarch/common.h
+mm/malloc3.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+mm/malloc3.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mm/malloc3.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+mm/malloc3.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+mm/malloc3.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+mm/malloc3.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+mm/malloc3.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+mm/malloc3.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+mm/malloc3.o: ../../lib/c/arch/ia32/include/libarch/config.h
+mm/malloc3.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+mm/malloc3.o: mm/common.h ../../lib/c/include/adt/list.h
+mm/malloc3.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+mm/malloc3.o: tester.h
+mm/mapping1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+mm/mapping1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+mm/mapping1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+mm/mapping1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+mm/mapping1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mm/mapping1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+mm/mapping1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+mm/mapping1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+mm/mapping1.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+mm/mapping1.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+mm/mapping1.o: ../../lib/c/include/sys/time.h
+mm/mapping1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+mm/mapping1.o: ../../lib/c/include/stdlib.h ../../lib/c/include/malloc.h
+mm/mapping1.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/as.h
+mm/mapping1.o: ../../../abi/include/abi/mm/as.h ../../lib/c/include/errno.h
+mm/mapping1.o: ../../../abi/include/abi/errno.h tester.h
+mm/pager1.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mm/pager1.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+mm/pager1.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+mm/pager1.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+mm/pager1.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+mm/pager1.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+mm/pager1.o: ../../lib/c/include/sys/time.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+mm/pager1.o: ../../lib/c/include/fcntl.h ../../lib/c/include/stdlib.h
+mm/pager1.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+mm/pager1.o: ../../lib/c/include/as.h ../../../abi/include/abi/mm/as.h
+mm/pager1.o: ../../lib/c/include/ns.h ../../lib/c/include/ipc/services.h
+mm/pager1.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+mm/pager1.o: ../../lib/c/include/task.h ../../../abi/include/abi/proc/task.h
+mm/pager1.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+mm/pager1.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+mm/pager1.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+mm/pager1.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+mm/pager1.o: ../../../abi/include/abi/syscall.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+mm/pager1.o: ../../lib/c/include/fibril.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+mm/pager1.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+mm/pager1.o: ../../lib/c/include/stddef.h
+mm/pager1.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+mm/pager1.o: ../../../abi/include/abi/ddi/irq.h
+mm/pager1.o: ../../../abi/include/abi/ipc/event.h
+mm/pager1.o: ../../../abi/include/abi/ipc/interfaces.h
+mm/pager1.o: ../../lib/c/include/types/task.h ../../lib/c/include/errno.h
+mm/pager1.o: ../../../abi/include/abi/errno.h tester.h
+hw/misc/virtchar1.o: ../../lib/c/include/inttypes.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+hw/misc/virtchar1.o: ../../lib/c/include/errno.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/errno.h
+hw/misc/virtchar1.o: ../../lib/c/include/str_error.h
+hw/misc/virtchar1.o: ../../lib/c/include/sys/types.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+hw/misc/virtchar1.o: ../../lib/c/include/async.h
+hw/misc/virtchar1.o: ../../lib/c/include/ipc/common.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/ipc/ipc.h
+hw/misc/virtchar1.o: ../../lib/c/include/atomic.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+hw/misc/virtchar1.o: ../../lib/c/include/atomicdflt.h
+hw/misc/virtchar1.o: ../../lib/c/include/stdint.h
+hw/misc/virtchar1.o: ../../lib/c/include/stdbool.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/bool.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/proc/task.h
+hw/misc/virtchar1.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/syscall.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+hw/misc/virtchar1.o: ../../lib/c/include/fibril.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hw/misc/virtchar1.o: ../../lib/c/include/adt/list.h
+hw/misc/virtchar1.o: ../../lib/c/include/assert.h
+hw/misc/virtchar1.o: ../../lib/c/include/stddef.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+hw/misc/virtchar1.o: ../../lib/c/include/sys/time.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/ddi/irq.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/ipc/event.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/ipc/interfaces.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+hw/misc/virtchar1.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+hw/misc/virtchar1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+hw/misc/virtchar1.o: ../../lib/drv/include/char_dev_iface.h
+hw/misc/virtchar1.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+hw/misc/virtchar1.o: ../../lib/c/include/cc.h ../../lib/c/include/vfs/vfs.h
+hw/misc/virtchar1.o: ../../lib/c/include/ipc/vfs.h
+hw/misc/virtchar1.o: ../../lib/c/include/ipc/loc.h
+hw/misc/virtchar1.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+hw/misc/virtchar1.o: ../../lib/c/include/io/verify.h
+hw/misc/virtchar1.o: ../../../abi/include/abi/kio.h
+hw/misc/virtchar1.o: ../../lib/c/include/vfs/vfs_mtab.h
+hw/misc/virtchar1.o: ../../lib/c/include/vfs/vfs_sess.h
+hw/misc/virtchar1.o: ../../lib/c/include/sys/stat.h
+hw/misc/virtchar1.o: ../../lib/c/include/fcntl.h tester.h
+hw/misc/virtchar1.o: ../../lib/c/include/stacktrace.h
+hw/serial/serial1.o: ../../lib/c/include/inttypes.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+hw/serial/serial1.o: ../../lib/c/include/errno.h
+hw/serial/serial1.o: ../../../abi/include/abi/errno.h
+hw/serial/serial1.o: ../../lib/c/include/stdlib.h
+hw/serial/serial1.o: ../../lib/c/include/unistd.h
+hw/serial/serial1.o: ../../lib/c/include/sys/types.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/types.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/common.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+hw/serial/serial1.o: ../../lib/c/include/time.h
+hw/serial/serial1.o: ../../lib/c/include/sys/time.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/config.h
+hw/serial/serial1.o: ../../lib/c/include/malloc.h
+hw/serial/serial1.o: ../../lib/c/include/stacktrace.h
+hw/serial/serial1.o: ../../lib/c/include/stdbool.h
+hw/serial/serial1.o: ../../../abi/include/abi/bool.h
+hw/serial/serial1.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+hw/serial/serial1.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+hw/serial/serial1.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+hw/serial/serial1.o: ../../../abi/include/abi/kio.h
+hw/serial/serial1.o: ../../lib/c/include/async.h
+hw/serial/serial1.o: ../../lib/c/include/ipc/common.h
+hw/serial/serial1.o: ../../../abi/include/abi/ipc/ipc.h
+hw/serial/serial1.o: ../../lib/c/include/atomic.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+hw/serial/serial1.o: ../../lib/c/include/atomicdflt.h
+hw/serial/serial1.o: ../../lib/c/include/stdint.h
+hw/serial/serial1.o: ../../../abi/include/abi/proc/task.h
+hw/serial/serial1.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+hw/serial/serial1.o: ../../../abi/include/abi/syscall.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+hw/serial/serial1.o: ../../lib/c/include/fibril.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hw/serial/serial1.o: ../../lib/c/include/adt/list.h
+hw/serial/serial1.o: ../../lib/c/include/assert.h
+hw/serial/serial1.o: ../../lib/c/include/stddef.h
+hw/serial/serial1.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+hw/serial/serial1.o: ../../../abi/include/abi/ddi/irq.h
+hw/serial/serial1.o: ../../../abi/include/abi/ipc/event.h
+hw/serial/serial1.o: ../../../abi/include/abi/ipc/interfaces.h
+hw/serial/serial1.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+hw/serial/serial1.o: ../../lib/c/include/ipc/services.h
+hw/serial/serial1.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+hw/serial/serial1.o: ../../lib/drv/include/char_dev_iface.h
+hw/serial/serial1.o: ../../lib/c/include/ipc/serial_ctl.h
+hw/serial/serial1.o: ../../lib/c/include/ipc/dev_iface.h tester.h
+# DO NOT DELETE

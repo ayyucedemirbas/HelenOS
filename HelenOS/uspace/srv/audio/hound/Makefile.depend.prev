@@ -1,0 +1,419 @@
+# DO NOT DELETE
+
+audio_data.o: ../../../lib/c/include/macros.h ../../../lib/c/include/malloc.h
+audio_data.o: ../../../lib/c/include/sys/types.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h audio_data.h
+audio_data.o: ../../../lib/c/include/adt/list.h
+audio_data.o: ../../../lib/c/include/assert.h
+audio_data.o: ../../../lib/c/include/stdbool.h
+audio_data.o: ../../../../abi/include/abi/bool.h
+audio_data.o: ../../../lib/c/include/stddef.h ../../../lib/c/include/atomic.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+audio_data.o: ../../../lib/c/include/atomicdflt.h
+audio_data.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/errno.h
+audio_data.o: ../../../../abi/include/abi/errno.h
+audio_data.o: ../../../lib/c/include/fibril_synch.h
+audio_data.o: ../../../lib/c/include/fibril.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+audio_data.o: ../../../lib/c/include/libc.h
+audio_data.o: ../../../../abi/include/abi/syscall.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+audio_data.o: ../../../lib/c/include/sys/time.h
+audio_data.o: ../../../lib/pcm/include/pcm/format.h
+audio_data.o: ../../../lib/pcm/include/pcm/sample_format.h
+audio_data.o: ../../../lib/c/include/time.h log.h
+audio_data.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+audio_data.o: ../../../lib/c/include/inttypes.h
+audio_data.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+audio_data.o: ../../../lib/c/include/io/verify.h
+audio_data.o: ../../../../abi/include/abi/log.h
+audio_data.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/str.h
+audio_data.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+audio_data.o: ../../../../abi/include/abi/kio.h
+audio_device.o: ../../../lib/c/include/assert.h
+audio_device.o: ../../../lib/c/include/async.h
+audio_device.o: ../../../lib/c/include/ipc/common.h
+audio_device.o: ../../../lib/c/include/sys/types.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+audio_device.o: ../../../../abi/include/abi/ipc/ipc.h
+audio_device.o: ../../../lib/c/include/atomic.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+audio_device.o: ../../../lib/c/include/atomicdflt.h
+audio_device.o: ../../../lib/c/include/stdint.h
+audio_device.o: ../../../lib/c/include/stdbool.h
+audio_device.o: ../../../../abi/include/abi/bool.h
+audio_device.o: ../../../../abi/include/abi/proc/task.h
+audio_device.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+audio_device.o: ../../../../abi/include/abi/syscall.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+audio_device.o: ../../../lib/c/include/fibril.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+audio_device.o: ../../../lib/c/include/adt/list.h
+audio_device.o: ../../../lib/c/include/stddef.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+audio_device.o: ../../../lib/c/include/sys/time.h
+audio_device.o: ../../../../abi/include/abi/ddi/irq.h
+audio_device.o: ../../../../abi/include/abi/ipc/event.h
+audio_device.o: ../../../../abi/include/abi/ipc/interfaces.h
+audio_device.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+audio_device.o: ../../../lib/c/include/errno.h
+audio_device.o: ../../../../abi/include/abi/errno.h
+audio_device.o: ../../../lib/c/include/inttypes.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+audio_device.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+audio_device.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+audio_device.o: ../../../lib/c/include/cc.h
+audio_device.o: ../../../lib/c/include/str_error.h
+audio_device.o: ../../../lib/c/include/as.h
+audio_device.o: ../../../../abi/include/abi/mm/as.h
+audio_device.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+audio_device.o: audio_device.h ../../../lib/c/include/fibril_synch.h
+audio_device.o: ../../../lib/drv/include/audio_pcm_iface.h
+audio_device.o: ../../../lib/pcm/include/pcm/sample_format.h
+audio_device.o: ../../../lib/c/include/time.h
+audio_device.o: ../../../lib/drv/include/ddf/driver.h
+audio_device.o: ../../../lib/c/include/ipc/devman.h
+audio_device.o: ../../../lib/c/include/malloc.h
+audio_device.o: ../../../lib/c/include/ipc/dev_iface.h
+audio_device.o: ../../../lib/c/include/unistd.h
+audio_device.o: ../../../lib/drv/include/dev_iface.h audio_source.h
+audio_device.o: ../../../lib/pcm/include/pcm/format.h audio_sink.h log.h
+audio_device.o: ../../../lib/c/include/io/log.h
+audio_device.o: ../../../lib/c/include/stdarg.h
+audio_device.o: ../../../lib/c/include/io/verify.h
+audio_device.o: ../../../../abi/include/abi/log.h
+audio_device.o: ../../../lib/c/include/stdio.h
+audio_device.o: ../../../../abi/include/abi/kio.h
+audio_sink.o: ../../../lib/c/include/assert.h ../../../lib/c/include/errno.h
+audio_sink.o: ../../../../abi/include/abi/errno.h
+audio_sink.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+audio_sink.o: ../../../lib/c/include/sys/types.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+audio_sink.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+audio_sink.o: ../../../lib/c/include/malloc.h
+audio_sink.o: ../../../lib/c/include/stacktrace.h
+audio_sink.o: ../../../lib/c/include/stdbool.h
+audio_sink.o: ../../../../abi/include/abi/bool.h ../../../lib/c/include/str.h
+audio_sink.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+audio_sink.o: ../../../lib/c/include/str_error.h audio_sink.h
+audio_sink.o: ../../../lib/c/include/adt/list.h
+audio_sink.o: ../../../lib/c/include/stddef.h ../../../lib/c/include/async.h
+audio_sink.o: ../../../lib/c/include/ipc/common.h
+audio_sink.o: ../../../../abi/include/abi/ipc/ipc.h
+audio_sink.o: ../../../lib/c/include/atomic.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+audio_sink.o: ../../../lib/c/include/atomicdflt.h
+audio_sink.o: ../../../lib/c/include/stdint.h
+audio_sink.o: ../../../../abi/include/abi/proc/task.h
+audio_sink.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+audio_sink.o: ../../../../abi/include/abi/syscall.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+audio_sink.o: ../../../lib/c/include/fibril.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+audio_sink.o: ../../../../abi/include/abi/ddi/irq.h
+audio_sink.o: ../../../../abi/include/abi/ipc/event.h
+audio_sink.o: ../../../../abi/include/abi/ipc/interfaces.h
+audio_sink.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+audio_sink.o: ../../../lib/pcm/include/pcm/format.h
+audio_sink.o: ../../../lib/pcm/include/pcm/sample_format.h audio_source.h
+audio_sink.o: connection.h audio_data.h ../../../lib/c/include/fibril_synch.h
+audio_sink.o: log.h ../../../lib/c/include/io/log.h
+audio_sink.o: ../../../lib/c/include/stdarg.h
+audio_sink.o: ../../../lib/c/include/inttypes.h
+audio_sink.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+audio_sink.o: ../../../lib/c/include/io/verify.h
+audio_sink.o: ../../../../abi/include/abi/log.h
+audio_sink.o: ../../../lib/c/include/stdio.h
+audio_sink.o: ../../../../abi/include/abi/kio.h
+audio_source.o: ../../../lib/c/include/assert.h
+audio_source.o: ../../../lib/c/include/errno.h
+audio_source.o: ../../../../abi/include/abi/errno.h
+audio_source.o: ../../../lib/c/include/macros.h
+audio_source.o: ../../../lib/c/include/stdlib.h
+audio_source.o: ../../../lib/c/include/unistd.h
+audio_source.o: ../../../lib/c/include/sys/types.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+audio_source.o: ../../../lib/c/include/time.h
+audio_source.o: ../../../lib/c/include/sys/time.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+audio_source.o: ../../../lib/c/include/malloc.h
+audio_source.o: ../../../lib/c/include/stacktrace.h
+audio_source.o: ../../../lib/c/include/stdbool.h
+audio_source.o: ../../../../abi/include/abi/bool.h
+audio_source.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+audio_source.o: ../../../lib/c/include/cc.h
+audio_source.o: ../../../lib/c/include/str_error.h audio_data.h
+audio_source.o: ../../../lib/c/include/adt/list.h
+audio_source.o: ../../../lib/c/include/stddef.h
+audio_source.o: ../../../lib/c/include/atomic.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+audio_source.o: ../../../lib/c/include/atomicdflt.h
+audio_source.o: ../../../lib/c/include/stdint.h
+audio_source.o: ../../../lib/c/include/fibril_synch.h
+audio_source.o: ../../../lib/c/include/fibril.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+audio_source.o: ../../../lib/c/include/libc.h
+audio_source.o: ../../../../abi/include/abi/syscall.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+audio_source.o: ../../../lib/pcm/include/pcm/format.h
+audio_source.o: ../../../lib/pcm/include/pcm/sample_format.h audio_source.h
+audio_source.o: audio_sink.h ../../../lib/c/include/async.h
+audio_source.o: ../../../lib/c/include/ipc/common.h
+audio_source.o: ../../../../abi/include/abi/ipc/ipc.h
+audio_source.o: ../../../../abi/include/abi/proc/task.h
+audio_source.o: ../../../lib/c/include/futex.h
+audio_source.o: ../../../../abi/include/abi/ddi/irq.h
+audio_source.o: ../../../../abi/include/abi/ipc/event.h
+audio_source.o: ../../../../abi/include/abi/ipc/interfaces.h
+audio_source.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+audio_source.o: connection.h log.h ../../../lib/c/include/io/log.h
+audio_source.o: ../../../lib/c/include/stdarg.h
+audio_source.o: ../../../lib/c/include/inttypes.h
+audio_source.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+audio_source.o: ../../../lib/c/include/io/verify.h
+audio_source.o: ../../../../abi/include/abi/log.h
+audio_source.o: ../../../lib/c/include/stdio.h
+audio_source.o: ../../../../abi/include/abi/kio.h
+connection.o: ../../../lib/c/include/malloc.h
+connection.o: ../../../lib/c/include/sys/types.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+connection.o: ../../../lib/c/include/errno.h
+connection.o: ../../../../abi/include/abi/errno.h log.h
+connection.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+connection.o: ../../../lib/c/include/inttypes.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+connection.o: ../../../lib/c/include/io/verify.h
+connection.o: ../../../../abi/include/abi/log.h
+connection.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/str.h
+connection.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+connection.o: ../../../lib/c/include/stdbool.h
+connection.o: ../../../../abi/include/abi/bool.h
+connection.o: ../../../../abi/include/abi/kio.h connection.h
+connection.o: ../../../lib/c/include/assert.h
+connection.o: ../../../lib/c/include/adt/list.h
+connection.o: ../../../lib/c/include/stddef.h
+connection.o: ../../../lib/pcm/include/pcm/format.h
+connection.o: ../../../lib/pcm/include/pcm/sample_format.h
+connection.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+connection.o: audio_data.h ../../../lib/c/include/atomic.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+connection.o: ../../../lib/c/include/atomicdflt.h
+connection.o: ../../../lib/c/include/stdint.h
+connection.o: ../../../lib/c/include/fibril_synch.h
+connection.o: ../../../lib/c/include/fibril.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+connection.o: ../../../lib/c/include/libc.h
+connection.o: ../../../../abi/include/abi/syscall.h
+connection.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+connection.o: audio_source.h audio_sink.h ../../../lib/c/include/async.h
+connection.o: ../../../lib/c/include/ipc/common.h
+connection.o: ../../../../abi/include/abi/ipc/ipc.h
+connection.o: ../../../../abi/include/abi/proc/task.h
+connection.o: ../../../lib/c/include/futex.h
+connection.o: ../../../../abi/include/abi/ddi/irq.h
+connection.o: ../../../../abi/include/abi/ipc/event.h
+connection.o: ../../../../abi/include/abi/ipc/interfaces.h
+connection.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+hound.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stdlib.h
+hound.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/sys/types.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+hound.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+hound.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+hound.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+hound.o: hound.h ../../../lib/c/include/async.h
+hound.o: ../../../lib/c/include/ipc/common.h
+hound.o: ../../../../abi/include/abi/ipc/ipc.h
+hound.o: ../../../lib/c/include/atomic.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+hound.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+hound.o: ../../../../abi/include/abi/proc/task.h
+hound.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+hound.o: ../../../../abi/include/abi/syscall.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+hound.o: ../../../lib/c/include/fibril.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hound.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/stddef.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+hound.o: ../../../../abi/include/abi/ddi/irq.h
+hound.o: ../../../../abi/include/abi/ipc/event.h
+hound.o: ../../../../abi/include/abi/ipc/interfaces.h
+hound.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+hound.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/errno.h
+hound.o: ../../../../abi/include/abi/errno.h
+hound.o: ../../../lib/c/include/fibril_synch.h
+hound.o: ../../../lib/pcm/include/pcm/format.h
+hound.o: ../../../lib/pcm/include/pcm/sample_format.h
+hound.o: ../../../lib/hound/include/hound/protocol.h hound_ctx.h
+hound.o: audio_source.h audio_sink.h audio_device.h
+hound.o: ../../../lib/drv/include/audio_pcm_iface.h
+hound.o: ../../../lib/c/include/loc.h ../../../lib/drv/include/ddf/driver.h
+hound.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/mem.h
+hound.o: ../../../lib/c/include/cc.h ../../../lib/c/include/ipc/dev_iface.h
+hound.o: ../../../lib/drv/include/dev_iface.h connection.h audio_data.h log.h
+hound.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+hound.o: ../../../lib/c/include/inttypes.h
+hound.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+hound.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+hound.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/str.h
+hound.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/str_error.h
+hound_ctx.o: ../../../lib/c/include/malloc.h
+hound_ctx.o: ../../../lib/c/include/sys/types.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+hound_ctx.o: ../../../lib/c/include/macros.h ../../../lib/c/include/errno.h
+hound_ctx.o: ../../../../abi/include/abi/errno.h
+hound_ctx.o: ../../../lib/c/include/str_error.h hound_ctx.h
+hound_ctx.o: ../../../lib/c/include/adt/list.h
+hound_ctx.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stdbool.h
+hound_ctx.o: ../../../../abi/include/abi/bool.h
+hound_ctx.o: ../../../lib/c/include/stddef.h
+hound_ctx.o: ../../../lib/hound/include/hound/protocol.h
+hound_ctx.o: ../../../lib/c/include/async.h
+hound_ctx.o: ../../../lib/c/include/ipc/common.h
+hound_ctx.o: ../../../../abi/include/abi/ipc/ipc.h
+hound_ctx.o: ../../../lib/c/include/atomic.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+hound_ctx.o: ../../../lib/c/include/atomicdflt.h
+hound_ctx.o: ../../../lib/c/include/stdint.h
+hound_ctx.o: ../../../../abi/include/abi/proc/task.h
+hound_ctx.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+hound_ctx.o: ../../../../abi/include/abi/syscall.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+hound_ctx.o: ../../../lib/c/include/fibril.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+hound_ctx.o: ../../../lib/c/include/sys/time.h
+hound_ctx.o: ../../../../abi/include/abi/ddi/irq.h
+hound_ctx.o: ../../../../abi/include/abi/ipc/event.h
+hound_ctx.o: ../../../../abi/include/abi/ipc/interfaces.h
+hound_ctx.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+hound_ctx.o: ../../../lib/pcm/include/pcm/format.h
+hound_ctx.o: ../../../lib/pcm/include/pcm/sample_format.h
+hound_ctx.o: ../../../lib/c/include/time.h
+hound_ctx.o: ../../../lib/c/include/fibril_synch.h audio_source.h
+hound_ctx.o: audio_sink.h audio_data.h connection.h log.h
+hound_ctx.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+hound_ctx.o: ../../../lib/c/include/inttypes.h
+hound_ctx.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+hound_ctx.o: ../../../lib/c/include/io/verify.h
+hound_ctx.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/stdio.h
+hound_ctx.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+hound_ctx.o: ../../../lib/c/include/cc.h ../../../../abi/include/abi/kio.h
+iface.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+iface.o: ../../../lib/hound/include/hound/protocol.h
+iface.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+iface.o: ../../../lib/c/include/sys/types.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+iface.o: ../../../../abi/include/abi/ipc/ipc.h
+iface.o: ../../../lib/c/include/atomic.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+iface.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+iface.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+iface.o: ../../../../abi/include/abi/proc/task.h
+iface.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+iface.o: ../../../../abi/include/abi/syscall.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+iface.o: ../../../lib/c/include/fibril.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+iface.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+iface.o: ../../../lib/c/include/stddef.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+iface.o: ../../../lib/c/include/sys/time.h
+iface.o: ../../../../abi/include/abi/ddi/irq.h
+iface.o: ../../../../abi/include/abi/ipc/event.h
+iface.o: ../../../../abi/include/abi/ipc/interfaces.h
+iface.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+iface.o: ../../../lib/pcm/include/pcm/format.h
+iface.o: ../../../lib/pcm/include/pcm/sample_format.h
+iface.o: ../../../lib/c/include/time.h ../../../lib/c/include/inttypes.h
+iface.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h hound.h
+iface.o: ../../../lib/c/include/ipc/loc.h
+iface.o: ../../../lib/c/include/fibril_synch.h hound_ctx.h audio_source.h
+iface.o: audio_sink.h log.h ../../../lib/c/include/io/log.h
+iface.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/io/verify.h
+iface.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/stdio.h
+iface.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+iface.o: ../../../lib/c/include/cc.h ../../../../abi/include/abi/kio.h
+main.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+main.o: ../../../lib/c/include/sys/types.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+main.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+main.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+main.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+main.o: ../../../../abi/include/abi/proc/task.h
+main.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+main.o: ../../../../abi/include/abi/syscall.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+main.o: ../../../lib/c/include/fibril.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+main.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+main.o: ../../../lib/c/include/stddef.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+main.o: ../../../lib/c/include/sys/time.h
+main.o: ../../../../abi/include/abi/ddi/irq.h
+main.o: ../../../../abi/include/abi/ipc/event.h
+main.o: ../../../../abi/include/abi/ipc/interfaces.h
+main.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+main.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+main.o: ../../../lib/c/include/inttypes.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+main.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/stdarg.h
+main.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+main.o: ../../../lib/c/include/cc.h ../../../lib/c/include/io/verify.h
+main.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/stdlib.h
+main.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+main.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+main.o: ../../../lib/c/include/str_error.h
+main.o: ../../../lib/hound/include/hound/server.h
+main.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+main.o: ../../../lib/hound/include/hound/protocol.h
+main.o: ../../../lib/pcm/include/pcm/format.h
+main.o: ../../../lib/pcm/include/pcm/sample_format.h
+main.o: ../../../lib/c/include/task.h ../../../lib/c/include/types/task.h
+main.o: hound.h ../../../lib/c/include/fibril_synch.h hound_ctx.h
+main.o: audio_source.h audio_sink.h log.h ../../../lib/c/include/io/log.h
+main.o: ../../../../abi/include/abi/log.h
+# DO NOT DELETE

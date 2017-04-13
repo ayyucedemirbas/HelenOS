@@ -1,0 +1,76 @@
+# DO NOT DELETE
+
+comm.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/common.h
+comm.o: ../../lib/c/include/stdbool.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/types.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+comm.o: ../../../abi/include/abi/bool.h ../../lib/c/include/errno.h
+comm.o: ../../../abi/include/abi/errno.h ../../lib/c/include/fibril.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+comm.o: ../../lib/c/include/sys/types.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+comm.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+comm.o: ../../lib/c/include/stddef.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+comm.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+comm.o: ../../lib/c/include/inet/endpoint.h ../../lib/c/include/inet/addr.h
+comm.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+comm.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+comm.o: ../../lib/c/include/atomic.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+comm.o: ../../lib/c/include/atomicdflt.h ../../../abi/include/abi/proc/task.h
+comm.o: ../../lib/c/include/futex.h ../../lib/c/include/async.h
+comm.o: ../../lib/c/include/sys/time.h ../../../abi/include/abi/ddi/irq.h
+comm.o: ../../../abi/include/abi/ipc/event.h
+comm.o: ../../../abi/include/abi/ipc/interfaces.h
+comm.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+comm.o: ../../lib/c/include/inet/hostport.h
+comm.o: ../../lib/c/include/types/inet/hostport.h
+comm.o: ../../lib/c/include/types/inet/host.h ../../lib/c/include/inet/udp.h
+comm.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/inet/inet.h
+comm.o: ../../lib/c/include/types/inet.h ../../lib/c/include/macros.h
+comm.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+comm.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+comm.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+comm.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+comm.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+comm.o: ../../lib/c/arch/ia32/include/libarch/config.h
+comm.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+comm.o: ../../lib/c/include/str_error.h comm.h netecho.h
+netecho.o: ../../lib/c/include/stdbool.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/types.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/common.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+netecho.o: ../../../abi/include/abi/bool.h ../../lib/c/include/errno.h
+netecho.o: ../../../abi/include/abi/errno.h ../../lib/c/include/io/console.h
+netecho.o: ../../lib/c/include/sys/time.h ../../lib/c/include/sys/types.h
+netecho.o: ../../lib/c/include/io/concaps.h
+netecho.o: ../../lib/c/include/io/kbd_event.h ../../lib/c/include/adt/list.h
+netecho.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+netecho.o: ../../lib/c/include/io/keycode.h
+netecho.o: ../../lib/c/include/io/cons_event.h
+netecho.o: ../../lib/c/include/io/pos_event.h ../../lib/c/include/async.h
+netecho.o: ../../lib/c/include/ipc/common.h
+netecho.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+netecho.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+netecho.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+netecho.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+netecho.o: ../../lib/c/include/fibril.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+netecho.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+netecho.o: ../../../abi/include/abi/ddi/irq.h
+netecho.o: ../../../abi/include/abi/ipc/event.h
+netecho.o: ../../../abi/include/abi/ipc/interfaces.h
+netecho.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+netecho.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+netecho.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+netecho.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+netecho.o: ../../../abi/include/abi/kio.h comm.h netecho.h
+# DO NOT DELETE

@@ -1,0 +1,1400 @@
+
+mixerctl:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 f8 34 00 00    	lea    0x34f8,%eax
+    1110:	c7 00 f0 1f 00 00    	movl   $0x1ff0,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 8e 0d 00 00       	call   1eb0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <get_level>:
+    1130:	55                   	push   %ebp
+    1131:	89 e5                	mov    %esp,%ebp
+    1133:	57                   	push   %edi
+    1134:	56                   	push   %esi
+    1135:	53                   	push   %ebx
+    1136:	83 ec 1c             	sub    $0x1c,%esp
+    1139:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    113c:	8b 45 0c             	mov    0xc(%ebp),%eax
+    113f:	85 db                	test   %ebx,%ebx
+    1141:	0f 84 ac 00 00 00    	je     11f3 <get_level+0xc3>
+    1147:	8d 50 fd             	lea    -0x3(%eax),%edx
+    114a:	83 fa 01             	cmp    $0x1,%edx
+    114d:	76 21                	jbe    1170 <get_level+0x40>
+    114f:	50                   	push   %eax
+    1150:	50                   	push   %eax
+    1151:	8b 45 10             	mov    0x10(%ebp),%eax
+    1154:	8b 00                	mov    (%eax),%eax
+    1156:	50                   	push   %eax
+    1157:	68 6f 1b 00 00       	push   $0x1b6f
+    115c:	e8 6f 0d 00 00       	call   1ed0 <printf@plt>
+    1161:	83 c4 10             	add    $0x10,%esp
+    1164:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1167:	5b                   	pop    %ebx
+    1168:	5e                   	pop    %esi
+    1169:	5f                   	pop    %edi
+    116a:	5d                   	pop    %ebp
+    116b:	c3                   	ret    
+    116c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1170:	83 f8 04             	cmp    $0x4,%eax
+    1173:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1176:	0f 94 c0             	sete   %al
+    1179:	25 ff 00 00 00       	and    $0xff,%eax
+    117e:	83 ec 0c             	sub    $0xc,%esp
+    1181:	8d 75 e4             	lea    -0x1c(%ebp),%esi
+    1184:	8b 7c 81 08          	mov    0x8(%ecx,%eax,4),%edi
+    1188:	56                   	push   %esi
+    1189:	6a 00                	push   $0x0
+    118b:	6a 0a                	push   $0xa
+    118d:	6a 00                	push   $0x0
+    118f:	57                   	push   %edi
+    1190:	31 ff                	xor    %edi,%edi
+    1192:	e8 49 0e 00 00       	call   1fe0 <str_uint16_t@plt>
+    1197:	83 c4 1c             	add    $0x1c,%esp
+    119a:	66 8b 7d e4          	mov    -0x1c(%ebp),%di
+    119e:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+    11a5:	56                   	push   %esi
+    11a6:	57                   	push   %edi
+    11a7:	53                   	push   %ebx
+    11a8:	e8 63 09 00 00       	call   1b10 <audio_mixer_get_item_level>
+    11ad:	83 c4 10             	add    $0x10,%esp
+    11b0:	85 c0                	test   %eax,%eax
+    11b2:	74 24                	je     11d8 <get_level+0xa8>
+    11b4:	83 ec 0c             	sub    $0xc,%esp
+    11b7:	50                   	push   %eax
+    11b8:	e8 13 0e 00 00       	call   1fd0 <str_error@plt>
+    11bd:	59                   	pop    %ecx
+    11be:	5b                   	pop    %ebx
+    11bf:	50                   	push   %eax
+    11c0:	68 cc 1b 00 00       	push   $0x1bcc
+    11c5:	e8 06 0d 00 00       	call   1ed0 <printf@plt>
+    11ca:	83 c4 10             	add    $0x10,%esp
+    11cd:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    11d0:	5b                   	pop    %ebx
+    11d1:	5e                   	pop    %esi
+    11d2:	5f                   	pop    %edi
+    11d3:	5d                   	pop    %ebp
+    11d4:	c3                   	ret    
+    11d5:	8d 76 00             	lea    0x0(%esi),%esi
+    11d8:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    11db:	50                   	push   %eax
+    11dc:	52                   	push   %edx
+    11dd:	57                   	push   %edi
+    11de:	68 8b 1b 00 00       	push   $0x1b8b
+    11e3:	e8 e8 0c 00 00       	call   1ed0 <printf@plt>
+    11e8:	83 c4 10             	add    $0x10,%esp
+    11eb:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    11ee:	5b                   	pop    %ebx
+    11ef:	5e                   	pop    %esi
+    11f0:	5f                   	pop    %edi
+    11f1:	5d                   	pop    %ebp
+    11f2:	c3                   	ret    
+    11f3:	50                   	push   %eax
+    11f4:	6a 6f                	push   $0x6f
+    11f6:	68 5f 1b 00 00       	push   $0x1b5f
+    11fb:	68 6a 1b 00 00       	push   $0x1b6a
+    1200:	e8 3b 0d 00 00       	call   1f40 <assert_abort@plt>
+    1205:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1209:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001210 <set_level>:
+    1210:	55                   	push   %ebp
+    1211:	89 e5                	mov    %esp,%ebp
+    1213:	57                   	push   %edi
+    1214:	56                   	push   %esi
+    1215:	53                   	push   %ebx
+    1216:	83 ec 1c             	sub    $0x1c,%esp
+    1219:	8b 55 08             	mov    0x8(%ebp),%edx
+    121c:	8b 45 0c             	mov    0xc(%ebp),%eax
+    121f:	85 d2                	test   %edx,%edx
+    1221:	0f 84 d6 00 00 00    	je     12fd <set_level+0xed>
+    1227:	8d 50 fc             	lea    -0x4(%eax),%edx
+    122a:	83 fa 01             	cmp    $0x1,%edx
+    122d:	0f 87 ad 00 00 00    	ja     12e0 <set_level+0xd0>
+    1233:	83 f8 05             	cmp    $0x5,%eax
+    1236:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1239:	0f 94 c0             	sete   %al
+    123c:	89 c6                	mov    %eax,%esi
+    123e:	25 ff 00 00 00       	and    $0xff,%eax
+    1243:	83 ec 0c             	sub    $0xc,%esp
+    1246:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    124c:	8b 7c 81 08          	mov    0x8(%ecx,%eax,4),%edi
+    1250:	8d 5d e6             	lea    -0x1a(%ebp),%ebx
+    1253:	53                   	push   %ebx
+    1254:	8d 34 b5 0c 00 00 00 	lea    0xc(,%esi,4),%esi
+    125b:	6a 00                	push   $0x0
+    125d:	6a 0a                	push   $0xa
+    125f:	6a 00                	push   $0x0
+    1261:	57                   	push   %edi
+    1262:	e8 79 0d 00 00       	call   1fe0 <str_uint16_t@plt>
+    1267:	8b 45 10             	mov    0x10(%ebp),%eax
+    126a:	83 c4 14             	add    $0x14,%esp
+    126d:	8b 04 30             	mov    (%eax,%esi,1),%eax
+    1270:	31 ff                	xor    %edi,%edi
+    1272:	31 f6                	xor    %esi,%esi
+    1274:	53                   	push   %ebx
+    1275:	6a 00                	push   $0x0
+    1277:	6a 0a                	push   $0xa
+    1279:	6a 00                	push   $0x0
+    127b:	50                   	push   %eax
+    127c:	66 8b 7d e6          	mov    -0x1a(%ebp),%di
+    1280:	e8 5b 0d 00 00       	call   1fe0 <str_uint16_t@plt>
+    1285:	83 c4 1c             	add    $0x1c,%esp
+    1288:	66 8b 75 e6          	mov    -0x1a(%ebp),%si
+    128c:	8b 45 08             	mov    0x8(%ebp),%eax
+    128f:	56                   	push   %esi
+    1290:	57                   	push   %edi
+    1291:	50                   	push   %eax
+    1292:	e8 39 08 00 00       	call   1ad0 <audio_mixer_set_item_level>
+    1297:	83 c4 10             	add    $0x10,%esp
+    129a:	85 c0                	test   %eax,%eax
+    129c:	75 1a                	jne    12b8 <set_level+0xa8>
+    129e:	50                   	push   %eax
+    129f:	56                   	push   %esi
+    12a0:	57                   	push   %edi
+    12a1:	68 30 1c 00 00       	push   $0x1c30
+    12a6:	e8 25 0c 00 00       	call   1ed0 <printf@plt>
+    12ab:	83 c4 10             	add    $0x10,%esp
+    12ae:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    12b1:	5b                   	pop    %ebx
+    12b2:	5e                   	pop    %esi
+    12b3:	5f                   	pop    %edi
+    12b4:	5d                   	pop    %ebp
+    12b5:	c3                   	ret    
+    12b6:	66 90                	xchg   %ax,%ax
+    12b8:	83 ec 0c             	sub    $0xc,%esp
+    12bb:	50                   	push   %eax
+    12bc:	e8 0f 0d 00 00       	call   1fd0 <str_error@plt>
+    12c1:	5a                   	pop    %edx
+    12c2:	59                   	pop    %ecx
+    12c3:	50                   	push   %eax
+    12c4:	68 10 1c 00 00       	push   $0x1c10
+    12c9:	e8 02 0c 00 00       	call   1ed0 <printf@plt>
+    12ce:	83 c4 10             	add    $0x10,%esp
+    12d1:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    12d4:	5b                   	pop    %ebx
+    12d5:	5e                   	pop    %esi
+    12d6:	5f                   	pop    %edi
+    12d7:	5d                   	pop    %ebp
+    12d8:	c3                   	ret    
+    12d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    12e0:	50                   	push   %eax
+    12e1:	50                   	push   %eax
+    12e2:	8b 45 10             	mov    0x10(%ebp),%eax
+    12e5:	8b 00                	mov    (%eax),%eax
+    12e7:	50                   	push   %eax
+    12e8:	68 ec 1b 00 00       	push   $0x1bec
+    12ed:	e8 de 0b 00 00       	call   1ed0 <printf@plt>
+    12f2:	83 c4 10             	add    $0x10,%esp
+    12f5:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    12f8:	5b                   	pop    %ebx
+    12f9:	5e                   	pop    %esi
+    12fa:	5f                   	pop    %edi
+    12fb:	5d                   	pop    %ebp
+    12fc:	c3                   	ret    
+    12fd:	50                   	push   %eax
+    12fe:	6a 5d                	push   $0x5d
+    1300:	68 5f 1b 00 00       	push   $0x1b5f
+    1305:	68 6a 1b 00 00       	push   $0x1b6a
+    130a:	e8 31 0c 00 00       	call   1f40 <assert_abort@plt>
+    130f:	90                   	nop
+
+00001310 <main>:
+    1310:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1314:	83 e4 f0             	and    $0xfffffff0,%esp
+    1317:	ff 71 fc             	pushl  -0x4(%ecx)
+    131a:	55                   	push   %ebp
+    131b:	89 e5                	mov    %esp,%ebp
+    131d:	57                   	push   %edi
+    131e:	56                   	push   %esi
+    131f:	53                   	push   %ebx
+    1320:	51                   	push   %ecx
+    1321:	83 ec 38             	sub    $0x38,%esp
+    1324:	8b 19                	mov    (%ecx),%ebx
+    1326:	8b 41 04             	mov    0x4(%ecx),%eax
+    1329:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    132c:	83 fb 01             	cmp    $0x1,%ebx
+    132f:	7e 67                	jle    1398 <main+0x88>
+    1331:	52                   	push   %edx
+    1332:	52                   	push   %edx
+    1333:	68 a7 1b 00 00       	push   $0x1ba7
+    1338:	ff 70 04             	pushl  0x4(%eax)
+    133b:	e8 30 0c 00 00       	call   1f70 <str_cmp@plt>
+    1340:	83 c4 10             	add    $0x10,%esp
+    1343:	85 c0                	test   %eax,%eax
+    1345:	75 34                	jne    137b <main+0x6b>
+    1347:	83 fb 05             	cmp    $0x5,%ebx
+    134a:	0f 84 d4 01 00 00    	je     1524 <main+0x214>
+    1350:	50                   	push   %eax
+    1351:	50                   	push   %eax
+    1352:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    1355:	68 b0 1b 00 00       	push   $0x1bb0
+    135a:	ff 70 04             	pushl  0x4(%eax)
+    135d:	e8 0e 0c 00 00       	call   1f70 <str_cmp@plt>
+    1362:	83 c4 10             	add    $0x10,%esp
+    1365:	85 c0                	test   %eax,%eax
+    1367:	0f 84 c6 00 00 00    	je     1433 <main+0x123>
+    136d:	c7 45 bc 10 12 00 00 	movl   $0x1210,-0x44(%ebp)
+    1374:	be 54 1c 00 00       	mov    $0x1c54,%esi
+    1379:	eb 33                	jmp    13ae <main+0x9e>
+    137b:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    137e:	52                   	push   %edx
+    137f:	52                   	push   %edx
+    1380:	68 b0 1b 00 00       	push   $0x1bb0
+    1385:	ff 70 04             	pushl  0x4(%eax)
+    1388:	e8 e3 0b 00 00       	call   1f70 <str_cmp@plt>
+    138d:	83 c4 10             	add    $0x10,%esp
+    1390:	85 c0                	test   %eax,%eax
+    1392:	0f 84 9b 00 00 00    	je     1433 <main+0x123>
+    1398:	83 fb 02             	cmp    $0x2,%ebx
+    139b:	0f 85 bc 01 00 00    	jne    155d <main+0x24d>
+    13a1:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    13a4:	c7 45 bc 00 00 00 00 	movl   $0x0,-0x44(%ebp)
+    13ab:	8b 70 04             	mov    0x4(%eax),%esi
+    13ae:	50                   	push   %eax
+    13af:	8d 45 d0             	lea    -0x30(%ebp),%eax
+    13b2:	6a 00                	push   $0x0
+    13b4:	50                   	push   %eax
+    13b5:	56                   	push   %esi
+    13b6:	e8 55 0b 00 00       	call   1f10 <loc_service_get_id@plt>
+    13bb:	83 c4 10             	add    $0x10,%esp
+    13be:	89 c7                	mov    %eax,%edi
+    13c0:	85 c0                	test   %eax,%eax
+    13c2:	0f 85 85 00 00 00    	jne    144d <main+0x13d>
+    13c8:	50                   	push   %eax
+    13c9:	6a 00                	push   $0x0
+    13cb:	68 41 26 9b 41       	push   $0x419b2641
+    13d0:	ff 75 d0             	pushl  -0x30(%ebp)
+    13d3:	e8 e8 0a 00 00       	call   1ec0 <loc_service_connect@plt>
+    13d8:	83 c4 10             	add    $0x10,%esp
+    13db:	89 45 c0             	mov    %eax,-0x40(%ebp)
+    13de:	85 c0                	test   %eax,%eax
+    13e0:	0f 84 88 01 00 00    	je     156e <main+0x25e>
+    13e6:	83 ec 0c             	sub    $0xc,%esp
+    13e9:	ff 75 c0             	pushl  -0x40(%ebp)
+    13ec:	e8 cf 0b 00 00       	call   1fc0 <async_exchange_begin@plt>
+    13f1:	83 c4 10             	add    $0x10,%esp
+    13f4:	89 c6                	mov    %eax,%esi
+    13f6:	85 c0                	test   %eax,%eax
+    13f8:	0f 84 f9 01 00 00    	je     15f7 <main+0x2e7>
+    13fe:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    1401:	85 c0                	test   %eax,%eax
+    1403:	74 6a                	je     146f <main+0x15f>
+    1405:	52                   	push   %edx
+    1406:	ff 75 c4             	pushl  -0x3c(%ebp)
+    1409:	53                   	push   %ebx
+    140a:	56                   	push   %esi
+    140b:	ff d0                	call   *%eax
+    140d:	83 c4 10             	add    $0x10,%esp
+    1410:	83 ec 0c             	sub    $0xc,%esp
+    1413:	56                   	push   %esi
+    1414:	e8 17 0b 00 00       	call   1f30 <async_exchange_end@plt>
+    1419:	59                   	pop    %ecx
+    141a:	ff 75 c0             	pushl  -0x40(%ebp)
+    141d:	e8 be 0a 00 00       	call   1ee0 <async_hangup@plt>
+    1422:	83 c4 10             	add    $0x10,%esp
+    1425:	8d 65 f0             	lea    -0x10(%ebp),%esp
+    1428:	89 f8                	mov    %edi,%eax
+    142a:	59                   	pop    %ecx
+    142b:	5b                   	pop    %ebx
+    142c:	5e                   	pop    %esi
+    142d:	5f                   	pop    %edi
+    142e:	5d                   	pop    %ebp
+    142f:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    1432:	c3                   	ret    
+    1433:	83 fb 04             	cmp    $0x4,%ebx
+    1436:	0f 84 0f 01 00 00    	je     154b <main+0x23b>
+    143c:	c7 45 bc 30 11 00 00 	movl   $0x1130,-0x44(%ebp)
+    1443:	be 54 1c 00 00       	mov    $0x1c54,%esi
+    1448:	e9 61 ff ff ff       	jmp    13ae <main+0x9e>
+    144d:	83 ec 0c             	sub    $0xc,%esp
+    1450:	bf 01 00 00 00       	mov    $0x1,%edi
+    1455:	50                   	push   %eax
+    1456:	e8 75 0b 00 00       	call   1fd0 <str_error@plt>
+    145b:	83 c4 0c             	add    $0xc,%esp
+    145e:	50                   	push   %eax
+    145f:	56                   	push   %esi
+    1460:	68 7c 1c 00 00       	push   $0x1c7c
+    1465:	e8 66 0a 00 00       	call   1ed0 <printf@plt>
+    146a:	83 c4 10             	add    $0x10,%esp
+    146d:	eb b6                	jmp    1425 <main+0x115>
+    146f:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    1472:	53                   	push   %ebx
+    1473:	50                   	push   %eax
+    1474:	8d 45 d4             	lea    -0x2c(%ebp),%eax
+    1477:	50                   	push   %eax
+    1478:	c7 45 d4 00 00 00 00 	movl   $0x0,-0x2c(%ebp)
+    147f:	56                   	push   %esi
+    1480:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+    1487:	e8 54 04 00 00       	call   18e0 <audio_mixer_get_info>
+    148c:	83 c4 10             	add    $0x10,%esp
+    148f:	85 c0                	test   %eax,%eax
+    1491:	0f 85 f1 00 00 00    	jne    1588 <main+0x278>
+    1497:	50                   	push   %eax
+    1498:	50                   	push   %eax
+    1499:	ff 75 d4             	pushl  -0x2c(%ebp)
+    149c:	68 b9 1b 00 00       	push   $0x1bb9
+    14a1:	31 db                	xor    %ebx,%ebx
+    14a3:	e8 28 0a 00 00       	call   1ed0 <printf@plt>
+    14a8:	83 c4 10             	add    $0x10,%esp
+    14ab:	3b 5d d8             	cmp    -0x28(%ebp),%ebx
+    14ae:	0f 83 ed 00 00 00    	jae    15a1 <main+0x291>
+    14b4:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    14b7:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+    14be:	50                   	push   %eax
+    14bf:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    14c2:	50                   	push   %eax
+    14c3:	c7 45 e0 00 00 00 00 	movl   $0x0,-0x20(%ebp)
+    14ca:	53                   	push   %ebx
+    14cb:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+    14d2:	56                   	push   %esi
+    14d3:	e8 f8 04 00 00       	call   19d0 <audio_mixer_get_item_info>
+    14d8:	83 c4 10             	add    $0x10,%esp
+    14db:	85 c0                	test   %eax,%eax
+    14dd:	0f 85 f3 00 00 00    	jne    15d6 <main+0x2c6>
+    14e3:	50                   	push   %eax
+    14e4:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    14e7:	50                   	push   %eax
+    14e8:	53                   	push   %ebx
+    14e9:	56                   	push   %esi
+    14ea:	e8 21 06 00 00       	call   1b10 <audio_mixer_get_item_level>
+    14ef:	83 c4 10             	add    $0x10,%esp
+    14f2:	85 c0                	test   %eax,%eax
+    14f4:	0f 85 dc 00 00 00    	jne    15d6 <main+0x2c6>
+    14fa:	83 ec 0c             	sub    $0xc,%esp
+    14fd:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    1500:	48                   	dec    %eax
+    1501:	50                   	push   %eax
+    1502:	ff 75 e4             	pushl  -0x1c(%ebp)
+    1505:	ff 75 dc             	pushl  -0x24(%ebp)
+    1508:	53                   	push   %ebx
+    1509:	68 34 1d 00 00       	push   $0x1d34
+    150e:	e8 bd 09 00 00       	call   1ed0 <printf@plt>
+    1513:	83 c4 14             	add    $0x14,%esp
+    1516:	ff 75 dc             	pushl  -0x24(%ebp)
+    1519:	43                   	inc    %ebx
+    151a:	e8 e1 0a 00 00       	call   2000 <free@plt>
+    151f:	83 c4 10             	add    $0x10,%esp
+    1522:	eb 87                	jmp    14ab <main+0x19b>
+    1524:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    1527:	8b 70 04             	mov    0x4(%eax),%esi
+    152a:	50                   	push   %eax
+    152b:	50                   	push   %eax
+    152c:	68 b0 1b 00 00       	push   $0x1bb0
+    1531:	56                   	push   %esi
+    1532:	e8 39 0a 00 00       	call   1f70 <str_cmp@plt>
+    1537:	83 c4 10             	add    $0x10,%esp
+    153a:	c7 45 bc 10 12 00 00 	movl   $0x1210,-0x44(%ebp)
+    1541:	85 c0                	test   %eax,%eax
+    1543:	0f 85 65 fe ff ff    	jne    13ae <main+0x9e>
+    1549:	eb 06                	jmp    1551 <main+0x241>
+    154b:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    154e:	8b 70 04             	mov    0x4(%eax),%esi
+    1551:	c7 45 bc 30 11 00 00 	movl   $0x1130,-0x44(%ebp)
+    1558:	e9 51 fe ff ff       	jmp    13ae <main+0x9e>
+    155d:	c7 45 bc 00 00 00 00 	movl   $0x0,-0x44(%ebp)
+    1564:	be 54 1c 00 00       	mov    $0x1c54,%esi
+    1569:	e9 40 fe ff ff       	jmp    13ae <main+0x9e>
+    156e:	53                   	push   %ebx
+    156f:	53                   	push   %ebx
+    1570:	56                   	push   %esi
+    1571:	68 a4 1c 00 00       	push   $0x1ca4
+    1576:	bf 01 00 00 00       	mov    $0x1,%edi
+    157b:	e8 50 09 00 00       	call   1ed0 <printf@plt>
+    1580:	83 c4 10             	add    $0x10,%esp
+    1583:	e9 9d fe ff ff       	jmp    1425 <main+0x115>
+    1588:	83 ec 0c             	sub    $0xc,%esp
+    158b:	50                   	push   %eax
+    158c:	e8 3f 0a 00 00       	call   1fd0 <str_error@plt>
+    1591:	5a                   	pop    %edx
+    1592:	59                   	pop    %ecx
+    1593:	50                   	push   %eax
+    1594:	68 f0 1c 00 00       	push   $0x1cf0
+    1599:	e8 32 09 00 00       	call   1ed0 <printf@plt>
+    159e:	83 c4 10             	add    $0x10,%esp
+    15a1:	53                   	push   %ebx
+    15a2:	53                   	push   %ebx
+    15a3:	8b 5d c4             	mov    -0x3c(%ebp),%ebx
+    15a6:	ff 33                	pushl  (%ebx)
+    15a8:	68 c5 1b 00 00       	push   $0x1bc5
+    15ad:	e8 1e 09 00 00       	call   1ed0 <printf@plt>
+    15b2:	58                   	pop    %eax
+    15b3:	5a                   	pop    %edx
+    15b4:	ff 33                	pushl  (%ebx)
+    15b6:	68 54 1d 00 00       	push   $0x1d54
+    15bb:	e8 10 09 00 00       	call   1ed0 <printf@plt>
+    15c0:	59                   	pop    %ecx
+    15c1:	58                   	pop    %eax
+    15c2:	ff 33                	pushl  (%ebx)
+    15c4:	68 90 1d 00 00       	push   $0x1d90
+    15c9:	e8 02 09 00 00       	call   1ed0 <printf@plt>
+    15ce:	83 c4 10             	add    $0x10,%esp
+    15d1:	e9 3a fe ff ff       	jmp    1410 <main+0x100>
+    15d6:	83 ec 0c             	sub    $0xc,%esp
+    15d9:	50                   	push   %eax
+    15da:	e8 f1 09 00 00       	call   1fd0 <str_error@plt>
+    15df:	83 c4 0c             	add    $0xc,%esp
+    15e2:	50                   	push   %eax
+    15e3:	53                   	push   %ebx
+    15e4:	68 10 1d 00 00       	push   $0x1d10
+    15e9:	43                   	inc    %ebx
+    15ea:	e8 e1 08 00 00       	call   1ed0 <printf@plt>
+    15ef:	83 c4 10             	add    $0x10,%esp
+    15f2:	e9 b4 fe ff ff       	jmp    14ab <main+0x19b>
+    15f7:	83 ec 0c             	sub    $0xc,%esp
+    15fa:	bf 01 00 00 00       	mov    $0x1,%edi
+    15ff:	68 cc 1c 00 00       	push   $0x1ccc
+    1604:	e8 c7 08 00 00       	call   1ed0 <printf@plt>
+    1609:	59                   	pop    %ecx
+    160a:	ff 75 c0             	pushl  -0x40(%ebp)
+    160d:	e8 ce 08 00 00       	call   1ee0 <async_hangup@plt>
+    1612:	83 c4 10             	add    $0x10,%esp
+    1615:	e9 0b fe ff ff       	jmp    1425 <main+0x115>
+    161a:	66 90                	xchg   %ax,%ax
+    161c:	66 90                	xchg   %ax,%ax
+    161e:	66 90                	xchg   %ax,%ax
+
+00001620 <remote_audio_mixer_set_item_level>:
+    1620:	55                   	push   %ebp
+    1621:	89 e5                	mov    %esp,%ebp
+    1623:	53                   	push   %ebx
+    1624:	51                   	push   %ecx
+    1625:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1628:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    162b:	8b 5d 10             	mov    0x10(%ebp),%ebx
+    162e:	8b 55 14             	mov    0x14(%ebp),%edx
+    1631:	8b 40 0c             	mov    0xc(%eax),%eax
+    1634:	85 c0                	test   %eax,%eax
+    1636:	74 20                	je     1658 <remote_audio_mixer_set_item_level+0x38>
+    1638:	83 ec 04             	sub    $0x4,%esp
+    163b:	ff 72 0c             	pushl  0xc(%edx)
+    163e:	8b 52 08             	mov    0x8(%edx),%edx
+    1641:	52                   	push   %edx
+    1642:	51                   	push   %ecx
+    1643:	ff d0                	call   *%eax
+    1645:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    1648:	83 c4 10             	add    $0x10,%esp
+    164b:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    164e:	89 45 0c             	mov    %eax,0xc(%ebp)
+    1651:	c9                   	leave  
+    1652:	e9 c9 08 00 00       	jmp    1f20 <async_answer_0@plt>
+    1657:	90                   	nop
+    1658:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    165b:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    165e:	c7 45 0c f5 ff ff ff 	movl   $0xfffffff5,0xc(%ebp)
+    1665:	c9                   	leave  
+    1666:	e9 b5 08 00 00       	jmp    1f20 <async_answer_0@plt>
+    166b:	90                   	nop
+    166c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+00001670 <remote_audio_mixer_get_item_level>:
+    1670:	55                   	push   %ebp
+    1671:	89 e5                	mov    %esp,%ebp
+    1673:	83 ec 18             	sub    $0x18,%esp
+    1676:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1679:	8b 40 08             	mov    0x8(%eax),%eax
+    167c:	85 c0                	test   %eax,%eax
+    167e:	74 30                	je     16b0 <remote_audio_mixer_get_item_level+0x40>
+    1680:	8b 55 14             	mov    0x14(%ebp),%edx
+    1683:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+    168a:	8b 52 08             	mov    0x8(%edx),%edx
+    168d:	51                   	push   %ecx
+    168e:	8d 4d f4             	lea    -0xc(%ebp),%ecx
+    1691:	51                   	push   %ecx
+    1692:	52                   	push   %edx
+    1693:	8b 55 08             	mov    0x8(%ebp),%edx
+    1696:	52                   	push   %edx
+    1697:	ff d0                	call   *%eax
+    1699:	83 c4 0c             	add    $0xc,%esp
+    169c:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+    169f:	51                   	push   %ecx
+    16a0:	50                   	push   %eax
+    16a1:	8b 45 10             	mov    0x10(%ebp),%eax
+    16a4:	50                   	push   %eax
+    16a5:	e8 06 09 00 00       	call   1fb0 <async_answer_1@plt>
+    16aa:	83 c4 10             	add    $0x10,%esp
+    16ad:	c9                   	leave  
+    16ae:	c3                   	ret    
+    16af:	90                   	nop
+    16b0:	50                   	push   %eax
+    16b1:	50                   	push   %eax
+    16b2:	8b 45 10             	mov    0x10(%ebp),%eax
+    16b5:	6a f5                	push   $0xfffffff5
+    16b7:	50                   	push   %eax
+    16b8:	e8 63 08 00 00       	call   1f20 <async_answer_0@plt>
+    16bd:	83 c4 10             	add    $0x10,%esp
+    16c0:	c9                   	leave  
+    16c1:	c3                   	ret    
+    16c2:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    16c9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000016d0 <remote_audio_mixer_get_item_info>:
+    16d0:	55                   	push   %ebp
+    16d1:	89 e5                	mov    %esp,%ebp
+    16d3:	56                   	push   %esi
+    16d4:	53                   	push   %ebx
+    16d5:	83 ec 10             	sub    $0x10,%esp
+    16d8:	8b 45 0c             	mov    0xc(%ebp),%eax
+    16db:	8b 40 04             	mov    0x4(%eax),%eax
+    16de:	85 c0                	test   %eax,%eax
+    16e0:	0f 84 c2 00 00 00    	je     17a8 <remote_audio_mixer_get_item_info+0xd8>
+    16e6:	8b 55 14             	mov    0x14(%ebp),%edx
+    16e9:	8d 4d ec             	lea    -0x14(%ebp),%ecx
+    16ec:	c7 45 e8 00 00 00 00 	movl   $0x0,-0x18(%ebp)
+    16f3:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+    16fa:	8b 52 08             	mov    0x8(%edx),%edx
+    16fd:	51                   	push   %ecx
+    16fe:	8d 4d e8             	lea    -0x18(%ebp),%ecx
+    1701:	51                   	push   %ecx
+    1702:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    1705:	52                   	push   %edx
+    1706:	51                   	push   %ecx
+    1707:	ff d0                	call   *%eax
+    1709:	83 c4 10             	add    $0x10,%esp
+    170c:	89 c6                	mov    %eax,%esi
+    170e:	8b 45 e8             	mov    -0x18(%ebp),%eax
+    1711:	85 c0                	test   %eax,%eax
+    1713:	74 5b                	je     1770 <remote_audio_mixer_get_item_info+0xa0>
+    1715:	83 ec 0c             	sub    $0xc,%esp
+    1718:	50                   	push   %eax
+    1719:	e8 82 08 00 00       	call   1fa0 <str_size@plt>
+    171e:	8b 55 10             	mov    0x10(%ebp),%edx
+    1721:	8d 58 01             	lea    0x1(%eax),%ebx
+    1724:	8b 45 ec             	mov    -0x14(%ebp),%eax
+    1727:	50                   	push   %eax
+    1728:	53                   	push   %ebx
+    1729:	56                   	push   %esi
+    172a:	52                   	push   %edx
+    172b:	e8 30 08 00 00       	call   1f60 <async_answer_2@plt>
+    1730:	83 c4 20             	add    $0x20,%esp
+    1733:	85 f6                	test   %esi,%esi
+    1735:	75 2f                	jne    1766 <remote_audio_mixer_get_item_info+0x96>
+    1737:	85 db                	test   %ebx,%ebx
+    1739:	74 2b                	je     1766 <remote_audio_mixer_get_item_info+0x96>
+    173b:	50                   	push   %eax
+    173c:	50                   	push   %eax
+    173d:	8d 45 f0             	lea    -0x10(%ebp),%eax
+    1740:	50                   	push   %eax
+    1741:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1744:	50                   	push   %eax
+    1745:	e8 36 08 00 00       	call   1f80 <async_data_read_receive@plt>
+    174a:	83 c4 10             	add    $0x10,%esp
+    174d:	84 c0                	test   %al,%al
+    174f:	74 6f                	je     17c0 <remote_audio_mixer_get_item_info+0xf0>
+    1751:	3b 5d f0             	cmp    -0x10(%ebp),%ebx
+    1754:	74 3a                	je     1790 <remote_audio_mixer_get_item_info+0xc0>
+    1756:	50                   	push   %eax
+    1757:	50                   	push   %eax
+    1758:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    175b:	6a fd                	push   $0xfffffffd
+    175d:	50                   	push   %eax
+    175e:	e8 bd 07 00 00       	call   1f20 <async_answer_0@plt>
+    1763:	83 c4 10             	add    $0x10,%esp
+    1766:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1769:	5b                   	pop    %ebx
+    176a:	5e                   	pop    %esi
+    176b:	5d                   	pop    %ebp
+    176c:	c3                   	ret    
+    176d:	8d 76 00             	lea    0x0(%esi),%esi
+    1770:	8b 45 ec             	mov    -0x14(%ebp),%eax
+    1773:	8b 55 10             	mov    0x10(%ebp),%edx
+    1776:	50                   	push   %eax
+    1777:	6a 00                	push   $0x0
+    1779:	56                   	push   %esi
+    177a:	52                   	push   %edx
+    177b:	e8 e0 07 00 00       	call   1f60 <async_answer_2@plt>
+    1780:	83 c4 10             	add    $0x10,%esp
+    1783:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1786:	5b                   	pop    %ebx
+    1787:	5e                   	pop    %esi
+    1788:	5d                   	pop    %ebp
+    1789:	c3                   	ret    
+    178a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1790:	8b 75 f4             	mov    -0xc(%ebp),%esi
+    1793:	51                   	push   %ecx
+    1794:	53                   	push   %ebx
+    1795:	8b 5d e8             	mov    -0x18(%ebp),%ebx
+    1798:	53                   	push   %ebx
+    1799:	56                   	push   %esi
+    179a:	e8 51 07 00 00       	call   1ef0 <async_data_read_finalize@plt>
+    179f:	83 c4 10             	add    $0x10,%esp
+    17a2:	eb c2                	jmp    1766 <remote_audio_mixer_get_item_info+0x96>
+    17a4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    17a8:	8b 75 10             	mov    0x10(%ebp),%esi
+    17ab:	53                   	push   %ebx
+    17ac:	53                   	push   %ebx
+    17ad:	6a f5                	push   $0xfffffff5
+    17af:	56                   	push   %esi
+    17b0:	e8 6b 07 00 00       	call   1f20 <async_answer_0@plt>
+    17b5:	83 c4 10             	add    $0x10,%esp
+    17b8:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    17bb:	5b                   	pop    %ebx
+    17bc:	5e                   	pop    %esi
+    17bd:	5d                   	pop    %ebp
+    17be:	c3                   	ret    
+    17bf:	90                   	nop
+    17c0:	50                   	push   %eax
+    17c1:	50                   	push   %eax
+    17c2:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    17c5:	6a f8                	push   $0xfffffff8
+    17c7:	50                   	push   %eax
+    17c8:	e8 53 07 00 00       	call   1f20 <async_answer_0@plt>
+    17cd:	83 c4 10             	add    $0x10,%esp
+    17d0:	eb 94                	jmp    1766 <remote_audio_mixer_get_item_info+0x96>
+    17d2:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    17d9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000017e0 <remote_audio_mixer_get_info>:
+    17e0:	55                   	push   %ebp
+    17e1:	89 e5                	mov    %esp,%ebp
+    17e3:	56                   	push   %esi
+    17e4:	53                   	push   %ebx
+    17e5:	83 ec 10             	sub    $0x10,%esp
+    17e8:	8b 45 0c             	mov    0xc(%ebp),%eax
+    17eb:	8b 00                	mov    (%eax),%eax
+    17ed:	85 c0                	test   %eax,%eax
+    17ef:	0f 84 bb 00 00 00    	je     18b0 <remote_audio_mixer_get_info+0xd0>
+    17f5:	8d 55 ec             	lea    -0x14(%ebp),%edx
+    17f8:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    17fb:	c7 45 e8 00 00 00 00 	movl   $0x0,-0x18(%ebp)
+    1802:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+    1809:	51                   	push   %ecx
+    180a:	52                   	push   %edx
+    180b:	8d 55 e8             	lea    -0x18(%ebp),%edx
+    180e:	52                   	push   %edx
+    180f:	53                   	push   %ebx
+    1810:	ff d0                	call   *%eax
+    1812:	83 c4 10             	add    $0x10,%esp
+    1815:	89 c6                	mov    %eax,%esi
+    1817:	8b 45 e8             	mov    -0x18(%ebp),%eax
+    181a:	85 c0                	test   %eax,%eax
+    181c:	74 5a                	je     1878 <remote_audio_mixer_get_info+0x98>
+    181e:	83 ec 0c             	sub    $0xc,%esp
+    1821:	50                   	push   %eax
+    1822:	e8 79 07 00 00       	call   1fa0 <str_size@plt>
+    1827:	8b 55 10             	mov    0x10(%ebp),%edx
+    182a:	8d 58 01             	lea    0x1(%eax),%ebx
+    182d:	8b 45 ec             	mov    -0x14(%ebp),%eax
+    1830:	50                   	push   %eax
+    1831:	53                   	push   %ebx
+    1832:	56                   	push   %esi
+    1833:	52                   	push   %edx
+    1834:	e8 27 07 00 00       	call   1f60 <async_answer_2@plt>
+    1839:	83 c4 20             	add    $0x20,%esp
+    183c:	85 f6                	test   %esi,%esi
+    183e:	75 2f                	jne    186f <remote_audio_mixer_get_info+0x8f>
+    1840:	85 db                	test   %ebx,%ebx
+    1842:	74 2b                	je     186f <remote_audio_mixer_get_info+0x8f>
+    1844:	50                   	push   %eax
+    1845:	50                   	push   %eax
+    1846:	8d 45 f0             	lea    -0x10(%ebp),%eax
+    1849:	50                   	push   %eax
+    184a:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    184d:	50                   	push   %eax
+    184e:	e8 2d 07 00 00       	call   1f80 <async_data_read_receive@plt>
+    1853:	83 c4 10             	add    $0x10,%esp
+    1856:	84 c0                	test   %al,%al
+    1858:	74 6e                	je     18c8 <remote_audio_mixer_get_info+0xe8>
+    185a:	3b 5d f0             	cmp    -0x10(%ebp),%ebx
+    185d:	74 39                	je     1898 <remote_audio_mixer_get_info+0xb8>
+    185f:	50                   	push   %eax
+    1860:	50                   	push   %eax
+    1861:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    1864:	6a fd                	push   $0xfffffffd
+    1866:	50                   	push   %eax
+    1867:	e8 b4 06 00 00       	call   1f20 <async_answer_0@plt>
+    186c:	83 c4 10             	add    $0x10,%esp
+    186f:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1872:	5b                   	pop    %ebx
+    1873:	5e                   	pop    %esi
+    1874:	5d                   	pop    %ebp
+    1875:	c3                   	ret    
+    1876:	66 90                	xchg   %ax,%ax
+    1878:	8b 45 ec             	mov    -0x14(%ebp),%eax
+    187b:	8b 55 10             	mov    0x10(%ebp),%edx
+    187e:	50                   	push   %eax
+    187f:	6a 00                	push   $0x0
+    1881:	56                   	push   %esi
+    1882:	52                   	push   %edx
+    1883:	e8 d8 06 00 00       	call   1f60 <async_answer_2@plt>
+    1888:	83 c4 10             	add    $0x10,%esp
+    188b:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    188e:	5b                   	pop    %ebx
+    188f:	5e                   	pop    %esi
+    1890:	5d                   	pop    %ebp
+    1891:	c3                   	ret    
+    1892:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1898:	8b 75 f4             	mov    -0xc(%ebp),%esi
+    189b:	51                   	push   %ecx
+    189c:	53                   	push   %ebx
+    189d:	8b 5d e8             	mov    -0x18(%ebp),%ebx
+    18a0:	53                   	push   %ebx
+    18a1:	56                   	push   %esi
+    18a2:	e8 49 06 00 00       	call   1ef0 <async_data_read_finalize@plt>
+    18a7:	83 c4 10             	add    $0x10,%esp
+    18aa:	eb c3                	jmp    186f <remote_audio_mixer_get_info+0x8f>
+    18ac:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    18b0:	8b 45 10             	mov    0x10(%ebp),%eax
+    18b3:	56                   	push   %esi
+    18b4:	56                   	push   %esi
+    18b5:	6a f5                	push   $0xfffffff5
+    18b7:	50                   	push   %eax
+    18b8:	e8 63 06 00 00       	call   1f20 <async_answer_0@plt>
+    18bd:	83 c4 10             	add    $0x10,%esp
+    18c0:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    18c3:	5b                   	pop    %ebx
+    18c4:	5e                   	pop    %esi
+    18c5:	5d                   	pop    %ebp
+    18c6:	c3                   	ret    
+    18c7:	90                   	nop
+    18c8:	50                   	push   %eax
+    18c9:	50                   	push   %eax
+    18ca:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    18cd:	6a f8                	push   $0xfffffff8
+    18cf:	50                   	push   %eax
+    18d0:	e8 4b 06 00 00       	call   1f20 <async_answer_0@plt>
+    18d5:	83 c4 10             	add    $0x10,%esp
+    18d8:	eb 95                	jmp    186f <remote_audio_mixer_get_info+0x8f>
+    18da:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+000018e0 <audio_mixer_get_info>:
+    18e0:	55                   	push   %ebp
+    18e1:	89 e5                	mov    %esp,%ebp
+    18e3:	57                   	push   %edi
+    18e4:	56                   	push   %esi
+    18e5:	53                   	push   %ebx
+    18e6:	83 ec 2c             	sub    $0x2c,%esp
+    18e9:	8b 75 08             	mov    0x8(%ebp),%esi
+    18ec:	85 f6                	test   %esi,%esi
+    18ee:	0f 84 bc 00 00 00    	je     19b0 <audio_mixer_get_info+0xd0>
+    18f4:	50                   	push   %eax
+    18f5:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    18f8:	6a 00                	push   $0x0
+    18fa:	6a 00                	push   $0x0
+    18fc:	6a 00                	push   $0x0
+    18fe:	50                   	push   %eax
+    18ff:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1902:	50                   	push   %eax
+    1903:	6a 00                	push   $0x0
+    1905:	6a 00                	push   $0x0
+    1907:	6a 00                	push   $0x0
+    1909:	6a 00                	push   $0x0
+    190b:	68 03 04 00 00       	push   $0x403
+    1910:	56                   	push   %esi
+    1911:	e8 ea 05 00 00       	call   1f00 <async_req_fast@plt>
+    1916:	83 c4 30             	add    $0x30,%esp
+    1919:	89 c3                	mov    %eax,%ebx
+    191b:	85 c0                	test   %eax,%eax
+    191d:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1920:	0f 94 c2             	sete   %dl
+    1923:	85 c0                	test   %eax,%eax
+    1925:	74 04                	je     192b <audio_mixer_get_info+0x4b>
+    1927:	84 d2                	test   %dl,%dl
+    1929:	75 1d                	jne    1948 <audio_mixer_get_info+0x68>
+    192b:	8b 45 10             	mov    0x10(%ebp),%eax
+    192e:	85 c0                	test   %eax,%eax
+    1930:	74 57                	je     1989 <audio_mixer_get_info+0xa9>
+    1932:	84 d2                	test   %dl,%dl
+    1934:	74 53                	je     1989 <audio_mixer_get_info+0xa9>
+    1936:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1939:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    193c:	89 01                	mov    %eax,(%ecx)
+    193e:	89 d8                	mov    %ebx,%eax
+    1940:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1943:	5b                   	pop    %ebx
+    1944:	5e                   	pop    %esi
+    1945:	5f                   	pop    %edi
+    1946:	5d                   	pop    %ebp
+    1947:	c3                   	ret    
+    1948:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    194b:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    194e:	57                   	push   %edi
+    194f:	57                   	push   %edi
+    1950:	50                   	push   %eax
+    1951:	6a 01                	push   $0x1
+    1953:	e8 f8 05 00 00       	call   1f50 <calloc@plt>
+    1958:	83 c4 10             	add    $0x10,%esp
+    195b:	89 c7                	mov    %eax,%edi
+    195d:	85 c0                	test   %eax,%eax
+    195f:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1962:	74 53                	je     19b7 <audio_mixer_get_info+0xd7>
+    1964:	8b 4d e0             	mov    -0x20(%ebp),%ecx
+    1967:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    196a:	52                   	push   %edx
+    196b:	51                   	push   %ecx
+    196c:	50                   	push   %eax
+    196d:	56                   	push   %esi
+    196e:	e8 1d 06 00 00       	call   1f90 <async_data_read_start@plt>
+    1973:	83 c4 10             	add    $0x10,%esp
+    1976:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1979:	85 c0                	test   %eax,%eax
+    197b:	75 1b                	jne    1998 <audio_mixer_get_info+0xb8>
+    197d:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1980:	89 38                	mov    %edi,(%eax)
+    1982:	8b 45 10             	mov    0x10(%ebp),%eax
+    1985:	85 c0                	test   %eax,%eax
+    1987:	75 a9                	jne    1932 <audio_mixer_get_info+0x52>
+    1989:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    198c:	89 d8                	mov    %ebx,%eax
+    198e:	5b                   	pop    %ebx
+    198f:	5e                   	pop    %esi
+    1990:	5f                   	pop    %edi
+    1991:	5d                   	pop    %ebp
+    1992:	c3                   	ret    
+    1993:	90                   	nop
+    1994:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1998:	83 ec 0c             	sub    $0xc,%esp
+    199b:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    199e:	57                   	push   %edi
+    199f:	e8 5c 06 00 00       	call   2000 <free@plt>
+    19a4:	83 c4 10             	add    $0x10,%esp
+    19a7:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    19aa:	eb 94                	jmp    1940 <audio_mixer_get_info+0x60>
+    19ac:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    19b0:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    19b5:	eb 89                	jmp    1940 <audio_mixer_get_info+0x60>
+    19b7:	53                   	push   %ebx
+    19b8:	6a 00                	push   $0x0
+    19ba:	6a ff                	push   $0xffffffff
+    19bc:	56                   	push   %esi
+    19bd:	e8 ce 05 00 00       	call   1f90 <async_data_read_start@plt>
+    19c2:	83 c4 10             	add    $0x10,%esp
+    19c5:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    19ca:	e9 71 ff ff ff       	jmp    1940 <audio_mixer_get_info+0x60>
+    19cf:	90                   	nop
+
+000019d0 <audio_mixer_get_item_info>:
+    19d0:	55                   	push   %ebp
+    19d1:	89 e5                	mov    %esp,%ebp
+    19d3:	57                   	push   %edi
+    19d4:	56                   	push   %esi
+    19d5:	53                   	push   %ebx
+    19d6:	83 ec 2c             	sub    $0x2c,%esp
+    19d9:	8b 75 08             	mov    0x8(%ebp),%esi
+    19dc:	85 f6                	test   %esi,%esi
+    19de:	0f 84 c4 00 00 00    	je     1aa8 <audio_mixer_get_item_info+0xd8>
+    19e4:	50                   	push   %eax
+    19e5:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    19e8:	6a 00                	push   $0x0
+    19ea:	6a 00                	push   $0x0
+    19ec:	6a 00                	push   $0x0
+    19ee:	50                   	push   %eax
+    19ef:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    19f2:	50                   	push   %eax
+    19f3:	8b 45 0c             	mov    0xc(%ebp),%eax
+    19f6:	6a 00                	push   $0x0
+    19f8:	6a 00                	push   $0x0
+    19fa:	50                   	push   %eax
+    19fb:	6a 01                	push   $0x1
+    19fd:	68 03 04 00 00       	push   $0x403
+    1a02:	56                   	push   %esi
+    1a03:	e8 f8 04 00 00       	call   1f00 <async_req_fast@plt>
+    1a08:	83 c4 30             	add    $0x30,%esp
+    1a0b:	89 c3                	mov    %eax,%ebx
+    1a0d:	85 c0                	test   %eax,%eax
+    1a0f:	8b 45 10             	mov    0x10(%ebp),%eax
+    1a12:	0f 94 c2             	sete   %dl
+    1a15:	85 c0                	test   %eax,%eax
+    1a17:	74 04                	je     1a1d <audio_mixer_get_item_info+0x4d>
+    1a19:	84 d2                	test   %dl,%dl
+    1a1b:	75 23                	jne    1a40 <audio_mixer_get_item_info+0x70>
+    1a1d:	8b 45 14             	mov    0x14(%ebp),%eax
+    1a20:	85 c0                	test   %eax,%eax
+    1a22:	74 5d                	je     1a81 <audio_mixer_get_item_info+0xb1>
+    1a24:	84 d2                	test   %dl,%dl
+    1a26:	74 59                	je     1a81 <audio_mixer_get_item_info+0xb1>
+    1a28:	8b 4d 14             	mov    0x14(%ebp),%ecx
+    1a2b:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1a2e:	89 01                	mov    %eax,(%ecx)
+    1a30:	89 d8                	mov    %ebx,%eax
+    1a32:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1a35:	5b                   	pop    %ebx
+    1a36:	5e                   	pop    %esi
+    1a37:	5f                   	pop    %edi
+    1a38:	5d                   	pop    %ebp
+    1a39:	c3                   	ret    
+    1a3a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1a40:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    1a43:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    1a46:	57                   	push   %edi
+    1a47:	57                   	push   %edi
+    1a48:	50                   	push   %eax
+    1a49:	6a 01                	push   $0x1
+    1a4b:	e8 00 05 00 00       	call   1f50 <calloc@plt>
+    1a50:	83 c4 10             	add    $0x10,%esp
+    1a53:	89 c7                	mov    %eax,%edi
+    1a55:	85 c0                	test   %eax,%eax
+    1a57:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1a5a:	74 53                	je     1aaf <audio_mixer_get_item_info+0xdf>
+    1a5c:	8b 4d e0             	mov    -0x20(%ebp),%ecx
+    1a5f:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    1a62:	52                   	push   %edx
+    1a63:	51                   	push   %ecx
+    1a64:	50                   	push   %eax
+    1a65:	56                   	push   %esi
+    1a66:	e8 25 05 00 00       	call   1f90 <async_data_read_start@plt>
+    1a6b:	83 c4 10             	add    $0x10,%esp
+    1a6e:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1a71:	85 c0                	test   %eax,%eax
+    1a73:	75 1b                	jne    1a90 <audio_mixer_get_item_info+0xc0>
+    1a75:	8b 45 10             	mov    0x10(%ebp),%eax
+    1a78:	89 38                	mov    %edi,(%eax)
+    1a7a:	8b 45 14             	mov    0x14(%ebp),%eax
+    1a7d:	85 c0                	test   %eax,%eax
+    1a7f:	75 a3                	jne    1a24 <audio_mixer_get_item_info+0x54>
+    1a81:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1a84:	89 d8                	mov    %ebx,%eax
+    1a86:	5b                   	pop    %ebx
+    1a87:	5e                   	pop    %esi
+    1a88:	5f                   	pop    %edi
+    1a89:	5d                   	pop    %ebp
+    1a8a:	c3                   	ret    
+    1a8b:	90                   	nop
+    1a8c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1a90:	83 ec 0c             	sub    $0xc,%esp
+    1a93:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1a96:	57                   	push   %edi
+    1a97:	e8 64 05 00 00       	call   2000 <free@plt>
+    1a9c:	83 c4 10             	add    $0x10,%esp
+    1a9f:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1aa2:	eb 8e                	jmp    1a32 <audio_mixer_get_item_info+0x62>
+    1aa4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1aa8:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1aad:	eb 83                	jmp    1a32 <audio_mixer_get_item_info+0x62>
+    1aaf:	53                   	push   %ebx
+    1ab0:	6a 00                	push   $0x0
+    1ab2:	6a ff                	push   $0xffffffff
+    1ab4:	56                   	push   %esi
+    1ab5:	e8 d6 04 00 00       	call   1f90 <async_data_read_start@plt>
+    1aba:	83 c4 10             	add    $0x10,%esp
+    1abd:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    1ac2:	e9 6b ff ff ff       	jmp    1a32 <audio_mixer_get_item_info+0x62>
+    1ac7:	89 f6                	mov    %esi,%esi
+    1ac9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001ad0 <audio_mixer_set_item_level>:
+    1ad0:	55                   	push   %ebp
+    1ad1:	89 e5                	mov    %esp,%ebp
+    1ad3:	83 ec 08             	sub    $0x8,%esp
+    1ad6:	8b 45 08             	mov    0x8(%ebp),%eax
+    1ad9:	85 c0                	test   %eax,%eax
+    1adb:	74 2b                	je     1b08 <audio_mixer_set_item_level+0x38>
+    1add:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1ae0:	52                   	push   %edx
+    1ae1:	8b 55 0c             	mov    0xc(%ebp),%edx
+    1ae4:	6a 00                	push   $0x0
+    1ae6:	6a 00                	push   $0x0
+    1ae8:	6a 00                	push   $0x0
+    1aea:	6a 00                	push   $0x0
+    1aec:	6a 00                	push   $0x0
+    1aee:	6a 00                	push   $0x0
+    1af0:	51                   	push   %ecx
+    1af1:	52                   	push   %edx
+    1af2:	6a 02                	push   $0x2
+    1af4:	68 03 04 00 00       	push   $0x403
+    1af9:	50                   	push   %eax
+    1afa:	e8 01 04 00 00       	call   1f00 <async_req_fast@plt>
+    1aff:	83 c4 30             	add    $0x30,%esp
+    1b02:	c9                   	leave  
+    1b03:	c3                   	ret    
+    1b04:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1b08:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1b0d:	c9                   	leave  
+    1b0e:	c3                   	ret    
+    1b0f:	90                   	nop
+
+00001b10 <audio_mixer_get_item_level>:
+    1b10:	55                   	push   %ebp
+    1b11:	89 e5                	mov    %esp,%ebp
+    1b13:	53                   	push   %ebx
+    1b14:	83 ec 14             	sub    $0x14,%esp
+    1b17:	8b 45 08             	mov    0x8(%ebp),%eax
+    1b1a:	8b 5d 10             	mov    0x10(%ebp),%ebx
+    1b1d:	85 c0                	test   %eax,%eax
+    1b1f:	74 37                	je     1b58 <audio_mixer_get_item_level+0x48>
+    1b21:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    1b24:	52                   	push   %edx
+    1b25:	8d 55 f4             	lea    -0xc(%ebp),%edx
+    1b28:	6a 00                	push   $0x0
+    1b2a:	6a 00                	push   $0x0
+    1b2c:	6a 00                	push   $0x0
+    1b2e:	6a 00                	push   $0x0
+    1b30:	52                   	push   %edx
+    1b31:	6a 00                	push   $0x0
+    1b33:	6a 00                	push   $0x0
+    1b35:	51                   	push   %ecx
+    1b36:	6a 03                	push   $0x3
+    1b38:	68 03 04 00 00       	push   $0x403
+    1b3d:	50                   	push   %eax
+    1b3e:	e8 bd 03 00 00       	call   1f00 <async_req_fast@plt>
+    1b43:	83 c4 30             	add    $0x30,%esp
+    1b46:	85 c0                	test   %eax,%eax
+    1b48:	75 09                	jne    1b53 <audio_mixer_get_item_level+0x43>
+    1b4a:	85 db                	test   %ebx,%ebx
+    1b4c:	74 05                	je     1b53 <audio_mixer_get_item_level+0x43>
+    1b4e:	8b 55 f4             	mov    -0xc(%ebp),%edx
+    1b51:	89 13                	mov    %edx,(%ebx)
+    1b53:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1b56:	c9                   	leave  
+    1b57:	c3                   	ret    
+    1b58:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1b5d:	eb f4                	jmp    1b53 <audio_mixer_get_item_level+0x43>
+    1b5f:	6d                   	insl   (%dx),%es:(%edi)
+    1b60:	69 78 65 72 63 74 6c 	imul   $0x6c746372,0x65(%eax),%edi
+    1b67:	2e 63 00             	arpl   %ax,%cs:(%eax)
+    1b6a:	65 78 63             	gs js  1bd0 <audio_mixer_get_item_level+0xc0>
+    1b6d:	68 00 25 73 20       	push   $0x20732500
+    1b72:	5b                   	pop    %ebx
+    1b73:	64 65 76 69          	fs gs jbe 1be0 <audio_mixer_get_item_level+0xd0>
+    1b77:	63 65 5d             	arpl   %sp,0x5d(%ebp)
+    1b7a:	20 67 65             	and    %ah,0x65(%edi)
+    1b7d:	74 6c                	je     1beb <audio_mixer_get_item_level+0xdb>
+    1b7f:	65 76 65             	gs jbe 1be7 <audio_mixer_get_item_level+0xd7>
+    1b82:	6c                   	insb   (%dx),%es:(%edi)
+    1b83:	20 69 74             	and    %ch,0x74(%ecx)
+    1b86:	65 6d                	gs insl (%dx),%es:(%edi)
+    1b88:	20 0a                	and    %cl,(%edx)
+    1b8a:	00 43 6f             	add    %al,0x6f(%ebx)
+    1b8d:	6e                   	outsb  %ds:(%esi),(%dx)
+    1b8e:	74 72                	je     1c02 <audio_mixer_get_item_level+0xf2>
+    1b90:	6f                   	outsl  %ds:(%esi),(%dx)
+    1b91:	6c                   	insb   (%dx),%es:(%edi)
+    1b92:	20 69 74             	and    %ch,0x74(%ecx)
+    1b95:	65 6d                	gs insl (%dx),%es:(%edi)
+    1b97:	20 25 75 20 6c 65    	and    %ah,0x656c2075
+    1b9d:	76 65                	jbe    1c04 <audio_mixer_get_item_level+0xf4>
+    1b9f:	6c                   	insb   (%dx),%es:(%edi)
+    1ba0:	3a 20                	cmp    (%eax),%ah
+    1ba2:	25 75 2e 0a 00       	and    $0xa2e75,%eax
+    1ba7:	73 65                	jae    1c0e <audio_mixer_get_item_level+0xfe>
+    1ba9:	74 6c                	je     1c17 <audio_mixer_get_item_level+0x107>
+    1bab:	65 76 65             	gs jbe 1c13 <audio_mixer_get_item_level+0x103>
+    1bae:	6c                   	insb   (%dx),%es:(%edi)
+    1baf:	00 67 65             	add    %ah,0x65(%edi)
+    1bb2:	74 6c                	je     1c20 <audio_mixer_get_item_level+0x110>
+    1bb4:	65 76 65             	gs jbe 1c1c <audio_mixer_get_item_level+0x10c>
+    1bb7:	6c                   	insb   (%dx),%es:(%edi)
+    1bb8:	00 4d 49             	add    %cl,0x49(%ebp)
+    1bbb:	58                   	pop    %eax
+    1bbc:	45                   	inc    %ebp
+    1bbd:	52                   	push   %edx
+    1bbe:	20 25 73 3a 0a 0a    	and    %ah,0xa0a3a73
+    1bc4:	00 0a                	add    %cl,(%edx)
+    1bc6:	25 73 3a 0a 00       	and    $0xa3a73,%eax
+    1bcb:	90                   	nop
+    1bcc:	46                   	inc    %esi
+    1bcd:	61                   	popa   
+    1bce:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    1bd5:	20 
+    1bd6:	67 65 74 20          	addr16 gs je 1bfa <audio_mixer_get_item_level+0xea>
+    1bda:	69 74 65 6d 20 6c 65 	imul   $0x76656c20,0x6d(%ebp,%eiz,2),%esi
+    1be1:	76 
+    1be2:	65 6c                	gs insb (%dx),%es:(%edi)
+    1be4:	3a 20                	cmp    (%eax),%ah
+    1be6:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    1beb:	00 25 73 20 5b 64    	add    %ah,0x645b2073
+    1bf1:	65 76 69             	gs jbe 1c5d <audio_mixer_get_item_level+0x14d>
+    1bf4:	63 65 5d             	arpl   %sp,0x5d(%ebp)
+    1bf7:	20 73 65             	and    %dh,0x65(%ebx)
+    1bfa:	74 6c                	je     1c68 <audio_mixer_get_item_level+0x158>
+    1bfc:	65 76 65             	gs jbe 1c64 <audio_mixer_get_item_level+0x154>
+    1bff:	6c                   	insb   (%dx),%es:(%edi)
+    1c00:	20 69 74             	and    %ch,0x74(%ecx)
+    1c03:	65 6d                	gs insl (%dx),%es:(%edi)
+    1c05:	20 76 61             	and    %dh,0x61(%esi)
+    1c08:	6c                   	insb   (%dx),%es:(%edi)
+    1c09:	75 65                	jne    1c70 <audio_mixer_get_item_level+0x160>
+    1c0b:	0a 00                	or     (%eax),%al
+    1c0d:	00 00                	add    %al,(%eax)
+    1c0f:	00 46 61             	add    %al,0x61(%esi)
+    1c12:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    1c19:	20 
+    1c1a:	73 65                	jae    1c81 <audio_mixer_get_item_level+0x171>
+    1c1c:	74 20                	je     1c3e <audio_mixer_get_item_level+0x12e>
+    1c1e:	69 74 65 6d 20 6c 65 	imul   $0x76656c20,0x6d(%ebp,%eiz,2),%esi
+    1c25:	76 
+    1c26:	65 6c                	gs insb (%dx),%es:(%edi)
+    1c28:	3a 20                	cmp    (%eax),%ah
+    1c2a:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    1c2f:	00 43 6f             	add    %al,0x6f(%ebx)
+    1c32:	6e                   	outsb  %ds:(%esi),(%dx)
+    1c33:	74 72                	je     1ca7 <audio_mixer_get_item_level+0x197>
+    1c35:	6f                   	outsl  %ds:(%esi),(%dx)
+    1c36:	6c                   	insb   (%dx),%es:(%edi)
+    1c37:	20 69 74             	and    %ch,0x74(%ecx)
+    1c3a:	65 6d                	gs insl (%dx),%es:(%edi)
+    1c3c:	20 25 75 20 6e 65    	and    %ah,0x656e2075
+    1c42:	77 20                	ja     1c64 <audio_mixer_get_item_level+0x154>
+    1c44:	6c                   	insb   (%dx),%es:(%edi)
+    1c45:	65 76 65             	gs jbe 1cad <audio_mixer_get_item_level+0x19d>
+    1c48:	6c                   	insb   (%dx),%es:(%edi)
+    1c49:	20 69 73             	and    %ch,0x73(%ecx)
+    1c4c:	20 25 75 2e 0a 00    	and    %ah,0xa2e75
+    1c52:	00 00                	add    %al,(%eax)
+    1c54:	64 65 76 69          	fs gs jbe 1cc1 <audio_mixer_get_item_level+0x1b1>
+    1c58:	63 65 73             	arpl   %sp,0x73(%ebp)
+    1c5b:	2f                   	das    
+    1c5c:	5c                   	pop    %esp
+    1c5d:	68 77 5c 70 63       	push   $0x63705c77
+    1c62:	69 30 5c 30 30 3a    	imul   $0x3a30305c,(%eax),%esi
+    1c68:	30 31                	xor    %dh,(%ecx)
+    1c6a:	2e 30 5c 73 62       	xor    %bl,%cs:0x62(%ebx,%esi,2)
+    1c6f:	31 36                	xor    %esi,(%esi)
+    1c71:	5c                   	pop    %esp
+    1c72:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    1c75:	74 72                	je     1ce9 <audio_mixer_get_item_level+0x1d9>
+    1c77:	6f                   	outsl  %ds:(%esi),(%dx)
+    1c78:	6c                   	insb   (%dx),%es:(%edi)
+    1c79:	00 00                	add    %al,(%eax)
+    1c7b:	00 46 61             	add    %al,0x61(%esi)
+    1c7e:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    1c85:	20 
+    1c86:	72 65                	jb     1ced <audio_mixer_get_item_level+0x1dd>
+    1c88:	73 6f                	jae    1cf9 <audio_mixer_get_item_level+0x1e9>
+    1c8a:	6c                   	insb   (%dx),%es:(%edi)
+    1c8b:	76 65                	jbe    1cf2 <audio_mixer_get_item_level+0x1e2>
+    1c8d:	20 73 65             	and    %dh,0x65(%ebx)
+    1c90:	72 76                	jb     1d08 <audio_mixer_get_item_level+0x1f8>
+    1c92:	69 63 65 20 27 25 73 	imul   $0x73252720,0x65(%ebx),%esp
+    1c99:	27                   	daa    
+    1c9a:	3a 20                	cmp    (%eax),%ah
+    1c9c:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    1ca1:	00 00                	add    %al,(%eax)
+    1ca3:	00 46 61             	add    %al,0x61(%esi)
+    1ca6:	69 6c 65 64 20 63 6f 	imul   $0x6e6f6320,0x64(%ebp,%eiz,2),%ebp
+    1cad:	6e 
+    1cae:	6e                   	outsb  %ds:(%esi),(%dx)
+    1caf:	65 63 74 69 6e       	arpl   %si,%gs:0x6e(%ecx,%ebp,2)
+    1cb4:	67 20 6d 69          	and    %ch,0x69(%di)
+    1cb8:	78 65                	js     1d1f <audio_mixer_get_item_level+0x20f>
+    1cba:	72 20                	jb     1cdc <audio_mixer_get_item_level+0x1cc>
+    1cbc:	73 65                	jae    1d23 <audio_mixer_get_item_level+0x213>
+    1cbe:	72 76                	jb     1d36 <audio_mixer_get_item_level+0x226>
+    1cc0:	69 63 65 20 27 25 73 	imul   $0x73252720,0x65(%ebx),%esp
+    1cc7:	27                   	daa    
+    1cc8:	2e 0a 00             	or     %cs:(%eax),%al
+    1ccb:	00 46 61             	add    %al,0x61(%esi)
+    1cce:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    1cd5:	20 
+    1cd6:	73 74                	jae    1d4c <audio_mixer_get_item_level+0x23c>
+    1cd8:	61                   	popa   
+    1cd9:	72 74                	jb     1d4f <audio_mixer_get_item_level+0x23f>
+    1cdb:	20 73 65             	and    %dh,0x65(%ebx)
+    1cde:	73 73                	jae    1d53 <audio_mixer_get_item_level+0x243>
+    1ce0:	69 6f 6e 20 65 78 63 	imul   $0x63786520,0x6e(%edi),%ebp
+    1ce7:	68 61 6e 67 65       	push   $0x65676e61
+    1cec:	2e 0a 00             	or     %cs:(%eax),%al
+    1cef:	00 46 61             	add    %al,0x61(%esi)
+    1cf2:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    1cf9:	20 
+    1cfa:	67 65 74 20          	addr16 gs je 1d1e <audio_mixer_get_item_level+0x20e>
+    1cfe:	6d                   	insl   (%dx),%es:(%edi)
+    1cff:	69 78 65 72 20 69 6e 	imul   $0x6e692072,0x65(%eax),%edi
+    1d06:	66 6f                	outsw  %ds:(%esi),(%dx)
+    1d08:	3a 20                	cmp    (%eax),%ah
+    1d0a:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    1d0f:	00 46 61             	add    %al,0x61(%esi)
+    1d12:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    1d19:	20 
+    1d1a:	67 65 74 20          	addr16 gs je 1d3e <audio_mixer_get_item_level+0x22e>
+    1d1e:	69 74 65 6d 20 25 75 	imul   $0x20752520,0x6d(%ebp,%eiz,2),%esi
+    1d25:	20 
+    1d26:	69 6e 66 6f 3a 20 25 	imul   $0x25203a6f,0x66(%esi),%ebp
+    1d2d:	73 2e                	jae    1d5d <audio_mixer_get_item_level+0x24d>
+    1d2f:	0a 00                	or     (%eax),%al
+    1d31:	00 00                	add    %al,(%eax)
+    1d33:	00 43 6f             	add    %al,0x6f(%ebx)
+    1d36:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d37:	74 72                	je     1dab <audio_mixer_get_item_level+0x29b>
+    1d39:	6f                   	outsl  %ds:(%esi),(%dx)
+    1d3a:	6c                   	insb   (%dx),%es:(%edi)
+    1d3b:	20 69 74             	and    %ch,0x74(%ecx)
+    1d3e:	65 6d                	gs insl (%dx),%es:(%edi)
+    1d40:	20 25 75 20 60 25    	and    %ah,0x25602075
+    1d46:	73 27                	jae    1d6f <audio_mixer_get_item_level+0x25f>
+    1d48:	20 3a                	and    %bh,(%edx)
+    1d4a:	20 25 75 2f 25 75    	and    %ah,0x75252f75
+    1d50:	2e 0a 00             	or     %cs:(%eax),%al
+    1d53:	00 55 73             	add    %dl,0x73(%ebp)
+    1d56:	65 20 27             	and    %ah,%gs:(%edi)
+    1d59:	25 73 20 67 65       	and    $0x65672073,%eax
+    1d5e:	74 6c                	je     1dcc <remote_audio_mixer_iface_ops>
+    1d60:	65 76 65             	gs jbe 1dc8 <remote_audio_mixer_iface+0x4>
+    1d63:	6c                   	insb   (%dx),%es:(%edi)
+    1d64:	20 69 64             	and    %ch,0x64(%ecx)
+    1d67:	78 27                	js     1d90 <audio_mixer_get_item_level+0x280>
+    1d69:	20 63 6f             	and    %ah,0x6f(%ebx)
+    1d6c:	6d                   	insl   (%dx),%es:(%edi)
+    1d6d:	6d                   	insl   (%dx),%es:(%edi)
+    1d6e:	61                   	popa   
+    1d6f:	6e                   	outsb  %ds:(%esi),(%dx)
+    1d70:	64 20 74 6f 20       	and    %dh,%fs:0x20(%edi,%ebp,2)
+    1d75:	72 65                	jb     1ddc <remote_audio_mixer_iface_ops+0x10>
+    1d77:	61                   	popa   
+    1d78:	64 20 69 6e          	and    %ch,%fs:0x6e(%ecx)
+    1d7c:	64 69 76 69 64 75 61 	imul   $0x6c617564,%fs:0x69(%esi),%esi
+    1d83:	6c 
+    1d84:	20 73 65             	and    %dh,0x65(%ebx)
+    1d87:	74 74                	je     1dfd <remote_audio_mixer_iface_ops+0x31>
+    1d89:	69 6e 67 73 0a 00 00 	imul   $0xa73,0x67(%esi),%ebp
+    1d90:	55                   	push   %ebp
+    1d91:	73 65                	jae    1df8 <remote_audio_mixer_iface_ops+0x2c>
+    1d93:	20 27                	and    %ah,(%edi)
+    1d95:	25 73 20 73 65       	and    $0x65732073,%eax
+    1d9a:	74 6c                	je     1e08 <remote_audio_mixer_iface_ops+0x3c>
+    1d9c:	65 76 65             	gs jbe 1e04 <remote_audio_mixer_iface_ops+0x38>
+    1d9f:	6c                   	insb   (%dx),%es:(%edi)
+    1da0:	20 69 64             	and    %ch,0x64(%ecx)
+    1da3:	78 27                	js     1dcc <remote_audio_mixer_iface_ops>
+    1da5:	20 63 6f             	and    %ah,0x6f(%ebx)
+    1da8:	6d                   	insl   (%dx),%es:(%edi)
+    1da9:	6d                   	insl   (%dx),%es:(%edi)
+    1daa:	61                   	popa   
+    1dab:	6e                   	outsb  %ds:(%esi),(%dx)
+    1dac:	64 20 74 6f 20       	and    %dh,%fs:0x20(%edi,%ebp,2)
+    1db1:	63 68 61             	arpl   %bp,0x61(%eax)
+    1db4:	6e                   	outsb  %ds:(%esi),(%dx)
+    1db5:	67 65 20 73 65       	and    %dh,%gs:0x65(%bp,%di)
+    1dba:	74 74                	je     1e30 <remote_audio_mixer_iface_ops+0x64>
+    1dbc:	69 6e 67 73 0a 00 00 	imul   $0xa73,0x67(%esi),%ebp
+	...
+
+00001dc4 <remote_audio_mixer_iface>:
+    1dc4:	04 00 00 00 cc 1d 00 00                             ........
+
+00001dcc <remote_audio_mixer_iface_ops>:
+    1dcc:	e0 17 00 00 d0 16 00 00 20 16 00 00 70 16 00 00     ........ ...p...
+
+Disassembly of section .plt:
+
+00001ea0 <__main@plt-0x10>:
+    1ea0:	ff 35 98 34 00 00    	pushl  0x3498
+    1ea6:	ff 25 9c 34 00 00    	jmp    *0x349c
+    1eac:	00 00                	add    %al,(%eax)
+	...
+
+00001eb0 <__main@plt>:
+    1eb0:	ff 25 a0 34 00 00    	jmp    *0x34a0
+    1eb6:	68 00 00 00 00       	push   $0x0
+    1ebb:	e9 e0 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001ec0 <loc_service_connect@plt>:
+    1ec0:	ff 25 a4 34 00 00    	jmp    *0x34a4
+    1ec6:	68 08 00 00 00       	push   $0x8
+    1ecb:	e9 d0 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001ed0 <printf@plt>:
+    1ed0:	ff 25 a8 34 00 00    	jmp    *0x34a8
+    1ed6:	68 10 00 00 00       	push   $0x10
+    1edb:	e9 c0 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001ee0 <async_hangup@plt>:
+    1ee0:	ff 25 ac 34 00 00    	jmp    *0x34ac
+    1ee6:	68 18 00 00 00       	push   $0x18
+    1eeb:	e9 b0 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001ef0 <async_data_read_finalize@plt>:
+    1ef0:	ff 25 b0 34 00 00    	jmp    *0x34b0
+    1ef6:	68 20 00 00 00       	push   $0x20
+    1efb:	e9 a0 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f00 <async_req_fast@plt>:
+    1f00:	ff 25 b4 34 00 00    	jmp    *0x34b4
+    1f06:	68 28 00 00 00       	push   $0x28
+    1f0b:	e9 90 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f10 <loc_service_get_id@plt>:
+    1f10:	ff 25 b8 34 00 00    	jmp    *0x34b8
+    1f16:	68 30 00 00 00       	push   $0x30
+    1f1b:	e9 80 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f20 <async_answer_0@plt>:
+    1f20:	ff 25 bc 34 00 00    	jmp    *0x34bc
+    1f26:	68 38 00 00 00       	push   $0x38
+    1f2b:	e9 70 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f30 <async_exchange_end@plt>:
+    1f30:	ff 25 c0 34 00 00    	jmp    *0x34c0
+    1f36:	68 40 00 00 00       	push   $0x40
+    1f3b:	e9 60 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f40 <assert_abort@plt>:
+    1f40:	ff 25 c4 34 00 00    	jmp    *0x34c4
+    1f46:	68 48 00 00 00       	push   $0x48
+    1f4b:	e9 50 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f50 <calloc@plt>:
+    1f50:	ff 25 c8 34 00 00    	jmp    *0x34c8
+    1f56:	68 50 00 00 00       	push   $0x50
+    1f5b:	e9 40 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f60 <async_answer_2@plt>:
+    1f60:	ff 25 cc 34 00 00    	jmp    *0x34cc
+    1f66:	68 58 00 00 00       	push   $0x58
+    1f6b:	e9 30 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f70 <str_cmp@plt>:
+    1f70:	ff 25 d0 34 00 00    	jmp    *0x34d0
+    1f76:	68 60 00 00 00       	push   $0x60
+    1f7b:	e9 20 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f80 <async_data_read_receive@plt>:
+    1f80:	ff 25 d4 34 00 00    	jmp    *0x34d4
+    1f86:	68 68 00 00 00       	push   $0x68
+    1f8b:	e9 10 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001f90 <async_data_read_start@plt>:
+    1f90:	ff 25 d8 34 00 00    	jmp    *0x34d8
+    1f96:	68 70 00 00 00       	push   $0x70
+    1f9b:	e9 00 ff ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001fa0 <str_size@plt>:
+    1fa0:	ff 25 dc 34 00 00    	jmp    *0x34dc
+    1fa6:	68 78 00 00 00       	push   $0x78
+    1fab:	e9 f0 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001fb0 <async_answer_1@plt>:
+    1fb0:	ff 25 e0 34 00 00    	jmp    *0x34e0
+    1fb6:	68 80 00 00 00       	push   $0x80
+    1fbb:	e9 e0 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001fc0 <async_exchange_begin@plt>:
+    1fc0:	ff 25 e4 34 00 00    	jmp    *0x34e4
+    1fc6:	68 88 00 00 00       	push   $0x88
+    1fcb:	e9 d0 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001fd0 <str_error@plt>:
+    1fd0:	ff 25 e8 34 00 00    	jmp    *0x34e8
+    1fd6:	68 90 00 00 00       	push   $0x90
+    1fdb:	e9 c0 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001fe0 <str_uint16_t@plt>:
+    1fe0:	ff 25 ec 34 00 00    	jmp    *0x34ec
+    1fe6:	68 98 00 00 00       	push   $0x98
+    1feb:	e9 b0 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00001ff0 <__syscall_fast@plt>:
+    1ff0:	ff 25 f0 34 00 00    	jmp    *0x34f0
+    1ff6:	68 a0 00 00 00       	push   $0xa0
+    1ffb:	e9 a0 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>
+
+00002000 <free@plt>:
+    2000:	ff 25 f4 34 00 00    	jmp    *0x34f4
+    2006:	68 a8 00 00 00       	push   $0xa8
+    200b:	e9 90 fe ff ff       	jmp    1ea0 <remote_audio_mixer_iface_ops+0xd4>

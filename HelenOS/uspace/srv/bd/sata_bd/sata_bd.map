@@ -1,0 +1,199 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../lib/drv/libdrv.a(remote_ahci.o)
+                              sata_bd.o (ahci_get_sess)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0xe47 sata_bd.o
+ .debug_abbrev  0x0000000000000000      0x304 sata_bd.o
+ .debug_loc     0x0000000000000000      0x3d6 sata_bd.o
+ .debug_aranges
+                0x0000000000000000       0x28 sata_bd.o
+ .debug_ranges  0x0000000000000000       0xb0 sata_bd.o
+ .debug_line    0x0000000000000000      0x394 sata_bd.o
+ .debug_str     0x0000000000000000      0xc6e sata_bd.o
+ .comment       0x0000000000000000       0x12 sata_bd.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sata_bd.o
+ .eh_frame      0x0000000000000000      0x1e8 sata_bd.o
+ .debug_info    0x0000000000000000      0xee6 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_abbrev  0x0000000000000000      0x251 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_loc     0x0000000000000000      0x413 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_line    0x0000000000000000      0x314 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_str     0x0000000000000000      0xcf0 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .comment       0x0000000000000000       0x12 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ .eh_frame      0x0000000000000000      0x244 ../../../lib/drv/libdrv.a(remote_ahci.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130      0xcf8
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x372 sata_bd.o
+ *fill*         0x00000000000014a2        0xe 
+ .text.startup  0x00000000000014b0      0x22a sata_bd.o
+                0x00000000000014b0                main
+ *fill*         0x00000000000016da        0x6 
+ .text          0x00000000000016e0      0x57f ../../../lib/drv/libdrv.a(remote_ahci.o)
+                0x0000000000001980                ahci_get_sess
+                0x0000000000001a20                ahci_get_sata_device_name
+                0x0000000000001a90                ahci_get_num_blocks
+                0x0000000000001b10                ahci_get_block_size
+                0x0000000000001b80                ahci_read_blocks
+                0x0000000000001bf0                ahci_write_blocks
+ *(.rodata .rodata.*)
+ *fill*         0x0000000000001c5f        0x1 
+ .rodata.str1.4
+                0x0000000000001c60      0x18c sata_bd.o
+ .rodata.str1.1
+                0x0000000000001dec       0x19 sata_bd.o
+                                         0x1c (size before relaxing)
+ .rodata.str1.1
+                0x0000000000001e05        0x6 ../../../lib/drv/libdrv.a(remote_ahci.o)
+ *fill*         0x0000000000001e0b        0x1 
+ .rodata        0x0000000000001e0c       0x1c ../../../lib/drv/libdrv.a(remote_ahci.o)
+                0x0000000000001e0c                remote_ahci_iface
+
+.rel.plt        0x0000000000001e28      0x128
+ *(.rel.plt)
+ .rel.plt       0x0000000000001e28      0x128 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000001f50       0x10
+ *(.rel.*)
+ .rel.got       0x0000000000001f50        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000001f50       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000001f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000001f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000001f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000001f60      0x260
+ *(.plt)
+ .plt           0x0000000000001f60      0x260 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000001f70                __main
+                0x0000000000001f80                loc_category_get_id
+                0x0000000000001f90                devman_device_connect
+                0x0000000000001fa0                devman_dev_get_functions
+                0x0000000000001fb0                task_retval
+                0x0000000000001fc0                printf
+                0x0000000000001fd0                async_wait_for
+                0x0000000000001fe0                snprintf
+                0x0000000000001ff0                loc_service_register
+                0x0000000000002000                async_data_read_finalize
+                0x0000000000002010                malloc
+                0x0000000000002020                async_share_out_receive
+                0x0000000000002030                async_req_fast
+                0x0000000000002040                async_answer_0
+                0x0000000000002050                async_send_fast
+                0x0000000000002060                bd_conn
+                0x0000000000002070                async_exchange_end
+                0x0000000000002080                async_share_out_finalize
+                0x0000000000002090                bd_srvs_init
+                0x00000000000020a0                async_answer_2
+                0x00000000000020b0                str_dup
+                0x00000000000020c0                loc_service_add_to_cat
+                0x00000000000020d0                async_data_read_receive
+                0x00000000000020e0                async_data_read_start
+                0x00000000000020f0                loc_server_register
+                0x0000000000002100                str_size
+                0x0000000000002110                str_lcmp
+                0x0000000000002120                async_answer_1
+                0x0000000000002130                async_exchange_begin
+                0x0000000000002140                devman_fun_get_handle
+                0x0000000000002150                async_share_out_start
+                0x0000000000002160                fibril_switch
+                0x0000000000002170                __syscall_fast
+                0x0000000000002180                devman_fun_get_child
+                0x0000000000002190                async_set_fallback_port_handler
+                0x00000000000021a0                free
+                0x00000000000021b0                devman_fun_get_name
+
+.dynsym         0x00000000000021c0      0x2a0
+ *(.dynsym)
+ .dynsym        0x00000000000021c0      0x2a0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000002460      0x2aa
+ *(.dynstr)
+ .dynstr        0x0000000000002460      0x2aa /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x000000000000270c      0x144
+ *(.hash)
+ .hash          0x000000000000270c      0x144 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000002850       0x13
+ *(.interp)
+ .interp        0x0000000000002850       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003863                . = (. + 0x1000)
+
+.dynamic        0x0000000000003864       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000003864       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003864                _DYNAMIC
+
+.data           0x0000000000003920       0x20
+ *(.data)
+ .data          0x0000000000003920        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000003920       0x20 sata_bd.o
+ .data          0x0000000000003940        0x0 ../../../lib/drv/libdrv.a(remote_ahci.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000003940        0x0
+ *(.got)
+ .got           0x0000000000003940        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000003940       0xa0
+ *(.got.plt)
+ .got.plt       0x0000000000003940       0xa0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003940                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x00000000000039e0    0x12040
+ *(.dynbss)
+ .dynbss        0x00000000000039e0        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000039e0                __syscall_fast_func
+                0x00000000000039e4                async_futex
+ *(COMMON)
+ *(.bss)
+ .bss           0x00000000000039e8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x00000000000039e8       0x18 
+ .bss           0x0000000000003a00    0x12020 sata_bd.o
+ .bss           0x0000000000015a20        0x0 ../../../lib/drv/libdrv.a(remote_ahci.o)
+
+/DISCARD/
+ *(*)
+LOAD sata_bd.o
+LOAD ../../../lib/drv/libdrv.a
+LOAD ../../../lib/c/libc.so.0
+LOAD ../../../lib/softint/libsoftint.so.0
+OUTPUT(sata_bd elf32-i386)

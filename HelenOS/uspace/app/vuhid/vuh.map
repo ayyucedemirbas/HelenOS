@@ -1,0 +1,463 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/usbvirt/libusbvirt.a(device.o)
+                              main.o (usbvirt_device_plug)
+../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+                              ../../lib/usbvirt/libusbvirt.a(device.o) (usbvirt_ipc_handle_call)
+../../lib/usbvirt/libusbvirt.a(stdreq.o)
+                              stdreq.o (usbvirt_control_reply_helper)
+../../lib/usbvirt/libusbvirt.a(transfer.o)
+                              ../../lib/usbvirt/libusbvirt.a(ipc_dev.o) (usbvirt_control_write)
+../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+                              ../../lib/usbvirt/libusbvirt.a(transfer.o) (process_control_transfer)
+../../lib/usb/libusb.a(debug.o)
+                              main.o (usb_debug_str_buffer)
+../../lib/drv/libdrv.a(logbuf.o)
+                              ../../lib/usb/libusb.a(debug.o) (ddf_dump_buffer)
+
+Allocating common symbols
+Common symbol       size              file
+
+assert              0x4               main.o
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x13f0 main.o
+ .debug_abbrev  0x0000000000000000      0x292 main.o
+ .debug_loc     0x0000000000000000      0x18f main.o
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+ .debug_ranges  0x0000000000000000       0x68 main.o
+ .debug_line    0x0000000000000000      0x37d main.o
+ .debug_str     0x0000000000000000     0x16ff main.o
+ .comment       0x0000000000000000       0x12 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .eh_frame      0x0000000000000000       0x80 main.o
+ .debug_info    0x0000000000000000     0x13a8 device.o
+ .debug_abbrev  0x0000000000000000      0x2d1 device.o
+ .debug_loc     0x0000000000000000      0x7b3 device.o
+ .debug_aranges
+                0x0000000000000000       0x20 device.o
+ .debug_line    0x0000000000000000      0x3f1 device.o
+ .debug_str     0x0000000000000000     0x14ef device.o
+ .comment       0x0000000000000000       0x12 device.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 device.o
+ .eh_frame      0x0000000000000000      0x140 device.o
+ .debug_info    0x0000000000000000      0x7f4 ifaces.o
+ .debug_abbrev  0x0000000000000000      0x11a ifaces.o
+ .debug_aranges
+                0x0000000000000000       0x18 ifaces.o
+ .debug_line    0x0000000000000000      0x1e7 ifaces.o
+ .debug_str     0x0000000000000000      0xa87 ifaces.o
+ .comment       0x0000000000000000       0x12 ifaces.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ifaces.o
+ .debug_info    0x0000000000000000      0x99c life.o
+ .debug_abbrev  0x0000000000000000      0x1a3 life.o
+ .debug_loc     0x0000000000000000       0x9e life.o
+ .debug_aranges
+                0x0000000000000000       0x20 life.o
+ .debug_line    0x0000000000000000      0x249 life.o
+ .debug_str     0x0000000000000000      0xb8e life.o
+ .comment       0x0000000000000000       0x12 life.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 life.o
+ .eh_frame      0x0000000000000000       0x6c life.o
+ .debug_info    0x0000000000000000      0xf34 stdreq.o
+ .debug_abbrev  0x0000000000000000      0x1e2 stdreq.o
+ .debug_loc     0x0000000000000000      0x1ff stdreq.o
+ .debug_aranges
+                0x0000000000000000       0x20 stdreq.o
+ .debug_ranges  0x0000000000000000       0x18 stdreq.o
+ .debug_line    0x0000000000000000      0x276 stdreq.o
+ .debug_str     0x0000000000000000     0x1092 stdreq.o
+ .comment       0x0000000000000000       0x12 stdreq.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 stdreq.o
+ .eh_frame      0x0000000000000000       0xa0 stdreq.o
+ .debug_info    0x0000000000000000      0xad7 hids/bootkbd.o
+ .debug_abbrev  0x0000000000000000      0x1b2 hids/bootkbd.o
+ .debug_loc     0x0000000000000000       0x3f hids/bootkbd.o
+ .debug_aranges
+                0x0000000000000000       0x20 hids/bootkbd.o
+ .debug_line    0x0000000000000000      0x2a1 hids/bootkbd.o
+ .debug_str     0x0000000000000000      0xf24 hids/bootkbd.o
+ .comment       0x0000000000000000       0x12 hids/bootkbd.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hids/bootkbd.o
+ .eh_frame      0x0000000000000000       0x44 hids/bootkbd.o
+ .debug_info    0x0000000000000000      0x98d hids/logitech_wireless.o
+ .debug_abbrev  0x0000000000000000      0x14b hids/logitech_wireless.o
+ .debug_aranges
+                0x0000000000000000       0x18 hids/logitech_wireless.o
+ .debug_line    0x0000000000000000      0x236 hids/logitech_wireless.o
+ .debug_str     0x0000000000000000      0xc70 hids/logitech_wireless.o
+ .comment       0x0000000000000000       0x12 hids/logitech_wireless.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hids/logitech_wireless.o
+ .debug_info    0x0000000000000000      0xdf2 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_abbrev  0x0000000000000000      0x2a0 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_loc     0x0000000000000000       0xc1 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_ranges  0x0000000000000000       0x18 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_line    0x0000000000000000      0x255 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_str     0x0000000000000000     0x11ea ../../lib/usbvirt/libusbvirt.a(device.o)
+ .comment       0x0000000000000000       0x12 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .eh_frame      0x0000000000000000       0x98 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .debug_info    0x0000000000000000     0x10ca ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_abbrev  0x0000000000000000      0x28a ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_loc     0x0000000000000000      0x4b4 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_ranges  0x0000000000000000       0xa0 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_line    0x0000000000000000      0x2fe ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_str     0x0000000000000000      0xf51 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .comment       0x0000000000000000       0x12 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .eh_frame      0x0000000000000000       0xb4 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .debug_info    0x0000000000000000      0xe78 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_abbrev  0x0000000000000000      0x294 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_loc     0x0000000000000000      0x509 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_ranges  0x0000000000000000       0x48 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_line    0x0000000000000000      0x2a9 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_str     0x0000000000000000     0x10a4 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .comment       0x0000000000000000       0x12 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .eh_frame      0x0000000000000000      0x150 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_info    0x0000000000000000      0xdee ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_abbrev  0x0000000000000000      0x2a3 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_loc     0x0000000000000000      0x553 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_ranges  0x0000000000000000       0x40 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_line    0x0000000000000000      0x290 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_str     0x0000000000000000      0xde3 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .comment       0x0000000000000000       0x12 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .eh_frame      0x0000000000000000       0xf0 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_info    0x0000000000000000      0xa4f ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_abbrev  0x0000000000000000      0x1c3 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_loc     0x0000000000000000       0x26 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_line    0x0000000000000000      0x243 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_str     0x0000000000000000      0xd51 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .comment       0x0000000000000000       0x12 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .eh_frame      0x0000000000000000       0x58 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_info    0x0000000000000000      0x330 ../../lib/usb/libusb.a(debug.o)
+ .debug_abbrev  0x0000000000000000       0xf3 ../../lib/usb/libusb.a(debug.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/usb/libusb.a(debug.o)
+ .debug_line    0x0000000000000000      0x111 ../../lib/usb/libusb.a(debug.o)
+ .debug_str     0x0000000000000000      0x639 ../../lib/usb/libusb.a(debug.o)
+ .comment       0x0000000000000000       0x12 ../../lib/usb/libusb.a(debug.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/usb/libusb.a(debug.o)
+ .eh_frame      0x0000000000000000       0x44 ../../lib/usb/libusb.a(debug.o)
+ .debug_info    0x0000000000000000      0x428 ../../lib/drv/libdrv.a(logbuf.o)
+ .debug_abbrev  0x0000000000000000      0x187 ../../lib/drv/libdrv.a(logbuf.o)
+ .debug_loc     0x0000000000000000      0x3d3 ../../lib/drv/libdrv.a(logbuf.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/drv/libdrv.a(logbuf.o)
+ .debug_ranges  0x0000000000000000       0x80 ../../lib/drv/libdrv.a(logbuf.o)
+ .debug_line    0x0000000000000000      0x143 ../../lib/drv/libdrv.a(logbuf.o)
+ .debug_str     0x0000000000000000      0x30e ../../lib/drv/libdrv.a(logbuf.o)
+ .comment       0x0000000000000000       0x12 ../../lib/drv/libdrv.a(logbuf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/drv/libdrv.a(logbuf.o)
+ .eh_frame      0x0000000000000000       0x68 ../../lib/drv/libdrv.a(logbuf.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x2045
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130       0x57 main.o
+ *fill*         0x0000000000001187        0x9 
+ .text.startup  0x0000000000001190      0x20f main.o
+                0x0000000000001190                main
+ *fill*         0x000000000000139f        0x1 
+ .text          0x00000000000013a0      0x671 device.o
+                0x0000000000001480                add_interface_by_id
+                0x00000000000019b0                wait_for_interfaces_death
+ .text          0x0000000000001a11        0x0 ifaces.o
+ *fill*         0x0000000000001a11        0xf 
+ .text          0x0000000000001a20       0xff life.o
+                0x0000000000001a20                interface_life_live
+                0x0000000000001ab0                interface_live_on_data_in
+ *fill*         0x0000000000001b1f        0x1 
+ .text          0x0000000000001b20       0xed stdreq.o
+                0x0000000000001b20                req_get_descriptor
+                0x0000000000001b80                req_set_protocol
+                0x0000000000001bc0                req_set_report
+ *fill*         0x0000000000001c0d        0x3 
+ .text          0x0000000000001c10       0x8f hids/bootkbd.o
+ .text          0x0000000000001c9f        0x0 hids/logitech_wireless.o
+ *fill*         0x0000000000001c9f        0x1 
+ .text          0x0000000000001ca0      0x152 ../../lib/usbvirt/libusbvirt.a(device.o)
+                0x0000000000001d30                usbvirt_device_plug
+                0x0000000000001de0                usbvirt_device_unplug
+ *fill*         0x0000000000001df2        0xe 
+ .text          0x0000000000001e00      0x4e9 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+                0x0000000000001ed0                usbvirt_ipc_handle_call
+ *fill*         0x00000000000022e9        0x7 
+ .text          0x00000000000022f0      0x2e7 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+                0x0000000000002590                usbvirt_control_reply_helper
+                0x00000000000025d0                req_nop
+ *fill*         0x00000000000025d7        0x9 
+ .text          0x00000000000025e0      0x2a7 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+                0x00000000000025e0                usbvirt_control_write
+                0x00000000000026d0                usbvirt_control_read
+                0x00000000000027d0                usbvirt_data_out
+                0x0000000000002820                usbvirt_data_in
+ *fill*         0x0000000000002887        0x9 
+ .text          0x0000000000002890       0xb9 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+                0x0000000000002890                process_control_transfer
+ *fill*         0x0000000000002949        0x7 
+ .text          0x0000000000002950       0x85 ../../lib/usb/libusb.a(debug.o)
+                0x0000000000002950                usb_debug_str_buffer
+ *fill*         0x00000000000029d5        0xb 
+ .text          0x00000000000029e0      0x2c6 ../../lib/drv/libdrv.a(logbuf.o)
+                0x00000000000029e0                ddf_dump_buffer
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000002ca6      0x120 main.o
+ *fill*         0x0000000000002dc6        0x2 
+ .rodata.str1.4
+                0x0000000000002dc8      0x137 main.o
+ .rodata.str1.1
+                0x0000000000002eff        0xd device.o
+                                         0x16 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000002f0c        0xd life.o
+                                          0x4 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000002f0c       0x3e hids/bootkbd.o
+ *fill*         0x0000000000002f4a        0x2 
+ .rodata.str1.4
+                0x0000000000002f4c       0x1f hids/bootkbd.o
+ *fill*         0x0000000000002f6b        0x1 
+ .rodata.str1.4
+                0x0000000000002f6c       0x9a hids/logitech_wireless.o
+ .rodata.str1.1
+                0x0000000000003006        0x4 hids/logitech_wireless.o
+ .rodata.str1.1
+                0x000000000000300a       0x19 ../../lib/usbvirt/libusbvirt.a(device.o)
+ *fill*         0x0000000000003023        0x1 
+ .rodata        0x0000000000003024       0x1c ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .rodata.str1.1
+                0x0000000000003040       0x62 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .rodata.str1.1
+                0x00000000000030a2       0x1f ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ *fill*         0x00000000000030c1        0x3 
+ .rodata.str1.4
+                0x00000000000030c4       0x2c ../../lib/usbvirt/libusbvirt.a(transfer.o)
+                                         0x29 (size before relaxing)
+ .rodata.str1.1
+                0x00000000000030f0       0x33 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+                                         0x37 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000003123       0x52 ../../lib/drv/libdrv.a(logbuf.o)
+                                         0x59 (size before relaxing)
+
+.rel.plt        0x0000000000003178      0x140
+ *(.rel.plt)
+ .rel.plt       0x0000000000003178      0x140 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x00000000000032b8       0x20
+ *(.rel.*)
+ .rel.got       0x00000000000032b8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x00000000000032b8       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x00000000000032d8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x00000000000032d8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x00000000000032d8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x00000000000032e0      0x290
+ *(.plt)
+ .plt           0x00000000000032e0      0x290 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000032f0                __main
+                0x0000000000003300                devman_device_connect
+                0x0000000000003310                printf
+                0x0000000000003320                async_hangup
+                0x0000000000003330                getopt_long
+                0x0000000000003340                snprintf
+                0x0000000000003350                log_init
+                0x0000000000003360                async_data_read_finalize
+                0x0000000000003370                memcpy
+                0x0000000000003380                malloc
+                0x0000000000003390                str_append
+                0x00000000000033a0                async_answer_0
+                0x00000000000033b0                fibril_condvar_wait
+                0x00000000000033c0                log_msg
+                0x00000000000033d0                async_exchange_end
+                0x00000000000033e0                assert_abort
+                0x00000000000033f0                fibril_condvar_initialize
+                0x0000000000003400                fprintf
+                0x0000000000003410                fibril_condvar_broadcast
+                0x0000000000003420                fibril_mutex_unlock
+                0x0000000000003430                fibril_mutex_initialize
+                0x0000000000003440                realloc
+                0x0000000000003450                async_create_callback_port
+                0x0000000000003460                str_cmp
+                0x0000000000003470                memset
+                0x0000000000003480                async_data_read_receive
+                0x0000000000003490                str_cpy
+                0x00000000000034a0                async_usleep
+                0x00000000000034b0                async_get_call_timeout
+                0x00000000000034c0                str_size
+                0x00000000000034d0                async_answer_1
+                0x00000000000034e0                async_exchange_begin
+                0x00000000000034f0                str_error
+                0x0000000000003500                devman_fun_get_handle
+                0x0000000000003510                async_data_write_accept
+                0x0000000000003520                fibril_create_generic
+                0x0000000000003530                fibril_add_ready
+                0x0000000000003540                __syscall_fast
+                0x0000000000003550                free
+                0x0000000000003560                fibril_mutex_lock
+
+.dynsym         0x0000000000003570      0x2f0
+ *(.dynsym)
+ .dynsym        0x0000000000003570      0x2f0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000003860      0x2a0
+ *(.dynstr)
+ .dynstr        0x0000000000003860      0x2a0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000003b00      0x158
+ *(.hash)
+ .hash          0x0000000000003b00      0x158 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000003c58       0x13
+ *(.interp)
+ .interp        0x0000000000003c58       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004c6b                . = (. + 0x1000)
+
+.dynamic        0x0000000000004c6c       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000004c6c       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004c6c                _DYNAMIC
+
+.data           0x0000000000004d20      0x494
+ *(.data)
+ .data          0x0000000000004d20        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000004d20      0x250 main.o
+                0x0000000000004e68                descriptors
+                0x0000000000004e74                configuration
+ .data          0x0000000000004f70        0x0 device.o
+ .data          0x0000000000004f70        0xc ifaces.o
+                0x0000000000004f70                available_hid_interfaces
+ .data          0x0000000000004f7c        0x0 life.o
+ .data          0x0000000000004f7c        0x0 stdreq.o
+ *fill*         0x0000000000004f7c        0x4 
+ .data          0x0000000000004f80       0xdf hids/bootkbd.o
+                0x0000000000004f80                vuhid_interface_bootkbd
+                0x0000000000005020                report_descriptor
+ *fill*         0x000000000000505f        0x1 
+ .data          0x0000000000005060       0xf4 hids/logitech_wireless.o
+                0x0000000000005060                vuhid_interface_logitech_wireless_1
+ .data          0x0000000000005154        0x0 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .data          0x0000000000005154        0x0 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ *fill*         0x0000000000005154        0xc 
+ .data          0x0000000000005160       0x54 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+                0x0000000000005160                library_handlers
+ .data          0x00000000000051b4        0x0 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .data          0x00000000000051b4        0x0 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .data          0x00000000000051b4        0x0 ../../lib/usb/libusb.a(debug.o)
+ .data          0x00000000000051b4        0x0 ../../lib/drv/libdrv.a(logbuf.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000051b4        0x0
+ *(.got)
+ .got           0x00000000000051b4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000051b4       0xac
+ *(.got.plt)
+ .got.plt       0x00000000000051b4       0xac /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000051b4                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss           0x0000000000005260      0x1e4
+ *(.tbss)
+ .tbss          0x0000000000005260      0x1e4 ../../lib/usb/libusb.a(debug.o)
+
+.bss            0x0000000000005260       0x24
+ *(.dynbss)
+ .dynbss        0x0000000000005260       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005260                optarg
+                0x0000000000005264                optind
+                0x0000000000005268                __syscall_fast_func
+                0x0000000000005270                stderr
+ *(COMMON)
+ COMMON         0x0000000000005274        0x4 main.o
+                0x0000000000005274                assert
+ *(.bss)
+ .bss           0x0000000000005278        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000005278        0x0 main.o
+ .bss           0x0000000000005278        0x0 device.o
+ .bss           0x0000000000005278        0x0 ifaces.o
+ .bss           0x0000000000005278        0x0 life.o
+ .bss           0x0000000000005278        0x0 stdreq.o
+ .bss           0x0000000000005278        0x0 hids/bootkbd.o
+ .bss           0x0000000000005278        0x8 hids/logitech_wireless.o
+ .bss           0x0000000000005280        0x4 ../../lib/usbvirt/libusbvirt.a(device.o)
+ .bss           0x0000000000005284        0x0 ../../lib/usbvirt/libusbvirt.a(ipc_dev.o)
+ .bss           0x0000000000005284        0x0 ../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .bss           0x0000000000005284        0x0 ../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .bss           0x0000000000005284        0x0 ../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .bss           0x0000000000005284        0x0 ../../lib/usb/libusb.a(debug.o)
+ .bss           0x0000000000005284        0x0 ../../lib/drv/libdrv.a(logbuf.o)
+
+/DISCARD/
+ *(*)
+LOAD main.o
+LOAD device.o
+LOAD ifaces.o
+LOAD life.o
+LOAD stdreq.o
+LOAD hids/bootkbd.o
+LOAD hids/logitech_wireless.o
+LOAD ../../lib/usbvirt/libusbvirt.a
+LOAD ../../lib/usbhid/libusbhid.a
+LOAD ../../lib/usbdev/libusbdev.a
+LOAD ../../lib/usb/libusb.a
+LOAD ../../lib/drv/libdrv.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(vuh elf32-i386)

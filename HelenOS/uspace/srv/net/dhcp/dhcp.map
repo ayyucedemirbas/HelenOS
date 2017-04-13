@@ -1,0 +1,222 @@
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x1c8a dhcp.o
+ .debug_abbrev  0x0000000000000000      0x371 dhcp.o
+ .debug_loc     0x0000000000000000      0xbd9 dhcp.o
+ .debug_aranges
+                0x0000000000000000       0x20 dhcp.o
+ .debug_ranges  0x0000000000000000      0x108 dhcp.o
+ .debug_line    0x0000000000000000      0x5c0 dhcp.o
+ .debug_str     0x0000000000000000     0x10f5 dhcp.o
+ .comment       0x0000000000000000       0x12 dhcp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 dhcp.o
+ .eh_frame      0x0000000000000000      0x190 dhcp.o
+ .debug_info    0x0000000000000000      0x8cc main.o
+ .debug_abbrev  0x0000000000000000      0x245 main.o
+ .debug_loc     0x0000000000000000      0x1cb main.o
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+ .debug_ranges  0x0000000000000000       0x80 main.o
+ .debug_line    0x0000000000000000      0x26b main.o
+ .debug_str     0x0000000000000000      0x919 main.o
+ .comment       0x0000000000000000       0x12 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .eh_frame      0x0000000000000000       0x78 main.o
+ .debug_info    0x0000000000000000      0xd0a transport.o
+ .debug_abbrev  0x0000000000000000      0x28e transport.o
+ .debug_loc     0x0000000000000000       0xc4 transport.o
+ .debug_aranges
+                0x0000000000000000       0x20 transport.o
+ .debug_line    0x0000000000000000      0x2a6 transport.o
+ .debug_str     0x0000000000000000      0xb3b transport.o
+ .comment       0x0000000000000000       0x12 transport.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 transport.o
+ .eh_frame      0x0000000000000000      0x108 transport.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x1864
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0xe31 dhcp.o
+                0x0000000000001bb0                dhcpsrv_links_init
+                0x0000000000001bd0                dhcpsrv_link_add
+                0x0000000000001e30                dhcpsrv_link_remove
+                0x0000000000001e40                dhcpsrv_discover
+ *fill*         0x0000000000001f61        0xf 
+ .text          0x0000000000001f70       0xe9 main.o
+ *fill*         0x0000000000002059        0x7 
+ .text.startup  0x0000000000002060      0x156 main.o
+                0x0000000000002060                main
+ *fill*         0x00000000000021b6        0xa 
+ .text          0x00000000000021c0      0x224 transport.o
+                0x00000000000022a0                dhcp_send
+                0x0000000000002300                dhcp_transport_init
+                0x00000000000023c0                dhcp_transport_fini
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000023e4      0x29c dhcp.o
+ .rodata.str1.4
+                0x0000000000002680      0x143 dhcp.o
+ .rodata.str1.1
+                0x00000000000027c3       0x97 main.o
+                                         0x9c (size before relaxing)
+ *fill*         0x000000000000285a        0x2 
+ .rodata.str1.4
+                0x000000000000285c       0x99 main.o
+ .rodata.str1.1
+                0x00000000000028f5       0x7c transport.o
+ *fill*         0x0000000000002971        0x3 
+ .rodata.str1.4
+                0x0000000000002974       0x20 transport.o
+                                         0x1f (size before relaxing)
+
+.rel.plt        0x0000000000002994      0x140
+ *(.rel.plt)
+ .rel.plt       0x0000000000002994      0x140 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000002ad4       0x18
+ *(.rel.*)
+ .rel.got       0x0000000000002ad4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000002ad4       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000002aec        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000002aec        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000002aec        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000002af0      0x290
+ *(.plt)
+ .plt           0x0000000000002af0      0x290 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002b00                __main
+                0x0000000000002b10                inetcfg_init
+                0x0000000000002b20                task_retval
+                0x0000000000002b30                printf
+                0x0000000000002b40                udp_rmsg_read
+                0x0000000000002b50                log_init
+                0x0000000000002b60                loc_service_register
+                0x0000000000002b70                fibril_timer_clear
+                0x0000000000002b80                async_answer_0
+                0x0000000000002b90                log_msg
+                0x0000000000002ba0                inetcfg_addr_create_static
+                0x0000000000002bb0                fibril_timer_destroy
+                0x0000000000002bc0                udp_assoc_userptr
+                0x0000000000002bd0                assert_abort
+                0x0000000000002be0                calloc
+                0x0000000000002bf0                fibril_timer_set
+                0x0000000000002c00                udp_assoc_destroy
+                0x0000000000002c10                inet_addr_format
+                0x0000000000002c20                udp_assoc_create
+                0x0000000000002c30                inet_ep2_init
+                0x0000000000002c40                inet_addr_set
+                0x0000000000002c50                udp_rmsg_size
+                0x0000000000002c60                inetcfg_link_get
+                0x0000000000002c70                dnsr_set_srvaddr
+                0x0000000000002c80                memset
+                0x0000000000002c90                udp_destroy
+                0x0000000000002ca0                inetcfg_sroute_create
+                0x0000000000002cb0                loc_server_register
+                0x0000000000002cc0                inet_naddr_set
+                0x0000000000002cd0                async_get_call_timeout
+                0x0000000000002ce0                inet_ep_init
+                0x0000000000002cf0                addr48
+                0x0000000000002d00                udp_assoc_send_msg
+                0x0000000000002d10                inet_naddr_format
+                0x0000000000002d20                fibril_switch
+                0x0000000000002d30                __syscall_fast
+                0x0000000000002d40                udp_create
+                0x0000000000002d50                fibril_timer_create
+                0x0000000000002d60                async_set_fallback_port_handler
+                0x0000000000002d70                free
+
+.dynsym         0x0000000000002d80      0x2e0
+ *(.dynsym)
+ .dynsym        0x0000000000002d80      0x2e0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000003060      0x2bf
+ *(.dynstr)
+ .dynstr        0x0000000000003060      0x2bf /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000003320      0x154
+ *(.hash)
+ .hash          0x0000000000003320      0x154 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000003474       0x13
+ *(.interp)
+ .interp        0x0000000000003474       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004487                . = (. + 0x1000)
+
+.dynamic        0x0000000000004488       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000004488       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004488                _DYNAMIC
+
+.data           0x0000000000004530        0xc
+ *(.data)
+ .data          0x0000000000004530        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000004530        0x0 dhcp.o
+ .data          0x0000000000004530        0x0 main.o
+ .data          0x0000000000004530        0xc transport.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x000000000000453c        0x0
+ *(.got)
+ .got           0x000000000000453c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x000000000000453c       0xac
+ *(.got.plt)
+ .got.plt       0x000000000000453c       0xac /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000453c                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000004600      0x840
+ *(.dynbss)
+ .dynbss        0x0000000000004600        0xc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004600                __syscall_fast_func
+                0x0000000000004604                async_futex
+                0x0000000000004608                addr32_broadcast_all_hosts
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000460c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x000000000000460c       0x14 
+ .bss           0x0000000000004620      0x420 dhcp.o
+ .bss           0x0000000000004a40        0x0 main.o
+ .bss           0x0000000000004a40      0x400 transport.o
+
+/DISCARD/
+ *(*)
+LOAD dhcp.o
+LOAD main.o
+LOAD transport.o
+LOAD ../../../lib/c/libc.so.0
+LOAD ../../../lib/softint/libsoftint.so.0
+OUTPUT(dhcp elf32-i386)

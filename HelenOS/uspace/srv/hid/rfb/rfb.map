@@ -1,0 +1,258 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../lib/graph/libgraph.a(graph.o)
+                              main.o (graph_init_visualizer)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x15ff main.o
+ .debug_abbrev  0x0000000000000000      0x34b main.o
+ .debug_loc     0x0000000000000000      0x5cb main.o
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+ .debug_ranges  0x0000000000000000      0x190 main.o
+ .debug_line    0x0000000000000000      0x4a5 main.o
+ .debug_str     0x0000000000000000     0x1065 main.o
+ .comment       0x0000000000000000       0x12 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .eh_frame      0x0000000000000000      0x150 main.o
+ .debug_info    0x0000000000000000     0x331a rfb.o
+ .debug_abbrev  0x0000000000000000      0x47b rfb.o
+ .debug_loc     0x0000000000000000     0x30e3 rfb.o
+ .debug_aranges
+                0x0000000000000000       0x20 rfb.o
+ .debug_ranges  0x0000000000000000      0x998 rfb.o
+ .debug_line    0x0000000000000000      0xa71 rfb.o
+ .debug_str     0x0000000000000000     0x11ca rfb.o
+ .comment       0x0000000000000000       0x12 rfb.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 rfb.o
+ .eh_frame      0x0000000000000000      0x1b8 rfb.o
+ .debug_info    0x0000000000000000     0x2378 ../../../lib/graph/libgraph.a(graph.o)
+ .debug_abbrev  0x0000000000000000      0x486 ../../../lib/graph/libgraph.a(graph.o)
+ .debug_loc     0x0000000000000000      0xf2a ../../../lib/graph/libgraph.a(graph.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../../lib/graph/libgraph.a(graph.o)
+ .debug_ranges  0x0000000000000000      0x238 ../../../lib/graph/libgraph.a(graph.o)
+ .debug_line    0x0000000000000000      0x5ab ../../../lib/graph/libgraph.a(graph.o)
+ .debug_str     0x0000000000000000     0x11d4 ../../../lib/graph/libgraph.a(graph.o)
+ .comment       0x0000000000000000       0x12 ../../../lib/graph/libgraph.a(graph.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../lib/graph/libgraph.a(graph.o)
+ .eh_frame      0x0000000000000000      0x2fc ../../../lib/graph/libgraph.a(graph.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x40bc
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x297 main.o
+ *fill*         0x00000000000013c7        0x9 
+ .text.startup  0x00000000000013d0      0x3c3 main.o
+                0x00000000000013d0                main
+ *fill*         0x0000000000001793        0xd 
+ .text          0x00000000000017a0     0x2696 rfb.o
+                0x0000000000003bf0                rfb_init
+                0x0000000000003ce0                rfb_set_size
+                0x0000000000003d70                rfb_listen
+ *fill*         0x0000000000003e36        0xa 
+ .text          0x0000000000003e40      0x83b ../../../lib/graph/libgraph.a(graph.o)
+                0x0000000000003e40                graph_alloc_visualizer
+                0x0000000000003e60                graph_alloc_renderer
+                0x0000000000003e70                graph_init_visualizer
+                0x0000000000003ed0                graph_init_renderer
+                0x0000000000003ef0                graph_register_visualizer
+                0x0000000000003ff0                graph_register_renderer
+                0x00000000000040f0                graph_get_visualizer
+                0x0000000000004150                graph_get_renderer
+                0x00000000000041b0                graph_unregister_visualizer
+                0x0000000000004210                graph_unregister_renderer
+                0x0000000000004270                graph_destroy_visualizer
+                0x0000000000004370                graph_destroy_renderer
+                0x00000000000043a0                graph_notify_mode_change
+                0x00000000000043f0                graph_notify_disconnect
+                0x0000000000004450                graph_visualizer_connection
+                0x0000000000004490                graph_renderer_connection
+                0x00000000000044d0                graph_client_connection
+ .text.unlikely
+                0x000000000000467b      0x508 ../../../lib/graph/libgraph.a(graph.o)
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000004b83       0x65 main.o
+ .rodata.str1.4
+                0x0000000000004be8      0x143 main.o
+ *fill*         0x0000000000004d2b        0x1 
+ .rodata        0x0000000000004d2c       0x18 main.o
+ .rodata.str1.1
+                0x0000000000004d44       0xe4 rfb.o
+ .rodata.str1.4
+                0x0000000000004e28      0x279 rfb.o
+ *fill*         0x00000000000050a1        0x3 
+ .rodata        0x00000000000050a4       0x1c rfb.o
+ .rodata        0x00000000000050c0       0x28 ../../../lib/graph/libgraph.a(graph.o)
+ .rodata.str1.1
+                0x00000000000050e8       0xbb ../../../lib/graph/libgraph.a(graph.o)
+                                         0xc6 (size before relaxing)
+ *fill*         0x00000000000051a3        0x1 
+ .rodata.str1.4
+                0x00000000000051a4       0x48 ../../../lib/graph/libgraph.a(graph.o)
+                                         0x47 (size before relaxing)
+
+.rel.plt        0x00000000000051ec      0x188
+ *(.rel.plt)
+ .rel.plt       0x00000000000051ec      0x188 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000005374       0x18
+ *(.rel.*)
+ .rel.got       0x0000000000005374        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000005374       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x000000000000538c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x000000000000538c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x000000000000538c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.unlikely
+                0x000000000000538c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000005390      0x320
+ *(.plt)
+ .plt           0x0000000000005390      0x320 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000053a0                __main
+                0x00000000000053b0                loc_category_get_id
+                0x00000000000053c0                task_retval
+                0x00000000000053d0                printf
+                0x00000000000053e0                async_hangup
+                0x00000000000053f0                snprintf
+                0x0000000000005400                log_init
+                0x0000000000005410                loc_service_register
+                0x0000000000005420                fibril_mutex_is_locked
+                0x0000000000005430                tcp_listener_userptr
+                0x0000000000005440                async_data_read_finalize
+                0x0000000000005450                memcpy
+                0x0000000000005460                tcp_conn_send
+                0x0000000000005470                malloc
+                0x0000000000005480                tcp_listener_destroy
+                0x0000000000005490                async_share_out_receive
+                0x00000000000054a0                strtoul
+                0x00000000000054b0                async_req_fast
+                0x00000000000054c0                as_area_destroy
+                0x00000000000054d0                async_answer_0
+                0x00000000000054e0                log_msg
+                0x00000000000054f0                async_exchange_end
+                0x0000000000005500                assert_abort
+                0x0000000000005510                async_share_out_finalize
+                0x0000000000005520                fprintf
+                0x0000000000005530                tcp_listener_create
+                0x0000000000005540                fibril_mutex_unlock
+                0x0000000000005550                async_callback_receive_start
+                0x0000000000005560                str_dup
+                0x0000000000005570                loc_service_unregister
+                0x0000000000005580                fibril_mutex_initialize
+                0x0000000000005590                tcp_destroy
+                0x00000000000055a0                memcmp
+                0x00000000000055b0                loc_service_add_to_cat
+                0x00000000000055c0                memset
+                0x00000000000055d0                async_data_read_receive
+                0x00000000000055e0                asprintf
+                0x00000000000055f0                loc_server_register
+                0x0000000000005600                async_get_call_timeout
+                0x0000000000005610                inet_ep_init
+                0x0000000000005620                str_length
+                0x0000000000005630                async_exchange_begin
+                0x0000000000005640                fibril_switch
+                0x0000000000005650                __syscall_fast
+                0x0000000000005660                tcp_create
+                0x0000000000005670                async_set_fallback_port_handler
+                0x0000000000005680                tcp_conn_recv_wait
+                0x0000000000005690                free
+                0x00000000000056a0                fibril_mutex_lock
+
+.dynsym         0x00000000000056b0      0x370
+ *(.dynsym)
+ .dynsym        0x00000000000056b0      0x370 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000005a20      0x34a
+ *(.dynstr)
+ .dynstr        0x0000000000005a20      0x34a /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000005d6c      0x178
+ *(.hash)
+ .hash          0x0000000000005d6c      0x178 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000005ee4       0x13
+ *(.interp)
+ .interp        0x0000000000005ee4       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000006ef7                . = (. + 0x1000)
+
+.dynamic        0x0000000000006ef8       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000006ef8       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000006ef8                _DYNAMIC
+
+.data           0x0000000000006fa0       0x34
+ *(.data)
+ .data          0x0000000000006fa0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000006fa0        0x0 main.o
+ .data          0x0000000000006fa0        0x4 rfb.o
+ .data          0x0000000000006fa4       0x30 ../../../lib/graph/libgraph.a(graph.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000006fd4        0x0
+ *(.got)
+ .got           0x0000000000006fd4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000006fd4       0xd0
+ *(.got.plt)
+ .got.plt       0x0000000000006fd4       0xd0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000006fd4                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x00000000000070c0      0x4fc
+ *(.dynbss)
+ .dynbss        0x00000000000070c0        0xc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000070c0                __syscall_fast_func
+                0x00000000000070c4                async_futex
+                0x00000000000070c8                stderr
+ *(COMMON)
+ *(.bss)
+ .bss           0x00000000000070cc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x00000000000070cc       0x14 
+ .bss           0x00000000000070e0       0x90 main.o
+ *fill*         0x0000000000007170       0x10 
+ .bss           0x0000000000007180      0x434 rfb.o
+ .bss           0x00000000000075b4        0x8 ../../../lib/graph/libgraph.a(graph.o)
+
+/DISCARD/
+ *(*)
+LOAD main.o
+LOAD rfb.o
+LOAD ../../../lib/graph/libgraph.a
+LOAD ../../../lib/c/libc.so.0
+LOAD ../../../lib/softint/libsoftint.so.0
+OUTPUT(rfb elf32-i386)

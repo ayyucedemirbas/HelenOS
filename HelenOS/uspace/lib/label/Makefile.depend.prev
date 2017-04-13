@@ -1,0 +1,151 @@
+# DO NOT DELETE
+
+src/dummy.o: ../../lib/block/block.h ../../lib/c/include/stdint.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/dummy.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+src/dummy.o: ../../lib/c/include/sys/types.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/dummy.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/dummy.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdbool.h
+src/dummy.o: ../../../abi/include/abi/bool.h
+src/dummy.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+src/dummy.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/dummy.o: ../../lib/c/include/fibril.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/dummy.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/dummy.o: ../../lib/c/include/stddef.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/dummy.o: ../../lib/c/include/sys/time.h
+src/dummy.o: ../../../abi/include/abi/ddi/irq.h
+src/dummy.o: ../../../abi/include/abi/ipc/event.h
+src/dummy.o: ../../../abi/include/abi/ipc/interfaces.h
+src/dummy.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/dummy.o: ../../lib/c/include/fibril_synch.h
+src/dummy.o: ../../lib/c/include/adt/hash_table.h
+src/dummy.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/dummy.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/dummy.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+src/dummy.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/errno.h
+src/dummy.o: ../../../abi/include/abi/errno.h ../../lib/c/include/mem.h
+src/dummy.o: ../../lib/c/include/cc.h ../../lib/c/include/stdlib.h
+src/dummy.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/dummy.o: src/dummy.h include/types/liblabel.h
+src/dummy.o: ../../lib/c/include/types/label.h
+src/dummy.o: ../../lib/c/include/types/uuid.h ../../lib/c/include/vol.h
+src/dummy.o: ../../lib/c/include/types/vol.h ../../lib/c/include/uuid.h
+src/mbr.o: ../../lib/block/block.h ../../lib/c/include/stdint.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/mbr.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+src/mbr.o: ../../lib/c/include/sys/types.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/mbr.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/mbr.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdbool.h
+src/mbr.o: ../../../abi/include/abi/bool.h
+src/mbr.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+src/mbr.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/mbr.o: ../../lib/c/include/fibril.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/mbr.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/mbr.o: ../../lib/c/include/stddef.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/mbr.o: ../../lib/c/include/sys/time.h ../../../abi/include/abi/ddi/irq.h
+src/mbr.o: ../../../abi/include/abi/ipc/event.h
+src/mbr.o: ../../../abi/include/abi/ipc/interfaces.h
+src/mbr.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/mbr.o: ../../lib/c/include/fibril_synch.h
+src/mbr.o: ../../lib/c/include/adt/hash_table.h ../../lib/c/include/unistd.h
+src/mbr.o: ../../lib/c/include/time.h
+src/mbr.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/mbr.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+src/mbr.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/byteorder.h
+src/mbr.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/mbr.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/mbr.o: ../../lib/c/include/stdlib.h ../../lib/c/include/malloc.h
+src/mbr.o: ../../lib/c/include/stacktrace.h include/std/mbr.h src/mbr.h
+src/mbr.o: include/types/liblabel.h ../../lib/c/include/types/label.h
+src/mbr.o: ../../lib/c/include/types/uuid.h ../../lib/c/include/vol.h
+src/mbr.o: ../../lib/c/include/types/vol.h ../../lib/c/include/uuid.h
+src/gpt.o: ../../lib/c/include/adt/checksum.h ../../lib/c/include/sys/types.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/gpt.o: ../../lib/block/block.h ../../lib/c/include/stdint.h
+src/gpt.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+src/gpt.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/gpt.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdbool.h
+src/gpt.o: ../../../abi/include/abi/bool.h
+src/gpt.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+src/gpt.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/gpt.o: ../../lib/c/include/fibril.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/gpt.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/gpt.o: ../../lib/c/include/stddef.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/gpt.o: ../../lib/c/include/sys/time.h ../../../abi/include/abi/ddi/irq.h
+src/gpt.o: ../../../abi/include/abi/ipc/event.h
+src/gpt.o: ../../../abi/include/abi/ipc/interfaces.h
+src/gpt.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/gpt.o: ../../lib/c/include/fibril_synch.h
+src/gpt.o: ../../lib/c/include/adt/hash_table.h ../../lib/c/include/unistd.h
+src/gpt.o: ../../lib/c/include/time.h
+src/gpt.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/gpt.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+src/gpt.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/byteorder.h
+src/gpt.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/gpt.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/gpt.o: ../../lib/c/include/stdlib.h ../../lib/c/include/malloc.h
+src/gpt.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/uuid.h
+src/gpt.o: ../../lib/c/include/types/uuid.h include/std/mbr.h
+src/gpt.o: include/std/gpt.h src/gpt.h include/types/liblabel.h
+src/gpt.o: ../../lib/c/include/types/label.h ../../lib/c/include/vol.h
+src/gpt.o: ../../lib/c/include/types/vol.h
+src/label.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/label.o: ../../lib/c/include/stdbool.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/label.o: ../../../abi/include/abi/bool.h ../../lib/c/include/stddef.h
+src/label.o: ../../lib/c/include/sys/types.h ../../lib/c/include/errno.h
+src/label.o: ../../../abi/include/abi/errno.h include/label.h
+src/label.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+src/label.o: ../../lib/c/include/ipc/common.h
+src/label.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/label.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+src/label.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+src/label.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/label.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/label.o: ../../lib/c/include/sys/time.h
+src/label.o: ../../../abi/include/abi/ddi/irq.h
+src/label.o: ../../../abi/include/abi/ipc/event.h
+src/label.o: ../../../abi/include/abi/ipc/interfaces.h
+src/label.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/label.o: ../../lib/c/include/types/label.h
+src/label.o: ../../lib/c/include/types/uuid.h include/types/liblabel.h
+src/label.o: ../../lib/c/include/vol.h ../../lib/c/include/types/vol.h
+src/label.o: ../../lib/c/include/uuid.h ../../lib/c/include/mem.h
+src/label.o: ../../lib/c/include/cc.h ../../lib/c/include/stdlib.h
+src/label.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/label.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/label.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/label.o: src/dummy.h src/gpt.h src/mbr.h
+# DO NOT DELETE

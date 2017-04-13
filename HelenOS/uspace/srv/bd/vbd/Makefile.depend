@@ -1,0 +1,95 @@
+# DO NOT DELETE
+
+disk.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+disk.o: ../../../lib/c/include/stdbool.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+disk.o: ../../../../abi/include/abi/bool.h ../../../lib/c/include/stddef.h
+disk.o: ../../../lib/c/include/sys/types.h ../../../lib/c/include/bd_srv.h
+disk.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+disk.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+disk.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+disk.o: ../../../../abi/include/abi/proc/task.h
+disk.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+disk.o: ../../../../abi/include/abi/syscall.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+disk.o: ../../../lib/c/include/fibril.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+disk.o: ../../../lib/c/include/sys/time.h
+disk.o: ../../../../abi/include/abi/ddi/irq.h
+disk.o: ../../../../abi/include/abi/ipc/event.h
+disk.o: ../../../../abi/include/abi/ipc/interfaces.h
+disk.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+disk.o: ../../../lib/c/include/fibril_synch.h ../../../lib/block/block.h
+disk.o: ../../../lib/c/include/adt/hash_table.h
+disk.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+disk.o: ../../../lib/c/include/macros.h ../../../lib/c/include/loc.h
+disk.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/errno.h
+disk.o: ../../../../abi/include/abi/errno.h ../../../lib/c/include/io/log.h
+disk.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/inttypes.h
+disk.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+disk.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+disk.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/str.h
+disk.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+disk.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/stdlib.h
+disk.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+disk.o: ../../../lib/c/include/task.h ../../../lib/c/include/types/task.h
+disk.o: ../../../lib/c/include/vbd.h ../../../lib/c/include/types/label.h
+disk.o: ../../../lib/c/include/types/uuid.h disk.h types/vbd.h
+disk.o: ../../../lib/label/include/label.h
+disk.o: ../../../lib/label/include/types/liblabel.h
+disk.o: ../../../lib/c/include/vol.h ../../../lib/c/include/types/vol.h
+disk.o: ../../../lib/c/include/uuid.h
+vbd.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+vbd.o: ../../../lib/c/include/sys/types.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+vbd.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+vbd.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+vbd.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+vbd.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+vbd.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+vbd.o: ../../../lib/c/include/fibril.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+vbd.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+vbd.o: ../../../lib/c/include/stddef.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+vbd.o: ../../../lib/c/include/sys/time.h
+vbd.o: ../../../../abi/include/abi/ddi/irq.h
+vbd.o: ../../../../abi/include/abi/ipc/event.h
+vbd.o: ../../../../abi/include/abi/ipc/interfaces.h
+vbd.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+vbd.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+vbd.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+vbd.o: ../../../lib/c/include/inttypes.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+vbd.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+vbd.o: ../../../lib/c/include/ipc/services.h ../../../lib/c/include/ipc/vbd.h
+vbd.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+vbd.o: ../../../lib/c/include/macros.h ../../../lib/c/include/stdio.h
+vbd.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+vbd.o: ../../../lib/c/include/cc.h ../../../../abi/include/abi/kio.h
+vbd.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+vbd.o: ../../../lib/c/include/time.h
+vbd.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+vbd.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+vbd.o: ../../../lib/c/include/task.h ../../../lib/c/include/types/task.h
+vbd.o: ../../../lib/c/include/vbd.h ../../../lib/c/include/types/label.h
+vbd.o: ../../../lib/c/include/types/uuid.h disk.h types/vbd.h
+vbd.o: ../../../lib/c/include/bd_srv.h ../../../lib/c/include/fibril_synch.h
+vbd.o: ../../../lib/label/include/label.h
+vbd.o: ../../../lib/label/include/types/liblabel.h
+vbd.o: ../../../lib/c/include/vol.h ../../../lib/c/include/types/vol.h
+vbd.o: ../../../lib/c/include/uuid.h
+# DO NOT DELETE

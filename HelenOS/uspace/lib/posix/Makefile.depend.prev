@@ -1,0 +1,724 @@
+# DO NOT DELETE
+
+source/ctype.o: include/posix/ctype.h include/libc/ctype.h
+source/errno.o: include/posix/errno.h include/libc/errno.h
+source/errno.o: ../../../abi/include/abi/errno.h include/posix/stdlib.h
+source/errno.o: include/posix/sys/types.h include/libc/sys/types.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/errno.o: include/libc/sys/time.h include/libc/fibril.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/errno.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+source/errno.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+source/errno.o: ../../lib/c/include/stddef.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/errno.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+source/errno.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/fcntl.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/fcntl.o: include/posix/sys/types.h include/libc/sys/types.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/fcntl.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/fcntl.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/fcntl.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/fcntl.o: ../../../abi/include/abi/bool.h
+source/fcntl.o: ../../lib/c/include/io/verify.h
+source/fcntl.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/fcntl.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/fcntl.o: ../../lib/c/include/sys/time.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/fcntl.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+source/fcntl.o: include/posix/fcntl.h include/libc/fcntl.h
+source/fcntl.o: include/posix/errno.h include/libc/errno.h
+source/fcntl.o: ../../../abi/include/abi/errno.h include/libc/unistd.h
+source/fcntl.o: include/libc/vfs/vfs.h ../../lib/c/include/ipc/vfs.h
+source/fcntl.o: ../../lib/c/include/ipc/common.h
+source/fcntl.o: ../../../abi/include/abi/ipc/ipc.h
+source/fcntl.o: ../../lib/c/include/atomic.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/fcntl.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+source/fcntl.o: ../../../abi/include/abi/proc/task.h
+source/fcntl.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+source/fcntl.o: ../../../abi/include/abi/syscall.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/fcntl.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/adt/list.h
+source/fcntl.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+source/fcntl.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/fcntl.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/fcntl.o: ../../../abi/include/abi/ddi/irq.h
+source/fcntl.o: ../../../abi/include/abi/ipc/event.h
+source/fcntl.o: ../../../abi/include/abi/ipc/interfaces.h
+source/fcntl.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+source/fcntl.o: include/libc/vfs/vfs_mtab.h include/posix/errno.h
+source/fnmatch.o: include/libc/stdbool.h
+source/fnmatch.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/fnmatch.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/fnmatch.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/fnmatch.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/fnmatch.o: ../../../abi/include/abi/bool.h include/posix/ctype.h
+source/fnmatch.o: include/libc/ctype.h include/posix/string.h
+source/fnmatch.o: include/posix/sys/types.h include/libc/sys/types.h
+source/fnmatch.o: include/libc/sys/time.h include/posix/stdlib.h
+source/fnmatch.o: include/posix/assert.h include/libc/assert.h
+source/fnmatch.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/fnmatch.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+source/fnmatch.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+source/fnmatch.o: ../../lib/c/include/stdbool.h
+source/fnmatch.o: ../../lib/c/include/io/verify.h
+source/fnmatch.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/fnmatch.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/fnmatch.o: ../../lib/c/include/sys/time.h
+source/fnmatch.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/fnmatch.o: ../../lib/c/include/malloc.h
+source/fnmatch.o: ../../lib/c/include/stacktrace.h include/posix/fnmatch.h
+source/getopt.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/getopt.o: include/posix/sys/types.h include/libc/sys/types.h
+source/getopt.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/getopt.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/getopt.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/getopt.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/getopt.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/getopt.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/getopt.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/getopt.o: ../../../abi/include/abi/bool.h
+source/getopt.o: ../../lib/c/include/io/verify.h
+source/getopt.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/getopt.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/getopt.o: ../../lib/c/include/sys/time.h
+source/getopt.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/getopt.o: ../../lib/c/include/malloc.h
+source/getopt.o: ../../lib/c/include/stacktrace.h include/libc/getopt.h
+source/getopt.o: include/posix/getopt.h
+source/locale.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/locale.o: include/posix/sys/types.h include/libc/sys/types.h
+source/locale.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/locale.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/locale.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/locale.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/locale.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/locale.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/locale.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/locale.o: ../../../abi/include/abi/bool.h
+source/locale.o: ../../lib/c/include/io/verify.h
+source/locale.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/locale.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/locale.o: ../../lib/c/include/sys/time.h
+source/locale.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/locale.o: ../../lib/c/include/malloc.h
+source/locale.o: ../../lib/c/include/stacktrace.h include/posix/locale.h
+source/locale.o: include/posix/errno.h include/libc/errno.h
+source/locale.o: ../../../abi/include/abi/errno.h include/posix/limits.h
+source/locale.o: ../../lib/c/include/stdint.h include/posix/string.h
+source/pthread/condvar.o: include/posix/pthread.h include/libc/thread.h
+source/pthread/condvar.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/pthread/condvar.o: include/posix/sys/types.h include/libc/sys/types.h
+source/pthread/condvar.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/pthread/condvar.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/pthread/condvar.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/pthread/condvar.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/pthread/condvar.o: include/libc/sys/time.h
+source/pthread/condvar.o: ../../../abi/include/abi/proc/thread.h
+source/pthread/condvar.o: ../../lib/c/include/time.h
+source/pthread/condvar.o: ../../lib/c/include/sys/time.h
+source/pthread/condvar.o: include/posix/errno.h include/libc/errno.h
+source/pthread/condvar.o: ../../../abi/include/abi/errno.h
+source/pthread/condvar.o: source/internal/common.h
+source/pthread/condvar.o: ../../lib/c/include/stdio.h
+source/pthread/condvar.o: ../../lib/c/include/stdarg.h
+source/pthread/condvar.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/pthread/condvar.o: ../../lib/c/include/cc.h
+source/pthread/condvar.o: ../../lib/c/include/stdbool.h
+source/pthread/condvar.o: ../../../abi/include/abi/bool.h
+source/pthread/condvar.o: ../../lib/c/include/io/verify.h
+source/pthread/condvar.o: ../../../abi/include/abi/kio.h
+source/pthread/condvar.o: ../../lib/c/include/stdlib.h
+source/pthread/condvar.o: ../../lib/c/include/unistd.h
+source/pthread/condvar.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/pthread/condvar.o: ../../lib/c/include/malloc.h
+source/pthread/condvar.o: ../../lib/c/include/stacktrace.h
+source/pthread/keys.o: include/posix/stdlib.h include/posix/sys/types.h
+source/pthread/keys.o: include/libc/sys/types.h
+source/pthread/keys.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/pthread/keys.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/pthread/keys.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/pthread/keys.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/pthread/keys.o: include/libc/sys/time.h include/posix/pthread.h
+source/pthread/keys.o: include/libc/thread.h
+source/pthread/keys.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/pthread/keys.o: ../../../abi/include/abi/proc/thread.h
+source/pthread/keys.o: ../../lib/c/include/time.h
+source/pthread/keys.o: ../../lib/c/include/sys/time.h include/posix/errno.h
+source/pthread/keys.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/pthread/keys.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/pthread/keys.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+source/pthread/keys.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+source/pthread/keys.o: ../../lib/c/include/stdbool.h
+source/pthread/keys.o: ../../../abi/include/abi/bool.h
+source/pthread/keys.o: ../../lib/c/include/io/verify.h
+source/pthread/keys.o: ../../../abi/include/abi/kio.h
+source/pthread/keys.o: ../../lib/c/include/stdlib.h
+source/pthread/keys.o: ../../lib/c/include/unistd.h
+source/pthread/keys.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/pthread/keys.o: ../../lib/c/include/malloc.h
+source/pthread/keys.o: ../../lib/c/include/stacktrace.h
+source/pthread/mutex.o: include/posix/pthread.h include/libc/thread.h
+source/pthread/mutex.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/pthread/mutex.o: include/posix/sys/types.h include/libc/sys/types.h
+source/pthread/mutex.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/pthread/mutex.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/pthread/mutex.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/pthread/mutex.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/pthread/mutex.o: include/libc/sys/time.h
+source/pthread/mutex.o: ../../../abi/include/abi/proc/thread.h
+source/pthread/mutex.o: ../../lib/c/include/time.h
+source/pthread/mutex.o: ../../lib/c/include/sys/time.h include/posix/errno.h
+source/pthread/mutex.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/pthread/mutex.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/pthread/mutex.o: ../../lib/c/include/stdarg.h
+source/pthread/mutex.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/pthread/mutex.o: ../../lib/c/include/cc.h
+source/pthread/mutex.o: ../../lib/c/include/stdbool.h
+source/pthread/mutex.o: ../../../abi/include/abi/bool.h
+source/pthread/mutex.o: ../../lib/c/include/io/verify.h
+source/pthread/mutex.o: ../../../abi/include/abi/kio.h
+source/pthread/mutex.o: ../../lib/c/include/stdlib.h
+source/pthread/mutex.o: ../../lib/c/include/unistd.h
+source/pthread/mutex.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/pthread/mutex.o: ../../lib/c/include/malloc.h
+source/pthread/mutex.o: ../../lib/c/include/stacktrace.h
+source/pthread/threads.o: include/posix/pthread.h include/libc/thread.h
+source/pthread/threads.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/pthread/threads.o: include/posix/sys/types.h include/libc/sys/types.h
+source/pthread/threads.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/pthread/threads.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/pthread/threads.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/pthread/threads.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/pthread/threads.o: include/libc/sys/time.h
+source/pthread/threads.o: ../../../abi/include/abi/proc/thread.h
+source/pthread/threads.o: ../../lib/c/include/time.h
+source/pthread/threads.o: ../../lib/c/include/sys/time.h
+source/pthread/threads.o: include/posix/errno.h include/libc/errno.h
+source/pthread/threads.o: ../../../abi/include/abi/errno.h
+source/pthread/threads.o: include/posix/stdlib.h source/internal/common.h
+source/pthread/threads.o: ../../lib/c/include/stdio.h
+source/pthread/threads.o: ../../lib/c/include/stdarg.h
+source/pthread/threads.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/pthread/threads.o: ../../lib/c/include/cc.h
+source/pthread/threads.o: ../../lib/c/include/stdbool.h
+source/pthread/threads.o: ../../../abi/include/abi/bool.h
+source/pthread/threads.o: ../../lib/c/include/io/verify.h
+source/pthread/threads.o: ../../../abi/include/abi/kio.h
+source/pthread/threads.o: ../../lib/c/include/stdlib.h
+source/pthread/threads.o: ../../lib/c/include/unistd.h
+source/pthread/threads.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/pthread/threads.o: ../../lib/c/include/malloc.h
+source/pthread/threads.o: ../../lib/c/include/stacktrace.h
+source/pwd.o: include/libc/stdbool.h
+source/pwd.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/pwd.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/pwd.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/pwd.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/pwd.o: ../../../abi/include/abi/bool.h include/posix/pwd.h
+source/pwd.o: include/posix/sys/types.h include/libc/sys/types.h
+source/pwd.o: include/libc/sys/time.h include/posix/string.h
+source/pwd.o: include/posix/errno.h include/libc/errno.h
+source/pwd.o: ../../../abi/include/abi/errno.h include/posix/assert.h
+source/pwd.o: include/libc/assert.h
+source/signal.o: include/posix/signal.h include/posix/sys/types.h
+source/signal.o: include/libc/sys/types.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/signal.o: include/libc/sys/time.h include/posix/ucontext.h
+source/signal.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/signal.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+source/signal.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+source/signal.o: ../../lib/c/include/stdbool.h
+source/signal.o: ../../../abi/include/abi/bool.h
+source/signal.o: ../../lib/c/include/io/verify.h
+source/signal.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/signal.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/signal.o: ../../lib/c/include/sys/time.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/signal.o: ../../lib/c/include/malloc.h
+source/signal.o: ../../lib/c/include/stacktrace.h include/posix/limits.h
+source/signal.o: ../../lib/c/include/stdint.h include/posix/stdlib.h
+source/signal.o: include/posix/string.h include/posix/errno.h
+source/signal.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/signal.o: include/libc/fibril_synch.h ../../lib/c/include/fibril.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/signal.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+source/signal.o: ../../lib/c/include/stddef.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/signal.o: ../../lib/c/include/libc.h
+source/signal.o: ../../../abi/include/abi/syscall.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/signal.o: include/libc/task.h ../../../abi/include/abi/proc/task.h
+source/signal.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+source/signal.o: ../../../abi/include/abi/ipc/ipc.h
+source/signal.o: ../../lib/c/include/atomic.h
+source/signal.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/signal.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/futex.h
+source/signal.o: ../../../abi/include/abi/ddi/irq.h
+source/signal.o: ../../../abi/include/abi/ipc/event.h
+source/signal.o: ../../../abi/include/abi/ipc/interfaces.h
+source/signal.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+source/signal.o: ../../lib/c/include/types/task.h
+source/stdio.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/stdio.o: include/posix/sys/types.h include/libc/sys/types.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/stdio.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/stdio.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/stdio.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/stdio.o: ../../../abi/include/abi/bool.h
+source/stdio.o: ../../lib/c/include/io/verify.h
+source/stdio.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/stdio.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/stdio.o: ../../lib/c/include/sys/time.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/stdio.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+source/stdio.o: include/posix/stdio.h ../../lib/c/include/stddef.h
+source/stdio.o: include/libc/io/verify.h include/posix/limits.h
+source/stdio.o: ../../lib/c/include/stdint.h include/posix/assert.h
+source/stdio.o: include/libc/assert.h include/posix/errno.h
+source/stdio.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/stdio.o: include/posix/stdlib.h include/posix/string.h
+source/stdio.o: include/posix/sys/types.h include/posix/unistd.h
+source/stdio.o: include/libc/stdio.h include/libc/io/printf_core.h
+source/stdio.o: include/libc/stdbool.h include/libc/str.h
+source/stdio.o: include/libc/malloc.h include/libc/adt/list.h
+source/stdio.o: ../../lib/c/include/assert.h include/libc/sys/stat.h
+source/stdio.o: ../../lib/c/include/ipc/vfs.h
+source/stdio.o: ../../lib/c/include/ipc/common.h
+source/stdio.o: ../../../abi/include/abi/ipc/ipc.h
+source/stdio.o: ../../lib/c/include/atomic.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/stdio.o: ../../lib/c/include/atomicdflt.h
+source/stdio.o: ../../../abi/include/abi/proc/task.h
+source/stdio.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+source/stdio.o: ../../../abi/include/abi/syscall.h
+source/stdio.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/stdio.o: ../../lib/c/include/ipc/loc.h
+source/stdio/scanf.o: include/posix/assert.h include/libc/assert.h
+source/stdio/scanf.o: include/posix/errno.h include/libc/errno.h
+source/stdio/scanf.o: ../../../abi/include/abi/errno.h include/posix/stdio.h
+source/stdio/scanf.o: ../../lib/c/include/stddef.h include/posix/sys/types.h
+source/stdio/scanf.o: include/libc/sys/types.h
+source/stdio/scanf.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/stdio/scanf.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/stdio/scanf.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/stdio/scanf.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/stdio/scanf.o: include/libc/sys/time.h ../../lib/c/include/unistd.h
+source/stdio/scanf.o: ../../lib/c/include/time.h
+source/stdio/scanf.o: ../../lib/c/include/sys/time.h
+source/stdio/scanf.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/stdio/scanf.o: include/libc/io/verify.h ../../lib/c/include/stdarg.h
+source/stdio/scanf.o: include/posix/limits.h ../../lib/c/include/stdint.h
+source/stdio/scanf.o: include/posix/stdlib.h include/posix/stddef.h
+source/stdio/scanf.o: include/posix/string.h include/posix/ctype.h
+source/stdio/scanf.o: include/libc/ctype.h include/posix/sys/types.h
+source/stdio/scanf.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/stdio/scanf.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/stdio/scanf.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/stdio/scanf.o: ../../../abi/include/abi/bool.h
+source/stdio/scanf.o: ../../lib/c/include/io/verify.h
+source/stdio/scanf.o: ../../../abi/include/abi/kio.h
+source/stdio/scanf.o: ../../lib/c/include/stdlib.h
+source/stdio/scanf.o: ../../lib/c/include/malloc.h
+source/stdio/scanf.o: ../../lib/c/include/stacktrace.h include/libc/malloc.h
+source/stdio/scanf.o: include/libc/stdbool.h
+source/stdlib.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/stdlib.o: include/posix/sys/types.h include/libc/sys/types.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/stdlib.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/stdlib.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/stdlib.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/stdlib.o: ../../../abi/include/abi/bool.h
+source/stdlib.o: ../../lib/c/include/io/verify.h
+source/stdlib.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/stdlib.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/stdlib.o: ../../lib/c/include/sys/time.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/stdlib.o: ../../lib/c/include/malloc.h
+source/stdlib.o: ../../lib/c/include/stacktrace.h include/posix/stdlib.h
+source/stdlib.o: include/posix/errno.h include/libc/errno.h
+source/stdlib.o: ../../../abi/include/abi/errno.h include/posix/fcntl.h
+source/stdlib.o: include/libc/fcntl.h include/posix/errno.h
+source/stdlib.o: include/posix/limits.h ../../lib/c/include/stdint.h
+source/stdlib.o: include/posix/string.h include/posix/sys/stat.h
+source/stdlib.o: include/posix/sys/types.h include/posix/time.h
+source/stdlib.o: include/posix/unistd.h ../../lib/c/include/stddef.h
+source/stdlib.o: include/libc/sort.h include/libc/str.h
+source/stdlib.o: include/libc/vfs/vfs.h ../../lib/c/include/ipc/vfs.h
+source/stdlib.o: ../../lib/c/include/ipc/common.h
+source/stdlib.o: ../../../abi/include/abi/ipc/ipc.h
+source/stdlib.o: ../../lib/c/include/atomic.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/stdlib.o: ../../lib/c/include/atomicdflt.h
+source/stdlib.o: ../../../abi/include/abi/proc/task.h
+source/stdlib.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+source/stdlib.o: ../../../abi/include/abi/syscall.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/stdlib.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/adt/list.h
+source/stdlib.o: ../../lib/c/include/assert.h ../../lib/c/include/async.h
+source/stdlib.o: ../../lib/c/include/fibril.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/stdlib.o: ../../../abi/include/abi/ddi/irq.h
+source/stdlib.o: ../../../abi/include/abi/ipc/event.h
+source/stdlib.o: ../../../abi/include/abi/ipc/interfaces.h
+source/stdlib.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+source/stdlib.o: include/libc/vfs/vfs_mtab.h include/libc/stats.h
+source/stdlib.o: ../../lib/c/include/task.h ../../lib/c/include/types/task.h
+source/stdlib.o: ../../lib/c/include/thread.h
+source/stdlib.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/stdlib.o: ../../../abi/include/abi/proc/thread.h
+source/stdlib.o: ../../../abi/include/abi/sysinfo.h
+source/stdlib/strtol.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/stdlib/strtol.o: include/posix/sys/types.h include/libc/sys/types.h
+source/stdlib/strtol.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/stdlib/strtol.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/stdlib/strtol.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/stdlib/strtol.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/stdlib/strtol.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/stdlib/strtol.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/stdlib/strtol.o: ../../lib/c/include/cc.h
+source/stdlib/strtol.o: ../../lib/c/include/stdbool.h
+source/stdlib/strtol.o: ../../../abi/include/abi/bool.h
+source/stdlib/strtol.o: ../../lib/c/include/io/verify.h
+source/stdlib/strtol.o: ../../../abi/include/abi/kio.h
+source/stdlib/strtol.o: ../../lib/c/include/stdlib.h
+source/stdlib/strtol.o: ../../lib/c/include/unistd.h
+source/stdlib/strtol.o: ../../lib/c/include/time.h
+source/stdlib/strtol.o: ../../lib/c/include/sys/time.h
+source/stdlib/strtol.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/stdlib/strtol.o: ../../lib/c/include/malloc.h
+source/stdlib/strtol.o: ../../lib/c/include/stacktrace.h
+source/stdlib/strtol.o: include/posix/stdlib.h include/posix/ctype.h
+source/stdlib/strtol.o: include/libc/ctype.h include/posix/errno.h
+source/stdlib/strtol.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/stdlib/strtol.o: include/posix/inttypes.h ../../lib/c/include/stdint.h
+source/stdlib/strtol.o: include/libc/inttypes.h
+source/stdlib/strtol.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+source/stdlib/strtol.o: include/posix/limits.h
+source/stdlib/strtold.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/stdlib/strtold.o: include/posix/sys/types.h include/libc/sys/types.h
+source/stdlib/strtold.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/stdlib/strtold.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/stdlib/strtold.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/stdlib/strtold.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/stdlib/strtold.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/stdlib/strtold.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/stdlib/strtold.o: ../../lib/c/include/cc.h
+source/stdlib/strtold.o: ../../lib/c/include/stdbool.h
+source/stdlib/strtold.o: ../../../abi/include/abi/bool.h
+source/stdlib/strtold.o: ../../lib/c/include/io/verify.h
+source/stdlib/strtold.o: ../../../abi/include/abi/kio.h
+source/stdlib/strtold.o: ../../lib/c/include/stdlib.h
+source/stdlib/strtold.o: ../../lib/c/include/unistd.h
+source/stdlib/strtold.o: ../../lib/c/include/time.h
+source/stdlib/strtold.o: ../../lib/c/include/sys/time.h
+source/stdlib/strtold.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/stdlib/strtold.o: ../../lib/c/include/malloc.h
+source/stdlib/strtold.o: ../../lib/c/include/stacktrace.h
+source/stdlib/strtold.o: include/libc/stdbool.h include/posix/stdlib.h
+source/stdlib/strtold.o: include/posix/assert.h include/libc/assert.h
+source/stdlib/strtold.o: include/posix/ctype.h include/libc/ctype.h
+source/stdlib/strtold.o: include/posix/stdint.h include/libc/stdint.h
+source/stdlib/strtold.o: include/posix/strings.h include/posix/errno.h
+source/stdlib/strtold.o: include/libc/errno.h
+source/stdlib/strtold.o: ../../../abi/include/abi/errno.h
+source/stdlib/strtold.o: include/posix/limits.h ../../lib/c/include/stdint.h
+source/stdlib/strtold.o: include/posix/float.h
+source/string.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/string.o: include/posix/sys/types.h include/libc/sys/types.h
+source/string.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/string.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/string.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/string.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/string.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/string.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/string.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/string.o: ../../../abi/include/abi/bool.h
+source/string.o: ../../lib/c/include/io/verify.h
+source/string.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/string.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/string.o: ../../lib/c/include/sys/time.h
+source/string.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/string.o: ../../lib/c/include/malloc.h
+source/string.o: ../../lib/c/include/stacktrace.h include/posix/string.h
+source/string.o: include/posix/assert.h include/libc/assert.h
+source/string.o: include/posix/errno.h include/libc/errno.h
+source/string.o: ../../../abi/include/abi/errno.h include/posix/limits.h
+source/string.o: ../../lib/c/include/stdint.h include/posix/stdlib.h
+source/string.o: include/posix/signal.h include/posix/ucontext.h
+source/string.o: include/libc/str_error.h
+source/strings.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/strings.o: include/posix/sys/types.h include/libc/sys/types.h
+source/strings.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/strings.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/strings.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/strings.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/strings.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/strings.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/strings.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/strings.o: ../../../abi/include/abi/bool.h
+source/strings.o: ../../lib/c/include/io/verify.h
+source/strings.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/strings.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/strings.o: ../../lib/c/include/sys/time.h
+source/strings.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/strings.o: ../../lib/c/include/malloc.h
+source/strings.o: ../../lib/c/include/stacktrace.h include/posix/strings.h
+source/strings.o: include/posix/string.h include/posix/ctype.h
+source/strings.o: include/libc/ctype.h include/libc/mem.h
+source/sys/mman.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/sys/mman.o: include/posix/sys/types.h include/libc/sys/types.h
+source/sys/mman.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/sys/mman.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/sys/mman.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/sys/mman.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/sys/mman.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/sys/mman.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/sys/mman.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/sys/mman.o: ../../../abi/include/abi/bool.h
+source/sys/mman.o: ../../lib/c/include/io/verify.h
+source/sys/mman.o: ../../../abi/include/abi/kio.h
+source/sys/mman.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+source/sys/mman.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+source/sys/mman.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/sys/mman.o: ../../lib/c/include/malloc.h
+source/sys/mman.o: ../../lib/c/include/stacktrace.h include/posix/sys/mman.h
+source/sys/mman.o: include/posix/sys/types.h ../../../abi/include/abi/mm/as.h
+source/sys/mman.o: include/posix/sys/types.h include/libc/as.h
+source/sys/mman.o: include/posix/unistd.h ../../lib/c/include/stddef.h
+source/sys/stat.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/sys/stat.o: include/posix/sys/types.h include/libc/sys/types.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/sys/stat.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/sys/stat.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/sys/stat.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/sys/stat.o: ../../../abi/include/abi/bool.h
+source/sys/stat.o: ../../lib/c/include/io/verify.h
+source/sys/stat.o: ../../../abi/include/abi/kio.h
+source/sys/stat.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+source/sys/stat.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/sys/stat.o: ../../lib/c/include/malloc.h
+source/sys/stat.o: ../../lib/c/include/stacktrace.h include/posix/sys/stat.h
+source/sys/stat.o: include/posix/sys/types.h include/posix/time.h
+source/sys/stat.o: include/libc/sys/stat.h ../../lib/c/include/ipc/vfs.h
+source/sys/stat.o: ../../lib/c/include/ipc/common.h
+source/sys/stat.o: ../../../abi/include/abi/ipc/ipc.h
+source/sys/stat.o: ../../lib/c/include/atomic.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/sys/stat.o: ../../lib/c/include/atomicdflt.h
+source/sys/stat.o: ../../lib/c/include/stdint.h
+source/sys/stat.o: ../../../abi/include/abi/proc/task.h
+source/sys/stat.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+source/sys/stat.o: ../../../abi/include/abi/syscall.h
+source/sys/stat.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/sys/stat.o: ../../lib/c/include/ipc/loc.h include/posix/errno.h
+source/sys/stat.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/sys/stat.o: include/libc/mem.h
+source/sys/wait.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/sys/wait.o: include/posix/sys/types.h include/libc/sys/types.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/sys/wait.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/sys/wait.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/sys/wait.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/sys/wait.o: ../../../abi/include/abi/bool.h
+source/sys/wait.o: ../../lib/c/include/io/verify.h
+source/sys/wait.o: ../../../abi/include/abi/kio.h
+source/sys/wait.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+source/sys/wait.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/sys/wait.o: ../../lib/c/include/malloc.h
+source/sys/wait.o: ../../lib/c/include/stacktrace.h include/posix/sys/wait.h
+source/sys/wait.o: include/posix/sys/types.h include/libc/task.h
+source/sys/wait.o: ../../../abi/include/abi/proc/task.h
+source/sys/wait.o: ../../lib/c/include/async.h
+source/sys/wait.o: ../../lib/c/include/ipc/common.h
+source/sys/wait.o: ../../../abi/include/abi/ipc/ipc.h
+source/sys/wait.o: ../../lib/c/include/atomic.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/sys/wait.o: ../../lib/c/include/atomicdflt.h
+source/sys/wait.o: ../../lib/c/include/stdint.h ../../lib/c/include/futex.h
+source/sys/wait.o: ../../lib/c/include/libc.h
+source/sys/wait.o: ../../../abi/include/abi/syscall.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/sys/wait.o: ../../lib/c/include/fibril.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/sys/wait.o: ../../lib/c/include/adt/list.h
+source/sys/wait.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+source/sys/wait.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/sys/wait.o: ../../../abi/include/abi/ddi/irq.h
+source/sys/wait.o: ../../../abi/include/abi/ipc/event.h
+source/sys/wait.o: ../../../abi/include/abi/ipc/interfaces.h
+source/sys/wait.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+source/sys/wait.o: ../../lib/c/include/types/task.h include/posix/assert.h
+source/sys/wait.o: include/libc/assert.h include/posix/errno.h
+source/sys/wait.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/sys/wait.o: include/posix/limits.h include/posix/signal.h
+source/sys/wait.o: include/posix/ucontext.h
+source/time.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/time.o: include/posix/sys/types.h include/libc/sys/types.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/time.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/time.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/time.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/time.o: ../../../abi/include/abi/bool.h
+source/time.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+source/time.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+source/time.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/time.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+source/time.o: include/posix/time.h include/posix/ctype.h
+source/time.o: include/libc/ctype.h include/posix/errno.h
+source/time.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/time.o: include/posix/signal.h include/posix/ucontext.h
+source/time.o: include/posix/assert.h include/libc/assert.h
+source/time.o: include/libc/malloc.h include/libc/task.h
+source/time.o: ../../../abi/include/abi/proc/task.h
+source/time.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+source/time.o: ../../../abi/include/abi/ipc/ipc.h
+source/time.o: ../../lib/c/include/atomic.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/time.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+source/time.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+source/time.o: ../../../abi/include/abi/syscall.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/time.o: ../../lib/c/include/fibril.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/time.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+source/time.o: ../../lib/c/include/stddef.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/time.o: ../../../abi/include/abi/ddi/irq.h
+source/time.o: ../../../abi/include/abi/ipc/event.h
+source/time.o: ../../../abi/include/abi/ipc/interfaces.h
+source/time.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+source/time.o: ../../lib/c/include/types/task.h include/libc/stats.h
+source/time.o: ../../lib/c/include/task.h ../../lib/c/include/thread.h
+source/time.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/time.o: ../../../abi/include/abi/proc/thread.h
+source/time.o: ../../../abi/include/abi/sysinfo.h include/libc/stdbool.h
+source/unistd.o: source/internal/common.h ../../lib/c/include/stdio.h
+source/unistd.o: include/posix/sys/types.h include/libc/sys/types.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source/unistd.o: include/libc/sys/time.h ../../lib/c/include/stdarg.h
+source/unistd.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+source/unistd.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+source/unistd.o: ../../../abi/include/abi/bool.h
+source/unistd.o: ../../lib/c/include/io/verify.h
+source/unistd.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+source/unistd.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+source/unistd.o: ../../lib/c/include/sys/time.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source/unistd.o: ../../lib/c/include/malloc.h
+source/unistd.o: ../../lib/c/include/stacktrace.h include/posix/unistd.h
+source/unistd.o: ../../lib/c/include/stddef.h include/posix/errno.h
+source/unistd.o: include/libc/errno.h ../../../abi/include/abi/errno.h
+source/unistd.o: include/posix/string.h include/posix/fcntl.h
+source/unistd.o: include/libc/fcntl.h include/posix/errno.h
+source/unistd.o: include/libc/task.h ../../../abi/include/abi/proc/task.h
+source/unistd.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+source/unistd.o: ../../../abi/include/abi/ipc/ipc.h
+source/unistd.o: ../../lib/c/include/atomic.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+source/unistd.o: ../../lib/c/include/atomicdflt.h
+source/unistd.o: ../../lib/c/include/stdint.h ../../lib/c/include/futex.h
+source/unistd.o: ../../lib/c/include/libc.h
+source/unistd.o: ../../../abi/include/abi/syscall.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+source/unistd.o: ../../lib/c/include/fibril.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+source/unistd.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+source/unistd.o: ../../../abi/include/abi/ddi/irq.h
+source/unistd.o: ../../../abi/include/abi/ipc/event.h
+source/unistd.o: ../../../abi/include/abi/ipc/interfaces.h
+source/unistd.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+source/unistd.o: ../../lib/c/include/types/task.h include/libc/stats.h
+source/unistd.o: ../../lib/c/include/task.h ../../lib/c/include/thread.h
+source/unistd.o: ../../lib/c/arch/ia32/include/libarch/thread.h
+source/unistd.o: ../../../abi/include/abi/proc/thread.h
+source/unistd.o: ../../../abi/include/abi/sysinfo.h include/libc/malloc.h
+# DO NOT DELETE
+
+test/main.test.o: ../../lib/pcut/include/pcut/pcut.h
+test/main.test.o: ../../lib/pcut/include/pcut/asserts.h
+test/main.test.o: ../../lib/c/include/errno.h
+test/main.test.o: ../../../abi/include/abi/errno.h
+test/main.test.o: ../../lib/pcut/include/pcut/tests.h
+test/main.test.o: ../../lib/pcut/include/pcut/helper.h
+test/main.test.o: ../../lib/pcut/include/pcut/datadef.h
+test/main.test.o: ../../lib/pcut/include/pcut/prevs.h
+test/main.test.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+test/main.test.o: ../../lib/c/include/sys/types.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/types.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/common.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+test/main.test.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/config.h
+test/main.test.o: ../../lib/c/include/malloc.h
+test/main.test.o: ../../lib/c/include/stacktrace.h
+test/main.test.o: ../../lib/c/include/stdbool.h
+test/main.test.o: ../../../abi/include/abi/bool.h
+test/main.test.o: ../../lib/c/include/stddef.h
+test/scanf.test.o: include/posix/errno.h include/libc/errno.h
+test/scanf.test.o: ../../../abi/include/abi/errno.h include/posix/stdio.h
+test/scanf.test.o: ../../lib/c/include/stddef.h
+test/scanf.test.o: ../../lib/c/include/sys/types.h
+test/scanf.test.o: ../../lib/c/arch/ia32/include/libarch/types.h
+test/scanf.test.o: ../../lib/c/arch/ia32/include/libarch/common.h
+test/scanf.test.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+test/scanf.test.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+test/scanf.test.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+test/scanf.test.o: ../../lib/c/include/sys/time.h
+test/scanf.test.o: ../../lib/c/arch/ia32/include/libarch/config.h
+test/scanf.test.o: include/libc/io/verify.h include/posix/stdarg.h
+test/scanf.test.o: include/posix/limits.h include/posix/stdint.h
+test/scanf.test.o: include/libc/stdint.h include/libc/sys/types.h
+test/scanf.test.o: ../../lib/pcut/include/pcut/pcut.h
+test/scanf.test.o: ../../lib/pcut/include/pcut/asserts.h
+test/scanf.test.o: ../../lib/c/include/errno.h
+test/scanf.test.o: ../../lib/pcut/include/pcut/tests.h
+test/scanf.test.o: ../../lib/pcut/include/pcut/helper.h
+test/scanf.test.o: ../../lib/pcut/include/pcut/datadef.h
+test/scanf.test.o: ../../lib/pcut/include/pcut/prevs.h
+test/scanf.test.o: ../../lib/c/include/stdlib.h ../../lib/c/include/malloc.h
+test/scanf.test.o: ../../lib/c/include/stacktrace.h
+test/scanf.test.o: ../../lib/c/include/stdbool.h
+test/scanf.test.o: ../../../abi/include/abi/bool.h

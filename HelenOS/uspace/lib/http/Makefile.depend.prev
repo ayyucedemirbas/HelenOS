@@ -1,0 +1,188 @@
+# DO NOT DELETE
+
+src/http.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/http.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/http.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/http.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/http.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/http.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/http.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/http.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/http.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/http.o: ../../lib/c/include/macros.h ../../lib/c/include/inet/endpoint.h
+src/http.o: ../../lib/c/include/stdint.h ../../lib/c/include/inet/addr.h
+src/http.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+src/http.o: ../../lib/c/include/ipc/common.h
+src/http.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/http.o: ../../lib/c/include/atomicdflt.h
+src/http.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+src/http.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/http.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/http.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/http.o: ../../lib/c/include/stddef.h
+src/http.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/http.o: ../../../abi/include/abi/ddi/irq.h
+src/http.o: ../../../abi/include/abi/ipc/event.h
+src/http.o: ../../../abi/include/abi/ipc/interfaces.h
+src/http.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/http.o: ../../lib/c/include/inet/host.h
+src/http.o: ../../lib/c/include/types/inet/hostport.h
+src/http.o: ../../lib/c/include/types/inet/host.h
+src/http.o: ../../lib/c/include/inet/tcp.h ../../lib/c/include/fibril_synch.h
+src/http.o: ../../lib/c/include/inet/inet.h ../../lib/c/include/types/inet.h
+src/http.o: include/http/http.h include/http/receive-buffer.h
+src/http.o: include/http/receive-buffer.h
+src/headers.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/headers.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/headers.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/headers.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/headers.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/headers.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/headers.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/headers.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/headers.o: ../../lib/c/include/macros.h include/http/http.h
+src/headers.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/headers.o: ../../lib/c/include/stddef.h ../../lib/c/include/inet/addr.h
+src/headers.o: ../../lib/c/include/stdint.h ../../lib/c/include/inet/tcp.h
+src/headers.o: ../../lib/c/include/fibril_synch.h
+src/headers.o: ../../lib/c/include/fibril.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/headers.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/headers.o: ../../lib/c/include/inet/endpoint.h ../../lib/c/include/loc.h
+src/headers.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/ipc/common.h
+src/headers.o: ../../../abi/include/abi/ipc/ipc.h
+src/headers.o: ../../lib/c/include/atomic.h
+src/headers.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/headers.o: ../../lib/c/include/atomicdflt.h
+src/headers.o: ../../../abi/include/abi/proc/task.h
+src/headers.o: ../../lib/c/include/futex.h ../../lib/c/include/async.h
+src/headers.o: ../../../abi/include/abi/ddi/irq.h
+src/headers.o: ../../../abi/include/abi/ipc/event.h
+src/headers.o: ../../../abi/include/abi/ipc/interfaces.h
+src/headers.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/headers.o: ../../lib/c/include/inet/inet.h
+src/headers.o: ../../lib/c/include/types/inet.h include/http/receive-buffer.h
+src/headers.o: include/http/ctype.h include/http/errno.h
+src/headers.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/request.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/request.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/request.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/request.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/request.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/request.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/request.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/request.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/request.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/request.o: ../../lib/c/include/macros.h ../../lib/c/include/inet/tcp.h
+src/request.o: ../../lib/c/include/fibril_synch.h
+src/request.o: ../../lib/c/include/fibril.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/request.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/request.o: ../../lib/c/include/stddef.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/request.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/request.o: ../../lib/c/include/inet/addr.h ../../lib/c/include/stdint.h
+src/request.o: ../../lib/c/include/inet/endpoint.h ../../lib/c/include/loc.h
+src/request.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/ipc/common.h
+src/request.o: ../../../abi/include/abi/ipc/ipc.h
+src/request.o: ../../lib/c/include/atomic.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/request.o: ../../lib/c/include/atomicdflt.h
+src/request.o: ../../../abi/include/abi/proc/task.h
+src/request.o: ../../lib/c/include/futex.h ../../lib/c/include/async.h
+src/request.o: ../../../abi/include/abi/ddi/irq.h
+src/request.o: ../../../abi/include/abi/ipc/event.h
+src/request.o: ../../../abi/include/abi/ipc/interfaces.h
+src/request.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/request.o: ../../lib/c/include/inet/inet.h
+src/request.o: ../../lib/c/include/types/inet.h include/http/http.h
+src/request.o: include/http/receive-buffer.h
+src/response.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/response.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/response.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/response.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/response.o: ../../lib/c/include/io/verify.h
+src/response.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+src/response.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/response.o: ../../lib/c/include/sys/time.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/response.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/response.o: ../../lib/c/include/macros.h include/http/http.h
+src/response.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/response.o: ../../lib/c/include/stddef.h ../../lib/c/include/inet/addr.h
+src/response.o: ../../lib/c/include/stdint.h ../../lib/c/include/inet/tcp.h
+src/response.o: ../../lib/c/include/fibril_synch.h
+src/response.o: ../../lib/c/include/fibril.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/response.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/response.o: ../../lib/c/include/inet/endpoint.h ../../lib/c/include/loc.h
+src/response.o: ../../lib/c/include/ipc/loc.h
+src/response.o: ../../lib/c/include/ipc/common.h
+src/response.o: ../../../abi/include/abi/ipc/ipc.h
+src/response.o: ../../lib/c/include/atomic.h
+src/response.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/response.o: ../../lib/c/include/atomicdflt.h
+src/response.o: ../../../abi/include/abi/proc/task.h
+src/response.o: ../../lib/c/include/futex.h ../../lib/c/include/async.h
+src/response.o: ../../../abi/include/abi/ddi/irq.h
+src/response.o: ../../../abi/include/abi/ipc/event.h
+src/response.o: ../../../abi/include/abi/ipc/interfaces.h
+src/response.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/response.o: ../../lib/c/include/inet/inet.h
+src/response.o: ../../lib/c/include/types/inet.h
+src/response.o: include/http/receive-buffer.h include/http/errno.h
+src/response.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/receive-buffer.o: ../../lib/c/include/stdlib.h
+src/receive-buffer.o: ../../lib/c/include/unistd.h
+src/receive-buffer.o: ../../lib/c/include/sys/types.h
+src/receive-buffer.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/receive-buffer.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/receive-buffer.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/receive-buffer.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/receive-buffer.o: ../../lib/c/include/time.h
+src/receive-buffer.o: ../../lib/c/include/sys/time.h
+src/receive-buffer.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/receive-buffer.o: ../../lib/c/include/malloc.h
+src/receive-buffer.o: ../../lib/c/include/stacktrace.h
+src/receive-buffer.o: ../../lib/c/include/stdbool.h
+src/receive-buffer.o: ../../../abi/include/abi/bool.h
+src/receive-buffer.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/receive-buffer.o: ../../lib/c/include/cc.h ../../lib/c/include/errno.h
+src/receive-buffer.o: ../../../abi/include/abi/errno.h
+src/receive-buffer.o: ../../lib/c/include/macros.h
+src/receive-buffer.o: ../../lib/c/include/adt/list.h
+src/receive-buffer.o: ../../lib/c/include/assert.h
+src/receive-buffer.o: ../../lib/c/include/stddef.h
+src/receive-buffer.o: include/http/receive-buffer.h
+# DO NOT DELETE

@@ -1,0 +1,214 @@
+# DO NOT DELETE
+
+ctl.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/types.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/common.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+ctl.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/config.h
+ctl.o: ../../lib/c/include/malloc.h ../../lib/c/include/stdio.h
+ctl.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+ctl.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+ctl.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+ctl.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+ctl.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+ctl.o: ../../lib/c/include/io/logctl.h ../../lib/c/include/io/log.h
+ctl.o: ../../lib/c/include/inttypes.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+ctl.o: ../../../abi/include/abi/log.h ../../lib/c/include/ipc/logger.h
+ctl.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+ctl.o: ../../lib/c/include/atomic.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+ctl.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+ctl.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+ctl.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/syscall.h logger.h
+ctl.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+ctl.o: ../../lib/c/include/stddef.h ../../lib/c/include/adt/prodcons.h
+ctl.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/fibril.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ctl.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+ctl.o: ../../lib/c/include/async.h ../../../abi/include/abi/ddi/irq.h
+ctl.o: ../../../abi/include/abi/ipc/event.h
+ctl.o: ../../../abi/include/abi/ipc/interfaces.h
+ctl.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+initlvl.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+initlvl.o: ../../lib/c/include/str_error.h ../../lib/c/include/sysinfo.h
+initlvl.o: ../../lib/c/include/sys/types.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/types.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/common.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+initlvl.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+initlvl.o: ../../../abi/include/abi/sysinfo.h
+initlvl.o: ../../../abi/include/abi/proc/task.h
+initlvl.o: ../../../abi/include/abi/proc/thread.h ../../lib/c/include/str.h
+initlvl.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+initlvl.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+initlvl.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/config.h
+initlvl.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+initlvl.o: logger.h ../../lib/c/include/adt/list.h
+initlvl.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+initlvl.o: ../../lib/c/include/adt/prodcons.h
+initlvl.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/fibril.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+initlvl.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+initlvl.o: ../../lib/c/include/io/log.h ../../lib/c/include/stdarg.h
+initlvl.o: ../../lib/c/include/inttypes.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+initlvl.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/log.h
+initlvl.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+initlvl.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+initlvl.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+initlvl.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+initlvl.o: ../../lib/c/include/futex.h ../../../abi/include/abi/ddi/irq.h
+initlvl.o: ../../../abi/include/abi/ipc/event.h
+initlvl.o: ../../../abi/include/abi/ipc/interfaces.h
+initlvl.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+initlvl.o: ../../lib/c/include/stdio.h ../../../abi/include/abi/kio.h
+level.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+level.o: logger.h ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+level.o: ../../lib/c/include/stdbool.h
+level.o: ../../lib/c/arch/ia32/include/libarch/types.h
+level.o: ../../lib/c/arch/ia32/include/libarch/common.h
+level.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+level.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+level.o: ../../../abi/include/abi/bool.h ../../lib/c/include/stddef.h
+level.o: ../../lib/c/include/sys/types.h ../../lib/c/include/adt/prodcons.h
+level.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/fibril.h
+level.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+level.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+level.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+level.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+level.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+level.o: ../../lib/c/include/sys/time.h ../../lib/c/include/io/log.h
+level.o: ../../lib/c/include/stdarg.h ../../lib/c/include/inttypes.h
+level.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+level.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/log.h
+level.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+level.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+level.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+level.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+level.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+level.o: ../../../abi/include/abi/ddi/irq.h
+level.o: ../../../abi/include/abi/ipc/event.h
+level.o: ../../../abi/include/abi/ipc/interfaces.h
+level.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+level.o: ../../lib/c/include/stdio.h ../../lib/c/include/str.h
+level.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+level.o: ../../../abi/include/abi/kio.h
+logs.o: ../../lib/c/include/assert.h ../../lib/c/include/malloc.h
+logs.o: ../../lib/c/include/sys/types.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/types.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/common.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+logs.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+logs.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+logs.o: ../../../abi/include/abi/bool.h ../../lib/c/include/stdio.h
+logs.o: ../../lib/c/include/stdarg.h ../../lib/c/include/io/verify.h
+logs.o: ../../../abi/include/abi/kio.h ../../lib/c/include/errno.h
+logs.o: ../../../abi/include/abi/errno.h logger.h
+logs.o: ../../lib/c/include/adt/list.h ../../lib/c/include/stddef.h
+logs.o: ../../lib/c/include/adt/prodcons.h ../../lib/c/include/fibril_synch.h
+logs.o: ../../lib/c/include/fibril.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+logs.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+logs.o: ../../lib/c/include/sys/time.h ../../lib/c/include/io/log.h
+logs.o: ../../lib/c/include/inttypes.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+logs.o: ../../../abi/include/abi/log.h ../../lib/c/include/async.h
+logs.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+logs.o: ../../lib/c/include/atomic.h
+logs.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+logs.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+logs.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+logs.o: ../../../abi/include/abi/ddi/irq.h
+logs.o: ../../../abi/include/abi/ipc/event.h
+logs.o: ../../../abi/include/abi/ipc/interfaces.h
+logs.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+main.o: ../../lib/c/include/ipc/services.h ../../lib/c/include/sys/types.h
+main.o: ../../lib/c/arch/ia32/include/libarch/types.h
+main.o: ../../lib/c/arch/ia32/include/libarch/common.h
+main.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+main.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+main.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+main.o: ../../lib/c/include/ipc/logger.h ../../lib/c/include/ipc/common.h
+main.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+main.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+main.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+main.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+main.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+main.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+main.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+main.o: ../../lib/c/include/io/log.h ../../lib/c/include/stdarg.h
+main.o: ../../lib/c/include/inttypes.h
+main.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+main.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/log.h
+main.o: ../../lib/c/include/io/logctl.h ../../lib/c/include/ns.h
+main.o: ../../lib/c/include/task.h ../../lib/c/include/async.h
+main.o: ../../lib/c/include/fibril.h
+main.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+main.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+main.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+main.o: ../../lib/c/include/stddef.h
+main.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+main.o: ../../lib/c/include/sys/time.h ../../../abi/include/abi/ddi/irq.h
+main.o: ../../../abi/include/abi/ipc/event.h
+main.o: ../../../abi/include/abi/ipc/interfaces.h
+main.o: ../../lib/c/include/types/task.h ../../lib/c/include/stdio.h
+main.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+main.o: ../../lib/c/include/cc.h ../../../abi/include/abi/kio.h
+main.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+main.o: ../../lib/c/include/str_error.h ../../lib/c/include/malloc.h logger.h
+main.o: ../../lib/c/include/adt/prodcons.h ../../lib/c/include/fibril_synch.h
+writer.o: ../../lib/c/include/ipc/services.h ../../lib/c/include/sys/types.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/types.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/common.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+writer.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+writer.o: ../../lib/c/include/ipc/logger.h ../../lib/c/include/ipc/common.h
+writer.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+writer.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+writer.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+writer.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+writer.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+writer.o: ../../lib/c/include/io/log.h ../../lib/c/include/stdarg.h
+writer.o: ../../lib/c/include/inttypes.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+writer.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/log.h
+writer.o: ../../lib/c/include/io/logctl.h ../../lib/c/include/io/klog.h
+writer.o: ../../lib/c/include/stdio.h ../../lib/c/include/str.h
+writer.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+writer.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+writer.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+writer.o: ../../lib/c/include/sys/time.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/config.h
+writer.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+writer.o: ../../lib/c/include/ns.h ../../lib/c/include/task.h
+writer.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+writer.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+writer.o: ../../lib/c/include/stddef.h
+writer.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+writer.o: ../../../abi/include/abi/ddi/irq.h
+writer.o: ../../../abi/include/abi/ipc/event.h
+writer.o: ../../../abi/include/abi/ipc/interfaces.h
+writer.o: ../../lib/c/include/types/task.h ../../lib/c/include/errno.h
+writer.o: ../../../abi/include/abi/errno.h ../../lib/c/include/str_error.h
+writer.o: logger.h ../../lib/c/include/adt/prodcons.h
+writer.o: ../../lib/c/include/fibril_synch.h
+# DO NOT DELETE

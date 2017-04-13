@@ -1,0 +1,226 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../lib/drv/libdrv.a(remote_char_dev.o)
+                              isdv4.o (char_dev_read)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x13a6 main.o
+ .debug_abbrev  0x0000000000000000      0x31c main.o
+ .debug_loc     0x0000000000000000      0x6db main.o
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+ .debug_ranges  0x0000000000000000       0xf0 main.o
+ .debug_line    0x0000000000000000      0x3f6 main.o
+ .debug_str     0x0000000000000000     0x13f0 main.o
+ .comment       0x0000000000000000       0x12 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .eh_frame      0x0000000000000000      0x124 main.o
+ .debug_info    0x0000000000000000      0xc68 isdv4.o
+ .debug_abbrev  0x0000000000000000      0x28d isdv4.o
+ .debug_loc     0x0000000000000000      0xc91 isdv4.o
+ .debug_aranges
+                0x0000000000000000       0x20 isdv4.o
+ .debug_ranges  0x0000000000000000      0x290 isdv4.o
+ .debug_line    0x0000000000000000      0x3b3 isdv4.o
+ .debug_str     0x0000000000000000      0x9bb isdv4.o
+ .comment       0x0000000000000000       0x12 isdv4.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 isdv4.o
+ .eh_frame      0x0000000000000000       0xd0 isdv4.o
+ .debug_info    0x0000000000000000      0x9f8 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_abbrev  0x0000000000000000      0x243 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_loc     0x0000000000000000      0x304 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_ranges  0x0000000000000000       0x40 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_line    0x0000000000000000      0x29f ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_str     0x0000000000000000      0xa95 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .comment       0x0000000000000000       0x12 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .eh_frame      0x0000000000000000      0x120 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x1b2c
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x29e main.o
+ *fill*         0x00000000000013ce        0x2 
+ .text.startup  0x00000000000013d0      0x5c5 main.o
+                0x00000000000013d0                main
+ *fill*         0x0000000000001995        0xb 
+ .text          0x00000000000019a0      0xad2 isdv4.o
+                0x00000000000019a0                isdv4_init
+                0x00000000000019f0                isdv4_init_tablet
+                0x0000000000001f20                isdv4_read_events
+                0x0000000000002460                isdv4_fini
+ *fill*         0x0000000000002472        0xe 
+ .text          0x0000000000002480      0x341 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x0000000000002670                char_dev_read
+                0x0000000000002720                char_dev_write
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000027c1      0x1e7 main.o
+ .rodata.str1.4
+                0x00000000000029a8      0x26c main.o
+                                        0x26b (size before relaxing)
+ .rodata        0x0000000000002c14       0x38 main.o
+ .rodata        0x0000000000002c4c       0x10 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x0000000000002c4c                remote_char_dev_iface
+
+.rel.plt        0x0000000000002c5c      0x180
+ *(.rel.plt)
+ .rel.plt       0x0000000000002c5c      0x180 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000002ddc       0x18
+ *(.rel.*)
+ .rel.got       0x0000000000002ddc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000002ddc       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000002df4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000002df4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000002df4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000002e00      0x310
+ *(.plt)
+ .plt           0x0000000000002e00      0x310 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002e10                __main
+                0x0000000000002e20                loc_category_get_id
+                0x0000000000002e30                task_retval
+                0x0000000000002e40                loc_service_connect
+                0x0000000000002e50                printf
+                0x0000000000002e60                async_msg_4
+                0x0000000000002e70                async_wait_for
+                0x0000000000002e80                async_data_write_start
+                0x0000000000002e90                loc_service_register
+                0x0000000000002ea0                usleep
+                0x0000000000002eb0                async_data_read_finalize
+                0x0000000000002ec0                memcpy
+                0x0000000000002ed0                malloc
+                0x0000000000002ee0                async_req_fast
+                0x0000000000002ef0                loc_service_get_id
+                0x0000000000002f00                async_answer_0
+                0x0000000000002f10                async_send_fast
+                0x0000000000002f20                strtol
+                0x0000000000002f30                async_exchange_end
+                0x0000000000002f40                loc_service_get_name
+                0x0000000000002f50                fprintf
+                0x0000000000002f60                str_test_prefix
+                0x0000000000002f70                fibril_mutex_unlock
+                0x0000000000002f80                fibril_mutex_initialize
+                0x0000000000002f90                loc_service_add_to_cat
+                0x0000000000002fa0                str_cmp
+                0x0000000000002fb0                memset
+                0x0000000000002fc0                async_data_read_receive
+                0x0000000000002fd0                async_data_read_start
+                0x0000000000002fe0                asprintf
+                0x0000000000002ff0                loc_server_register
+                0x0000000000003000                loc_category_get_svcs
+                0x0000000000003010                async_get_call_timeout
+                0x0000000000003020                str_length
+                0x0000000000003030                async_answer_1
+                0x0000000000003040                async_exchange_begin
+                0x0000000000003050                async_data_write_finalize
+                0x0000000000003060                fibril_create_generic
+                0x0000000000003070                fibril_add_ready
+                0x0000000000003080                fibril_switch
+                0x0000000000003090                __syscall_fast
+                0x00000000000030a0                str_lsize
+                0x00000000000030b0                async_set_fallback_port_handler
+                0x00000000000030c0                async_data_write_receive
+                0x00000000000030d0                async_callback_receive
+                0x00000000000030e0                free
+                0x00000000000030f0                fibril_mutex_lock
+                0x0000000000003100                async_msg_2
+
+.dynsym         0x0000000000003110      0x360
+ *(.dynsym)
+ .dynsym        0x0000000000003110      0x360 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000003470      0x356
+ *(.dynstr)
+ .dynstr        0x0000000000003470      0x356 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000037c8      0x174
+ *(.hash)
+ .hash          0x00000000000037c8      0x174 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x000000000000393c       0x13
+ *(.interp)
+ .interp        0x000000000000393c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000494f                . = (. + 0x1000)
+
+.dynamic        0x0000000000004950       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000004950       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004950                _DYNAMIC
+
+.data           0x00000000000049f8        0x0
+ *(.data)
+ .data          0x00000000000049f8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000049f8        0x0 main.o
+ .data          0x00000000000049f8        0x0 isdv4.o
+ .data          0x00000000000049f8        0x0 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000049f8        0x0
+ *(.got)
+ .got           0x00000000000049f8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000049f8       0xcc
+ *(.got.plt)
+ .got.plt       0x00000000000049f8       0xcc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000049f8                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000004ae0       0x74
+ *(.dynbss)
+ .dynbss        0x0000000000004ae0        0xc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000004ae0                __syscall_fast_func
+                0x0000000000004ae4                async_futex
+                0x0000000000004ae8                stderr
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000004aec        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x0000000000004aec       0x14 
+ .bss           0x0000000000004b00       0x54 main.o
+ .bss           0x0000000000004b54        0x0 isdv4.o
+ .bss           0x0000000000004b54        0x0 ../../../lib/drv/libdrv.a(remote_char_dev.o)
+
+/DISCARD/
+ *(*)
+LOAD main.o
+LOAD isdv4.o
+LOAD ../../../lib/drv/libdrv.a
+LOAD ../../../lib/c/libc.so.0
+LOAD ../../../lib/softint/libsoftint.so.0
+OUTPUT(isdv4_tablet elf32-i386)

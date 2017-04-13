@@ -1,0 +1,3334 @@
+
+dnsrsrv:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 20 52 00 00    	lea    0x5220,%eax
+    1110:	c7 00 e0 37 00 00    	movl   $0x37e0,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 1e 24 00 00       	call   3540 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <dns_name_decode>:
+    1130:	55                   	push   %ebp
+    1131:	89 e5                	mov    %esp,%ebp
+    1133:	57                   	push   %edi
+    1134:	56                   	push   %esi
+    1135:	53                   	push   %ebx
+    1136:	83 ec 3c             	sub    $0x3c,%esp
+    1139:	8b 45 08             	mov    0x8(%ebp),%eax
+    113c:	8b 55 0c             	mov    0xc(%ebp),%edx
+    113f:	8b 40 04             	mov    0x4(%eax),%eax
+    1142:	39 d0                	cmp    %edx,%eax
+    1144:	0f 82 86 02 00 00    	jb     13d0 <dns_name_decode+0x2a0>
+    114a:	8b 7d 08             	mov    0x8(%ebp),%edi
+    114d:	29 d0                	sub    %edx,%eax
+    114f:	8b 37                	mov    (%edi),%esi
+    1151:	01 d6                	add    %edx,%esi
+    1153:	3d ff 00 00 00       	cmp    $0xff,%eax
+    1158:	0f 87 02 01 00 00    	ja     1260 <dns_name_decode+0x130>
+    115e:	8b 55 14             	mov    0x14(%ebp),%edx
+    1161:	85 c0                	test   %eax,%eax
+    1163:	c7 02 00 00 00 00    	movl   $0x0,(%edx)
+    1169:	0f 84 87 02 00 00    	je     13f6 <dns_name_decode+0x2c6>
+    116f:	8a 1e                	mov    (%esi),%bl
+    1171:	48                   	dec    %eax
+    1172:	88 da                	mov    %bl,%dl
+    1174:	8d 7e 01             	lea    0x1(%esi),%edi
+    1177:	81 e2 ff 00 00 00    	and    $0xff,%edx
+    117d:	89 7d c4             	mov    %edi,-0x3c(%ebp)
+    1180:	89 55 c8             	mov    %edx,-0x38(%ebp)
+    1183:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    1186:	85 d2                	test   %edx,%edx
+    1188:	0f 84 49 02 00 00    	je     13d7 <dns_name_decode+0x2a7>
+    118e:	b2 01                	mov    $0x1,%dl
+    1190:	31 ff                	xor    %edi,%edi
+    1192:	88 5d d4             	mov    %bl,-0x2c(%ebp)
+    1195:	8a 5d d4             	mov    -0x2c(%ebp),%bl
+    1198:	83 e3 c0             	and    $0xffffffc0,%ebx
+    119b:	80 fb c0             	cmp    $0xc0,%bl
+    119e:	0f 84 cc 00 00 00    	je     1270 <dns_name_decode+0x140>
+    11a4:	8b 75 c8             	mov    -0x38(%ebp),%esi
+    11a7:	39 75 cc             	cmp    %esi,-0x34(%ebp)
+    11aa:	0f 82 a0 01 00 00    	jb     1350 <dns_name_decode+0x220>
+    11b0:	8b 75 c4             	mov    -0x3c(%ebp),%esi
+    11b3:	eb 6a                	jmp    121f <dns_name_decode+0xef>
+    11b5:	8d 76 00             	lea    0x0(%esi),%esi
+    11b8:	83 ec 0c             	sub    $0xc,%esp
+    11bb:	57                   	push   %edi
+    11bc:	e8 af 25 00 00       	call   3770 <str_size@plt>
+    11c1:	89 c3                	mov    %eax,%ebx
+    11c3:	8d 45 e6             	lea    -0x1a(%ebp),%eax
+    11c6:	89 04 24             	mov    %eax,(%esp)
+    11c9:	e8 a2 25 00 00       	call   3770 <str_size@plt>
+    11ce:	8d 4c 03 01          	lea    0x1(%ebx,%eax,1),%ecx
+    11d2:	58                   	pop    %eax
+    11d3:	89 4d d0             	mov    %ecx,-0x30(%ebp)
+    11d6:	5a                   	pop    %edx
+    11d7:	51                   	push   %ecx
+    11d8:	57                   	push   %edi
+    11d9:	e8 12 25 00 00       	call   36f0 <realloc@plt>
+    11de:	83 c4 10             	add    $0x10,%esp
+    11e1:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    11e4:	85 c0                	test   %eax,%eax
+    11e6:	0f 84 94 01 00 00    	je     1380 <dns_name_decode+0x250>
+    11ec:	8b 4d d0             	mov    -0x30(%ebp),%ecx
+    11ef:	50                   	push   %eax
+    11f0:	29 d9                	sub    %ebx,%ecx
+    11f2:	8d 45 e6             	lea    -0x1a(%ebp),%eax
+    11f5:	01 fb                	add    %edi,%ebx
+    11f7:	50                   	push   %eax
+    11f8:	51                   	push   %ecx
+    11f9:	53                   	push   %ebx
+    11fa:	e8 31 25 00 00       	call   3730 <str_cpy@plt>
+    11ff:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1202:	83 c4 10             	add    $0x10,%esp
+    1205:	89 c7                	mov    %eax,%edi
+    1207:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    120a:	46                   	inc    %esi
+    120b:	48                   	dec    %eax
+    120c:	8b 55 c4             	mov    -0x3c(%ebp),%edx
+    120f:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    1212:	89 f0                	mov    %esi,%eax
+    1214:	29 d0                	sub    %edx,%eax
+    1216:	39 45 c8             	cmp    %eax,-0x38(%ebp)
+    1219:	0f 86 51 01 00 00    	jbe    1370 <dns_name_decode+0x240>
+    121f:	8a 06                	mov    (%esi),%al
+    1221:	8d 48 e0             	lea    -0x20(%eax),%ecx
+    1224:	80 f9 5e             	cmp    $0x5e,%cl
+    1227:	0f 87 23 01 00 00    	ja     1350 <dns_name_decode+0x220>
+    122d:	88 45 e6             	mov    %al,-0x1a(%ebp)
+    1230:	c6 45 e7 00          	movb   $0x0,-0x19(%ebp)
+    1234:	85 ff                	test   %edi,%edi
+    1236:	75 80                	jne    11b8 <dns_name_decode+0x88>
+    1238:	83 ec 0c             	sub    $0xc,%esp
+    123b:	8d 45 e6             	lea    -0x1a(%ebp),%eax
+    123e:	50                   	push   %eax
+    123f:	e8 7c 24 00 00       	call   36c0 <str_dup@plt>
+    1244:	83 c4 10             	add    $0x10,%esp
+    1247:	89 c7                	mov    %eax,%edi
+    1249:	85 c0                	test   %eax,%eax
+    124b:	75 ba                	jne    1207 <dns_name_decode+0xd7>
+    124d:	31 ff                	xor    %edi,%edi
+    124f:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1254:	e9 fc 00 00 00       	jmp    1355 <dns_name_decode+0x225>
+    1259:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1260:	b8 ff 00 00 00       	mov    $0xff,%eax
+    1265:	e9 f4 fe ff ff       	jmp    115e <dns_name_decode+0x2e>
+    126a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1270:	8b 5d cc             	mov    -0x34(%ebp),%ebx
+    1273:	85 db                	test   %ebx,%ebx
+    1275:	0f 84 9c 01 00 00    	je     1417 <dns_name_decode+0x2e7>
+    127b:	83 7d cc 01          	cmpl   $0x1,-0x34(%ebp)
+    127f:	0f 84 ae 01 00 00    	je     1433 <dns_name_decode+0x303>
+    1285:	31 c9                	xor    %ecx,%ecx
+    1287:	31 c0                	xor    %eax,%eax
+    1289:	8a 0e                	mov    (%esi),%cl
+    128b:	8a 46 01             	mov    0x1(%esi),%al
+    128e:	c1 e1 08             	shl    $0x8,%ecx
+    1291:	01 c1                	add    %eax,%ecx
+    1293:	8b 45 08             	mov    0x8(%ebp),%eax
+    1296:	81 e1 ff 3f 00 00    	and    $0x3fff,%ecx
+    129c:	8b 18                	mov    (%eax),%ebx
+    129e:	8d 46 02             	lea    0x2(%esi),%eax
+    12a1:	29 d8                	sub    %ebx,%eax
+    12a3:	39 c1                	cmp    %eax,%ecx
+    12a5:	0f 83 dd 00 00 00    	jae    1388 <dns_name_decode+0x258>
+    12ab:	8b 75 14             	mov    0x14(%ebp),%esi
+    12ae:	89 06                	mov    %eax,(%esi)
+    12b0:	29 c8                	sub    %ecx,%eax
+    12b2:	8d 34 0b             	lea    (%ebx,%ecx,1),%esi
+    12b5:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    12b8:	89 c1                	mov    %eax,%ecx
+    12ba:	85 c9                	test   %ecx,%ecx
+    12bc:	0f 84 8e 00 00 00    	je     1350 <dns_name_decode+0x220>
+    12c2:	8a 06                	mov    (%esi),%al
+    12c4:	49                   	dec    %ecx
+    12c5:	88 45 d4             	mov    %al,-0x2c(%ebp)
+    12c8:	8d 5e 01             	lea    0x1(%esi),%ebx
+    12cb:	25 ff 00 00 00       	and    $0xff,%eax
+    12d0:	89 5d c4             	mov    %ebx,-0x3c(%ebp)
+    12d3:	89 45 c8             	mov    %eax,-0x38(%ebp)
+    12d6:	89 4d cc             	mov    %ecx,-0x34(%ebp)
+    12d9:	85 c0                	test   %eax,%eax
+    12db:	0f 84 21 01 00 00    	je     1402 <dns_name_decode+0x2d2>
+    12e1:	84 d2                	test   %dl,%dl
+    12e3:	0f 85 ac fe ff ff    	jne    1195 <dns_name_decode+0x65>
+    12e9:	85 ff                	test   %edi,%edi
+    12eb:	0f 84 b4 00 00 00    	je     13a5 <dns_name_decode+0x275>
+    12f1:	83 ec 0c             	sub    $0xc,%esp
+    12f4:	88 55 bf             	mov    %dl,-0x41(%ebp)
+    12f7:	57                   	push   %edi
+    12f8:	e8 73 24 00 00       	call   3770 <str_size@plt>
+    12fd:	c7 04 24 24 33 00 00 	movl   $0x3324,(%esp)
+    1304:	89 c3                	mov    %eax,%ebx
+    1306:	e8 65 24 00 00       	call   3770 <str_size@plt>
+    130b:	8d 4c 03 01          	lea    0x1(%ebx,%eax,1),%ecx
+    130f:	58                   	pop    %eax
+    1310:	89 4d c0             	mov    %ecx,-0x40(%ebp)
+    1313:	5a                   	pop    %edx
+    1314:	51                   	push   %ecx
+    1315:	57                   	push   %edi
+    1316:	e8 d5 23 00 00       	call   36f0 <realloc@plt>
+    131b:	83 c4 10             	add    $0x10,%esp
+    131e:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    1321:	85 c0                	test   %eax,%eax
+    1323:	74 5b                	je     1380 <dns_name_decode+0x250>
+    1325:	8b 4d c0             	mov    -0x40(%ebp),%ecx
+    1328:	01 df                	add    %ebx,%edi
+    132a:	29 d9                	sub    %ebx,%ecx
+    132c:	50                   	push   %eax
+    132d:	68 24 33 00 00       	push   $0x3324
+    1332:	51                   	push   %ecx
+    1333:	57                   	push   %edi
+    1334:	e8 f7 23 00 00       	call   3730 <str_cpy@plt>
+    1339:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    133c:	83 c4 10             	add    $0x10,%esp
+    133f:	89 c7                	mov    %eax,%edi
+    1341:	8a 55 bf             	mov    -0x41(%ebp),%dl
+    1344:	e9 4c fe ff ff       	jmp    1195 <dns_name_decode+0x65>
+    1349:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1350:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    1355:	83 ec 0c             	sub    $0xc,%esp
+    1358:	57                   	push   %edi
+    1359:	e8 c2 24 00 00       	call   3820 <free@plt>
+    135e:	83 c4 10             	add    $0x10,%esp
+    1361:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1364:	89 d8                	mov    %ebx,%eax
+    1366:	5b                   	pop    %ebx
+    1367:	5e                   	pop    %esi
+    1368:	5f                   	pop    %edi
+    1369:	5d                   	pop    %ebp
+    136a:	c3                   	ret    
+    136b:	90                   	nop
+    136c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1370:	31 d2                	xor    %edx,%edx
+    1372:	8b 4d cc             	mov    -0x34(%ebp),%ecx
+    1375:	e9 40 ff ff ff       	jmp    12ba <dns_name_decode+0x18a>
+    137a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1380:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1385:	eb ce                	jmp    1355 <dns_name_decode+0x225>
+    1387:	90                   	nop
+    1388:	83 ec 0c             	sub    $0xc,%esp
+    138b:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    1390:	50                   	push   %eax
+    1391:	51                   	push   %ecx
+    1392:	68 d0 30 00 00       	push   $0x30d0
+    1397:	6a 04                	push   $0x4
+    1399:	6a ff                	push   $0xffffffff
+    139b:	e8 70 22 00 00       	call   3610 <log_msg@plt>
+    13a0:	83 c4 20             	add    $0x20,%esp
+    13a3:	eb b0                	jmp    1355 <dns_name_decode+0x225>
+    13a5:	83 ec 0c             	sub    $0xc,%esp
+    13a8:	88 55 d0             	mov    %dl,-0x30(%ebp)
+    13ab:	68 24 33 00 00       	push   $0x3324
+    13b0:	e8 0b 23 00 00       	call   36c0 <str_dup@plt>
+    13b5:	83 c4 10             	add    $0x10,%esp
+    13b8:	89 c7                	mov    %eax,%edi
+    13ba:	85 c0                	test   %eax,%eax
+    13bc:	8a 55 d0             	mov    -0x30(%ebp),%dl
+    13bf:	0f 85 d0 fd ff ff    	jne    1195 <dns_name_decode+0x65>
+    13c5:	e9 83 fe ff ff       	jmp    124d <dns_name_decode+0x11d>
+    13ca:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    13d0:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    13d5:	eb 8a                	jmp    1361 <dns_name_decode+0x231>
+    13d7:	8b 45 10             	mov    0x10(%ebp),%eax
+    13da:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    13e0:	8b 75 08             	mov    0x8(%ebp),%esi
+    13e3:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    13e6:	31 db                	xor    %ebx,%ebx
+    13e8:	8b 0e                	mov    (%esi),%ecx
+    13ea:	8b 75 14             	mov    0x14(%ebp),%esi
+    13ed:	29 c8                	sub    %ecx,%eax
+    13ef:	89 06                	mov    %eax,(%esi)
+    13f1:	e9 6b ff ff ff       	jmp    1361 <dns_name_decode+0x231>
+    13f6:	31 ff                	xor    %edi,%edi
+    13f8:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    13fd:	e9 53 ff ff ff       	jmp    1355 <dns_name_decode+0x225>
+    1402:	8b 45 14             	mov    0x14(%ebp),%eax
+    1405:	8b 75 10             	mov    0x10(%ebp),%esi
+    1408:	8b 00                	mov    (%eax),%eax
+    140a:	89 3e                	mov    %edi,(%esi)
+    140c:	85 c0                	test   %eax,%eax
+    140e:	74 d0                	je     13e0 <dns_name_decode+0x2b0>
+    1410:	31 db                	xor    %ebx,%ebx
+    1412:	e9 4a ff ff ff       	jmp    1361 <dns_name_decode+0x231>
+    1417:	51                   	push   %ecx
+    1418:	68 22 30 00 00       	push   $0x3022
+    141d:	6a 04                	push   $0x4
+    141f:	6a ff                	push   $0xffffffff
+    1421:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    1426:	e8 e5 21 00 00       	call   3610 <log_msg@plt>
+    142b:	83 c4 10             	add    $0x10,%esp
+    142e:	e9 22 ff ff ff       	jmp    1355 <dns_name_decode+0x225>
+    1433:	e8 d2 0a 00 00       	call   1f0a <dns_uint16_t_decode.part.0>
+    1438:	90                   	nop
+    1439:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00001440 <dns_uint32_t_decode>:
+    1440:	55                   	push   %ebp
+    1441:	89 e5                	mov    %esp,%ebp
+    1443:	53                   	push   %ebx
+    1444:	52                   	push   %edx
+    1445:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1448:	83 7d 0c 03          	cmpl   $0x3,0xc(%ebp)
+    144c:	76 29                	jbe    1477 <dns_uint32_t_decode+0x37>
+    144e:	31 c0                	xor    %eax,%eax
+    1450:	31 d2                	xor    %edx,%edx
+    1452:	8a 03                	mov    (%ebx),%al
+    1454:	8a 53 03             	mov    0x3(%ebx),%dl
+    1457:	c1 e0 18             	shl    $0x18,%eax
+    145a:	89 c1                	mov    %eax,%ecx
+    145c:	31 c0                	xor    %eax,%eax
+    145e:	8a 43 01             	mov    0x1(%ebx),%al
+    1461:	c1 e0 10             	shl    $0x10,%eax
+    1464:	01 c8                	add    %ecx,%eax
+    1466:	01 c2                	add    %eax,%edx
+    1468:	31 c0                	xor    %eax,%eax
+    146a:	8a 43 02             	mov    0x2(%ebx),%al
+    146d:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1470:	c1 e0 08             	shl    $0x8,%eax
+    1473:	c9                   	leave  
+    1474:	01 d0                	add    %edx,%eax
+    1476:	c3                   	ret    
+    1477:	50                   	push   %eax
+    1478:	68 2a 01 00 00       	push   $0x12a
+    147d:	68 0a 30 00 00       	push   $0x300a
+    1482:	68 35 30 00 00       	push   $0x3035
+    1487:	e8 94 21 00 00       	call   3620 <assert_abort@plt>
+    148c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+00001490 <dns_addr128_t_decode>:
+    1490:	55                   	push   %ebp
+    1491:	89 e5                	mov    %esp,%ebp
+    1493:	83 ec 08             	sub    $0x8,%esp
+    1496:	8b 45 08             	mov    0x8(%ebp),%eax
+    1499:	8b 55 10             	mov    0x10(%ebp),%edx
+    149c:	83 7d 0c 0f          	cmpl   $0xf,0xc(%ebp)
+    14a0:	76 0c                	jbe    14ae <dns_addr128_t_decode+0x1e>
+    14a2:	89 55 0c             	mov    %edx,0xc(%ebp)
+    14a5:	89 45 08             	mov    %eax,0x8(%ebp)
+    14a8:	c9                   	leave  
+    14a9:	e9 12 23 00 00       	jmp    37c0 <addr128_t_be2host@plt>
+    14ae:	50                   	push   %eax
+    14af:	68 37 01 00 00       	push   $0x137
+    14b4:	68 0a 30 00 00       	push   $0x300a
+    14b9:	68 43 30 00 00       	push   $0x3043
+    14be:	e8 5d 21 00 00       	call   3620 <assert_abort@plt>
+    14c3:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    14c9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000014d0 <dns_message_encode>:
+    14d0:	55                   	push   %ebp
+    14d1:	89 e5                	mov    %esp,%ebp
+    14d3:	57                   	push   %edi
+    14d4:	56                   	push   %esi
+    14d5:	53                   	push   %ebx
+    14d6:	83 ec 58             	sub    $0x58,%esp
+    14d9:	8b 45 08             	mov    0x8(%ebp),%eax
+    14dc:	8b 40 08             	mov    0x8(%eax),%eax
+    14df:	66 c1 c0 08          	rol    $0x8,%ax
+    14e3:	66 89 45 dc          	mov    %ax,-0x24(%ebp)
+    14e7:	8b 45 08             	mov    0x8(%ebp),%eax
+    14ea:	8b 78 0c             	mov    0xc(%eax),%edi
+    14ed:	8b 40 10             	mov    0x10(%eax),%eax
+    14f0:	c1 e0 0b             	shl    $0xb,%eax
+    14f3:	c1 e7 0f             	shl    $0xf,%edi
+    14f6:	09 c7                	or     %eax,%edi
+    14f8:	8b 45 08             	mov    0x8(%ebp),%eax
+    14fb:	66 89 7d d4          	mov    %di,-0x2c(%ebp)
+    14ff:	80 78 14 00          	cmpb   $0x0,0x14(%eax)
+    1503:	0f 95 c0             	setne  %al
+    1506:	89 c6                	mov    %eax,%esi
+    1508:	8b 45 08             	mov    0x8(%ebp),%eax
+    150b:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    1511:	31 db                	xor    %ebx,%ebx
+    1513:	c1 e6 0a             	shl    $0xa,%esi
+    1516:	89 c7                	mov    %eax,%edi
+    1518:	80 78 15 00          	cmpb   $0x0,0x15(%eax)
+    151c:	0f 95 c3             	setne  %bl
+    151f:	c1 e3 09             	shl    $0x9,%ebx
+    1522:	31 c9                	xor    %ecx,%ecx
+    1524:	80 78 16 00          	cmpb   $0x0,0x16(%eax)
+    1528:	0f 95 c1             	setne  %cl
+    152b:	c1 e1 08             	shl    $0x8,%ecx
+    152e:	31 d2                	xor    %edx,%edx
+    1530:	80 78 17 00          	cmpb   $0x0,0x17(%eax)
+    1534:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1537:	0f 95 c2             	setne  %dl
+    153a:	c1 e2 07             	shl    $0x7,%edx
+    153d:	0b 47 18             	or     0x18(%edi),%eax
+    1540:	09 f0                	or     %esi,%eax
+    1542:	09 d8                	or     %ebx,%eax
+    1544:	09 c8                	or     %ecx,%eax
+    1546:	09 d0                	or     %edx,%eax
+    1548:	66 c1 c0 08          	rol    $0x8,%ax
+    154c:	66 89 45 de          	mov    %ax,-0x22(%ebp)
+    1550:	89 f8                	mov    %edi,%eax
+    1552:	83 c0 1c             	add    $0x1c,%eax
+    1555:	89 c7                	mov    %eax,%edi
+    1557:	50                   	push   %eax
+    1558:	89 45 c8             	mov    %eax,-0x38(%ebp)
+    155b:	e8 20 22 00 00       	call   3780 <list_count@plt>
+    1560:	66 c1 c0 08          	rol    $0x8,%ax
+    1564:	66 89 45 e0          	mov    %ax,-0x20(%ebp)
+    1568:	8b 45 08             	mov    0x8(%ebp),%eax
+    156b:	83 c4 10             	add    $0x10,%esp
+    156e:	66 c7 45 e2 00 00    	movw   $0x0,-0x1e(%ebp)
+    1574:	8b 40 20             	mov    0x20(%eax),%eax
+    1577:	66 c7 45 e4 00 00    	movw   $0x0,-0x1c(%ebp)
+    157d:	66 c7 45 e6 00 00    	movw   $0x0,-0x1a(%ebp)
+    1583:	89 c2                	mov    %eax,%edx
+    1585:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    1588:	c7 45 cc 0c 00 00 00 	movl   $0xc,-0x34(%ebp)
+    158f:	39 c7                	cmp    %eax,%edi
+    1591:	0f 84 88 00 00 00    	je     161f <dns_message_encode+0x14f>
+    1597:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    159a:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    159d:	89 d0                	mov    %edx,%eax
+    159f:	90                   	nop
+    15a0:	8b 78 08             	mov    0x8(%eax),%edi
+    15a3:	be 02 00 00 00       	mov    $0x2,%esi
+    15a8:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+    15af:	31 db                	xor    %ebx,%ebx
+    15b1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    15b8:	50                   	push   %eax
+    15b9:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    15bc:	6a ff                	push   $0xffffffff
+    15be:	50                   	push   %eax
+    15bf:	57                   	push   %edi
+    15c0:	e8 eb 1f 00 00       	call   35b0 <str_decode@plt>
+    15c5:	83 c4 10             	add    $0x10,%esp
+    15c8:	83 f8 7e             	cmp    $0x7e,%eax
+    15cb:	0f 8f 4f 01 00 00    	jg     1720 <dns_message_encode+0x250>
+    15d1:	83 f8 2e             	cmp    $0x2e,%eax
+    15d4:	74 0a                	je     15e0 <dns_message_encode+0x110>
+    15d6:	85 c0                	test   %eax,%eax
+    15d8:	74 06                	je     15e0 <dns_message_encode+0x110>
+    15da:	43                   	inc    %ebx
+    15db:	46                   	inc    %esi
+    15dc:	eb da                	jmp    15b8 <dns_message_encode+0xe8>
+    15de:	66 90                	xchg   %ax,%ax
+    15e0:	85 db                	test   %ebx,%ebx
+    15e2:	0f 84 58 01 00 00    	je     1740 <dns_message_encode+0x270>
+    15e8:	83 fb 3f             	cmp    $0x3f,%ebx
+    15eb:	0f 87 67 01 00 00    	ja     1758 <dns_message_encode+0x288>
+    15f1:	85 c0                	test   %eax,%eax
+    15f3:	74 0b                	je     1600 <dns_message_encode+0x130>
+    15f5:	31 db                	xor    %ebx,%ebx
+    15f7:	46                   	inc    %esi
+    15f8:	eb be                	jmp    15b8 <dns_message_encode+0xe8>
+    15fa:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1600:	83 c6 04             	add    $0x4,%esi
+    1603:	0f 84 85 02 00 00    	je     188e <dns_message_encode+0x3be>
+    1609:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    160c:	8b 55 cc             	mov    -0x34(%ebp),%edx
+    160f:	01 f2                	add    %esi,%edx
+    1611:	8b 40 04             	mov    0x4(%eax),%eax
+    1614:	89 55 cc             	mov    %edx,-0x34(%ebp)
+    1617:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    161a:	39 45 c8             	cmp    %eax,-0x38(%ebp)
+    161d:	75 81                	jne    15a0 <dns_message_encode+0xd0>
+    161f:	50                   	push   %eax
+    1620:	50                   	push   %eax
+    1621:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    1624:	50                   	push   %eax
+    1625:	6a 01                	push   $0x1
+    1627:	e8 04 20 00 00       	call   3630 <calloc@plt>
+    162c:	83 c4 10             	add    $0x10,%esp
+    162f:	89 c2                	mov    %eax,%edx
+    1631:	89 45 b8             	mov    %eax,-0x48(%ebp)
+    1634:	85 c0                	test   %eax,%eax
+    1636:	0f 84 67 02 00 00    	je     18a3 <dns_message_encode+0x3d3>
+    163c:	50                   	push   %eax
+    163d:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    1640:	6a 0c                	push   $0xc
+    1642:	50                   	push   %eax
+    1643:	52                   	push   %edx
+    1644:	e8 97 1f 00 00       	call   35e0 <memcpy@plt>
+    1649:	8b 45 08             	mov    0x8(%ebp),%eax
+    164c:	8d 55 d8             	lea    -0x28(%ebp),%edx
+    164f:	83 c4 10             	add    $0x10,%esp
+    1652:	c7 45 b4 0c 00 00 00 	movl   $0xc,-0x4c(%ebp)
+    1659:	8b 40 20             	mov    0x20(%eax),%eax
+    165c:	89 55 d4             	mov    %edx,-0x2c(%ebp)
+    165f:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    1662:	39 45 c8             	cmp    %eax,-0x38(%ebp)
+    1665:	0f 84 dd 01 00 00    	je     1848 <dns_message_encode+0x378>
+    166b:	8b 55 b4             	mov    -0x4c(%ebp),%edx
+    166e:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    1671:	29 d0                	sub    %edx,%eax
+    1673:	8b 75 b8             	mov    -0x48(%ebp),%esi
+    1676:	89 45 c0             	mov    %eax,-0x40(%ebp)
+    1679:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    167c:	01 d6                	add    %edx,%esi
+    167e:	bf 01 00 00 00       	mov    $0x1,%edi
+    1683:	8b 40 08             	mov    0x8(%eax),%eax
+    1686:	c7 45 c4 00 00 00 00 	movl   $0x0,-0x3c(%ebp)
+    168d:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    1690:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+    1697:	31 db                	xor    %ebx,%ebx
+    1699:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    16a0:	50                   	push   %eax
+    16a1:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    16a4:	6a ff                	push   $0xffffffff
+    16a6:	50                   	push   %eax
+    16a7:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    16aa:	50                   	push   %eax
+    16ab:	e8 00 1f 00 00       	call   35b0 <str_decode@plt>
+    16b0:	83 c4 10             	add    $0x10,%esp
+    16b3:	83 f8 7e             	cmp    $0x7e,%eax
+    16b6:	0f 8f b0 00 00 00    	jg     176c <dns_message_encode+0x29c>
+    16bc:	83 f8 2e             	cmp    $0x2e,%eax
+    16bf:	74 1f                	je     16e0 <dns_message_encode+0x210>
+    16c1:	85 c0                	test   %eax,%eax
+    16c3:	74 1b                	je     16e0 <dns_message_encode+0x210>
+    16c5:	85 f6                	test   %esi,%esi
+    16c7:	74 08                	je     16d1 <dns_message_encode+0x201>
+    16c9:	39 7d c0             	cmp    %edi,-0x40(%ebp)
+    16cc:	76 03                	jbe    16d1 <dns_message_encode+0x201>
+    16ce:	88 04 3e             	mov    %al,(%esi,%edi,1)
+    16d1:	8d 4f 01             	lea    0x1(%edi),%ecx
+    16d4:	43                   	inc    %ebx
+    16d5:	89 cf                	mov    %ecx,%edi
+    16d7:	eb c7                	jmp    16a0 <dns_message_encode+0x1d0>
+    16d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    16e0:	85 db                	test   %ebx,%ebx
+    16e2:	0f 84 a7 00 00 00    	je     178f <dns_message_encode+0x2bf>
+    16e8:	83 fb 3f             	cmp    $0x3f,%ebx
+    16eb:	0f 87 71 01 00 00    	ja     1862 <dns_message_encode+0x392>
+    16f1:	8b 4d c4             	mov    -0x3c(%ebp),%ecx
+    16f4:	85 f6                	test   %esi,%esi
+    16f6:	0f 95 c2             	setne  %dl
+    16f9:	39 4d c0             	cmp    %ecx,-0x40(%ebp)
+    16fc:	76 07                	jbe    1705 <dns_message_encode+0x235>
+    16fe:	84 d2                	test   %dl,%dl
+    1700:	74 03                	je     1705 <dns_message_encode+0x235>
+    1702:	88 1c 0e             	mov    %bl,(%esi,%ecx,1)
+    1705:	8d 4f 01             	lea    0x1(%edi),%ecx
+    1708:	85 c0                	test   %eax,%eax
+    170a:	0f 84 93 00 00 00    	je     17a3 <dns_message_encode+0x2d3>
+    1710:	89 7d c4             	mov    %edi,-0x3c(%ebp)
+    1713:	31 db                	xor    %ebx,%ebx
+    1715:	89 cf                	mov    %ecx,%edi
+    1717:	eb 87                	jmp    16a0 <dns_message_encode+0x1d0>
+    1719:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1720:	57                   	push   %edi
+    1721:	68 52 30 00 00       	push   $0x3052
+    1726:	6a 04                	push   $0x4
+    1728:	6a ff                	push   $0xffffffff
+    172a:	e8 e1 1e 00 00       	call   3610 <log_msg@plt>
+    172f:	83 c4 10             	add    $0x10,%esp
+    1732:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1737:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    173a:	5b                   	pop    %ebx
+    173b:	5e                   	pop    %esi
+    173c:	5f                   	pop    %edi
+    173d:	5d                   	pop    %ebp
+    173e:	c3                   	ret    
+    173f:	90                   	nop
+    1740:	56                   	push   %esi
+    1741:	68 66 30 00 00       	push   $0x3066
+    1746:	6a 04                	push   $0x4
+    1748:	6a ff                	push   $0xffffffff
+    174a:	e8 c1 1e 00 00       	call   3610 <log_msg@plt>
+    174f:	83 c4 10             	add    $0x10,%esp
+    1752:	eb de                	jmp    1732 <dns_message_encode+0x262>
+    1754:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1758:	53                   	push   %ebx
+    1759:	68 72 30 00 00       	push   $0x3072
+    175e:	6a 04                	push   $0x4
+    1760:	6a ff                	push   $0xffffffff
+    1762:	e8 a9 1e 00 00       	call   3610 <log_msg@plt>
+    1767:	83 c4 10             	add    $0x10,%esp
+    176a:	eb c6                	jmp    1732 <dns_message_encode+0x262>
+    176c:	57                   	push   %edi
+    176d:	68 52 30 00 00       	push   $0x3052
+    1772:	6a 04                	push   $0x4
+    1774:	6a ff                	push   $0xffffffff
+    1776:	e8 95 1e 00 00       	call   3610 <log_msg@plt>
+    177b:	83 c4 10             	add    $0x10,%esp
+    177e:	83 ec 0c             	sub    $0xc,%esp
+    1781:	8b 45 b8             	mov    -0x48(%ebp),%eax
+    1784:	50                   	push   %eax
+    1785:	e8 96 20 00 00       	call   3820 <free@plt>
+    178a:	83 c4 10             	add    $0x10,%esp
+    178d:	eb a3                	jmp    1732 <dns_message_encode+0x262>
+    178f:	56                   	push   %esi
+    1790:	68 66 30 00 00       	push   $0x3066
+    1795:	6a 04                	push   $0x4
+    1797:	6a ff                	push   $0xffffffff
+    1799:	e8 72 1e 00 00       	call   3610 <log_msg@plt>
+    179e:	83 c4 10             	add    $0x10,%esp
+    17a1:	eb db                	jmp    177e <dns_message_encode+0x2ae>
+    17a3:	39 7d c0             	cmp    %edi,-0x40(%ebp)
+    17a6:	76 08                	jbe    17b0 <dns_message_encode+0x2e0>
+    17a8:	84 d2                	test   %dl,%dl
+    17aa:	74 04                	je     17b0 <dns_message_encode+0x2e0>
+    17ac:	c6 04 3e 00          	movb   $0x0,(%esi,%edi,1)
+    17b0:	8d 47 05             	lea    0x5(%edi),%eax
+    17b3:	85 f6                	test   %esi,%esi
+    17b5:	74 73                	je     182a <dns_message_encode+0x35a>
+    17b7:	8b 55 bc             	mov    -0x44(%ebp),%edx
+    17ba:	8b 5d c0             	mov    -0x40(%ebp),%ebx
+    17bd:	8b 52 0c             	mov    0xc(%edx),%edx
+    17c0:	89 55 b0             	mov    %edx,-0x50(%ebp)
+    17c3:	89 f2                	mov    %esi,%edx
+    17c5:	01 ca                	add    %ecx,%edx
+    17c7:	0f 95 45 d0          	setne  -0x30(%ebp)
+    17cb:	29 cb                	sub    %ecx,%ebx
+    17cd:	89 55 c4             	mov    %edx,-0x3c(%ebp)
+    17d0:	89 d9                	mov    %ebx,%ecx
+    17d2:	8a 55 d0             	mov    -0x30(%ebp),%dl
+    17d5:	74 10                	je     17e7 <dns_message_encode+0x317>
+    17d7:	84 d2                	test   %dl,%dl
+    17d9:	74 0c                	je     17e7 <dns_message_encode+0x317>
+    17db:	8b 55 b0             	mov    -0x50(%ebp),%edx
+    17de:	8b 5d c4             	mov    -0x3c(%ebp),%ebx
+    17e1:	66 c1 ea 08          	shr    $0x8,%dx
+    17e5:	88 13                	mov    %dl,(%ebx)
+    17e7:	83 f9 01             	cmp    $0x1,%ecx
+    17ea:	76 0f                	jbe    17fb <dns_message_encode+0x32b>
+    17ec:	80 7d d0 00          	cmpb   $0x0,-0x30(%ebp)
+    17f0:	74 09                	je     17fb <dns_message_encode+0x32b>
+    17f2:	8b 4d c4             	mov    -0x3c(%ebp),%ecx
+    17f5:	8a 55 b0             	mov    -0x50(%ebp),%dl
+    17f8:	88 51 01             	mov    %dl,0x1(%ecx)
+    17fb:	83 c7 03             	add    $0x3,%edi
+    17fe:	8b 55 bc             	mov    -0x44(%ebp),%edx
+    1801:	01 fe                	add    %edi,%esi
+    1803:	8b 4d c0             	mov    -0x40(%ebp),%ecx
+    1806:	0f 95 c3             	setne  %bl
+    1809:	29 f9                	sub    %edi,%ecx
+    180b:	8b 52 10             	mov    0x10(%edx),%edx
+    180e:	89 cf                	mov    %ecx,%edi
+    1810:	74 0c                	je     181e <dns_message_encode+0x34e>
+    1812:	84 db                	test   %bl,%bl
+    1814:	74 08                	je     181e <dns_message_encode+0x34e>
+    1816:	89 d1                	mov    %edx,%ecx
+    1818:	66 c1 e9 08          	shr    $0x8,%cx
+    181c:	88 0e                	mov    %cl,(%esi)
+    181e:	83 ff 01             	cmp    $0x1,%edi
+    1821:	76 07                	jbe    182a <dns_message_encode+0x35a>
+    1823:	84 db                	test   %bl,%bl
+    1825:	74 03                	je     182a <dns_message_encode+0x35a>
+    1827:	88 56 01             	mov    %dl,0x1(%esi)
+    182a:	85 c0                	test   %eax,%eax
+    182c:	74 4b                	je     1879 <dns_message_encode+0x3a9>
+    182e:	8b 55 b4             	mov    -0x4c(%ebp),%edx
+    1831:	01 c2                	add    %eax,%edx
+    1833:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    1836:	89 55 b4             	mov    %edx,-0x4c(%ebp)
+    1839:	8b 40 04             	mov    0x4(%eax),%eax
+    183c:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    183f:	39 45 c8             	cmp    %eax,-0x38(%ebp)
+    1842:	0f 85 23 fe ff ff    	jne    166b <dns_message_encode+0x19b>
+    1848:	8b 45 0c             	mov    0xc(%ebp),%eax
+    184b:	8b 55 b8             	mov    -0x48(%ebp),%edx
+    184e:	8b 4d cc             	mov    -0x34(%ebp),%ecx
+    1851:	89 10                	mov    %edx,(%eax)
+    1853:	8b 45 10             	mov    0x10(%ebp),%eax
+    1856:	89 08                	mov    %ecx,(%eax)
+    1858:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    185b:	31 c0                	xor    %eax,%eax
+    185d:	5b                   	pop    %ebx
+    185e:	5e                   	pop    %esi
+    185f:	5f                   	pop    %edi
+    1860:	5d                   	pop    %ebp
+    1861:	c3                   	ret    
+    1862:	53                   	push   %ebx
+    1863:	68 72 30 00 00       	push   $0x3072
+    1868:	6a 04                	push   $0x4
+    186a:	6a ff                	push   $0xffffffff
+    186c:	e8 9f 1d 00 00       	call   3610 <log_msg@plt>
+    1871:	83 c4 10             	add    $0x10,%esp
+    1874:	e9 05 ff ff ff       	jmp    177e <dns_message_encode+0x2ae>
+    1879:	51                   	push   %ecx
+    187a:	68 19 02 00 00       	push   $0x219
+    187f:	68 0a 30 00 00       	push   $0x300a
+    1884:	68 81 30 00 00       	push   $0x3081
+    1889:	e8 92 1d 00 00       	call   3620 <assert_abort@plt>
+    188e:	51                   	push   %ecx
+    188f:	68 05 02 00 00       	push   $0x205
+    1894:	68 0a 30 00 00       	push   $0x300a
+    1899:	68 81 30 00 00       	push   $0x3081
+    189e:	e8 7d 1d 00 00       	call   3620 <assert_abort@plt>
+    18a3:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    18a8:	e9 8a fe ff ff       	jmp    1737 <dns_message_encode+0x267>
+    18ad:	8d 76 00             	lea    0x0(%esi),%esi
+
+000018b0 <dns_message_new>:
+    18b0:	55                   	push   %ebp
+    18b1:	89 e5                	mov    %esp,%ebp
+    18b3:	83 ec 10             	sub    $0x10,%esp
+    18b6:	6a 3c                	push   $0x3c
+    18b8:	6a 01                	push   $0x1
+    18ba:	e8 71 1d 00 00       	call   3630 <calloc@plt>
+    18bf:	83 c4 10             	add    $0x10,%esp
+    18c2:	85 c0                	test   %eax,%eax
+    18c4:	74 24                	je     18ea <dns_message_new+0x3a>
+    18c6:	8d 50 1c             	lea    0x1c(%eax),%edx
+    18c9:	89 50 1c             	mov    %edx,0x1c(%eax)
+    18cc:	89 50 20             	mov    %edx,0x20(%eax)
+    18cf:	8d 50 24             	lea    0x24(%eax),%edx
+    18d2:	89 50 24             	mov    %edx,0x24(%eax)
+    18d5:	89 50 28             	mov    %edx,0x28(%eax)
+    18d8:	8d 50 2c             	lea    0x2c(%eax),%edx
+    18db:	89 50 2c             	mov    %edx,0x2c(%eax)
+    18de:	89 50 30             	mov    %edx,0x30(%eax)
+    18e1:	8d 50 34             	lea    0x34(%eax),%edx
+    18e4:	89 50 34             	mov    %edx,0x34(%eax)
+    18e7:	89 50 38             	mov    %edx,0x38(%eax)
+    18ea:	c9                   	leave  
+    18eb:	c3                   	ret    
+    18ec:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+000018f0 <dns_message_destroy>:
+    18f0:	55                   	push   %ebp
+    18f1:	89 e5                	mov    %esp,%ebp
+    18f3:	57                   	push   %edi
+    18f4:	56                   	push   %esi
+    18f5:	53                   	push   %ebx
+    18f6:	83 ec 0c             	sub    $0xc,%esp
+    18f9:	8b 75 08             	mov    0x8(%ebp),%esi
+    18fc:	8b 5e 20             	mov    0x20(%esi),%ebx
+    18ff:	8d 7e 1c             	lea    0x1c(%esi),%edi
+    1902:	39 fb                	cmp    %edi,%ebx
+    1904:	74 41                	je     1947 <dns_message_destroy+0x57>
+    1906:	66 90                	xchg   %ax,%ax
+    1908:	8b 13                	mov    (%ebx),%edx
+    190a:	85 d2                	test   %edx,%edx
+    190c:	74 0e                	je     191c <dns_message_destroy+0x2c>
+    190e:	8b 43 04             	mov    0x4(%ebx),%eax
+    1911:	85 c0                	test   %eax,%eax
+    1913:	74 07                	je     191c <dns_message_destroy+0x2c>
+    1915:	89 10                	mov    %edx,(%eax)
+    1917:	8b 13                	mov    (%ebx),%edx
+    1919:	89 42 04             	mov    %eax,0x4(%edx)
+    191c:	83 ec 0c             	sub    $0xc,%esp
+    191f:	8b 53 08             	mov    0x8(%ebx),%edx
+    1922:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    1928:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    192f:	52                   	push   %edx
+    1930:	e8 eb 1e 00 00       	call   3820 <free@plt>
+    1935:	89 1c 24             	mov    %ebx,(%esp)
+    1938:	e8 e3 1e 00 00       	call   3820 <free@plt>
+    193d:	8b 5e 20             	mov    0x20(%esi),%ebx
+    1940:	83 c4 10             	add    $0x10,%esp
+    1943:	39 fb                	cmp    %edi,%ebx
+    1945:	75 c1                	jne    1908 <dns_message_destroy+0x18>
+    1947:	8b 5e 28             	mov    0x28(%esi),%ebx
+    194a:	8d 7e 24             	lea    0x24(%esi),%edi
+    194d:	39 fb                	cmp    %edi,%ebx
+    194f:	74 50                	je     19a1 <dns_message_destroy+0xb1>
+    1951:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1958:	8b 13                	mov    (%ebx),%edx
+    195a:	85 d2                	test   %edx,%edx
+    195c:	74 0e                	je     196c <dns_message_destroy+0x7c>
+    195e:	8b 43 04             	mov    0x4(%ebx),%eax
+    1961:	85 c0                	test   %eax,%eax
+    1963:	74 07                	je     196c <dns_message_destroy+0x7c>
+    1965:	89 10                	mov    %edx,(%eax)
+    1967:	8b 13                	mov    (%ebx),%edx
+    1969:	89 42 04             	mov    %eax,0x4(%edx)
+    196c:	83 ec 0c             	sub    $0xc,%esp
+    196f:	8b 43 08             	mov    0x8(%ebx),%eax
+    1972:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    1978:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    197f:	50                   	push   %eax
+    1980:	e8 9b 1e 00 00       	call   3820 <free@plt>
+    1985:	58                   	pop    %eax
+    1986:	8b 43 18             	mov    0x18(%ebx),%eax
+    1989:	50                   	push   %eax
+    198a:	e8 91 1e 00 00       	call   3820 <free@plt>
+    198f:	89 1c 24             	mov    %ebx,(%esp)
+    1992:	e8 89 1e 00 00       	call   3820 <free@plt>
+    1997:	8b 5e 28             	mov    0x28(%esi),%ebx
+    199a:	83 c4 10             	add    $0x10,%esp
+    199d:	39 fb                	cmp    %edi,%ebx
+    199f:	75 b7                	jne    1958 <dns_message_destroy+0x68>
+    19a1:	8b 5e 30             	mov    0x30(%esi),%ebx
+    19a4:	8d 7e 2c             	lea    0x2c(%esi),%edi
+    19a7:	39 df                	cmp    %ebx,%edi
+    19a9:	74 4e                	je     19f9 <dns_message_destroy+0x109>
+    19ab:	90                   	nop
+    19ac:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    19b0:	8b 13                	mov    (%ebx),%edx
+    19b2:	85 d2                	test   %edx,%edx
+    19b4:	74 0e                	je     19c4 <dns_message_destroy+0xd4>
+    19b6:	8b 43 04             	mov    0x4(%ebx),%eax
+    19b9:	85 c0                	test   %eax,%eax
+    19bb:	74 07                	je     19c4 <dns_message_destroy+0xd4>
+    19bd:	89 10                	mov    %edx,(%eax)
+    19bf:	8b 13                	mov    (%ebx),%edx
+    19c1:	89 42 04             	mov    %eax,0x4(%edx)
+    19c4:	83 ec 0c             	sub    $0xc,%esp
+    19c7:	8b 43 08             	mov    0x8(%ebx),%eax
+    19ca:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    19d0:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    19d7:	50                   	push   %eax
+    19d8:	e8 43 1e 00 00       	call   3820 <free@plt>
+    19dd:	58                   	pop    %eax
+    19de:	8b 43 18             	mov    0x18(%ebx),%eax
+    19e1:	50                   	push   %eax
+    19e2:	e8 39 1e 00 00       	call   3820 <free@plt>
+    19e7:	89 1c 24             	mov    %ebx,(%esp)
+    19ea:	e8 31 1e 00 00       	call   3820 <free@plt>
+    19ef:	8b 5e 30             	mov    0x30(%esi),%ebx
+    19f2:	83 c4 10             	add    $0x10,%esp
+    19f5:	39 fb                	cmp    %edi,%ebx
+    19f7:	75 b7                	jne    19b0 <dns_message_destroy+0xc0>
+    19f9:	8b 5e 38             	mov    0x38(%esi),%ebx
+    19fc:	8d 7e 34             	lea    0x34(%esi),%edi
+    19ff:	39 df                	cmp    %ebx,%edi
+    1a01:	74 4e                	je     1a51 <dns_message_destroy+0x161>
+    1a03:	90                   	nop
+    1a04:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1a08:	8b 13                	mov    (%ebx),%edx
+    1a0a:	85 d2                	test   %edx,%edx
+    1a0c:	74 0e                	je     1a1c <dns_message_destroy+0x12c>
+    1a0e:	8b 43 04             	mov    0x4(%ebx),%eax
+    1a11:	85 c0                	test   %eax,%eax
+    1a13:	74 07                	je     1a1c <dns_message_destroy+0x12c>
+    1a15:	89 10                	mov    %edx,(%eax)
+    1a17:	8b 13                	mov    (%ebx),%edx
+    1a19:	89 42 04             	mov    %eax,0x4(%edx)
+    1a1c:	83 ec 0c             	sub    $0xc,%esp
+    1a1f:	8b 43 08             	mov    0x8(%ebx),%eax
+    1a22:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    1a28:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    1a2f:	50                   	push   %eax
+    1a30:	e8 eb 1d 00 00       	call   3820 <free@plt>
+    1a35:	8b 4b 18             	mov    0x18(%ebx),%ecx
+    1a38:	5a                   	pop    %edx
+    1a39:	51                   	push   %ecx
+    1a3a:	e8 e1 1d 00 00       	call   3820 <free@plt>
+    1a3f:	89 1c 24             	mov    %ebx,(%esp)
+    1a42:	e8 d9 1d 00 00       	call   3820 <free@plt>
+    1a47:	8b 5e 38             	mov    0x38(%esi),%ebx
+    1a4a:	83 c4 10             	add    $0x10,%esp
+    1a4d:	39 fb                	cmp    %edi,%ebx
+    1a4f:	75 b7                	jne    1a08 <dns_message_destroy+0x118>
+    1a51:	83 ec 0c             	sub    $0xc,%esp
+    1a54:	8b 1e                	mov    (%esi),%ebx
+    1a56:	53                   	push   %ebx
+    1a57:	e8 c4 1d 00 00       	call   3820 <free@plt>
+    1a5c:	89 75 08             	mov    %esi,0x8(%ebp)
+    1a5f:	83 c4 10             	add    $0x10,%esp
+    1a62:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1a65:	5b                   	pop    %ebx
+    1a66:	5e                   	pop    %esi
+    1a67:	5f                   	pop    %edi
+    1a68:	5d                   	pop    %ebp
+    1a69:	e9 b2 1d 00 00       	jmp    3820 <free@plt>
+    1a6e:	66 90                	xchg   %ax,%ax
+
+00001a70 <dns_message_decode>:
+    1a70:	55                   	push   %ebp
+    1a71:	89 e5                	mov    %esp,%ebp
+    1a73:	57                   	push   %edi
+    1a74:	56                   	push   %esi
+    1a75:	53                   	push   %ebx
+    1a76:	83 ec 44             	sub    $0x44,%esp
+    1a79:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+    1a7c:	6a 3c                	push   $0x3c
+    1a7e:	6a 01                	push   $0x1
+    1a80:	e8 ab 1b 00 00       	call   3630 <calloc@plt>
+    1a85:	83 c4 10             	add    $0x10,%esp
+    1a88:	85 c0                	test   %eax,%eax
+    1a8a:	0f 84 3e 04 00 00    	je     1ece <dns_message_decode+0x45e>
+    1a90:	89 c7                	mov    %eax,%edi
+    1a92:	8d 40 1c             	lea    0x1c(%eax),%eax
+    1a95:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    1a98:	83 fb 0b             	cmp    $0xb,%ebx
+    1a9b:	89 47 1c             	mov    %eax,0x1c(%edi)
+    1a9e:	89 47 20             	mov    %eax,0x20(%edi)
+    1aa1:	8d 47 24             	lea    0x24(%edi),%eax
+    1aa4:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    1aa7:	89 47 24             	mov    %eax,0x24(%edi)
+    1aaa:	89 47 28             	mov    %eax,0x28(%edi)
+    1aad:	8d 47 2c             	lea    0x2c(%edi),%eax
+    1ab0:	89 47 2c             	mov    %eax,0x2c(%edi)
+    1ab3:	89 47 30             	mov    %eax,0x30(%edi)
+    1ab6:	8d 47 34             	lea    0x34(%edi),%eax
+    1ab9:	89 47 34             	mov    %eax,0x34(%edi)
+    1abc:	89 47 38             	mov    %eax,0x38(%edi)
+    1abf:	0f 86 2b 03 00 00    	jbe    1df0 <dns_message_decode+0x380>
+    1ac5:	83 ec 0c             	sub    $0xc,%esp
+    1ac8:	53                   	push   %ebx
+    1ac9:	e8 22 1b 00 00       	call   35f0 <malloc@plt>
+    1ace:	83 c4 10             	add    $0x10,%esp
+    1ad1:	89 07                	mov    %eax,(%edi)
+    1ad3:	85 c0                	test   %eax,%eax
+    1ad5:	0f 84 35 03 00 00    	je     1e10 <dns_message_decode+0x3a0>
+    1adb:	8b 55 08             	mov    0x8(%ebp),%edx
+    1ade:	56                   	push   %esi
+    1adf:	53                   	push   %ebx
+    1ae0:	52                   	push   %edx
+    1ae1:	50                   	push   %eax
+    1ae2:	e8 f9 1a 00 00       	call   35e0 <memcpy@plt>
+    1ae7:	89 5f 04             	mov    %ebx,0x4(%edi)
+    1aea:	8b 0f                	mov    (%edi),%ecx
+    1aec:	89 1c 24             	mov    %ebx,(%esp)
+    1aef:	51                   	push   %ecx
+    1af0:	68 f4 30 00 00       	push   $0x30f4
+    1af5:	6a 03                	push   $0x3
+    1af7:	6a ff                	push   $0xffffffff
+    1af9:	e8 12 1b 00 00       	call   3610 <log_msg@plt>
+    1afe:	8b 45 08             	mov    0x8(%ebp),%eax
+    1b01:	83 c4 20             	add    $0x20,%esp
+    1b04:	66 8b 00             	mov    (%eax),%ax
+    1b07:	66 c1 c0 08          	rol    $0x8,%ax
+    1b0b:	66 89 47 08          	mov    %ax,0x8(%edi)
+    1b0f:	8b 45 08             	mov    0x8(%ebp),%eax
+    1b12:	66 8b 40 02          	mov    0x2(%eax),%ax
+    1b16:	89 c2                	mov    %eax,%edx
+    1b18:	66 c1 ea 0f          	shr    $0xf,%dx
+    1b1c:	81 e2 ff ff 00 00    	and    $0xffff,%edx
+    1b22:	89 57 0c             	mov    %edx,0xc(%edi)
+    1b25:	89 c2                	mov    %eax,%edx
+    1b27:	66 c1 ea 0b          	shr    $0xb,%dx
+    1b2b:	83 e2 0f             	and    $0xf,%edx
+    1b2e:	89 57 10             	mov    %edx,0x10(%edi)
+    1b31:	89 c2                	mov    %eax,%edx
+    1b33:	66 c1 ea 0a          	shr    $0xa,%dx
+    1b37:	88 57 14             	mov    %dl,0x14(%edi)
+    1b3a:	89 c2                	mov    %eax,%edx
+    1b3c:	66 c1 ea 09          	shr    $0x9,%dx
+    1b40:	88 57 15             	mov    %dl,0x15(%edi)
+    1b43:	89 c2                	mov    %eax,%edx
+    1b45:	66 c1 ea 08          	shr    $0x8,%dx
+    1b49:	88 57 16             	mov    %dl,0x16(%edi)
+    1b4c:	89 c2                	mov    %eax,%edx
+    1b4e:	66 c1 ea 07          	shr    $0x7,%dx
+    1b52:	83 e0 0f             	and    $0xf,%eax
+    1b55:	89 47 18             	mov    %eax,0x18(%edi)
+    1b58:	8b 45 08             	mov    0x8(%ebp),%eax
+    1b5b:	88 57 17             	mov    %dl,0x17(%edi)
+    1b5e:	66 8b 40 04          	mov    0x4(%eax),%ax
+    1b62:	66 89 45 d4          	mov    %ax,-0x2c(%ebp)
+    1b66:	66 c1 c0 08          	rol    $0x8,%ax
+    1b6a:	89 c1                	mov    %eax,%ecx
+    1b6c:	81 e1 ff ff 00 00    	and    $0xffff,%ecx
+    1b72:	80 67 14 01          	andb   $0x1,0x14(%edi)
+    1b76:	80 67 15 01          	andb   $0x1,0x15(%edi)
+    1b7a:	80 67 16 01          	andb   $0x1,0x16(%edi)
+    1b7e:	80 67 17 01          	andb   $0x1,0x17(%edi)
+    1b82:	66 85 c0             	test   %ax,%ax
+    1b85:	89 4d c0             	mov    %ecx,-0x40(%ebp)
+    1b88:	0f 84 4a 03 00 00    	je     1ed8 <dns_message_decode+0x468>
+    1b8e:	c7 45 d4 00 00 00 00 	movl   $0x0,-0x2c(%ebp)
+    1b95:	c7 45 d0 0c 00 00 00 	movl   $0xc,-0x30(%ebp)
+    1b9c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1ba0:	51                   	push   %ecx
+    1ba1:	51                   	push   %ecx
+    1ba2:	6a 14                	push   $0x14
+    1ba4:	6a 01                	push   $0x1
+    1ba6:	e8 85 1a 00 00       	call   3630 <calloc@plt>
+    1bab:	83 c4 10             	add    $0x10,%esp
+    1bae:	89 c3                	mov    %eax,%ebx
+    1bb0:	85 c0                	test   %eax,%eax
+    1bb2:	0f 84 90 02 00 00    	je     1e48 <dns_message_decode+0x3d8>
+    1bb8:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1bbb:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    1bbe:	50                   	push   %eax
+    1bbf:	8d 43 08             	lea    0x8(%ebx),%eax
+    1bc2:	50                   	push   %eax
+    1bc3:	52                   	push   %edx
+    1bc4:	57                   	push   %edi
+    1bc5:	e8 66 f5 ff ff       	call   1130 <dns_name_decode>
+    1bca:	83 c4 10             	add    $0x10,%esp
+    1bcd:	85 c0                	test   %eax,%eax
+    1bcf:	0f 85 93 02 00 00    	jne    1e68 <dns_message_decode+0x3f8>
+    1bd5:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    1bd8:	8d 42 04             	lea    0x4(%edx),%eax
+    1bdb:	89 c1                	mov    %eax,%ecx
+    1bdd:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    1be0:	8b 47 04             	mov    0x4(%edi),%eax
+    1be3:	39 c1                	cmp    %eax,%ecx
+    1be5:	0f 87 a5 02 00 00    	ja     1e90 <dns_message_decode+0x420>
+    1beb:	8b 0f                	mov    (%edi),%ecx
+    1bed:	29 d0                	sub    %edx,%eax
+    1bef:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    1bf2:	83 f8 01             	cmp    $0x1,%eax
+    1bf5:	8d 34 11             	lea    (%ecx,%edx,1),%esi
+    1bf8:	0f 86 07 03 00 00    	jbe    1f05 <dns_message_decode+0x495>
+    1bfe:	31 c0                	xor    %eax,%eax
+    1c00:	8a 06                	mov    (%esi),%al
+    1c02:	c1 e0 08             	shl    $0x8,%eax
+    1c05:	66 89 45 ca          	mov    %ax,-0x36(%ebp)
+    1c09:	8a 46 01             	mov    0x1(%esi),%al
+    1c0c:	25 ff 00 00 00       	and    $0xff,%eax
+    1c11:	89 c6                	mov    %eax,%esi
+    1c13:	66 8b 45 ca          	mov    -0x36(%ebp),%ax
+    1c17:	01 f0                	add    %esi,%eax
+    1c19:	25 ff ff 00 00       	and    $0xffff,%eax
+    1c1e:	89 43 0c             	mov    %eax,0xc(%ebx)
+    1c21:	8d 44 11 02          	lea    0x2(%ecx,%edx,1),%eax
+    1c25:	8b 55 cc             	mov    -0x34(%ebp),%edx
+    1c28:	83 ea 02             	sub    $0x2,%edx
+    1c2b:	83 fa 01             	cmp    $0x1,%edx
+    1c2e:	0f 86 d1 02 00 00    	jbe    1f05 <dns_message_decode+0x495>
+    1c34:	8a 48 01             	mov    0x1(%eax),%cl
+    1c37:	31 d2                	xor    %edx,%edx
+    1c39:	8a 10                	mov    (%eax),%dl
+    1c3b:	81 e1 ff 00 00 00    	and    $0xff,%ecx
+    1c41:	c1 e2 08             	shl    $0x8,%edx
+    1c44:	89 c8                	mov    %ecx,%eax
+    1c46:	01 c2                	add    %eax,%edx
+    1c48:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    1c4b:	89 43 04             	mov    %eax,0x4(%ebx)
+    1c4e:	8b 47 1c             	mov    0x1c(%edi),%eax
+    1c51:	81 e2 ff ff 00 00    	and    $0xffff,%edx
+    1c57:	89 03                	mov    %eax,(%ebx)
+    1c59:	89 53 10             	mov    %edx,0x10(%ebx)
+    1c5c:	89 58 04             	mov    %ebx,0x4(%eax)
+    1c5f:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1c62:	89 5f 1c             	mov    %ebx,0x1c(%edi)
+    1c65:	40                   	inc    %eax
+    1c66:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1c69:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1c6c:	39 45 c0             	cmp    %eax,-0x40(%ebp)
+    1c6f:	0f 85 2b ff ff ff    	jne    1ba0 <dns_message_decode+0x130>
+    1c75:	8b 45 08             	mov    0x8(%ebp),%eax
+    1c78:	c7 45 d4 00 00 00 00 	movl   $0x0,-0x2c(%ebp)
+    1c7f:	8b 75 d0             	mov    -0x30(%ebp),%esi
+    1c82:	66 8b 40 06          	mov    0x6(%eax),%ax
+    1c86:	66 c1 c0 08          	rol    $0x8,%ax
+    1c8a:	89 c3                	mov    %eax,%ebx
+    1c8c:	81 e3 ff ff 00 00    	and    $0xffff,%ebx
+    1c92:	66 85 c0             	test   %ax,%ax
+    1c95:	89 5d cc             	mov    %ebx,-0x34(%ebp)
+    1c98:	0f 84 48 01 00 00    	je     1de6 <dns_message_decode+0x376>
+    1c9e:	66 90                	xchg   %ax,%ax
+    1ca0:	50                   	push   %eax
+    1ca1:	50                   	push   %eax
+    1ca2:	6a 24                	push   $0x24
+    1ca4:	6a 01                	push   $0x1
+    1ca6:	e8 85 19 00 00       	call   3630 <calloc@plt>
+    1cab:	83 c4 10             	add    $0x10,%esp
+    1cae:	89 c3                	mov    %eax,%ebx
+    1cb0:	85 c0                	test   %eax,%eax
+    1cb2:	0f 84 eb 01 00 00    	je     1ea3 <dns_message_decode+0x433>
+    1cb8:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1cbb:	50                   	push   %eax
+    1cbc:	8d 43 08             	lea    0x8(%ebx),%eax
+    1cbf:	50                   	push   %eax
+    1cc0:	56                   	push   %esi
+    1cc1:	57                   	push   %edi
+    1cc2:	e8 69 f4 ff ff       	call   1130 <dns_name_decode>
+    1cc7:	83 c4 10             	add    $0x10,%esp
+    1cca:	85 c0                	test   %eax,%eax
+    1ccc:	0f 85 d8 01 00 00    	jne    1eaa <dns_message_decode+0x43a>
+    1cd2:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    1cd5:	8b 4f 04             	mov    0x4(%edi),%ecx
+    1cd8:	8d 42 04             	lea    0x4(%edx),%eax
+    1cdb:	39 c8                	cmp    %ecx,%eax
+    1cdd:	0f 87 35 01 00 00    	ja     1e18 <dns_message_decode+0x3a8>
+    1ce3:	8b 07                	mov    (%edi),%eax
+    1ce5:	29 d1                	sub    %edx,%ecx
+    1ce7:	01 d0                	add    %edx,%eax
+    1ce9:	83 f9 09             	cmp    $0x9,%ecx
+    1cec:	0f 86 26 01 00 00    	jbe    1e18 <dns_message_decode+0x3a8>
+    1cf2:	0f b6 70 01          	movzbl 0x1(%eax),%esi
+    1cf6:	31 d2                	xor    %edx,%edx
+    1cf8:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    1cfe:	8a 10                	mov    (%eax),%dl
+    1d00:	83 e9 0a             	sub    $0xa,%ecx
+    1d03:	c1 e2 08             	shl    $0x8,%edx
+    1d06:	83 c0 0a             	add    $0xa,%eax
+    1d09:	01 f2                	add    %esi,%edx
+    1d0b:	81 e2 ff ff 00 00    	and    $0xffff,%edx
+    1d11:	89 53 0c             	mov    %edx,0xc(%ebx)
+    1d14:	31 d2                	xor    %edx,%edx
+    1d16:	0f b6 70 f9          	movzbl -0x7(%eax),%esi
+    1d1a:	8a 50 f8             	mov    -0x8(%eax),%dl
+    1d1d:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    1d23:	c1 e2 08             	shl    $0x8,%edx
+    1d26:	01 f2                	add    %esi,%edx
+    1d28:	81 e2 ff ff 00 00    	and    $0xffff,%edx
+    1d2e:	89 53 10             	mov    %edx,0x10(%ebx)
+    1d31:	31 d2                	xor    %edx,%edx
+    1d33:	8a 50 fa             	mov    -0x6(%eax),%dl
+    1d36:	89 d6                	mov    %edx,%esi
+    1d38:	31 d2                	xor    %edx,%edx
+    1d3a:	c1 e6 18             	shl    $0x18,%esi
+    1d3d:	8a 50 fb             	mov    -0x5(%eax),%dl
+    1d40:	c1 e2 10             	shl    $0x10,%edx
+    1d43:	01 f2                	add    %esi,%edx
+    1d45:	0f b6 70 fd          	movzbl -0x3(%eax),%esi
+    1d49:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    1d4f:	01 f2                	add    %esi,%edx
+    1d51:	0f b6 70 fc          	movzbl -0x4(%eax),%esi
+    1d55:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    1d5b:	c1 e6 08             	shl    $0x8,%esi
+    1d5e:	01 f2                	add    %esi,%edx
+    1d60:	89 53 14             	mov    %edx,0x14(%ebx)
+    1d63:	31 d2                	xor    %edx,%edx
+    1d65:	0f b6 70 ff          	movzbl -0x1(%eax),%esi
+    1d69:	8a 50 fe             	mov    -0x2(%eax),%dl
+    1d6c:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    1d72:	c1 e2 08             	shl    $0x8,%edx
+    1d75:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    1d78:	01 f2                	add    %esi,%edx
+    1d7a:	31 f6                	xor    %esi,%esi
+    1d7c:	66 89 d6             	mov    %dx,%si
+    1d7f:	39 ce                	cmp    %ecx,%esi
+    1d81:	0f 87 91 00 00 00    	ja     1e18 <dns_message_decode+0x3a8>
+    1d87:	89 73 1c             	mov    %esi,0x1c(%ebx)
+    1d8a:	50                   	push   %eax
+    1d8b:	50                   	push   %eax
+    1d8c:	6a 04                	push   $0x4
+    1d8e:	6a 01                	push   $0x1
+    1d90:	e8 9b 18 00 00       	call   3630 <calloc@plt>
+    1d95:	83 c4 10             	add    $0x10,%esp
+    1d98:	89 43 18             	mov    %eax,0x18(%ebx)
+    1d9b:	85 c0                	test   %eax,%eax
+    1d9d:	0f 84 41 01 00 00    	je     1ee4 <dns_message_decode+0x474>
+    1da3:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    1da6:	51                   	push   %ecx
+    1da7:	56                   	push   %esi
+    1da8:	52                   	push   %edx
+    1da9:	50                   	push   %eax
+    1daa:	e8 31 18 00 00       	call   35e0 <memcpy@plt>
+    1daf:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    1db2:	8b 0f                	mov    (%edi),%ecx
+    1db4:	89 d0                	mov    %edx,%eax
+    1db6:	01 d6                	add    %edx,%esi
+    1db8:	29 c8                	sub    %ecx,%eax
+    1dba:	29 ce                	sub    %ecx,%esi
+    1dbc:	89 43 20             	mov    %eax,0x20(%ebx)
+    1dbf:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    1dc2:	89 43 04             	mov    %eax,0x4(%ebx)
+    1dc5:	8b 47 24             	mov    0x24(%edi),%eax
+    1dc8:	89 03                	mov    %eax,(%ebx)
+    1dca:	83 c4 10             	add    $0x10,%esp
+    1dcd:	89 58 04             	mov    %ebx,0x4(%eax)
+    1dd0:	89 5f 24             	mov    %ebx,0x24(%edi)
+    1dd3:	8b 5d d4             	mov    -0x2c(%ebp),%ebx
+    1dd6:	43                   	inc    %ebx
+    1dd7:	89 5d d4             	mov    %ebx,-0x2c(%ebp)
+    1dda:	8b 5d d4             	mov    -0x2c(%ebp),%ebx
+    1ddd:	39 5d cc             	cmp    %ebx,-0x34(%ebp)
+    1de0:	0f 85 ba fe ff ff    	jne    1ca0 <dns_message_decode+0x230>
+    1de6:	8b 45 10             	mov    0x10(%ebp),%eax
+    1de9:	31 db                	xor    %ebx,%ebx
+    1deb:	89 38                	mov    %edi,(%eax)
+    1ded:	eb 12                	jmp    1e01 <dns_message_decode+0x391>
+    1def:	90                   	nop
+    1df0:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    1df5:	83 ec 0c             	sub    $0xc,%esp
+    1df8:	57                   	push   %edi
+    1df9:	e8 f2 fa ff ff       	call   18f0 <dns_message_destroy>
+    1dfe:	83 c4 10             	add    $0x10,%esp
+    1e01:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1e04:	89 d8                	mov    %ebx,%eax
+    1e06:	5b                   	pop    %ebx
+    1e07:	5e                   	pop    %esi
+    1e08:	5f                   	pop    %edi
+    1e09:	5d                   	pop    %ebp
+    1e0a:	c3                   	ret    
+    1e0b:	90                   	nop
+    1e0c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1e10:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1e15:	eb de                	jmp    1df5 <dns_message_decode+0x385>
+    1e17:	90                   	nop
+    1e18:	83 ec 0c             	sub    $0xc,%esp
+    1e1b:	8b 43 08             	mov    0x8(%ebx),%eax
+    1e1e:	50                   	push   %eax
+    1e1f:	e8 fc 19 00 00       	call   3820 <free@plt>
+    1e24:	89 1c 24             	mov    %ebx,(%esp)
+    1e27:	e8 f4 19 00 00       	call   3820 <free@plt>
+    1e2c:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    1e31:	83 c4 10             	add    $0x10,%esp
+    1e34:	50                   	push   %eax
+    1e35:	68 b8 30 00 00       	push   $0x30b8
+    1e3a:	6a 04                	push   $0x4
+    1e3c:	6a ff                	push   $0xffffffff
+    1e3e:	e8 cd 17 00 00       	call   3610 <log_msg@plt>
+    1e43:	83 c4 10             	add    $0x10,%esp
+    1e46:	eb ad                	jmp    1df5 <dns_message_decode+0x385>
+    1e48:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1e4d:	52                   	push   %edx
+    1e4e:	68 a0 30 00 00       	push   $0x30a0
+    1e53:	6a 04                	push   $0x4
+    1e55:	6a ff                	push   $0xffffffff
+    1e57:	e8 b4 17 00 00       	call   3610 <log_msg@plt>
+    1e5c:	83 c4 10             	add    $0x10,%esp
+    1e5f:	eb 94                	jmp    1df5 <dns_message_decode+0x385>
+    1e61:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1e68:	50                   	push   %eax
+    1e69:	68 8c 30 00 00       	push   $0x308c
+    1e6e:	6a 04                	push   $0x4
+    1e70:	6a ff                	push   $0xffffffff
+    1e72:	e8 99 17 00 00       	call   3610 <log_msg@plt>
+    1e77:	89 1c 24             	mov    %ebx,(%esp)
+    1e7a:	e8 a1 19 00 00       	call   3820 <free@plt>
+    1e7f:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1e84:	83 c4 10             	add    $0x10,%esp
+    1e87:	eb c4                	jmp    1e4d <dns_message_decode+0x3dd>
+    1e89:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1e90:	83 ec 0c             	sub    $0xc,%esp
+    1e93:	53                   	push   %ebx
+    1e94:	bb f2 ff ff ff       	mov    $0xfffffff2,%ebx
+    1e99:	e8 82 19 00 00       	call   3820 <free@plt>
+    1e9e:	83 c4 10             	add    $0x10,%esp
+    1ea1:	eb aa                	jmp    1e4d <dns_message_decode+0x3dd>
+    1ea3:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1ea8:	eb 8a                	jmp    1e34 <dns_message_decode+0x3c4>
+    1eaa:	50                   	push   %eax
+    1eab:	68 8c 30 00 00       	push   $0x308c
+    1eb0:	6a 04                	push   $0x4
+    1eb2:	6a ff                	push   $0xffffffff
+    1eb4:	e8 57 17 00 00       	call   3610 <log_msg@plt>
+    1eb9:	89 1c 24             	mov    %ebx,(%esp)
+    1ebc:	e8 5f 19 00 00       	call   3820 <free@plt>
+    1ec1:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1ec6:	83 c4 10             	add    $0x10,%esp
+    1ec9:	e9 66 ff ff ff       	jmp    1e34 <dns_message_decode+0x3c4>
+    1ece:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1ed3:	e9 29 ff ff ff       	jmp    1e01 <dns_message_decode+0x391>
+    1ed8:	c7 45 d0 0c 00 00 00 	movl   $0xc,-0x30(%ebp)
+    1edf:	e9 91 fd ff ff       	jmp    1c75 <dns_message_decode+0x205>
+    1ee4:	83 ec 0c             	sub    $0xc,%esp
+    1ee7:	8b 73 08             	mov    0x8(%ebx),%esi
+    1eea:	56                   	push   %esi
+    1eeb:	e8 30 19 00 00       	call   3820 <free@plt>
+    1ef0:	89 1c 24             	mov    %ebx,(%esp)
+    1ef3:	e8 28 19 00 00       	call   3820 <free@plt>
+    1ef8:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1efd:	83 c4 10             	add    $0x10,%esp
+    1f00:	e9 2f ff ff ff       	jmp    1e34 <dns_message_decode+0x3c4>
+    1f05:	e8 00 00 00 00       	call   1f0a <dns_uint16_t_decode.part.0>
+
+00001f0a <dns_uint16_t_decode.part.0>:
+    1f0a:	55                   	push   %ebp
+    1f0b:	89 e5                	mov    %esp,%ebp
+    1f0d:	83 ec 0c             	sub    $0xc,%esp
+    1f10:	68 18 01 00 00       	push   $0x118
+    1f15:	68 0a 30 00 00       	push   $0x300a
+    1f1a:	68 14 30 00 00       	push   $0x3014
+    1f1f:	e8 fc 16 00 00       	call   3620 <assert_abort@plt>
+    1f24:	66 90                	xchg   %ax,%ax
+    1f26:	66 90                	xchg   %ax,%ax
+    1f28:	66 90                	xchg   %ax,%ax
+    1f2a:	66 90                	xchg   %ax,%ax
+    1f2c:	66 90                	xchg   %ax,%ax
+    1f2e:	66 90                	xchg   %ax,%ax
+
+00001f30 <dnsr_client_conn>:
+    1f30:	55                   	push   %ebp
+    1f31:	89 e5                	mov    %esp,%ebp
+    1f33:	57                   	push   %edi
+    1f34:	56                   	push   %esi
+    1f35:	53                   	push   %ebx
+    1f36:	83 ec 60             	sub    $0x60,%esp
+    1f39:	68 26 31 00 00       	push   $0x3126
+    1f3e:	6a 04                	push   $0x4
+    1f40:	6a ff                	push   $0xffffffff
+    1f42:	e8 c9 16 00 00       	call   3610 <log_msg@plt>
+    1f47:	8b 45 08             	mov    0x8(%ebp),%eax
+    1f4a:	5e                   	pop    %esi
+    1f4b:	5f                   	pop    %edi
+    1f4c:	6a 00                	push   $0x0
+    1f4e:	50                   	push   %eax
+    1f4f:	8d 75 c4             	lea    -0x3c(%ebp),%esi
+    1f52:	e8 a9 16 00 00       	call   3600 <async_answer_0@plt>
+    1f57:	8d 7d c0             	lea    -0x40(%ebp),%edi
+    1f5a:	83 c4 10             	add    $0x10,%esp
+    1f5d:	8d 76 00             	lea    0x0(%esi),%esi
+    1f60:	53                   	push   %ebx
+    1f61:	53                   	push   %ebx
+    1f62:	6a 00                	push   $0x0
+    1f64:	56                   	push   %esi
+    1f65:	e8 e6 17 00 00       	call   3750 <async_get_call_timeout@plt>
+    1f6a:	83 c4 10             	add    $0x10,%esp
+    1f6d:	89 c3                	mov    %eax,%ebx
+    1f6f:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    1f72:	85 c0                	test   %eax,%eax
+    1f74:	0f 84 de 01 00 00    	je     2158 <dnsr_client_conn+0x228>
+    1f7a:	3d 01 04 00 00       	cmp    $0x401,%eax
+    1f7f:	74 27                	je     1fa8 <dnsr_client_conn+0x78>
+    1f81:	3d 02 04 00 00       	cmp    $0x402,%eax
+    1f86:	0f 84 54 01 00 00    	je     20e0 <dnsr_client_conn+0x1b0>
+    1f8c:	3d 00 04 00 00       	cmp    $0x400,%eax
+    1f91:	74 65                	je     1ff8 <dnsr_client_conn+0xc8>
+    1f93:	50                   	push   %eax
+    1f94:	50                   	push   %eax
+    1f95:	6a f2                	push   $0xfffffff2
+    1f97:	53                   	push   %ebx
+    1f98:	e8 63 16 00 00       	call   3600 <async_answer_0@plt>
+    1f9d:	83 c4 10             	add    $0x10,%esp
+    1fa0:	eb be                	jmp    1f60 <dnsr_client_conn+0x30>
+    1fa2:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1fa8:	50                   	push   %eax
+    1fa9:	68 32 31 00 00       	push   $0x3132
+    1fae:	6a 04                	push   $0x4
+    1fb0:	6a ff                	push   $0xffffffff
+    1fb2:	e8 59 16 00 00       	call   3610 <log_msg@plt>
+    1fb7:	58                   	pop    %eax
+    1fb8:	8d 45 bc             	lea    -0x44(%ebp),%eax
+    1fbb:	5a                   	pop    %edx
+    1fbc:	57                   	push   %edi
+    1fbd:	50                   	push   %eax
+    1fbe:	e8 4d 17 00 00       	call   3710 <async_data_read_receive@plt>
+    1fc3:	83 c4 10             	add    $0x10,%esp
+    1fc6:	84 c0                	test   %al,%al
+    1fc8:	0f 84 f2 00 00 00    	je     20c0 <dnsr_client_conn+0x190>
+    1fce:	83 7d c0 14          	cmpl   $0x14,-0x40(%ebp)
+    1fd2:	0f 84 98 01 00 00    	je     2170 <dnsr_client_conn+0x240>
+    1fd8:	50                   	push   %eax
+    1fd9:	50                   	push   %eax
+    1fda:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    1fdd:	6a f2                	push   $0xfffffff2
+    1fdf:	50                   	push   %eax
+    1fe0:	e8 1b 16 00 00       	call   3600 <async_answer_0@plt>
+    1fe5:	58                   	pop    %eax
+    1fe6:	5a                   	pop    %edx
+    1fe7:	6a f2                	push   $0xfffffff2
+    1fe9:	53                   	push   %ebx
+    1fea:	e8 11 16 00 00       	call   3600 <async_answer_0@plt>
+    1fef:	83 c4 10             	add    $0x10,%esp
+    1ff2:	e9 69 ff ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    1ff7:	90                   	nop
+    1ff8:	50                   	push   %eax
+    1ff9:	68 32 31 00 00       	push   $0x3132
+    1ffe:	6a 04                	push   $0x4
+    2000:	6a ff                	push   $0xffffffff
+    2002:	e8 09 16 00 00       	call   3610 <log_msg@plt>
+    2007:	8b 45 c8             	mov    -0x38(%ebp),%eax
+    200a:	89 45 a4             	mov    %eax,-0x5c(%ebp)
+    200d:	58                   	pop    %eax
+    200e:	8d 45 b4             	lea    -0x4c(%ebp),%eax
+    2011:	5a                   	pop    %edx
+    2012:	6a 00                	push   $0x0
+    2014:	6a 00                	push   $0x0
+    2016:	68 ff 00 00 00       	push   $0xff
+    201b:	6a 00                	push   $0x0
+    201d:	6a 01                	push   $0x1
+    201f:	50                   	push   %eax
+    2020:	e8 8b 17 00 00       	call   37b0 <async_data_write_accept@plt>
+    2025:	83 c4 20             	add    $0x20,%esp
+    2028:	85 c0                	test   %eax,%eax
+    202a:	0f 85 10 01 00 00    	jne    2140 <dnsr_client_conn+0x210>
+    2030:	8b 45 a4             	mov    -0x5c(%ebp),%eax
+    2033:	51                   	push   %ecx
+    2034:	50                   	push   %eax
+    2035:	8d 45 b8             	lea    -0x48(%ebp),%eax
+    2038:	50                   	push   %eax
+    2039:	8b 45 b4             	mov    -0x4c(%ebp),%eax
+    203c:	50                   	push   %eax
+    203d:	e8 2e 0a 00 00       	call   2a70 <dns_name2host>
+    2042:	83 c4 10             	add    $0x10,%esp
+    2045:	85 c0                	test   %eax,%eax
+    2047:	0f 85 f3 00 00 00    	jne    2140 <dnsr_client_conn+0x210>
+    204d:	50                   	push   %eax
+    204e:	50                   	push   %eax
+    204f:	8d 45 bc             	lea    -0x44(%ebp),%eax
+    2052:	57                   	push   %edi
+    2053:	50                   	push   %eax
+    2054:	e8 b7 16 00 00       	call   3710 <async_data_read_receive@plt>
+    2059:	83 c4 10             	add    $0x10,%esp
+    205c:	84 c0                	test   %al,%al
+    205e:	74 60                	je     20c0 <dnsr_client_conn+0x190>
+    2060:	83 7d c0 14          	cmpl   $0x14,-0x40(%ebp)
+    2064:	0f 85 6e ff ff ff    	jne    1fd8 <dnsr_client_conn+0xa8>
+    206a:	8b 45 b8             	mov    -0x48(%ebp),%eax
+    206d:	51                   	push   %ecx
+    206e:	83 c0 04             	add    $0x4,%eax
+    2071:	6a 14                	push   $0x14
+    2073:	50                   	push   %eax
+    2074:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    2077:	50                   	push   %eax
+    2078:	e8 53 15 00 00       	call   35d0 <async_data_read_finalize@plt>
+    207d:	83 c4 10             	add    $0x10,%esp
+    2080:	89 c2                	mov    %eax,%edx
+    2082:	85 c0                	test   %eax,%eax
+    2084:	74 23                	je     20a9 <dnsr_client_conn+0x179>
+    2086:	50                   	push   %eax
+    2087:	50                   	push   %eax
+    2088:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    208b:	52                   	push   %edx
+    208c:	89 55 a4             	mov    %edx,-0x5c(%ebp)
+    208f:	50                   	push   %eax
+    2090:	e8 6b 15 00 00       	call   3600 <async_answer_0@plt>
+    2095:	58                   	pop    %eax
+    2096:	5a                   	pop    %edx
+    2097:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    209a:	52                   	push   %edx
+    209b:	53                   	push   %ebx
+    209c:	e8 5f 15 00 00       	call   3600 <async_answer_0@plt>
+    20a1:	83 c4 10             	add    $0x10,%esp
+    20a4:	e9 b7 fe ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    20a9:	50                   	push   %eax
+    20aa:	50                   	push   %eax
+    20ab:	8d 45 bc             	lea    -0x44(%ebp),%eax
+    20ae:	57                   	push   %edi
+    20af:	50                   	push   %eax
+    20b0:	e8 5b 16 00 00       	call   3710 <async_data_read_receive@plt>
+    20b5:	83 c4 10             	add    $0x10,%esp
+    20b8:	84 c0                	test   %al,%al
+    20ba:	0f 85 24 01 00 00    	jne    21e4 <dnsr_client_conn+0x2b4>
+    20c0:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    20c3:	51                   	push   %ecx
+    20c4:	51                   	push   %ecx
+    20c5:	6a fc                	push   $0xfffffffc
+    20c7:	50                   	push   %eax
+    20c8:	e8 33 15 00 00       	call   3600 <async_answer_0@plt>
+    20cd:	58                   	pop    %eax
+    20ce:	5a                   	pop    %edx
+    20cf:	6a fc                	push   $0xfffffffc
+    20d1:	53                   	push   %ebx
+    20d2:	e8 29 15 00 00       	call   3600 <async_answer_0@plt>
+    20d7:	83 c4 10             	add    $0x10,%esp
+    20da:	e9 81 fe ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    20df:	90                   	nop
+    20e0:	51                   	push   %ecx
+    20e1:	68 49 31 00 00       	push   $0x3149
+    20e6:	6a 04                	push   $0x4
+    20e8:	6a ff                	push   $0xffffffff
+    20ea:	e8 21 15 00 00       	call   3610 <log_msg@plt>
+    20ef:	58                   	pop    %eax
+    20f0:	8d 45 bc             	lea    -0x44(%ebp),%eax
+    20f3:	5a                   	pop    %edx
+    20f4:	57                   	push   %edi
+    20f5:	50                   	push   %eax
+    20f6:	e8 15 17 00 00       	call   3810 <async_data_write_receive@plt>
+    20fb:	83 c4 10             	add    $0x10,%esp
+    20fe:	84 c0                	test   %al,%al
+    2100:	74 be                	je     20c0 <dnsr_client_conn+0x190>
+    2102:	83 7d c0 14          	cmpl   $0x14,-0x40(%ebp)
+    2106:	0f 85 cc fe ff ff    	jne    1fd8 <dnsr_client_conn+0xa8>
+    210c:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    210f:	51                   	push   %ecx
+    2110:	6a 14                	push   $0x14
+    2112:	68 28 52 00 00       	push   $0x5228
+    2117:	50                   	push   %eax
+    2118:	e8 83 16 00 00       	call   37a0 <async_data_write_finalize@plt>
+    211d:	83 c4 10             	add    $0x10,%esp
+    2120:	31 d2                	xor    %edx,%edx
+    2122:	85 c0                	test   %eax,%eax
+    2124:	0f 85 86 00 00 00    	jne    21b0 <dnsr_client_conn+0x280>
+    212a:	51                   	push   %ecx
+    212b:	51                   	push   %ecx
+    212c:	52                   	push   %edx
+    212d:	53                   	push   %ebx
+    212e:	e8 cd 14 00 00       	call   3600 <async_answer_0@plt>
+    2133:	83 c4 10             	add    $0x10,%esp
+    2136:	e9 25 fe ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    213b:	90                   	nop
+    213c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2140:	52                   	push   %edx
+    2141:	52                   	push   %edx
+    2142:	50                   	push   %eax
+    2143:	53                   	push   %ebx
+    2144:	e8 b7 14 00 00       	call   3600 <async_answer_0@plt>
+    2149:	83 c4 10             	add    $0x10,%esp
+    214c:	e9 0f fe ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    2151:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2158:	51                   	push   %ecx
+    2159:	51                   	push   %ecx
+    215a:	6a 00                	push   $0x0
+    215c:	53                   	push   %ebx
+    215d:	e8 9e 14 00 00       	call   3600 <async_answer_0@plt>
+    2162:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2165:	5b                   	pop    %ebx
+    2166:	5e                   	pop    %esi
+    2167:	5f                   	pop    %edi
+    2168:	5d                   	pop    %ebp
+    2169:	c3                   	ret    
+    216a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    2170:	50                   	push   %eax
+    2171:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    2174:	6a 14                	push   $0x14
+    2176:	68 28 52 00 00       	push   $0x5228
+    217b:	50                   	push   %eax
+    217c:	e8 4f 14 00 00       	call   35d0 <async_data_read_finalize@plt>
+    2181:	83 c4 10             	add    $0x10,%esp
+    2184:	31 d2                	xor    %edx,%edx
+    2186:	85 c0                	test   %eax,%eax
+    2188:	74 a0                	je     212a <dnsr_client_conn+0x1fa>
+    218a:	89 45 a4             	mov    %eax,-0x5c(%ebp)
+    218d:	51                   	push   %ecx
+    218e:	51                   	push   %ecx
+    218f:	50                   	push   %eax
+    2190:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    2193:	50                   	push   %eax
+    2194:	e8 67 14 00 00       	call   3600 <async_answer_0@plt>
+    2199:	83 c4 10             	add    $0x10,%esp
+    219c:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    219f:	51                   	push   %ecx
+    21a0:	51                   	push   %ecx
+    21a1:	52                   	push   %edx
+    21a2:	53                   	push   %ebx
+    21a3:	e8 58 14 00 00       	call   3600 <async_answer_0@plt>
+    21a8:	83 c4 10             	add    $0x10,%esp
+    21ab:	e9 b0 fd ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    21b0:	89 c2                	mov    %eax,%edx
+    21b2:	50                   	push   %eax
+    21b3:	50                   	push   %eax
+    21b4:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    21b7:	52                   	push   %edx
+    21b8:	89 55 a4             	mov    %edx,-0x5c(%ebp)
+    21bb:	50                   	push   %eax
+    21bc:	e8 3f 14 00 00       	call   3600 <async_answer_0@plt>
+    21c1:	58                   	pop    %eax
+    21c2:	5a                   	pop    %edx
+    21c3:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    21c6:	52                   	push   %edx
+    21c7:	53                   	push   %ebx
+    21c8:	e8 33 14 00 00       	call   3600 <async_answer_0@plt>
+    21cd:	83 c4 10             	add    $0x10,%esp
+    21d0:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    21d3:	51                   	push   %ecx
+    21d4:	51                   	push   %ecx
+    21d5:	52                   	push   %edx
+    21d6:	53                   	push   %ebx
+    21d7:	e8 24 14 00 00       	call   3600 <async_answer_0@plt>
+    21dc:	83 c4 10             	add    $0x10,%esp
+    21df:	e9 7c fd ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    21e4:	8b 45 b8             	mov    -0x48(%ebp),%eax
+    21e7:	83 ec 0c             	sub    $0xc,%esp
+    21ea:	8b 00                	mov    (%eax),%eax
+    21ec:	50                   	push   %eax
+    21ed:	e8 7e 15 00 00       	call   3770 <str_size@plt>
+    21f2:	83 c4 10             	add    $0x10,%esp
+    21f5:	3b 45 c0             	cmp    -0x40(%ebp),%eax
+    21f8:	0f 87 da fd ff ff    	ja     1fd8 <dnsr_client_conn+0xa8>
+    21fe:	52                   	push   %edx
+    21ff:	50                   	push   %eax
+    2200:	8b 45 b8             	mov    -0x48(%ebp),%eax
+    2203:	8b 08                	mov    (%eax),%ecx
+    2205:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    2208:	51                   	push   %ecx
+    2209:	50                   	push   %eax
+    220a:	e8 c1 13 00 00       	call   35d0 <async_data_read_finalize@plt>
+    220f:	83 c4 10             	add    $0x10,%esp
+    2212:	31 d2                	xor    %edx,%edx
+    2214:	85 c0                	test   %eax,%eax
+    2216:	74 17                	je     222f <dnsr_client_conn+0x2ff>
+    2218:	89 c2                	mov    %eax,%edx
+    221a:	50                   	push   %eax
+    221b:	50                   	push   %eax
+    221c:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    221f:	52                   	push   %edx
+    2220:	50                   	push   %eax
+    2221:	89 55 a4             	mov    %edx,-0x5c(%ebp)
+    2224:	e8 d7 13 00 00       	call   3600 <async_answer_0@plt>
+    2229:	83 c4 10             	add    $0x10,%esp
+    222c:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    222f:	51                   	push   %ecx
+    2230:	51                   	push   %ecx
+    2231:	52                   	push   %edx
+    2232:	53                   	push   %ebx
+    2233:	e8 c8 13 00 00       	call   3600 <async_answer_0@plt>
+    2238:	8b 45 b8             	mov    -0x48(%ebp),%eax
+    223b:	5b                   	pop    %ebx
+    223c:	50                   	push   %eax
+    223d:	e8 be 08 00 00       	call   2b00 <dns_hostinfo_destroy>
+    2242:	83 c4 10             	add    $0x10,%esp
+    2245:	e9 16 fd ff ff       	jmp    1f60 <dnsr_client_conn+0x30>
+    224a:	66 90                	xchg   %ax,%ax
+    224c:	66 90                	xchg   %ax,%ax
+    224e:	66 90                	xchg   %ax,%ax
+
+00002250 <main>:
+    2250:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    2254:	83 e4 f0             	and    $0xfffffff0,%esp
+    2257:	ff 71 fc             	pushl  -0x4(%ecx)
+    225a:	55                   	push   %ebp
+    225b:	89 e5                	mov    %esp,%ebp
+    225d:	53                   	push   %ebx
+    225e:	51                   	push   %ecx
+    225f:	83 ec 18             	sub    $0x18,%esp
+    2262:	68 60 31 00 00       	push   $0x3160
+    2267:	68 67 31 00 00       	push   $0x3167
+    226c:	e8 ef 12 00 00       	call   3560 <printf@plt>
+    2271:	c7 04 24 60 31 00 00 	movl   $0x3160,(%esp)
+    2278:	e8 03 13 00 00       	call   3580 <log_init@plt>
+    227d:	83 c4 10             	add    $0x10,%esp
+    2280:	85 c0                	test   %eax,%eax
+    2282:	0f 85 a4 00 00 00    	jne    232c <main+0xdc>
+    2288:	50                   	push   %eax
+    2289:	68 83 31 00 00       	push   $0x3183
+    228e:	6a 04                	push   $0x4
+    2290:	6a ff                	push   $0xffffffff
+    2292:	e8 79 13 00 00       	call   3610 <log_msg@plt>
+    2297:	e8 94 0a 00 00       	call   2d30 <transport_init>
+    229c:	83 c4 10             	add    $0x10,%esp
+    229f:	85 c0                	test   %eax,%eax
+    22a1:	0f 85 b9 00 00 00    	jne    2360 <main+0x110>
+    22a7:	51                   	push   %ecx
+    22a8:	51                   	push   %ecx
+    22a9:	6a 00                	push   $0x0
+    22ab:	68 30 1f 00 00       	push   $0x1f30
+    22b0:	e8 4b 15 00 00       	call   3800 <async_set_fallback_port_handler@plt>
+    22b5:	c7 04 24 60 31 00 00 	movl   $0x3160,(%esp)
+    22bc:	e8 7f 14 00 00       	call   3740 <loc_server_register@plt>
+    22c1:	83 c4 10             	add    $0x10,%esp
+    22c4:	85 c0                	test   %eax,%eax
+    22c6:	0f 85 ad 00 00 00    	jne    2379 <main+0x129>
+    22cc:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    22cf:	52                   	push   %edx
+    22d0:	52                   	push   %edx
+    22d1:	50                   	push   %eax
+    22d2:	68 8f 31 00 00       	push   $0x318f
+    22d7:	e8 b4 12 00 00       	call   3590 <loc_service_register@plt>
+    22dc:	83 c4 10             	add    $0x10,%esp
+    22df:	89 c3                	mov    %eax,%ebx
+    22e1:	85 c0                	test   %eax,%eax
+    22e3:	0f 85 a9 00 00 00    	jne    2392 <main+0x142>
+    22e9:	83 ec 0c             	sub    $0xc,%esp
+    22ec:	68 24 32 00 00       	push   $0x3224
+    22f1:	e8 6a 12 00 00       	call   3560 <printf@plt>
+    22f6:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+    22fd:	e8 4e 12 00 00       	call   3550 <task_retval@plt>
+    2302:	83 c8 ff             	or     $0xffffffff,%eax
+    2305:	f0 0f c1 05 24 52 00 	lock xadd %eax,0x5224
+    230c:	00 
+    230d:	83 c4 10             	add    $0x10,%esp
+    2310:	48                   	dec    %eax
+    2311:	78 30                	js     2343 <main+0xf3>
+    2313:	83 ec 0c             	sub    $0xc,%esp
+    2316:	6a 03                	push   $0x3
+    2318:	e8 b3 14 00 00       	call   37d0 <fibril_switch@plt>
+    231d:	83 c4 10             	add    $0x10,%esp
+    2320:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2323:	89 d8                	mov    %ebx,%eax
+    2325:	59                   	pop    %ecx
+    2326:	5b                   	pop    %ebx
+    2327:	5d                   	pop    %ebp
+    2328:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    232b:	c3                   	ret    
+    232c:	83 ec 0c             	sub    $0xc,%esp
+    232f:	bb 01 00 00 00       	mov    $0x1,%ebx
+    2334:	68 98 31 00 00       	push   $0x3198
+    2339:	e8 22 12 00 00       	call   3560 <printf@plt>
+    233e:	83 c4 10             	add    $0x10,%esp
+    2341:	eb dd                	jmp    2320 <main+0xd0>
+    2343:	50                   	push   %eax
+    2344:	6a 0b                	push   $0xb
+    2346:	6a 00                	push   $0x0
+    2348:	6a 00                	push   $0x0
+    234a:	6a 00                	push   $0x0
+    234c:	6a 00                	push   $0x0
+    234e:	6a 00                	push   $0x0
+    2350:	68 24 52 00 00       	push   $0x5224
+    2355:	ff 15 20 52 00 00    	call   *0x5220
+    235b:	83 c4 20             	add    $0x20,%esp
+    235e:	eb b3                	jmp    2313 <main+0xc3>
+    2360:	53                   	push   %ebx
+    2361:	68 c0 31 00 00       	push   $0x31c0
+    2366:	6a 01                	push   $0x1
+    2368:	6a ff                	push   $0xffffffff
+    236a:	e8 a1 12 00 00       	call   3610 <log_msg@plt>
+    236f:	83 c4 10             	add    $0x10,%esp
+    2372:	bb 01 00 00 00       	mov    $0x1,%ebx
+    2377:	eb a7                	jmp    2320 <main+0xd0>
+    2379:	50                   	push   %eax
+    237a:	68 e0 31 00 00       	push   $0x31e0
+    237f:	6a 01                	push   $0x1
+    2381:	6a ff                	push   $0xffffffff
+    2383:	e8 88 12 00 00       	call   3610 <log_msg@plt>
+    2388:	e8 33 0a 00 00       	call   2dc0 <transport_fini>
+    238d:	83 c4 10             	add    $0x10,%esp
+    2390:	eb e0                	jmp    2372 <main+0x122>
+    2392:	50                   	push   %eax
+    2393:	68 00 32 00 00       	push   $0x3200
+    2398:	eb e5                	jmp    237f <main+0x12f>
+    239a:	66 90                	xchg   %ax,%ax
+    239c:	66 90                	xchg   %ax,%ax
+    239e:	66 90                	xchg   %ax,%ax
+
+000023a0 <dns_name_query.constprop.0>:
+    23a0:	55                   	push   %ebp
+    23a1:	89 e5                	mov    %esp,%ebp
+    23a3:	57                   	push   %edi
+    23a4:	56                   	push   %esi
+    23a5:	53                   	push   %ebx
+    23a6:	83 ec 38             	sub    $0x38,%esp
+    23a9:	89 c6                	mov    %eax,%esi
+    23ab:	89 55 d4             	mov    %edx,-0x2c(%ebp)
+    23ae:	50                   	push   %eax
+    23af:	e8 0c 13 00 00       	call   36c0 <str_dup@plt>
+    23b4:	83 c4 10             	add    $0x10,%esp
+    23b7:	85 c0                	test   %eax,%eax
+    23b9:	0f 84 22 03 00 00    	je     26e1 <dns_name_query.constprop.0+0x341>
+    23bf:	83 ec 0c             	sub    $0xc,%esp
+    23c2:	89 c3                	mov    %eax,%ebx
+    23c4:	56                   	push   %esi
+    23c5:	e8 f6 12 00 00       	call   36c0 <str_dup@plt>
+    23ca:	83 c4 10             	add    $0x10,%esp
+    23cd:	89 c7                	mov    %eax,%edi
+    23cf:	85 c0                	test   %eax,%eax
+    23d1:	0f 84 d6 02 00 00    	je     26ad <dns_name_query.constprop.0+0x30d>
+    23d7:	50                   	push   %eax
+    23d8:	50                   	push   %eax
+    23d9:	6a 14                	push   $0x14
+    23db:	6a 01                	push   $0x1
+    23dd:	e8 4e 12 00 00       	call   3630 <calloc@plt>
+    23e2:	83 c4 10             	add    $0x10,%esp
+    23e5:	85 c0                	test   %eax,%eax
+    23e7:	0f 84 d6 02 00 00    	je     26c3 <dns_name_query.constprop.0+0x323>
+    23ed:	89 78 08             	mov    %edi,0x8(%eax)
+    23f0:	c7 40 0c 01 00 00 00 	movl   $0x1,0xc(%eax)
+    23f7:	c7 40 10 01 00 00 00 	movl   $0x1,0x10(%eax)
+    23fe:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    2401:	e8 aa f4 ff ff       	call   18b0 <dns_message_new>
+    2406:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    2409:	89 c6                	mov    %eax,%esi
+    240b:	85 c0                	test   %eax,%eax
+    240d:	0f 84 d8 02 00 00    	je     26eb <dns_name_query.constprop.0+0x34b>
+    2413:	66 a1 3c 52 00 00    	mov    0x523c,%ax
+    2419:	c7 46 0c 00 00 00 00 	movl   $0x0,0xc(%esi)
+    2420:	66 89 46 08          	mov    %ax,0x8(%esi)
+    2424:	c7 46 10 00 00 00 00 	movl   $0x0,0x10(%esi)
+    242b:	8d 48 01             	lea    0x1(%eax),%ecx
+    242e:	8d 46 1c             	lea    0x1c(%esi),%eax
+    2431:	c7 46 14 00 00 01 00 	movl   $0x10000,0x14(%esi)
+    2438:	89 42 04             	mov    %eax,0x4(%edx)
+    243b:	8b 46 1c             	mov    0x1c(%esi),%eax
+    243e:	66 89 0d 3c 52 00 00 	mov    %cx,0x523c
+    2445:	89 02                	mov    %eax,(%edx)
+    2447:	8b 46 1c             	mov    0x1c(%esi),%eax
+    244a:	89 50 04             	mov    %edx,0x4(%eax)
+    244d:	89 56 1c             	mov    %edx,0x1c(%esi)
+    2450:	50                   	push   %eax
+    2451:	50                   	push   %eax
+    2452:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    2455:	50                   	push   %eax
+    2456:	56                   	push   %esi
+    2457:	e8 94 09 00 00       	call   2df0 <dns_request>
+    245c:	83 c4 10             	add    $0x10,%esp
+    245f:	85 c0                	test   %eax,%eax
+    2461:	0f 85 bd 01 00 00    	jne    2624 <dns_name_query.constprop.0+0x284>
+    2467:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    246a:	83 c0 24             	add    $0x24,%eax
+    246d:	8b 78 04             	mov    0x4(%eax),%edi
+    2470:	39 c7                	cmp    %eax,%edi
+    2472:	75 20                	jne    2494 <dns_name_query.constprop.0+0xf4>
+    2474:	e9 ff 00 00 00       	jmp    2578 <dns_name_query.constprop.0+0x1d8>
+    2479:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2480:	48                   	dec    %eax
+    2481:	74 65                	je     24e8 <dns_name_query.constprop.0+0x148>
+    2483:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    2486:	8b 7f 04             	mov    0x4(%edi),%edi
+    2489:	83 c0 24             	add    $0x24,%eax
+    248c:	39 c7                	cmp    %eax,%edi
+    248e:	0f 84 e4 00 00 00    	je     2578 <dns_name_query.constprop.0+0x1d8>
+    2494:	50                   	push   %eax
+    2495:	8b 47 1c             	mov    0x1c(%edi),%eax
+    2498:	8b 57 10             	mov    0x10(%edi),%edx
+    249b:	50                   	push   %eax
+    249c:	8b 4f 0c             	mov    0xc(%edi),%ecx
+    249f:	8b 47 08             	mov    0x8(%edi),%eax
+    24a2:	52                   	push   %edx
+    24a3:	51                   	push   %ecx
+    24a4:	50                   	push   %eax
+    24a5:	68 44 32 00 00       	push   $0x3244
+    24aa:	6a 04                	push   $0x4
+    24ac:	6a ff                	push   $0xffffffff
+    24ae:	e8 5d 11 00 00       	call   3610 <log_msg@plt>
+    24b3:	8b 47 0c             	mov    0xc(%edi),%eax
+    24b6:	83 c4 20             	add    $0x20,%esp
+    24b9:	83 f8 05             	cmp    $0x5,%eax
+    24bc:	75 c2                	jne    2480 <dns_name_query.constprop.0+0xe0>
+    24be:	83 7f 10 01          	cmpl   $0x1,0x10(%edi)
+    24c2:	75 bf                	jne    2483 <dns_name_query.constprop.0+0xe3>
+    24c4:	50                   	push   %eax
+    24c5:	50                   	push   %eax
+    24c6:	53                   	push   %ebx
+    24c7:	8b 47 08             	mov    0x8(%edi),%eax
+    24ca:	50                   	push   %eax
+    24cb:	e8 30 12 00 00       	call   3700 <str_cmp@plt>
+    24d0:	83 c4 10             	add    $0x10,%esp
+    24d3:	85 c0                	test   %eax,%eax
+    24d5:	0f 84 dd 00 00 00    	je     25b8 <dns_name_query.constprop.0+0x218>
+    24db:	8b 47 0c             	mov    0xc(%edi),%eax
+    24de:	48                   	dec    %eax
+    24df:	75 a2                	jne    2483 <dns_name_query.constprop.0+0xe3>
+    24e1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    24e8:	83 7f 10 01          	cmpl   $0x1,0x10(%edi)
+    24ec:	75 95                	jne    2483 <dns_name_query.constprop.0+0xe3>
+    24ee:	83 7f 1c 04          	cmpl   $0x4,0x1c(%edi)
+    24f2:	75 8f                	jne    2483 <dns_name_query.constprop.0+0xe3>
+    24f4:	50                   	push   %eax
+    24f5:	50                   	push   %eax
+    24f6:	53                   	push   %ebx
+    24f7:	8b 47 08             	mov    0x8(%edi),%eax
+    24fa:	50                   	push   %eax
+    24fb:	e8 00 12 00 00       	call   3700 <str_cmp@plt>
+    2500:	83 c4 10             	add    $0x10,%esp
+    2503:	85 c0                	test   %eax,%eax
+    2505:	0f 85 78 ff ff ff    	jne    2483 <dns_name_query.constprop.0+0xe3>
+    250b:	83 ec 0c             	sub    $0xc,%esp
+    250e:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    2511:	8b 47 08             	mov    0x8(%edi),%eax
+    2514:	50                   	push   %eax
+    2515:	e8 a6 11 00 00       	call   36c0 <str_dup@plt>
+    251a:	8b 4d d4             	mov    -0x2c(%ebp),%ecx
+    251d:	83 c4 10             	add    $0x10,%esp
+    2520:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    2523:	85 c0                	test   %eax,%eax
+    2525:	89 01                	mov    %eax,(%ecx)
+    2527:	0f 84 58 01 00 00    	je     2685 <dns_name_query.constprop.0+0x2e5>
+    252d:	51                   	push   %ecx
+    252e:	51                   	push   %ecx
+    252f:	8b 47 1c             	mov    0x1c(%edi),%eax
+    2532:	89 55 d0             	mov    %edx,-0x30(%ebp)
+    2535:	50                   	push   %eax
+    2536:	8b 47 18             	mov    0x18(%edi),%eax
+    2539:	50                   	push   %eax
+    253a:	e8 01 ef ff ff       	call   1440 <dns_uint32_t_decode>
+    253f:	5a                   	pop    %edx
+    2540:	59                   	pop    %ecx
+    2541:	8b 4d d4             	mov    -0x2c(%ebp),%ecx
+    2544:	83 c1 04             	add    $0x4,%ecx
+    2547:	51                   	push   %ecx
+    2548:	50                   	push   %eax
+    2549:	e8 52 11 00 00       	call   36a0 <inet_addr_set@plt>
+    254e:	89 34 24             	mov    %esi,(%esp)
+    2551:	e8 9a f3 ff ff       	call   18f0 <dns_message_destroy>
+    2556:	8b 7d dc             	mov    -0x24(%ebp),%edi
+    2559:	5e                   	pop    %esi
+    255a:	57                   	push   %edi
+    255b:	e8 90 f3 ff ff       	call   18f0 <dns_message_destroy>
+    2560:	89 1c 24             	mov    %ebx,(%esp)
+    2563:	e8 b8 12 00 00       	call   3820 <free@plt>
+    2568:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    256b:	83 c4 10             	add    $0x10,%esp
+    256e:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2571:	89 d0                	mov    %edx,%eax
+    2573:	5b                   	pop    %ebx
+    2574:	5e                   	pop    %esi
+    2575:	5f                   	pop    %edi
+    2576:	5d                   	pop    %ebp
+    2577:	c3                   	ret    
+    2578:	53                   	push   %ebx
+    2579:	68 af 32 00 00       	push   $0x32af
+    257e:	6a 04                	push   $0x4
+    2580:	6a ff                	push   $0xffffffff
+    2582:	e8 89 10 00 00       	call   3610 <log_msg@plt>
+    2587:	89 34 24             	mov    %esi,(%esp)
+    258a:	e8 61 f3 ff ff       	call   18f0 <dns_message_destroy>
+    258f:	8b 55 dc             	mov    -0x24(%ebp),%edx
+    2592:	58                   	pop    %eax
+    2593:	52                   	push   %edx
+    2594:	e8 57 f3 ff ff       	call   18f0 <dns_message_destroy>
+    2599:	89 1c 24             	mov    %ebx,(%esp)
+    259c:	e8 7f 12 00 00       	call   3820 <free@plt>
+    25a1:	83 c4 10             	add    $0x10,%esp
+    25a4:	ba f6 fe ff ff       	mov    $0xfffffef6,%edx
+    25a9:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    25ac:	89 d0                	mov    %edx,%eax
+    25ae:	5b                   	pop    %ebx
+    25af:	5e                   	pop    %esi
+    25b0:	5f                   	pop    %edi
+    25b1:	5d                   	pop    %ebp
+    25b2:	c3                   	ret    
+    25b3:	90                   	nop
+    25b4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    25b8:	52                   	push   %edx
+    25b9:	52                   	push   %edx
+    25ba:	8b 4f 20             	mov    0x20(%edi),%ecx
+    25bd:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    25c0:	51                   	push   %ecx
+    25c1:	8b 50 04             	mov    0x4(%eax),%edx
+    25c4:	8b 08                	mov    (%eax),%ecx
+    25c6:	52                   	push   %edx
+    25c7:	51                   	push   %ecx
+    25c8:	68 5d 32 00 00       	push   $0x325d
+    25cd:	6a 04                	push   $0x4
+    25cf:	6a ff                	push   $0xffffffff
+    25d1:	e8 3a 10 00 00       	call   3610 <log_msg@plt>
+    25d6:	83 c4 20             	add    $0x20,%esp
+    25d9:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    25dc:	50                   	push   %eax
+    25dd:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    25e0:	50                   	push   %eax
+    25e1:	8b 47 20             	mov    0x20(%edi),%eax
+    25e4:	50                   	push   %eax
+    25e5:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    25e8:	50                   	push   %eax
+    25e9:	e8 42 eb ff ff       	call   1130 <dns_name_decode>
+    25ee:	83 c4 10             	add    $0x10,%esp
+    25f1:	89 c2                	mov    %eax,%edx
+    25f3:	85 c0                	test   %eax,%eax
+    25f5:	75 51                	jne    2648 <dns_name_query.constprop.0+0x2a8>
+    25f7:	83 ec 0c             	sub    $0xc,%esp
+    25fa:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    25fd:	50                   	push   %eax
+    25fe:	53                   	push   %ebx
+    25ff:	68 96 32 00 00       	push   $0x3296
+    2604:	6a 04                	push   $0x4
+    2606:	6a ff                	push   $0xffffffff
+    2608:	e8 03 10 00 00       	call   3610 <log_msg@plt>
+    260d:	83 c4 14             	add    $0x14,%esp
+    2610:	53                   	push   %ebx
+    2611:	e8 0a 12 00 00       	call   3820 <free@plt>
+    2616:	8b 5d e0             	mov    -0x20(%ebp),%ebx
+    2619:	8b 47 0c             	mov    0xc(%edi),%eax
+    261c:	83 c4 10             	add    $0x10,%esp
+    261f:	e9 5c fe ff ff       	jmp    2480 <dns_name_query.constprop.0+0xe0>
+    2624:	83 ec 0c             	sub    $0xc,%esp
+    2627:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    262a:	56                   	push   %esi
+    262b:	e8 c0 f2 ff ff       	call   18f0 <dns_message_destroy>
+    2630:	89 1c 24             	mov    %ebx,(%esp)
+    2633:	e8 e8 11 00 00       	call   3820 <free@plt>
+    2638:	8b 55 d4             	mov    -0x2c(%ebp),%edx
+    263b:	83 c4 10             	add    $0x10,%esp
+    263e:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2641:	89 d0                	mov    %edx,%eax
+    2643:	5b                   	pop    %ebx
+    2644:	5e                   	pop    %esi
+    2645:	5f                   	pop    %edi
+    2646:	5d                   	pop    %ebp
+    2647:	c3                   	ret    
+    2648:	83 f8 f2             	cmp    $0xfffffff2,%eax
+    264b:	74 05                	je     2652 <dns_name_query.constprop.0+0x2b2>
+    264d:	83 f8 fe             	cmp    $0xfffffffe,%eax
+    2650:	75 21                	jne    2673 <dns_name_query.constprop.0+0x2d3>
+    2652:	89 55 d4             	mov    %edx,-0x2c(%ebp)
+    2655:	52                   	push   %edx
+    2656:	68 81 32 00 00       	push   $0x3281
+    265b:	6a 04                	push   $0x4
+    265d:	6a ff                	push   $0xffffffff
+    265f:	e8 ac 0f 00 00       	call   3610 <log_msg@plt>
+    2664:	89 34 24             	mov    %esi,(%esp)
+    2667:	e8 84 f2 ff ff       	call   18f0 <dns_message_destroy>
+    266c:	8b 75 dc             	mov    -0x24(%ebp),%esi
+    266f:	59                   	pop    %ecx
+    2670:	56                   	push   %esi
+    2671:	eb b8                	jmp    262b <dns_name_query.constprop.0+0x28b>
+    2673:	57                   	push   %edi
+    2674:	6a 72                	push   $0x72
+    2676:	68 79 32 00 00       	push   $0x3279
+    267b:	68 c8 32 00 00       	push   $0x32c8
+    2680:	e8 9b 0f 00 00       	call   3620 <assert_abort@plt>
+    2685:	83 ec 0c             	sub    $0xc,%esp
+    2688:	56                   	push   %esi
+    2689:	e8 62 f2 ff ff       	call   18f0 <dns_message_destroy>
+    268e:	58                   	pop    %eax
+    268f:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    2692:	50                   	push   %eax
+    2693:	e8 58 f2 ff ff       	call   18f0 <dns_message_destroy>
+    2698:	89 1c 24             	mov    %ebx,(%esp)
+    269b:	e8 80 11 00 00       	call   3820 <free@plt>
+    26a0:	83 c4 10             	add    $0x10,%esp
+    26a3:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    26a8:	e9 fc fe ff ff       	jmp    25a9 <dns_name_query.constprop.0+0x209>
+    26ad:	83 ec 0c             	sub    $0xc,%esp
+    26b0:	53                   	push   %ebx
+    26b1:	e8 6a 11 00 00       	call   3820 <free@plt>
+    26b6:	83 c4 10             	add    $0x10,%esp
+    26b9:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    26be:	e9 e6 fe ff ff       	jmp    25a9 <dns_name_query.constprop.0+0x209>
+    26c3:	83 ec 0c             	sub    $0xc,%esp
+    26c6:	57                   	push   %edi
+    26c7:	e8 54 11 00 00       	call   3820 <free@plt>
+    26cc:	89 1c 24             	mov    %ebx,(%esp)
+    26cf:	e8 4c 11 00 00       	call   3820 <free@plt>
+    26d4:	83 c4 10             	add    $0x10,%esp
+    26d7:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    26dc:	e9 c8 fe ff ff       	jmp    25a9 <dns_name_query.constprop.0+0x209>
+    26e1:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    26e6:	e9 be fe ff ff       	jmp    25a9 <dns_name_query.constprop.0+0x209>
+    26eb:	83 ec 0c             	sub    $0xc,%esp
+    26ee:	52                   	push   %edx
+    26ef:	e8 2c 11 00 00       	call   3820 <free@plt>
+    26f4:	89 3c 24             	mov    %edi,(%esp)
+    26f7:	eb ce                	jmp    26c7 <dns_name_query.constprop.0+0x327>
+    26f9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00002700 <dns_name_query.constprop.1>:
+    2700:	55                   	push   %ebp
+    2701:	89 e5                	mov    %esp,%ebp
+    2703:	57                   	push   %edi
+    2704:	56                   	push   %esi
+    2705:	53                   	push   %ebx
+    2706:	83 ec 48             	sub    $0x48,%esp
+    2709:	89 c6                	mov    %eax,%esi
+    270b:	89 55 c4             	mov    %edx,-0x3c(%ebp)
+    270e:	50                   	push   %eax
+    270f:	e8 ac 0f 00 00       	call   36c0 <str_dup@plt>
+    2714:	83 c4 10             	add    $0x10,%esp
+    2717:	85 c0                	test   %eax,%eax
+    2719:	0f 84 32 03 00 00    	je     2a51 <dns_name_query.constprop.1+0x351>
+    271f:	83 ec 0c             	sub    $0xc,%esp
+    2722:	89 c3                	mov    %eax,%ebx
+    2724:	56                   	push   %esi
+    2725:	e8 96 0f 00 00       	call   36c0 <str_dup@plt>
+    272a:	83 c4 10             	add    $0x10,%esp
+    272d:	89 c7                	mov    %eax,%edi
+    272f:	85 c0                	test   %eax,%eax
+    2731:	0f 84 e6 02 00 00    	je     2a1d <dns_name_query.constprop.1+0x31d>
+    2737:	50                   	push   %eax
+    2738:	50                   	push   %eax
+    2739:	6a 14                	push   $0x14
+    273b:	6a 01                	push   $0x1
+    273d:	e8 ee 0e 00 00       	call   3630 <calloc@plt>
+    2742:	83 c4 10             	add    $0x10,%esp
+    2745:	85 c0                	test   %eax,%eax
+    2747:	0f 84 e6 02 00 00    	je     2a33 <dns_name_query.constprop.1+0x333>
+    274d:	89 78 08             	mov    %edi,0x8(%eax)
+    2750:	c7 40 0c 1c 00 00 00 	movl   $0x1c,0xc(%eax)
+    2757:	c7 40 10 01 00 00 00 	movl   $0x1,0x10(%eax)
+    275e:	89 45 c0             	mov    %eax,-0x40(%ebp)
+    2761:	e8 4a f1 ff ff       	call   18b0 <dns_message_new>
+    2766:	8b 55 c0             	mov    -0x40(%ebp),%edx
+    2769:	89 c6                	mov    %eax,%esi
+    276b:	85 c0                	test   %eax,%eax
+    276d:	0f 84 e8 02 00 00    	je     2a5b <dns_name_query.constprop.1+0x35b>
+    2773:	66 a1 3c 52 00 00    	mov    0x523c,%ax
+    2779:	c7 46 0c 00 00 00 00 	movl   $0x0,0xc(%esi)
+    2780:	66 89 46 08          	mov    %ax,0x8(%esi)
+    2784:	c7 46 10 00 00 00 00 	movl   $0x0,0x10(%esi)
+    278b:	8d 48 01             	lea    0x1(%eax),%ecx
+    278e:	8d 46 1c             	lea    0x1c(%esi),%eax
+    2791:	c7 46 14 00 00 01 00 	movl   $0x10000,0x14(%esi)
+    2798:	89 42 04             	mov    %eax,0x4(%edx)
+    279b:	8b 46 1c             	mov    0x1c(%esi),%eax
+    279e:	66 89 0d 3c 52 00 00 	mov    %cx,0x523c
+    27a5:	89 02                	mov    %eax,(%edx)
+    27a7:	8b 46 1c             	mov    0x1c(%esi),%eax
+    27aa:	89 50 04             	mov    %edx,0x4(%eax)
+    27ad:	89 56 1c             	mov    %edx,0x1c(%esi)
+    27b0:	50                   	push   %eax
+    27b1:	50                   	push   %eax
+    27b2:	8d 45 d0             	lea    -0x30(%ebp),%eax
+    27b5:	50                   	push   %eax
+    27b6:	56                   	push   %esi
+    27b7:	e8 34 06 00 00       	call   2df0 <dns_request>
+    27bc:	83 c4 10             	add    $0x10,%esp
+    27bf:	85 c0                	test   %eax,%eax
+    27c1:	0f 85 cd 01 00 00    	jne    2994 <dns_name_query.constprop.1+0x294>
+    27c7:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    27ca:	83 c0 24             	add    $0x24,%eax
+    27cd:	8b 78 04             	mov    0x4(%eax),%edi
+    27d0:	39 c7                	cmp    %eax,%edi
+    27d2:	75 22                	jne    27f6 <dns_name_query.constprop.1+0xf6>
+    27d4:	e9 0f 01 00 00       	jmp    28e8 <dns_name_query.constprop.1+0x1e8>
+    27d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    27e0:	83 f8 1c             	cmp    $0x1c,%eax
+    27e3:	74 63                	je     2848 <dns_name_query.constprop.1+0x148>
+    27e5:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    27e8:	8b 7f 04             	mov    0x4(%edi),%edi
+    27eb:	83 c0 24             	add    $0x24,%eax
+    27ee:	39 c7                	cmp    %eax,%edi
+    27f0:	0f 84 f2 00 00 00    	je     28e8 <dns_name_query.constprop.1+0x1e8>
+    27f6:	50                   	push   %eax
+    27f7:	8b 47 1c             	mov    0x1c(%edi),%eax
+    27fa:	8b 57 10             	mov    0x10(%edi),%edx
+    27fd:	50                   	push   %eax
+    27fe:	8b 4f 0c             	mov    0xc(%edi),%ecx
+    2801:	8b 47 08             	mov    0x8(%edi),%eax
+    2804:	52                   	push   %edx
+    2805:	51                   	push   %ecx
+    2806:	50                   	push   %eax
+    2807:	68 44 32 00 00       	push   $0x3244
+    280c:	6a 04                	push   $0x4
+    280e:	6a ff                	push   $0xffffffff
+    2810:	e8 fb 0d 00 00       	call   3610 <log_msg@plt>
+    2815:	8b 47 0c             	mov    0xc(%edi),%eax
+    2818:	83 c4 20             	add    $0x20,%esp
+    281b:	83 f8 05             	cmp    $0x5,%eax
+    281e:	75 c0                	jne    27e0 <dns_name_query.constprop.1+0xe0>
+    2820:	83 7f 10 01          	cmpl   $0x1,0x10(%edi)
+    2824:	75 bf                	jne    27e5 <dns_name_query.constprop.1+0xe5>
+    2826:	50                   	push   %eax
+    2827:	50                   	push   %eax
+    2828:	53                   	push   %ebx
+    2829:	8b 47 08             	mov    0x8(%edi),%eax
+    282c:	50                   	push   %eax
+    282d:	e8 ce 0e 00 00       	call   3700 <str_cmp@plt>
+    2832:	83 c4 10             	add    $0x10,%esp
+    2835:	85 c0                	test   %eax,%eax
+    2837:	0f 84 eb 00 00 00    	je     2928 <dns_name_query.constprop.1+0x228>
+    283d:	8b 47 0c             	mov    0xc(%edi),%eax
+    2840:	83 f8 1c             	cmp    $0x1c,%eax
+    2843:	75 a0                	jne    27e5 <dns_name_query.constprop.1+0xe5>
+    2845:	8d 76 00             	lea    0x0(%esi),%esi
+    2848:	83 7f 10 01          	cmpl   $0x1,0x10(%edi)
+    284c:	75 97                	jne    27e5 <dns_name_query.constprop.1+0xe5>
+    284e:	83 7f 1c 10          	cmpl   $0x10,0x1c(%edi)
+    2852:	75 91                	jne    27e5 <dns_name_query.constprop.1+0xe5>
+    2854:	50                   	push   %eax
+    2855:	50                   	push   %eax
+    2856:	53                   	push   %ebx
+    2857:	8b 47 08             	mov    0x8(%edi),%eax
+    285a:	50                   	push   %eax
+    285b:	e8 a0 0e 00 00       	call   3700 <str_cmp@plt>
+    2860:	83 c4 10             	add    $0x10,%esp
+    2863:	85 c0                	test   %eax,%eax
+    2865:	0f 85 7a ff ff ff    	jne    27e5 <dns_name_query.constprop.1+0xe5>
+    286b:	83 ec 0c             	sub    $0xc,%esp
+    286e:	89 45 c0             	mov    %eax,-0x40(%ebp)
+    2871:	8b 47 08             	mov    0x8(%edi),%eax
+    2874:	50                   	push   %eax
+    2875:	e8 46 0e 00 00       	call   36c0 <str_dup@plt>
+    287a:	8b 4d c4             	mov    -0x3c(%ebp),%ecx
+    287d:	83 c4 10             	add    $0x10,%esp
+    2880:	8b 55 c0             	mov    -0x40(%ebp),%edx
+    2883:	85 c0                	test   %eax,%eax
+    2885:	89 01                	mov    %eax,(%ecx)
+    2887:	0f 84 68 01 00 00    	je     29f5 <dns_name_query.constprop.1+0x2f5>
+    288d:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    2890:	51                   	push   %ecx
+    2891:	89 45 c0             	mov    %eax,-0x40(%ebp)
+    2894:	50                   	push   %eax
+    2895:	8b 47 1c             	mov    0x1c(%edi),%eax
+    2898:	89 55 bc             	mov    %edx,-0x44(%ebp)
+    289b:	50                   	push   %eax
+    289c:	8b 47 18             	mov    0x18(%edi),%eax
+    289f:	50                   	push   %eax
+    28a0:	e8 eb eb ff ff       	call   1490 <dns_addr128_t_decode>
+    28a5:	8b 4d c4             	mov    -0x3c(%ebp),%ecx
+    28a8:	58                   	pop    %eax
+    28a9:	83 c1 04             	add    $0x4,%ecx
+    28ac:	8b 45 c0             	mov    -0x40(%ebp),%eax
+    28af:	5a                   	pop    %edx
+    28b0:	51                   	push   %ecx
+    28b1:	50                   	push   %eax
+    28b2:	e8 09 0d 00 00       	call   35c0 <inet_addr_set6@plt>
+    28b7:	89 34 24             	mov    %esi,(%esp)
+    28ba:	e8 31 f0 ff ff       	call   18f0 <dns_message_destroy>
+    28bf:	8b 75 d0             	mov    -0x30(%ebp),%esi
+    28c2:	59                   	pop    %ecx
+    28c3:	56                   	push   %esi
+    28c4:	e8 27 f0 ff ff       	call   18f0 <dns_message_destroy>
+    28c9:	89 1c 24             	mov    %ebx,(%esp)
+    28cc:	e8 4f 0f 00 00       	call   3820 <free@plt>
+    28d1:	8b 55 bc             	mov    -0x44(%ebp),%edx
+    28d4:	83 c4 10             	add    $0x10,%esp
+    28d7:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    28da:	89 d0                	mov    %edx,%eax
+    28dc:	5b                   	pop    %ebx
+    28dd:	5e                   	pop    %esi
+    28de:	5f                   	pop    %edi
+    28df:	5d                   	pop    %ebp
+    28e0:	c3                   	ret    
+    28e1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    28e8:	53                   	push   %ebx
+    28e9:	68 af 32 00 00       	push   $0x32af
+    28ee:	6a 04                	push   $0x4
+    28f0:	6a ff                	push   $0xffffffff
+    28f2:	e8 19 0d 00 00       	call   3610 <log_msg@plt>
+    28f7:	89 34 24             	mov    %esi,(%esp)
+    28fa:	e8 f1 ef ff ff       	call   18f0 <dns_message_destroy>
+    28ff:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    2902:	58                   	pop    %eax
+    2903:	52                   	push   %edx
+    2904:	e8 e7 ef ff ff       	call   18f0 <dns_message_destroy>
+    2909:	89 1c 24             	mov    %ebx,(%esp)
+    290c:	e8 0f 0f 00 00       	call   3820 <free@plt>
+    2911:	83 c4 10             	add    $0x10,%esp
+    2914:	ba f6 fe ff ff       	mov    $0xfffffef6,%edx
+    2919:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    291c:	89 d0                	mov    %edx,%eax
+    291e:	5b                   	pop    %ebx
+    291f:	5e                   	pop    %esi
+    2920:	5f                   	pop    %edi
+    2921:	5d                   	pop    %ebp
+    2922:	c3                   	ret    
+    2923:	90                   	nop
+    2924:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2928:	52                   	push   %edx
+    2929:	52                   	push   %edx
+    292a:	8b 4f 20             	mov    0x20(%edi),%ecx
+    292d:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    2930:	51                   	push   %ecx
+    2931:	8b 50 04             	mov    0x4(%eax),%edx
+    2934:	8b 08                	mov    (%eax),%ecx
+    2936:	52                   	push   %edx
+    2937:	51                   	push   %ecx
+    2938:	68 5d 32 00 00       	push   $0x325d
+    293d:	6a 04                	push   $0x4
+    293f:	6a ff                	push   $0xffffffff
+    2941:	e8 ca 0c 00 00       	call   3610 <log_msg@plt>
+    2946:	83 c4 20             	add    $0x20,%esp
+    2949:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    294c:	50                   	push   %eax
+    294d:	8d 45 d4             	lea    -0x2c(%ebp),%eax
+    2950:	50                   	push   %eax
+    2951:	8b 47 20             	mov    0x20(%edi),%eax
+    2954:	50                   	push   %eax
+    2955:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    2958:	50                   	push   %eax
+    2959:	e8 d2 e7 ff ff       	call   1130 <dns_name_decode>
+    295e:	83 c4 10             	add    $0x10,%esp
+    2961:	89 c2                	mov    %eax,%edx
+    2963:	85 c0                	test   %eax,%eax
+    2965:	75 51                	jne    29b8 <dns_name_query.constprop.1+0x2b8>
+    2967:	83 ec 0c             	sub    $0xc,%esp
+    296a:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    296d:	50                   	push   %eax
+    296e:	53                   	push   %ebx
+    296f:	68 96 32 00 00       	push   $0x3296
+    2974:	6a 04                	push   $0x4
+    2976:	6a ff                	push   $0xffffffff
+    2978:	e8 93 0c 00 00       	call   3610 <log_msg@plt>
+    297d:	83 c4 14             	add    $0x14,%esp
+    2980:	53                   	push   %ebx
+    2981:	e8 9a 0e 00 00       	call   3820 <free@plt>
+    2986:	8b 5d d4             	mov    -0x2c(%ebp),%ebx
+    2989:	8b 47 0c             	mov    0xc(%edi),%eax
+    298c:	83 c4 10             	add    $0x10,%esp
+    298f:	e9 4c fe ff ff       	jmp    27e0 <dns_name_query.constprop.1+0xe0>
+    2994:	83 ec 0c             	sub    $0xc,%esp
+    2997:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    299a:	56                   	push   %esi
+    299b:	e8 50 ef ff ff       	call   18f0 <dns_message_destroy>
+    29a0:	89 1c 24             	mov    %ebx,(%esp)
+    29a3:	e8 78 0e 00 00       	call   3820 <free@plt>
+    29a8:	8b 55 c4             	mov    -0x3c(%ebp),%edx
+    29ab:	83 c4 10             	add    $0x10,%esp
+    29ae:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    29b1:	89 d0                	mov    %edx,%eax
+    29b3:	5b                   	pop    %ebx
+    29b4:	5e                   	pop    %esi
+    29b5:	5f                   	pop    %edi
+    29b6:	5d                   	pop    %ebp
+    29b7:	c3                   	ret    
+    29b8:	83 f8 f2             	cmp    $0xfffffff2,%eax
+    29bb:	74 05                	je     29c2 <dns_name_query.constprop.1+0x2c2>
+    29bd:	83 f8 fe             	cmp    $0xfffffffe,%eax
+    29c0:	75 21                	jne    29e3 <dns_name_query.constprop.1+0x2e3>
+    29c2:	50                   	push   %eax
+    29c3:	68 81 32 00 00       	push   $0x3281
+    29c8:	6a 04                	push   $0x4
+    29ca:	6a ff                	push   $0xffffffff
+    29cc:	89 55 c4             	mov    %edx,-0x3c(%ebp)
+    29cf:	e8 3c 0c 00 00       	call   3610 <log_msg@plt>
+    29d4:	89 34 24             	mov    %esi,(%esp)
+    29d7:	e8 14 ef ff ff       	call   18f0 <dns_message_destroy>
+    29dc:	8b 4d d0             	mov    -0x30(%ebp),%ecx
+    29df:	5a                   	pop    %edx
+    29e0:	51                   	push   %ecx
+    29e1:	eb b8                	jmp    299b <dns_name_query.constprop.1+0x29b>
+    29e3:	53                   	push   %ebx
+    29e4:	6a 72                	push   $0x72
+    29e6:	68 79 32 00 00       	push   $0x3279
+    29eb:	68 c8 32 00 00       	push   $0x32c8
+    29f0:	e8 2b 0c 00 00       	call   3620 <assert_abort@plt>
+    29f5:	83 ec 0c             	sub    $0xc,%esp
+    29f8:	56                   	push   %esi
+    29f9:	e8 f2 ee ff ff       	call   18f0 <dns_message_destroy>
+    29fe:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    2a01:	5f                   	pop    %edi
+    2a02:	50                   	push   %eax
+    2a03:	e8 e8 ee ff ff       	call   18f0 <dns_message_destroy>
+    2a08:	89 1c 24             	mov    %ebx,(%esp)
+    2a0b:	e8 10 0e 00 00       	call   3820 <free@plt>
+    2a10:	83 c4 10             	add    $0x10,%esp
+    2a13:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    2a18:	e9 fc fe ff ff       	jmp    2919 <dns_name_query.constprop.1+0x219>
+    2a1d:	83 ec 0c             	sub    $0xc,%esp
+    2a20:	53                   	push   %ebx
+    2a21:	e8 fa 0d 00 00       	call   3820 <free@plt>
+    2a26:	83 c4 10             	add    $0x10,%esp
+    2a29:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    2a2e:	e9 e6 fe ff ff       	jmp    2919 <dns_name_query.constprop.1+0x219>
+    2a33:	83 ec 0c             	sub    $0xc,%esp
+    2a36:	57                   	push   %edi
+    2a37:	e8 e4 0d 00 00       	call   3820 <free@plt>
+    2a3c:	89 1c 24             	mov    %ebx,(%esp)
+    2a3f:	e8 dc 0d 00 00       	call   3820 <free@plt>
+    2a44:	83 c4 10             	add    $0x10,%esp
+    2a47:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    2a4c:	e9 c8 fe ff ff       	jmp    2919 <dns_name_query.constprop.1+0x219>
+    2a51:	ba fe ff ff ff       	mov    $0xfffffffe,%edx
+    2a56:	e9 be fe ff ff       	jmp    2919 <dns_name_query.constprop.1+0x219>
+    2a5b:	83 ec 0c             	sub    $0xc,%esp
+    2a5e:	52                   	push   %edx
+    2a5f:	e8 bc 0d 00 00       	call   3820 <free@plt>
+    2a64:	89 3c 24             	mov    %edi,(%esp)
+    2a67:	eb ce                	jmp    2a37 <dns_name_query.constprop.1+0x337>
+    2a69:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00002a70 <dns_name2host>:
+    2a70:	55                   	push   %ebp
+    2a71:	89 e5                	mov    %esp,%ebp
+    2a73:	53                   	push   %ebx
+    2a74:	83 ec 1c             	sub    $0x1c,%esp
+    2a77:	6a 18                	push   $0x18
+    2a79:	6a 01                	push   $0x1
+    2a7b:	e8 b0 0b 00 00       	call   3630 <calloc@plt>
+    2a80:	83 c4 10             	add    $0x10,%esp
+    2a83:	85 c0                	test   %eax,%eax
+    2a85:	74 70                	je     2af7 <dns_name2host+0x87>
+    2a87:	89 c3                	mov    %eax,%ebx
+    2a89:	83 7d 10 01          	cmpl   $0x1,0x10(%ebp)
+    2a8d:	74 37                	je     2ac6 <dns_name2host+0x56>
+    2a8f:	72 27                	jb     2ab8 <dns_name2host+0x48>
+    2a91:	83 7d 10 02          	cmpl   $0x2,0x10(%ebp)
+    2a95:	75 59                	jne    2af0 <dns_name2host+0x80>
+    2a97:	89 c2                	mov    %eax,%edx
+    2a99:	8b 45 08             	mov    0x8(%ebp),%eax
+    2a9c:	e8 5f fc ff ff       	call   2700 <dns_name_query.constprop.1>
+    2aa1:	85 c0                	test   %eax,%eax
+    2aa3:	75 2f                	jne    2ad4 <dns_name2host+0x64>
+    2aa5:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2aa8:	89 18                	mov    %ebx,(%eax)
+    2aaa:	31 c0                	xor    %eax,%eax
+    2aac:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    2aaf:	c9                   	leave  
+    2ab0:	c3                   	ret    
+    2ab1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2ab8:	89 c2                	mov    %eax,%edx
+    2aba:	8b 45 08             	mov    0x8(%ebp),%eax
+    2abd:	e8 3e fc ff ff       	call   2700 <dns_name_query.constprop.1>
+    2ac2:	85 c0                	test   %eax,%eax
+    2ac4:	74 df                	je     2aa5 <dns_name2host+0x35>
+    2ac6:	89 da                	mov    %ebx,%edx
+    2ac8:	8b 45 08             	mov    0x8(%ebp),%eax
+    2acb:	e8 d0 f8 ff ff       	call   23a0 <dns_name_query.constprop.0>
+    2ad0:	85 c0                	test   %eax,%eax
+    2ad2:	74 d1                	je     2aa5 <dns_name2host+0x35>
+    2ad4:	83 ec 0c             	sub    $0xc,%esp
+    2ad7:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    2ada:	53                   	push   %ebx
+    2adb:	e8 40 0d 00 00       	call   3820 <free@plt>
+    2ae0:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    2ae3:	83 c4 10             	add    $0x10,%esp
+    2ae6:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    2ae9:	c9                   	leave  
+    2aea:	c3                   	ret    
+    2aeb:	90                   	nop
+    2aec:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2af0:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    2af5:	eb dd                	jmp    2ad4 <dns_name2host+0x64>
+    2af7:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    2afc:	eb ae                	jmp    2aac <dns_name2host+0x3c>
+    2afe:	66 90                	xchg   %ax,%ax
+
+00002b00 <dns_hostinfo_destroy>:
+    2b00:	55                   	push   %ebp
+    2b01:	89 e5                	mov    %esp,%ebp
+    2b03:	53                   	push   %ebx
+    2b04:	83 ec 10             	sub    $0x10,%esp
+    2b07:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    2b0a:	8b 03                	mov    (%ebx),%eax
+    2b0c:	50                   	push   %eax
+    2b0d:	e8 0e 0d 00 00       	call   3820 <free@plt>
+    2b12:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    2b15:	83 c4 10             	add    $0x10,%esp
+    2b18:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    2b1b:	c9                   	leave  
+    2b1c:	e9 ff 0c 00 00       	jmp    3820 <free@plt>
+    2b21:	66 90                	xchg   %ax,%ax
+    2b23:	66 90                	xchg   %ax,%ax
+    2b25:	66 90                	xchg   %ax,%ax
+    2b27:	66 90                	xchg   %ax,%ax
+    2b29:	66 90                	xchg   %ax,%ax
+    2b2b:	66 90                	xchg   %ax,%ax
+    2b2d:	66 90                	xchg   %ax,%ax
+    2b2f:	90                   	nop
+
+00002b30 <transport_link_state>:
+    2b30:	55                   	push   %ebp
+    2b31:	89 e5                	mov    %esp,%ebp
+    2b33:	83 ec 0c             	sub    $0xc,%esp
+    2b36:	68 e9 32 00 00       	push   $0x32e9
+    2b3b:	6a 03                	push   $0x3
+    2b3d:	6a ff                	push   $0xffffffff
+    2b3f:	e8 cc 0a 00 00       	call   3610 <log_msg@plt>
+    2b44:	83 c4 10             	add    $0x10,%esp
+    2b47:	c9                   	leave  
+    2b48:	c3                   	ret    
+    2b49:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00002b50 <transport_recv_err>:
+    2b50:	55                   	push   %ebp
+    2b51:	89 e5                	mov    %esp,%ebp
+    2b53:	83 ec 0c             	sub    $0xc,%esp
+    2b56:	68 fb 32 00 00       	push   $0x32fb
+    2b5b:	6a 02                	push   $0x2
+    2b5d:	6a ff                	push   $0xffffffff
+    2b5f:	e8 ac 0a 00 00       	call   3610 <log_msg@plt>
+    2b64:	83 c4 10             	add    $0x10,%esp
+    2b67:	c9                   	leave  
+    2b68:	c3                   	ret    
+    2b69:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00002b70 <transport_recv_msg>:
+    2b70:	55                   	push   %ebp
+    2b71:	89 e5                	mov    %esp,%ebp
+    2b73:	57                   	push   %edi
+    2b74:	56                   	push   %esi
+    2b75:	53                   	push   %ebx
+    2b76:	83 ec 38             	sub    $0x38,%esp
+    2b79:	c7 45 cc 00 00 00 00 	movl   $0x0,-0x34(%ebp)
+    2b80:	8b 75 0c             	mov    0xc(%ebp),%esi
+    2b83:	bb 00 10 00 00       	mov    $0x1000,%ebx
+    2b88:	56                   	push   %esi
+    2b89:	e8 52 0b 00 00       	call   36e0 <udp_rmsg_size@plt>
+    2b8e:	83 c4 10             	add    $0x10,%esp
+    2b91:	3d 00 10 00 00       	cmp    $0x1000,%eax
+    2b96:	77 02                	ja     2b9a <transport_recv_msg+0x2a>
+    2b98:	89 c3                	mov    %eax,%ebx
+    2b9a:	53                   	push   %ebx
+    2b9b:	68 60 52 00 00       	push   $0x5260
+    2ba0:	6a 00                	push   $0x0
+    2ba2:	56                   	push   %esi
+    2ba3:	e8 c8 09 00 00       	call   3570 <udp_rmsg_read@plt>
+    2ba8:	83 c4 10             	add    $0x10,%esp
+    2bab:	85 c0                	test   %eax,%eax
+    2bad:	74 21                	je     2bd0 <transport_recv_msg+0x60>
+    2baf:	50                   	push   %eax
+    2bb0:	68 0f 33 00 00       	push   $0x330f
+    2bb5:	6a 01                	push   $0x1
+    2bb7:	6a ff                	push   $0xffffffff
+    2bb9:	e8 52 0a 00 00       	call   3610 <log_msg@plt>
+    2bbe:	83 c4 10             	add    $0x10,%esp
+    2bc1:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2bc4:	5b                   	pop    %ebx
+    2bc5:	5e                   	pop    %esi
+    2bc6:	5f                   	pop    %edi
+    2bc7:	5d                   	pop    %ebp
+    2bc8:	c3                   	ret    
+    2bc9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2bd0:	8d 45 d0             	lea    -0x30(%ebp),%eax
+    2bd3:	57                   	push   %edi
+    2bd4:	57                   	push   %edi
+    2bd5:	50                   	push   %eax
+    2bd6:	56                   	push   %esi
+    2bd7:	e8 64 0c 00 00       	call   3840 <udp_rmsg_remote_ep@plt>
+    2bdc:	83 c4 0c             	add    $0xc,%esp
+    2bdf:	8d 45 cc             	lea    -0x34(%ebp),%eax
+    2be2:	50                   	push   %eax
+    2be3:	53                   	push   %ebx
+    2be4:	68 60 52 00 00       	push   $0x5260
+    2be9:	e8 82 ee ff ff       	call   1a70 <dns_message_decode>
+    2bee:	83 c4 10             	add    $0x10,%esp
+    2bf1:	85 c0                	test   %eax,%eax
+    2bf3:	0f 85 e7 00 00 00    	jne    2ce0 <transport_recv_msg+0x170>
+    2bf9:	8b 4d cc             	mov    -0x34(%ebp),%ecx
+    2bfc:	85 c9                	test   %ecx,%ecx
+    2bfe:	0f 84 f6 00 00 00    	je     2cfa <transport_recv_msg+0x18a>
+    2c04:	83 ec 0c             	sub    $0xc,%esp
+    2c07:	68 34 51 00 00       	push   $0x5134
+    2c0c:	e8 1f 0c 00 00       	call   3830 <fibril_mutex_lock@plt>
+    2c11:	c7 04 24 34 51 00 00 	movl   $0x5134,(%esp)
+    2c18:	8b 75 cc             	mov    -0x34(%ebp),%esi
+    2c1b:	e8 80 09 00 00       	call   35a0 <fibril_mutex_is_locked@plt>
+    2c20:	83 c4 10             	add    $0x10,%esp
+    2c23:	84 c0                	test   %al,%al
+    2c25:	0f 84 e4 00 00 00    	je     2d0f <transport_recv_msg+0x19f>
+    2c2b:	8b 1d 48 51 00 00    	mov    0x5148,%ebx
+    2c31:	81 fb 44 51 00 00    	cmp    $0x5144,%ebx
+    2c37:	74 23                	je     2c5c <transport_recv_msg+0xec>
+    2c39:	8b 43 08             	mov    0x8(%ebx),%eax
+    2c3c:	66 8b 56 08          	mov    0x8(%esi),%dx
+    2c40:	66 3b 50 08          	cmp    0x8(%eax),%dx
+    2c44:	75 0b                	jne    2c51 <transport_recv_msg+0xe1>
+    2c46:	eb 30                	jmp    2c78 <transport_recv_msg+0x108>
+    2c48:	8b 43 08             	mov    0x8(%ebx),%eax
+    2c4b:	66 39 50 08          	cmp    %dx,0x8(%eax)
+    2c4f:	74 27                	je     2c78 <transport_recv_msg+0x108>
+    2c51:	8b 5b 04             	mov    0x4(%ebx),%ebx
+    2c54:	81 fb 44 51 00 00    	cmp    $0x5144,%ebx
+    2c5a:	75 ec                	jne    2c48 <transport_recv_msg+0xd8>
+    2c5c:	83 ec 0c             	sub    $0xc,%esp
+    2c5f:	68 34 51 00 00       	push   $0x5134
+    2c64:	e8 47 0a 00 00       	call   36b0 <fibril_mutex_unlock@plt>
+    2c69:	83 c4 10             	add    $0x10,%esp
+    2c6c:	e9 50 ff ff ff       	jmp    2bc1 <transport_recv_msg+0x51>
+    2c71:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2c78:	8b 13                	mov    (%ebx),%edx
+    2c7a:	85 d2                	test   %edx,%edx
+    2c7c:	74 0e                	je     2c8c <transport_recv_msg+0x11c>
+    2c7e:	8b 43 04             	mov    0x4(%ebx),%eax
+    2c81:	85 c0                	test   %eax,%eax
+    2c83:	74 07                	je     2c8c <transport_recv_msg+0x11c>
+    2c85:	89 10                	mov    %edx,(%eax)
+    2c87:	8b 13                	mov    (%ebx),%edx
+    2c89:	89 42 04             	mov    %eax,0x4(%edx)
+    2c8c:	83 ec 0c             	sub    $0xc,%esp
+    2c8f:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    2c95:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    2c9c:	8d 73 1c             	lea    0x1c(%ebx),%esi
+    2c9f:	68 34 51 00 00       	push   $0x5134
+    2ca4:	e8 07 0a 00 00       	call   36b0 <fibril_mutex_unlock@plt>
+    2ca9:	8b 7d cc             	mov    -0x34(%ebp),%edi
+    2cac:	89 34 24             	mov    %esi,(%esp)
+    2caf:	83 c3 14             	add    $0x14,%ebx
+    2cb2:	e8 79 0b 00 00       	call   3830 <fibril_mutex_lock@plt>
+    2cb7:	89 7b f8             	mov    %edi,-0x8(%ebx)
+    2cba:	c6 43 fc 01          	movb   $0x1,-0x4(%ebx)
+    2cbe:	c7 43 18 00 00 00 00 	movl   $0x0,0x18(%ebx)
+    2cc5:	89 34 24             	mov    %esi,(%esp)
+    2cc8:	e8 e3 09 00 00       	call   36b0 <fibril_mutex_unlock@plt>
+    2ccd:	89 1c 24             	mov    %ebx,(%esp)
+    2cd0:	e8 bb 09 00 00       	call   3690 <fibril_condvar_broadcast@plt>
+    2cd5:	83 c4 10             	add    $0x10,%esp
+    2cd8:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2cdb:	5b                   	pop    %ebx
+    2cdc:	5e                   	pop    %esi
+    2cdd:	5f                   	pop    %edi
+    2cde:	5d                   	pop    %ebp
+    2cdf:	c3                   	ret    
+    2ce0:	53                   	push   %ebx
+    2ce1:	68 26 33 00 00       	push   $0x3326
+    2ce6:	6a 01                	push   $0x1
+    2ce8:	6a ff                	push   $0xffffffff
+    2cea:	e8 21 09 00 00       	call   3610 <log_msg@plt>
+    2cef:	83 c4 10             	add    $0x10,%esp
+    2cf2:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2cf5:	5b                   	pop    %ebx
+    2cf6:	5e                   	pop    %esi
+    2cf7:	5f                   	pop    %edi
+    2cf8:	5d                   	pop    %ebp
+    2cf9:	c3                   	ret    
+    2cfa:	52                   	push   %edx
+    2cfb:	68 11 01 00 00       	push   $0x111
+    2d00:	68 3e 33 00 00       	push   $0x333e
+    2d05:	68 4a 33 00 00       	push   $0x334a
+    2d0a:	e8 11 09 00 00       	call   3620 <assert_abort@plt>
+    2d0f:	50                   	push   %eax
+    2d10:	68 9b 00 00 00       	push   $0x9b
+    2d15:	68 3e 33 00 00       	push   $0x333e
+    2d1a:	68 74 33 00 00       	push   $0x3374
+    2d1f:	e8 fc 08 00 00       	call   3620 <assert_abort@plt>
+    2d24:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    2d2a:	8d bf 00 00 00 00    	lea    0x0(%edi),%edi
+
+00002d30 <transport_init>:
+    2d30:	55                   	push   %ebp
+    2d31:	89 e5                	mov    %esp,%ebp
+    2d33:	53                   	push   %ebx
+    2d34:	83 ec 50             	sub    $0x50,%esp
+    2d37:	8d 5d c4             	lea    -0x3c(%ebp),%ebx
+    2d3a:	53                   	push   %ebx
+    2d3b:	e8 40 09 00 00       	call   3680 <inet_ep2_init@plt>
+    2d40:	c7 04 24 44 52 00 00 	movl   $0x5244,(%esp)
+    2d47:	e8 a4 0a 00 00       	call   37f0 <udp_create@plt>
+    2d4c:	83 c4 10             	add    $0x10,%esp
+    2d4f:	85 c0                	test   %eax,%eax
+    2d51:	75 2d                	jne    2d80 <transport_init+0x50>
+    2d53:	83 ec 0c             	sub    $0xc,%esp
+    2d56:	a1 44 52 00 00       	mov    0x5244,%eax
+    2d5b:	68 40 52 00 00       	push   $0x5240
+    2d60:	6a 00                	push   $0x0
+    2d62:	68 28 51 00 00       	push   $0x5128
+    2d67:	53                   	push   %ebx
+    2d68:	50                   	push   %eax
+    2d69:	e8 02 09 00 00       	call   3670 <udp_assoc_create@plt>
+    2d6e:	83 c4 20             	add    $0x20,%esp
+    2d71:	85 c0                	test   %eax,%eax
+    2d73:	75 0b                	jne    2d80 <transport_init+0x50>
+    2d75:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    2d78:	c9                   	leave  
+    2d79:	c3                   	ret    
+    2d7a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    2d80:	52                   	push   %edx
+    2d81:	68 57 33 00 00       	push   $0x3357
+    2d86:	6a 01                	push   $0x1
+    2d88:	6a ff                	push   $0xffffffff
+    2d8a:	e8 81 08 00 00       	call   3610 <log_msg@plt>
+    2d8f:	8b 1d 40 52 00 00    	mov    0x5240,%ebx
+    2d95:	59                   	pop    %ecx
+    2d96:	53                   	push   %ebx
+    2d97:	e8 a4 08 00 00       	call   3640 <udp_assoc_destroy@plt>
+    2d9c:	58                   	pop    %eax
+    2d9d:	a1 44 52 00 00       	mov    0x5244,%eax
+    2da2:	50                   	push   %eax
+    2da3:	e8 78 09 00 00       	call   3720 <udp_destroy@plt>
+    2da8:	83 c4 10             	add    $0x10,%esp
+    2dab:	b8 f6 fe ff ff       	mov    $0xfffffef6,%eax
+    2db0:	eb c3                	jmp    2d75 <transport_init+0x45>
+    2db2:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2db9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00002dc0 <transport_fini>:
+    2dc0:	55                   	push   %ebp
+    2dc1:	89 e5                	mov    %esp,%ebp
+    2dc3:	83 ec 14             	sub    $0x14,%esp
+    2dc6:	a1 40 52 00 00       	mov    0x5240,%eax
+    2dcb:	50                   	push   %eax
+    2dcc:	e8 6f 08 00 00       	call   3640 <udp_assoc_destroy@plt>
+    2dd1:	8b 0d 44 52 00 00    	mov    0x5244,%ecx
+    2dd7:	5a                   	pop    %edx
+    2dd8:	51                   	push   %ecx
+    2dd9:	e8 42 09 00 00       	call   3720 <udp_destroy@plt>
+    2dde:	83 c4 10             	add    $0x10,%esp
+    2de1:	c9                   	leave  
+    2de2:	c3                   	ret    
+    2de3:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    2de9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00002df0 <dns_request>:
+    2df0:	55                   	push   %ebp
+    2df1:	89 e5                	mov    %esp,%ebp
+    2df3:	57                   	push   %edi
+    2df4:	56                   	push   %esi
+    2df5:	53                   	push   %ebx
+    2df6:	83 ec 40             	sub    $0x40,%esp
+    2df9:	8d 45 cc             	lea    -0x34(%ebp),%eax
+    2dfc:	50                   	push   %eax
+    2dfd:	8d 45 c8             	lea    -0x38(%ebp),%eax
+    2e00:	50                   	push   %eax
+    2e01:	8b 45 08             	mov    0x8(%ebp),%eax
+    2e04:	50                   	push   %eax
+    2e05:	e8 c6 e6 ff ff       	call   14d0 <dns_message_encode>
+    2e0a:	83 c4 10             	add    $0x10,%esp
+    2e0d:	85 c0                	test   %eax,%eax
+    2e0f:	74 1d                	je     2e2e <dns_request+0x3e>
+    2e11:	83 ec 0c             	sub    $0xc,%esp
+    2e14:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2e17:	8b 45 c8             	mov    -0x38(%ebp),%eax
+    2e1a:	50                   	push   %eax
+    2e1b:	e8 00 0a 00 00       	call   3820 <free@plt>
+    2e20:	83 c4 10             	add    $0x10,%esp
+    2e23:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    2e26:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2e29:	5b                   	pop    %ebx
+    2e2a:	5e                   	pop    %esi
+    2e2b:	5f                   	pop    %edi
+    2e2c:	5d                   	pop    %ebp
+    2e2d:	c3                   	ret    
+    2e2e:	83 ec 0c             	sub    $0xc,%esp
+    2e31:	8d 45 d0             	lea    -0x30(%ebp),%eax
+    2e34:	31 db                	xor    %ebx,%ebx
+    2e36:	50                   	push   %eax
+    2e37:	e8 24 09 00 00       	call   3760 <inet_ep_init@plt>
+    2e3c:	a1 28 52 00 00       	mov    0x5228,%eax
+    2e41:	66 c7 45 e4 35 00    	movw   $0x35,-0x1c(%ebp)
+    2e47:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    2e4a:	a1 2c 52 00 00       	mov    0x522c,%eax
+    2e4f:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    2e52:	a1 30 52 00 00       	mov    0x5230,%eax
+    2e57:	89 45 d8             	mov    %eax,-0x28(%ebp)
+    2e5a:	a1 34 52 00 00       	mov    0x5234,%eax
+    2e5f:	89 45 dc             	mov    %eax,-0x24(%ebp)
+    2e62:	a1 38 52 00 00       	mov    0x5238,%eax
+    2e67:	89 45 e0             	mov    %eax,-0x20(%ebp)
+    2e6a:	83 c4 10             	add    $0x10,%esp
+    2e6d:	c7 45 c4 00 00 00 00 	movl   $0x0,-0x3c(%ebp)
+    2e74:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2e78:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    2e7b:	50                   	push   %eax
+    2e7c:	8b 45 c8             	mov    -0x38(%ebp),%eax
+    2e7f:	50                   	push   %eax
+    2e80:	8d 45 d0             	lea    -0x30(%ebp),%eax
+    2e83:	50                   	push   %eax
+    2e84:	a1 40 52 00 00       	mov    0x5240,%eax
+    2e89:	50                   	push   %eax
+    2e8a:	e8 01 09 00 00       	call   3790 <udp_assoc_send_msg@plt>
+    2e8f:	83 c4 10             	add    $0x10,%esp
+    2e92:	85 c0                	test   %eax,%eax
+    2e94:	0f 85 16 01 00 00    	jne    2fb0 <dns_request+0x1c0>
+    2e9a:	50                   	push   %eax
+    2e9b:	50                   	push   %eax
+    2e9c:	6a 30                	push   $0x30
+    2e9e:	6a 01                	push   $0x1
+    2ea0:	e8 8b 07 00 00       	call   3630 <calloc@plt>
+    2ea5:	83 c4 10             	add    $0x10,%esp
+    2ea8:	89 c3                	mov    %eax,%ebx
+    2eaa:	85 c0                	test   %eax,%eax
+    2eac:	0f 84 f4 00 00 00    	je     2fa6 <dns_request+0x1b6>
+    2eb2:	83 ec 0c             	sub    $0xc,%esp
+    2eb5:	8b 45 08             	mov    0x8(%ebp),%eax
+    2eb8:	8d 7b 14             	lea    0x14(%ebx),%edi
+    2ebb:	89 43 08             	mov    %eax,0x8(%ebx)
+    2ebe:	c7 43 0c 00 00 00 00 	movl   $0x0,0xc(%ebx)
+    2ec5:	c6 43 10 00          	movb   $0x0,0x10(%ebx)
+    2ec9:	8d 73 1c             	lea    0x1c(%ebx),%esi
+    2ecc:	57                   	push   %edi
+    2ecd:	e8 8e 07 00 00       	call   3660 <fibril_condvar_initialize@plt>
+    2ed2:	89 34 24             	mov    %esi,(%esp)
+    2ed5:	e8 f6 07 00 00       	call   36d0 <fibril_mutex_initialize@plt>
+    2eda:	c7 04 24 34 51 00 00 	movl   $0x5134,(%esp)
+    2ee1:	e8 4a 09 00 00       	call   3830 <fibril_mutex_lock@plt>
+    2ee6:	a1 44 51 00 00       	mov    0x5144,%eax
+    2eeb:	89 03                	mov    %eax,(%ebx)
+    2eed:	c7 43 04 44 51 00 00 	movl   $0x5144,0x4(%ebx)
+    2ef4:	89 58 04             	mov    %ebx,0x4(%eax)
+    2ef7:	89 1d 44 51 00 00    	mov    %ebx,0x5144
+    2efd:	c7 04 24 34 51 00 00 	movl   $0x5134,(%esp)
+    2f04:	e8 a7 07 00 00       	call   36b0 <fibril_mutex_unlock@plt>
+    2f09:	89 34 24             	mov    %esi,(%esp)
+    2f0c:	e8 1f 09 00 00       	call   3830 <fibril_mutex_lock@plt>
+    2f11:	83 c4 10             	add    $0x10,%esp
+    2f14:	eb 17                	jmp    2f2d <dns_request+0x13d>
+    2f16:	66 90                	xchg   %ax,%ax
+    2f18:	50                   	push   %eax
+    2f19:	68 40 4b 4c 00       	push   $0x4c4b40
+    2f1e:	56                   	push   %esi
+    2f1f:	57                   	push   %edi
+    2f20:	e8 2b 07 00 00       	call   3650 <fibril_condvar_wait_timeout@plt>
+    2f25:	83 c4 10             	add    $0x10,%esp
+    2f28:	83 f8 f3             	cmp    $0xfffffff3,%eax
+    2f2b:	74 53                	je     2f80 <dns_request+0x190>
+    2f2d:	80 7b 10 00          	cmpb   $0x0,0x10(%ebx)
+    2f31:	74 e5                	je     2f18 <dns_request+0x128>
+    2f33:	83 ec 0c             	sub    $0xc,%esp
+    2f36:	56                   	push   %esi
+    2f37:	e8 74 07 00 00       	call   36b0 <fibril_mutex_unlock@plt>
+    2f3c:	8b 43 2c             	mov    0x2c(%ebx),%eax
+    2f3f:	83 c4 10             	add    $0x10,%esp
+    2f42:	85 c0                	test   %eax,%eax
+    2f44:	74 7a                	je     2fc0 <dns_request+0x1d0>
+    2f46:	8b 0b                	mov    (%ebx),%ecx
+    2f48:	85 c9                	test   %ecx,%ecx
+    2f4a:	74 1b                	je     2f67 <dns_request+0x177>
+    2f4c:	8b 53 04             	mov    0x4(%ebx),%edx
+    2f4f:	85 d2                	test   %edx,%edx
+    2f51:	74 14                	je     2f67 <dns_request+0x177>
+    2f53:	89 0a                	mov    %ecx,(%edx)
+    2f55:	8b 0b                	mov    (%ebx),%ecx
+    2f57:	89 51 04             	mov    %edx,0x4(%ecx)
+    2f5a:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    2f60:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    2f67:	83 ec 0c             	sub    $0xc,%esp
+    2f6a:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2f6d:	53                   	push   %ebx
+    2f6e:	e8 ad 08 00 00       	call   3820 <free@plt>
+    2f73:	83 c4 10             	add    $0x10,%esp
+    2f76:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    2f79:	e9 93 fe ff ff       	jmp    2e11 <dns_request+0x21>
+    2f7e:	66 90                	xchg   %ax,%ax
+    2f80:	8b 7d c4             	mov    -0x3c(%ebp),%edi
+    2f83:	83 ec 0c             	sub    $0xc,%esp
+    2f86:	47                   	inc    %edi
+    2f87:	89 7d c4             	mov    %edi,-0x3c(%ebp)
+    2f8a:	56                   	push   %esi
+    2f8b:	8b 7d c4             	mov    -0x3c(%ebp),%edi
+    2f8e:	e8 1d 07 00 00       	call   36b0 <fibril_mutex_unlock@plt>
+    2f93:	83 c4 10             	add    $0x10,%esp
+    2f96:	83 ff 03             	cmp    $0x3,%edi
+    2f99:	0f 85 d9 fe ff ff    	jne    2e78 <dns_request+0x88>
+    2f9f:	b8 f6 fe ff ff       	mov    $0xfffffef6,%eax
+    2fa4:	eb a0                	jmp    2f46 <dns_request+0x156>
+    2fa6:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    2fab:	e9 61 fe ff ff       	jmp    2e11 <dns_request+0x21>
+    2fb0:	85 db                	test   %ebx,%ebx
+    2fb2:	75 92                	jne    2f46 <dns_request+0x156>
+    2fb4:	e9 58 fe ff ff       	jmp    2e11 <dns_request+0x21>
+    2fb9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2fc0:	8b 55 0c             	mov    0xc(%ebp),%edx
+    2fc3:	8b 4b 0c             	mov    0xc(%ebx),%ecx
+    2fc6:	89 0a                	mov    %ecx,(%edx)
+    2fc8:	8b 0b                	mov    (%ebx),%ecx
+    2fca:	85 c9                	test   %ecx,%ecx
+    2fcc:	74 1b                	je     2fe9 <dns_request+0x1f9>
+    2fce:	8b 53 04             	mov    0x4(%ebx),%edx
+    2fd1:	85 d2                	test   %edx,%edx
+    2fd3:	74 14                	je     2fe9 <dns_request+0x1f9>
+    2fd5:	89 0a                	mov    %ecx,(%edx)
+    2fd7:	8b 0b                	mov    (%ebx),%ecx
+    2fd9:	89 51 04             	mov    %edx,0x4(%ecx)
+    2fdc:	c7 03 00 00 00 00    	movl   $0x0,(%ebx)
+    2fe2:	c7 43 04 00 00 00 00 	movl   $0x0,0x4(%ebx)
+    2fe9:	83 ec 0c             	sub    $0xc,%esp
+    2fec:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2fef:	53                   	push   %ebx
+    2ff0:	e8 2b 08 00 00       	call   3820 <free@plt>
+    2ff5:	8b 4d c8             	mov    -0x38(%ebp),%ecx
+    2ff8:	5a                   	pop    %edx
+    2ff9:	51                   	push   %ecx
+    2ffa:	e8 21 08 00 00       	call   3820 <free@plt>
+    2fff:	83 c4 10             	add    $0x10,%esp
+    3002:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    3005:	e9 1c fe ff ff       	jmp    2e26 <dns_request+0x36>
+    300a:	64 6e                	outsb  %fs:(%esi),(%dx)
+    300c:	73 5f                	jae    306d <dns_request+0x27d>
+    300e:	6d                   	insl   (%dx),%es:(%edi)
+    300f:	73 67                	jae    3078 <dns_request+0x288>
+    3011:	2e 63 00             	arpl   %ax,%cs:(%eax)
+    3014:	62 75 66             	bound  %esi,0x66(%ebp)
+    3017:	5f                   	pop    %edi
+    3018:	73 69                	jae    3083 <dns_request+0x293>
+    301a:	7a 65                	jp     3081 <dns_request+0x291>
+    301c:	20 3e                	and    %bh,(%esi)
+    301e:	3d 20 32 00 50       	cmp    $0x50003220,%eax
+    3023:	6f                   	outsl  %ds:(%esi),(%dx)
+    3024:	69 6e 74 65 72 2d 20 	imul   $0x202d7265,0x74(%esi),%ebp
+    302b:	62 73 69             	bound  %esi,0x69(%ebx)
+    302e:	7a 65                	jp     3095 <dns_request+0x2a5>
+    3030:	20 3c 20             	and    %bh,(%eax,%eiz,1)
+    3033:	31 00                	xor    %eax,(%eax)
+    3035:	62 75 66             	bound  %esi,0x66(%ebp)
+    3038:	5f                   	pop    %edi
+    3039:	73 69                	jae    30a4 <dns_request+0x2b4>
+    303b:	7a 65                	jp     30a2 <dns_request+0x2b2>
+    303d:	20 3e                	and    %bh,(%esi)
+    303f:	3d 20 34 00 62       	cmp    $0x62003420,%eax
+    3044:	75 66                	jne    30ac <dns_request+0x2bc>
+    3046:	5f                   	pop    %edi
+    3047:	73 69                	jae    30b2 <dns_request+0x2c2>
+    3049:	7a 65                	jp     30b0 <dns_request+0x2c0>
+    304b:	20 3e                	and    %bh,(%esi)
+    304d:	3d 20 31 36 00       	cmp    $0x363120,%eax
+    3052:	4e                   	dec    %esi
+    3053:	6f                   	outsl  %ds:(%esi),(%dx)
+    3054:	6e                   	outsb  %ds:(%esi),(%dx)
+    3055:	2d 61 73 63 69       	sub    $0x69637361,%eax
+    305a:	69 20 63 68 61 72    	imul   $0x72616863,(%eax),%esp
+    3060:	61                   	popa   
+    3061:	63 74 65 72          	arpl   %si,0x72(%ebp,%eiz,2)
+    3065:	00 45 6d             	add    %al,0x6d(%ebp)
+    3068:	70 74                	jo     30de <dns_request+0x2ee>
+    306a:	79 20                	jns    308c <dns_request+0x29c>
+    306c:	74 6f                	je     30dd <dns_request+0x2ed>
+    306e:	6b 65 6e 00          	imul   $0x0,0x6e(%ebp),%esp
+    3072:	4c                   	dec    %esp
+    3073:	61                   	popa   
+    3074:	62 65 6c             	bound  %esp,0x6c(%ebp)
+    3077:	20 74 6f 6f          	and    %dh,0x6f(%edi,%ebp,2)
+    307b:	20 6c 6f 6e          	and    %ch,0x6e(%edi,%ebp,2)
+    307f:	67 00 71 5f          	add    %dh,0x5f(%bx,%di)
+    3083:	73 69                	jae    30ee <dns_request+0x2fe>
+    3085:	7a 65                	jp     30ec <dns_request+0x2fc>
+    3087:	20 3e                	and    %bh,(%esi)
+    3089:	20 30                	and    %dh,(%eax)
+    308b:	00 45 72             	add    %al,0x72(%ebp)
+    308e:	72 6f                	jb     30ff <dns_request+0x30f>
+    3090:	72 20                	jb     30b2 <dns_request+0x2c2>
+    3092:	64 65 63 6f 64       	fs arpl %bp,%gs:0x64(%edi)
+    3097:	69 6e 67 20 6e 61 6d 	imul   $0x6d616e20,0x67(%esi),%ebp
+    309e:	65 00 65 72          	add    %ah,%gs:0x72(%ebp)
+    30a2:	72 6f                	jb     3113 <dns_request+0x323>
+    30a4:	72 20                	jb     30c6 <dns_request+0x2d6>
+    30a6:	64 65 63 6f 64       	fs arpl %bp,%gs:0x64(%edi)
+    30ab:	69 6e 67 20 71 75 65 	imul   $0x65757120,0x67(%esi),%ebp
+    30b2:	73 74                	jae    3128 <dns_request+0x338>
+    30b4:	69 6f 6e 00 45 72 72 	imul   $0x72724500,0x6e(%edi),%ebp
+    30bb:	6f                   	outsl  %ds:(%esi),(%dx)
+    30bc:	72 20                	jb     30de <dns_request+0x2ee>
+    30be:	64 65 63 6f 64       	fs arpl %bp,%gs:0x64(%edi)
+    30c3:	69 6e 67 20 61 6e 73 	imul   $0x736e6120,0x67(%esi),%ebp
+    30ca:	77 65                	ja     3131 <dns_request+0x341>
+    30cc:	72 00                	jb     30ce <dns_request+0x2de>
+    30ce:	66 90                	xchg   %ax,%ax
+    30d0:	50                   	push   %eax
+    30d1:	6f                   	outsl  %ds:(%esi),(%dx)
+    30d2:	69 6e 74 65 72 2d 20 	imul   $0x202d7265,0x74(%esi),%ebp
+    30d9:	66 6f                	outsw  %ds:(%esi),(%dx)
+    30db:	72 77                	jb     3154 <dns_request+0x364>
+    30dd:	61                   	popa   
+    30de:	72 64                	jb     3144 <dns_request+0x354>
+    30e0:	20 72 65             	and    %dh,0x65(%edx)
+    30e3:	66 20 25 7a 75 2c 20 	data16 and %ah,0x202c757a
+    30ea:	70 6f                	jo     315b <dns_request+0x36b>
+    30ec:	73 3d                	jae    312b <dns_request+0x33b>
+    30ee:	25 7a 75 00 00       	and    $0x757a,%eax
+    30f3:	00 64 6e 73          	add    %ah,0x73(%esi,%ebp,2)
+    30f7:	5f                   	pop    %edi
+    30f8:	6d                   	insl   (%dx),%es:(%edi)
+    30f9:	65 73 73             	gs jae 316f <dns_request+0x37f>
+    30fc:	61                   	popa   
+    30fd:	67 65 5f             	addr16 gs pop %edi
+    3100:	64 65 63 6f 64       	fs arpl %bp,%gs:0x64(%edi)
+    3105:	65 3a 20             	cmp    %gs:(%eax),%ah
+    3108:	70 64                	jo     316e <dns_request+0x37e>
+    310a:	75 2d                	jne    3139 <dns_request+0x349>
+    310c:	3e 64 61             	ds fs popa 
+    310f:	74 61                	je     3172 <dns_request+0x382>
+    3111:	20 3d 20 25 70 2c    	and    %bh,0x2c702520
+    3117:	20 70 64             	and    %dh,0x64(%eax)
+    311a:	75 2d                	jne    3149 <dns_request+0x359>
+    311c:	3e 73 69             	jae,pt 3188 <dns_request+0x398>
+    311f:	7a 65                	jp     3186 <dns_request+0x396>
+    3121:	3d 25 7a 75 00       	cmp    $0x757a25,%eax
+    3126:	64 6e                	outsb  %fs:(%esi),(%dx)
+    3128:	73 72                	jae    319c <dns_request+0x3ac>
+    312a:	5f                   	pop    %edi
+    312b:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    312e:	6e                   	outsb  %ds:(%esi),(%dx)
+    312f:	28 29                	sub    %ch,(%ecx)
+    3131:	00 69 6e             	add    %ch,0x6e(%ecx)
+    3134:	65 74 5f             	gs je  3196 <dns_request+0x3a6>
+    3137:	67 65 74 5f          	addr16 gs je 319a <dns_request+0x3aa>
+    313b:	73 72                	jae    31af <dns_request+0x3bf>
+    313d:	76 61                	jbe    31a0 <dns_request+0x3b0>
+    313f:	64 64 72 5f          	fs fs jb 31a2 <dns_request+0x3b2>
+    3143:	73 72                	jae    31b7 <dns_request+0x3c7>
+    3145:	76 28                	jbe    316f <dns_request+0x37f>
+    3147:	29 00                	sub    %eax,(%eax)
+    3149:	64 6e                	outsb  %fs:(%esi),(%dx)
+    314b:	73 72                	jae    31bf <dns_request+0x3cf>
+    314d:	5f                   	pop    %edi
+    314e:	73 65                	jae    31b5 <dns_request+0x3c5>
+    3150:	74 5f                	je     31b1 <dns_request+0x3c1>
+    3152:	73 72                	jae    31c6 <dns_request+0x3d6>
+    3154:	76 61                	jbe    31b7 <dns_request+0x3c7>
+    3156:	64 64 72 5f          	fs fs jb 31b9 <dns_request+0x3c9>
+    315a:	73 72                	jae    31ce <dns_request+0x3de>
+    315c:	76 28                	jbe    3186 <dns_request+0x396>
+    315e:	29 00                	sub    %eax,(%eax)
+    3160:	64 6e                	outsb  %fs:(%esi),(%dx)
+    3162:	73 72                	jae    31d6 <dns_request+0x3e6>
+    3164:	65 73 00             	gs jae 3167 <dns_request+0x377>
+    3167:	25 73 3a 20 44       	and    $0x44203a73,%eax
+    316c:	4e                   	dec    %esi
+    316d:	53                   	push   %ebx
+    316e:	20 52 65             	and    %dl,0x65(%edx)
+    3171:	73 6f                	jae    31e2 <dns_request+0x3f2>
+    3173:	6c                   	insb   (%dx),%es:(%edi)
+    3174:	75 74                	jne    31ea <dns_request+0x3fa>
+    3176:	69 6f 6e 20 53 65 72 	imul   $0x72655320,0x6e(%edi),%ebp
+    317d:	76 69                	jbe    31e8 <dns_request+0x3f8>
+    317f:	63 65 0a             	arpl   %sp,0xa(%ebp)
+    3182:	00 64 6e 73          	add    %ah,0x73(%esi,%ebp,2)
+    3186:	72 5f                	jb     31e7 <dns_request+0x3f7>
+    3188:	69 6e 69 74 28 29 00 	imul   $0x292874,0x69(%esi),%ebp
+    318f:	6e                   	outsb  %ds:(%esi),(%dx)
+    3190:	65 74 2f             	gs je  31c2 <dns_request+0x3d2>
+    3193:	64 6e                	outsb  %fs:(%esi),(%dx)
+    3195:	73 72                	jae    3209 <dns_request+0x419>
+    3197:	00 64 6e 73          	add    %ah,0x73(%esi,%ebp,2)
+    319b:	72 65                	jb     3202 <dns_request+0x412>
+    319d:	73 3a                	jae    31d9 <dns_request+0x3e9>
+    319f:	20 46 61             	and    %al,0x61(%esi)
+    31a2:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    31a9:	20 
+    31aa:	69 6e 69 74 69 61 6c 	imul   $0x6c616974,0x69(%esi),%ebp
+    31b1:	69 7a 65 20 6c 6f 67 	imul   $0x676f6c20,0x65(%edx),%edi
+    31b8:	67 69 6e 67 2e 0a 00 	imul   $0xa2e,0x67(%bp),%ebp
+    31bf:	00 
+    31c0:	46                   	inc    %esi
+    31c1:	61                   	popa   
+    31c2:	69 6c 65 64 20 69 6e 	imul   $0x696e6920,0x64(%ebp,%eiz,2),%ebp
+    31c9:	69 
+    31ca:	74 69                	je     3235 <dns_request+0x445>
+    31cc:	61                   	popa   
+    31cd:	6c                   	insb   (%dx),%es:(%edi)
+    31ce:	69 7a 69 6e 67 20 74 	imul   $0x7420676e,0x69(%edx),%edi
+    31d5:	72 61                	jb     3238 <dns_request+0x448>
+    31d7:	6e                   	outsb  %ds:(%esi),(%dx)
+    31d8:	73 70                	jae    324a <dns_request+0x45a>
+    31da:	6f                   	outsl  %ds:(%esi),(%dx)
+    31db:	72 74                	jb     3251 <dns_request+0x461>
+    31dd:	2e 00 00             	add    %al,%cs:(%eax)
+    31e0:	46                   	inc    %esi
+    31e1:	61                   	popa   
+    31e2:	69 6c 65 64 20 72 65 	imul   $0x67657220,0x64(%ebp,%eiz,2),%ebp
+    31e9:	67 
+    31ea:	69 73 74 65 72 69 6e 	imul   $0x6e697265,0x74(%ebx),%esi
+    31f1:	67 20 73 65          	and    %dh,0x65(%bp,%di)
+    31f5:	72 76                	jb     326d <dns_request+0x47d>
+    31f7:	65 72 20             	gs jb  321a <dns_request+0x42a>
+    31fa:	28 25 64 29 2e 00    	sub    %ah,0x2e2964
+    3200:	46                   	inc    %esi
+    3201:	61                   	popa   
+    3202:	69 6c 65 64 20 72 65 	imul   $0x67657220,0x64(%ebp,%eiz,2),%ebp
+    3209:	67 
+    320a:	69 73 74 65 72 69 6e 	imul   $0x6e697265,0x74(%ebx),%esi
+    3211:	67 20 73 65          	and    %dh,0x65(%bp,%di)
+    3215:	72 76                	jb     328d <dns_request+0x49d>
+    3217:	69 63 65 20 28 25 64 	imul   $0x64252820,0x65(%ebx),%esp
+    321e:	29 2e                	sub    %ebp,(%esi)
+    3220:	00 00                	add    %al,(%eax)
+    3222:	00 00                	add    %al,(%eax)
+    3224:	64 6e                	outsb  %fs:(%esi),(%dx)
+    3226:	73 72                	jae    329a <dns_request+0x4aa>
+    3228:	65 73 3a             	gs jae 3265 <dns_request+0x475>
+    322b:	20 41 63             	and    %al,0x63(%ecx)
+    322e:	63 65 70             	arpl   %sp,0x70(%ebp)
+    3231:	74 69                	je     329c <dns_request+0x4ac>
+    3233:	6e                   	outsb  %ds:(%esi),(%dx)
+    3234:	67 20 63 6f          	and    %ah,0x6f(%bp,%di)
+    3238:	6e                   	outsb  %ds:(%esi),(%dx)
+    3239:	6e                   	outsb  %ds:(%esi),(%dx)
+    323a:	65 63 74 69 6f       	arpl   %si,%gs:0x6f(%ecx,%ebp,2)
+    323f:	6e                   	outsb  %ds:(%esi),(%dx)
+    3240:	73 2e                	jae    3270 <dns_request+0x480>
+    3242:	0a 00                	or     (%eax),%al
+    3244:	20 2d 20 27 25 73    	and    %ch,0x73252720
+    324a:	27                   	daa    
+    324b:	20 25 75 2f 25 75    	and    %ah,0x75252f75
+    3251:	2c 20                	sub    $0x20,%al
+    3253:	64 73 69             	fs jae 32bf <dns_request+0x4cf>
+    3256:	7a 65                	jp     32bd <dns_request+0x4cd>
+    3258:	20 25 7a 75 00 64    	and    %ah,0x6400757a
+    325e:	65 63 6f 64          	arpl   %bp,%gs:0x64(%edi)
+    3262:	65 20 63 6e          	and    %ah,%gs:0x6e(%ebx)
+    3266:	61                   	popa   
+    3267:	6d                   	insl   (%dx),%es:(%edi)
+    3268:	65 20 28             	and    %ch,%gs:(%eax)
+    326b:	25 70 2c 20 25       	and    $0x25202c70,%eax
+    3270:	7a 75                	jp     32e7 <dns_request+0x4f7>
+    3272:	2c 20                	sub    $0x20,%al
+    3274:	25 7a 75 29 00       	and    $0x29757a,%eax
+    3279:	71 75                	jno    32f0 <dns_request+0x500>
+    327b:	65 72 79             	gs jb  32f7 <dns_request+0x507>
+    327e:	2e 63 00             	arpl   %ax,%cs:(%eax)
+    3281:	65 72 72             	gs jb  32f6 <dns_request+0x506>
+    3284:	6f                   	outsl  %ds:(%esi),(%dx)
+    3285:	72 20                	jb     32a7 <dns_request+0x4b7>
+    3287:	64 65 63 6f 64       	fs arpl %bp,%gs:0x64(%edi)
+    328c:	69 6e 67 20 63 6e 61 	imul   $0x616e6320,0x67(%esi),%ebp
+    3293:	6d                   	insl   (%dx),%es:(%edi)
+    3294:	65 00 6e 61          	add    %ch,%gs:0x61(%esi)
+    3298:	6d                   	insl   (%dx),%es:(%edi)
+    3299:	65 20 3d 20 27 25 73 	and    %bh,%gs:0x73252720
+    32a0:	27                   	daa    
+    32a1:	20 63 6e             	and    %ah,0x6e(%ebx)
+    32a4:	61                   	popa   
+    32a5:	6d                   	insl   (%dx),%es:(%edi)
+    32a6:	65 20 3d 20 27 25 73 	and    %bh,%gs:0x73252720
+    32ad:	27                   	daa    
+    32ae:	00 27                	add    %ah,(%edi)
+    32b0:	25 73 27 20 6e       	and    $0x6e202773,%eax
+    32b5:	6f                   	outsl  %ds:(%esi),(%dx)
+    32b6:	74 20                	je     32d8 <dns_request+0x4e8>
+    32b8:	72 65                	jb     331f <dns_request+0x52f>
+    32ba:	73 6f                	jae    332b <dns_request+0x53b>
+    32bc:	6c                   	insb   (%dx),%es:(%edi)
+    32bd:	76 65                	jbe    3324 <dns_request+0x534>
+    32bf:	64 2c 20             	fs sub $0x20,%al
+    32c2:	66 61                	popaw  
+    32c4:	69 6c 00 90 28 72 63 	imul   $0x20637228,-0x70(%eax,%eax,1),%ebp
+    32cb:	20 
+    32cc:	3d 3d 20 45 49       	cmp    $0x4945203d,%eax
+    32d1:	4e                   	dec    %esi
+    32d2:	56                   	push   %esi
+    32d3:	41                   	inc    %ecx
+    32d4:	4c                   	dec    %esp
+    32d5:	29 20                	sub    %esp,(%eax)
+    32d7:	7c 7c                	jl     3355 <dns_request+0x565>
+    32d9:	20 28                	and    %ch,(%eax)
+    32db:	72 63                	jb     3340 <dns_request+0x550>
+    32dd:	20 3d 3d 20 45 4e    	and    %bh,0x4e45203d
+    32e3:	4f                   	dec    %edi
+    32e4:	4d                   	dec    %ebp
+    32e5:	45                   	inc    %ebp
+    32e6:	4d                   	dec    %ebp
+    32e7:	29 00                	sub    %eax,(%eax)
+    32e9:	4c                   	dec    %esp
+    32ea:	69 6e 6b 20 73 74 61 	imul   $0x61747320,0x6b(%esi),%ebp
+    32f1:	74 65                	je     3358 <dns_request+0x568>
+    32f3:	20 63 68             	and    %ah,0x68(%ebx)
+    32f6:	61                   	popa   
+    32f7:	6e                   	outsb  %ds:(%esi),(%dx)
+    32f8:	67 65 00 49 67       	add    %cl,%gs:0x67(%bx,%di)
+    32fd:	6e                   	outsb  %ds:(%esi),(%dx)
+    32fe:	6f                   	outsl  %ds:(%esi),(%dx)
+    32ff:	72 69                	jb     336a <dns_request+0x57a>
+    3301:	6e                   	outsb  %ds:(%esi),(%dx)
+    3302:	67 20 49 43          	and    %cl,0x43(%bx,%di)
+    3306:	4d                   	dec    %ebp
+    3307:	50                   	push   %eax
+    3308:	20 65 72             	and    %ah,0x72(%ebp)
+    330b:	72 6f                	jb     337c <dns_request+0x58c>
+    330d:	72 00                	jb     330f <dns_request+0x51f>
+    330f:	45                   	inc    %ebp
+    3310:	72 72                	jb     3384 <dns_request+0x594>
+    3312:	6f                   	outsl  %ds:(%esi),(%dx)
+    3313:	72 20                	jb     3335 <dns_request+0x545>
+    3315:	72 65                	jb     337c <dns_request+0x58c>
+    3317:	61                   	popa   
+    3318:	64 69 6e 67 20 6d 65 	imul   $0x73656d20,%fs:0x67(%esi),%ebp
+    331f:	73 
+    3320:	73 61                	jae    3383 <dns_request+0x593>
+    3322:	67 65 2e 00 45 72    	gs add %al,%cs:0x72(%di)
+    3328:	72 6f                	jb     3399 <dns_request+0x5a9>
+    332a:	72 20                	jb     334c <dns_request+0x55c>
+    332c:	64 65 63 6f 64       	fs arpl %bp,%gs:0x64(%edi)
+    3331:	69 6e 67 20 6d 65 73 	imul   $0x73656d20,0x67(%esi),%ebp
+    3338:	73 61                	jae    339b <dns_request+0x5ab>
+    333a:	67 65 2e 00 74 72    	gs add %dh,%cs:0x72(%si)
+    3340:	61                   	popa   
+    3341:	6e                   	outsb  %ds:(%esi),(%dx)
+    3342:	73 70                	jae    33b4 <dns_request+0x5c4>
+    3344:	6f                   	outsl  %ds:(%esi),(%dx)
+    3345:	72 74                	jb     33bb <dns_request+0x5cb>
+    3347:	2e 63 00             	arpl   %ax,%cs:(%eax)
+    334a:	72 65                	jb     33b1 <dns_request+0x5c1>
+    334c:	73 70                	jae    33be <dns_request+0x5ce>
+    334e:	20 21                	and    %ah,(%ecx)
+    3350:	3d 20 4e 55 4c       	cmp    $0x4c554e20,%eax
+    3355:	4c                   	dec    %esp
+    3356:	00 46 61             	add    %al,0x61(%esi)
+    3359:	69 6c 65 64 20 69 6e 	imul   $0x696e6920,0x64(%ebp,%eiz,2),%ebp
+    3360:	69 
+    3361:	74 69                	je     33cc <dns_request+0x5dc>
+    3363:	61                   	popa   
+    3364:	6c                   	insb   (%dx),%es:(%edi)
+    3365:	69 7a 69 6e 67 20 6e 	imul   $0x6e20676e,0x69(%edx),%edi
+    336c:	65 74 77             	gs je  33e6 <dns_request+0x5f6>
+    336f:	6f                   	outsl  %ds:(%esi),(%dx)
+    3370:	72 6b                	jb     33dd <dns_request+0x5ed>
+    3372:	2e 00 66 69          	add    %ah,%cs:0x69(%esi)
+    3376:	62 72 69             	bound  %esi,0x69(%edx)
+    3379:	6c                   	insb   (%dx),%es:(%edi)
+    337a:	5f                   	pop    %edi
+    337b:	6d                   	insl   (%dx),%es:(%edi)
+    337c:	75 74                	jne    33f2 <dns_request+0x602>
+    337e:	65 78 5f             	gs js  33e0 <dns_request+0x5f0>
+    3381:	69 73 5f 6c 6f 63 6b 	imul   $0x6b636f6c,0x5f(%ebx),%esi
+    3388:	65 64 28 26          	gs sub %ah,%fs:(%esi)
+    338c:	74 72                	je     3400 <dns_request+0x610>
+    338e:	65 71 5f             	gs jno 33f0 <dns_request+0x600>
+    3391:	6c                   	insb   (%dx),%es:(%edi)
+    3392:	6f                   	outsl  %ds:(%esi),(%dx)
+    3393:	63 6b 29             	arpl   %bp,0x29(%ebx)
+	...
+
+Disassembly of section .plt:
+
+00003530 <__main@plt-0x10>:
+    3530:	ff 35 50 51 00 00    	pushl  0x5150
+    3536:	ff 25 54 51 00 00    	jmp    *0x5154
+    353c:	00 00                	add    %al,(%eax)
+	...
+
+00003540 <__main@plt>:
+    3540:	ff 25 58 51 00 00    	jmp    *0x5158
+    3546:	68 00 00 00 00       	push   $0x0
+    354b:	e9 e0 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003550 <task_retval@plt>:
+    3550:	ff 25 5c 51 00 00    	jmp    *0x515c
+    3556:	68 08 00 00 00       	push   $0x8
+    355b:	e9 d0 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003560 <printf@plt>:
+    3560:	ff 25 60 51 00 00    	jmp    *0x5160
+    3566:	68 10 00 00 00       	push   $0x10
+    356b:	e9 c0 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003570 <udp_rmsg_read@plt>:
+    3570:	ff 25 64 51 00 00    	jmp    *0x5164
+    3576:	68 18 00 00 00       	push   $0x18
+    357b:	e9 b0 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003580 <log_init@plt>:
+    3580:	ff 25 68 51 00 00    	jmp    *0x5168
+    3586:	68 20 00 00 00       	push   $0x20
+    358b:	e9 a0 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003590 <loc_service_register@plt>:
+    3590:	ff 25 6c 51 00 00    	jmp    *0x516c
+    3596:	68 28 00 00 00       	push   $0x28
+    359b:	e9 90 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+000035a0 <fibril_mutex_is_locked@plt>:
+    35a0:	ff 25 70 51 00 00    	jmp    *0x5170
+    35a6:	68 30 00 00 00       	push   $0x30
+    35ab:	e9 80 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+000035b0 <str_decode@plt>:
+    35b0:	ff 25 74 51 00 00    	jmp    *0x5174
+    35b6:	68 38 00 00 00       	push   $0x38
+    35bb:	e9 70 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+000035c0 <inet_addr_set6@plt>:
+    35c0:	ff 25 78 51 00 00    	jmp    *0x5178
+    35c6:	68 40 00 00 00       	push   $0x40
+    35cb:	e9 60 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+000035d0 <async_data_read_finalize@plt>:
+    35d0:	ff 25 7c 51 00 00    	jmp    *0x517c
+    35d6:	68 48 00 00 00       	push   $0x48
+    35db:	e9 50 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+000035e0 <memcpy@plt>:
+    35e0:	ff 25 80 51 00 00    	jmp    *0x5180
+    35e6:	68 50 00 00 00       	push   $0x50
+    35eb:	e9 40 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+000035f0 <malloc@plt>:
+    35f0:	ff 25 84 51 00 00    	jmp    *0x5184
+    35f6:	68 58 00 00 00       	push   $0x58
+    35fb:	e9 30 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003600 <async_answer_0@plt>:
+    3600:	ff 25 88 51 00 00    	jmp    *0x5188
+    3606:	68 60 00 00 00       	push   $0x60
+    360b:	e9 20 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003610 <log_msg@plt>:
+    3610:	ff 25 8c 51 00 00    	jmp    *0x518c
+    3616:	68 68 00 00 00       	push   $0x68
+    361b:	e9 10 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003620 <assert_abort@plt>:
+    3620:	ff 25 90 51 00 00    	jmp    *0x5190
+    3626:	68 70 00 00 00       	push   $0x70
+    362b:	e9 00 ff ff ff       	jmp    3530 <dns_request+0x740>
+
+00003630 <calloc@plt>:
+    3630:	ff 25 94 51 00 00    	jmp    *0x5194
+    3636:	68 78 00 00 00       	push   $0x78
+    363b:	e9 f0 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003640 <udp_assoc_destroy@plt>:
+    3640:	ff 25 98 51 00 00    	jmp    *0x5198
+    3646:	68 80 00 00 00       	push   $0x80
+    364b:	e9 e0 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003650 <fibril_condvar_wait_timeout@plt>:
+    3650:	ff 25 9c 51 00 00    	jmp    *0x519c
+    3656:	68 88 00 00 00       	push   $0x88
+    365b:	e9 d0 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003660 <fibril_condvar_initialize@plt>:
+    3660:	ff 25 a0 51 00 00    	jmp    *0x51a0
+    3666:	68 90 00 00 00       	push   $0x90
+    366b:	e9 c0 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003670 <udp_assoc_create@plt>:
+    3670:	ff 25 a4 51 00 00    	jmp    *0x51a4
+    3676:	68 98 00 00 00       	push   $0x98
+    367b:	e9 b0 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003680 <inet_ep2_init@plt>:
+    3680:	ff 25 a8 51 00 00    	jmp    *0x51a8
+    3686:	68 a0 00 00 00       	push   $0xa0
+    368b:	e9 a0 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003690 <fibril_condvar_broadcast@plt>:
+    3690:	ff 25 ac 51 00 00    	jmp    *0x51ac
+    3696:	68 a8 00 00 00       	push   $0xa8
+    369b:	e9 90 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+000036a0 <inet_addr_set@plt>:
+    36a0:	ff 25 b0 51 00 00    	jmp    *0x51b0
+    36a6:	68 b0 00 00 00       	push   $0xb0
+    36ab:	e9 80 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+000036b0 <fibril_mutex_unlock@plt>:
+    36b0:	ff 25 b4 51 00 00    	jmp    *0x51b4
+    36b6:	68 b8 00 00 00       	push   $0xb8
+    36bb:	e9 70 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+000036c0 <str_dup@plt>:
+    36c0:	ff 25 b8 51 00 00    	jmp    *0x51b8
+    36c6:	68 c0 00 00 00       	push   $0xc0
+    36cb:	e9 60 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+000036d0 <fibril_mutex_initialize@plt>:
+    36d0:	ff 25 bc 51 00 00    	jmp    *0x51bc
+    36d6:	68 c8 00 00 00       	push   $0xc8
+    36db:	e9 50 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+000036e0 <udp_rmsg_size@plt>:
+    36e0:	ff 25 c0 51 00 00    	jmp    *0x51c0
+    36e6:	68 d0 00 00 00       	push   $0xd0
+    36eb:	e9 40 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+000036f0 <realloc@plt>:
+    36f0:	ff 25 c4 51 00 00    	jmp    *0x51c4
+    36f6:	68 d8 00 00 00       	push   $0xd8
+    36fb:	e9 30 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003700 <str_cmp@plt>:
+    3700:	ff 25 c8 51 00 00    	jmp    *0x51c8
+    3706:	68 e0 00 00 00       	push   $0xe0
+    370b:	e9 20 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003710 <async_data_read_receive@plt>:
+    3710:	ff 25 cc 51 00 00    	jmp    *0x51cc
+    3716:	68 e8 00 00 00       	push   $0xe8
+    371b:	e9 10 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003720 <udp_destroy@plt>:
+    3720:	ff 25 d0 51 00 00    	jmp    *0x51d0
+    3726:	68 f0 00 00 00       	push   $0xf0
+    372b:	e9 00 fe ff ff       	jmp    3530 <dns_request+0x740>
+
+00003730 <str_cpy@plt>:
+    3730:	ff 25 d4 51 00 00    	jmp    *0x51d4
+    3736:	68 f8 00 00 00       	push   $0xf8
+    373b:	e9 f0 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003740 <loc_server_register@plt>:
+    3740:	ff 25 d8 51 00 00    	jmp    *0x51d8
+    3746:	68 00 01 00 00       	push   $0x100
+    374b:	e9 e0 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003750 <async_get_call_timeout@plt>:
+    3750:	ff 25 dc 51 00 00    	jmp    *0x51dc
+    3756:	68 08 01 00 00       	push   $0x108
+    375b:	e9 d0 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003760 <inet_ep_init@plt>:
+    3760:	ff 25 e0 51 00 00    	jmp    *0x51e0
+    3766:	68 10 01 00 00       	push   $0x110
+    376b:	e9 c0 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003770 <str_size@plt>:
+    3770:	ff 25 e4 51 00 00    	jmp    *0x51e4
+    3776:	68 18 01 00 00       	push   $0x118
+    377b:	e9 b0 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003780 <list_count@plt>:
+    3780:	ff 25 e8 51 00 00    	jmp    *0x51e8
+    3786:	68 20 01 00 00       	push   $0x120
+    378b:	e9 a0 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003790 <udp_assoc_send_msg@plt>:
+    3790:	ff 25 ec 51 00 00    	jmp    *0x51ec
+    3796:	68 28 01 00 00       	push   $0x128
+    379b:	e9 90 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+000037a0 <async_data_write_finalize@plt>:
+    37a0:	ff 25 f0 51 00 00    	jmp    *0x51f0
+    37a6:	68 30 01 00 00       	push   $0x130
+    37ab:	e9 80 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+000037b0 <async_data_write_accept@plt>:
+    37b0:	ff 25 f4 51 00 00    	jmp    *0x51f4
+    37b6:	68 38 01 00 00       	push   $0x138
+    37bb:	e9 70 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+000037c0 <addr128_t_be2host@plt>:
+    37c0:	ff 25 f8 51 00 00    	jmp    *0x51f8
+    37c6:	68 40 01 00 00       	push   $0x140
+    37cb:	e9 60 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+000037d0 <fibril_switch@plt>:
+    37d0:	ff 25 fc 51 00 00    	jmp    *0x51fc
+    37d6:	68 48 01 00 00       	push   $0x148
+    37db:	e9 50 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+000037e0 <__syscall_fast@plt>:
+    37e0:	ff 25 00 52 00 00    	jmp    *0x5200
+    37e6:	68 50 01 00 00       	push   $0x150
+    37eb:	e9 40 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+000037f0 <udp_create@plt>:
+    37f0:	ff 25 04 52 00 00    	jmp    *0x5204
+    37f6:	68 58 01 00 00       	push   $0x158
+    37fb:	e9 30 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003800 <async_set_fallback_port_handler@plt>:
+    3800:	ff 25 08 52 00 00    	jmp    *0x5208
+    3806:	68 60 01 00 00       	push   $0x160
+    380b:	e9 20 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003810 <async_data_write_receive@plt>:
+    3810:	ff 25 0c 52 00 00    	jmp    *0x520c
+    3816:	68 68 01 00 00       	push   $0x168
+    381b:	e9 10 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003820 <free@plt>:
+    3820:	ff 25 10 52 00 00    	jmp    *0x5210
+    3826:	68 70 01 00 00       	push   $0x170
+    382b:	e9 00 fd ff ff       	jmp    3530 <dns_request+0x740>
+
+00003830 <fibril_mutex_lock@plt>:
+    3830:	ff 25 14 52 00 00    	jmp    *0x5214
+    3836:	68 78 01 00 00       	push   $0x178
+    383b:	e9 f0 fc ff ff       	jmp    3530 <dns_request+0x740>
+
+00003840 <udp_rmsg_remote_ep@plt>:
+    3840:	ff 25 18 52 00 00    	jmp    *0x5218
+    3846:	68 80 01 00 00       	push   $0x180
+    384b:	e9 e0 fc ff ff       	jmp    3530 <dns_request+0x740>

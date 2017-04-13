@@ -1,0 +1,588 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/bithenge/libbithenge.a(print.o)
+                              test.o (bithenge_print_node)
+../../lib/bithenge/libbithenge.a(script.o)
+                              test.o (bithenge_parse_script)
+../../lib/bithenge/libbithenge.a(sequence.o)
+                              ../../lib/bithenge/libbithenge.a(script.o) (bithenge_new_struct)
+../../lib/bithenge/libbithenge.a(source.o)
+                              test.o (bithenge_node_from_source)
+../../lib/bithenge/libbithenge.a(transform.o)
+                              ../../lib/bithenge/libbithenge.a(sequence.o) (bithenge_init_transform)
+../../lib/bithenge/libbithenge.a(tree.o)
+                              test.o (bithenge_node_dec_ref)
+../../lib/bithenge/libbithenge.a(block.o)
+                              ../../lib/bithenge/libbithenge.a(source.o) (bithenge_new_block_blob)
+../../lib/bithenge/libbithenge.a(blob.o)
+                              ../../lib/bithenge/libbithenge.a(transform.o) (bithenge_init_random_access_blob)
+../../lib/bithenge/libbithenge.a(compound.o)
+                              ../../lib/bithenge/libbithenge.a(script.o) (bithenge_new_composed_transform)
+../../lib/bithenge/libbithenge.a(expression.o)
+                              ../../lib/bithenge/libbithenge.a(script.o) (bithenge_binary_expression)
+../../lib/bithenge/libbithenge.a(file.o)
+                              ../../lib/bithenge/libbithenge.a(source.o) (bithenge_new_file_blob)
+../../lib/block/libblock.a(block.o)
+                              ../../lib/bithenge/libbithenge.a(block.o) (block_init)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0x8a0 test.o
+ .debug_abbrev  0x0000000000000000      0x1c6 test.o
+ .debug_loc     0x0000000000000000      0x1db test.o
+ .debug_aranges
+                0x0000000000000000       0x28 test.o
+ .debug_ranges  0x0000000000000000       0x68 test.o
+ .debug_line    0x0000000000000000      0x1d4 test.o
+ .debug_str     0x0000000000000000      0x75f test.o
+ .comment       0x0000000000000000       0x12 test.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 test.o
+ .eh_frame      0x0000000000000000       0x7c test.o
+ .debug_info    0x0000000000000000     0x138e ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_abbrev  0x0000000000000000      0x32d ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_loc     0x0000000000000000     0x1234 ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_ranges  0x0000000000000000      0x3d8 ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_line    0x0000000000000000      0x431 ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_str     0x0000000000000000      0x62d ../../lib/bithenge/libbithenge.a(print.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(print.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(print.o)
+ .eh_frame      0x0000000000000000      0x1c0 ../../lib/bithenge/libbithenge.a(print.o)
+ .debug_info    0x0000000000000000     0x5e0e ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_abbrev  0x0000000000000000      0x45a ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_loc     0x0000000000000000     0x62f3 ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_ranges  0x0000000000000000     0x2198 ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_line    0x0000000000000000     0x121b ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_str     0x0000000000000000     0x11e0 ../../lib/bithenge/libbithenge.a(script.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(script.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(script.o)
+ .eh_frame      0x0000000000000000      0x2dc ../../lib/bithenge/libbithenge.a(script.o)
+ .debug_info    0x0000000000000000     0x458e ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_abbrev  0x0000000000000000      0x3fe ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_loc     0x0000000000000000     0x3c12 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_aranges
+                0x0000000000000000       0x30 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_ranges  0x0000000000000000     0x1240 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_line    0x0000000000000000      0xf13 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_str     0x0000000000000000     0x10bc ../../lib/bithenge/libbithenge.a(sequence.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .eh_frame      0x0000000000000000      0x6a4 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .debug_info    0x0000000000000000      0x7e4 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_abbrev  0x0000000000000000      0x1f9 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_loc     0x0000000000000000      0x247 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_ranges  0x0000000000000000       0xf8 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_line    0x0000000000000000      0x227 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_str     0x0000000000000000      0x8bf ../../lib/bithenge/libbithenge.a(source.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(source.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(source.o)
+ .eh_frame      0x0000000000000000       0x90 ../../lib/bithenge/libbithenge.a(source.o)
+ .debug_info    0x0000000000000000     0x3bf1 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_abbrev  0x0000000000000000      0x536 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_loc     0x0000000000000000     0x2fd4 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_ranges  0x0000000000000000      0x948 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_line    0x0000000000000000      0xc00 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_str     0x0000000000000000      0xfff ../../lib/bithenge/libbithenge.a(transform.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(transform.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(transform.o)
+ .eh_frame      0x0000000000000000      0x8f4 ../../lib/bithenge/libbithenge.a(transform.o)
+ .debug_info    0x0000000000000000      0xfd7 ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_abbrev  0x0000000000000000      0x41a ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_loc     0x0000000000000000      0x85a ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_ranges  0x0000000000000000      0x328 ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_line    0x0000000000000000      0x3fa ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_str     0x0000000000000000      0x688 ../../lib/bithenge/libbithenge.a(tree.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(tree.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(tree.o)
+ .eh_frame      0x0000000000000000      0x2d4 ../../lib/bithenge/libbithenge.a(tree.o)
+ .debug_info    0x0000000000000000      0x8ad ../../lib/bithenge/libbithenge.a(block.o)
+ .debug_abbrev  0x0000000000000000      0x206 ../../lib/bithenge/libbithenge.a(block.o)
+ .debug_loc     0x0000000000000000      0x15f ../../lib/bithenge/libbithenge.a(block.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/bithenge/libbithenge.a(block.o)
+ .debug_line    0x0000000000000000      0x23e ../../lib/bithenge/libbithenge.a(block.o)
+ .debug_str     0x0000000000000000      0x9ad ../../lib/bithenge/libbithenge.a(block.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(block.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(block.o)
+ .eh_frame      0x0000000000000000       0xf8 ../../lib/bithenge/libbithenge.a(block.o)
+ .debug_info    0x0000000000000000     0x1638 ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_abbrev  0x0000000000000000      0x4a7 ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_loc     0x0000000000000000     0x1056 ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_ranges  0x0000000000000000      0x2f0 ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_line    0x0000000000000000      0x50f ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_str     0x0000000000000000      0x720 ../../lib/bithenge/libbithenge.a(blob.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(blob.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(blob.o)
+ .eh_frame      0x0000000000000000      0x3b0 ../../lib/bithenge/libbithenge.a(blob.o)
+ .debug_info    0x0000000000000000     0x1329 ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_abbrev  0x0000000000000000      0x42c ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_loc     0x0000000000000000      0x816 ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_ranges  0x0000000000000000      0x1d8 ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_line    0x0000000000000000      0x367 ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_str     0x0000000000000000      0x9ea ../../lib/bithenge/libbithenge.a(compound.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(compound.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(compound.o)
+ .eh_frame      0x0000000000000000      0x250 ../../lib/bithenge/libbithenge.a(compound.o)
+ .debug_info    0x0000000000000000     0x3270 ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_abbrev  0x0000000000000000      0x535 ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_loc     0x0000000000000000     0x1ec1 ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_ranges  0x0000000000000000      0x620 ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_line    0x0000000000000000      0xa4c ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_str     0x0000000000000000     0x143a ../../lib/bithenge/libbithenge.a(expression.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(expression.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(expression.o)
+ .eh_frame      0x0000000000000000      0x794 ../../lib/bithenge/libbithenge.a(expression.o)
+ .debug_info    0x0000000000000000      0xbc1 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_abbrev  0x0000000000000000      0x276 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_loc     0x0000000000000000      0x568 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_ranges  0x0000000000000000       0x88 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_line    0x0000000000000000      0x282 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_str     0x0000000000000000      0x9a3 ../../lib/bithenge/libbithenge.a(file.o)
+ .comment       0x0000000000000000       0x12 ../../lib/bithenge/libbithenge.a(file.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/bithenge/libbithenge.a(file.o)
+ .eh_frame      0x0000000000000000      0x164 ../../lib/bithenge/libbithenge.a(file.o)
+ .debug_info    0x0000000000000000     0x2a1c ../../lib/block/libblock.a(block.o)
+ .debug_abbrev  0x0000000000000000      0x46d ../../lib/block/libblock.a(block.o)
+ .debug_loc     0x0000000000000000     0x1930 ../../lib/block/libblock.a(block.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../lib/block/libblock.a(block.o)
+ .debug_ranges  0x0000000000000000      0x5c8 ../../lib/block/libblock.a(block.o)
+ .debug_line    0x0000000000000000      0x8ef ../../lib/block/libblock.a(block.o)
+ .debug_str     0x0000000000000000     0x11f7 ../../lib/block/libblock.a(block.o)
+ .comment       0x0000000000000000       0x12 ../../lib/block/libblock.a(block.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/block/libblock.a(block.o)
+ .eh_frame      0x0000000000000000      0x444 ../../lib/block/libblock.a(block.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130    0x10a50
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130       0x52 test.o
+ *fill*         0x0000000000001182        0xe 
+ .text.startup  0x0000000000001190      0x237 test.o
+                0x0000000000001190                main
+ *fill*         0x00000000000013c7        0x9 
+ .text          0x00000000000013d0      0xae2 ../../lib/bithenge/libbithenge.a(print.o)
+                0x0000000000001970                bithenge_print_node
+                0x0000000000001c10                bithenge_print_node_to_string
+ *fill*         0x0000000000001eb2        0xe 
+ .text          0x0000000000001ec0     0x4138 ../../lib/bithenge/libbithenge.a(script.o)
+                0x0000000000005890                bithenge_parse_script
+ *fill*         0x0000000000005ff8        0x8 
+ .text          0x0000000000006000     0x2a82 ../../lib/bithenge/libbithenge.a(sequence.o)
+                0x00000000000086f0                bithenge_new_struct
+                0x0000000000008810                bithenge_repeat_transform
+                0x0000000000008950                bithenge_do_while_transform
+ .text.unlikely
+                0x0000000000008a82       0x2e ../../lib/bithenge/libbithenge.a(sequence.o)
+ .text          0x0000000000008ab0      0x220 ../../lib/bithenge/libbithenge.a(source.o)
+                0x0000000000008ab0                bithenge_node_from_source
+ .text          0x0000000000008cd0     0x247c ../../lib/bithenge/libbithenge.a(transform.o)
+                0x000000000000a160                bithenge_init_transform
+                0x000000000000a1d0                bithenge_transform_prefix_apply
+                0x000000000000a4f0                bithenge_transform_apply
+                0x000000000000aad0                bithenge_transform_prefix_length
+                0x000000000000ab70                bithenge_scope_new
+                0x000000000000abe0                bithenge_scope_dec_ref
+                0x000000000000ad60                bithenge_scope_outer
+                0x000000000000ad70                bithenge_scope_get_error
+                0x000000000000ad80                bithenge_scope_error
+                0x000000000000aeb0                bithenge_scope_get_current_node
+                0x000000000000aed0                bithenge_scope_set_current_node
+                0x000000000000af00                bithenge_scope_in_node
+                0x000000000000af20                bithenge_scope_set_in_node
+                0x000000000000af50                bithenge_scope_set_barrier
+                0x000000000000af60                bithenge_scope_is_barrier
+                0x000000000000af70                bithenge_scope_alloc_params
+                0x000000000000afc0                bithenge_scope_set_param
+                0x000000000000b010                bithenge_scope_get_param
+                0x000000000000b090                bithenge_barrier_transform_set_subtransform
+                0x000000000000b100                bithenge_new_barrier_transform
+ .text.unlikely
+                0x000000000000b14c       0x17 ../../lib/bithenge/libbithenge.a(transform.o)
+ *fill*         0x000000000000b163        0xd 
+ .text          0x000000000000b170      0xa52 ../../lib/bithenge/libbithenge.a(tree.o)
+                0x000000000000b620                bithenge_node_dec_ref
+                0x000000000000b6d0                bithenge_node_get
+                0x000000000000b8b0                bithenge_init_internal_node
+                0x000000000000b8d0                bithenge_new_empty_internal_node
+                0x000000000000b8f0                bithenge_new_simple_internal_node
+                0x000000000000b9f0                bithenge_new_boolean_node
+                0x000000000000ba30                bithenge_new_integer_node
+                0x000000000000baa0                bithenge_new_string_node
+                0x000000000000bb20                bithenge_node_equal
+ .text.unlikely
+                0x000000000000bbc2       0x1a ../../lib/bithenge/libbithenge.a(tree.o)
+ *fill*         0x000000000000bbdc        0x4 
+ .text          0x000000000000bbe0      0x21f ../../lib/bithenge/libbithenge.a(block.o)
+                0x000000000000bce0                bithenge_new_block_blob
+ *fill*         0x000000000000bdff        0x1 
+ .text          0x000000000000be00      0xe8b ../../lib/bithenge/libbithenge.a(blob.o)
+                0x000000000000c4a0                bithenge_init_random_access_blob
+                0x000000000000c550                bithenge_init_sequential_blob
+                0x000000000000c610                bithenge_new_blob_from_buffer
+                0x000000000000c6b0                bithenge_new_blob_from_data
+                0x000000000000c750                bithenge_new_offset_blob
+                0x000000000000c910                bithenge_new_subblob
+                0x000000000000caa0                bithenge_blob_equal
+ .text.unlikely
+                0x000000000000cc8b       0x1a ../../lib/bithenge/libbithenge.a(blob.o)
+ *fill*         0x000000000000cca5        0xb 
+ .text          0x000000000000ccb0      0x79b ../../lib/bithenge/libbithenge.a(compound.o)
+                0x000000000000d0f0                bithenge_new_composed_transform
+                0x000000000000d210                bithenge_if_transform
+                0x000000000000d390                bithenge_partial_transform
+ *fill*         0x000000000000d44b        0x5 
+ .text          0x000000000000d450     0x1fda ../../lib/bithenge/libbithenge.a(expression.o)
+                0x000000000000e600                bithenge_init_expression
+                0x000000000000e660                bithenge_binary_expression
+                0x000000000000e740                bithenge_in_node_expression
+                0x000000000000e760                bithenge_current_node_expression
+                0x000000000000e780                bithenge_param_expression
+                0x000000000000e7c0                bithenge_const_expression
+                0x000000000000e820                bithenge_scope_member_expression
+                0x000000000000e880                bithenge_subblob_expression
+                0x000000000000e9a0                bithenge_param_wrapper
+                0x000000000000eb10                bithenge_expression_transform
+                0x000000000000ebd0                bithenge_inputless_transform
+                0x000000000000ec90                bithenge_concat_blob
+                0x000000000000edb0                bithenge_concat_blob_lazy
+ .text.unlikely
+                0x000000000000f42a       0x17 ../../lib/bithenge/libbithenge.a(expression.o)
+ *fill*         0x000000000000f441        0xf 
+ .text          0x000000000000f450      0x3f6 ../../lib/bithenge/libbithenge.a(file.o)
+                0x000000000000f5a0                bithenge_new_file_blob
+                0x000000000000f6c0                bithenge_new_file_blob_from_fd
+                0x000000000000f780                bithenge_new_file_blob_from_file
+ *fill*         0x000000000000f846        0xa 
+ .text          0x000000000000f850     0x189f ../../lib/block/libblock.a(block.o)
+                0x000000000000f890                block_init
+                0x000000000000fa60                block_bb_read
+                0x000000000000fbb0                block_bb_get
+                0x000000000000fc30                block_cache_init
+                0x000000000000fd70                block_cache_fini
+                0x000000000000ff20                block_fini
+                0x0000000000010040                block_put
+                0x0000000000010340                block_get
+                0x00000000000108c0                block_seqread
+                0x0000000000010a80                block_read_direct
+                0x0000000000010b60                block_write_direct
+                0x0000000000010c40                block_sync_cache
+                0x0000000000010cf0                block_get_bsize
+                0x0000000000010d80                block_get_nblocks
+                0x0000000000010e10                block_read_bytes_direct
+                0x0000000000011040                block_read_toc
+ .text.unlikely
+                0x00000000000110ef       0x1a ../../lib/block/libblock.a(block.o)
+ *(.rodata .rodata.*)
+ *fill*         0x0000000000011109        0x3 
+ .rodata.str1.4
+                0x000000000001110c       0x55 test.o
+ .rodata.str1.1
+                0x0000000000011161       0xa1 test.o
+                                         0xa3 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000011202       0x80 ../../lib/bithenge/libbithenge.a(print.o)
+                                         0x8b (size before relaxing)
+ *fill*         0x0000000000011282        0x2 
+ .rodata.str1.4
+                0x0000000000011284       0x49 ../../lib/bithenge/libbithenge.a(print.o)
+ *fill*         0x00000000000112cd        0x3 
+ .rodata        0x00000000000112d0       0x48 ../../lib/bithenge/libbithenge.a(print.o)
+ .rodata.str1.1
+                0x0000000000011318      0x113 ../../lib/bithenge/libbithenge.a(script.o)
+                                        0x14c (size before relaxing)
+ *fill*         0x000000000001142b        0x1 
+ .rodata.str1.4
+                0x000000000001142c       0x6c ../../lib/bithenge/libbithenge.a(script.o)
+ .rodata.str1.1
+                0x0000000000011498        0x5 ../../lib/bithenge/libbithenge.a(sequence.o)
+                                         0xa2 (size before relaxing)
+ .rodata.str1.4
+                0x000000000001149d       0x49 ../../lib/bithenge/libbithenge.a(sequence.o)
+ *fill*         0x000000000001149d        0x3 
+ .rodata        0x00000000000114a0       0x50 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .rodata.str1.1
+                0x00000000000114f0       0x12 ../../lib/bithenge/libbithenge.a(source.o)
+ .rodata.str1.1
+                0x0000000000011502       0xc7 ../../lib/bithenge/libbithenge.a(transform.o)
+                                        0x15f (size before relaxing)
+ *fill*         0x00000000000115c9        0x3 
+ .rodata.str1.4
+                0x00000000000115cc       0x6e ../../lib/bithenge/libbithenge.a(transform.o)
+                                         0x92 (size before relaxing)
+ *fill*         0x000000000001163a        0x2 
+ .rodata        0x000000000001163c      0x110 ../../lib/bithenge/libbithenge.a(transform.o)
+ .rodata.str1.1
+                0x000000000001174c       0x1e ../../lib/bithenge/libbithenge.a(tree.o)
+                                         0x6d (size before relaxing)
+ .rodata.str1.4
+                0x000000000001176a       0x49 ../../lib/bithenge/libbithenge.a(tree.o)
+ *fill*         0x000000000001176a        0x2 
+ .rodata        0x000000000001176c       0x3c ../../lib/bithenge/libbithenge.a(tree.o)
+ .rodata.str1.1
+                0x00000000000117a8       0x14 ../../lib/bithenge/libbithenge.a(block.o)
+                                         0x18 (size before relaxing)
+ .rodata        0x00000000000117bc       0x10 ../../lib/bithenge/libbithenge.a(block.o)
+ .rodata.str1.1
+                0x00000000000117cc       0x7a ../../lib/bithenge/libbithenge.a(blob.o)
+                                         0xdf (size before relaxing)
+ *fill*         0x0000000000011846        0x2 
+ .rodata        0x0000000000011848       0x30 ../../lib/bithenge/libbithenge.a(blob.o)
+ .rodata.str1.1
+                0x0000000000011878       0x76 ../../lib/bithenge/libbithenge.a(compound.o)
+ .rodata        0x0000000000011878       0x30 ../../lib/bithenge/libbithenge.a(compound.o)
+ .rodata.str1.1
+                0x00000000000118a8       0x62 ../../lib/bithenge/libbithenge.a(expression.o)
+                                        0x129 (size before relaxing)
+ *fill*         0x000000000001190a        0x2 
+ .rodata.str1.4
+                0x000000000001190c       0x26 ../../lib/bithenge/libbithenge.a(expression.o)
+                                         0x49 (size before relaxing)
+ *fill*         0x0000000000011932        0x2 
+ .rodata        0x0000000000011934       0xf8 ../../lib/bithenge/libbithenge.a(expression.o)
+ .rodata.str1.1
+                0x0000000000011a2c       0x14 ../../lib/bithenge/libbithenge.a(file.o)
+                                         0x18 (size before relaxing)
+ .rodata        0x0000000000011a40       0x10 ../../lib/bithenge/libbithenge.a(file.o)
+ .rodata.str1.1
+                0x0000000000011a50       0x47 ../../lib/block/libblock.a(block.o)
+                                         0x4f (size before relaxing)
+ *fill*         0x0000000000011a97        0x1 
+ .rodata.str1.4
+                0x0000000000011a98       0xe8 ../../lib/block/libblock.a(block.o)
+                                         0xe7 (size before relaxing)
+
+.rel.plt        0x0000000000011b80      0x1d0
+ *(.rel.plt)
+ .rel.plt       0x0000000000011b80      0x1d0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000011d50       0x10
+ *(.rel.*)
+ .rel.got       0x0000000000011d50        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000011d50       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000011d60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000011d60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000011d60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.unlikely
+                0x0000000000011d60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000011d60      0x3b0
+ *(.plt)
+ .plt           0x0000000000011d60      0x3b0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000011d70                __main
+                0x0000000000011d80                __divdi3
+                0x0000000000011d90                loc_service_connect
+                0x0000000000011da0                printf
+                0x0000000000011db0                async_hangup
+                0x0000000000011dc0                memmove
+                0x0000000000011dd0                hash_table_create
+                0x0000000000011de0                hash_table_insert
+                0x0000000000011df0                __errno
+                0x0000000000011e00                str_decode
+                0x0000000000011e10                bd_write_blocks
+                0x0000000000011e20                bd_get_num_blocks
+                0x0000000000011e30                str_ndup
+                0x0000000000011e40                bd_close
+                0x0000000000011e50                memcpy
+                0x0000000000011e60                malloc
+                0x0000000000011e70                bd_open
+                0x0000000000011e80                vsnprintf
+                0x0000000000011e90                loc_service_get_id
+                0x0000000000011ea0                stacktrace_print
+                0x0000000000011eb0                __umoddi3
+                0x0000000000011ec0                lseek
+                0x0000000000011ed0                __udivdi3
+                0x0000000000011ee0                bd_read_blocks
+                0x0000000000011ef0                str_chr
+                0x0000000000011f00                fibril_mutex_trylock
+                0x0000000000011f10                assert_abort
+                0x0000000000011f20                fstat
+                0x0000000000011f30                fprintf
+                0x0000000000011f40                vprintf
+                0x0000000000011f50                bd_read_toc
+                0x0000000000011f60                fibril_mutex_unlock
+                0x0000000000011f70                fibril_mutex_initialize
+                0x0000000000011f80                ferror
+                0x0000000000011f90                read
+                0x0000000000011fa0                realloc
+                0x0000000000011fb0                memcmp
+                0x0000000000011fc0                str_cmp
+                0x0000000000011fd0                fread
+                0x0000000000011fe0                hash_table_remove_item
+                0x0000000000011ff0                fopen
+                0x0000000000012000                fclose
+                0x0000000000012010                bd_get_block_size
+                0x0000000000012020                str_uint64_t
+                0x0000000000012030                str_length
+                0x0000000000012040                str_lcmp
+                0x0000000000012050                bd_sync_cache
+                0x0000000000012060                str_error
+                0x0000000000012070                hash_table_find
+                0x0000000000012080                fibril_rwlock_initialize
+                0x0000000000012090                fileno
+                0x00000000000120a0                __moddi3
+                0x00000000000120b0                __syscall_fast
+                0x00000000000120c0                open
+                0x00000000000120d0                hash_table_destroy
+                0x00000000000120e0                close
+                0x00000000000120f0                free
+                0x0000000000012100                fibril_mutex_lock
+
+.dynsym         0x0000000000012110      0x3f0
+ *(.dynsym)
+ .dynsym        0x0000000000012110      0x3f0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000012500      0x2cc
+ *(.dynstr)
+ .dynstr        0x0000000000012500      0x2cc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000127cc      0x198
+ *(.hash)
+ .hash          0x00000000000127cc      0x198 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000012964       0x13
+ *(.interp)
+ .interp        0x0000000000012964       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000013977                . = (. + 0x1000)
+
+.dynamic        0x0000000000013978       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000013978       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000013978                _DYNAMIC
+
+.data           0x0000000000013a20      0x20c
+ *(.data)
+ .data          0x0000000000013a20        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000013a20        0x0 test.o
+ .data          0x0000000000013a20        0x0 ../../lib/bithenge/libbithenge.a(print.o)
+ .data          0x0000000000013a20        0x0 ../../lib/bithenge/libbithenge.a(script.o)
+ .data          0x0000000000013a20       0x10 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .data          0x0000000000013a30        0x0 ../../lib/bithenge/libbithenge.a(source.o)
+ *fill*         0x0000000000013a30       0x10 
+ .data          0x0000000000013a40      0x174 ../../lib/bithenge/libbithenge.a(transform.o)
+                0x0000000000013a40                bithenge_primitive_transforms
+                0x0000000000013ae8                bithenge_zero_terminated_transform
+                0x0000000000013af4                bithenge_uint_le_transform
+                0x0000000000013b00                bithenge_uint_be_transform
+                0x0000000000013b0c                bithenge_uint64be_transform
+                0x0000000000013b18                bithenge_uint64le_transform
+                0x0000000000013b24                bithenge_uint32be_transform
+                0x0000000000013b30                bithenge_uint32le_transform
+                0x0000000000013b3c                bithenge_uint16be_transform
+                0x0000000000013b48                bithenge_uint16le_transform
+                0x0000000000013b54                bithenge_uint8_transform
+                0x0000000000013b60                bithenge_nonzero_boolean_transform
+                0x0000000000013b6c                bithenge_known_length_transform
+                0x0000000000013b78                bithenge_invalid_transform
+                0x0000000000013b84                bithenge_bits_le_transform
+                0x0000000000013b90                bithenge_bits_be_transform
+                0x0000000000013b9c                bithenge_bit_transform
+                0x0000000000013ba8                bithenge_ascii_transform
+ .data          0x0000000000013bb4       0x3c ../../lib/bithenge/libbithenge.a(tree.o)
+ .data          0x0000000000013bf0        0x0 ../../lib/bithenge/libbithenge.a(block.o)
+ .data          0x0000000000013bf0        0x0 ../../lib/bithenge/libbithenge.a(blob.o)
+ .data          0x0000000000013bf0        0x0 ../../lib/bithenge/libbithenge.a(compound.o)
+ .data          0x0000000000013bf0       0x10 ../../lib/bithenge/libbithenge.a(expression.o)
+ .data          0x0000000000013c00        0x0 ../../lib/bithenge/libbithenge.a(file.o)
+ .data          0x0000000000013c00       0x2c ../../lib/block/libblock.a(block.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000013c2c        0x0
+ *(.got)
+ .got           0x0000000000013c2c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000013c2c       0xf4
+ *(.got.plt)
+ .got.plt       0x0000000000013c2c       0xf4 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000013c2c                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000013d20        0xc
+ *(.dynbss)
+ .dynbss        0x0000000000013d20        0xc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000013d20                __syscall_fast_func
+                0x0000000000013d28                stderr
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000013d2c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000013d2c        0x0 test.o
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(print.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(script.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(sequence.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(source.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(transform.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(tree.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(block.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(blob.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(compound.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(expression.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/bithenge/libbithenge.a(file.o)
+ .bss           0x0000000000013d2c        0x0 ../../lib/block/libblock.a(block.o)
+
+/DISCARD/
+ *(*)
+LOAD test.o
+LOAD ../../lib/bithenge/libbithenge.a
+LOAD ../../lib/block/libblock.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(bithenge elf32-i386)

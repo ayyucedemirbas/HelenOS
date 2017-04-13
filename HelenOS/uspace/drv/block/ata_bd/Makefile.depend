@@ -1,0 +1,102 @@
+# DO NOT DELETE
+
+ata_bd.o: ../../../lib/c/include/ddi.h ../../../lib/c/include/stdbool.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+ata_bd.o: ../../../../abi/include/abi/bool.h
+ata_bd.o: ../../../lib/c/include/sys/types.h
+ata_bd.o: ../../../lib/c/include/sys/time.h
+ata_bd.o: ../../../../abi/include/abi/ddi/irq.h
+ata_bd.o: ../../../lib/c/include/device/hw_res.h
+ata_bd.o: ../../../lib/c/include/ipc/dev_iface.h
+ata_bd.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/unistd.h
+ata_bd.o: ../../../lib/c/include/time.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+ata_bd.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+ata_bd.o: ../../../../abi/include/abi/ipc/ipc.h
+ata_bd.o: ../../../lib/c/include/atomic.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+ata_bd.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+ata_bd.o: ../../../../abi/include/abi/proc/task.h
+ata_bd.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+ata_bd.o: ../../../../abi/include/abi/syscall.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+ata_bd.o: ../../../lib/c/include/fibril.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ata_bd.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+ata_bd.o: ../../../lib/c/include/stddef.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+ata_bd.o: ../../../../abi/include/abi/ipc/event.h
+ata_bd.o: ../../../../abi/include/abi/ipc/interfaces.h
+ata_bd.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+ata_bd.o: ../../../lib/c/include/device/hw_res_parsed.h
+ata_bd.o: ../../../lib/c/include/device/pio_window.h
+ata_bd.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+ata_bd.o: ../../../lib/c/include/cc.h ../../../lib/c/include/task.h
+ata_bd.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/types/task.h
+ata_bd.o: ../../../lib/drv/include/ddf/log.h ../../../lib/c/include/io/log.h
+ata_bd.o: ../../../lib/c/include/inttypes.h
+ata_bd.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ata_bd.o: ../../../lib/c/include/io/verify.h
+ata_bd.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/as.h
+ata_bd.o: ../../../../abi/include/abi/mm/as.h ../../../lib/c/include/bd_srv.h
+ata_bd.o: ../../../lib/c/include/fibril_synch.h
+ata_bd.o: ../../../lib/scsi/include/scsi/mmc.h
+ata_bd.o: ../../../lib/scsi/include/scsi/sbc.h
+ata_bd.o: ../../../lib/scsi/include/scsi/spc.h ../../../lib/c/include/loc.h
+ata_bd.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/errno.h
+ata_bd.o: ../../../../abi/include/abi/errno.h ../../../lib/c/include/stdio.h
+ata_bd.o: ../../../../abi/include/abi/kio.h
+ata_bd.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/macros.h
+ata_bd.o: ata_hw.h ata_bd.h ../../../lib/drv/include/ddf/driver.h
+ata_bd.o: ../../../lib/c/include/ipc/devman.h
+ata_bd.o: ../../../lib/drv/include/dev_iface.h main.h
+main.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stdio.h
+main.o: ../../../lib/c/include/sys/types.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+main.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/str.h
+main.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+main.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+main.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/kio.h
+main.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+main.o: ../../../lib/c/include/str_error.h
+main.o: ../../../lib/drv/include/ddf/driver.h ../../../lib/c/include/async.h
+main.o: ../../../lib/c/include/ipc/common.h
+main.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+main.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+main.o: ../../../../abi/include/abi/proc/task.h
+main.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+main.o: ../../../../abi/include/abi/syscall.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+main.o: ../../../lib/c/include/fibril.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+main.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/stddef.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+main.o: ../../../lib/c/include/sys/time.h
+main.o: ../../../../abi/include/abi/ddi/irq.h
+main.o: ../../../../abi/include/abi/ipc/event.h
+main.o: ../../../../abi/include/abi/ipc/interfaces.h
+main.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+main.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/malloc.h
+main.o: ../../../lib/c/include/ipc/dev_iface.h
+main.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+main.o: ../../../lib/drv/include/dev_iface.h
+main.o: ../../../lib/drv/include/ddf/log.h ../../../lib/c/include/io/log.h
+main.o: ../../../lib/c/include/inttypes.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+main.o: ../../../../abi/include/abi/log.h
+main.o: ../../../lib/c/include/device/hw_res_parsed.h
+main.o: ../../../lib/c/include/device/hw_res.h
+main.o: ../../../lib/c/include/device/pio_window.h ata_bd.h
+main.o: ../../../lib/c/include/bd_srv.h ../../../lib/c/include/fibril_synch.h
+main.o: ata_hw.h main.h
+# DO NOT DELETE

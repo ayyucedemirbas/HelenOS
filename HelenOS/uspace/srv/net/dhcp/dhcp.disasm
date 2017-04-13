@@ -1,0 +1,2325 @@
+
+dhcp:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 00 46 00 00    	lea    0x4600,%eax
+    1110:	c7 00 30 2d 00 00    	movl   $0x2d30,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 de 19 00 00       	call   2b00 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <dhcpsrv_discover_timeout>:
+    1130:	55                   	push   %ebp
+    1131:	89 e5                	mov    %esp,%ebp
+    1133:	53                   	push   %ebx
+    1134:	50                   	push   %eax
+    1135:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1138:	83 7b 34 07          	cmpl   $0x7,0x34(%ebx)
+    113c:	0f 85 08 01 00 00    	jne    124a <dhcpsrv_discover_timeout+0x11a>
+    1142:	8b 43 0c             	mov    0xc(%ebx),%eax
+    1145:	50                   	push   %eax
+    1146:	68 08 24 00 00       	push   $0x2408
+    114b:	6a 03                	push   $0x3
+    114d:	6a ff                	push   $0xffffffff
+    114f:	e8 3c 1a 00 00       	call   2b90 <log_msg@plt>
+    1154:	8b 43 30             	mov    0x30(%ebx),%eax
+    1157:	83 c4 10             	add    $0x10,%esp
+    115a:	85 c0                	test   %eax,%eax
+    115c:	0f 84 de 00 00 00    	je     1240 <dhcpsrv_discover_timeout+0x110>
+    1162:	48                   	dec    %eax
+    1163:	89 43 30             	mov    %eax,0x30(%ebx)
+    1166:	50                   	push   %eax
+    1167:	68 4b 24 00 00       	push   $0x244b
+    116c:	6a 04                	push   $0x4
+    116e:	6a ff                	push   $0xffffffff
+    1170:	e8 1b 1a 00 00       	call   2b90 <log_msg@plt>
+    1175:	83 c4 0c             	add    $0xc,%esp
+    1178:	68 00 04 00 00       	push   $0x400
+    117d:	6a 00                	push   $0x0
+    117f:	68 40 46 00 00       	push   $0x4640
+    1184:	e8 f7 1a 00 00       	call   2c80 <memset@plt>
+    1189:	58                   	pop    %eax
+    118a:	8d 43 14             	lea    0x14(%ebx),%eax
+    118d:	5a                   	pop    %edx
+    118e:	68 5c 46 00 00       	push   $0x465c
+    1193:	50                   	push   %eax
+    1194:	c6 05 40 46 00 00 01 	movb   $0x1,0x4640
+    119b:	c6 05 41 46 00 00 01 	movb   $0x1,0x4641
+    11a2:	c6 05 42 46 00 00 06 	movb   $0x6,0x4642
+    11a9:	c7 05 44 46 00 00 00 	movl   $0x2a000000,0x4644
+    11b0:	00 00 2a 
+    11b3:	66 c7 05 4a 46 00 00 	movw   $0x80,0x464a
+    11ba:	80 00 
+    11bc:	e8 2f 1b 00 00       	call   2cf0 <addr48@plt>
+    11c1:	83 c4 0c             	add    $0xc,%esp
+    11c4:	8d 43 1c             	lea    0x1c(%ebx),%eax
+    11c7:	68 f4 00 00 00       	push   $0xf4
+    11cc:	c7 05 2c 47 00 00 63 	movl   $0x63538263,0x472c
+    11d3:	82 53 63 
+    11d6:	68 40 46 00 00       	push   $0x4640
+    11db:	c7 05 30 47 00 00 35 	movl   $0xff010135,0x4730
+    11e2:	01 01 ff 
+    11e5:	50                   	push   %eax
+    11e6:	e8 b5 10 00 00       	call   22a0 <dhcp_send>
+    11eb:	83 c4 10             	add    $0x10,%esp
+    11ee:	85 c0                	test   %eax,%eax
+    11f0:	75 1e                	jne    1210 <dhcpsrv_discover_timeout+0xe0>
+    11f2:	53                   	push   %ebx
+    11f3:	68 30 11 00 00       	push   $0x1130
+    11f8:	68 40 4b 4c 00       	push   $0x4c4b40
+    11fd:	8b 43 2c             	mov    0x2c(%ebx),%eax
+    1200:	50                   	push   %eax
+    1201:	e8 ea 19 00 00       	call   2bf0 <fibril_timer_set@plt>
+    1206:	83 c4 10             	add    $0x10,%esp
+    1209:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    120c:	c9                   	leave  
+    120d:	c3                   	ret    
+    120e:	66 90                	xchg   %ax,%ax
+    1210:	51                   	push   %ecx
+    1211:	68 5d 24 00 00       	push   $0x245d
+    1216:	6a 01                	push   $0x1
+    1218:	6a ff                	push   $0xffffffff
+    121a:	e8 71 19 00 00       	call   2b90 <log_msg@plt>
+    121f:	8b 53 0c             	mov    0xc(%ebx),%edx
+    1222:	52                   	push   %edx
+    1223:	68 36 24 00 00       	push   $0x2436
+    1228:	6a 03                	push   $0x3
+    122a:	6a ff                	push   $0xffffffff
+    122c:	e8 5f 19 00 00       	call   2b90 <log_msg@plt>
+    1231:	c7 43 34 01 00 00 00 	movl   $0x1,0x34(%ebx)
+    1238:	83 c4 20             	add    $0x20,%esp
+    123b:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    123e:	c9                   	leave  
+    123f:	c3                   	ret    
+    1240:	51                   	push   %ecx
+    1241:	68 24 24 00 00       	push   $0x2424
+    1246:	6a 03                	push   $0x3
+    1248:	eb ce                	jmp    1218 <dhcpsrv_discover_timeout+0xe8>
+    124a:	50                   	push   %eax
+    124b:	68 5b 02 00 00       	push   $0x25b
+    1250:	68 e4 23 00 00       	push   $0x23e4
+    1255:	68 eb 23 00 00       	push   $0x23eb
+    125a:	e8 71 19 00 00       	call   2bd0 <assert_abort@plt>
+    125f:	90                   	nop
+
+00001260 <dhcpsrv_recv>:
+    1260:	55                   	push   %ebp
+    1261:	89 e5                	mov    %esp,%ebp
+    1263:	57                   	push   %edi
+    1264:	56                   	push   %esi
+    1265:	53                   	push   %ebx
+    1266:	81 ec c8 00 00 00    	sub    $0xc8,%esp
+    126c:	8b 45 10             	mov    0x10(%ebp),%eax
+    126f:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+    1272:	50                   	push   %eax
+    1273:	8b 45 08             	mov    0x8(%ebp),%eax
+    1276:	8b 40 0c             	mov    0xc(%eax),%eax
+    1279:	50                   	push   %eax
+    127a:	68 78 24 00 00       	push   $0x2478
+    127f:	6a 04                	push   $0x4
+    1281:	6a ff                	push   $0xffffffff
+    1283:	e8 08 19 00 00       	call   2b90 <log_msg@plt>
+    1288:	83 c4 1c             	add    $0x1c,%esp
+    128b:	68 95 24 00 00       	push   $0x2495
+    1290:	6a 04                	push   $0x4
+    1292:	6a ff                	push   $0xffffffff
+    1294:	e8 f7 18 00 00       	call   2b90 <log_msg@plt>
+    1299:	83 c4 0c             	add    $0xc,%esp
+    129c:	8d 45 90             	lea    -0x70(%ebp),%eax
+    129f:	6a 58                	push   $0x58
+    12a1:	6a 00                	push   $0x0
+    12a3:	50                   	push   %eax
+    12a4:	e8 d7 19 00 00       	call   2c80 <memset@plt>
+    12a9:	8b 43 10             	mov    0x10(%ebx),%eax
+    12ac:	5a                   	pop    %edx
+    12ad:	0f c8                	bswap  %eax
+    12af:	59                   	pop    %ecx
+    12b0:	8d 8d 50 ff ff ff    	lea    -0xb0(%ebp),%ecx
+    12b6:	51                   	push   %ecx
+    12b7:	50                   	push   %eax
+    12b8:	e8 83 19 00 00       	call   2c40 <inet_addr_set@plt>
+    12bd:	5e                   	pop    %esi
+    12be:	8d 85 50 ff ff ff    	lea    -0xb0(%ebp),%eax
+    12c4:	5f                   	pop    %edi
+    12c5:	8d bd 4c ff ff ff    	lea    -0xb4(%ebp),%edi
+    12cb:	57                   	push   %edi
+    12cc:	50                   	push   %eax
+    12cd:	e8 3e 19 00 00       	call   2c10 <inet_addr_format@plt>
+    12d2:	83 c4 10             	add    $0x10,%esp
+    12d5:	85 c0                	test   %eax,%eax
+    12d7:	74 1f                	je     12f8 <dhcpsrv_recv+0x98>
+    12d9:	51                   	push   %ecx
+    12da:	68 61 25 00 00       	push   $0x2561
+    12df:	6a 04                	push   $0x4
+    12e1:	6a ff                	push   $0xffffffff
+    12e3:	e8 a8 18 00 00       	call   2b90 <log_msg@plt>
+    12e8:	83 c4 10             	add    $0x10,%esp
+    12eb:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    12ee:	5b                   	pop    %ebx
+    12ef:	5e                   	pop    %esi
+    12f0:	5f                   	pop    %edi
+    12f1:	5d                   	pop    %ebp
+    12f2:	c3                   	ret    
+    12f3:	90                   	nop
+    12f4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    12f8:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    12fe:	50                   	push   %eax
+    12ff:	68 a3 24 00 00       	push   $0x24a3
+    1304:	6a 04                	push   $0x4
+    1306:	6a ff                	push   $0xffffffff
+    1308:	e8 83 18 00 00       	call   2b90 <log_msg@plt>
+    130d:	58                   	pop    %eax
+    130e:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    1314:	50                   	push   %eax
+    1315:	e8 56 1a 00 00       	call   2d70 <free@plt>
+    131a:	8b 43 14             	mov    0x14(%ebx),%eax
+    131d:	5a                   	pop    %edx
+    131e:	0f c8                	bswap  %eax
+    1320:	59                   	pop    %ecx
+    1321:	8d 8d 64 ff ff ff    	lea    -0x9c(%ebp),%ecx
+    1327:	51                   	push   %ecx
+    1328:	50                   	push   %eax
+    1329:	e8 12 19 00 00       	call   2c40 <inet_addr_set@plt>
+    132e:	5e                   	pop    %esi
+    132f:	58                   	pop    %eax
+    1330:	8d 85 64 ff ff ff    	lea    -0x9c(%ebp),%eax
+    1336:	57                   	push   %edi
+    1337:	50                   	push   %eax
+    1338:	e8 d3 18 00 00       	call   2c10 <inet_addr_format@plt>
+    133d:	83 c4 10             	add    $0x10,%esp
+    1340:	85 c0                	test   %eax,%eax
+    1342:	75 95                	jne    12d9 <dhcpsrv_recv+0x79>
+    1344:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    134a:	50                   	push   %eax
+    134b:	68 b7 24 00 00       	push   $0x24b7
+    1350:	6a 04                	push   $0x4
+    1352:	6a ff                	push   $0xffffffff
+    1354:	e8 37 18 00 00       	call   2b90 <log_msg@plt>
+    1359:	58                   	pop    %eax
+    135a:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    1360:	50                   	push   %eax
+    1361:	e8 0a 1a 00 00       	call   2d70 <free@plt>
+    1366:	8b 43 18             	mov    0x18(%ebx),%eax
+    1369:	5a                   	pop    %edx
+    136a:	0f c8                	bswap  %eax
+    136c:	59                   	pop    %ecx
+    136d:	8d 8d 78 ff ff ff    	lea    -0x88(%ebp),%ecx
+    1373:	51                   	push   %ecx
+    1374:	50                   	push   %eax
+    1375:	e8 c6 18 00 00       	call   2c40 <inet_addr_set@plt>
+    137a:	5e                   	pop    %esi
+    137b:	58                   	pop    %eax
+    137c:	8d 85 78 ff ff ff    	lea    -0x88(%ebp),%eax
+    1382:	57                   	push   %edi
+    1383:	50                   	push   %eax
+    1384:	e8 87 18 00 00       	call   2c10 <inet_addr_format@plt>
+    1389:	83 c4 10             	add    $0x10,%esp
+    138c:	85 c0                	test   %eax,%eax
+    138e:	0f 85 45 ff ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    1394:	8b 8d 4c ff ff ff    	mov    -0xb4(%ebp),%ecx
+    139a:	51                   	push   %ecx
+    139b:	68 d2 24 00 00       	push   $0x24d2
+    13a0:	6a 04                	push   $0x4
+    13a2:	6a ff                	push   $0xffffffff
+    13a4:	e8 e7 17 00 00       	call   2b90 <log_msg@plt>
+    13a9:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    13af:	5e                   	pop    %esi
+    13b0:	50                   	push   %eax
+    13b1:	e8 ba 19 00 00       	call   2d70 <free@plt>
+    13b6:	83 c4 0c             	add    $0xc,%esp
+    13b9:	8d 45 94             	lea    -0x6c(%ebp),%eax
+    13bc:	be f0 00 00 00       	mov    $0xf0,%esi
+    13c1:	50                   	push   %eax
+    13c2:	8b 85 54 ff ff ff    	mov    -0xac(%ebp),%eax
+    13c8:	6a 00                	push   $0x0
+    13ca:	50                   	push   %eax
+    13cb:	e8 f0 18 00 00       	call   2cc0 <inet_naddr_set@plt>
+    13d0:	83 c4 10             	add    $0x10,%esp
+    13d3:	c6 85 47 ff ff ff 00 	movb   $0x0,-0xb9(%ebp)
+    13da:	c6 85 40 ff ff ff 00 	movb   $0x0,-0xc0(%ebp)
+    13e1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    13e8:	39 75 10             	cmp    %esi,0x10(%ebp)
+    13eb:	0f 86 b7 01 00 00    	jbe    15a8 <dhcpsrv_recv+0x348>
+    13f1:	8a 14 33             	mov    (%ebx,%esi,1),%dl
+    13f4:	8d 46 01             	lea    0x1(%esi),%eax
+    13f7:	84 d2                	test   %dl,%dl
+    13f9:	75 14                	jne    140f <dhcpsrv_recv+0x1af>
+    13fb:	89 c6                	mov    %eax,%esi
+    13fd:	39 45 10             	cmp    %eax,0x10(%ebp)
+    1400:	0f 84 a2 01 00 00    	je     15a8 <dhcpsrv_recv+0x348>
+    1406:	40                   	inc    %eax
+    1407:	8a 54 03 ff          	mov    -0x1(%ebx,%eax,1),%dl
+    140b:	84 d2                	test   %dl,%dl
+    140d:	74 ec                	je     13fb <dhcpsrv_recv+0x19b>
+    140f:	80 fa ff             	cmp    $0xff,%dl
+    1412:	0f 84 90 01 00 00    	je     15a8 <dhcpsrv_recv+0x348>
+    1418:	39 45 10             	cmp    %eax,0x10(%ebp)
+    141b:	0f 86 b8 fe ff ff    	jbe    12d9 <dhcpsrv_recv+0x79>
+    1421:	8a 04 03             	mov    (%ebx,%eax,1),%al
+    1424:	8d 4e 02             	lea    0x2(%esi),%ecx
+    1427:	89 c6                	mov    %eax,%esi
+    1429:	81 e6 ff 00 00 00    	and    $0xff,%esi
+    142f:	01 ce                	add    %ecx,%esi
+    1431:	39 75 10             	cmp    %esi,0x10(%ebp)
+    1434:	0f 82 9f fe ff ff    	jb     12d9 <dhcpsrv_recv+0x79>
+    143a:	80 fa 06             	cmp    $0x6,%dl
+    143d:	74 71                	je     14b0 <dhcpsrv_recv+0x250>
+    143f:	77 2f                	ja     1470 <dhcpsrv_recv+0x210>
+    1441:	80 fa 01             	cmp    $0x1,%dl
+    1444:	0f 84 96 00 00 00    	je     14e0 <dhcpsrv_recv+0x280>
+    144a:	80 fa 03             	cmp    $0x3,%dl
+    144d:	75 99                	jne    13e8 <dhcpsrv_recv+0x188>
+    144f:	3c 04                	cmp    $0x4,%al
+    1451:	0f 85 82 fe ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    1457:	8b 04 0b             	mov    (%ebx,%ecx,1),%eax
+    145a:	8d 55 c0             	lea    -0x40(%ebp),%edx
+    145d:	0f c8                	bswap  %eax
+    145f:	51                   	push   %ecx
+    1460:	51                   	push   %ecx
+    1461:	52                   	push   %edx
+    1462:	50                   	push   %eax
+    1463:	e8 d8 17 00 00       	call   2c40 <inet_addr_set@plt>
+    1468:	83 c4 10             	add    $0x10,%esp
+    146b:	e9 78 ff ff ff       	jmp    13e8 <dhcpsrv_recv+0x188>
+    1470:	80 fa 35             	cmp    $0x35,%dl
+    1473:	0f 84 ff 00 00 00    	je     1578 <dhcpsrv_recv+0x318>
+    1479:	80 fa 36             	cmp    $0x36,%dl
+    147c:	0f 85 66 ff ff ff    	jne    13e8 <dhcpsrv_recv+0x188>
+    1482:	3c 04                	cmp    $0x4,%al
+    1484:	0f 85 4f fe ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    148a:	8b 04 0b             	mov    (%ebx,%ecx,1),%eax
+    148d:	8d 4d ac             	lea    -0x54(%ebp),%ecx
+    1490:	0f c8                	bswap  %eax
+    1492:	52                   	push   %edx
+    1493:	52                   	push   %edx
+    1494:	51                   	push   %ecx
+    1495:	50                   	push   %eax
+    1496:	e8 a5 17 00 00       	call   2c40 <inet_addr_set@plt>
+    149b:	83 c4 10             	add    $0x10,%esp
+    149e:	c6 85 47 ff ff ff 01 	movb   $0x1,-0xb9(%ebp)
+    14a5:	e9 3e ff ff ff       	jmp    13e8 <dhcpsrv_recv+0x188>
+    14aa:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    14b0:	3c 03                	cmp    $0x3,%al
+    14b2:	0f 86 21 fe ff ff    	jbe    12d9 <dhcpsrv_recv+0x79>
+    14b8:	a8 03                	test   $0x3,%al
+    14ba:	0f 85 19 fe ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    14c0:	8b 04 0b             	mov    (%ebx,%ecx,1),%eax
+    14c3:	8d 4d d4             	lea    -0x2c(%ebp),%ecx
+    14c6:	0f c8                	bswap  %eax
+    14c8:	52                   	push   %edx
+    14c9:	52                   	push   %edx
+    14ca:	51                   	push   %ecx
+    14cb:	50                   	push   %eax
+    14cc:	e8 6f 17 00 00       	call   2c40 <inet_addr_set@plt>
+    14d1:	83 c4 10             	add    $0x10,%esp
+    14d4:	e9 0f ff ff ff       	jmp    13e8 <dhcpsrv_recv+0x188>
+    14d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    14e0:	3c 04                	cmp    $0x4,%al
+    14e2:	0f 85 f1 fd ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    14e8:	8b 04 0b             	mov    (%ebx,%ecx,1),%eax
+    14eb:	0f c8                	bswap  %eax
+    14ed:	89 85 40 ff ff ff    	mov    %eax,-0xc0(%ebp)
+    14f3:	83 f8 ff             	cmp    $0xffffffff,%eax
+    14f6:	0f 84 4c 04 00 00    	je     1948 <dhcpsrv_recv+0x6e8>
+    14fc:	89 c2                	mov    %eax,%edx
+    14fe:	83 f2 ff             	xor    $0xffffffff,%edx
+    1501:	89 d0                	mov    %edx,%eax
+    1503:	c1 e8 10             	shr    $0x10,%eax
+    1506:	0f 85 84 00 00 00    	jne    1590 <dhcpsrv_recv+0x330>
+    150c:	89 d0                	mov    %edx,%eax
+    150e:	c7 85 3c ff ff ff 08 	movl   $0x8,-0xc4(%ebp)
+    1515:	00 00 00 
+    1518:	31 c9                	xor    %ecx,%ecx
+    151a:	89 c2                	mov    %eax,%edx
+    151c:	c1 ea 08             	shr    $0x8,%edx
+    151f:	74 08                	je     1529 <dhcpsrv_recv+0x2c9>
+    1521:	8b 8d 3c ff ff ff    	mov    -0xc4(%ebp),%ecx
+    1527:	89 d0                	mov    %edx,%eax
+    1529:	89 c2                	mov    %eax,%edx
+    152b:	c1 ea 04             	shr    $0x4,%edx
+    152e:	74 05                	je     1535 <dhcpsrv_recv+0x2d5>
+    1530:	83 c1 04             	add    $0x4,%ecx
+    1533:	89 d0                	mov    %edx,%eax
+    1535:	89 c2                	mov    %eax,%edx
+    1537:	c1 ea 02             	shr    $0x2,%edx
+    153a:	74 05                	je     1541 <dhcpsrv_recv+0x2e1>
+    153c:	83 c1 02             	add    $0x2,%ecx
+    153f:	89 d0                	mov    %edx,%eax
+    1541:	d1 e8                	shr    %eax
+    1543:	8b 95 40 ff ff ff    	mov    -0xc0(%ebp),%edx
+    1549:	83 f8 01             	cmp    $0x1,%eax
+    154c:	b8 01 00 00 00       	mov    $0x1,%eax
+    1551:	83 d9 ff             	sbb    $0xffffffff,%ecx
+    1554:	41                   	inc    %ecx
+    1555:	d3 e0                	shl    %cl,%eax
+    1557:	48                   	dec    %eax
+    1558:	31 d0                	xor    %edx,%eax
+    155a:	40                   	inc    %eax
+    155b:	0f 85 78 fd ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    1561:	b8 20 00 00 00       	mov    $0x20,%eax
+    1566:	29 c8                	sub    %ecx,%eax
+    1568:	88 45 a8             	mov    %al,-0x58(%ebp)
+    156b:	c6 85 40 ff ff ff 01 	movb   $0x1,-0xc0(%ebp)
+    1572:	e9 71 fe ff ff       	jmp    13e8 <dhcpsrv_recv+0x188>
+    1577:	90                   	nop
+    1578:	fe c8                	dec    %al
+    157a:	0f 85 59 fd ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    1580:	31 c0                	xor    %eax,%eax
+    1582:	8a 04 0b             	mov    (%ebx,%ecx,1),%al
+    1585:	89 45 90             	mov    %eax,-0x70(%ebp)
+    1588:	e9 5b fe ff ff       	jmp    13e8 <dhcpsrv_recv+0x188>
+    158d:	8d 76 00             	lea    0x0(%esi),%esi
+    1590:	c7 85 3c ff ff ff 18 	movl   $0x18,-0xc4(%ebp)
+    1597:	00 00 00 
+    159a:	b9 10 00 00 00       	mov    $0x10,%ecx
+    159f:	e9 76 ff ff ff       	jmp    151a <dhcpsrv_recv+0x2ba>
+    15a4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    15a8:	80 bd 47 ff ff ff 00 	cmpb   $0x0,-0xb9(%ebp)
+    15af:	0f 84 b1 03 00 00    	je     1966 <dhcpsrv_recv+0x706>
+    15b5:	80 bd 40 ff ff ff 00 	cmpb   $0x0,-0xc0(%ebp)
+    15bc:	0f 84 8d 03 00 00    	je     194f <dhcpsrv_recv+0x6ef>
+    15c2:	8d 45 94             	lea    -0x6c(%ebp),%eax
+    15c5:	51                   	push   %ecx
+    15c6:	51                   	push   %ecx
+    15c7:	57                   	push   %edi
+    15c8:	50                   	push   %eax
+    15c9:	e8 42 17 00 00       	call   2d10 <inet_naddr_format@plt>
+    15ce:	83 c4 10             	add    $0x10,%esp
+    15d1:	85 c0                	test   %eax,%eax
+    15d3:	0f 85 00 fd ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    15d9:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    15df:	50                   	push   %eax
+    15e0:	68 23 25 00 00       	push   $0x2523
+    15e5:	6a 04                	push   $0x4
+    15e7:	6a ff                	push   $0xffffffff
+    15e9:	e8 a2 15 00 00       	call   2b90 <log_msg@plt>
+    15ee:	58                   	pop    %eax
+    15ef:	8b 85 4c ff ff ff    	mov    -0xb4(%ebp),%eax
+    15f5:	50                   	push   %eax
+    15f6:	e8 75 17 00 00       	call   2d70 <free@plt>
+    15fb:	8b 55 c4             	mov    -0x3c(%ebp),%edx
+    15fe:	83 c4 10             	add    $0x10,%esp
+    1601:	85 d2                	test   %edx,%edx
+    1603:	0f 85 b3 03 00 00    	jne    19bc <dhcpsrv_recv+0x75c>
+    1609:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    160c:	85 c0                	test   %eax,%eax
+    160e:	0f 85 69 03 00 00    	jne    197d <dhcpsrv_recv+0x71d>
+    1614:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1618:	8b 45 90             	mov    -0x70(%ebp),%eax
+    161b:	83 f8 02             	cmp    $0x2,%eax
+    161e:	74 30                	je     1650 <dhcpsrv_recv+0x3f0>
+    1620:	83 f8 05             	cmp    $0x5,%eax
+    1623:	75 5b                	jne    1680 <dhcpsrv_recv+0x420>
+    1625:	8b 45 08             	mov    0x8(%ebp),%eax
+    1628:	8b 40 34             	mov    0x34(%eax),%eax
+    162b:	83 f8 06             	cmp    $0x6,%eax
+    162e:	74 70                	je     16a0 <dhcpsrv_recv+0x440>
+    1630:	50                   	push   %eax
+    1631:	68 a8 26 00 00       	push   $0x26a8
+    1636:	6a 04                	push   $0x4
+    1638:	6a ff                	push   $0xffffffff
+    163a:	e8 51 15 00 00       	call   2b90 <log_msg@plt>
+    163f:	83 c4 10             	add    $0x10,%esp
+    1642:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1645:	5b                   	pop    %ebx
+    1646:	5e                   	pop    %esi
+    1647:	5f                   	pop    %edi
+    1648:	5d                   	pop    %ebp
+    1649:	c3                   	ret    
+    164a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1650:	8b 45 08             	mov    0x8(%ebp),%eax
+    1653:	8b 40 34             	mov    0x34(%eax),%eax
+    1656:	83 f8 07             	cmp    $0x7,%eax
+    1659:	0f 84 c1 00 00 00    	je     1720 <dhcpsrv_recv+0x4c0>
+    165f:	50                   	push   %eax
+    1660:	68 80 26 00 00       	push   $0x2680
+    1665:	6a 04                	push   $0x4
+    1667:	6a ff                	push   $0xffffffff
+    1669:	e8 22 15 00 00       	call   2b90 <log_msg@plt>
+    166e:	83 c4 10             	add    $0x10,%esp
+    1671:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1674:	5b                   	pop    %ebx
+    1675:	5e                   	pop    %esi
+    1676:	5f                   	pop    %edi
+    1677:	5d                   	pop    %ebp
+    1678:	c3                   	ret    
+    1679:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1680:	50                   	push   %eax
+    1681:	68 44 27 00 00       	push   $0x2744
+    1686:	6a 04                	push   $0x4
+    1688:	6a ff                	push   $0xffffffff
+    168a:	e8 01 15 00 00       	call   2b90 <log_msg@plt>
+    168f:	83 c4 10             	add    $0x10,%esp
+    1692:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1695:	5b                   	pop    %ebx
+    1696:	5e                   	pop    %esi
+    1697:	5f                   	pop    %edi
+    1698:	5d                   	pop    %ebp
+    1699:	c3                   	ret    
+    169a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    16a0:	8b 45 08             	mov    0x8(%ebp),%eax
+    16a3:	83 ec 0c             	sub    $0xc,%esp
+    16a6:	8d 75 90             	lea    -0x70(%ebp),%esi
+    16a9:	8b 78 2c             	mov    0x2c(%eax),%edi
+    16ac:	57                   	push   %edi
+    16ad:	e8 be 14 00 00       	call   2b70 <fibril_timer_clear@plt>
+    16b2:	8b 45 08             	mov    0x8(%ebp),%eax
+    16b5:	b9 16 00 00 00       	mov    $0x16,%ecx
+    16ba:	8d 78 38             	lea    0x38(%eax),%edi
+    16bd:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+    16bf:	c7 40 34 00 00 00 00 	movl   $0x0,0x34(%eax)
+    16c6:	8d 85 50 ff ff ff    	lea    -0xb0(%ebp),%eax
+    16cc:	50                   	push   %eax
+    16cd:	8b 45 08             	mov    0x8(%ebp),%eax
+    16d0:	8b 40 08             	mov    0x8(%eax),%eax
+    16d3:	50                   	push   %eax
+    16d4:	8d 45 94             	lea    -0x6c(%ebp),%eax
+    16d7:	50                   	push   %eax
+    16d8:	68 9d 25 00 00       	push   $0x259d
+    16dd:	e8 be 14 00 00       	call   2ba0 <inetcfg_addr_create_static@plt>
+    16e2:	83 c4 20             	add    $0x20,%esp
+    16e5:	85 c0                	test   %eax,%eax
+    16e7:	0f 85 3b 02 00 00    	jne    1928 <dhcpsrv_recv+0x6c8>
+    16ed:	8b 75 c4             	mov    -0x3c(%ebp),%esi
+    16f0:	85 f6                	test   %esi,%esi
+    16f2:	0f 85 d8 01 00 00    	jne    18d0 <dhcpsrv_recv+0x670>
+    16f8:	8b 4d d8             	mov    -0x28(%ebp),%ecx
+    16fb:	85 c9                	test   %ecx,%ecx
+    16fd:	0f 85 8d 01 00 00    	jne    1890 <dhcpsrv_recv+0x630>
+    1703:	8b 45 08             	mov    0x8(%ebp),%eax
+    1706:	8b 40 0c             	mov    0xc(%eax),%eax
+    1709:	50                   	push   %eax
+    170a:	68 ca 25 00 00       	push   $0x25ca
+    170f:	6a 03                	push   $0x3
+    1711:	6a ff                	push   $0xffffffff
+    1713:	e8 78 14 00 00       	call   2b90 <log_msg@plt>
+    1718:	83 c4 10             	add    $0x10,%esp
+    171b:	e9 cb fb ff ff       	jmp    12eb <dhcpsrv_recv+0x8b>
+    1720:	8b 45 08             	mov    0x8(%ebp),%eax
+    1723:	83 ec 0c             	sub    $0xc,%esp
+    1726:	8d 75 90             	lea    -0x70(%ebp),%esi
+    1729:	8b 40 2c             	mov    0x2c(%eax),%eax
+    172c:	50                   	push   %eax
+    172d:	e8 3e 14 00 00       	call   2b70 <fibril_timer_clear@plt>
+    1732:	8b 45 08             	mov    0x8(%ebp),%eax
+    1735:	b9 16 00 00 00       	mov    $0x16,%ecx
+    173a:	83 c4 0c             	add    $0xc,%esp
+    173d:	8d 78 38             	lea    0x38(%eax),%edi
+    1740:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+    1742:	c7 40 34 06 00 00 00 	movl   $0x6,0x34(%eax)
+    1749:	68 75 25 00 00       	push   $0x2575
+    174e:	6a 04                	push   $0x4
+    1750:	6a ff                	push   $0xffffffff
+    1752:	e8 39 14 00 00       	call   2b90 <log_msg@plt>
+    1757:	83 c4 0c             	add    $0xc,%esp
+    175a:	68 00 04 00 00       	push   $0x400
+    175f:	6a 00                	push   $0x0
+    1761:	68 40 46 00 00       	push   $0x4640
+    1766:	e8 15 15 00 00       	call   2c80 <memset@plt>
+    176b:	8b 45 98             	mov    -0x68(%ebp),%eax
+    176e:	c6 05 40 46 00 00 01 	movb   $0x1,0x4640
+    1775:	0f c8                	bswap  %eax
+    1777:	a3 4c 46 00 00       	mov    %eax,0x464c
+    177c:	58                   	pop    %eax
+    177d:	8b 45 08             	mov    0x8(%ebp),%eax
+    1780:	5a                   	pop    %edx
+    1781:	83 c0 14             	add    $0x14,%eax
+    1784:	68 5c 46 00 00       	push   $0x465c
+    1789:	c6 05 41 46 00 00 01 	movb   $0x1,0x4641
+    1790:	50                   	push   %eax
+    1791:	c6 05 42 46 00 00 06 	movb   $0x6,0x4642
+    1798:	c7 05 44 46 00 00 00 	movl   $0x2a000000,0x4644
+    179f:	00 00 2a 
+    17a2:	66 c7 05 4a 46 00 00 	movw   $0x80,0x464a
+    17a9:	80 00 
+    17ab:	e8 40 15 00 00       	call   2cf0 <addr48@plt>
+    17b0:	8b 45 98             	mov    -0x68(%ebp),%eax
+    17b3:	83 c4 0c             	add    $0xc,%esp
+    17b6:	89 c2                	mov    %eax,%edx
+    17b8:	a2 38 47 00 00       	mov    %al,0x4738
+    17bd:	c1 ea 18             	shr    $0x18,%edx
+    17c0:	68 00 01 00 00       	push   $0x100
+    17c5:	88 15 35 47 00 00    	mov    %dl,0x4735
+    17cb:	89 c2                	mov    %eax,%edx
+    17cd:	c1 ea 10             	shr    $0x10,%edx
+    17d0:	68 40 46 00 00       	push   $0x4640
+    17d5:	88 15 36 47 00 00    	mov    %dl,0x4736
+    17db:	89 c2                	mov    %eax,%edx
+    17dd:	c1 ea 08             	shr    $0x8,%edx
+    17e0:	8b 45 b0             	mov    -0x50(%ebp),%eax
+    17e3:	88 15 37 47 00 00    	mov    %dl,0x4737
+    17e9:	89 c2                	mov    %eax,%edx
+    17eb:	c1 ea 18             	shr    $0x18,%edx
+    17ee:	a2 3e 47 00 00       	mov    %al,0x473e
+    17f3:	88 15 3b 47 00 00    	mov    %dl,0x473b
+    17f9:	89 c2                	mov    %eax,%edx
+    17fb:	c1 ea 10             	shr    $0x10,%edx
+    17fe:	c7 05 2c 47 00 00 63 	movl   $0x63538263,0x472c
+    1805:	82 53 63 
+    1808:	88 15 3c 47 00 00    	mov    %dl,0x473c
+    180e:	89 c2                	mov    %eax,%edx
+    1810:	8b 45 08             	mov    0x8(%ebp),%eax
+    1813:	c7 05 30 47 00 00 35 	movl   $0x32030135,0x4730
+    181a:	01 03 32 
+    181d:	c1 ea 08             	shr    $0x8,%edx
+    1820:	83 c0 1c             	add    $0x1c,%eax
+    1823:	50                   	push   %eax
+    1824:	c6 05 34 47 00 00 04 	movb   $0x4,0x4734
+    182b:	c6 05 39 47 00 00 36 	movb   $0x36,0x4739
+    1832:	c6 05 3a 47 00 00 04 	movb   $0x4,0x473a
+    1839:	88 15 3d 47 00 00    	mov    %dl,0x473d
+    183f:	c6 05 3f 47 00 00 ff 	movb   $0xff,0x473f
+    1846:	e8 55 0a 00 00       	call   22a0 <dhcp_send>
+    184b:	83 c4 10             	add    $0x10,%esp
+    184e:	85 c0                	test   %eax,%eax
+    1850:	75 26                	jne    1878 <dhcpsrv_recv+0x618>
+    1852:	8b 45 08             	mov    0x8(%ebp),%eax
+    1855:	c7 40 30 03 00 00 00 	movl   $0x3,0x30(%eax)
+    185c:	50                   	push   %eax
+    185d:	8b 40 2c             	mov    0x2c(%eax),%eax
+    1860:	68 00 1a 00 00       	push   $0x1a00
+    1865:	68 40 42 0f 00       	push   $0xf4240
+    186a:	50                   	push   %eax
+    186b:	e8 80 13 00 00       	call   2bf0 <fibril_timer_set@plt>
+    1870:	83 c4 10             	add    $0x10,%esp
+    1873:	e9 73 fa ff ff       	jmp    12eb <dhcpsrv_recv+0x8b>
+    1878:	50                   	push   %eax
+    1879:	68 86 25 00 00       	push   $0x2586
+    187e:	6a 04                	push   $0x4
+    1880:	6a ff                	push   $0xffffffff
+    1882:	e8 09 13 00 00       	call   2b90 <log_msg@plt>
+    1887:	83 c4 10             	add    $0x10,%esp
+    188a:	e9 5c fa ff ff       	jmp    12eb <dhcpsrv_recv+0x8b>
+    188f:	90                   	nop
+    1890:	83 ec 0c             	sub    $0xc,%esp
+    1893:	8d 45 d4             	lea    -0x2c(%ebp),%eax
+    1896:	50                   	push   %eax
+    1897:	e8 d4 13 00 00       	call   2c70 <dnsr_set_srvaddr@plt>
+    189c:	83 c4 10             	add    $0x10,%esp
+    189f:	85 c0                	test   %eax,%eax
+    18a1:	0f 84 5c fe ff ff    	je     1703 <dhcpsrv_recv+0x4a3>
+    18a7:	50                   	push   %eax
+    18a8:	68 1c 27 00 00       	push   $0x271c
+    18ad:	6a 01                	push   $0x1
+    18af:	6a ff                	push   $0xffffffff
+    18b1:	e8 da 12 00 00       	call   2b90 <log_msg@plt>
+    18b6:	83 c4 10             	add    $0x10,%esp
+    18b9:	52                   	push   %edx
+    18ba:	68 ac 25 00 00       	push   $0x25ac
+    18bf:	6a 04                	push   $0x4
+    18c1:	6a ff                	push   $0xffffffff
+    18c3:	e8 c8 12 00 00       	call   2b90 <log_msg@plt>
+    18c8:	83 c4 10             	add    $0x10,%esp
+    18cb:	e9 1b fa ff ff       	jmp    12eb <dhcpsrv_recv+0x8b>
+    18d0:	8d 85 78 ff ff ff    	lea    -0x88(%ebp),%eax
+    18d6:	53                   	push   %ebx
+    18d7:	50                   	push   %eax
+    18d8:	6a 00                	push   $0x0
+    18da:	6a 00                	push   $0x0
+    18dc:	e8 df 13 00 00       	call   2cc0 <inet_naddr_set@plt>
+    18e1:	8d 85 64 ff ff ff    	lea    -0x9c(%ebp),%eax
+    18e7:	50                   	push   %eax
+    18e8:	8d 45 c0             	lea    -0x40(%ebp),%eax
+    18eb:	50                   	push   %eax
+    18ec:	8d 85 78 ff ff ff    	lea    -0x88(%ebp),%eax
+    18f2:	50                   	push   %eax
+    18f3:	68 a4 25 00 00       	push   $0x25a4
+    18f8:	e8 a3 13 00 00       	call   2ca0 <inetcfg_sroute_create@plt>
+    18fd:	83 c4 20             	add    $0x20,%esp
+    1900:	85 c0                	test   %eax,%eax
+    1902:	0f 84 f0 fd ff ff    	je     16f8 <dhcpsrv_recv+0x498>
+    1908:	83 ec 0c             	sub    $0xc,%esp
+    190b:	50                   	push   %eax
+    190c:	68 a4 25 00 00       	push   $0x25a4
+    1911:	68 f4 26 00 00       	push   $0x26f4
+    1916:	6a 01                	push   $0x1
+    1918:	6a ff                	push   $0xffffffff
+    191a:	e8 71 12 00 00       	call   2b90 <log_msg@plt>
+    191f:	83 c4 20             	add    $0x20,%esp
+    1922:	eb 95                	jmp    18b9 <dhcpsrv_recv+0x659>
+    1924:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1928:	83 ec 0c             	sub    $0xc,%esp
+    192b:	50                   	push   %eax
+    192c:	68 9d 25 00 00       	push   $0x259d
+    1931:	68 d0 26 00 00       	push   $0x26d0
+    1936:	6a 01                	push   $0x1
+    1938:	6a ff                	push   $0xffffffff
+    193a:	e8 51 12 00 00       	call   2b90 <log_msg@plt>
+    193f:	83 c4 20             	add    $0x20,%esp
+    1942:	e9 72 ff ff ff       	jmp    18b9 <dhcpsrv_recv+0x659>
+    1947:	90                   	nop
+    1948:	b0 20                	mov    $0x20,%al
+    194a:	e9 19 fc ff ff       	jmp    1568 <dhcpsrv_recv+0x308>
+    194f:	53                   	push   %ebx
+    1950:	68 07 25 00 00       	push   $0x2507
+    1955:	6a 01                	push   $0x1
+    1957:	6a ff                	push   $0xffffffff
+    1959:	e8 32 12 00 00       	call   2b90 <log_msg@plt>
+    195e:	83 c4 10             	add    $0x10,%esp
+    1961:	e9 b2 fc ff ff       	jmp    1618 <dhcpsrv_recv+0x3b8>
+    1966:	56                   	push   %esi
+    1967:	68 ed 24 00 00       	push   $0x24ed
+    196c:	6a 01                	push   $0x1
+    196e:	6a ff                	push   $0xffffffff
+    1970:	e8 1b 12 00 00       	call   2b90 <log_msg@plt>
+    1975:	83 c4 10             	add    $0x10,%esp
+    1978:	e9 9b fc ff ff       	jmp    1618 <dhcpsrv_recv+0x3b8>
+    197d:	8d 45 d4             	lea    -0x2c(%ebp),%eax
+    1980:	56                   	push   %esi
+    1981:	56                   	push   %esi
+    1982:	57                   	push   %edi
+    1983:	50                   	push   %eax
+    1984:	e8 87 12 00 00       	call   2c10 <inet_addr_format@plt>
+    1989:	83 c4 10             	add    $0x10,%esp
+    198c:	85 c0                	test   %eax,%eax
+    198e:	0f 85 45 f9 ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    1994:	ff b5 4c ff ff ff    	pushl  -0xb4(%ebp)
+    199a:	68 52 25 00 00       	push   $0x2552
+    199f:	6a 04                	push   $0x4
+    19a1:	6a ff                	push   $0xffffffff
+    19a3:	e8 e8 11 00 00       	call   2b90 <log_msg@plt>
+    19a8:	5b                   	pop    %ebx
+    19a9:	ff b5 4c ff ff ff    	pushl  -0xb4(%ebp)
+    19af:	e8 bc 13 00 00       	call   2d70 <free@plt>
+    19b4:	83 c4 10             	add    $0x10,%esp
+    19b7:	e9 5c fc ff ff       	jmp    1618 <dhcpsrv_recv+0x3b8>
+    19bc:	50                   	push   %eax
+    19bd:	50                   	push   %eax
+    19be:	8d 45 c0             	lea    -0x40(%ebp),%eax
+    19c1:	57                   	push   %edi
+    19c2:	50                   	push   %eax
+    19c3:	e8 48 12 00 00       	call   2c10 <inet_addr_format@plt>
+    19c8:	83 c4 10             	add    $0x10,%esp
+    19cb:	85 c0                	test   %eax,%eax
+    19cd:	0f 85 06 f9 ff ff    	jne    12d9 <dhcpsrv_recv+0x79>
+    19d3:	ff b5 4c ff ff ff    	pushl  -0xb4(%ebp)
+    19d9:	68 3f 25 00 00       	push   $0x253f
+    19de:	6a 04                	push   $0x4
+    19e0:	6a ff                	push   $0xffffffff
+    19e2:	e8 a9 11 00 00       	call   2b90 <log_msg@plt>
+    19e7:	58                   	pop    %eax
+    19e8:	ff b5 4c ff ff ff    	pushl  -0xb4(%ebp)
+    19ee:	e8 7d 13 00 00       	call   2d70 <free@plt>
+    19f3:	83 c4 10             	add    $0x10,%esp
+    19f6:	e9 0e fc ff ff       	jmp    1609 <dhcpsrv_recv+0x3a9>
+    19fb:	90                   	nop
+    19fc:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+00001a00 <dhcpsrv_request_timeout>:
+    1a00:	55                   	push   %ebp
+    1a01:	89 e5                	mov    %esp,%ebp
+    1a03:	53                   	push   %ebx
+    1a04:	50                   	push   %eax
+    1a05:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1a08:	83 7b 34 06          	cmpl   $0x6,0x34(%ebx)
+    1a0c:	0f 85 80 01 00 00    	jne    1b92 <dhcpsrv_request_timeout+0x192>
+    1a12:	8b 43 0c             	mov    0xc(%ebx),%eax
+    1a15:	50                   	push   %eax
+    1a16:	68 05 26 00 00       	push   $0x2605
+    1a1b:	6a 03                	push   $0x3
+    1a1d:	6a ff                	push   $0xffffffff
+    1a1f:	e8 6c 11 00 00       	call   2b90 <log_msg@plt>
+    1a24:	8b 43 30             	mov    0x30(%ebx),%eax
+    1a27:	83 c4 10             	add    $0x10,%esp
+    1a2a:	85 c0                	test   %eax,%eax
+    1a2c:	0f 84 56 01 00 00    	je     1b88 <dhcpsrv_request_timeout+0x188>
+    1a32:	48                   	dec    %eax
+    1a33:	89 43 30             	mov    %eax,0x30(%ebx)
+    1a36:	50                   	push   %eax
+    1a37:	68 75 25 00 00       	push   $0x2575
+    1a3c:	6a 04                	push   $0x4
+    1a3e:	6a ff                	push   $0xffffffff
+    1a40:	e8 4b 11 00 00       	call   2b90 <log_msg@plt>
+    1a45:	83 c4 0c             	add    $0xc,%esp
+    1a48:	68 00 04 00 00       	push   $0x400
+    1a4d:	6a 00                	push   $0x0
+    1a4f:	68 40 46 00 00       	push   $0x4640
+    1a54:	e8 27 12 00 00       	call   2c80 <memset@plt>
+    1a59:	8b 43 40             	mov    0x40(%ebx),%eax
+    1a5c:	c6 05 40 46 00 00 01 	movb   $0x1,0x4640
+    1a63:	0f c8                	bswap  %eax
+    1a65:	a3 4c 46 00 00       	mov    %eax,0x464c
+    1a6a:	58                   	pop    %eax
+    1a6b:	8d 43 14             	lea    0x14(%ebx),%eax
+    1a6e:	5a                   	pop    %edx
+    1a6f:	c6 05 41 46 00 00 01 	movb   $0x1,0x4641
+    1a76:	68 5c 46 00 00       	push   $0x465c
+    1a7b:	c6 05 42 46 00 00 06 	movb   $0x6,0x4642
+    1a82:	50                   	push   %eax
+    1a83:	c7 05 44 46 00 00 00 	movl   $0x2a000000,0x4644
+    1a8a:	00 00 2a 
+    1a8d:	66 c7 05 4a 46 00 00 	movw   $0x80,0x464a
+    1a94:	80 00 
+    1a96:	e8 55 12 00 00       	call   2cf0 <addr48@plt>
+    1a9b:	c7 05 2c 47 00 00 63 	movl   $0x63538263,0x472c
+    1aa2:	82 53 63 
+    1aa5:	c7 05 30 47 00 00 35 	movl   $0x32030135,0x4730
+    1aac:	01 03 32 
+    1aaf:	c6 05 34 47 00 00 04 	movb   $0x4,0x4734
+    1ab6:	31 c0                	xor    %eax,%eax
+    1ab8:	83 c4 0c             	add    $0xc,%esp
+    1abb:	8a 43 43             	mov    0x43(%ebx),%al
+    1abe:	a2 35 47 00 00       	mov    %al,0x4735
+    1ac3:	31 c0                	xor    %eax,%eax
+    1ac5:	66 8b 43 42          	mov    0x42(%ebx),%ax
+    1ac9:	a2 36 47 00 00       	mov    %al,0x4736
+    1ace:	8b 43 40             	mov    0x40(%ebx),%eax
+    1ad1:	c1 e8 08             	shr    $0x8,%eax
+    1ad4:	a2 37 47 00 00       	mov    %al,0x4737
+    1ad9:	8b 43 40             	mov    0x40(%ebx),%eax
+    1adc:	c6 05 39 47 00 00 36 	movb   $0x36,0x4739
+    1ae3:	a2 38 47 00 00       	mov    %al,0x4738
+    1ae8:	c6 05 3a 47 00 00 04 	movb   $0x4,0x473a
+    1aef:	31 c0                	xor    %eax,%eax
+    1af1:	8a 43 5b             	mov    0x5b(%ebx),%al
+    1af4:	a2 3b 47 00 00       	mov    %al,0x473b
+    1af9:	31 c0                	xor    %eax,%eax
+    1afb:	66 8b 43 5a          	mov    0x5a(%ebx),%ax
+    1aff:	a2 3c 47 00 00       	mov    %al,0x473c
+    1b04:	8b 43 58             	mov    0x58(%ebx),%eax
+    1b07:	c1 e8 08             	shr    $0x8,%eax
+    1b0a:	a2 3d 47 00 00       	mov    %al,0x473d
+    1b0f:	8b 43 58             	mov    0x58(%ebx),%eax
+    1b12:	68 00 01 00 00       	push   $0x100
+    1b17:	a2 3e 47 00 00       	mov    %al,0x473e
+    1b1c:	8d 43 1c             	lea    0x1c(%ebx),%eax
+    1b1f:	68 40 46 00 00       	push   $0x4640
+    1b24:	c6 05 3f 47 00 00 ff 	movb   $0xff,0x473f
+    1b2b:	50                   	push   %eax
+    1b2c:	e8 6f 07 00 00       	call   22a0 <dhcp_send>
+    1b31:	83 c4 10             	add    $0x10,%esp
+    1b34:	85 c0                	test   %eax,%eax
+    1b36:	0f 85 1c 00 00 00    	jne    1b58 <dhcpsrv_request_timeout+0x158>
+    1b3c:	53                   	push   %ebx
+    1b3d:	68 00 1a 00 00       	push   $0x1a00
+    1b42:	68 40 42 0f 00       	push   $0xf4240
+    1b47:	8b 43 2c             	mov    0x2c(%ebx),%eax
+    1b4a:	50                   	push   %eax
+    1b4b:	e8 a0 10 00 00       	call   2bf0 <fibril_timer_set@plt>
+    1b50:	83 c4 10             	add    $0x10,%esp
+    1b53:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1b56:	c9                   	leave  
+    1b57:	c3                   	ret    
+    1b58:	51                   	push   %ecx
+    1b59:	68 86 25 00 00       	push   $0x2586
+    1b5e:	6a 04                	push   $0x4
+    1b60:	6a ff                	push   $0xffffffff
+    1b62:	e8 29 10 00 00       	call   2b90 <log_msg@plt>
+    1b67:	8b 53 0c             	mov    0xc(%ebx),%edx
+    1b6a:	52                   	push   %edx
+    1b6b:	68 36 24 00 00       	push   $0x2436
+    1b70:	6a 03                	push   $0x3
+    1b72:	6a ff                	push   $0xffffffff
+    1b74:	e8 17 10 00 00       	call   2b90 <log_msg@plt>
+    1b79:	c7 43 34 01 00 00 00 	movl   $0x1,0x34(%ebx)
+    1b80:	83 c4 20             	add    $0x20,%esp
+    1b83:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1b86:	c9                   	leave  
+    1b87:	c3                   	ret    
+    1b88:	51                   	push   %ecx
+    1b89:	68 24 24 00 00       	push   $0x2424
+    1b8e:	6a 03                	push   $0x3
+    1b90:	eb ce                	jmp    1b60 <dhcpsrv_request_timeout+0x160>
+    1b92:	50                   	push   %eax
+    1b93:	68 77 02 00 00       	push   $0x277
+    1b98:	68 e4 23 00 00       	push   $0x23e4
+    1b9d:	68 e7 25 00 00       	push   $0x25e7
+    1ba2:	e8 29 10 00 00       	call   2bd0 <assert_abort@plt>
+    1ba7:	89 f6                	mov    %esi,%esi
+    1ba9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001bb0 <dhcpsrv_links_init>:
+    1bb0:	55                   	push   %ebp
+    1bb1:	c7 05 20 46 00 00 20 	movl   $0x4620,0x4620
+    1bb8:	46 00 00 
+    1bbb:	89 e5                	mov    %esp,%ebp
+    1bbd:	c7 05 24 46 00 00 20 	movl   $0x4620,0x4624
+    1bc4:	46 00 00 
+    1bc7:	5d                   	pop    %ebp
+    1bc8:	c3                   	ret    
+    1bc9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00001bd0 <dhcpsrv_link_add>:
+    1bd0:	55                   	push   %ebp
+    1bd1:	89 e5                	mov    %esp,%ebp
+    1bd3:	57                   	push   %edi
+    1bd4:	56                   	push   %esi
+    1bd5:	53                   	push   %ebx
+    1bd6:	83 ec 1c             	sub    $0x1c,%esp
+    1bd9:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1bdc:	53                   	push   %ebx
+    1bdd:	68 20 26 00 00       	push   $0x2620
+    1be2:	6a 04                	push   $0x4
+    1be4:	6a ff                	push   $0xffffffff
+    1be6:	e8 a5 0f 00 00       	call   2b90 <log_msg@plt>
+    1beb:	a1 24 46 00 00       	mov    0x4624,%eax
+    1bf0:	83 c4 10             	add    $0x10,%esp
+    1bf3:	3d 20 46 00 00       	cmp    $0x4620,%eax
+    1bf8:	75 10                	jne    1c0a <dhcpsrv_link_add+0x3a>
+    1bfa:	eb 34                	jmp    1c30 <dhcpsrv_link_add+0x60>
+    1bfc:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1c00:	8b 40 04             	mov    0x4(%eax),%eax
+    1c03:	3d 20 46 00 00       	cmp    $0x4620,%eax
+    1c08:	74 26                	je     1c30 <dhcpsrv_link_add+0x60>
+    1c0a:	3b 58 08             	cmp    0x8(%eax),%ebx
+    1c0d:	75 f1                	jne    1c00 <dhcpsrv_link_add+0x30>
+    1c0f:	53                   	push   %ebx
+    1c10:	68 36 26 00 00       	push   $0x2636
+    1c15:	6a 03                	push   $0x3
+    1c17:	6a ff                	push   $0xffffffff
+    1c19:	e8 72 0f 00 00       	call   2b90 <log_msg@plt>
+    1c1e:	83 c4 10             	add    $0x10,%esp
+    1c21:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1c24:	b8 f7 ff ff ff       	mov    $0xfffffff7,%eax
+    1c29:	5b                   	pop    %ebx
+    1c2a:	5e                   	pop    %esi
+    1c2b:	5f                   	pop    %edi
+    1c2c:	5d                   	pop    %ebp
+    1c2d:	c3                   	ret    
+    1c2e:	66 90                	xchg   %ax,%ax
+    1c30:	50                   	push   %eax
+    1c31:	50                   	push   %eax
+    1c32:	68 90 00 00 00       	push   $0x90
+    1c37:	6a 01                	push   $0x1
+    1c39:	e8 a2 0f 00 00       	call   2be0 <calloc@plt>
+    1c3e:	83 c4 10             	add    $0x10,%esp
+    1c41:	89 c6                	mov    %eax,%esi
+    1c43:	85 c0                	test   %eax,%eax
+    1c45:	0f 84 c9 01 00 00    	je     1e14 <dhcpsrv_link_add+0x244>
+    1c4b:	83 ec 0c             	sub    $0xc,%esp
+    1c4e:	89 58 08             	mov    %ebx,0x8(%eax)
+    1c51:	6a 00                	push   $0x0
+    1c53:	e8 f8 10 00 00       	call   2d50 <fibril_timer_create@plt>
+    1c58:	83 c4 10             	add    $0x10,%esp
+    1c5b:	89 46 2c             	mov    %eax,0x2c(%esi)
+    1c5e:	85 c0                	test   %eax,%eax
+    1c60:	0f 84 5a 01 00 00    	je     1dc0 <dhcpsrv_link_add+0x1f0>
+    1c66:	50                   	push   %eax
+    1c67:	50                   	push   %eax
+    1c68:	8d 46 0c             	lea    0xc(%esi),%eax
+    1c6b:	50                   	push   %eax
+    1c6c:	53                   	push   %ebx
+    1c6d:	e8 ee 0f 00 00       	call   2c60 <inetcfg_link_get@plt>
+    1c72:	83 c4 10             	add    $0x10,%esp
+    1c75:	85 c0                	test   %eax,%eax
+    1c77:	74 4f                	je     1cc8 <dhcpsrv_link_add+0xf8>
+    1c79:	53                   	push   %ebx
+    1c7a:	68 6c 27 00 00       	push   $0x276c
+    1c7f:	6a 01                	push   $0x1
+    1c81:	6a ff                	push   $0xffffffff
+    1c83:	e8 08 0f 00 00       	call   2b90 <log_msg@plt>
+    1c88:	83 c4 10             	add    $0x10,%esp
+    1c8b:	8b 46 2c             	mov    0x2c(%esi),%eax
+    1c8e:	85 c0                	test   %eax,%eax
+    1c90:	0f 84 88 01 00 00    	je     1e1e <dhcpsrv_link_add+0x24e>
+    1c96:	83 ec 0c             	sub    $0xc,%esp
+    1c99:	50                   	push   %eax
+    1c9a:	e8 11 0f 00 00       	call   2bb0 <fibril_timer_destroy@plt>
+    1c9f:	83 c4 10             	add    $0x10,%esp
+    1ca2:	b8 f6 fe ff ff       	mov    $0xfffffef6,%eax
+    1ca7:	83 ec 0c             	sub    $0xc,%esp
+    1caa:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    1cad:	56                   	push   %esi
+    1cae:	e8 bd 10 00 00       	call   2d70 <free@plt>
+    1cb3:	83 c4 10             	add    $0x10,%esp
+    1cb6:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1cb9:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1cbc:	5b                   	pop    %ebx
+    1cbd:	5e                   	pop    %esi
+    1cbe:	5f                   	pop    %edi
+    1cbf:	5d                   	pop    %ebp
+    1cc0:	c3                   	ret    
+    1cc1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1cc8:	8d 7e 1c             	lea    0x1c(%esi),%edi
+    1ccb:	56                   	push   %esi
+    1ccc:	68 60 12 00 00       	push   $0x1260
+    1cd1:	53                   	push   %ebx
+    1cd2:	57                   	push   %edi
+    1cd3:	e8 28 06 00 00       	call   2300 <dhcp_transport_init>
+    1cd8:	83 c4 10             	add    $0x10,%esp
+    1cdb:	85 c0                	test   %eax,%eax
+    1cdd:	0f 85 e7 00 00 00    	jne    1dca <dhcpsrv_link_add+0x1fa>
+    1ce3:	51                   	push   %ecx
+    1ce4:	68 4b 24 00 00       	push   $0x244b
+    1ce9:	6a 04                	push   $0x4
+    1ceb:	6a ff                	push   $0xffffffff
+    1ced:	e8 9e 0e 00 00       	call   2b90 <log_msg@plt>
+    1cf2:	83 c4 0c             	add    $0xc,%esp
+    1cf5:	c7 46 34 07 00 00 00 	movl   $0x7,0x34(%esi)
+    1cfc:	68 00 04 00 00       	push   $0x400
+    1d01:	6a 00                	push   $0x0
+    1d03:	68 40 46 00 00       	push   $0x4640
+    1d08:	e8 73 0f 00 00       	call   2c80 <memset@plt>
+    1d0d:	5b                   	pop    %ebx
+    1d0e:	58                   	pop    %eax
+    1d0f:	8d 46 14             	lea    0x14(%esi),%eax
+    1d12:	68 5c 46 00 00       	push   $0x465c
+    1d17:	50                   	push   %eax
+    1d18:	c6 05 40 46 00 00 01 	movb   $0x1,0x4640
+    1d1f:	c6 05 41 46 00 00 01 	movb   $0x1,0x4641
+    1d26:	c6 05 42 46 00 00 06 	movb   $0x6,0x4642
+    1d2d:	c7 05 44 46 00 00 00 	movl   $0x2a000000,0x4644
+    1d34:	00 00 2a 
+    1d37:	66 c7 05 4a 46 00 00 	movw   $0x80,0x464a
+    1d3e:	80 00 
+    1d40:	e8 ab 0f 00 00       	call   2cf0 <addr48@plt>
+    1d45:	83 c4 0c             	add    $0xc,%esp
+    1d48:	c7 05 2c 47 00 00 63 	movl   $0x63538263,0x472c
+    1d4f:	82 53 63 
+    1d52:	c7 05 30 47 00 00 35 	movl   $0xff010135,0x4730
+    1d59:	01 01 ff 
+    1d5c:	68 f4 00 00 00       	push   $0xf4
+    1d61:	68 40 46 00 00       	push   $0x4640
+    1d66:	57                   	push   %edi
+    1d67:	e8 34 05 00 00       	call   22a0 <dhcp_send>
+    1d6c:	83 c4 10             	add    $0x10,%esp
+    1d6f:	85 c0                	test   %eax,%eax
+    1d71:	75 71                	jne    1de4 <dhcpsrv_link_add+0x214>
+    1d73:	8b 56 2c             	mov    0x2c(%esi),%edx
+    1d76:	c7 46 30 05 00 00 00 	movl   $0x5,0x30(%esi)
+    1d7d:	f7 42 20 fd ff ff ff 	testl  $0xfffffffd,0x20(%edx)
+    1d84:	75 1a                	jne    1da0 <dhcpsrv_link_add+0x1d0>
+    1d86:	56                   	push   %esi
+    1d87:	68 30 11 00 00       	push   $0x1130
+    1d8c:	68 40 4b 4c 00       	push   $0x4c4b40
+    1d91:	52                   	push   %edx
+    1d92:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    1d95:	e8 56 0e 00 00       	call   2bf0 <fibril_timer_set@plt>
+    1d9a:	83 c4 10             	add    $0x10,%esp
+    1d9d:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1da0:	8b 15 20 46 00 00    	mov    0x4620,%edx
+    1da6:	c7 46 04 20 46 00 00 	movl   $0x4620,0x4(%esi)
+    1dad:	89 16                	mov    %edx,(%esi)
+    1daf:	89 35 20 46 00 00    	mov    %esi,0x4620
+    1db5:	89 72 04             	mov    %esi,0x4(%edx)
+    1db8:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1dbb:	5b                   	pop    %ebx
+    1dbc:	5e                   	pop    %esi
+    1dbd:	5f                   	pop    %edi
+    1dbe:	5d                   	pop    %ebp
+    1dbf:	c3                   	ret    
+    1dc0:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    1dc5:	e9 dd fe ff ff       	jmp    1ca7 <dhcpsrv_link_add+0xd7>
+    1dca:	8b 46 0c             	mov    0xc(%esi),%eax
+    1dcd:	50                   	push   %eax
+    1dce:	68 94 27 00 00       	push   $0x2794
+    1dd3:	6a 01                	push   $0x1
+    1dd5:	6a ff                	push   $0xffffffff
+    1dd7:	e8 b4 0d 00 00       	call   2b90 <log_msg@plt>
+    1ddc:	83 c4 10             	add    $0x10,%esp
+    1ddf:	e9 a7 fe ff ff       	jmp    1c8b <dhcpsrv_link_add+0xbb>
+    1de4:	50                   	push   %eax
+    1de5:	68 4d 26 00 00       	push   $0x264d
+    1dea:	6a 01                	push   $0x1
+    1dec:	6a ff                	push   $0xffffffff
+    1dee:	e8 9d 0d 00 00       	call   2b90 <log_msg@plt>
+    1df3:	8b 56 0c             	mov    0xc(%esi),%edx
+    1df6:	52                   	push   %edx
+    1df7:	68 36 24 00 00       	push   $0x2436
+    1dfc:	6a 03                	push   $0x3
+    1dfe:	6a ff                	push   $0xffffffff
+    1e00:	e8 8b 0d 00 00       	call   2b90 <log_msg@plt>
+    1e05:	c7 46 34 01 00 00 00 	movl   $0x1,0x34(%esi)
+    1e0c:	83 c4 20             	add    $0x20,%esp
+    1e0f:	e9 77 fe ff ff       	jmp    1c8b <dhcpsrv_link_add+0xbb>
+    1e14:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    1e19:	e9 9b fe ff ff       	jmp    1cb9 <dhcpsrv_link_add+0xe9>
+    1e1e:	b8 f6 fe ff ff       	mov    $0xfffffef6,%eax
+    1e23:	e9 7f fe ff ff       	jmp    1ca7 <dhcpsrv_link_add+0xd7>
+    1e28:	90                   	nop
+    1e29:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00001e30 <dhcpsrv_link_remove>:
+    1e30:	55                   	push   %ebp
+    1e31:	b8 f5 ff ff ff       	mov    $0xfffffff5,%eax
+    1e36:	89 e5                	mov    %esp,%ebp
+    1e38:	5d                   	pop    %ebp
+    1e39:	c3                   	ret    
+    1e3a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+00001e40 <dhcpsrv_discover>:
+    1e40:	55                   	push   %ebp
+    1e41:	89 e5                	mov    %esp,%ebp
+    1e43:	56                   	push   %esi
+    1e44:	53                   	push   %ebx
+    1e45:	83 ec 10             	sub    $0x10,%esp
+    1e48:	8b 75 08             	mov    0x8(%ebp),%esi
+    1e4b:	56                   	push   %esi
+    1e4c:	68 20 26 00 00       	push   $0x2620
+    1e51:	6a 04                	push   $0x4
+    1e53:	6a ff                	push   $0xffffffff
+    1e55:	e8 36 0d 00 00       	call   2b90 <log_msg@plt>
+    1e5a:	8b 1d 24 46 00 00    	mov    0x4624,%ebx
+    1e60:	83 c4 10             	add    $0x10,%esp
+    1e63:	81 fb 20 46 00 00    	cmp    $0x4620,%ebx
+    1e69:	75 14                	jne    1e7f <dhcpsrv_discover+0x3f>
+    1e6b:	e9 d8 00 00 00       	jmp    1f48 <dhcpsrv_discover+0x108>
+    1e70:	8b 5b 04             	mov    0x4(%ebx),%ebx
+    1e73:	81 fb 20 46 00 00    	cmp    $0x4620,%ebx
+    1e79:	0f 84 c9 00 00 00    	je     1f48 <dhcpsrv_discover+0x108>
+    1e7f:	3b 73 08             	cmp    0x8(%ebx),%esi
+    1e82:	75 ec                	jne    1e70 <dhcpsrv_discover+0x30>
+    1e84:	c7 43 34 07 00 00 00 	movl   $0x7,0x34(%ebx)
+    1e8b:	50                   	push   %eax
+    1e8c:	68 00 04 00 00       	push   $0x400
+    1e91:	6a 00                	push   $0x0
+    1e93:	68 40 46 00 00       	push   $0x4640
+    1e98:	e8 e3 0d 00 00       	call   2c80 <memset@plt>
+    1e9d:	8d 43 14             	lea    0x14(%ebx),%eax
+    1ea0:	5a                   	pop    %edx
+    1ea1:	59                   	pop    %ecx
+    1ea2:	68 5c 46 00 00       	push   $0x465c
+    1ea7:	50                   	push   %eax
+    1ea8:	c6 05 40 46 00 00 01 	movb   $0x1,0x4640
+    1eaf:	c6 05 41 46 00 00 01 	movb   $0x1,0x4641
+    1eb6:	c6 05 42 46 00 00 06 	movb   $0x6,0x4642
+    1ebd:	c7 05 44 46 00 00 00 	movl   $0x2a000000,0x4644
+    1ec4:	00 00 2a 
+    1ec7:	66 c7 05 4a 46 00 00 	movw   $0x80,0x464a
+    1ece:	80 00 
+    1ed0:	e8 1b 0e 00 00       	call   2cf0 <addr48@plt>
+    1ed5:	83 c4 0c             	add    $0xc,%esp
+    1ed8:	8d 43 1c             	lea    0x1c(%ebx),%eax
+    1edb:	68 f4 00 00 00       	push   $0xf4
+    1ee0:	c7 05 2c 47 00 00 63 	movl   $0x63538263,0x472c
+    1ee7:	82 53 63 
+    1eea:	68 40 46 00 00       	push   $0x4640
+    1eef:	c7 05 30 47 00 00 35 	movl   $0xff010135,0x4730
+    1ef6:	01 01 ff 
+    1ef9:	50                   	push   %eax
+    1efa:	e8 a1 03 00 00       	call   22a0 <dhcp_send>
+    1eff:	83 c4 10             	add    $0x10,%esp
+    1f02:	85 c0                	test   %eax,%eax
+    1f04:	75 34                	jne    1f3a <dhcpsrv_discover+0xfa>
+    1f06:	8b 53 2c             	mov    0x2c(%ebx),%edx
+    1f09:	c7 43 30 05 00 00 00 	movl   $0x5,0x30(%ebx)
+    1f10:	f7 42 20 fd ff ff ff 	testl  $0xfffffffd,0x20(%edx)
+    1f17:	75 1a                	jne    1f33 <dhcpsrv_discover+0xf3>
+    1f19:	53                   	push   %ebx
+    1f1a:	68 30 11 00 00       	push   $0x1130
+    1f1f:	68 40 4b 4c 00       	push   $0x4c4b40
+    1f24:	52                   	push   %edx
+    1f25:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    1f28:	e8 c3 0c 00 00       	call   2bf0 <fibril_timer_set@plt>
+    1f2d:	83 c4 10             	add    $0x10,%esp
+    1f30:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    1f33:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1f36:	5b                   	pop    %ebx
+    1f37:	5e                   	pop    %esi
+    1f38:	5d                   	pop    %ebp
+    1f39:	c3                   	ret    
+    1f3a:	b8 f6 fe ff ff       	mov    $0xfffffef6,%eax
+    1f3f:	eb f2                	jmp    1f33 <dhcpsrv_discover+0xf3>
+    1f41:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1f48:	56                   	push   %esi
+    1f49:	68 69 26 00 00       	push   $0x2669
+    1f4e:	6a 03                	push   $0x3
+    1f50:	6a ff                	push   $0xffffffff
+    1f52:	e8 39 0c 00 00       	call   2b90 <log_msg@plt>
+    1f57:	83 c4 10             	add    $0x10,%esp
+    1f5a:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    1f5f:	eb d2                	jmp    1f33 <dhcpsrv_discover+0xf3>
+    1f61:	66 90                	xchg   %ax,%ax
+    1f63:	66 90                	xchg   %ax,%ax
+    1f65:	66 90                	xchg   %ax,%ax
+    1f67:	66 90                	xchg   %ax,%ax
+    1f69:	66 90                	xchg   %ax,%ax
+    1f6b:	66 90                	xchg   %ax,%ax
+    1f6d:	66 90                	xchg   %ax,%ax
+    1f6f:	90                   	nop
+
+00001f70 <dhcp_client_conn>:
+    1f70:	55                   	push   %ebp
+    1f71:	89 e5                	mov    %esp,%ebp
+    1f73:	56                   	push   %esi
+    1f74:	53                   	push   %ebx
+    1f75:	83 ec 34             	sub    $0x34,%esp
+    1f78:	8d 75 d4             	lea    -0x2c(%ebp),%esi
+    1f7b:	68 c3 27 00 00       	push   $0x27c3
+    1f80:	6a 04                	push   $0x4
+    1f82:	6a ff                	push   $0xffffffff
+    1f84:	e8 07 0c 00 00       	call   2b90 <log_msg@plt>
+    1f89:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    1f8c:	58                   	pop    %eax
+    1f8d:	5a                   	pop    %edx
+    1f8e:	6a 00                	push   $0x0
+    1f90:	51                   	push   %ecx
+    1f91:	e8 ea 0b 00 00       	call   2b80 <async_answer_0@plt>
+    1f96:	83 c4 10             	add    $0x10,%esp
+    1f99:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1fa0:	50                   	push   %eax
+    1fa1:	50                   	push   %eax
+    1fa2:	6a 00                	push   $0x0
+    1fa4:	56                   	push   %esi
+    1fa5:	e8 26 0d 00 00       	call   2cd0 <async_get_call_timeout@plt>
+    1faa:	83 c4 10             	add    $0x10,%esp
+    1fad:	89 c3                	mov    %eax,%ebx
+    1faf:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1fb2:	85 c0                	test   %eax,%eax
+    1fb4:	0f 84 8e 00 00 00    	je     2048 <dhcp_client_conn+0xd8>
+    1fba:	3d 01 04 00 00       	cmp    $0x401,%eax
+    1fbf:	74 1f                	je     1fe0 <dhcp_client_conn+0x70>
+    1fc1:	3d 02 04 00 00       	cmp    $0x402,%eax
+    1fc6:	74 60                	je     2028 <dhcp_client_conn+0xb8>
+    1fc8:	3d 00 04 00 00       	cmp    $0x400,%eax
+    1fcd:	74 39                	je     2008 <dhcp_client_conn+0x98>
+    1fcf:	50                   	push   %eax
+    1fd0:	50                   	push   %eax
+    1fd1:	6a f2                	push   $0xfffffff2
+    1fd3:	53                   	push   %ebx
+    1fd4:	e8 a7 0b 00 00       	call   2b80 <async_answer_0@plt>
+    1fd9:	83 c4 10             	add    $0x10,%esp
+    1fdc:	eb c2                	jmp    1fa0 <dhcp_client_conn+0x30>
+    1fde:	66 90                	xchg   %ax,%ax
+    1fe0:	50                   	push   %eax
+    1fe1:	68 ea 27 00 00       	push   $0x27ea
+    1fe6:	6a 04                	push   $0x4
+    1fe8:	6a ff                	push   $0xffffffff
+    1fea:	e8 a1 0b 00 00       	call   2b90 <log_msg@plt>
+    1fef:	58                   	pop    %eax
+    1ff0:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    1ff3:	50                   	push   %eax
+    1ff4:	e8 37 fe ff ff       	call   1e30 <dhcpsrv_link_remove>
+    1ff9:	5a                   	pop    %edx
+    1ffa:	59                   	pop    %ecx
+    1ffb:	50                   	push   %eax
+    1ffc:	53                   	push   %ebx
+    1ffd:	e8 7e 0b 00 00       	call   2b80 <async_answer_0@plt>
+    2002:	83 c4 10             	add    $0x10,%esp
+    2005:	eb 99                	jmp    1fa0 <dhcp_client_conn+0x30>
+    2007:	90                   	nop
+    2008:	52                   	push   %edx
+    2009:	68 d6 27 00 00       	push   $0x27d6
+    200e:	6a 04                	push   $0x4
+    2010:	6a ff                	push   $0xffffffff
+    2012:	e8 79 0b 00 00       	call   2b90 <log_msg@plt>
+    2017:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    201a:	59                   	pop    %ecx
+    201b:	50                   	push   %eax
+    201c:	e8 af fb ff ff       	call   1bd0 <dhcpsrv_link_add>
+    2021:	eb d6                	jmp    1ff9 <dhcp_client_conn+0x89>
+    2023:	90                   	nop
+    2024:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2028:	50                   	push   %eax
+    2029:	68 01 28 00 00       	push   $0x2801
+    202e:	6a 04                	push   $0x4
+    2030:	6a ff                	push   $0xffffffff
+    2032:	e8 59 0b 00 00       	call   2b90 <log_msg@plt>
+    2037:	58                   	pop    %eax
+    2038:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    203b:	50                   	push   %eax
+    203c:	e8 ff fd ff ff       	call   1e40 <dhcpsrv_discover>
+    2041:	eb b6                	jmp    1ff9 <dhcp_client_conn+0x89>
+    2043:	90                   	nop
+    2044:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2048:	50                   	push   %eax
+    2049:	50                   	push   %eax
+    204a:	6a 00                	push   $0x0
+    204c:	53                   	push   %ebx
+    204d:	e8 2e 0b 00 00       	call   2b80 <async_answer_0@plt>
+    2052:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2055:	5b                   	pop    %ebx
+    2056:	5e                   	pop    %esi
+    2057:	5d                   	pop    %ebp
+    2058:	c3                   	ret    
+    2059:	66 90                	xchg   %ax,%ax
+    205b:	66 90                	xchg   %ax,%ax
+    205d:	66 90                	xchg   %ax,%ax
+    205f:	90                   	nop
+
+00002060 <main>:
+    2060:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    2064:	83 e4 f0             	and    $0xfffffff0,%esp
+    2067:	ff 71 fc             	pushl  -0x4(%ecx)
+    206a:	55                   	push   %ebp
+    206b:	89 e5                	mov    %esp,%ebp
+    206d:	53                   	push   %ebx
+    206e:	51                   	push   %ecx
+    206f:	83 ec 18             	sub    $0x18,%esp
+    2072:	68 37 28 00 00       	push   $0x2837
+    2077:	68 15 28 00 00       	push   $0x2815
+    207c:	e8 af 0a 00 00       	call   2b30 <printf@plt>
+    2081:	c7 04 24 37 28 00 00 	movl   $0x2837,(%esp)
+    2088:	e8 c3 0a 00 00       	call   2b50 <log_init@plt>
+    208d:	83 c4 10             	add    $0x10,%esp
+    2090:	85 c0                	test   %eax,%eax
+    2092:	0f 85 a9 00 00 00    	jne    2141 <main+0xe1>
+    2098:	50                   	push   %eax
+    2099:	68 27 28 00 00       	push   $0x2827
+    209e:	6a 04                	push   $0x4
+    20a0:	6a ff                	push   $0xffffffff
+    20a2:	e8 e9 0a 00 00       	call   2b90 <log_msg@plt>
+    20a7:	e8 04 fb ff ff       	call   1bb0 <dhcpsrv_links_init>
+    20ac:	e8 5f 0a 00 00       	call   2b10 <inetcfg_init@plt>
+    20b1:	83 c4 10             	add    $0x10,%esp
+    20b4:	85 c0                	test   %eax,%eax
+    20b6:	0f 85 b9 00 00 00    	jne    2175 <main+0x115>
+    20bc:	51                   	push   %ecx
+    20bd:	51                   	push   %ecx
+    20be:	6a 00                	push   $0x0
+    20c0:	68 70 1f 00 00       	push   $0x1f70
+    20c5:	e8 96 0c 00 00       	call   2d60 <async_set_fallback_port_handler@plt>
+    20ca:	c7 04 24 37 28 00 00 	movl   $0x2837,(%esp)
+    20d1:	e8 da 0b 00 00       	call   2cb0 <loc_server_register@plt>
+    20d6:	83 c4 10             	add    $0x10,%esp
+    20d9:	85 c0                	test   %eax,%eax
+    20db:	0f 85 ad 00 00 00    	jne    218e <main+0x12e>
+    20e1:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    20e4:	52                   	push   %edx
+    20e5:	52                   	push   %edx
+    20e6:	50                   	push   %eax
+    20e7:	68 33 28 00 00       	push   $0x2833
+    20ec:	e8 6f 0a 00 00       	call   2b60 <loc_service_register@plt>
+    20f1:	83 c4 10             	add    $0x10,%esp
+    20f4:	89 c3                	mov    %eax,%ebx
+    20f6:	85 c0                	test   %eax,%eax
+    20f8:	0f 85 a4 00 00 00    	jne    21a2 <main+0x142>
+    20fe:	83 ec 0c             	sub    $0xc,%esp
+    2101:	68 3c 28 00 00       	push   $0x283c
+    2106:	e8 25 0a 00 00       	call   2b30 <printf@plt>
+    210b:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+    2112:	e8 09 0a 00 00       	call   2b20 <task_retval@plt>
+    2117:	83 c8 ff             	or     $0xffffffff,%eax
+    211a:	f0 0f c1 05 04 46 00 	lock xadd %eax,0x4604
+    2121:	00 
+    2122:	83 c4 10             	add    $0x10,%esp
+    2125:	48                   	dec    %eax
+    2126:	78 30                	js     2158 <main+0xf8>
+    2128:	83 ec 0c             	sub    $0xc,%esp
+    212b:	6a 03                	push   $0x3
+    212d:	e8 ee 0b 00 00       	call   2d20 <fibril_switch@plt>
+    2132:	83 c4 10             	add    $0x10,%esp
+    2135:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2138:	89 d8                	mov    %ebx,%eax
+    213a:	59                   	pop    %ecx
+    213b:	5b                   	pop    %ebx
+    213c:	5d                   	pop    %ebp
+    213d:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    2140:	c3                   	ret    
+    2141:	83 ec 0c             	sub    $0xc,%esp
+    2144:	bb 01 00 00 00       	mov    $0x1,%ebx
+    2149:	68 5c 28 00 00       	push   $0x285c
+    214e:	e8 dd 09 00 00       	call   2b30 <printf@plt>
+    2153:	83 c4 10             	add    $0x10,%esp
+    2156:	eb dd                	jmp    2135 <main+0xd5>
+    2158:	50                   	push   %eax
+    2159:	6a 0b                	push   $0xb
+    215b:	6a 00                	push   $0x0
+    215d:	6a 00                	push   $0x0
+    215f:	6a 00                	push   $0x0
+    2161:	6a 00                	push   $0x0
+    2163:	6a 00                	push   $0x0
+    2165:	68 04 46 00 00       	push   $0x4604
+    216a:	ff 15 00 46 00 00    	call   *0x4600
+    2170:	83 c4 20             	add    $0x20,%esp
+    2173:	eb b3                	jmp    2128 <main+0xc8>
+    2175:	53                   	push   %ebx
+    2176:	68 84 28 00 00       	push   $0x2884
+    217b:	6a 01                	push   $0x1
+    217d:	6a ff                	push   $0xffffffff
+    217f:	e8 0c 0a 00 00       	call   2b90 <log_msg@plt>
+    2184:	83 c4 10             	add    $0x10,%esp
+    2187:	bb 01 00 00 00       	mov    $0x1,%ebx
+    218c:	eb a7                	jmp    2135 <main+0xd5>
+    218e:	50                   	push   %eax
+    218f:	68 b4 28 00 00       	push   $0x28b4
+    2194:	6a 01                	push   $0x1
+    2196:	6a ff                	push   $0xffffffff
+    2198:	e8 f3 09 00 00       	call   2b90 <log_msg@plt>
+    219d:	83 c4 10             	add    $0x10,%esp
+    21a0:	eb e5                	jmp    2187 <main+0x127>
+    21a2:	50                   	push   %eax
+    21a3:	68 d4 28 00 00       	push   $0x28d4
+    21a8:	6a 01                	push   $0x1
+    21aa:	6a ff                	push   $0xffffffff
+    21ac:	e8 df 09 00 00       	call   2b90 <log_msg@plt>
+    21b1:	83 c4 10             	add    $0x10,%esp
+    21b4:	eb d1                	jmp    2187 <main+0x127>
+    21b6:	66 90                	xchg   %ax,%ax
+    21b8:	66 90                	xchg   %ax,%ax
+    21ba:	66 90                	xchg   %ax,%ax
+    21bc:	66 90                	xchg   %ax,%ax
+    21be:	66 90                	xchg   %ax,%ax
+
+000021c0 <dhcp_link_state>:
+    21c0:	55                   	push   %ebp
+    21c1:	89 e5                	mov    %esp,%ebp
+    21c3:	83 ec 0c             	sub    $0xc,%esp
+    21c6:	68 f5 28 00 00       	push   $0x28f5
+    21cb:	6a 03                	push   $0x3
+    21cd:	6a ff                	push   $0xffffffff
+    21cf:	e8 bc 09 00 00       	call   2b90 <log_msg@plt>
+    21d4:	83 c4 10             	add    $0x10,%esp
+    21d7:	c9                   	leave  
+    21d8:	c3                   	ret    
+    21d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+000021e0 <dhcp_recv_err>:
+    21e0:	55                   	push   %ebp
+    21e1:	89 e5                	mov    %esp,%ebp
+    21e3:	83 ec 0c             	sub    $0xc,%esp
+    21e6:	68 07 29 00 00       	push   $0x2907
+    21eb:	6a 02                	push   $0x2
+    21ed:	6a ff                	push   $0xffffffff
+    21ef:	e8 9c 09 00 00       	call   2b90 <log_msg@plt>
+    21f4:	83 c4 10             	add    $0x10,%esp
+    21f7:	c9                   	leave  
+    21f8:	c3                   	ret    
+    21f9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00002200 <dhcp_recv_msg>:
+    2200:	55                   	push   %ebp
+    2201:	89 e5                	mov    %esp,%ebp
+    2203:	57                   	push   %edi
+    2204:	56                   	push   %esi
+    2205:	53                   	push   %ebx
+    2206:	83 ec 10             	sub    $0x10,%esp
+    2209:	8b 75 0c             	mov    0xc(%ebp),%esi
+    220c:	68 1b 29 00 00       	push   $0x291b
+    2211:	6a 03                	push   $0x3
+    2213:	6a ff                	push   $0xffffffff
+    2215:	e8 76 09 00 00       	call   2b90 <log_msg@plt>
+    221a:	8b 7d 08             	mov    0x8(%ebp),%edi
+    221d:	5b                   	pop    %ebx
+    221e:	57                   	push   %edi
+    221f:	e8 9c 09 00 00       	call   2bc0 <udp_assoc_userptr@plt>
+    2224:	89 34 24             	mov    %esi,(%esp)
+    2227:	89 c7                	mov    %eax,%edi
+    2229:	e8 22 0a 00 00       	call   2c50 <udp_rmsg_size@plt>
+    222e:	bb 00 04 00 00       	mov    $0x400,%ebx
+    2233:	83 c4 10             	add    $0x10,%esp
+    2236:	3d 00 04 00 00       	cmp    $0x400,%eax
+    223b:	77 02                	ja     223f <dhcp_recv_msg+0x3f>
+    223d:	89 c3                	mov    %eax,%ebx
+    223f:	53                   	push   %ebx
+    2240:	68 40 4a 00 00       	push   $0x4a40
+    2245:	6a 00                	push   $0x0
+    2247:	56                   	push   %esi
+    2248:	e8 f3 08 00 00       	call   2b40 <udp_rmsg_read@plt>
+    224d:	83 c4 10             	add    $0x10,%esp
+    2250:	85 c0                	test   %eax,%eax
+    2252:	75 2c                	jne    2280 <dhcp_recv_msg+0x80>
+    2254:	50                   	push   %eax
+    2255:	68 74 29 00 00       	push   $0x2974
+    225a:	6a 03                	push   $0x3
+    225c:	6a ff                	push   $0xffffffff
+    225e:	e8 2d 09 00 00       	call   2b90 <log_msg@plt>
+    2263:	83 c4 0c             	add    $0xc,%esp
+    2266:	53                   	push   %ebx
+    2267:	68 40 4a 00 00       	push   $0x4a40
+    226c:	8b 57 0c             	mov    0xc(%edi),%edx
+    226f:	52                   	push   %edx
+    2270:	ff 57 08             	call   *0x8(%edi)
+    2273:	83 c4 10             	add    $0x10,%esp
+    2276:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2279:	5b                   	pop    %ebx
+    227a:	5e                   	pop    %esi
+    227b:	5f                   	pop    %edi
+    227c:	5d                   	pop    %ebp
+    227d:	c3                   	ret    
+    227e:	66 90                	xchg   %ax,%ax
+    2280:	51                   	push   %ecx
+    2281:	68 2b 29 00 00       	push   $0x292b
+    2286:	6a 01                	push   $0x1
+    2288:	6a ff                	push   $0xffffffff
+    228a:	e8 01 09 00 00       	call   2b90 <log_msg@plt>
+    228f:	83 c4 10             	add    $0x10,%esp
+    2292:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2295:	5b                   	pop    %ebx
+    2296:	5e                   	pop    %esi
+    2297:	5f                   	pop    %edi
+    2298:	5d                   	pop    %ebp
+    2299:	c3                   	ret    
+    229a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+000022a0 <dhcp_send>:
+    22a0:	55                   	push   %ebp
+    22a1:	89 e5                	mov    %esp,%ebp
+    22a3:	53                   	push   %ebx
+    22a4:	83 ec 40             	sub    $0x40,%esp
+    22a7:	8d 5d e0             	lea    -0x20(%ebp),%ebx
+    22aa:	53                   	push   %ebx
+    22ab:	e8 30 0a 00 00       	call   2ce0 <inet_ep_init@plt>
+    22b0:	a1 08 46 00 00       	mov    0x4608,%eax
+    22b5:	5a                   	pop    %edx
+    22b6:	66 c7 45 f4 43 00    	movw   $0x43,-0xc(%ebp)
+    22bc:	59                   	pop    %ecx
+    22bd:	53                   	push   %ebx
+    22be:	50                   	push   %eax
+    22bf:	e8 7c 09 00 00       	call   2c40 <inet_addr_set@plt>
+    22c4:	8b 45 10             	mov    0x10(%ebp),%eax
+    22c7:	50                   	push   %eax
+    22c8:	8b 45 0c             	mov    0xc(%ebp),%eax
+    22cb:	50                   	push   %eax
+    22cc:	8b 45 08             	mov    0x8(%ebp),%eax
+    22cf:	53                   	push   %ebx
+    22d0:	8b 40 04             	mov    0x4(%eax),%eax
+    22d3:	50                   	push   %eax
+    22d4:	e8 27 0a 00 00       	call   2d00 <udp_assoc_send_msg@plt>
+    22d9:	83 c4 20             	add    $0x20,%esp
+    22dc:	85 c0                	test   %eax,%eax
+    22de:	74 18                	je     22f8 <dhcp_send+0x58>
+    22e0:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    22e3:	50                   	push   %eax
+    22e4:	68 44 29 00 00       	push   $0x2944
+    22e9:	6a 01                	push   $0x1
+    22eb:	6a ff                	push   $0xffffffff
+    22ed:	e8 9e 08 00 00       	call   2b90 <log_msg@plt>
+    22f2:	83 c4 10             	add    $0x10,%esp
+    22f5:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    22f8:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    22fb:	c9                   	leave  
+    22fc:	c3                   	ret    
+    22fd:	8d 76 00             	lea    0x0(%esi),%esi
+
+00002300 <dhcp_transport_init>:
+    2300:	55                   	push   %ebp
+    2301:	89 e5                	mov    %esp,%ebp
+    2303:	56                   	push   %esi
+    2304:	53                   	push   %ebx
+    2305:	83 ec 44             	sub    $0x44,%esp
+    2308:	8d 75 c4             	lea    -0x3c(%ebp),%esi
+    230b:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    230e:	c7 45 bc 00 00 00 00 	movl   $0x0,-0x44(%ebp)
+    2315:	68 5b 29 00 00       	push   $0x295b
+    231a:	6a 04                	push   $0x4
+    231c:	6a ff                	push   $0xffffffff
+    231e:	c7 45 c0 00 00 00 00 	movl   $0x0,-0x40(%ebp)
+    2325:	e8 66 08 00 00       	call   2b90 <log_msg@plt>
+    232a:	89 34 24             	mov    %esi,(%esp)
+    232d:	e8 fe 08 00 00       	call   2c30 <inet_ep2_init@plt>
+    2332:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2335:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2338:	8d 45 bc             	lea    -0x44(%ebp),%eax
+    233b:	89 04 24             	mov    %eax,(%esp)
+    233e:	c7 45 c8 01 00 00 00 	movl   $0x1,-0x38(%ebp)
+    2345:	66 c7 45 dc 44 00    	movw   $0x44,-0x24(%ebp)
+    234b:	e8 f0 09 00 00       	call   2d40 <udp_create@plt>
+    2350:	83 c4 10             	add    $0x10,%esp
+    2353:	85 c0                	test   %eax,%eax
+    2355:	75 41                	jne    2398 <dhcp_transport_init+0x98>
+    2357:	83 ec 0c             	sub    $0xc,%esp
+    235a:	8d 45 c0             	lea    -0x40(%ebp),%eax
+    235d:	50                   	push   %eax
+    235e:	53                   	push   %ebx
+    235f:	68 30 45 00 00       	push   $0x4530
+    2364:	56                   	push   %esi
+    2365:	8b 75 bc             	mov    -0x44(%ebp),%esi
+    2368:	56                   	push   %esi
+    2369:	e8 b2 08 00 00       	call   2c20 <udp_assoc_create@plt>
+    236e:	83 c4 20             	add    $0x20,%esp
+    2371:	85 c0                	test   %eax,%eax
+    2373:	75 23                	jne    2398 <dhcp_transport_init+0x98>
+    2375:	8b 55 bc             	mov    -0x44(%ebp),%edx
+    2378:	89 13                	mov    %edx,(%ebx)
+    237a:	8b 55 c0             	mov    -0x40(%ebp),%edx
+    237d:	89 53 04             	mov    %edx,0x4(%ebx)
+    2380:	8b 55 10             	mov    0x10(%ebp),%edx
+    2383:	89 53 08             	mov    %edx,0x8(%ebx)
+    2386:	8b 55 14             	mov    0x14(%ebp),%edx
+    2389:	89 53 0c             	mov    %edx,0xc(%ebx)
+    238c:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    238f:	5b                   	pop    %ebx
+    2390:	5e                   	pop    %esi
+    2391:	5d                   	pop    %ebp
+    2392:	c3                   	ret    
+    2393:	90                   	nop
+    2394:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2398:	83 ec 0c             	sub    $0xc,%esp
+    239b:	8b 45 c0             	mov    -0x40(%ebp),%eax
+    239e:	50                   	push   %eax
+    239f:	e8 5c 08 00 00       	call   2c00 <udp_assoc_destroy@plt>
+    23a4:	8b 4d bc             	mov    -0x44(%ebp),%ecx
+    23a7:	5a                   	pop    %edx
+    23a8:	51                   	push   %ecx
+    23a9:	e8 e2 08 00 00       	call   2c90 <udp_destroy@plt>
+    23ae:	83 c4 10             	add    $0x10,%esp
+    23b1:	b8 f6 fe ff ff       	mov    $0xfffffef6,%eax
+    23b6:	eb d4                	jmp    238c <dhcp_transport_init+0x8c>
+    23b8:	90                   	nop
+    23b9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+000023c0 <dhcp_transport_fini>:
+    23c0:	55                   	push   %ebp
+    23c1:	89 e5                	mov    %esp,%ebp
+    23c3:	53                   	push   %ebx
+    23c4:	83 ec 10             	sub    $0x10,%esp
+    23c7:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    23ca:	8b 43 04             	mov    0x4(%ebx),%eax
+    23cd:	50                   	push   %eax
+    23ce:	e8 2d 08 00 00       	call   2c00 <udp_assoc_destroy@plt>
+    23d3:	8b 03                	mov    (%ebx),%eax
+    23d5:	83 c4 10             	add    $0x10,%esp
+    23d8:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    23db:	89 45 08             	mov    %eax,0x8(%ebp)
+    23de:	c9                   	leave  
+    23df:	e9 ac 08 00 00       	jmp    2c90 <udp_destroy@plt>
+    23e4:	64 68 63 70 2e 63    	fs push $0x632e7063
+    23ea:	00 64 6c 69          	add    %ah,0x69(%esp,%ebp,2)
+    23ee:	6e                   	outsb  %ds:(%esi),(%dx)
+    23ef:	6b 2d 3e 73 74 61 74 	imul   $0x74,0x6174733e,%ebp
+    23f6:	65 20 3d 3d 20 64 73 	and    %bh,%gs:0x7364203d
+    23fd:	5f                   	pop    %edi
+    23fe:	73 65                	jae    2465 <dhcp_transport_fini+0xa5>
+    2400:	6c                   	insb   (%dx),%es:(%edi)
+    2401:	65 63 74 69 6e       	arpl   %si,%gs:0x6e(%ecx,%ebp,2)
+    2406:	67 00 25             	add    %ah,(%di)
+    2409:	73 3a                	jae    2445 <dhcp_transport_fini+0x85>
+    240b:	20 64 63 70          	and    %ah,0x70(%ebx,%eiz,2)
+    240f:	73 72                	jae    2483 <dhcp_transport_fini+0xc3>
+    2411:	76 5f                	jbe    2472 <dhcp_transport_fini+0xb2>
+    2413:	64 69 73 63 6f 76 65 	imul   $0x7265766f,%fs:0x63(%ebx),%esi
+    241a:	72 
+    241b:	5f                   	pop    %edi
+    241c:	74 69                	je     2487 <dhcp_transport_fini+0xc7>
+    241e:	6d                   	insl   (%dx),%es:(%edi)
+    241f:	65 6f                	outsl  %gs:(%esi),(%dx)
+    2421:	75 74                	jne    2497 <dhcp_transport_fini+0xd7>
+    2423:	00 52 65             	add    %dl,0x65(%edx)
+    2426:	74 72                	je     249a <dhcp_transport_fini+0xda>
+    2428:	69 65 73 20 65 78 68 	imul   $0x68786520,0x73(%ebp),%esp
+    242f:	61                   	popa   
+    2430:	75 73                	jne    24a5 <dhcp_transport_fini+0xe5>
+    2432:	74 65                	je     2499 <dhcp_transport_fini+0xd9>
+    2434:	64 00 47 69          	add    %al,%fs:0x69(%edi)
+    2438:	76 69                	jbe    24a3 <dhcp_transport_fini+0xe3>
+    243a:	6e                   	outsb  %ds:(%esi),(%dx)
+    243b:	67 20 75 70          	and    %dh,0x70(%di)
+    243f:	20 6f 6e             	and    %ch,0x6e(%edi)
+    2442:	20 6c 69 6e          	and    %ch,0x6e(%ecx,%ebp,2)
+    2446:	6b 20 25             	imul   $0x25,(%eax),%esp
+    2449:	73 00                	jae    244b <dhcp_transport_fini+0x8b>
+    244b:	53                   	push   %ebx
+    244c:	65 6e                	outsb  %gs:(%esi),(%dx)
+    244e:	64 20 44 48 43       	and    %al,%fs:0x43(%eax,%ecx,2)
+    2453:	50                   	push   %eax
+    2454:	44                   	inc    %esp
+    2455:	49                   	dec    %ecx
+    2456:	53                   	push   %ebx
+    2457:	43                   	inc    %ebx
+    2458:	4f                   	dec    %edi
+    2459:	56                   	push   %esi
+    245a:	45                   	inc    %ebp
+    245b:	52                   	push   %edx
+    245c:	00 45 72             	add    %al,0x72(%ebp)
+    245f:	72 6f                	jb     24d0 <dhcp_transport_fini+0x110>
+    2461:	72 20                	jb     2483 <dhcp_transport_fini+0xc3>
+    2463:	73 65                	jae    24ca <dhcp_transport_fini+0x10a>
+    2465:	6e                   	outsb  %ds:(%esi),(%dx)
+    2466:	64 69 6e 67 20 44 48 	imul   $0x43484420,%fs:0x67(%esi),%ebp
+    246d:	43 
+    246e:	50                   	push   %eax
+    246f:	44                   	inc    %esp
+    2470:	49                   	dec    %ecx
+    2471:	53                   	push   %ebx
+    2472:	43                   	inc    %ebx
+    2473:	4f                   	dec    %edi
+    2474:	56                   	push   %esi
+    2475:	45                   	inc    %ebp
+    2476:	52                   	push   %edx
+    2477:	00 25 73 3a 20 64    	add    %ah,0x64203a73
+    247d:	68 63 70 73 72       	push   $0x72737063
+    2482:	76 5f                	jbe    24e3 <dhcp_transport_fini+0x123>
+    2484:	72 65                	jb     24eb <dhcp_transport_fini+0x12b>
+    2486:	63 76 28             	arpl   %si,0x28(%esi)
+    2489:	29 20                	sub    %esp,(%eax)
+    248b:	25 7a 75 20 62       	and    $0x6220757a,%eax
+    2490:	79 74                	jns    2506 <dhcp_transport_fini+0x146>
+    2492:	65 73 00             	gs jae 2495 <dhcp_transport_fini+0xd5>
+    2495:	52                   	push   %edx
+    2496:	65 63 65 69          	arpl   %sp,%gs:0x69(%ebp)
+    249a:	76 65                	jbe    2501 <dhcp_transport_fini+0x141>
+    249c:	20 72 65             	and    %dh,0x65(%edx)
+    249f:	70 6c                	jo     250d <dhcp_transport_fini+0x14d>
+    24a1:	79 00                	jns    24a3 <dhcp_transport_fini+0xe3>
+    24a3:	59                   	pop    %ecx
+    24a4:	6f                   	outsl  %ds:(%esi),(%dx)
+    24a5:	75 72                	jne    2519 <dhcp_transport_fini+0x159>
+    24a7:	20 49 50             	and    %cl,0x50(%ecx)
+    24aa:	20 61 64             	and    %ah,0x64(%ecx)
+    24ad:	64 72 65             	fs jb  2515 <dhcp_transport_fini+0x155>
+    24b0:	73 73                	jae    2525 <dhcp_transport_fini+0x165>
+    24b2:	3a 20                	cmp    (%eax),%ah
+    24b4:	25 73 00 4e 65       	and    $0x654e0073,%eax
+    24b9:	78 74                	js     252f <dhcp_transport_fini+0x16f>
+    24bb:	20 73 65             	and    %dh,0x65(%ebx)
+    24be:	72 76                	jb     2536 <dhcp_transport_fini+0x176>
+    24c0:	65 72 20             	gs jb  24e3 <dhcp_transport_fini+0x123>
+    24c3:	49                   	dec    %ecx
+    24c4:	50                   	push   %eax
+    24c5:	20 61 64             	and    %ah,0x64(%ecx)
+    24c8:	64 72 65             	fs jb  2530 <dhcp_transport_fini+0x170>
+    24cb:	73 73                	jae    2540 <dhcp_transport_fini+0x180>
+    24cd:	3a 20                	cmp    (%eax),%ah
+    24cf:	25 73 00 52 65       	and    $0x65520073,%eax
+    24d4:	6c                   	insb   (%dx),%es:(%edi)
+    24d5:	61                   	popa   
+    24d6:	79 20                	jns    24f8 <dhcp_transport_fini+0x138>
+    24d8:	61                   	popa   
+    24d9:	67 65 6e             	outsb  %gs:(%si),(%dx)
+    24dc:	74 20                	je     24fe <dhcp_transport_fini+0x13e>
+    24de:	49                   	dec    %ecx
+    24df:	50                   	push   %eax
+    24e0:	20 61 64             	and    %ah,0x64(%ecx)
+    24e3:	64 72 65             	fs jb  254b <dhcp_transport_fini+0x18b>
+    24e6:	73 73                	jae    255b <dhcp_transport_fini+0x19b>
+    24e8:	3a 20                	cmp    (%eax),%ah
+    24ea:	25 73 00 4d 69       	and    $0x694d0073,%eax
+    24ef:	73 73                	jae    2564 <dhcp_transport_fini+0x1a4>
+    24f1:	69 6e 67 20 73 65 72 	imul   $0x72657320,0x67(%esi),%ebp
+    24f8:	76 65                	jbe    255f <dhcp_transport_fini+0x19f>
+    24fa:	72 20                	jb     251c <dhcp_transport_fini+0x15c>
+    24fc:	49                   	dec    %ecx
+    24fd:	44                   	inc    %esp
+    24fe:	20 6f 70             	and    %ch,0x70(%edi)
+    2501:	74 69                	je     256c <dhcp_transport_fini+0x1ac>
+    2503:	6f                   	outsl  %ds:(%esi),(%dx)
+    2504:	6e                   	outsb  %ds:(%esi),(%dx)
+    2505:	2e 00 4d 69          	add    %cl,%cs:0x69(%ebp)
+    2509:	73 73                	jae    257e <dhcp_transport_fini+0x1be>
+    250b:	69 6e 67 20 73 75 62 	imul   $0x62757320,0x67(%esi),%ebp
+    2512:	6e                   	outsb  %ds:(%esi),(%dx)
+    2513:	65 74 20             	gs je  2536 <dhcp_transport_fini+0x176>
+    2516:	6d                   	insl   (%dx),%es:(%edi)
+    2517:	61                   	popa   
+    2518:	73 6b                	jae    2585 <dhcp_transport_fini+0x1c5>
+    251a:	20 6f 70             	and    %ch,0x70(%edi)
+    251d:	74 69                	je     2588 <dhcp_transport_fini+0x1c8>
+    251f:	6f                   	outsl  %ds:(%esi),(%dx)
+    2520:	6e                   	outsb  %ds:(%esi),(%dx)
+    2521:	2e 00 4f 66          	add    %cl,%cs:0x66(%edi)
+    2525:	66 65 72 65          	data16 gs jb 258e <dhcp_transport_fini+0x1ce>
+    2529:	64 20 6e 65          	and    %ch,%fs:0x65(%esi)
+    252d:	74 77                	je     25a6 <dhcp_transport_fini+0x1e6>
+    252f:	6f                   	outsl  %ds:(%esi),(%dx)
+    2530:	72 6b                	jb     259d <dhcp_transport_fini+0x1dd>
+    2532:	20 61 64             	and    %ah,0x64(%ecx)
+    2535:	64 72 65             	fs jb  259d <dhcp_transport_fini+0x1dd>
+    2538:	73 73                	jae    25ad <dhcp_transport_fini+0x1ed>
+    253a:	3a 20                	cmp    (%eax),%ah
+    253c:	25 73 00 52 6f       	and    $0x6f520073,%eax
+    2541:	75 74                	jne    25b7 <dhcp_transport_fini+0x1f7>
+    2543:	65 72 20             	gs jb  2566 <dhcp_transport_fini+0x1a6>
+    2546:	61                   	popa   
+    2547:	64 64 72 65          	fs fs jb 25b0 <dhcp_transport_fini+0x1f0>
+    254b:	73 73                	jae    25c0 <dhcp_transport_fini+0x200>
+    254d:	3a 20                	cmp    (%eax),%ah
+    254f:	25 73 00 44 4e       	and    $0x4e440073,%eax
+    2554:	53                   	push   %ebx
+    2555:	20 73 65             	and    %dh,0x65(%ebx)
+    2558:	72 76                	jb     25d0 <dhcp_transport_fini+0x210>
+    255a:	65 72 3a             	gs jb  2597 <dhcp_transport_fini+0x1d7>
+    255d:	20 25 73 00 45 72    	and    %ah,0x72450073
+    2563:	72 6f                	jb     25d4 <dhcp_transport_fini+0x214>
+    2565:	72 20                	jb     2587 <dhcp_transport_fini+0x1c7>
+    2567:	70 61                	jo     25ca <dhcp_transport_fini+0x20a>
+    2569:	72 73                	jb     25de <dhcp_transport_fini+0x21e>
+    256b:	69 6e 67 20 72 65 70 	imul   $0x70657220,0x67(%esi),%ebp
+    2572:	6c                   	insb   (%dx),%es:(%edi)
+    2573:	79 00                	jns    2575 <dhcp_transport_fini+0x1b5>
+    2575:	53                   	push   %ebx
+    2576:	65 6e                	outsb  %gs:(%esi),(%dx)
+    2578:	64 20 44 48 43       	and    %al,%fs:0x43(%eax,%ecx,2)
+    257d:	50                   	push   %eax
+    257e:	52                   	push   %edx
+    257f:	45                   	inc    %ebp
+    2580:	51                   	push   %ecx
+    2581:	55                   	push   %ebp
+    2582:	45                   	inc    %ebp
+    2583:	53                   	push   %ebx
+    2584:	54                   	push   %esp
+    2585:	00 45 72             	add    %al,0x72(%ebp)
+    2588:	72 6f                	jb     25f9 <dhcp_transport_fini+0x239>
+    258a:	72 20                	jb     25ac <dhcp_transport_fini+0x1ec>
+    258c:	73 65                	jae    25f3 <dhcp_transport_fini+0x233>
+    258e:	6e                   	outsb  %ds:(%esi),(%dx)
+    258f:	64 69 6e 67 20 72 65 	imul   $0x71657220,%fs:0x67(%esi),%ebp
+    2596:	71 
+    2597:	75 65                	jne    25fe <dhcp_transport_fini+0x23e>
+    2599:	73 74                	jae    260f <dhcp_transport_fini+0x24f>
+    259b:	2e 00 64 68 63       	add    %ah,%cs:0x63(%eax,%ebp,2)
+    25a0:	70 34                	jo     25d6 <dhcp_transport_fini+0x216>
+    25a2:	61                   	popa   
+    25a3:	00 64 68 63          	add    %ah,0x63(%eax,%ebp,2)
+    25a7:	70 64                	jo     260d <dhcp_transport_fini+0x24d>
+    25a9:	65 66 00 45 72       	data16 add %al,%gs:0x72(%ebp)
+    25ae:	72 6f                	jb     261f <dhcp_transport_fini+0x25f>
+    25b0:	72 20                	jb     25d2 <dhcp_transport_fini+0x212>
+    25b2:	63 72 65             	arpl   %si,0x65(%edx)
+    25b5:	61                   	popa   
+    25b6:	74 69                	je     2621 <dhcp_transport_fini+0x261>
+    25b8:	6e                   	outsb  %ds:(%esi),(%dx)
+    25b9:	67 20 63 6f          	and    %ah,0x6f(%bp,%di)
+    25bd:	6e                   	outsb  %ds:(%esi),(%dx)
+    25be:	66 69 67 75 72 61    	imul   $0x6172,0x75(%edi),%sp
+    25c4:	74 69                	je     262f <dhcp_transport_fini+0x26f>
+    25c6:	6f                   	outsl  %ds:(%esi),(%dx)
+    25c7:	6e                   	outsb  %ds:(%esi),(%dx)
+    25c8:	2e 00 25 73 3a 20 53 	add    %ah,%cs:0x53203a73
+    25cf:	75 63                	jne    2634 <dhcp_transport_fini+0x274>
+    25d1:	63 65 73             	arpl   %sp,0x73(%ebp)
+    25d4:	73 66                	jae    263c <dhcp_transport_fini+0x27c>
+    25d6:	75 6c                	jne    2644 <dhcp_transport_fini+0x284>
+    25d8:	6c                   	insb   (%dx),%es:(%edi)
+    25d9:	79 20                	jns    25fb <dhcp_transport_fini+0x23b>
+    25db:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    25de:	66 69 67 75 72 65    	imul   $0x6572,0x75(%edi),%sp
+    25e4:	64 2e 00 64 6c 69    	fs add %ah,%cs:0x69(%esp,%ebp,2)
+    25ea:	6e                   	outsb  %ds:(%esi),(%dx)
+    25eb:	6b 2d 3e 73 74 61 74 	imul   $0x74,0x6174733e,%ebp
+    25f2:	65 20 3d 3d 20 64 73 	and    %bh,%gs:0x7364203d
+    25f9:	5f                   	pop    %edi
+    25fa:	72 65                	jb     2661 <dhcp_transport_fini+0x2a1>
+    25fc:	71 75                	jno    2673 <dhcp_transport_fini+0x2b3>
+    25fe:	65 73 74             	gs jae 2675 <dhcp_transport_fini+0x2b5>
+    2601:	69 6e 67 00 25 73 3a 	imul   $0x3a732500,0x67(%esi),%ebp
+    2608:	20 64 63 70          	and    %ah,0x70(%ebx,%eiz,2)
+    260c:	73 72                	jae    2680 <dhcp_transport_fini+0x2c0>
+    260e:	76 5f                	jbe    266f <dhcp_transport_fini+0x2af>
+    2610:	72 65                	jb     2677 <dhcp_transport_fini+0x2b7>
+    2612:	71 75                	jno    2689 <dhcp_transport_fini+0x2c9>
+    2614:	65 73 74             	gs jae 268b <dhcp_transport_fini+0x2cb>
+    2617:	5f                   	pop    %edi
+    2618:	74 69                	je     2683 <dhcp_transport_fini+0x2c3>
+    261a:	6d                   	insl   (%dx),%es:(%edi)
+    261b:	65 6f                	outsl  %gs:(%esi),(%dx)
+    261d:	75 74                	jne    2693 <dhcp_transport_fini+0x2d3>
+    261f:	00 64 68 63          	add    %ah,0x63(%eax,%ebp,2)
+    2623:	70 73                	jo     2698 <dhcp_transport_fini+0x2d8>
+    2625:	72 76                	jb     269d <dhcp_transport_fini+0x2dd>
+    2627:	5f                   	pop    %edi
+    2628:	6c                   	insb   (%dx),%es:(%edi)
+    2629:	69 6e 6b 5f 61 64 64 	imul   $0x6464615f,0x6b(%esi),%ebp
+    2630:	28 25 7a 75 29 00    	sub    %ah,0x29757a
+    2636:	4c                   	dec    %esp
+    2637:	69 6e 6b 20 25 7a 75 	imul   $0x757a2520,0x6b(%esi),%ebp
+    263e:	20 61 6c             	and    %ah,0x6c(%ecx)
+    2641:	72 65                	jb     26a8 <dhcp_transport_fini+0x2e8>
+    2643:	61                   	popa   
+    2644:	64 79 20             	fs jns 2667 <dhcp_transport_fini+0x2a7>
+    2647:	61                   	popa   
+    2648:	64 64 65 64 00 45 72 	fs fs gs add %al,%fs:0x72(%ebp)
+    264f:	72 6f                	jb     26c0 <dhcp_transport_fini+0x300>
+    2651:	72 20                	jb     2673 <dhcp_transport_fini+0x2b3>
+    2653:	73 65                	jae    26ba <dhcp_transport_fini+0x2fa>
+    2655:	6e                   	outsb  %ds:(%esi),(%dx)
+    2656:	64 69 6e 67 20 44 48 	imul   $0x43484420,%fs:0x67(%esi),%ebp
+    265d:	43 
+    265e:	50                   	push   %eax
+    265f:	44                   	inc    %esp
+    2660:	49                   	dec    %ecx
+    2661:	53                   	push   %ebx
+    2662:	43                   	inc    %ebx
+    2663:	4f                   	dec    %edi
+    2664:	56                   	push   %esi
+    2665:	45                   	inc    %ebp
+    2666:	52                   	push   %edx
+    2667:	2e 00 4c 69 6e       	add    %cl,%cs:0x6e(%ecx,%ebp,2)
+    266c:	6b 20 25             	imul   $0x25,(%eax),%esp
+    266f:	7a 75                	jp     26e6 <dhcp_transport_fini+0x326>
+    2671:	20 64 6f 65          	and    %ah,0x65(%edi,%ebp,2)
+    2675:	73 6e                	jae    26e5 <dhcp_transport_fini+0x325>
+    2677:	27                   	daa    
+    2678:	74 20                	je     269a <dhcp_transport_fini+0x2da>
+    267a:	65 78 69             	gs js  26e6 <dhcp_transport_fini+0x326>
+    267d:	73 74                	jae    26f3 <dhcp_transport_fini+0x333>
+    267f:	00 52 65             	add    %dl,0x65(%edx)
+    2682:	63 65 69             	arpl   %sp,0x69(%ebp)
+    2685:	76 65                	jbe    26ec <dhcp_transport_fini+0x32c>
+    2687:	64 20 6f 66          	and    %ch,%fs:0x66(%edi)
+    268b:	66 65 72 20          	data16 gs jb 26af <dhcp_transport_fini+0x2ef>
+    268f:	69 6e 20 73 74 61 74 	imul   $0x74617473,0x20(%esi),%ebp
+    2696:	65 20 20             	and    %ah,%gs:(%eax)
+    2699:	25 64 2c 20 69       	and    $0x69202c64,%eax
+    269e:	67 6e                	outsb  %ds:(%si),(%dx)
+    26a0:	6f                   	outsl  %ds:(%esi),(%dx)
+    26a1:	72 69                	jb     270c <dhcp_transport_fini+0x34c>
+    26a3:	6e                   	outsb  %ds:(%esi),(%dx)
+    26a4:	67 2e 00 00          	add    %al,%cs:(%bx,%si)
+    26a8:	52                   	push   %edx
+    26a9:	65 63 65 69          	arpl   %sp,%gs:0x69(%ebp)
+    26ad:	76 65                	jbe    2714 <dhcp_transport_fini+0x354>
+    26af:	64 20 61 63          	and    %ah,%fs:0x63(%ecx)
+    26b3:	6b 20 69             	imul   $0x69,(%eax),%esp
+    26b6:	6e                   	outsb  %ds:(%esi),(%dx)
+    26b7:	20 73 74             	and    %dh,0x74(%ebx)
+    26ba:	61                   	popa   
+    26bb:	74 65                	je     2722 <dhcp_transport_fini+0x362>
+    26bd:	20 20                	and    %ah,(%eax)
+    26bf:	25 64 2c 20 69       	and    $0x69202c64,%eax
+    26c4:	67 6e                	outsb  %ds:(%si),(%dx)
+    26c6:	6f                   	outsl  %ds:(%esi),(%dx)
+    26c7:	72 69                	jb     2732 <dhcp_transport_fini+0x372>
+    26c9:	6e                   	outsb  %ds:(%esi),(%dx)
+    26ca:	67 2e 00 00          	add    %al,%cs:(%bx,%si)
+    26ce:	00 00                	add    %al,(%eax)
+    26d0:	45                   	inc    %ebp
+    26d1:	72 72                	jb     2745 <dhcp_transport_fini+0x385>
+    26d3:	6f                   	outsl  %ds:(%esi),(%dx)
+    26d4:	72 20                	jb     26f6 <dhcp_transport_fini+0x336>
+    26d6:	63 72 65             	arpl   %si,0x65(%edx)
+    26d9:	61                   	popa   
+    26da:	74 69                	je     2745 <dhcp_transport_fini+0x385>
+    26dc:	6e                   	outsb  %ds:(%esi),(%dx)
+    26dd:	67 20 49 50          	and    %cl,0x50(%bx,%di)
+    26e1:	20 61 64             	and    %ah,0x64(%ecx)
+    26e4:	64 72 65             	fs jb  274c <dhcp_transport_fini+0x38c>
+    26e7:	73 73                	jae    275c <dhcp_transport_fini+0x39c>
+    26e9:	20 25 73 20 28 25    	and    %ah,0x25282073
+    26ef:	64 29 00             	sub    %eax,%fs:(%eax)
+    26f2:	00 00                	add    %al,(%eax)
+    26f4:	45                   	inc    %ebp
+    26f5:	72 72                	jb     2769 <dhcp_transport_fini+0x3a9>
+    26f7:	6f                   	outsl  %ds:(%esi),(%dx)
+    26f8:	72 20                	jb     271a <dhcp_transport_fini+0x35a>
+    26fa:	63 72 65             	arpl   %si,0x65(%edx)
+    26fd:	61                   	popa   
+    26fe:	74 69                	je     2769 <dhcp_transport_fini+0x3a9>
+    2700:	6e                   	outsb  %ds:(%esi),(%dx)
+    2701:	67 20 64 65          	and    %ah,0x65(%si)
+    2705:	66 61                	popaw  
+    2707:	75 6c                	jne    2775 <dhcp_transport_fini+0x3b5>
+    2709:	74 20                	je     272b <dhcp_transport_fini+0x36b>
+    270b:	72 6f                	jb     277c <dhcp_transport_fini+0x3bc>
+    270d:	75 74                	jne    2783 <dhcp_transport_fini+0x3c3>
+    270f:	65 20 25 73 20 28 25 	and    %ah,%gs:0x25282073
+    2716:	64 29 2e             	sub    %ebp,%fs:(%esi)
+    2719:	00 00                	add    %al,(%eax)
+    271b:	00 45 72             	add    %al,0x72(%ebp)
+    271e:	72 6f                	jb     278f <dhcp_transport_fini+0x3cf>
+    2720:	72 20                	jb     2742 <dhcp_transport_fini+0x382>
+    2722:	73 65                	jae    2789 <dhcp_transport_fini+0x3c9>
+    2724:	74 74                	je     279a <dhcp_transport_fini+0x3da>
+    2726:	69 6e 67 20 6e 61 6d 	imul   $0x6d616e20,0x67(%esi),%ebp
+    272d:	65 73 65             	gs jae 2795 <dhcp_transport_fini+0x3d5>
+    2730:	72 76                	jb     27a8 <dhcp_transport_fini+0x3e8>
+    2732:	65 72 20             	gs jb  2755 <dhcp_transport_fini+0x395>
+    2735:	61                   	popa   
+    2736:	64 64 72 65          	fs fs jb 279f <dhcp_transport_fini+0x3df>
+    273a:	73 73                	jae    27af <dhcp_transport_fini+0x3ef>
+    273c:	20 28                	and    %ch,(%eax)
+    273e:	25 64 29 29 00       	and    $0x292964,%eax
+    2743:	00 52 65             	add    %dl,0x65(%edx)
+    2746:	63 65 69             	arpl   %sp,0x69(%ebp)
+    2749:	76 65                	jbe    27b0 <dhcp_transport_fini+0x3f0>
+    274b:	64 20 75 6e          	and    %dh,%fs:0x6e(%ebp)
+    274f:	65 78 70             	gs js  27c2 <dhcp_transport_fini+0x402>
+    2752:	65 63 74 65 64       	arpl   %si,%gs:0x64(%ebp,%eiz,2)
+    2757:	20 6d 65             	and    %ch,0x65(%ebp)
+    275a:	73 73                	jae    27cf <dhcp_transport_fini+0x40f>
+    275c:	61                   	popa   
+    275d:	67 65 20 74 79       	and    %dh,%gs:0x79(%si)
+    2762:	70 65                	jo     27c9 <dhcp_transport_fini+0x409>
+    2764:	2e 20 25 64 00 00 00 	and    %ah,%cs:0x64
+    276b:	00 45 72             	add    %al,0x72(%ebp)
+    276e:	72 6f                	jb     27df <dhcp_transport_fini+0x41f>
+    2770:	72 20                	jb     2792 <dhcp_transport_fini+0x3d2>
+    2772:	67 65 74 74          	addr16 gs je 27ea <dhcp_transport_fini+0x42a>
+    2776:	69 6e 67 20 70 72 6f 	imul   $0x6f727020,0x67(%esi),%ebp
+    277d:	70 65                	jo     27e4 <dhcp_transport_fini+0x424>
+    277f:	72 74                	jb     27f5 <dhcp_transport_fini+0x435>
+    2781:	69 65 73 20 66 6f 72 	imul   $0x726f6620,0x73(%ebp),%esp
+    2788:	20 6c 69 6e          	and    %ch,0x6e(%ecx,%ebp,2)
+    278c:	6b 20 25             	imul   $0x25,(%eax),%esp
+    278f:	7a 75                	jp     2806 <dhcp_transport_fini+0x446>
+    2791:	2e 00 00             	add    %al,%cs:(%eax)
+    2794:	45                   	inc    %ebp
+    2795:	72 72                	jb     2809 <dhcp_transport_fini+0x449>
+    2797:	6f                   	outsl  %ds:(%esi),(%dx)
+    2798:	72 20                	jb     27ba <dhcp_transport_fini+0x3fa>
+    279a:	69 6e 69 74 69 61 6c 	imul   $0x6c616974,0x69(%esi),%ebp
+    27a1:	69 7a 69 6e 67 20 44 	imul   $0x4420676e,0x69(%edx),%edi
+    27a8:	48                   	dec    %eax
+    27a9:	43                   	inc    %ebx
+    27aa:	50                   	push   %eax
+    27ab:	20 74 72 61          	and    %dh,0x61(%edx,%esi,2)
+    27af:	6e                   	outsb  %ds:(%esi),(%dx)
+    27b0:	73 70                	jae    2822 <dhcp_transport_fini+0x462>
+    27b2:	6f                   	outsl  %ds:(%esi),(%dx)
+    27b3:	72 74                	jb     2829 <dhcp_transport_fini+0x469>
+    27b5:	20 66 6f             	and    %ah,0x6f(%esi)
+    27b8:	72 20                	jb     27da <dhcp_transport_fini+0x41a>
+    27ba:	6c                   	insb   (%dx),%es:(%edi)
+    27bb:	69 6e 6b 20 25 73 2e 	imul   $0x2e732520,0x6b(%esi),%ebp
+    27c2:	00 64 68 63          	add    %ah,0x63(%eax,%ebp,2)
+    27c6:	70 5f                	jo     2827 <dhcp_transport_fini+0x467>
+    27c8:	63 6c 69 65          	arpl   %bp,0x65(%ecx,%ebp,2)
+    27cc:	6e                   	outsb  %ds:(%esi),(%dx)
+    27cd:	74 5f                	je     282e <dhcp_transport_fini+0x46e>
+    27cf:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    27d2:	6e                   	outsb  %ds:(%esi),(%dx)
+    27d3:	28 29                	sub    %ch,(%ecx)
+    27d5:	00 64 68 63          	add    %ah,0x63(%eax,%ebp,2)
+    27d9:	70 5f                	jo     283a <dhcp_transport_fini+0x47a>
+    27db:	6c                   	insb   (%dx),%es:(%edi)
+    27dc:	69 6e 6b 5f 61 64 64 	imul   $0x6464615f,0x6b(%esi),%ebp
+    27e3:	5f                   	pop    %edi
+    27e4:	73 72                	jae    2858 <dhcp_transport_fini+0x498>
+    27e6:	76 28                	jbe    2810 <dhcp_transport_fini+0x450>
+    27e8:	29 00                	sub    %eax,(%eax)
+    27ea:	64 68 63 70 5f 6c    	fs push $0x6c5f7063
+    27f0:	69 6e 6b 5f 72 65 6d 	imul   $0x6d65725f,0x6b(%esi),%ebp
+    27f7:	6f                   	outsl  %ds:(%esi),(%dx)
+    27f8:	76 65                	jbe    285f <dhcp_transport_fini+0x49f>
+    27fa:	5f                   	pop    %edi
+    27fb:	73 72                	jae    286f <dhcp_transport_fini+0x4af>
+    27fd:	76 28                	jbe    2827 <dhcp_transport_fini+0x467>
+    27ff:	29 00                	sub    %eax,(%eax)
+    2801:	64 68 63 70 5f 64    	fs push $0x645f7063
+    2807:	69 73 63 6f 76 65 72 	imul   $0x7265766f,0x63(%ebx),%esi
+    280e:	5f                   	pop    %edi
+    280f:	73 72                	jae    2883 <dhcp_transport_fini+0x4c3>
+    2811:	76 28                	jbe    283b <dhcp_transport_fini+0x47b>
+    2813:	29 00                	sub    %eax,(%eax)
+    2815:	25 73 3a 20 44       	and    $0x44203a73,%eax
+    281a:	48                   	dec    %eax
+    281b:	43                   	inc    %ebx
+    281c:	50                   	push   %eax
+    281d:	20 53 65             	and    %dl,0x65(%ebx)
+    2820:	72 76                	jb     2898 <dhcp_transport_fini+0x4d8>
+    2822:	69 63 65 0a 00 64 68 	imul   $0x6864000a,0x65(%ebx),%esp
+    2829:	63 70 5f             	arpl   %si,0x5f(%eax)
+    282c:	69 6e 69 74 28 29 00 	imul   $0x292874,0x69(%esi),%ebp
+    2833:	6e                   	outsb  %ds:(%esi),(%dx)
+    2834:	65 74 2f             	gs je  2866 <dhcp_transport_fini+0x4a6>
+    2837:	64 68 63 70 00 64    	fs push $0x64007063
+    283d:	68 63 70 3a 20       	push   $0x203a7063
+    2842:	41                   	inc    %ecx
+    2843:	63 63 65             	arpl   %sp,0x65(%ebx)
+    2846:	70 74                	jo     28bc <dhcp_transport_fini+0x4fc>
+    2848:	69 6e 67 20 63 6f 6e 	imul   $0x6e6f6320,0x67(%esi),%ebp
+    284f:	6e                   	outsb  %ds:(%esi),(%dx)
+    2850:	65 63 74 69 6f       	arpl   %si,%gs:0x6f(%ecx,%ebp,2)
+    2855:	6e                   	outsb  %ds:(%esi),(%dx)
+    2856:	73 2e                	jae    2886 <dhcp_transport_fini+0x4c6>
+    2858:	0a 00                	or     (%eax),%al
+    285a:	66 90                	xchg   %ax,%ax
+    285c:	64 68 63 70 3a 20    	fs push $0x203a7063
+    2862:	46                   	inc    %esi
+    2863:	61                   	popa   
+    2864:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    286b:	20 
+    286c:	69 6e 69 74 69 61 6c 	imul   $0x6c616974,0x69(%esi),%ebp
+    2873:	69 7a 65 20 6c 6f 67 	imul   $0x676f6c20,0x65(%edx),%edi
+    287a:	67 69 6e 67 2e 0a 00 	imul   $0xa2e,0x67(%bp),%ebp
+    2881:	00 
+    2882:	00 00                	add    %al,(%eax)
+    2884:	45                   	inc    %ebp
+    2885:	72 72                	jb     28f9 <dhcp_transport_fini+0x539>
+    2887:	6f                   	outsl  %ds:(%esi),(%dx)
+    2888:	72 20                	jb     28aa <dhcp_transport_fini+0x4ea>
+    288a:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    288d:	74 61                	je     28f0 <dhcp_transport_fini+0x530>
+    288f:	63 74 69 6e          	arpl   %si,0x6e(%ecx,%ebp,2)
+    2893:	67 20 69 6e          	and    %ch,0x6e(%bx,%di)
+    2897:	65 74 20             	gs je  28ba <dhcp_transport_fini+0x4fa>
+    289a:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    289d:	66 69 67 75 72 61    	imul   $0x6172,0x75(%edi),%sp
+    28a3:	74 69                	je     290e <dhcp_transport_fini+0x54e>
+    28a5:	6f                   	outsl  %ds:(%esi),(%dx)
+    28a6:	6e                   	outsb  %ds:(%esi),(%dx)
+    28a7:	20 73 65             	and    %dh,0x65(%ebx)
+    28aa:	72 76                	jb     2922 <dhcp_transport_fini+0x562>
+    28ac:	69 63 65 2e 0a 00 00 	imul   $0xa2e,0x65(%ebx),%esp
+    28b3:	00 46 61             	add    %al,0x61(%esi)
+    28b6:	69 6c 65 64 20 72 65 	imul   $0x67657220,0x64(%ebp,%eiz,2),%ebp
+    28bd:	67 
+    28be:	69 73 74 65 72 69 6e 	imul   $0x6e697265,0x74(%ebx),%esi
+    28c5:	67 20 73 65          	and    %dh,0x65(%bp,%di)
+    28c9:	72 76                	jb     2941 <dhcp_transport_fini+0x581>
+    28cb:	65 72 20             	gs jb  28ee <dhcp_transport_fini+0x52e>
+    28ce:	28 25 64 29 2e 00    	sub    %ah,0x2e2964
+    28d4:	46                   	inc    %esi
+    28d5:	61                   	popa   
+    28d6:	69 6c 65 64 20 72 65 	imul   $0x67657220,0x64(%ebp,%eiz,2),%ebp
+    28dd:	67 
+    28de:	69 73 74 65 72 69 6e 	imul   $0x6e697265,0x74(%ebx),%esi
+    28e5:	67 20 73 65          	and    %dh,0x65(%bp,%di)
+    28e9:	72 76                	jb     2961 <dhcp_transport_fini+0x5a1>
+    28eb:	69 63 65 20 28 25 64 	imul   $0x64252820,0x65(%ebx),%esp
+    28f2:	29 2e                	sub    %ebp,(%esi)
+    28f4:	00 4c 69 6e          	add    %cl,0x6e(%ecx,%ebp,2)
+    28f8:	6b 20 73             	imul   $0x73,(%eax),%esp
+    28fb:	74 61                	je     295e <dhcp_transport_fini+0x59e>
+    28fd:	74 65                	je     2964 <dhcp_transport_fini+0x5a4>
+    28ff:	20 63 68             	and    %ah,0x68(%ebx)
+    2902:	61                   	popa   
+    2903:	6e                   	outsb  %ds:(%esi),(%dx)
+    2904:	67 65 00 49 67       	add    %cl,%gs:0x67(%bx,%di)
+    2909:	6e                   	outsb  %ds:(%esi),(%dx)
+    290a:	6f                   	outsl  %ds:(%esi),(%dx)
+    290b:	72 69                	jb     2976 <dhcp_transport_fini+0x5b6>
+    290d:	6e                   	outsb  %ds:(%esi),(%dx)
+    290e:	67 20 49 43          	and    %cl,0x43(%bx,%di)
+    2912:	4d                   	dec    %ebp
+    2913:	50                   	push   %eax
+    2914:	20 65 72             	and    %ah,0x72(%ebp)
+    2917:	72 6f                	jb     2988 <dhcp_transport_fini+0x5c8>
+    2919:	72 00                	jb     291b <dhcp_transport_fini+0x55b>
+    291b:	64 68 63 70 5f 72    	fs push $0x725f7063
+    2921:	65 63 76 5f          	arpl   %si,%gs:0x5f(%esi)
+    2925:	6d                   	insl   (%dx),%es:(%edi)
+    2926:	73 67                	jae    298f <dhcp_transport_fini+0x5cf>
+    2928:	28 29                	sub    %ch,(%ecx)
+    292a:	00 45 72             	add    %al,0x72(%ebp)
+    292d:	72 6f                	jb     299e <dhcp_transport_fini+0x5de>
+    292f:	72 20                	jb     2951 <dhcp_transport_fini+0x591>
+    2931:	72 65                	jb     2998 <dhcp_transport_fini+0x5d8>
+    2933:	63 65 69             	arpl   %sp,0x69(%ebp)
+    2936:	76 69                	jbe    29a1 <dhcp_transport_fini+0x5e1>
+    2938:	6e                   	outsb  %ds:(%esi),(%dx)
+    2939:	67 20 6d 65          	and    %ch,0x65(%di)
+    293d:	73 73                	jae    29b2 <dhcp_transport_fini+0x5f2>
+    293f:	61                   	popa   
+    2940:	67 65 2e 00 46 61    	gs add %al,%cs:0x61(%bp)
+    2946:	69 6c 65 64 20 73 65 	imul   $0x6e657320,0x64(%ebp,%eiz,2),%ebp
+    294d:	6e 
+    294e:	64 69 6e 67 20 6d 65 	imul   $0x73656d20,%fs:0x67(%esi),%ebp
+    2955:	73 
+    2956:	73 61                	jae    29b9 <dhcp_transport_fini+0x5f9>
+    2958:	67 65 00 64 68       	add    %ah,%gs:0x68(%si)
+    295d:	63 70 5f             	arpl   %si,0x5f(%eax)
+    2960:	74 72                	je     29d4 <dhcp_transport_fini+0x614>
+    2962:	61                   	popa   
+    2963:	6e                   	outsb  %ds:(%esi),(%dx)
+    2964:	73 70                	jae    29d6 <dhcp_transport_fini+0x616>
+    2966:	6f                   	outsl  %ds:(%esi),(%dx)
+    2967:	72 74                	jb     29dd <dhcp_transport_fini+0x61d>
+    2969:	5f                   	pop    %edi
+    296a:	69 6e 69 74 28 29 00 	imul   $0x292874,0x69(%esi),%ebp
+    2971:	66 90                	xchg   %ax,%ax
+    2973:	90                   	nop
+    2974:	64 68 63 70 5f 72    	fs push $0x725f7063
+    297a:	65 63 76 5f          	arpl   %si,%gs:0x5f(%esi)
+    297e:	6d                   	insl   (%dx),%es:(%edi)
+    297f:	73 67                	jae    29e8 <dhcp_transport_fini+0x628>
+    2981:	28 29                	sub    %ch,(%ecx)
+    2983:	20 2d 20 63 61 6c    	and    %ch,0x6c616320
+    2989:	6c                   	insb   (%dx),%es:(%edi)
+    298a:	20 72 65             	and    %dh,0x65(%edx)
+    298d:	63 76 5f             	arpl   %si,0x5f(%esi)
+    2990:	63 62 00             	arpl   %sp,0x0(%edx)
+	...
+
+Disassembly of section .plt:
+
+00002af0 <__main@plt-0x10>:
+    2af0:	ff 35 40 45 00 00    	pushl  0x4540
+    2af6:	ff 25 44 45 00 00    	jmp    *0x4544
+    2afc:	00 00                	add    %al,(%eax)
+	...
+
+00002b00 <__main@plt>:
+    2b00:	ff 25 48 45 00 00    	jmp    *0x4548
+    2b06:	68 00 00 00 00       	push   $0x0
+    2b0b:	e9 e0 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b10 <inetcfg_init@plt>:
+    2b10:	ff 25 4c 45 00 00    	jmp    *0x454c
+    2b16:	68 08 00 00 00       	push   $0x8
+    2b1b:	e9 d0 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b20 <task_retval@plt>:
+    2b20:	ff 25 50 45 00 00    	jmp    *0x4550
+    2b26:	68 10 00 00 00       	push   $0x10
+    2b2b:	e9 c0 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b30 <printf@plt>:
+    2b30:	ff 25 54 45 00 00    	jmp    *0x4554
+    2b36:	68 18 00 00 00       	push   $0x18
+    2b3b:	e9 b0 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b40 <udp_rmsg_read@plt>:
+    2b40:	ff 25 58 45 00 00    	jmp    *0x4558
+    2b46:	68 20 00 00 00       	push   $0x20
+    2b4b:	e9 a0 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b50 <log_init@plt>:
+    2b50:	ff 25 5c 45 00 00    	jmp    *0x455c
+    2b56:	68 28 00 00 00       	push   $0x28
+    2b5b:	e9 90 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b60 <loc_service_register@plt>:
+    2b60:	ff 25 60 45 00 00    	jmp    *0x4560
+    2b66:	68 30 00 00 00       	push   $0x30
+    2b6b:	e9 80 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b70 <fibril_timer_clear@plt>:
+    2b70:	ff 25 64 45 00 00    	jmp    *0x4564
+    2b76:	68 38 00 00 00       	push   $0x38
+    2b7b:	e9 70 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b80 <async_answer_0@plt>:
+    2b80:	ff 25 68 45 00 00    	jmp    *0x4568
+    2b86:	68 40 00 00 00       	push   $0x40
+    2b8b:	e9 60 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002b90 <log_msg@plt>:
+    2b90:	ff 25 6c 45 00 00    	jmp    *0x456c
+    2b96:	68 48 00 00 00       	push   $0x48
+    2b9b:	e9 50 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002ba0 <inetcfg_addr_create_static@plt>:
+    2ba0:	ff 25 70 45 00 00    	jmp    *0x4570
+    2ba6:	68 50 00 00 00       	push   $0x50
+    2bab:	e9 40 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002bb0 <fibril_timer_destroy@plt>:
+    2bb0:	ff 25 74 45 00 00    	jmp    *0x4574
+    2bb6:	68 58 00 00 00       	push   $0x58
+    2bbb:	e9 30 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002bc0 <udp_assoc_userptr@plt>:
+    2bc0:	ff 25 78 45 00 00    	jmp    *0x4578
+    2bc6:	68 60 00 00 00       	push   $0x60
+    2bcb:	e9 20 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002bd0 <assert_abort@plt>:
+    2bd0:	ff 25 7c 45 00 00    	jmp    *0x457c
+    2bd6:	68 68 00 00 00       	push   $0x68
+    2bdb:	e9 10 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002be0 <calloc@plt>:
+    2be0:	ff 25 80 45 00 00    	jmp    *0x4580
+    2be6:	68 70 00 00 00       	push   $0x70
+    2beb:	e9 00 ff ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002bf0 <fibril_timer_set@plt>:
+    2bf0:	ff 25 84 45 00 00    	jmp    *0x4584
+    2bf6:	68 78 00 00 00       	push   $0x78
+    2bfb:	e9 f0 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c00 <udp_assoc_destroy@plt>:
+    2c00:	ff 25 88 45 00 00    	jmp    *0x4588
+    2c06:	68 80 00 00 00       	push   $0x80
+    2c0b:	e9 e0 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c10 <inet_addr_format@plt>:
+    2c10:	ff 25 8c 45 00 00    	jmp    *0x458c
+    2c16:	68 88 00 00 00       	push   $0x88
+    2c1b:	e9 d0 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c20 <udp_assoc_create@plt>:
+    2c20:	ff 25 90 45 00 00    	jmp    *0x4590
+    2c26:	68 90 00 00 00       	push   $0x90
+    2c2b:	e9 c0 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c30 <inet_ep2_init@plt>:
+    2c30:	ff 25 94 45 00 00    	jmp    *0x4594
+    2c36:	68 98 00 00 00       	push   $0x98
+    2c3b:	e9 b0 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c40 <inet_addr_set@plt>:
+    2c40:	ff 25 98 45 00 00    	jmp    *0x4598
+    2c46:	68 a0 00 00 00       	push   $0xa0
+    2c4b:	e9 a0 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c50 <udp_rmsg_size@plt>:
+    2c50:	ff 25 9c 45 00 00    	jmp    *0x459c
+    2c56:	68 a8 00 00 00       	push   $0xa8
+    2c5b:	e9 90 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c60 <inetcfg_link_get@plt>:
+    2c60:	ff 25 a0 45 00 00    	jmp    *0x45a0
+    2c66:	68 b0 00 00 00       	push   $0xb0
+    2c6b:	e9 80 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c70 <dnsr_set_srvaddr@plt>:
+    2c70:	ff 25 a4 45 00 00    	jmp    *0x45a4
+    2c76:	68 b8 00 00 00       	push   $0xb8
+    2c7b:	e9 70 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c80 <memset@plt>:
+    2c80:	ff 25 a8 45 00 00    	jmp    *0x45a8
+    2c86:	68 c0 00 00 00       	push   $0xc0
+    2c8b:	e9 60 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002c90 <udp_destroy@plt>:
+    2c90:	ff 25 ac 45 00 00    	jmp    *0x45ac
+    2c96:	68 c8 00 00 00       	push   $0xc8
+    2c9b:	e9 50 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002ca0 <inetcfg_sroute_create@plt>:
+    2ca0:	ff 25 b0 45 00 00    	jmp    *0x45b0
+    2ca6:	68 d0 00 00 00       	push   $0xd0
+    2cab:	e9 40 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002cb0 <loc_server_register@plt>:
+    2cb0:	ff 25 b4 45 00 00    	jmp    *0x45b4
+    2cb6:	68 d8 00 00 00       	push   $0xd8
+    2cbb:	e9 30 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002cc0 <inet_naddr_set@plt>:
+    2cc0:	ff 25 b8 45 00 00    	jmp    *0x45b8
+    2cc6:	68 e0 00 00 00       	push   $0xe0
+    2ccb:	e9 20 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002cd0 <async_get_call_timeout@plt>:
+    2cd0:	ff 25 bc 45 00 00    	jmp    *0x45bc
+    2cd6:	68 e8 00 00 00       	push   $0xe8
+    2cdb:	e9 10 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002ce0 <inet_ep_init@plt>:
+    2ce0:	ff 25 c0 45 00 00    	jmp    *0x45c0
+    2ce6:	68 f0 00 00 00       	push   $0xf0
+    2ceb:	e9 00 fe ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002cf0 <addr48@plt>:
+    2cf0:	ff 25 c4 45 00 00    	jmp    *0x45c4
+    2cf6:	68 f8 00 00 00       	push   $0xf8
+    2cfb:	e9 f0 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d00 <udp_assoc_send_msg@plt>:
+    2d00:	ff 25 c8 45 00 00    	jmp    *0x45c8
+    2d06:	68 00 01 00 00       	push   $0x100
+    2d0b:	e9 e0 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d10 <inet_naddr_format@plt>:
+    2d10:	ff 25 cc 45 00 00    	jmp    *0x45cc
+    2d16:	68 08 01 00 00       	push   $0x108
+    2d1b:	e9 d0 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d20 <fibril_switch@plt>:
+    2d20:	ff 25 d0 45 00 00    	jmp    *0x45d0
+    2d26:	68 10 01 00 00       	push   $0x110
+    2d2b:	e9 c0 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d30 <__syscall_fast@plt>:
+    2d30:	ff 25 d4 45 00 00    	jmp    *0x45d4
+    2d36:	68 18 01 00 00       	push   $0x118
+    2d3b:	e9 b0 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d40 <udp_create@plt>:
+    2d40:	ff 25 d8 45 00 00    	jmp    *0x45d8
+    2d46:	68 20 01 00 00       	push   $0x120
+    2d4b:	e9 a0 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d50 <fibril_timer_create@plt>:
+    2d50:	ff 25 dc 45 00 00    	jmp    *0x45dc
+    2d56:	68 28 01 00 00       	push   $0x128
+    2d5b:	e9 90 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d60 <async_set_fallback_port_handler@plt>:
+    2d60:	ff 25 e0 45 00 00    	jmp    *0x45e0
+    2d66:	68 30 01 00 00       	push   $0x130
+    2d6b:	e9 80 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>
+
+00002d70 <free@plt>:
+    2d70:	ff 25 e4 45 00 00    	jmp    *0x45e4
+    2d76:	68 38 01 00 00       	push   $0x138
+    2d7b:	e9 70 fd ff ff       	jmp    2af0 <dhcp_transport_fini+0x730>

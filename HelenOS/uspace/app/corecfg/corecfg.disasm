@@ -1,0 +1,255 @@
+
+corecfg:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 98 26 00 00    	lea    0x2698,%eax
+    1110:	c7 00 20 14 00 00    	movl   $0x1420,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 9e 02 00 00       	call   13c0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <main>:
+    1130:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1134:	83 e4 f0             	and    $0xfffffff0,%esp
+    1137:	ff 71 fc             	pushl  -0x4(%ecx)
+    113a:	55                   	push   %ebp
+    113b:	89 e5                	mov    %esp,%ebp
+    113d:	56                   	push   %esi
+    113e:	53                   	push   %ebx
+    113f:	51                   	push   %ecx
+    1140:	83 ec 1c             	sub    $0x1c,%esp
+    1143:	8b 31                	mov    (%ecx),%esi
+    1145:	8b 59 04             	mov    0x4(%ecx),%ebx
+    1148:	e8 93 02 00 00       	call   13e0 <corecfg_init@plt>
+    114d:	85 c0                	test   %eax,%eax
+    114f:	0f 85 f2 00 00 00    	jne    1247 <main+0x117>
+    1155:	4e                   	dec    %esi
+    1156:	7e 16                	jle    116e <main+0x3e>
+    1158:	51                   	push   %ecx
+    1159:	51                   	push   %ecx
+    115a:	68 b4 12 00 00       	push   $0x12b4
+    115f:	ff 73 04             	pushl  0x4(%ebx)
+    1162:	e8 89 02 00 00       	call   13f0 <str_cmp@plt>
+    1167:	83 c4 10             	add    $0x10,%esp
+    116a:	85 c0                	test   %eax,%eax
+    116c:	75 46                	jne    11b4 <main+0x84>
+    116e:	83 ec 0c             	sub    $0xc,%esp
+    1171:	8d 45 e7             	lea    -0x19(%ebp),%eax
+    1174:	50                   	push   %eax
+    1175:	e8 96 02 00 00       	call   1410 <corecfg_get_enable@plt>
+    117a:	83 c4 10             	add    $0x10,%esp
+    117d:	89 c3                	mov    %eax,%ebx
+    117f:	85 c0                	test   %eax,%eax
+    1181:	0f 85 da 00 00 00    	jne    1261 <main+0x131>
+    1187:	b8 a3 12 00 00       	mov    $0x12a3,%eax
+    118c:	80 7d e7 00          	cmpb   $0x0,-0x19(%ebp)
+    1190:	75 05                	jne    1197 <main+0x67>
+    1192:	b8 ab 12 00 00       	mov    $0x12ab,%eax
+    1197:	52                   	push   %edx
+    1198:	52                   	push   %edx
+    1199:	50                   	push   %eax
+    119a:	68 b8 12 00 00       	push   $0x12b8
+    119f:	e8 2c 02 00 00       	call   13d0 <printf@plt>
+    11a4:	83 c4 10             	add    $0x10,%esp
+    11a7:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    11aa:	89 d8                	mov    %ebx,%eax
+    11ac:	59                   	pop    %ecx
+    11ad:	5b                   	pop    %ebx
+    11ae:	5e                   	pop    %esi
+    11af:	5d                   	pop    %ebp
+    11b0:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    11b3:	c3                   	ret    
+    11b4:	56                   	push   %esi
+    11b5:	56                   	push   %esi
+    11b6:	68 c9 12 00 00       	push   $0x12c9
+    11bb:	ff 73 04             	pushl  0x4(%ebx)
+    11be:	e8 2d 02 00 00       	call   13f0 <str_cmp@plt>
+    11c3:	83 c4 10             	add    $0x10,%esp
+    11c6:	85 c0                	test   %eax,%eax
+    11c8:	0f 84 ad 00 00 00    	je     127b <main+0x14b>
+    11ce:	51                   	push   %ecx
+    11cf:	51                   	push   %ecx
+    11d0:	68 d0 12 00 00       	push   $0x12d0
+    11d5:	ff 73 04             	pushl  0x4(%ebx)
+    11d8:	e8 13 02 00 00       	call   13f0 <str_cmp@plt>
+    11dd:	83 c4 10             	add    $0x10,%esp
+    11e0:	85 c0                	test   %eax,%eax
+    11e2:	0f 84 a7 00 00 00    	je     128f <main+0x15f>
+    11e8:	50                   	push   %eax
+    11e9:	ff 73 04             	pushl  0x4(%ebx)
+    11ec:	68 d8 12 00 00       	push   $0x12d8
+    11f1:	68 e0 12 00 00       	push   $0x12e0
+    11f6:	e8 d5 01 00 00       	call   13d0 <printf@plt>
+    11fb:	c7 04 24 fb 12 00 00 	movl   $0x12fb,(%esp)
+    1202:	e8 c9 01 00 00       	call   13d0 <printf@plt>
+    1207:	5a                   	pop    %edx
+    1208:	59                   	pop    %ecx
+    1209:	68 d8 12 00 00       	push   $0x12d8
+    120e:	68 04 13 00 00       	push   $0x1304
+    1213:	e8 b8 01 00 00       	call   13d0 <printf@plt>
+    1218:	5b                   	pop    %ebx
+    1219:	5e                   	pop    %esi
+    121a:	68 d8 12 00 00       	push   $0x12d8
+    121f:	68 0f 13 00 00       	push   $0x130f
+    1224:	e8 a7 01 00 00       	call   13d0 <printf@plt>
+    1229:	58                   	pop    %eax
+    122a:	5a                   	pop    %edx
+    122b:	68 d8 12 00 00       	push   $0x12d8
+    1230:	68 1b 13 00 00       	push   $0x131b
+    1235:	bb 01 00 00 00       	mov    $0x1,%ebx
+    123a:	e8 91 01 00 00       	call   13d0 <printf@plt>
+    123f:	83 c4 10             	add    $0x10,%esp
+    1242:	e9 60 ff ff ff       	jmp    11a7 <main+0x77>
+    1247:	83 ec 0c             	sub    $0xc,%esp
+    124a:	bb 01 00 00 00       	mov    $0x1,%ebx
+    124f:	68 28 13 00 00       	push   $0x1328
+    1254:	e8 77 01 00 00       	call   13d0 <printf@plt>
+    1259:	83 c4 10             	add    $0x10,%esp
+    125c:	e9 46 ff ff ff       	jmp    11a7 <main+0x77>
+    1261:	83 ec 0c             	sub    $0xc,%esp
+    1264:	bb 01 00 00 00       	mov    $0x1,%ebx
+    1269:	68 4c 13 00 00       	push   $0x134c
+    126e:	e8 5d 01 00 00       	call   13d0 <printf@plt>
+    1273:	83 c4 10             	add    $0x10,%esp
+    1276:	e9 2c ff ff ff       	jmp    11a7 <main+0x77>
+    127b:	83 ec 0c             	sub    $0xc,%esp
+    127e:	6a 01                	push   $0x1
+    1280:	e8 7b 01 00 00       	call   1400 <corecfg_set_enable@plt>
+    1285:	83 c4 10             	add    $0x10,%esp
+    1288:	89 c3                	mov    %eax,%ebx
+    128a:	e9 18 ff ff ff       	jmp    11a7 <main+0x77>
+    128f:	83 ec 0c             	sub    $0xc,%esp
+    1292:	6a 00                	push   $0x0
+    1294:	e8 67 01 00 00       	call   1400 <corecfg_set_enable@plt>
+    1299:	83 c4 10             	add    $0x10,%esp
+    129c:	89 c3                	mov    %eax,%ebx
+    129e:	e9 04 ff ff ff       	jmp    11a7 <main+0x77>
+    12a3:	65 6e                	outsb  %gs:(%esi),(%dx)
+    12a5:	61                   	popa   
+    12a6:	62 6c 65 64          	bound  %ebp,0x64(%ebp,%eiz,2)
+    12aa:	00 64 69 73          	add    %ah,0x73(%ecx,%ebp,2)
+    12ae:	61                   	popa   
+    12af:	62 6c 65 64          	bound  %ebp,0x64(%ebp,%eiz,2)
+    12b3:	00 67 65             	add    %ah,0x65(%edi)
+    12b6:	74 00                	je     12b8 <main+0x188>
+    12b8:	43                   	inc    %ebx
+    12b9:	6f                   	outsl  %ds:(%esi),(%dx)
+    12ba:	72 65                	jb     1321 <main+0x1f1>
+    12bc:	20 66 69             	and    %ah,0x69(%esi)
+    12bf:	6c                   	insb   (%dx),%es:(%edi)
+    12c0:	65 73 3a             	gs jae 12fd <main+0x1cd>
+    12c3:	20 25 73 2e 0a 00    	and    %ah,0xa2e73
+    12c9:	65 6e                	outsb  %gs:(%esi),(%dx)
+    12cb:	61                   	popa   
+    12cc:	62 6c 65 00          	bound  %ebp,0x0(%ebp,%eiz,2)
+    12d0:	64 69 73 61 62 6c 65 	imul   $0x656c62,%fs:0x61(%ebx),%esi
+    12d7:	00 
+    12d8:	63 6f 72             	arpl   %bp,0x72(%edi)
+    12db:	65 63 66 67          	arpl   %sp,%gs:0x67(%esi)
+    12df:	00 25 73 3a 20 55    	add    %ah,0x55203a73
+    12e5:	6e                   	outsb  %ds:(%esi),(%dx)
+    12e6:	6b 6e 6f 77          	imul   $0x77,0x6f(%esi),%ebp
+    12ea:	6e                   	outsb  %ds:(%esi),(%dx)
+    12eb:	20 63 6f             	and    %ah,0x6f(%ebx)
+    12ee:	6d                   	insl   (%dx),%es:(%edi)
+    12ef:	6d                   	insl   (%dx),%es:(%edi)
+    12f0:	61                   	popa   
+    12f1:	6e                   	outsb  %ds:(%esi),(%dx)
+    12f2:	64 20 27             	and    %ah,%fs:(%edi)
+    12f5:	25 73 27 2e 0a       	and    $0xa2e2773,%eax
+    12fa:	00 53 79             	add    %dl,0x79(%ebx)
+    12fd:	6e                   	outsb  %ds:(%esi),(%dx)
+    12fe:	74 61                	je     1361 <main+0x231>
+    1300:	78 3a                	js     133c <main+0x20c>
+    1302:	0a 00                	or     (%eax),%al
+    1304:	09 25 73 20 5b 67    	or     %esp,0x675b2073
+    130a:	65 74 5d             	gs je  136a <main+0x23a>
+    130d:	0a 00                	or     (%eax),%al
+    130f:	09 25 73 20 65 6e    	or     %esp,0x6e652073
+    1315:	61                   	popa   
+    1316:	62 6c 65 0a          	bound  %ebp,0xa(%ebp,%eiz,2)
+    131a:	00 09                	add    %cl,(%ecx)
+    131c:	25 73 20 64 69       	and    $0x69642073,%eax
+    1321:	73 61                	jae    1384 <main+0x254>
+    1323:	62 6c 65 0a          	bound  %ebp,0xa(%ebp,%eiz,2)
+    1327:	00 46 61             	add    %al,0x61(%esi)
+    132a:	69 6c 65 64 20 63 6f 	imul   $0x6e6f6320,0x64(%ebp,%eiz,2),%ebp
+    1331:	6e 
+    1332:	74 61                	je     1395 <main+0x265>
+    1334:	63 74 69 6e          	arpl   %si,0x6e(%ecx,%ebp,2)
+    1338:	67 20 63 6f          	and    %ah,0x6f(%bp,%di)
+    133c:	72 65                	jb     13a3 <main+0x273>
+    133e:	63 66 67             	arpl   %sp,0x67(%esi)
+    1341:	20 73 65             	and    %dh,0x65(%ebx)
+    1344:	72 76                	jb     13bc <main+0x28c>
+    1346:	69 63 65 2e 0a 00 46 	imul   $0x46000a2e,0x65(%ebx),%esp
+    134d:	61                   	popa   
+    134e:	69 6c 65 64 20 67 65 	imul   $0x74656720,0x64(%ebp,%eiz,2),%ebp
+    1355:	74 
+    1356:	74 69                	je     13c1 <__main@plt+0x1>
+    1358:	6e                   	outsb  %ds:(%esi),(%dx)
+    1359:	67 20 63 6f          	and    %ah,0x6f(%bp,%di)
+    135d:	72 65                	jb     13c4 <__main@plt+0x4>
+    135f:	20 66 69             	and    %ah,0x69(%esi)
+    1362:	6c                   	insb   (%dx),%es:(%edi)
+    1363:	65 20 73 65          	and    %dh,%gs:0x65(%ebx)
+    1367:	74 74                	je     13dd <printf@plt+0xd>
+    1369:	69 6e 67 2e 0a 00 00 	imul   $0xa2e,0x67(%esi),%ebp
+
+Disassembly of section .plt:
+
+000013b0 <__main@plt-0x10>:
+    13b0:	ff 35 70 26 00 00    	pushl  0x2670
+    13b6:	ff 25 74 26 00 00    	jmp    *0x2674
+    13bc:	00 00                	add    %al,(%eax)
+	...
+
+000013c0 <__main@plt>:
+    13c0:	ff 25 78 26 00 00    	jmp    *0x2678
+    13c6:	68 00 00 00 00       	push   $0x0
+    13cb:	e9 e0 ff ff ff       	jmp    13b0 <main+0x280>
+
+000013d0 <printf@plt>:
+    13d0:	ff 25 7c 26 00 00    	jmp    *0x267c
+    13d6:	68 08 00 00 00       	push   $0x8
+    13db:	e9 d0 ff ff ff       	jmp    13b0 <main+0x280>
+
+000013e0 <corecfg_init@plt>:
+    13e0:	ff 25 80 26 00 00    	jmp    *0x2680
+    13e6:	68 10 00 00 00       	push   $0x10
+    13eb:	e9 c0 ff ff ff       	jmp    13b0 <main+0x280>
+
+000013f0 <str_cmp@plt>:
+    13f0:	ff 25 84 26 00 00    	jmp    *0x2684
+    13f6:	68 18 00 00 00       	push   $0x18
+    13fb:	e9 b0 ff ff ff       	jmp    13b0 <main+0x280>
+
+00001400 <corecfg_set_enable@plt>:
+    1400:	ff 25 88 26 00 00    	jmp    *0x2688
+    1406:	68 20 00 00 00       	push   $0x20
+    140b:	e9 a0 ff ff ff       	jmp    13b0 <main+0x280>
+
+00001410 <corecfg_get_enable@plt>:
+    1410:	ff 25 8c 26 00 00    	jmp    *0x268c
+    1416:	68 28 00 00 00       	push   $0x28
+    141b:	e9 90 ff ff ff       	jmp    13b0 <main+0x280>
+
+00001420 <__syscall_fast@plt>:
+    1420:	ff 25 90 26 00 00    	jmp    *0x2690
+    1426:	68 30 00 00 00       	push   $0x30
+    142b:	e9 80 ff ff ff       	jmp    13b0 <main+0x280>

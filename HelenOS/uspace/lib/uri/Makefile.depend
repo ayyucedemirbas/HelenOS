@@ -1,0 +1,64 @@
+# DO NOT DELETE
+
+uri.o: ../../lib/c/include/assert.h ../../lib/c/include/stdlib.h
+uri.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+uri.o: ../../lib/c/arch/ia32/include/libarch/types.h
+uri.o: ../../lib/c/arch/ia32/include/libarch/common.h
+uri.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+uri.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+uri.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+uri.o: ../../lib/c/arch/ia32/include/libarch/config.h
+uri.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+uri.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+uri.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+uri.o: ../../lib/c/include/cc.h ../../lib/c/include/ctype.h
+uri.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h uri.h
+# DO NOT DELETE
+
+test/main.test.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/types.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/common.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+test/main.test.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+test/main.test.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+test/main.test.o: ../../lib/c/include/stdbool.h
+test/main.test.o: ../../../abi/include/abi/bool.h
+test/main.test.o: ../../lib/c/include/io/verify.h
+test/main.test.o: ../../../abi/include/abi/kio.h
+test/main.test.o: ../../lib/pcut/include/pcut/pcut.h
+test/main.test.o: ../../lib/pcut/include/pcut/asserts.h
+test/main.test.o: ../../lib/c/include/errno.h
+test/main.test.o: ../../../abi/include/abi/errno.h
+test/main.test.o: ../../lib/pcut/include/pcut/tests.h
+test/main.test.o: ../../lib/pcut/include/pcut/helper.h
+test/main.test.o: ../../lib/pcut/include/pcut/datadef.h
+test/main.test.o: ../../lib/pcut/include/pcut/prevs.h
+test/main.test.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+test/main.test.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+test/main.test.o: ../../lib/c/arch/ia32/include/libarch/config.h
+test/main.test.o: ../../lib/c/include/malloc.h
+test/main.test.o: ../../lib/c/include/stacktrace.h
+test/main.test.o: ../../lib/c/include/stddef.h
+test/parser.test.o: ../../lib/pcut/include/pcut/pcut.h
+test/parser.test.o: ../../lib/pcut/include/pcut/asserts.h
+test/parser.test.o: ../../lib/c/include/errno.h
+test/parser.test.o: ../../../abi/include/abi/errno.h
+test/parser.test.o: ../../lib/pcut/include/pcut/tests.h
+test/parser.test.o: ../../lib/pcut/include/pcut/helper.h
+test/parser.test.o: ../../lib/pcut/include/pcut/datadef.h
+test/parser.test.o: ../../lib/pcut/include/pcut/prevs.h
+test/parser.test.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+test/parser.test.o: ../../lib/c/include/sys/types.h
+test/parser.test.o: ../../lib/c/arch/ia32/include/libarch/types.h
+test/parser.test.o: ../../lib/c/arch/ia32/include/libarch/common.h
+test/parser.test.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+test/parser.test.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+test/parser.test.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+test/parser.test.o: ../../lib/c/arch/ia32/include/libarch/config.h
+test/parser.test.o: ../../lib/c/include/malloc.h
+test/parser.test.o: ../../lib/c/include/stacktrace.h
+test/parser.test.o: ../../lib/c/include/stdbool.h
+test/parser.test.o: ../../../abi/include/abi/bool.h
+test/parser.test.o: ../../lib/c/include/stddef.h ../../lib/c/include/str.h
+test/parser.test.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h uri.h

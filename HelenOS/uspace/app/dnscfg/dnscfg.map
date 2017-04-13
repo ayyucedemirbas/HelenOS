@@ -1,0 +1,142 @@
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0x69b dnscfg.o
+ .debug_abbrev  0x0000000000000000      0x1e7 dnscfg.o
+ .debug_loc     0x0000000000000000      0x210 dnscfg.o
+ .debug_aranges
+                0x0000000000000000       0x28 dnscfg.o
+ .debug_ranges  0x0000000000000000       0x50 dnscfg.o
+ .debug_line    0x0000000000000000      0x1d5 dnscfg.o
+ .debug_str     0x0000000000000000      0x765 dnscfg.o
+ .comment       0x0000000000000000       0x12 dnscfg.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 dnscfg.o
+ .eh_frame      0x0000000000000000       0x80 dnscfg.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130      0x3dc
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130       0x48 dnscfg.o
+ *fill*         0x0000000000001178        0x8 
+ .text.startup  0x0000000000001180      0x21a dnscfg.o
+                0x0000000000001180                main
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x000000000000139a       0xc4 dnscfg.o
+                                         0xcb (size before relaxing)
+ *fill*         0x000000000000145e        0x2 
+ .rodata.str1.4
+                0x0000000000001460       0xac dnscfg.o
+                                         0xaa (size before relaxing)
+
+.rel.plt        0x000000000000150c       0x58
+ *(.rel.plt)
+ .rel.plt       0x000000000000150c       0x58 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000001564        0x8
+ *(.rel.*)
+ .rel.got       0x0000000000001564        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000001564        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x000000000000156c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x000000000000156c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x000000000000156c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000001570       0xc0
+ *(.plt)
+ .plt           0x0000000000001570       0xc0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000001580                __main
+                0x0000000000001590                printf
+                0x00000000000015a0                dnsr_get_srvaddr
+                0x00000000000015b0                inet_addr_parse
+                0x00000000000015c0                inet_addr_any
+                0x00000000000015d0                inet_addr_format
+                0x00000000000015e0                dnsr_set_srvaddr
+                0x00000000000015f0                str_cmp
+                0x0000000000001600                str_error
+                0x0000000000001610                __syscall_fast
+                0x0000000000001620                free
+
+.dynsym         0x0000000000001630       0xf0
+ *(.dynsym)
+ .dynsym        0x0000000000001630       0xf0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000001720       0xbc
+ *(.dynstr)
+ .dynstr        0x0000000000001720       0xbc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000017dc       0x50
+ *(.hash)
+ .hash          0x00000000000017dc       0x50 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x000000000000182c       0x13
+ *(.interp)
+ .interp        0x000000000000182c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000283f                . = (. + 0x1000)
+
+.dynamic        0x0000000000002840       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000002840       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002840                _DYNAMIC
+
+.data           0x00000000000028e8        0x0
+ *(.data)
+ .data          0x00000000000028e8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000028e8        0x0 dnscfg.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000028e8        0x0
+ *(.got)
+ .got           0x00000000000028e8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000028e8       0x38
+ *(.got.plt)
+ .got.plt       0x00000000000028e8       0x38 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000028e8                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000002920        0x4
+ *(.dynbss)
+ *fill*         0x0000000000002920        0x0 
+ .dynbss        0x0000000000002920        0x4 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002920                __syscall_fast_func
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000002924        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000002924        0x0 dnscfg.o
+
+/DISCARD/
+ *(*)
+LOAD dnscfg.o
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(dnscfg elf32-i386)

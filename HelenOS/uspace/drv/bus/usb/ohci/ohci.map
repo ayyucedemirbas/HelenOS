@@ -1,0 +1,1369 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+                              main.o (hcd_ddf_add_hc)
+../../../../lib/usbhost/libusbhost.a(endpoint.o)
+                              ohci_endpoint.o (endpoint_set_hc_data)
+../../../../lib/usbhost/libusbhost.a(hcd.o)
+                              ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o) (hcd_init)
+../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+                              ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o) (bandwidth_count_usb11)
+../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+                              ../../../../lib/usbhost/libusbhost.a(hcd.o) (usb_transfer_batch_create)
+../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+                              ohci_rh.o (req_nop)
+../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+                              ohci_rh.o (virthub_get_data)
+../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+                              ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o) (virthub_interface_descriptor_ex)
+../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+                              ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o) (usbvirt_control_write)
+../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+                              ../../../../lib/usbvirt/libusbvirt.a(transfer.o) (process_control_transfer)
+../../../../lib/usb/libusb.a(class.o)
+                              ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o) (usb_str_class)
+../../../../lib/usb/libusb.a(debug.o)
+                              ../../../../lib/usbvirt/libusbvirt.a(transfer.o) (usb_debug_str_buffer)
+../../../../lib/usb/libusb.a(usb.o)
+                              hc.o (usb_str_transfer_type)
+../../../../lib/drv/libdrv.a(driver.o)
+                              ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o) (ddf_dev_data_alloc)
+../../../../lib/drv/libdrv.a(dev_iface.o)
+                              ../../../../lib/drv/libdrv.a(driver.o) (get_remote_iface)
+../../../../lib/drv/libdrv.a(interrupt.o)
+                              ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o) (register_interrupt_handler)
+../../../../lib/drv/libdrv.a(logbuf.o)
+                              ../../../../lib/usb/libusb.a(debug.o) (ddf_dump_buffer)
+../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_audio_mixer_iface)
+../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_audio_pcm_iface)
+../../../../lib/drv/libdrv.a(remote_hw_res.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_hw_res_iface)
+../../../../lib/drv/libdrv.a(remote_pio_window.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_pio_window_iface)
+../../../../lib/drv/libdrv.a(remote_char_dev.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_char_dev_iface)
+../../../../lib/drv/libdrv.a(remote_nic.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_nic_iface)
+../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_ieee80211_iface)
+../../../../lib/drv/libdrv.a(remote_usb.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_usb_iface)
+../../../../lib/drv/libdrv.a(remote_pci.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_pci_iface)
+../../../../lib/drv/libdrv.a(remote_usbhc.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_usbhc_iface)
+../../../../lib/drv/libdrv.a(remote_usbhid.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_usbhid_iface)
+../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_clock_dev_iface)
+../../../../lib/drv/libdrv.a(remote_led_dev.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_led_dev_iface)
+../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_battery_dev_iface)
+../../../../lib/drv/libdrv.a(remote_ahci.o)
+                              ../../../../lib/drv/libdrv.a(dev_iface.o) (remote_ahci_iface)
+../../../../lib/drv/libdrv.a(log.o)
+                              ../../../../lib/drv/libdrv.a(remote_audio_pcm.o) (ddf_msg)
+
+Allocating common symbols
+Common symbol       size              file
+
+assert              0x4               hc.o
+sassert             0x4               hc.o
+static_assert       0x4               ../../../../lib/drv/libdrv.a(remote_usb.o)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0xe33 endpoint_list.o
+ .debug_abbrev  0x0000000000000000      0x25e endpoint_list.o
+ .debug_loc     0x0000000000000000      0x3a1 endpoint_list.o
+ .debug_aranges
+                0x0000000000000000       0x20 endpoint_list.o
+ .debug_ranges  0x0000000000000000      0x138 endpoint_list.o
+ .debug_line    0x0000000000000000      0x449 endpoint_list.o
+ .debug_str     0x0000000000000000      0x9c8 endpoint_list.o
+ .comment       0x0000000000000000       0x12 endpoint_list.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 endpoint_list.o
+ .eh_frame      0x0000000000000000       0xd8 endpoint_list.o
+ .debug_info    0x0000000000000000     0x34dd hc.o
+ .debug_abbrev  0x0000000000000000      0x4a3 hc.o
+ .debug_loc     0x0000000000000000     0x10a6 hc.o
+ .debug_aranges
+                0x0000000000000000       0x28 hc.o
+ .debug_ranges  0x0000000000000000      0x238 hc.o
+ .debug_line    0x0000000000000000      0x9fd hc.o
+ .debug_str     0x0000000000000000     0x1b9d hc.o
+ .comment       0x0000000000000000       0x12 hc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hc.o
+ .eh_frame      0x0000000000000000      0x250 hc.o
+ .debug_info    0x0000000000000000     0x1e57 main.o
+ .debug_abbrev  0x0000000000000000      0x2c4 main.o
+ .debug_loc     0x0000000000000000      0x121 main.o
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+ .debug_ranges  0x0000000000000000       0x18 main.o
+ .debug_line    0x0000000000000000      0x562 main.o
+ .debug_str     0x0000000000000000     0x18bb main.o
+ .comment       0x0000000000000000       0x12 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .eh_frame      0x0000000000000000       0xd8 main.o
+ .debug_info    0x0000000000000000     0x197c ohci_batch.o
+ .debug_abbrev  0x0000000000000000      0x3ac ohci_batch.o
+ .debug_loc     0x0000000000000000      0x98a ohci_batch.o
+ .debug_aranges
+                0x0000000000000000       0x28 ohci_batch.o
+ .debug_ranges  0x0000000000000000      0x308 ohci_batch.o
+ .debug_line    0x0000000000000000      0x7db ohci_batch.o
+ .debug_str     0x0000000000000000     0x1037 ohci_batch.o
+ .comment       0x0000000000000000       0x12 ohci_batch.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ohci_batch.o
+ .eh_frame      0x0000000000000000      0x16c ohci_batch.o
+ .debug_info    0x0000000000000000     0x1193 ohci_endpoint.o
+ .debug_abbrev  0x0000000000000000      0x2c8 ohci_endpoint.o
+ .debug_loc     0x0000000000000000      0x307 ohci_endpoint.o
+ .debug_aranges
+                0x0000000000000000       0x20 ohci_endpoint.o
+ .debug_ranges  0x0000000000000000       0x48 ohci_endpoint.o
+ .debug_line    0x0000000000000000      0x4a0 ohci_endpoint.o
+ .debug_str     0x0000000000000000      0xe5e ohci_endpoint.o
+ .comment       0x0000000000000000       0x12 ohci_endpoint.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ohci_endpoint.o
+ .eh_frame      0x0000000000000000       0xd0 ohci_endpoint.o
+ .debug_info    0x0000000000000000     0x2007 ohci_rh.o
+ .debug_abbrev  0x0000000000000000      0x33a ohci_rh.o
+ .debug_loc     0x0000000000000000      0x65d ohci_rh.o
+ .debug_aranges
+                0x0000000000000000       0x20 ohci_rh.o
+ .debug_ranges  0x0000000000000000       0xc8 ohci_rh.o
+ .debug_line    0x0000000000000000      0x5ea ohci_rh.o
+ .debug_str     0x0000000000000000     0x1b10 ohci_rh.o
+ .comment       0x0000000000000000       0x12 ohci_rh.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ohci_rh.o
+ .eh_frame      0x0000000000000000      0x1f0 ohci_rh.o
+ .debug_info    0x0000000000000000      0x936 hw_struct/endpoint_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x1f1 hw_struct/endpoint_descriptor.o
+ .debug_loc     0x0000000000000000       0x3c hw_struct/endpoint_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x20 hw_struct/endpoint_descriptor.o
+ .debug_line    0x0000000000000000      0x31c hw_struct/endpoint_descriptor.o
+ .debug_str     0x0000000000000000      0xa02 hw_struct/endpoint_descriptor.o
+ .comment       0x0000000000000000       0x12 hw_struct/endpoint_descriptor.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hw_struct/endpoint_descriptor.o
+ .eh_frame      0x0000000000000000       0x58 hw_struct/endpoint_descriptor.o
+ .debug_info    0x0000000000000000      0x5d0 hw_struct/transfer_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x1c8 hw_struct/transfer_descriptor.o
+ .debug_loc     0x0000000000000000       0xcc hw_struct/transfer_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x20 hw_struct/transfer_descriptor.o
+ .debug_ranges  0x0000000000000000       0x38 hw_struct/transfer_descriptor.o
+ .debug_line    0x0000000000000000      0x297 hw_struct/transfer_descriptor.o
+ .debug_str     0x0000000000000000      0x867 hw_struct/transfer_descriptor.o
+ .comment       0x0000000000000000       0x12 hw_struct/transfer_descriptor.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hw_struct/transfer_descriptor.o
+ .eh_frame      0x0000000000000000       0x48 hw_struct/transfer_descriptor.o
+ .debug_info    0x0000000000000000     0x40d0 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_abbrev  0x0000000000000000      0x563 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_loc     0x0000000000000000     0x1d68 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_ranges  0x0000000000000000      0x5f0 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_line    0x0000000000000000      0xc00 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_str     0x0000000000000000     0x1da3 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .eh_frame      0x0000000000000000      0x470 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .debug_info    0x0000000000000000      0xd20 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_abbrev  0x0000000000000000      0x2b8 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_loc     0x0000000000000000      0x35e ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_ranges  0x0000000000000000       0x90 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_line    0x0000000000000000      0x2ca ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_str     0x0000000000000000      0xa1c ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .eh_frame      0x0000000000000000      0x1d8 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .debug_info    0x0000000000000000     0x15f1 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_abbrev  0x0000000000000000      0x3c8 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_loc     0x0000000000000000      0x6b2 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_ranges  0x0000000000000000       0x80 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_line    0x0000000000000000      0x3c2 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_str     0x0000000000000000      0xe79 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .eh_frame      0x0000000000000000      0x258 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .debug_info    0x0000000000000000     0x17e0 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_abbrev  0x0000000000000000      0x3d7 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_loc     0x0000000000000000      0xaea ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_ranges  0x0000000000000000      0x268 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_line    0x0000000000000000      0x5b2 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_str     0x0000000000000000      0xcdc ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .eh_frame      0x0000000000000000      0x2e4 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .debug_info    0x0000000000000000      0xa7f ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_abbrev  0x0000000000000000      0x1c4 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_loc     0x0000000000000000       0xe7 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_ranges  0x0000000000000000       0x18 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_line    0x0000000000000000      0x2a8 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_str     0x0000000000000000      0xafe ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .eh_frame      0x0000000000000000       0xd4 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .debug_info    0x0000000000000000      0xe78 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_abbrev  0x0000000000000000      0x294 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_loc     0x0000000000000000      0x509 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_ranges  0x0000000000000000       0x48 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_line    0x0000000000000000      0x2a9 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_str     0x0000000000000000     0x10a4 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .eh_frame      0x0000000000000000      0x150 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .debug_info    0x0000000000000000      0xe6b ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .debug_abbrev  0x0000000000000000      0x25f ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .debug_loc     0x0000000000000000      0x244 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .debug_line    0x0000000000000000      0x2ef ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .debug_str     0x0000000000000000     0x10c2 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .eh_frame      0x0000000000000000      0x140 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .debug_info    0x0000000000000000      0x767 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .debug_abbrev  0x0000000000000000       0xf3 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .debug_aranges
+                0x0000000000000000       0x18 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .debug_line    0x0000000000000000      0x1f8 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .debug_str     0x0000000000000000      0xe3b ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .debug_info    0x0000000000000000      0xdee ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_abbrev  0x0000000000000000      0x2a3 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_loc     0x0000000000000000      0x553 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_ranges  0x0000000000000000       0x40 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_line    0x0000000000000000      0x290 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_str     0x0000000000000000      0xde3 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .eh_frame      0x0000000000000000       0xf0 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .debug_info    0x0000000000000000      0xa4f ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_abbrev  0x0000000000000000      0x1c3 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_loc     0x0000000000000000       0x26 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_line    0x0000000000000000      0x243 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_str     0x0000000000000000      0xd51 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .eh_frame      0x0000000000000000       0x58 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .debug_info    0x0000000000000000       0xf2 ../../../../lib/usb/libusb.a(class.o)
+ .debug_abbrev  0x0000000000000000       0x7f ../../../../lib/usb/libusb.a(class.o)
+ .debug_loc     0x0000000000000000       0x1f ../../../../lib/usb/libusb.a(class.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usb/libusb.a(class.o)
+ .debug_line    0x0000000000000000       0xe9 ../../../../lib/usb/libusb.a(class.o)
+ .debug_str     0x0000000000000000      0x2db ../../../../lib/usb/libusb.a(class.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usb/libusb.a(class.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usb/libusb.a(class.o)
+ .eh_frame      0x0000000000000000       0xa8 ../../../../lib/usb/libusb.a(class.o)
+ .debug_info    0x0000000000000000      0x330 ../../../../lib/usb/libusb.a(debug.o)
+ .debug_abbrev  0x0000000000000000       0xf3 ../../../../lib/usb/libusb.a(debug.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usb/libusb.a(debug.o)
+ .debug_line    0x0000000000000000      0x111 ../../../../lib/usb/libusb.a(debug.o)
+ .debug_str     0x0000000000000000      0x639 ../../../../lib/usb/libusb.a(debug.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usb/libusb.a(debug.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usb/libusb.a(debug.o)
+ .eh_frame      0x0000000000000000       0x44 ../../../../lib/usb/libusb.a(debug.o)
+ .debug_info    0x0000000000000000      0x373 ../../../../lib/usb/libusb.a(usb.o)
+ .debug_abbrev  0x0000000000000000      0x12d ../../../../lib/usb/libusb.a(usb.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/usb/libusb.a(usb.o)
+ .debug_line    0x0000000000000000       0xeb ../../../../lib/usb/libusb.a(usb.o)
+ .debug_str     0x0000000000000000      0x521 ../../../../lib/usb/libusb.a(usb.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/usb/libusb.a(usb.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/usb/libusb.a(usb.o)
+ .eh_frame      0x0000000000000000       0xcc ../../../../lib/usb/libusb.a(usb.o)
+ .debug_info    0x0000000000000000     0x2c13 ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_abbrev  0x0000000000000000      0x43e ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_loc     0x0000000000000000      0xd65 ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_ranges  0x0000000000000000      0x450 ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_line    0x0000000000000000      0x826 ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_str     0x0000000000000000     0x16bc ../../../../lib/drv/libdrv.a(driver.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(driver.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(driver.o)
+ .eh_frame      0x0000000000000000      0x4a4 ../../../../lib/drv/libdrv.a(driver.o)
+ .debug_info    0x0000000000000000      0x592 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .debug_abbrev  0x0000000000000000      0x190 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .debug_loc     0x0000000000000000       0x4a ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .debug_line    0x0000000000000000      0x2c0 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .debug_str     0x0000000000000000      0x963 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .eh_frame      0x0000000000000000       0x84 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .debug_info    0x0000000000000000      0x632 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .debug_abbrev  0x0000000000000000      0x161 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .debug_loc     0x0000000000000000       0x33 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .debug_line    0x0000000000000000      0x1f2 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .debug_str     0x0000000000000000      0x8cf ../../../../lib/drv/libdrv.a(interrupt.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .eh_frame      0x0000000000000000       0x58 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .debug_info    0x0000000000000000      0x428 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_abbrev  0x0000000000000000      0x187 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_loc     0x0000000000000000      0x3d3 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_ranges  0x0000000000000000       0x80 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_line    0x0000000000000000      0x143 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_str     0x0000000000000000      0x30e ../../../../lib/drv/libdrv.a(logbuf.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .eh_frame      0x0000000000000000       0x68 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .debug_info    0x0000000000000000      0xc03 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_abbrev  0x0000000000000000      0x254 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_loc     0x0000000000000000      0x3d1 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_ranges  0x0000000000000000       0x80 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_line    0x0000000000000000      0x31a ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_str     0x0000000000000000      0xb88 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .eh_frame      0x0000000000000000      0x1c4 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .debug_info    0x0000000000000000     0x2298 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_abbrev  0x0000000000000000      0x3d2 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_loc     0x0000000000000000      0xef5 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_ranges  0x0000000000000000       0xb8 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_line    0x0000000000000000      0x647 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_str     0x0000000000000000     0x198d ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .eh_frame      0x0000000000000000      0x63c ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .debug_info    0x0000000000000000      0x9fb ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .debug_abbrev  0x0000000000000000      0x1f5 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .debug_loc     0x0000000000000000      0x255 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .debug_line    0x0000000000000000      0x26d ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .debug_str     0x0000000000000000      0xb5c ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .eh_frame      0x0000000000000000       0xf0 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .debug_info    0x0000000000000000      0x624 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .debug_abbrev  0x0000000000000000      0x1af ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .debug_loc     0x0000000000000000       0x54 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .debug_line    0x0000000000000000      0x245 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .debug_str     0x0000000000000000      0x970 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .eh_frame      0x0000000000000000       0x58 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .debug_info    0x0000000000000000      0x9f8 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_abbrev  0x0000000000000000      0x243 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_loc     0x0000000000000000      0x304 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_ranges  0x0000000000000000       0x40 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_line    0x0000000000000000      0x29f ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_str     0x0000000000000000      0xa95 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .eh_frame      0x0000000000000000      0x120 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_info    0x0000000000000000     0x55bd ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_abbrev  0x0000000000000000      0x35f ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_loc     0x0000000000000000     0x25cf ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_ranges  0x0000000000000000      0x180 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_line    0x0000000000000000      0xc19 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_str     0x0000000000000000     0x261b ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .eh_frame      0x0000000000000000     0x1028 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_info    0x0000000000000000     0x1192 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_abbrev  0x0000000000000000      0x38d ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_loc     0x0000000000000000      0x489 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_ranges  0x0000000000000000       0x70 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_line    0x0000000000000000      0x408 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_str     0x0000000000000000      0xeb5 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .eh_frame      0x0000000000000000      0x144 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .debug_info    0x0000000000000000     0x1888 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_abbrev  0x0000000000000000      0x3a7 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_loc     0x0000000000000000      0x886 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_ranges  0x0000000000000000       0xd8 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_line    0x0000000000000000      0x4aa ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_str     0x0000000000000000     0x1125 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .eh_frame      0x0000000000000000      0x4a8 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .debug_info    0x0000000000000000     0x10b2 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .debug_abbrev  0x0000000000000000      0x260 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .debug_loc     0x0000000000000000      0x70c ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .debug_line    0x0000000000000000      0x2de ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .debug_str     0x0000000000000000      0xbdb ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .eh_frame      0x0000000000000000      0x254 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .debug_info    0x0000000000000000      0xdc9 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_abbrev  0x0000000000000000      0x331 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_loc     0x0000000000000000      0x41d ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_ranges  0x0000000000000000       0xd8 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_line    0x0000000000000000      0x37d ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_str     0x0000000000000000      0xbd1 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .eh_frame      0x0000000000000000      0x19c ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .debug_info    0x0000000000000000      0xe2c ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_abbrev  0x0000000000000000      0x2da ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_loc     0x0000000000000000      0x64b ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_ranges  0x0000000000000000       0x18 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_line    0x0000000000000000      0x347 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_str     0x0000000000000000      0xcbb ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .eh_frame      0x0000000000000000      0x21c ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .debug_info    0x0000000000000000      0x77c ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .debug_abbrev  0x0000000000000000      0x1be ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .debug_loc     0x0000000000000000       0x94 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .debug_line    0x0000000000000000      0x279 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .debug_str     0x0000000000000000      0x9f3 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .eh_frame      0x0000000000000000       0xa4 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .debug_info    0x0000000000000000      0x5a6 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .debug_abbrev  0x0000000000000000      0x192 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .debug_loc     0x0000000000000000       0x91 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .debug_line    0x0000000000000000      0x24c ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .debug_str     0x0000000000000000      0x912 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .eh_frame      0x0000000000000000       0x44 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .debug_info    0x0000000000000000      0x7f2 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .debug_abbrev  0x0000000000000000      0x1bc ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .debug_loc     0x0000000000000000       0xb6 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .debug_line    0x0000000000000000      0x250 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .debug_str     0x0000000000000000      0xa5e ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .eh_frame      0x0000000000000000       0xc0 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .debug_info    0x0000000000000000      0xee6 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_abbrev  0x0000000000000000      0x251 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_loc     0x0000000000000000      0x413 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_line    0x0000000000000000      0x314 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_str     0x0000000000000000      0xcf0 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .eh_frame      0x0000000000000000      0x244 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .debug_info    0x0000000000000000      0x183 ../../../../lib/drv/libdrv.a(log.o)
+ .debug_abbrev  0x0000000000000000      0x108 ../../../../lib/drv/libdrv.a(log.o)
+ .debug_loc     0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(log.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../../../lib/drv/libdrv.a(log.o)
+ .debug_line    0x0000000000000000       0xe4 ../../../../lib/drv/libdrv.a(log.o)
+ .debug_str     0x0000000000000000      0x233 ../../../../lib/drv/libdrv.a(log.o)
+ .comment       0x0000000000000000       0x12 ../../../../lib/drv/libdrv.a(log.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../../../lib/drv/libdrv.a(log.o)
+ .eh_frame      0x0000000000000000       0x58 ../../../../lib/drv/libdrv.a(log.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001140    0x14af0
+ *(.text .text.*)
+ .text          0x0000000000001140        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001140      0x50d endpoint_list.o
+                0x0000000000001140                endpoint_list_init
+                0x0000000000001240                endpoint_list_set_next
+                0x0000000000001310                endpoint_list_add_ep
+                0x00000000000014b0                endpoint_list_remove_ep
+ *fill*         0x000000000000164d        0x3 
+ .text          0x0000000000001650     0x1144 hc.o
+                0x0000000000001910                ohci_hc_gen_irq_code
+                0x0000000000001a60                hc_init
+                0x0000000000001f90                hc_fini
+                0x0000000000001fc0                hc_enqueue_endpoint
+                0x00000000000021b0                hc_dequeue_endpoint
+                0x00000000000023a0                ohci_hc_status
+                0x0000000000002430                ohci_hc_schedule
+                0x00000000000025c0                ohci_hc_interrupt
+ .text.unlikely
+                0x0000000000002794       0x17 hc.o
+ *fill*         0x00000000000027ab        0x5 
+ .text          0x00000000000027b0      0x19b main.o
+ *fill*         0x000000000000294b        0x5 
+ .text.startup  0x0000000000002950       0x2f main.o
+                0x0000000000002950                main
+ *fill*         0x000000000000297f        0x1 
+ .text          0x0000000000002980      0xe4b ohci_batch.o
+                0x0000000000002e80                ohci_transfer_batch_finish_dispose
+                0x0000000000002f70                ohci_transfer_batch_get
+                0x0000000000003370                ohci_transfer_batch_is_complete
+                0x0000000000003760                ohci_transfer_batch_commit
+ .text.unlikely
+                0x00000000000037cb       0x17 ohci_batch.o
+ *fill*         0x00000000000037e2        0xe 
+ .text          0x00000000000037f0      0x2db ohci_endpoint.o
+                0x00000000000038a0                ohci_endpoint_init
+                0x0000000000003a40                ohci_endpoint_fini
+ *fill*         0x0000000000003acb        0x5 
+ .text          0x0000000000003ad0      0x9b1 ohci_rh.o
+                0x0000000000003fa0                ohci_rh_init
+                0x00000000000041e0                ohci_rh_schedule
+                0x0000000000004370                ohci_rh_interrupt
+ *fill*         0x0000000000004481        0xf 
+ .text          0x0000000000004490      0x124 hw_struct/endpoint_descriptor.o
+                0x0000000000004490                ed_init
+ *fill*         0x00000000000045b4        0xc 
+ .text          0x00000000000045c0      0x105 hw_struct/transfer_descriptor.o
+                0x00000000000045c0                td_init
+ *fill*         0x00000000000046c5        0xb 
+ .text          0x00000000000046d0     0x1e0e ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+                0x0000000000004800                ddf_hcd_gen_irq_handler
+                0x0000000000005aa0                dev_to_hcd
+                0x0000000000005ae0                hcd_ddf_setup_root_hub
+                0x0000000000005b70                hcd_ddf_setup_hc
+                0x0000000000005cc0                hcd_ddf_clean_hc
+                0x0000000000005d30                hcd_ddf_enable_interrupts
+                0x0000000000005d90                hcd_ddf_get_registers
+                0x0000000000005e60                hcd_ddf_setup_interrupts
+                0x0000000000006010                hcd_ddf_add_hc
+ *fill*         0x00000000000064de        0x2 
+ .text          0x00000000000064e0      0x463 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+                0x00000000000064e0                endpoint_create
+                0x00000000000065a0                endpoint_destroy
+                0x0000000000006600                endpoint_add_ref
+                0x0000000000006610                endpoint_del_ref
+                0x0000000000006680                endpoint_set_hc_data
+                0x00000000000066e0                endpoint_clear_hc_data
+                0x0000000000006730                endpoint_use
+                0x00000000000067a0                endpoint_release
+                0x0000000000006840                endpoint_toggle_get
+                0x00000000000068c0                endpoint_toggle_set
+ *fill*         0x0000000000006943        0xd 
+ .text          0x0000000000006950      0x6e6 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+                0x0000000000006b70                hcd_init
+                0x0000000000006bd0                hcd_request_address
+                0x0000000000006c20                hcd_release_address
+                0x0000000000006c60                hcd_reserve_default_address
+                0x0000000000006ca0                hcd_add_ep
+                0x0000000000006d00                hcd_remove_ep
+                0x0000000000006d50                hcd_send_batch
+                0x0000000000006f70                hcd_send_batch_sync
+ *fill*         0x0000000000007036        0xa 
+ .text          0x0000000000007040      0xdec ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+                0x0000000000007130                bandwidth_count_usb11
+                0x00000000000071d0                bandwidth_count_usb20
+                0x00000000000071e0                usb_bus_init
+                0x0000000000007270                usb_bus_register_ep
+                0x00000000000073e0                usb_bus_unregister_ep
+                0x0000000000007520                usb_bus_find_ep
+                0x00000000000075a0                usb_bus_add_ep
+                0x00000000000077e0                usb_bus_remove_ep
+                0x00000000000078d0                usb_bus_reset_toggle
+                0x00000000000079e0                usb_bus_remove_address
+                0x0000000000007b60                usb_bus_request_address
+                0x0000000000007da0                usb_bus_get_speed
+ .text.unlikely
+                0x0000000000007e2c       0x17 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ *fill*         0x0000000000007e43        0xd 
+ .text          0x0000000000007e50      0x282 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+                0x0000000000007e50                usb_transfer_batch_create
+                0x0000000000007f30                usb_transfer_batch_destroy
+                0x0000000000007fd0                usb_transfer_batch_finish_error
+ *fill*         0x00000000000080d2        0xe 
+ .text          0x00000000000080e0      0x2e7 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+                0x0000000000008380                usbvirt_control_reply_helper
+                0x00000000000083c0                req_nop
+ *fill*         0x00000000000083c7        0x9 
+ .text          0x00000000000083d0      0x3df ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+                0x00000000000083d0                virthub_get_data
+                0x0000000000008410                virthub_base_init
+                0x0000000000008590                virthub_base_get_address
+                0x00000000000085c0                virthub_base_request
+                0x00000000000086f0                virthub_base_get_hub_descriptor
+                0x0000000000008770                virthub_base_get_null_status
+ .text          0x00000000000087af        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ *fill*         0x00000000000087af        0x1 
+ .text          0x00000000000087b0      0x2a7 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+                0x00000000000087b0                usbvirt_control_write
+                0x00000000000088a0                usbvirt_control_read
+                0x00000000000089a0                usbvirt_data_out
+                0x00000000000089f0                usbvirt_data_in
+ *fill*         0x0000000000008a57        0x9 
+ .text          0x0000000000008a60       0xb9 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+                0x0000000000008a60                process_control_transfer
+ *fill*         0x0000000000008b19        0x7 
+ .text          0x0000000000008b20      0x13f ../../../../lib/usb/libusb.a(class.o)
+                0x0000000000008b20                usb_str_class
+ *fill*         0x0000000000008c5f        0x1 
+ .text          0x0000000000008c60       0x85 ../../../../lib/usb/libusb.a(debug.o)
+                0x0000000000008c60                usb_debug_str_buffer
+ *fill*         0x0000000000008ce5        0xb 
+ .text          0x0000000000008cf0       0xe5 ../../../../lib/usb/libusb.a(usb.o)
+                0x0000000000008cf0                usb_str_transfer_type
+                0x0000000000008d10                usb_str_transfer_type_short
+                0x0000000000008d30                usb_str_direction
+                0x0000000000008d50                usb_str_speed
+                0x0000000000008d70                usb_request_needs_toggle_reset
+ *fill*         0x0000000000008dd5        0xb 
+ .text          0x0000000000008de0     0x118c ../../../../lib/drv/libdrv.a(driver.o)
+                0x00000000000096e0                ddf_dev_data_alloc
+                0x0000000000009720                ddf_dev_data_get
+                0x0000000000009730                ddf_dev_get_handle
+                0x0000000000009740                ddf_dev_get_name
+                0x0000000000009750                ddf_dev_parent_sess_create
+                0x0000000000009790                ddf_dev_parent_sess_get
+                0x00000000000097a0                ddf_fun_set_name
+                0x00000000000097f0                ddf_fun_get_dev
+                0x0000000000009800                ddf_fun_get_handle
+                0x0000000000009810                ddf_fun_create
+                0x0000000000009920                ddf_fun_data_alloc
+                0x0000000000009980                ddf_fun_data_get
+                0x0000000000009990                ddf_fun_get_name
+                0x00000000000099a0                ddf_fun_destroy
+                0x0000000000009ad0                ddf_fun_bind
+                0x0000000000009c00                ddf_fun_unbind
+                0x0000000000009ca0                ddf_fun_online
+                0x0000000000009cd0                ddf_fun_offline
+                0x0000000000009d00                ddf_fun_add_match_id
+                0x0000000000009dc0                ddf_fun_set_ops
+                0x0000000000009df0                ddf_fun_set_conn_handler
+                0x0000000000009e20                ddf_fun_add_to_category
+                0x0000000000009e70                ddf_driver_main
+ *fill*         0x0000000000009f6c        0x4 
+ .text          0x0000000000009f70       0x5c ../../../../lib/drv/libdrv.a(dev_iface.o)
+                0x0000000000009f70                get_remote_iface
+                0x0000000000009fa0                get_remote_method
+                0x0000000000009fc0                is_valid_iface_idx
+ *fill*         0x0000000000009fcc        0x4 
+ .text          0x0000000000009fd0       0x37 ../../../../lib/drv/libdrv.a(interrupt.o)
+                0x0000000000009fd0                register_interrupt_handler
+                0x0000000000009ff0                unregister_interrupt_handler
+ *fill*         0x000000000000a007        0x9 
+ .text          0x000000000000a010      0x2c6 ../../../../lib/drv/libdrv.a(logbuf.o)
+                0x000000000000a010                ddf_dump_buffer
+ *fill*         0x000000000000a2d6        0xa 
+ .text          0x000000000000a2e0      0x53f ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+                0x000000000000a5a0                audio_mixer_get_info
+                0x000000000000a690                audio_mixer_get_item_info
+                0x000000000000a790                audio_mixer_set_item_level
+                0x000000000000a7d0                audio_mixer_get_item_level
+ *fill*         0x000000000000a81f        0x1 
+ .text          0x000000000000a820     0x1116 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                0x000000000000aee0                audio_pcm_cap_str
+                0x000000000000af00                audio_pcm_event_str
+                0x000000000000af20                audio_pcm_open_default
+                0x000000000000afc0                audio_pcm_open
+                0x000000000000b000                audio_pcm_open_service
+                0x000000000000b020                audio_pcm_close
+                0x000000000000b040                audio_pcm_get_info_str
+                0x000000000000b130                audio_pcm_query_cap
+                0x000000000000b190                audio_pcm_get_buffer_pos
+                0x000000000000b210                audio_pcm_test_format
+                0x000000000000b340                audio_pcm_register_event_callback
+                0x000000000000b3d0                audio_pcm_unregister_event_callback
+                0x000000000000b420                audio_pcm_get_buffer
+                0x000000000000b4d0                audio_pcm_release_buffer
+                0x000000000000b520                audio_pcm_start_playback_fragment
+                0x000000000000b5b0                audio_pcm_last_playback_fragment
+                0x000000000000b600                audio_pcm_start_playback
+                0x000000000000b690                audio_pcm_stop_playback_immediate
+                0x000000000000b6e0                audio_pcm_stop_playback
+                0x000000000000b730                audio_pcm_start_capture_fragment
+                0x000000000000b7c0                audio_pcm_start_capture
+                0x000000000000b850                audio_pcm_last_capture_fragment
+                0x000000000000b8a0                audio_pcm_stop_capture_immediate
+                0x000000000000b8f0                audio_pcm_stop_capture
+ *fill*         0x000000000000b936        0xa 
+ .text          0x000000000000b940      0x1dd ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ *fill*         0x000000000000bb1d        0x3 
+ .text          0x000000000000bb20       0x95 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ *fill*         0x000000000000bbb5        0xb 
+ .text          0x000000000000bbc0      0x341 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x000000000000bdb0                char_dev_read
+                0x000000000000be60                char_dev_write
+ *fill*         0x000000000000bf01        0xf 
+ .text          0x000000000000bf10     0x3596 ../../../../lib/drv/libdrv.a(remote_nic.o)
+                0x000000000000dde0                nic_send_frame
+                0x000000000000de70                nic_callback_create
+                0x000000000000df10                nic_get_state
+                0x000000000000df80                nic_set_state
+                0x000000000000dfd0                nic_get_address
+                0x000000000000e060                nic_set_address
+                0x000000000000e0f0                nic_get_stats
+                0x000000000000e190                nic_get_device_info
+                0x000000000000e220                nic_get_cable_state
+                0x000000000000e290                nic_get_operation_mode
+                0x000000000000e310                nic_set_operation_mode
+                0x000000000000e360                nic_autoneg_enable
+                0x000000000000e3b0                nic_autoneg_disable
+                0x000000000000e400                nic_autoneg_probe
+                0x000000000000e490                nic_autoneg_restart
+                0x000000000000e4e0                nic_get_pause
+                0x000000000000e560                nic_set_pause
+                0x000000000000e5c0                nic_unicast_get_mode
+                0x000000000000e690                nic_unicast_set_mode
+                0x000000000000e770                nic_multicast_get_mode
+                0x000000000000e840                nic_multicast_set_mode
+                0x000000000000e920                nic_broadcast_get_mode
+                0x000000000000e990                nic_broadcast_set_mode
+                0x000000000000e9e0                nic_defective_get_mode
+                0x000000000000ea50                nic_defective_set_mode
+                0x000000000000eaa0                nic_blocked_sources_get
+                0x000000000000eb40                nic_blocked_sources_set
+                0x000000000000ec30                nic_vlan_get_mask
+                0x000000000000ecd0                nic_vlan_set_mask
+                0x000000000000ed70                nic_vlan_set_tag
+                0x000000000000ede0                nic_wol_virtue_add
+                0x000000000000eec0                nic_wol_virtue_remove
+                0x000000000000ef10                nic_wol_virtue_probe
+                0x000000000000efd0                nic_wol_virtue_list
+                0x000000000000f0e0                nic_wol_virtue_get_caps
+                0x000000000000f160                nic_wol_load_info
+                0x000000000000f230                nic_offload_probe
+                0x000000000000f2d0                nic_offload_set
+                0x000000000000f320                nic_poll_get_mode
+                0x000000000000f3c0                nic_poll_set_mode
+                0x000000000000f460                nic_poll_now
+ *fill*         0x000000000000f4a6        0xa 
+ .text          0x000000000000f4b0      0x690 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+                0x000000000000f6f0                ieee80211_get_scan_results
+                0x000000000000f780                ieee80211_connect
+                0x000000000000f940                ieee80211_disconnect
+ .text          0x000000000000fb40      0xb5c ../../../../lib/drv/libdrv.a(remote_usb.o)
+                0x0000000000010240                usb_dev_connect
+                0x0000000000010260                usb_dev_connect_to_self
+                0x0000000000010280                usb_dev_disconnect
+                0x00000000000102a0                usb_get_my_interface
+                0x00000000000102f0                usb_get_my_device_handle
+                0x0000000000010340                usb_reserve_default_address
+                0x0000000000010380                usb_release_default_address
+                0x00000000000103c0                usb_device_enumerate
+                0x0000000000010400                usb_device_remove
+                0x0000000000010440                usb_register_endpoint
+                0x00000000000104b0                usb_unregister_endpoint
+                0x00000000000104f0                usb_read
+                0x00000000000105e0                usb_write
+ *fill*         0x000000000001069c        0x4 
+ .text          0x00000000000106a0      0x55a ../../../../lib/drv/libdrv.a(remote_pci.o)
+                0x00000000000109d0                pci_config_space_read_8
+                0x0000000000010a30                pci_config_space_read_16
+                0x0000000000010a90                pci_config_space_read_32
+                0x0000000000010af0                pci_config_space_write_8
+                0x0000000000010b50                pci_config_space_write_16
+                0x0000000000010bb0                pci_config_space_write_32
+ *fill*         0x0000000000010bfa        0x6 
+ .text          0x0000000000010c00      0x5ec ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+                0x0000000000011020                usbhc_read
+                0x0000000000011120                usbhc_write
+ *fill*         0x00000000000111ec        0x4 
+ .text          0x00000000000111f0      0x6fb ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+                0x0000000000011580                usbhid_dev_get_event_length
+                0x00000000000115f0                usbhid_dev_get_event
+                0x0000000000011760                usbhid_dev_get_report_descriptor_length
+                0x00000000000117d0                usbhid_dev_get_report_descriptor
+ *fill*         0x00000000000118eb        0x5 
+ .text          0x00000000000118f0      0x164 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ *fill*         0x0000000000011a54        0xc 
+ .text          0x0000000000011a60       0x4b ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ *fill*         0x0000000000011aab        0x5 
+ .text          0x0000000000011ab0      0x197 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+                0x0000000000011b90                battery_status_get
+                0x0000000000011bf0                battery_charge_level_get
+ *fill*         0x0000000000011c47        0x9 
+ .text          0x0000000000011c50      0x57f ../../../../lib/drv/libdrv.a(remote_ahci.o)
+                0x0000000000011ef0                ahci_get_sess
+                0x0000000000011f90                ahci_get_sata_device_name
+                0x0000000000012000                ahci_get_num_blocks
+                0x0000000000012080                ahci_get_block_size
+                0x00000000000120f0                ahci_read_blocks
+                0x0000000000012160                ahci_write_blocks
+ *fill*         0x00000000000121cf        0x1 
+ .text          0x00000000000121d0       0x2e ../../../../lib/drv/libdrv.a(log.o)
+                0x00000000000121d0                ddf_log_init
+                0x00000000000121e0                ddf_msg
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000121fe       0x43 endpoint_list.o
+                                         0x4c (size before relaxing)
+ *fill*         0x0000000000012241        0x3 
+ .rodata.str1.4
+                0x0000000000012244      0x193 endpoint_list.o
+ .rodata.str1.1
+                0x00000000000123d7      0x1f4 hc.o
+                                        0x205 (size before relaxing)
+ *fill*         0x00000000000125cb        0x1 
+ .rodata.str1.4
+                0x00000000000125cc      0x2b3 hc.o
+ *fill*         0x000000000001287f        0x1 
+ .rodata        0x0000000000012880       0x6c hc.o
+ .rodata.str1.1
+                0x00000000000128ec       0x2f main.o
+                                         0x33 (size before relaxing)
+ *fill*         0x000000000001291b        0x1 
+ .rodata.str1.4
+                0x000000000001291c       0x21 main.o
+ *fill*         0x000000000001293d        0x3 
+ .rodata        0x0000000000012940       0x50 main.o
+ .rodata.str1.1
+                0x0000000000012990       0xab ohci_batch.o
+                                         0xcf (size before relaxing)
+ *fill*         0x0000000000012a3b        0x1 
+ .rodata.str1.4
+                0x0000000000012a3c      0x570 ohci_batch.o
+                                        0x590 (size before relaxing)
+ *fill*         0x0000000000012fac       0x14 
+ .rodata        0x0000000000012fc0       0x50 ohci_batch.o
+ .rodata.str1.1
+                0x0000000000013010       0x1d ohci_endpoint.o
+                                         0x2d (size before relaxing)
+ *fill*         0x000000000001302d        0x3 
+ .rodata.str1.4
+                0x0000000000013030       0x2f ohci_endpoint.o
+ .rodata.str1.1
+                0x000000000001305f       0xab ohci_rh.o
+                                         0xc0 (size before relaxing)
+ *fill*         0x000000000001310a        0x2 
+ .rodata.str1.4
+                0x000000000001310c      0x184 ohci_rh.o
+                                        0x2dc (size before relaxing)
+ *fill*         0x0000000000013290       0x10 
+ .rodata        0x00000000000132a0       0xe4 ohci_rh.o
+ .rodata.str1.4
+                0x0000000000013384       0x40 hw_struct/endpoint_descriptor.o
+ .rodata.str1.1
+                0x00000000000133c4        0x3 hw_struct/endpoint_descriptor.o
+                                          0xc (size before relaxing)
+ *fill*         0x00000000000133c7        0x1 
+ .rodata        0x00000000000133c8        0xc hw_struct/endpoint_descriptor.o
+ .rodata.str1.4
+                0x00000000000133d4       0x20 hw_struct/transfer_descriptor.o
+ .rodata.str1.1
+                0x00000000000133f4        0xa hw_struct/transfer_descriptor.o
+                                         0x13 (size before relaxing)
+ *fill*         0x00000000000133fe        0x2 
+ .rodata        0x0000000000013400        0xc hw_struct/transfer_descriptor.o
+ .rodata.str1.1
+                0x000000000001340c      0x168 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+                                        0x181 (size before relaxing)
+ .rodata.str1.4
+                0x0000000000013574      0x647 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ *fill*         0x0000000000013bbb        0x1 
+ .rodata        0x0000000000013bbc       0x1c ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .rodata.str1.1
+                0x0000000000013bd8       0x3c ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+                                         0x45 (size before relaxing)
+ .rodata.str1.4
+                0x0000000000013c14       0x1f ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .rodata.str1.1
+                0x0000000000013c33       0x46 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+                                         0x4f (size before relaxing)
+ *fill*         0x0000000000013c79        0x3 
+ .rodata.str1.4
+                0x0000000000013c7c       0xda ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .rodata.str1.1
+                0x0000000000013d56       0x52 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+                                         0x66 (size before relaxing)
+ .rodata.str1.4
+                0x0000000000013da8       0xba ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ *fill*         0x0000000000013e62        0x2 
+ .rodata.str1.4
+                0x0000000000013e64       0x5f ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .rodata.str1.1
+                0x0000000000013ec3       0x19 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+                                         0x22 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000013edc       0x62 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .rodata.str1.1
+                0x0000000000013f3e       0x36 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+                                         0x43 (size before relaxing)
+ .rodata        0x0000000000013f74       0x3a ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+                0x0000000000013f74                virthub_interface_descriptor_ex
+                0x0000000000013f7c                virthub_configuration_descriptor_without_hub_size
+                0x0000000000013f88                virthub_endpoint_descriptor
+                0x0000000000013f90                virthub_interface_descriptor
+                0x0000000000013f9c                virthub_device_descriptor
+ .rodata.str1.1
+                0x0000000000013fae       0x1b ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+                                         0x1f (size before relaxing)
+ *fill*         0x0000000000013fc9        0x3 
+ .rodata.str1.4
+                0x0000000000013fcc       0x29 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .rodata.str1.1
+                0x0000000000013ff5       0x2d ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+                                         0x37 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000014022       0xb1 ../../../../lib/usb/libusb.a(class.o)
+                                         0xb5 (size before relaxing)
+ .rodata.str1.1
+                0x00000000000140d3       0x66 ../../../../lib/usb/libusb.a(usb.o)
+                                         0x6a (size before relaxing)
+ *fill*         0x0000000000014139        0x3 
+ .rodata        0x000000000001413c       0x38 ../../../../lib/usb/libusb.a(usb.o)
+ .rodata.str1.1
+                0x0000000000014174      0x156 ../../../../lib/drv/libdrv.a(driver.o)
+ *fill*         0x00000000000142ca        0x2 
+ .rodata.str1.4
+                0x00000000000142cc      0x1b0 ../../../../lib/drv/libdrv.a(driver.o)
+ .rodata        0x000000000001447c       0x14 ../../../../lib/drv/libdrv.a(driver.o)
+ .rodata.str1.1
+                0x0000000000014490       0x14 ../../../../lib/drv/libdrv.a(dev_iface.o)
+                                         0x2c (size before relaxing)
+ *fill*         0x00000000000144a4       0x1c 
+ .rodata        0x00000000000144c0       0x3c ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .rodata.str1.1
+                0x00000000000144fc       0x52 ../../../../lib/drv/libdrv.a(logbuf.o)
+                                         0x59 (size before relaxing)
+ *fill*         0x000000000001454e        0x2 
+ .rodata        0x0000000000014550       0x18 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+                0x0000000000014550                remote_audio_mixer_iface
+ .rodata.str1.1
+                0x0000000000014568      0x1c4 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .rodata.str1.4
+                0x000000000001472c       0x88 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ *fill*         0x00000000000147b4        0xc 
+ .rodata        0x00000000000147c0     0x1070 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+                0x00000000000157f4                remote_audio_pcm_iface
+ .rodata        0x0000000000015830       0x18 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+                0x0000000000015830                remote_hw_res_iface
+ .rodata        0x0000000000015848        0xc ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+                0x0000000000015848                remote_pio_window_iface
+ .rodata        0x0000000000015854       0x10 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x0000000000015854                remote_char_dev_iface
+ .rodata.str1.1
+                0x0000000000015864       0xcc ../../../../lib/drv/libdrv.a(remote_nic.o)
+                                         0xe4 (size before relaxing)
+ *fill*         0x0000000000015930       0x10 
+ .rodata        0x0000000000015940       0xc4 ../../../../lib/drv/libdrv.a(remote_nic.o)
+                0x0000000000015940                remote_nic_iface
+ .rodata.str1.1
+                0x0000000000015a04       0x68 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+                                         0x69 (size before relaxing)
+ .rodata.str1.4
+                0x0000000000015a6c       0x22 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ *fill*         0x0000000000015a8e        0x2 
+ .rodata        0x0000000000015a90       0x14 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+                0x0000000000015a90                remote_ieee80211_iface
+ .rodata.str1.1
+                0x0000000000015aa4       0x20 ../../../../lib/drv/libdrv.a(remote_usb.o)
+                                         0x24 (size before relaxing)
+ *fill*         0x0000000000015ac4       0x1c 
+ .rodata        0x0000000000015ae0       0x48 ../../../../lib/drv/libdrv.a(remote_usb.o)
+                0x0000000000015ae0                remote_usb_iface
+ .rodata.str1.1
+                0x0000000000015b28       0x15 ../../../../lib/drv/libdrv.a(remote_pci.o)
+                                         0x1b (size before relaxing)
+ *fill*         0x0000000000015b3d        0x3 
+ .rodata        0x0000000000015b40       0x20 ../../../../lib/drv/libdrv.a(remote_pci.o)
+                0x0000000000015b40                remote_pci_iface
+ .rodata.str1.1
+                0x0000000000015b60       0x17 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+                                         0x26 (size before relaxing)
+ *fill*         0x0000000000015b77        0x1 
+ .rodata        0x0000000000015b78       0x10 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+                0x0000000000015b78                remote_usbhc_iface
+ .rodata.str1.4
+                0x0000000000015b88       0x24 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+                                         0x22 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000015bac       0x1b ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ *fill*         0x0000000000015bc7        0x1 
+ .rodata        0x0000000000015bc8       0x18 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+                0x0000000000015bc8                remote_usbhid_iface
+ .rodata        0x0000000000015be0       0x10 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+                0x0000000000015be0                remote_clock_dev_iface
+ .rodata        0x0000000000015bf0        0xc ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+                0x0000000000015bf0                remote_led_dev_iface
+ .rodata        0x0000000000015bfc       0x10 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+                0x0000000000015bfc                remote_battery_dev_iface
+ .rodata.str1.1
+                0x0000000000015c0c        0x6 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ *fill*         0x0000000000015c12        0x2 
+ .rodata        0x0000000000015c14       0x1c ../../../../lib/drv/libdrv.a(remote_ahci.o)
+                0x0000000000015c14                remote_ahci_iface
+
+.rel.plt        0x0000000000015c30      0x320
+ *(.rel.plt)
+ .rel.plt       0x0000000000015c30      0x320 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000015f50       0x10
+ *(.rel.*)
+ .rel.got       0x0000000000015f50        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000015f50       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000015f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000015f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.unlikely
+                0x0000000000015f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000015f60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000015f60      0x650
+ *(.plt)
+ .plt           0x0000000000015f60      0x650 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000015f70                __main
+                0x0000000000015f80                loc_category_get_id
+                0x0000000000015f90                devman_device_connect
+                0x0000000000015fa0                task_retval
+                0x0000000000015fb0                loc_service_connect
+                0x0000000000015fc0                inetcfg_sroute_get
+                0x0000000000015fd0                printf
+                0x0000000000015fe0                async_hangup
+                0x0000000000015ff0                hw_res_enable_interrupt
+                0x0000000000016000                async_wait_for
+                0x0000000000016010                inetcfg_addr_get
+                0x0000000000016020                devman_parent_device_connect
+                0x0000000000016030                snprintf
+                0x0000000000016040                log_init
+                0x0000000000016050                async_data_write_start
+                0x0000000000016060                fibril_mutex_is_locked
+                0x0000000000016070                devman_drv_fun_online
+                0x0000000000016080                async_data_read_finalize
+                0x0000000000016090                async_share_in_start
+                0x00000000000160a0                async_irq_unsubscribe
+                0x00000000000160b0                memcpy
+                0x00000000000160c0                pio_enable_range
+                0x00000000000160d0                pio_read_32
+                0x00000000000160e0                malloc
+                0x00000000000160f0                devman_add_device_to_category
+                0x0000000000016100                async_share_out_receive
+                0x0000000000016110                fibril_condvar_signal
+                0x0000000000016120                async_irq_subscribe
+                0x0000000000016130                async_req_fast
+                0x0000000000016140                str_append
+                0x0000000000016150                async_answer_0
+                0x0000000000016160                fibril_condvar_wait
+                0x0000000000016170                async_send_fast
+                0x0000000000016180                log_msg
+                0x0000000000016190                async_data_read
+                0x00000000000161a0                log_msgv
+                0x00000000000161b0                devman_add_function
+                0x00000000000161c0                async_exchange_end
+                0x00000000000161d0                assert_abort
+                0x00000000000161e0                inetcfg_get_sroute_list
+                0x00000000000161f0                calloc
+                0x0000000000016200                inetcfg_addr_delete
+                0x0000000000016210                dmamem_unmap_anonymous
+                0x0000000000016220                devman_remove_function
+                0x0000000000016230                fibril_condvar_initialize
+                0x0000000000016240                async_share_out_finalize
+                0x0000000000016250                str_test_prefix
+                0x0000000000016260                async_answer_2
+                0x0000000000016270                fibril_mutex_unlock
+                0x0000000000016280                async_callback_receive_start
+                0x0000000000016290                str_dup
+                0x00000000000162a0                fibril_mutex_initialize
+                0x00000000000162b0                async_answer_4
+                0x00000000000162c0                inetcfg_get_addr_list
+                0x00000000000162d0                async_send_slow
+                0x00000000000162e0                pio_write_32
+                0x00000000000162f0                inetcfg_link_get
+                0x0000000000016300                as_get_physical_mapping
+                0x0000000000016310                devman_drv_fun_offline
+                0x0000000000016320                udelay
+                0x0000000000016330                async_create_callback_port
+                0x0000000000016340                dhcp_discover
+                0x0000000000016350                devman_driver_register
+                0x0000000000016360                memset
+                0x0000000000016370                async_data_read_receive
+                0x0000000000016380                async_data_read_start
+                0x0000000000016390                dmamem_map_anonymous
+                0x00000000000163a0                async_share_in_receive
+                0x00000000000163b0                str_cpy
+                0x00000000000163c0                list_member
+                0x00000000000163d0                async_usleep
+                0x00000000000163e0                memalign
+                0x00000000000163f0                asprintf
+                0x0000000000016400                inetcfg_sroute_delete
+                0x0000000000016410                loc_category_get_svcs
+                0x0000000000016420                async_get_call_timeout
+                0x0000000000016430                str_size
+                0x0000000000016440                str_lcmp
+                0x0000000000016450                async_answer_1
+                0x0000000000016460                async_exchange_begin
+                0x0000000000016470                str_error
+                0x0000000000016480                devman_fun_get_handle
+                0x0000000000016490                async_share_in_finalize
+                0x00000000000164a0                async_answer_3
+                0x00000000000164b0                async_share_out_start
+                0x00000000000164c0                async_create_port
+                0x00000000000164d0                async_data_write_finalize
+                0x00000000000164e0                async_data_write_accept
+                0x00000000000164f0                async_forget
+                0x0000000000016500                fibril_create_generic
+                0x0000000000016510                hw_res_get_list_parsed
+                0x0000000000016520                fibril_add_ready
+                0x0000000000016530                fibril_switch
+                0x0000000000016540                inetcfg_get_link_list
+                0x0000000000016550                __syscall_fast
+                0x0000000000016560                async_set_fallback_port_handler
+                0x0000000000016570                async_data_write_receive
+                0x0000000000016580                free
+                0x0000000000016590                devman_fun_get_name
+                0x00000000000165a0                fibril_mutex_lock
+
+.dynsym         0x00000000000165b0      0x690
+ *(.dynsym)
+ .dynsym        0x00000000000165b0      0x690 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000016c40      0x72d
+ *(.dynstr)
+ .dynstr        0x0000000000016c40      0x72d /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000017370      0x330
+ *(.hash)
+ .hash          0x0000000000017370      0x330 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x00000000000176a0       0x13
+ *(.interp)
+ .interp        0x00000000000176a0       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000186b3                . = (. + 0x1000)
+
+.dynamic        0x00000000000186b4       0xa8
+ *(.dynamic)
+ .dynamic       0x00000000000186b4       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000186b4                _DYNAMIC
+
+.data           0x0000000000018760      0x1c4
+ *(.data)
+ .data          0x0000000000018760        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000018760        0x0 endpoint_list.o
+ .data          0x0000000000018760        0x0 hc.o
+ .data          0x0000000000018760        0x0 main.o
+ .data          0x0000000000018760        0x0 ohci_batch.o
+ .data          0x0000000000018760        0x0 ohci_endpoint.o
+ .data          0x0000000000018760       0x88 ohci_rh.o
+ .data          0x00000000000187e8        0x0 hw_struct/endpoint_descriptor.o
+ .data          0x00000000000187e8        0x0 hw_struct/transfer_descriptor.o
+ *fill*         0x00000000000187e8       0x18 
+ .data          0x0000000000018800       0x88 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .data          0x0000000000018888        0x0 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .data          0x0000000000018888        0x0 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .data          0x0000000000018888        0x0 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .data          0x0000000000018888        0x0 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ *fill*         0x0000000000018888       0x18 
+ .data          0x00000000000188a0       0x54 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+                0x00000000000188a0                library_handlers
+ .data          0x00000000000188f4        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .data          0x00000000000188f4        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .data          0x00000000000188f4        0x0 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .data          0x00000000000188f4        0x0 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .data          0x00000000000188f4        0x0 ../../../../lib/usb/libusb.a(class.o)
+ .data          0x00000000000188f4        0x0 ../../../../lib/usb/libusb.a(debug.o)
+ .data          0x00000000000188f4        0x0 ../../../../lib/usb/libusb.a(usb.o)
+ .data          0x00000000000188f4       0x30 ../../../../lib/drv/libdrv.a(driver.o)
+                0x00000000000188f4                functions_mutex
+                0x0000000000018904                functions
+                0x000000000001890c                devices_mutex
+                0x000000000001891c                devices
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .data          0x0000000000018924        0x0 ../../../../lib/drv/libdrv.a(log.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000018924        0x0
+ *(.got)
+ .got           0x0000000000018924        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000018924      0x19c
+ *(.got.plt)
+ .got.plt       0x0000000000018924      0x19c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000018924                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss           0x0000000000018ac0      0x1e4
+ *(.tbss)
+ .tbss          0x0000000000018ac0      0x1e4 ../../../../lib/usb/libusb.a(debug.o)
+
+.bss            0x0000000000018ac0       0x1d
+ *(.dynbss)
+ .dynbss        0x0000000000018ac0        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000018ac0                __syscall_fast_func
+                0x0000000000018ac4                async_futex
+ *(COMMON)
+ COMMON         0x0000000000018ac8        0x8 hc.o
+                0x0000000000018ac8                assert
+                0x0000000000018acc                sassert
+ COMMON         0x0000000000018ad0        0x4 ../../../../lib/drv/libdrv.a(remote_usb.o)
+                0x0000000000018ad0                static_assert
+ *(.bss)
+ .bss           0x0000000000018ad4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000018ad4        0x0 endpoint_list.o
+ .bss           0x0000000000018ad4        0x0 hc.o
+ .bss           0x0000000000018ad4        0x0 main.o
+ .bss           0x0000000000018ad4        0x0 ohci_batch.o
+ .bss           0x0000000000018ad4        0x0 ohci_endpoint.o
+ .bss           0x0000000000018ad4        0x0 ohci_rh.o
+ .bss           0x0000000000018ad4        0x0 hw_struct/endpoint_descriptor.o
+ .bss           0x0000000000018ad4        0x0 hw_struct/transfer_descriptor.o
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbhost/libusbhost.a(ddf_helpers.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbhost/libusbhost.a(endpoint.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbhost/libusbhost.a(hcd.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbhost/libusbhost.a(usb_bus.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbhost/libusbhost.a(usb_transfer_batch.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbvirt/libusbvirt.a(stdreq.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_base.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbvirt/libusbvirt.a(virthub_descriptors.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbvirt/libusbvirt.a(transfer.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usbvirt/libusbvirt.a(ctrltransfer.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usb/libusb.a(class.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usb/libusb.a(debug.o)
+ .bss           0x0000000000018ad4        0x0 ../../../../lib/usb/libusb.a(usb.o)
+ .bss           0x0000000000018ad4        0x4 ../../../../lib/drv/libdrv.a(driver.o)
+ .bss           0x0000000000018ad8        0x0 ../../../../lib/drv/libdrv.a(dev_iface.o)
+ .bss           0x0000000000018ad8        0x0 ../../../../lib/drv/libdrv.a(interrupt.o)
+ .bss           0x0000000000018ad8        0x0 ../../../../lib/drv/libdrv.a(logbuf.o)
+ .bss           0x0000000000018ad8        0x0 ../../../../lib/drv/libdrv.a(remote_audio_mixer.o)
+ .bss           0x0000000000018ad8        0x5 ../../../../lib/drv/libdrv.a(remote_audio_pcm.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_hw_res.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_pio_window.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_char_dev.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_nic.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_ieee80211.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_usb.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_pci.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_usbhc.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_usbhid.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_clock_dev.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_led_dev.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_battery_dev.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(remote_ahci.o)
+ .bss           0x0000000000018add        0x0 ../../../../lib/drv/libdrv.a(log.o)
+
+/DISCARD/
+ *(*)
+LOAD endpoint_list.o
+LOAD hc.o
+LOAD main.o
+LOAD ohci_batch.o
+LOAD ohci_endpoint.o
+LOAD ohci_rh.o
+LOAD hw_struct/endpoint_descriptor.o
+LOAD hw_struct/transfer_descriptor.o
+LOAD ../../../../lib/usbhost/libusbhost.a
+LOAD ../../../../lib/usbvirt/libusbvirt.a
+LOAD ../../../../lib/usb/libusb.a
+LOAD ../../../../lib/drv/libdrv.a
+LOAD ../../../../lib/c/libc.so.0
+LOAD ../../../../lib/softint/libsoftint.so.0
+OUTPUT(ohci elf32-i386)

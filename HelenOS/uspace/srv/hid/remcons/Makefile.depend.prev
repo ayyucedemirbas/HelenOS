@@ -1,0 +1,113 @@
+# DO NOT DELETE
+
+remcons.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+remcons.o: ../../../lib/c/include/sys/types.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+remcons.o: ../../../../abi/include/abi/ipc/ipc.h
+remcons.o: ../../../lib/c/include/atomic.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+remcons.o: ../../../lib/c/include/atomicdflt.h
+remcons.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/stdbool.h
+remcons.o: ../../../../abi/include/abi/bool.h
+remcons.o: ../../../../abi/include/abi/proc/task.h
+remcons.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+remcons.o: ../../../../abi/include/abi/syscall.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+remcons.o: ../../../lib/c/include/fibril.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+remcons.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+remcons.o: ../../../lib/c/include/stddef.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+remcons.o: ../../../lib/c/include/sys/time.h
+remcons.o: ../../../../abi/include/abi/ddi/irq.h
+remcons.o: ../../../../abi/include/abi/ipc/event.h
+remcons.o: ../../../../abi/include/abi/ipc/interfaces.h
+remcons.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+remcons.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+remcons.o: ../../../lib/c/include/io/con_srv.h
+remcons.o: ../../../lib/c/include/fibril_synch.h
+remcons.o: ../../../lib/c/include/io/color.h
+remcons.o: ../../../lib/c/include/io/concaps.h
+remcons.o: ../../../lib/c/include/io/cons_event.h
+remcons.o: ../../../lib/c/include/io/kbd_event.h
+remcons.o: ../../../lib/c/include/io/keycode.h
+remcons.o: ../../../lib/c/include/io/pos_event.h
+remcons.o: ../../../lib/c/include/io/pixel.h
+remcons.o: ../../../lib/c/include/io/style.h ../../../lib/c/include/stdio.h
+remcons.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/str.h
+remcons.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+remcons.o: ../../../lib/c/include/io/verify.h
+remcons.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/stdlib.h
+remcons.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+remcons.o: ../../../lib/c/include/malloc.h
+remcons.o: ../../../lib/c/include/stacktrace.h
+remcons.o: ../../../lib/c/include/str_error.h ../../../lib/c/include/loc.h
+remcons.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/align.h
+remcons.o: ../../../lib/c/include/task.h ../../../lib/c/include/types/task.h
+remcons.o: ../../../lib/c/include/inet/addr.h
+remcons.o: ../../../lib/c/include/inet/endpoint.h
+remcons.o: ../../../lib/c/include/inet/tcp.h
+remcons.o: ../../../lib/c/include/inet/inet.h
+remcons.o: ../../../lib/c/include/types/inet.h
+remcons.o: ../../../lib/c/include/io/console.h
+remcons.o: ../../../lib/c/include/inttypes.h
+remcons.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h telnet.h
+remcons.o: user.h ../../../lib/c/include/adt/prodcons.h remcons.h
+user.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+user.o: ../../../lib/c/include/sys/types.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+user.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+user.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+user.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+user.o: ../../../../abi/include/abi/proc/task.h
+user.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+user.o: ../../../../abi/include/abi/syscall.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+user.o: ../../../lib/c/include/fibril.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+user.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+user.o: ../../../lib/c/include/stddef.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+user.o: ../../../lib/c/include/sys/time.h
+user.o: ../../../../abi/include/abi/ddi/irq.h
+user.o: ../../../../abi/include/abi/ipc/event.h
+user.o: ../../../../abi/include/abi/ipc/interfaces.h
+user.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+user.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/stdarg.h
+user.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+user.o: ../../../lib/c/include/cc.h ../../../lib/c/include/io/verify.h
+user.o: ../../../../abi/include/abi/kio.h
+user.o: ../../../lib/c/include/adt/prodcons.h
+user.o: ../../../lib/c/include/fibril_synch.h ../../../lib/c/include/errno.h
+user.o: ../../../../abi/include/abi/errno.h
+user.o: ../../../lib/c/include/str_error.h ../../../lib/c/include/loc.h
+user.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/io/keycode.h
+user.o: ../../../lib/c/include/align.h ../../../lib/c/include/malloc.h
+user.o: ../../../lib/c/include/as.h ../../../../abi/include/abi/mm/as.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+user.o: ../../../lib/c/include/task.h ../../../lib/c/include/types/task.h
+user.o: ../../../lib/c/include/inet/tcp.h ../../../lib/c/include/inet/addr.h
+user.o: ../../../lib/c/include/inet/endpoint.h
+user.o: ../../../lib/c/include/inet/inet.h
+user.o: ../../../lib/c/include/types/inet.h
+user.o: ../../../lib/c/include/io/console.h
+user.o: ../../../lib/c/include/io/concaps.h
+user.o: ../../../lib/c/include/io/kbd_event.h
+user.o: ../../../lib/c/include/io/cons_event.h
+user.o: ../../../lib/c/include/io/pos_event.h
+user.o: ../../../lib/c/include/inttypes.h
+user.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h user.h
+user.o: ../../../lib/c/include/io/con_srv.h ../../../lib/c/include/io/color.h
+user.o: ../../../lib/c/include/io/pixel.h ../../../lib/c/include/io/style.h
+user.o: remcons.h telnet.h
+# DO NOT DELETE

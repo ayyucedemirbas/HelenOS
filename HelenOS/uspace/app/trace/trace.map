@@ -1,0 +1,332 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+proto_system        0x4               ipcp.o
+thash               0x4               trace.o
+thread_ipc_req      0x900             trace.o
+n_threads           0x4               trace.o
+abort_trace         0x1               trace.o
+sess                0x4               trace.o
+proto_unknown       0x4               ipcp.o
+have_conn           0x100             ipcp.o
+connections         0x200             ipcp.o
+display_mask        0x4               trace.o
+thread_hash_buf     0x100             trace.o
+next_thread_id      0x4               trace.o
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x258c trace.o
+ .debug_abbrev  0x0000000000000000      0x3fc trace.o
+ .debug_loc     0x0000000000000000      0xce3 trace.o
+ .debug_aranges
+                0x0000000000000000       0x28 trace.o
+ .debug_ranges  0x0000000000000000      0x1f0 trace.o
+ .debug_line    0x0000000000000000      0x6e3 trace.o
+ .debug_str     0x0000000000000000     0x17af trace.o
+ .comment       0x0000000000000000       0x12 trace.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 trace.o
+ .eh_frame      0x0000000000000000      0x194 trace.o
+ .debug_info    0x0000000000000000      0x2dc syscalls.o
+ .debug_abbrev  0x0000000000000000       0xa3 syscalls.o
+ .debug_aranges
+                0x0000000000000000       0x18 syscalls.o
+ .debug_line    0x0000000000000000       0xa8 syscalls.o
+ .debug_str     0x0000000000000000      0x651 syscalls.o
+ .comment       0x0000000000000000       0x12 syscalls.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 syscalls.o
+ .debug_info    0x0000000000000000     0x10b7 ipcp.o
+ .debug_abbrev  0x0000000000000000      0x2f4 ipcp.o
+ .debug_loc     0x0000000000000000      0x877 ipcp.o
+ .debug_aranges
+                0x0000000000000000       0x20 ipcp.o
+ .debug_ranges  0x0000000000000000       0x90 ipcp.o
+ .debug_line    0x0000000000000000      0x3af ipcp.o
+ .debug_str     0x0000000000000000      0xb96 ipcp.o
+ .comment       0x0000000000000000       0x12 ipcp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ipcp.o
+ .eh_frame      0x0000000000000000      0x1d8 ipcp.o
+ .debug_info    0x0000000000000000      0x148 ipc_desc.o
+ .debug_abbrev  0x0000000000000000       0xa3 ipc_desc.o
+ .debug_aranges
+                0x0000000000000000       0x18 ipc_desc.o
+ .debug_line    0x0000000000000000       0xa1 ipc_desc.o
+ .debug_str     0x0000000000000000      0x2aa ipc_desc.o
+ .comment       0x0000000000000000       0x12 ipc_desc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ipc_desc.o
+ .debug_info    0x0000000000000000      0xb91 proto.o
+ .debug_abbrev  0x0000000000000000      0x29b proto.o
+ .debug_loc     0x0000000000000000      0x224 proto.o
+ .debug_aranges
+                0x0000000000000000       0x20 proto.o
+ .debug_ranges  0x0000000000000000       0x30 proto.o
+ .debug_line    0x0000000000000000      0x20a proto.o
+ .debug_str     0x0000000000000000      0x985 proto.o
+ .comment       0x0000000000000000       0x12 proto.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 proto.o
+ .eh_frame      0x0000000000000000      0x234 proto.o
+ .debug_info    0x0000000000000000       0x90 errors.o
+ .debug_abbrev  0x0000000000000000       0x80 errors.o
+ .debug_aranges
+                0x0000000000000000       0x18 errors.o
+ .debug_line    0x0000000000000000       0x35 errors.o
+ .debug_str     0x0000000000000000      0x130 errors.o
+ .comment       0x0000000000000000       0x12 errors.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 errors.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001140     0x2dc8
+ *(.text .text.*)
+ .text          0x0000000000001140        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001140      0x811 trace.o
+                0x0000000000001320                val_print
+                0x0000000000001910                thread_trace_start
+ *fill*         0x0000000000001951        0xf 
+ .text.startup  0x0000000000001960      0xa97 trace.o
+                0x0000000000001960                main
+ .text          0x00000000000023f7        0x0 syscalls.o
+ *fill*         0x00000000000023f7        0x9 
+ .text          0x0000000000002400      0x8fa ipcp.o
+                0x0000000000002440                ipcp_connection_set
+                0x0000000000002470                ipcp_connection_clear
+                0x00000000000024a0                ipcp_init
+                0x0000000000002570                ipcp_cleanup
+                0x00000000000025a0                ipcp_call_out
+                0x0000000000002800                ipcp_call_in
+                0x0000000000002a70                ipcp_call_sync
+                0x0000000000002cb0                ipcp_hangup
+ .text          0x0000000000002cfa        0x0 ipc_desc.o
+ *fill*         0x0000000000002cfa        0x6 
+ .text          0x0000000000002d00      0x2ac proto.o
+                0x0000000000002d80                proto_init
+                0x0000000000002dc0                proto_cleanup
+                0x0000000000002de0                proto_register
+                0x0000000000002e20                proto_get_by_srv
+                0x0000000000002e50                proto_new
+                0x0000000000002ea0                proto_delete
+                0x0000000000002eb0                proto_add_oper
+                0x0000000000002ef0                proto_get_oper
+                0x0000000000002f20                oper_new
+ .text          0x0000000000002fac        0x0 errors.o
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000002fac      0x3c0 trace.o
+                                        0x3d4 (size before relaxing)
+ .rodata.str1.4
+                0x000000000000336c      0x2ac trace.o
+ .rodata        0x0000000000003618       0x54 trace.o
+ *fill*         0x000000000000366c       0x14 
+ .rodata        0x0000000000003680      0x284 syscalls.o
+                0x0000000000003680                syscall_desc_len
+                0x00000000000036a0                syscall_desc
+ .rodata.str1.1
+                0x0000000000003904      0x223 syscalls.o
+ .rodata.str1.1
+                0x0000000000003b27       0x84 ipcp.o
+                                         0x87 (size before relaxing)
+ *fill*         0x0000000000003bab        0x1 
+ .rodata.str1.4
+                0x0000000000003bac       0x95 ipcp.o
+ .rodata.str1.1
+                0x0000000000003c41       0x78 ipc_desc.o
+ .rodata.str1.1
+                0x0000000000003cb9        0x8 proto.o
+                                          0xb (size before relaxing)
+ .rodata.str1.1
+                0x0000000000003cc1      0x181 errors.o
+ *fill*         0x0000000000003e42        0x2 
+ .rodata.str1.4
+                0x0000000000003e44       0x24 errors.o
+                                         0x22 (size before relaxing)
+ *fill*         0x0000000000003e68       0x18 
+ .rodata        0x0000000000003e80       0x88 errors.o
+                0x0000000000003e80                err_desc
+
+.rel.plt        0x0000000000003f08      0x170
+ *(.rel.plt)
+ .rel.plt       0x0000000000003f08      0x170 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000004078       0x20
+ *(.rel.*)
+ .rel.got       0x0000000000004078        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000004078       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000004098        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000004098        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000004098        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x00000000000040a0      0x2f0
+ *(.plt)
+ .plt           0x00000000000040a0      0x2f0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000040b0                putchar
+                0x00000000000040c0                __main
+                0x00000000000040d0                printf
+                0x00000000000040e0                async_hangup
+                0x00000000000040f0                vfs_fhandle
+                0x0000000000004100                loader_load_program
+                0x0000000000004110                hash_table_create
+                0x0000000000004120                hash_table_insert
+                0x0000000000004130                __errno
+                0x0000000000004140                udebug_end
+                0x0000000000004150                malloc
+                0x0000000000004160                udebug_begin
+                0x0000000000004170                console_get_event
+                0x0000000000004180                fibril_condvar_wait
+                0x0000000000004190                loader_abort
+                0x00000000000041a0                strtol
+                0x00000000000041b0                console_init
+                0x00000000000041c0                assert_abort
+                0x00000000000041d0                fibril_condvar_initialize
+                0x00000000000041e0                loader_set_pathname
+                0x00000000000041f0                fibril_condvar_broadcast
+                0x0000000000004200                udebug_set_evmask
+                0x0000000000004210                udebug_args_read
+                0x0000000000004220                loader_connect
+                0x0000000000004230                fibril_mutex_unlock
+                0x0000000000004240                fibril_mutex_initialize
+                0x0000000000004250                udebug_thread_read
+                0x0000000000004260                task_wait_task_id
+                0x0000000000004270                udebug_stop
+                0x0000000000004280                hash_table_remove
+                0x0000000000004290                memset
+                0x00000000000042a0                loader_set_args
+                0x00000000000042b0                loader_get_task_id
+                0x00000000000042c0                loader_run
+                0x00000000000042d0                udebug_mem_read
+                0x00000000000042e0                hash_table_find
+                0x00000000000042f0                loader_set_files
+                0x0000000000004300                exit
+                0x0000000000004310                fibril_create_generic
+                0x0000000000004320                fibril_add_ready
+                0x0000000000004330                async_connect_kbox
+                0x0000000000004340                __syscall_fast
+                0x0000000000004350                udebug_go
+                0x0000000000004360                hash_table_destroy
+                0x0000000000004370                free
+                0x0000000000004380                fibril_mutex_lock
+
+.dynsym         0x0000000000004390      0x350
+ *(.dynsym)
+ .dynsym        0x0000000000004390      0x350 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x00000000000046e0      0x2fd
+ *(.dynstr)
+ .dynstr        0x00000000000046e0      0x2fd /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000049e0      0x170
+ *(.hash)
+ .hash          0x00000000000049e0      0x170 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000004b50       0x13
+ *(.interp)
+ .interp        0x0000000000004b50       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005b63                . = (. + 0x1000)
+
+.dynamic        0x0000000000005b64       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000005b64       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005b64                _DYNAMIC
+
+.data           0x0000000000005c20       0xb8
+ *(.data)
+ .data          0x0000000000005c20        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000005c20        0x0 trace.o
+ .data          0x0000000000005c20        0x0 syscalls.o
+ .data          0x0000000000005c20       0x14 ipcp.o
+ *fill*         0x0000000000005c34        0xc 
+ .data          0x0000000000005c40       0x70 ipc_desc.o
+                0x0000000000005c40                ipc_methods_len
+                0x0000000000005c60                ipc_methods
+ .data          0x0000000000005cb0       0x28 proto.o
+ .data          0x0000000000005cd8        0x0 errors.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000005cd8        0x0
+ *(.got)
+ .got           0x0000000000005cd8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000005cd8       0xc4
+ *(.got.plt)
+ .got.plt       0x0000000000005cd8       0xc4 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005cd8                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000005da0      0xe40
+ *(.dynbss)
+ .dynbss        0x0000000000005da0       0x24 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005da0                stdout
+                0x0000000000005db0                stdin
+                0x0000000000005db8                __syscall_fast_func
+                0x0000000000005dc0                stderr
+ *(COMMON)
+ *fill*         0x0000000000005dc4       0x1c 
+ COMMON         0x0000000000005de0      0xa44 trace.o
+                0x0000000000005de0                thash
+                0x0000000000005e00                thread_ipc_req
+                0x0000000000006700                n_threads
+                0x0000000000006704                abort_trace
+                0x0000000000006708                sess
+                0x000000000000670c                display_mask
+                0x0000000000006720                thread_hash_buf
+                0x0000000000006820                next_thread_id
+ *fill*         0x0000000000006824       0x1c 
+ COMMON         0x0000000000006840      0x320 ipcp.o
+                0x0000000000006840                proto_system
+                0x0000000000006844                proto_unknown
+                0x0000000000006860                have_conn
+                0x0000000000006960                connections
+ *(.bss)
+ .bss           0x0000000000006b60        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000006b60       0x45 trace.o
+ .bss           0x0000000000006ba5        0x0 syscalls.o
+ *fill*         0x0000000000006ba5        0x3 
+ .bss           0x0000000000006ba8       0x1c ipcp.o
+ .bss           0x0000000000006bc4        0x0 ipc_desc.o
+ .bss           0x0000000000006bc4       0x1c proto.o
+ .bss           0x0000000000006be0        0x0 errors.o
+
+/DISCARD/
+ *(*)
+LOAD trace.o
+LOAD syscalls.o
+LOAD ipcp.o
+LOAD ipc_desc.o
+LOAD proto.o
+LOAD errors.o
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(trace elf32-i386)

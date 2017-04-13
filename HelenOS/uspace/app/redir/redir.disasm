@@ -1,0 +1,493 @@
+
+redir:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 68 2b 00 00    	lea    0x2b68,%eax
+    1110:	c7 00 50 17 00 00    	movl   $0x1750,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 7e 05 00 00       	call   16a0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <main>:
+    1130:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1134:	83 e4 f0             	and    $0xfffffff0,%esp
+    1137:	ff 71 fc             	pushl  -0x4(%ecx)
+    113a:	55                   	push   %ebp
+    113b:	89 e5                	mov    %esp,%ebp
+    113d:	57                   	push   %edi
+    113e:	56                   	push   %esi
+    113f:	53                   	push   %ebx
+    1140:	51                   	push   %ecx
+    1141:	83 ec 58             	sub    $0x58,%esp
+    1144:	8b 01                	mov    (%ecx),%eax
+    1146:	8b 49 04             	mov    0x4(%ecx),%ecx
+    1149:	89 45 a4             	mov    %eax,-0x5c(%ebp)
+    114c:	89 4d a0             	mov    %ecx,-0x60(%ebp)
+    114f:	83 f8 02             	cmp    $0x2,%eax
+    1152:	0f 8e e5 03 00 00    	jle    153d <main+0x40d>
+    1158:	bb 01 00 00 00       	mov    $0x1,%ebx
+    115d:	eb 36                	jmp    1195 <main+0x65>
+    115f:	90                   	nop
+    1160:	43                   	inc    %ebx
+    1161:	39 5d a4             	cmp    %ebx,-0x5c(%ebp)
+    1164:	0f 8e 23 03 00 00    	jle    148d <main+0x35d>
+    116a:	83 ec 0c             	sub    $0xc,%esp
+    116d:	8b 45 a0             	mov    -0x60(%ebp),%eax
+    1170:	8b 0d 60 2b 00 00    	mov    0x2b60,%ecx
+    1176:	8b 74 38 04          	mov    0x4(%eax,%edi,1),%esi
+    117a:	51                   	push   %ecx
+    117b:	e8 a0 05 00 00       	call   1720 <fclose@plt>
+    1180:	83 c4 10             	add    $0x10,%esp
+    1183:	85 c0                	test   %eax,%eax
+    1185:	0f 84 dd 00 00 00    	je     1268 <main+0x138>
+    118b:	43                   	inc    %ebx
+    118c:	39 5d a4             	cmp    %ebx,-0x5c(%ebp)
+    118f:	0f 8e 3f 01 00 00    	jle    12d4 <main+0x1a4>
+    1195:	8b 45 a0             	mov    -0x60(%ebp),%eax
+    1198:	8d 3c 9d 00 00 00 00 	lea    0x0(,%ebx,4),%edi
+    119f:	8d 34 38             	lea    (%eax,%edi,1),%esi
+    11a2:	50                   	push   %eax
+    11a3:	50                   	push   %eax
+    11a4:	68 64 15 00 00       	push   $0x1564
+    11a9:	8b 06                	mov    (%esi),%eax
+    11ab:	50                   	push   %eax
+    11ac:	e8 5f 05 00 00       	call   1710 <str_cmp@plt>
+    11b1:	83 c4 10             	add    $0x10,%esp
+    11b4:	85 c0                	test   %eax,%eax
+    11b6:	74 a8                	je     1160 <main+0x30>
+    11b8:	50                   	push   %eax
+    11b9:	50                   	push   %eax
+    11ba:	68 67 15 00 00       	push   $0x1567
+    11bf:	8b 06                	mov    (%esi),%eax
+    11c1:	50                   	push   %eax
+    11c2:	e8 49 05 00 00       	call   1710 <str_cmp@plt>
+    11c7:	83 c4 10             	add    $0x10,%esp
+    11ca:	85 c0                	test   %eax,%eax
+    11cc:	0f 85 2e 01 00 00    	jne    1300 <main+0x1d0>
+    11d2:	43                   	inc    %ebx
+    11d3:	39 5d a4             	cmp    %ebx,-0x5c(%ebp)
+    11d6:	0f 8e d4 02 00 00    	jle    14b0 <main+0x380>
+    11dc:	8b 45 a0             	mov    -0x60(%ebp),%eax
+    11df:	83 ec 0c             	sub    $0xc,%esp
+    11e2:	8b 74 38 04          	mov    0x4(%eax,%edi,1),%esi
+    11e6:	a1 50 2b 00 00       	mov    0x2b50,%eax
+    11eb:	50                   	push   %eax
+    11ec:	e8 2f 05 00 00       	call   1720 <fclose@plt>
+    11f1:	83 c4 10             	add    $0x10,%esp
+    11f4:	85 c0                	test   %eax,%eax
+    11f6:	75 93                	jne    118b <main+0x5b>
+    11f8:	c7 05 50 2b 00 00 00 	movl   $0x0,0x2b50
+    11ff:	00 00 00 
+    1202:	57                   	push   %edi
+    1203:	57                   	push   %edi
+    1204:	6a 41                	push   $0x41
+    1206:	56                   	push   %esi
+    1207:	e8 54 05 00 00       	call   1760 <open@plt>
+    120c:	83 c4 10             	add    $0x10,%esp
+    120f:	89 c6                	mov    %eax,%esi
+    1211:	85 c0                	test   %eax,%eax
+    1213:	0f 88 72 ff ff ff    	js     118b <main+0x5b>
+    1219:	83 f8 01             	cmp    $0x1,%eax
+    121c:	74 28                	je     1246 <main+0x116>
+    121e:	51                   	push   %ecx
+    121f:	51                   	push   %ecx
+    1220:	6a 01                	push   $0x1
+    1222:	50                   	push   %eax
+    1223:	e8 a8 04 00 00       	call   16d0 <dup2@plt>
+    1228:	83 c4 10             	add    $0x10,%esp
+    122b:	48                   	dec    %eax
+    122c:	0f 85 59 ff ff ff    	jne    118b <main+0x5b>
+    1232:	83 ec 0c             	sub    $0xc,%esp
+    1235:	56                   	push   %esi
+    1236:	e8 35 05 00 00       	call   1770 <close@plt>
+    123b:	83 c4 10             	add    $0x10,%esp
+    123e:	85 c0                	test   %eax,%eax
+    1240:	0f 85 45 ff ff ff    	jne    118b <main+0x5b>
+    1246:	56                   	push   %esi
+    1247:	56                   	push   %esi
+    1248:	68 6a 15 00 00       	push   $0x156a
+    124d:	6a 01                	push   $0x1
+    124f:	e8 ac 04 00 00       	call   1700 <fdopen@plt>
+    1254:	83 c4 10             	add    $0x10,%esp
+    1257:	a3 50 2b 00 00       	mov    %eax,0x2b50
+    125c:	e9 2a ff ff ff       	jmp    118b <main+0x5b>
+    1261:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1268:	c7 05 60 2b 00 00 00 	movl   $0x0,0x2b60
+    126f:	00 00 00 
+    1272:	52                   	push   %edx
+    1273:	52                   	push   %edx
+    1274:	6a 10                	push   $0x10
+    1276:	56                   	push   %esi
+    1277:	e8 e4 04 00 00       	call   1760 <open@plt>
+    127c:	83 c4 10             	add    $0x10,%esp
+    127f:	89 c6                	mov    %eax,%esi
+    1281:	85 c0                	test   %eax,%eax
+    1283:	0f 88 02 ff ff ff    	js     118b <main+0x5b>
+    1289:	74 29                	je     12b4 <main+0x184>
+    128b:	50                   	push   %eax
+    128c:	50                   	push   %eax
+    128d:	6a 00                	push   $0x0
+    128f:	56                   	push   %esi
+    1290:	e8 3b 04 00 00       	call   16d0 <dup2@plt>
+    1295:	83 c4 10             	add    $0x10,%esp
+    1298:	85 c0                	test   %eax,%eax
+    129a:	0f 85 eb fe ff ff    	jne    118b <main+0x5b>
+    12a0:	83 ec 0c             	sub    $0xc,%esp
+    12a3:	56                   	push   %esi
+    12a4:	e8 c7 04 00 00       	call   1770 <close@plt>
+    12a9:	83 c4 10             	add    $0x10,%esp
+    12ac:	85 c0                	test   %eax,%eax
+    12ae:	0f 85 d7 fe ff ff    	jne    118b <main+0x5b>
+    12b4:	50                   	push   %eax
+    12b5:	50                   	push   %eax
+    12b6:	68 62 15 00 00       	push   $0x1562
+    12bb:	6a 00                	push   $0x0
+    12bd:	e8 3e 04 00 00       	call   1700 <fdopen@plt>
+    12c2:	43                   	inc    %ebx
+    12c3:	83 c4 10             	add    $0x10,%esp
+    12c6:	a3 60 2b 00 00       	mov    %eax,0x2b60
+    12cb:	39 5d a4             	cmp    %ebx,-0x5c(%ebp)
+    12ce:	0f 8f c1 fe ff ff    	jg     1195 <main+0x65>
+    12d4:	56                   	push   %esi
+    12d5:	68 5e 15 00 00       	push   $0x155e
+    12da:	68 a4 15 00 00       	push   $0x15a4
+    12df:	ff 35 70 2b 00 00    	pushl  0x2b70
+    12e5:	e8 06 04 00 00       	call   16f0 <fprintf@plt>
+    12ea:	83 c4 10             	add    $0x10,%esp
+    12ed:	b8 fb ff ff ff       	mov    $0xfffffffb,%eax
+    12f2:	8d 65 f0             	lea    -0x10(%ebp),%esp
+    12f5:	59                   	pop    %ecx
+    12f6:	5b                   	pop    %ebx
+    12f7:	5e                   	pop    %esi
+    12f8:	5f                   	pop    %edi
+    12f9:	5d                   	pop    %ebp
+    12fa:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    12fd:	c3                   	ret    
+    12fe:	66 90                	xchg   %ax,%ax
+    1300:	50                   	push   %eax
+    1301:	50                   	push   %eax
+    1302:	68 6c 15 00 00       	push   $0x156c
+    1307:	8b 16                	mov    (%esi),%edx
+    1309:	52                   	push   %edx
+    130a:	e8 01 04 00 00       	call   1710 <str_cmp@plt>
+    130f:	83 c4 10             	add    $0x10,%esp
+    1312:	85 c0                	test   %eax,%eax
+    1314:	0f 85 95 00 00 00    	jne    13af <main+0x27f>
+    131a:	43                   	inc    %ebx
+    131b:	39 5d a4             	cmp    %ebx,-0x5c(%ebp)
+    131e:	0f 8e df 01 00 00    	jle    1503 <main+0x3d3>
+    1324:	8b 45 a0             	mov    -0x60(%ebp),%eax
+    1327:	83 ec 0c             	sub    $0xc,%esp
+    132a:	8b 74 38 04          	mov    0x4(%eax,%edi,1),%esi
+    132e:	a1 70 2b 00 00       	mov    0x2b70,%eax
+    1333:	50                   	push   %eax
+    1334:	e8 e7 03 00 00       	call   1720 <fclose@plt>
+    1339:	83 c4 10             	add    $0x10,%esp
+    133c:	85 c0                	test   %eax,%eax
+    133e:	0f 85 47 fe ff ff    	jne    118b <main+0x5b>
+    1344:	c7 05 70 2b 00 00 00 	movl   $0x0,0x2b70
+    134b:	00 00 00 
+    134e:	50                   	push   %eax
+    134f:	50                   	push   %eax
+    1350:	6a 41                	push   $0x41
+    1352:	56                   	push   %esi
+    1353:	e8 08 04 00 00       	call   1760 <open@plt>
+    1358:	83 c4 10             	add    $0x10,%esp
+    135b:	89 c6                	mov    %eax,%esi
+    135d:	85 c0                	test   %eax,%eax
+    135f:	0f 88 26 fe ff ff    	js     118b <main+0x5b>
+    1365:	83 f8 02             	cmp    $0x2,%eax
+    1368:	74 2a                	je     1394 <main+0x264>
+    136a:	50                   	push   %eax
+    136b:	50                   	push   %eax
+    136c:	6a 02                	push   $0x2
+    136e:	56                   	push   %esi
+    136f:	e8 5c 03 00 00       	call   16d0 <dup2@plt>
+    1374:	83 c4 10             	add    $0x10,%esp
+    1377:	83 f8 02             	cmp    $0x2,%eax
+    137a:	0f 85 0b fe ff ff    	jne    118b <main+0x5b>
+    1380:	83 ec 0c             	sub    $0xc,%esp
+    1383:	56                   	push   %esi
+    1384:	e8 e7 03 00 00       	call   1770 <close@plt>
+    1389:	83 c4 10             	add    $0x10,%esp
+    138c:	85 c0                	test   %eax,%eax
+    138e:	0f 85 f7 fd ff ff    	jne    118b <main+0x5b>
+    1394:	50                   	push   %eax
+    1395:	50                   	push   %eax
+    1396:	68 6a 15 00 00       	push   $0x156a
+    139b:	6a 02                	push   $0x2
+    139d:	e8 5e 03 00 00       	call   1700 <fdopen@plt>
+    13a2:	83 c4 10             	add    $0x10,%esp
+    13a5:	a3 70 2b 00 00       	mov    %eax,0x2b70
+    13aa:	e9 dc fd ff ff       	jmp    118b <main+0x5b>
+    13af:	57                   	push   %edi
+    13b0:	57                   	push   %edi
+    13b1:	68 6f 15 00 00       	push   $0x156f
+    13b6:	ff 36                	pushl  (%esi)
+    13b8:	e8 53 03 00 00       	call   1710 <str_cmp@plt>
+    13bd:	83 c4 10             	add    $0x10,%esp
+    13c0:	89 c6                	mov    %eax,%esi
+    13c2:	85 c0                	test   %eax,%eax
+    13c4:	0f 85 c1 fd ff ff    	jne    118b <main+0x5b>
+    13ca:	43                   	inc    %ebx
+    13cb:	39 5d a4             	cmp    %ebx,-0x5c(%ebp)
+    13ce:	0f 8e 00 ff ff ff    	jle    12d4 <main+0x1a4>
+    13d4:	68 00 10 00 00       	push   $0x1000
+    13d9:	6a 01                	push   $0x1
+    13db:	6a 00                	push   $0x0
+    13dd:	ff 35 50 2b 00 00    	pushl  0x2b50
+    13e3:	e8 d8 02 00 00       	call   16c0 <setvbuf@plt>
+    13e8:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    13eb:	29 da                	sub    %ebx,%edx
+    13ed:	8b 45 a0             	mov    -0x60(%ebp),%eax
+    13f0:	59                   	pop    %ecx
+    13f1:	c7 45 b8 00 00 00 00 	movl   $0x0,-0x48(%ebp)
+    13f8:	8d 3c 98             	lea    (%eax,%ebx,4),%edi
+    13fb:	8d 42 01             	lea    0x1(%edx),%eax
+    13fe:	5b                   	pop    %ebx
+    13ff:	c7 45 bc 00 00 00 00 	movl   $0x0,-0x44(%ebp)
+    1406:	6a 04                	push   $0x4
+    1408:	89 55 a4             	mov    %edx,-0x5c(%ebp)
+    140b:	50                   	push   %eax
+    140c:	e8 cf 02 00 00       	call   16e0 <calloc@plt>
+    1411:	83 c4 10             	add    $0x10,%esp
+    1414:	89 c3                	mov    %eax,%ebx
+    1416:	85 c0                	test   %eax,%eax
+    1418:	0f 84 08 01 00 00    	je     1526 <main+0x3f6>
+    141e:	8b 55 a4             	mov    -0x5c(%ebp),%edx
+    1421:	85 d2                	test   %edx,%edx
+    1423:	7e 0e                	jle    1433 <main+0x303>
+    1425:	8d 76 00             	lea    0x0(%esi),%esi
+    1428:	8b 04 b7             	mov    (%edi,%esi,4),%eax
+    142b:	89 04 b3             	mov    %eax,(%ebx,%esi,4)
+    142e:	46                   	inc    %esi
+    142f:	39 f2                	cmp    %esi,%edx
+    1431:	75 f5                	jne    1428 <main+0x2f8>
+    1433:	c7 04 93 00 00 00 00 	movl   $0x0,(%ebx,%edx,4)
+    143a:	53                   	push   %ebx
+    143b:	ff 37                	pushl  (%edi)
+    143d:	8d 55 b8             	lea    -0x48(%ebp),%edx
+    1440:	8d 75 c0             	lea    -0x40(%ebp),%esi
+    1443:	56                   	push   %esi
+    1444:	89 55 a0             	mov    %edx,-0x60(%ebp)
+    1447:	52                   	push   %edx
+    1448:	e8 e3 02 00 00       	call   1730 <task_spawnv@plt>
+    144d:	89 1c 24             	mov    %ebx,(%esp)
+    1450:	89 45 a4             	mov    %eax,-0x5c(%ebp)
+    1453:	e8 28 03 00 00       	call   1780 <free@plt>
+    1458:	8b 45 a4             	mov    -0x5c(%ebp),%eax
+    145b:	83 c4 10             	add    $0x10,%esp
+    145e:	8b 55 a0             	mov    -0x60(%ebp),%edx
+    1461:	85 c0                	test   %eax,%eax
+    1463:	75 6e                	jne    14d3 <main+0x3a3>
+    1465:	8b 4d bc             	mov    -0x44(%ebp),%ecx
+    1468:	b8 fa ff ff ff       	mov    $0xfffffffa,%eax
+    146d:	0b 4d b8             	or     -0x48(%ebp),%ecx
+    1470:	0f 84 7c fe ff ff    	je     12f2 <main+0x1c2>
+    1476:	50                   	push   %eax
+    1477:	8d 45 b4             	lea    -0x4c(%ebp),%eax
+    147a:	52                   	push   %edx
+    147b:	50                   	push   %eax
+    147c:	56                   	push   %esi
+    147d:	e8 2e 02 00 00       	call   16b0 <task_wait@plt>
+    1482:	8b 45 b8             	mov    -0x48(%ebp),%eax
+    1485:	83 c4 10             	add    $0x10,%esp
+    1488:	e9 65 fe ff ff       	jmp    12f2 <main+0x1c2>
+    148d:	53                   	push   %ebx
+    148e:	68 5e 15 00 00       	push   $0x155e
+    1493:	68 a4 15 00 00       	push   $0x15a4
+    1498:	ff 35 70 2b 00 00    	pushl  0x2b70
+    149e:	e8 4d 02 00 00       	call   16f0 <fprintf@plt>
+    14a3:	83 c4 10             	add    $0x10,%esp
+    14a6:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    14ab:	e9 42 fe ff ff       	jmp    12f2 <main+0x1c2>
+    14b0:	50                   	push   %eax
+    14b1:	68 5e 15 00 00       	push   $0x155e
+    14b6:	68 a4 15 00 00       	push   $0x15a4
+    14bb:	ff 35 70 2b 00 00    	pushl  0x2b70
+    14c1:	e8 2a 02 00 00       	call   16f0 <fprintf@plt>
+    14c6:	83 c4 10             	add    $0x10,%esp
+    14c9:	b8 fd ff ff ff       	mov    $0xfffffffd,%eax
+    14ce:	e9 1f fe ff ff       	jmp    12f2 <main+0x1c2>
+    14d3:	83 ec 0c             	sub    $0xc,%esp
+    14d6:	50                   	push   %eax
+    14d7:	e8 64 02 00 00       	call   1740 <str_error@plt>
+    14dc:	89 04 24             	mov    %eax,(%esp)
+    14df:	ff 37                	pushl  (%edi)
+    14e1:	68 5e 15 00 00       	push   $0x155e
+    14e6:	68 87 15 00 00       	push   $0x1587
+    14eb:	ff 35 70 2b 00 00    	pushl  0x2b70
+    14f1:	e8 fa 01 00 00       	call   16f0 <fprintf@plt>
+    14f6:	83 c4 20             	add    $0x20,%esp
+    14f9:	b8 fa ff ff ff       	mov    $0xfffffffa,%eax
+    14fe:	e9 ef fd ff ff       	jmp    12f2 <main+0x1c2>
+    1503:	50                   	push   %eax
+    1504:	68 5e 15 00 00       	push   $0x155e
+    1509:	68 a4 15 00 00       	push   $0x15a4
+    150e:	ff 35 70 2b 00 00    	pushl  0x2b70
+    1514:	e8 d7 01 00 00       	call   16f0 <fprintf@plt>
+    1519:	83 c4 10             	add    $0x10,%esp
+    151c:	b8 fc ff ff ff       	mov    $0xfffffffc,%eax
+    1521:	e9 cc fd ff ff       	jmp    12f2 <main+0x1c2>
+    1526:	52                   	push   %edx
+    1527:	52                   	push   %edx
+    1528:	68 72 15 00 00       	push   $0x1572
+    152d:	ff 35 70 2b 00 00    	pushl  0x2b70
+    1533:	e8 b8 01 00 00       	call   16f0 <fprintf@plt>
+    1538:	83 c4 10             	add    $0x10,%esp
+    153b:	eb bc                	jmp    14f9 <main+0x3c9>
+    153d:	50                   	push   %eax
+    153e:	68 5e 15 00 00       	push   $0x155e
+    1543:	68 a4 15 00 00       	push   $0x15a4
+    1548:	ff 35 70 2b 00 00    	pushl  0x2b70
+    154e:	e8 9d 01 00 00       	call   16f0 <fprintf@plt>
+    1553:	83 c4 10             	add    $0x10,%esp
+    1556:	83 c8 ff             	or     $0xffffffff,%eax
+    1559:	e9 94 fd ff ff       	jmp    12f2 <main+0x1c2>
+    155e:	72 65                	jb     15c5 <main+0x495>
+    1560:	64 69 72 00 2d 69 00 	imul   $0x2d00692d,%fs:0x0(%edx),%esi
+    1567:	2d 
+    1568:	6f                   	outsl  %ds:(%esi),(%dx)
+    1569:	00 77 00             	add    %dh,0x0(%edi)
+    156c:	2d 65 00 2d 2d       	sub    $0x2d2d0065,%eax
+    1571:	00 4e 6f             	add    %cl,0x6f(%esi)
+    1574:	20 6d 65             	and    %ch,0x65(%ebp)
+    1577:	6d                   	insl   (%dx),%es:(%edi)
+    1578:	6f                   	outsl  %ds:(%esi),(%dx)
+    1579:	72 79                	jb     15f4 <main+0x4c4>
+    157b:	20 61 76             	and    %ah,0x76(%ecx)
+    157e:	61                   	popa   
+    157f:	69 6c 61 62 6c 65 0a 	imul   $0xa656c,0x62(%ecx,%eiz,2),%ebp
+    1586:	00 
+    1587:	25 73 3a 20 45       	and    $0x45203a73,%eax
+    158c:	72 72                	jb     1600 <main+0x4d0>
+    158e:	6f                   	outsl  %ds:(%esi),(%dx)
+    158f:	72 20                	jb     15b1 <main+0x481>
+    1591:	73 70                	jae    1603 <main+0x4d3>
+    1593:	61                   	popa   
+    1594:	77 6e                	ja     1604 <main+0x4d4>
+    1596:	69 6e 67 20 25 73 20 	imul   $0x20732520,0x67(%esi),%ebp
+    159d:	28 25 73 29 0a 00    	sub    %ah,0xa2973
+    15a3:	90                   	nop
+    15a4:	55                   	push   %ebp
+    15a5:	73 61                	jae    1608 <main+0x4d8>
+    15a7:	67 65 3a 20          	cmp    %gs:(%bx,%si),%ah
+    15ab:	25 73 20 5b 2d       	and    $0x2d5b2073,%eax
+    15b0:	69 20 3c 73 74 64    	imul   $0x6474733c,(%eax),%esp
+    15b6:	69 6e 3e 5d 20 5b 2d 	imul   $0x2d5b205d,0x3e(%esi),%ebp
+    15bd:	6f                   	outsl  %ds:(%esi),(%dx)
+    15be:	20 3c 73             	and    %bh,(%ebx,%esi,2)
+    15c1:	74 64                	je     1627 <main+0x4f7>
+    15c3:	6f                   	outsl  %ds:(%esi),(%dx)
+    15c4:	75 74                	jne    163a <main+0x50a>
+    15c6:	3e 5d                	ds pop %ebp
+    15c8:	20 5b 2d             	and    %bl,0x2d(%ebx)
+    15cb:	65 20 3c 73          	and    %bh,%gs:(%ebx,%esi,2)
+    15cf:	74 64                	je     1635 <main+0x505>
+    15d1:	65 72 72             	gs jb  1646 <main+0x516>
+    15d4:	3e 5d                	ds pop %ebp
+    15d6:	20 2d 2d 20 3c 63    	and    %ch,0x633c202d
+    15dc:	6d                   	insl   (%dx),%es:(%edi)
+    15dd:	64 3e 20 5b 61       	fs and %bl,%ds:0x61(%ebx)
+    15e2:	72 67                	jb     164b <main+0x51b>
+    15e4:	73 20                	jae    1606 <main+0x4d6>
+    15e6:	2e 2e 2e 5d          	cs cs cs pop %ebp
+    15ea:	0a 00                	or     (%eax),%al
+
+Disassembly of section .plt:
+
+00001690 <__main@plt-0x10>:
+    1690:	ff 35 0c 2b 00 00    	pushl  0x2b0c
+    1696:	ff 25 10 2b 00 00    	jmp    *0x2b10
+    169c:	00 00                	add    %al,(%eax)
+	...
+
+000016a0 <__main@plt>:
+    16a0:	ff 25 14 2b 00 00    	jmp    *0x2b14
+    16a6:	68 00 00 00 00       	push   $0x0
+    16ab:	e9 e0 ff ff ff       	jmp    1690 <main+0x560>
+
+000016b0 <task_wait@plt>:
+    16b0:	ff 25 18 2b 00 00    	jmp    *0x2b18
+    16b6:	68 08 00 00 00       	push   $0x8
+    16bb:	e9 d0 ff ff ff       	jmp    1690 <main+0x560>
+
+000016c0 <setvbuf@plt>:
+    16c0:	ff 25 1c 2b 00 00    	jmp    *0x2b1c
+    16c6:	68 10 00 00 00       	push   $0x10
+    16cb:	e9 c0 ff ff ff       	jmp    1690 <main+0x560>
+
+000016d0 <dup2@plt>:
+    16d0:	ff 25 20 2b 00 00    	jmp    *0x2b20
+    16d6:	68 18 00 00 00       	push   $0x18
+    16db:	e9 b0 ff ff ff       	jmp    1690 <main+0x560>
+
+000016e0 <calloc@plt>:
+    16e0:	ff 25 24 2b 00 00    	jmp    *0x2b24
+    16e6:	68 20 00 00 00       	push   $0x20
+    16eb:	e9 a0 ff ff ff       	jmp    1690 <main+0x560>
+
+000016f0 <fprintf@plt>:
+    16f0:	ff 25 28 2b 00 00    	jmp    *0x2b28
+    16f6:	68 28 00 00 00       	push   $0x28
+    16fb:	e9 90 ff ff ff       	jmp    1690 <main+0x560>
+
+00001700 <fdopen@plt>:
+    1700:	ff 25 2c 2b 00 00    	jmp    *0x2b2c
+    1706:	68 30 00 00 00       	push   $0x30
+    170b:	e9 80 ff ff ff       	jmp    1690 <main+0x560>
+
+00001710 <str_cmp@plt>:
+    1710:	ff 25 30 2b 00 00    	jmp    *0x2b30
+    1716:	68 38 00 00 00       	push   $0x38
+    171b:	e9 70 ff ff ff       	jmp    1690 <main+0x560>
+
+00001720 <fclose@plt>:
+    1720:	ff 25 34 2b 00 00    	jmp    *0x2b34
+    1726:	68 40 00 00 00       	push   $0x40
+    172b:	e9 60 ff ff ff       	jmp    1690 <main+0x560>
+
+00001730 <task_spawnv@plt>:
+    1730:	ff 25 38 2b 00 00    	jmp    *0x2b38
+    1736:	68 48 00 00 00       	push   $0x48
+    173b:	e9 50 ff ff ff       	jmp    1690 <main+0x560>
+
+00001740 <str_error@plt>:
+    1740:	ff 25 3c 2b 00 00    	jmp    *0x2b3c
+    1746:	68 50 00 00 00       	push   $0x50
+    174b:	e9 40 ff ff ff       	jmp    1690 <main+0x560>
+
+00001750 <__syscall_fast@plt>:
+    1750:	ff 25 40 2b 00 00    	jmp    *0x2b40
+    1756:	68 58 00 00 00       	push   $0x58
+    175b:	e9 30 ff ff ff       	jmp    1690 <main+0x560>
+
+00001760 <open@plt>:
+    1760:	ff 25 44 2b 00 00    	jmp    *0x2b44
+    1766:	68 60 00 00 00       	push   $0x60
+    176b:	e9 20 ff ff ff       	jmp    1690 <main+0x560>
+
+00001770 <close@plt>:
+    1770:	ff 25 48 2b 00 00    	jmp    *0x2b48
+    1776:	68 68 00 00 00       	push   $0x68
+    177b:	e9 10 ff ff ff       	jmp    1690 <main+0x560>
+
+00001780 <free@plt>:
+    1780:	ff 25 4c 2b 00 00    	jmp    *0x2b4c
+    1786:	68 70 00 00 00       	push   $0x70
+    178b:	e9 00 ff ff ff       	jmp    1690 <main+0x560>

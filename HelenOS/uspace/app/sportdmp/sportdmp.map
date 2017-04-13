@@ -1,0 +1,183 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/drv/libdrv.a(remote_char_dev.o)
+                              sportdmp.o (char_dev_read)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0x89b sportdmp.o
+ .debug_abbrev  0x0000000000000000      0x17f sportdmp.o
+ .debug_loc     0x0000000000000000      0x34b sportdmp.o
+ .debug_aranges
+                0x0000000000000000       0x20 sportdmp.o
+ .debug_ranges  0x0000000000000000       0x70 sportdmp.o
+ .debug_line    0x0000000000000000      0x256 sportdmp.o
+ .debug_str     0x0000000000000000      0xc12 sportdmp.o
+ .comment       0x0000000000000000       0x12 sportdmp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 sportdmp.o
+ .eh_frame      0x0000000000000000       0x60 sportdmp.o
+ .debug_info    0x0000000000000000      0x9f8 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_abbrev  0x0000000000000000      0x243 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_loc     0x0000000000000000      0x304 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_ranges  0x0000000000000000       0x40 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_line    0x0000000000000000      0x29f ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_str     0x0000000000000000      0xa95 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .comment       0x0000000000000000       0x12 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .eh_frame      0x0000000000000000      0x120 ../../lib/drv/libdrv.a(remote_char_dev.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130      0x848
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130        0x0 sportdmp.o
+ .text.startup  0x0000000000001130      0x34a sportdmp.o
+                0x0000000000001130                main
+ *fill*         0x000000000000147a        0x6 
+ .text          0x0000000000001480      0x341 ../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x0000000000001670                char_dev_read
+                0x0000000000001720                char_dev_write
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000017c1       0x98 sportdmp.o
+ *fill*         0x0000000000001859        0x3 
+ .rodata.str1.4
+                0x000000000000185c      0x10c sportdmp.o
+                                        0x10b (size before relaxing)
+ .rodata        0x0000000000001968       0x10 ../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x0000000000001968                remote_char_dev_iface
+
+.rel.plt        0x0000000000001978       0xe0
+ *(.rel.plt)
+ .rel.plt       0x0000000000001978       0xe0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000001a58       0x18
+ *(.rel.*)
+ .rel.got       0x0000000000001a58        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000001a58       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000001a70        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000001a70        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000001a70        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000001a70      0x1d0
+ *(.plt)
+ .plt           0x0000000000001a70      0x1d0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000001a80                __main
+                0x0000000000001a90                loc_category_get_id
+                0x0000000000001aa0                loc_service_connect
+                0x0000000000001ab0                printf
+                0x0000000000001ac0                async_wait_for
+                0x0000000000001ad0                async_data_write_start
+                0x0000000000001ae0                async_data_read_finalize
+                0x0000000000001af0                malloc
+                0x0000000000001b00                async_req_fast
+                0x0000000000001b10                loc_service_get_id
+                0x0000000000001b20                async_answer_0
+                0x0000000000001b30                fflush
+                0x0000000000001b40                async_send_fast
+                0x0000000000001b50                strtol
+                0x0000000000001b60                async_exchange_end
+                0x0000000000001b70                fprintf
+                0x0000000000001b80                str_test_prefix
+                0x0000000000001b90                async_data_read_receive
+                0x0000000000001ba0                async_data_read_start
+                0x0000000000001bb0                loc_category_get_svcs
+                0x0000000000001bc0                str_length
+                0x0000000000001bd0                async_answer_1
+                0x0000000000001be0                async_exchange_begin
+                0x0000000000001bf0                async_data_write_finalize
+                0x0000000000001c00                __syscall_fast
+                0x0000000000001c10                str_lsize
+                0x0000000000001c20                async_data_write_receive
+                0x0000000000001c30                free
+
+.dynsym         0x0000000000001c40      0x220
+ *(.dynsym)
+ .dynsym        0x0000000000001c40      0x220 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000001e60      0x1f8
+ *(.dynstr)
+ .dynstr        0x0000000000001e60      0x1f8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000002058       0xd4
+ *(.hash)
+ .hash          0x0000000000002058       0xd4 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x000000000000212c       0x13
+ *(.interp)
+ .interp        0x000000000000212c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000313f                . = (. + 0x1000)
+
+.dynamic        0x0000000000003140       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000003140       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003140                _DYNAMIC
+
+.data           0x00000000000031e8        0x0
+ *(.data)
+ .data          0x00000000000031e8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000031e8        0x0 sportdmp.o
+ .data          0x00000000000031e8        0x0 ../../lib/drv/libdrv.a(remote_char_dev.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000031e8        0x0
+ *(.got)
+ .got           0x00000000000031e8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000031e8       0x7c
+ *(.got.plt)
+ .got.plt       0x00000000000031e8       0x7c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000031e8                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000003268       0x14
+ *(.dynbss)
+ .dynbss        0x0000000000003268       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003268                stdout
+                0x0000000000003270                __syscall_fast_func
+                0x0000000000003278                stderr
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000327c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x000000000000327c        0x0 sportdmp.o
+ .bss           0x000000000000327c        0x0 ../../lib/drv/libdrv.a(remote_char_dev.o)
+
+/DISCARD/
+ *(*)
+LOAD sportdmp.o
+LOAD ../../lib/drv/libdrv.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(sportdmp elf32-i386)

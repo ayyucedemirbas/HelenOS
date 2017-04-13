@@ -1,0 +1,305 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/block/libblock.a(block.o)
+                              empty.o (block_init)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0x779 empty.o
+ .debug_abbrev  0x0000000000000000      0x1f2 empty.o
+ .debug_loc     0x0000000000000000      0x727 empty.o
+ .debug_aranges
+                0x0000000000000000       0x20 empty.o
+ .debug_line    0x0000000000000000      0x270 empty.o
+ .debug_str     0x0000000000000000      0x78f empty.o
+ .comment       0x0000000000000000       0x12 empty.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 empty.o
+ .eh_frame      0x0000000000000000       0xa4 empty.o
+ .debug_info    0x0000000000000000      0x59c mkfs.o
+ .debug_abbrev  0x0000000000000000      0x18f mkfs.o
+ .debug_loc     0x0000000000000000      0x121 mkfs.o
+ .debug_aranges
+                0x0000000000000000       0x20 mkfs.o
+ .debug_line    0x0000000000000000      0x21c mkfs.o
+ .debug_str     0x0000000000000000      0x7ad mkfs.o
+ .comment       0x0000000000000000       0x12 mkfs.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mkfs.o
+ .eh_frame      0x0000000000000000       0x98 mkfs.o
+ .debug_info    0x0000000000000000      0xdef part.o
+ .debug_abbrev  0x0000000000000000      0x342 part.o
+ .debug_loc     0x0000000000000000      0x480 part.o
+ .debug_aranges
+                0x0000000000000000       0x20 part.o
+ .debug_ranges  0x0000000000000000       0x70 part.o
+ .debug_line    0x0000000000000000      0x37e part.o
+ .debug_str     0x0000000000000000      0xb45 part.o
+ .comment       0x0000000000000000       0x12 part.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 part.o
+ .eh_frame      0x0000000000000000      0x208 part.o
+ .debug_info    0x0000000000000000      0xcc0 volsrv.o
+ .debug_abbrev  0x0000000000000000      0x27c volsrv.o
+ .debug_loc     0x0000000000000000      0x407 volsrv.o
+ .debug_aranges
+                0x0000000000000000       0x28 volsrv.o
+ .debug_ranges  0x0000000000000000       0xe0 volsrv.o
+ .debug_line    0x0000000000000000      0x2e7 volsrv.o
+ .debug_str     0x0000000000000000      0xa70 volsrv.o
+ .comment       0x0000000000000000       0x12 volsrv.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 volsrv.o
+ .eh_frame      0x0000000000000000       0x80 volsrv.o
+ .debug_info    0x0000000000000000     0x2a1c ../../lib/block/libblock.a(block.o)
+ .debug_abbrev  0x0000000000000000      0x46d ../../lib/block/libblock.a(block.o)
+ .debug_loc     0x0000000000000000     0x1930 ../../lib/block/libblock.a(block.o)
+ .debug_aranges
+                0x0000000000000000       0x28 ../../lib/block/libblock.a(block.o)
+ .debug_ranges  0x0000000000000000      0x5c8 ../../lib/block/libblock.a(block.o)
+ .debug_line    0x0000000000000000      0x8ef ../../lib/block/libblock.a(block.o)
+ .debug_str     0x0000000000000000     0x11f7 ../../lib/block/libblock.a(block.o)
+ .comment       0x0000000000000000       0x12 ../../lib/block/libblock.a(block.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/block/libblock.a(block.o)
+ .eh_frame      0x0000000000000000      0x444 ../../lib/block/libblock.a(block.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x2edc
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x4e4 empty.o
+                0x0000000000001130                volsrv_part_is_empty
+                0x00000000000013d0                volsrv_part_empty
+ *fill*         0x0000000000001614        0xc 
+ .text          0x0000000000001620      0x17a mkfs.o
+                0x0000000000001740                volsrv_part_mkfs
+ *fill*         0x000000000000179a        0x6 
+ .text          0x00000000000017a0      0x538 part.o
+                0x0000000000001aa0                vol_part_add
+                0x0000000000001ad0                vol_part_init
+                0x0000000000001ae0                vol_part_discovery_start
+                0x0000000000001b20                vol_part_get_ids
+                0x0000000000001bb0                vol_part_find_by_id
+                0x0000000000001c00                vol_part_empty_part
+                0x0000000000001c60                vol_part_mkfs_part
+                0x0000000000001cc0                vol_part_get_info
+ *fill*         0x0000000000001cd8        0x8 
+ .text          0x0000000000001ce0      0x34a volsrv.o
+ *fill*         0x000000000000202a        0x6 
+ .text.startup  0x0000000000002030      0x150 volsrv.o
+                0x0000000000002030                main
+ .text          0x0000000000002180     0x189f ../../lib/block/libblock.a(block.o)
+                0x00000000000021c0                block_init
+                0x0000000000002390                block_bb_read
+                0x00000000000024e0                block_bb_get
+                0x0000000000002560                block_cache_init
+                0x00000000000026a0                block_cache_fini
+                0x0000000000002850                block_fini
+                0x0000000000002970                block_put
+                0x0000000000002c70                block_get
+                0x00000000000031f0                block_seqread
+                0x00000000000033b0                block_read_direct
+                0x0000000000003490                block_write_direct
+                0x0000000000003570                block_sync_cache
+                0x0000000000003620                block_get_bsize
+                0x00000000000036b0                block_get_nblocks
+                0x0000000000003740                block_read_bytes_direct
+                0x0000000000003970                block_read_toc
+ .text.unlikely
+                0x0000000000003a1f       0x1a ../../lib/block/libblock.a(block.o)
+ *(.rodata .rodata.*)
+ *fill*         0x0000000000003a39        0x3 
+ .rodata.str1.4
+                0x0000000000003a3c       0x48 empty.o
+ .rodata.str1.1
+                0x0000000000003a84       0x49 empty.o
+ .rodata.str1.1
+                0x0000000000003acd       0x54 mkfs.o
+ *fill*         0x0000000000003b21        0x3 
+ .rodata.str1.4
+                0x0000000000003b24       0x73 mkfs.o
+ *fill*         0x0000000000003b97        0x1 
+ .rodata        0x0000000000003b98        0xc mkfs.o
+ .rodata.str1.1
+                0x0000000000003ba4       0xc5 part.o
+ *fill*         0x0000000000003c69        0x3 
+ .rodata.str1.4
+                0x0000000000003c6c      0x161 part.o
+ .rodata.str1.1
+                0x0000000000003dcd       0x67 volsrv.o
+ .rodata        0x0000000000003e34       0x14 volsrv.o
+ .rodata.str1.4
+                0x0000000000003e48       0x8c volsrv.o
+ .rodata.str1.1
+                0x0000000000003ed4       0x4f ../../lib/block/libblock.a(block.o)
+ *fill*         0x0000000000003f23        0x1 
+ .rodata.str1.4
+                0x0000000000003f24       0xe8 ../../lib/block/libblock.a(block.o)
+                                         0xe7 (size before relaxing)
+
+.rel.plt        0x000000000000400c      0x1a0
+ *(.rel.plt)
+ .rel.plt       0x000000000000400c      0x1a0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x00000000000041ac       0x10
+ *(.rel.*)
+ .rel.got       0x00000000000041ac        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x00000000000041ac       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x00000000000041bc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x00000000000041bc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x00000000000041bc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.unlikely
+                0x00000000000041bc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x00000000000041c0      0x350
+ *(.plt)
+ .plt           0x00000000000041c0      0x350 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000041d0                __main
+                0x00000000000041e0                loc_category_get_id
+                0x00000000000041f0                task_retval
+                0x0000000000004200                loc_service_connect
+                0x0000000000004210                printf
+                0x0000000000004220                async_hangup
+                0x0000000000004230                hash_table_create
+                0x0000000000004240                log_init
+                0x0000000000004250                hash_table_insert
+                0x0000000000004260                task_wait
+                0x0000000000004270                loc_service_register
+                0x0000000000004280                fibril_mutex_is_locked
+                0x0000000000004290                bd_write_blocks
+                0x00000000000042a0                bd_get_num_blocks
+                0x00000000000042b0                async_data_read_finalize
+                0x00000000000042c0                bd_close
+                0x00000000000042d0                memcpy
+                0x00000000000042e0                malloc
+                0x00000000000042f0                bd_open
+                0x0000000000004300                async_answer_0
+                0x0000000000004310                log_msg
+                0x0000000000004320                stacktrace_print
+                0x0000000000004330                __umoddi3
+                0x0000000000004340                __udivdi3
+                0x0000000000004350                bd_read_blocks
+                0x0000000000004360                fibril_mutex_trylock
+                0x0000000000004370                loc_service_get_name
+                0x0000000000004380                assert_abort
+                0x0000000000004390                calloc
+                0x00000000000043a0                loc_register_cat_change_cb
+                0x00000000000043b0                task_spawn
+                0x00000000000043c0                bd_read_toc
+                0x00000000000043d0                fibril_mutex_unlock
+                0x00000000000043e0                fibril_mutex_initialize
+                0x00000000000043f0                hash_table_remove_item
+                0x0000000000004400                async_data_read_receive
+                0x0000000000004410                loc_server_register
+                0x0000000000004420                loc_category_get_svcs
+                0x0000000000004430                bd_get_block_size
+                0x0000000000004440                async_get_call_timeout
+                0x0000000000004450                list_count
+                0x0000000000004460                bd_sync_cache
+                0x0000000000004470                async_answer_1
+                0x0000000000004480                str_error
+                0x0000000000004490                hash_table_find
+                0x00000000000044a0                fibril_rwlock_initialize
+                0x00000000000044b0                fibril_switch
+                0x00000000000044c0                __syscall_fast
+                0x00000000000044d0                async_set_fallback_port_handler
+                0x00000000000044e0                hash_table_destroy
+                0x00000000000044f0                free
+                0x0000000000004500                fibril_mutex_lock
+
+.dynsym         0x0000000000004510      0x3a0
+ *(.dynsym)
+ .dynsym        0x0000000000004510      0x3a0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x00000000000048b0      0x387
+ *(.dynstr)
+ .dynstr        0x00000000000048b0      0x387 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000004c38      0x184
+ *(.hash)
+ .hash          0x0000000000004c38      0x184 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000004dbc       0x13
+ *(.interp)
+ .interp        0x0000000000004dbc       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005dcf                . = (. + 0x1000)
+
+.dynamic        0x0000000000005dd0       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000005dd0       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005dd0                _DYNAMIC
+
+.data           0x0000000000005e78       0x44
+ *(.data)
+ .data          0x0000000000005e78        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000005e78        0x0 empty.o
+ .data          0x0000000000005e78        0x0 mkfs.o
+ .data          0x0000000000005e78       0x18 part.o
+ .data          0x0000000000005e90        0x0 volsrv.o
+ .data          0x0000000000005e90       0x2c ../../lib/block/libblock.a(block.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000005ebc        0x0
+ *(.got)
+ .got           0x0000000000005ebc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000005ebc       0xdc
+ *(.got.plt)
+ .got.plt       0x0000000000005ebc       0xdc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005ebc                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000005f98        0x8
+ *(.dynbss)
+ *fill*         0x0000000000005f98        0x0 
+ .dynbss        0x0000000000005f98        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005f98                __syscall_fast_func
+                0x0000000000005f9c                async_futex
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000005fa0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000005fa0        0x0 empty.o
+ .bss           0x0000000000005fa0        0x0 mkfs.o
+ .bss           0x0000000000005fa0        0x0 part.o
+ .bss           0x0000000000005fa0        0x0 volsrv.o
+ .bss           0x0000000000005fa0        0x0 ../../lib/block/libblock.a(block.o)
+
+/DISCARD/
+ *(*)
+LOAD empty.o
+LOAD mkfs.o
+LOAD part.o
+LOAD volsrv.o
+LOAD ../../lib/block/libblock.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(volsrv elf32-i386)

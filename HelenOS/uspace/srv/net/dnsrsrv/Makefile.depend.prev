@@ -1,0 +1,164 @@
+# DO NOT DELETE
+
+dns_msg.o: ../../../lib/c/include/bitops.h ../../../lib/c/include/sys/types.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+dns_msg.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/stdint.h
+dns_msg.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+dns_msg.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+dns_msg.o: ../../../lib/c/include/inttypes.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+dns_msg.o: ../../../lib/c/include/io/verify.h
+dns_msg.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/macros.h
+dns_msg.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+dns_msg.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+dns_msg.o: ../../../lib/c/include/malloc.h
+dns_msg.o: ../../../lib/c/include/stacktrace.h
+dns_msg.o: ../../../lib/c/include/stdbool.h
+dns_msg.o: ../../../../abi/include/abi/bool.h ../../../lib/c/include/str.h
+dns_msg.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h dns_msg.h
+dns_msg.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+dns_msg.o: ../../../lib/c/include/stddef.h ../../../lib/c/include/inet/addr.h
+dns_msg.o: dns_std.h dns_type.h ../../../lib/c/include/inet/inet.h
+dns_msg.o: ../../../lib/c/include/ipc/loc.h
+dns_msg.o: ../../../lib/c/include/ipc/common.h
+dns_msg.o: ../../../../abi/include/abi/ipc/ipc.h
+dns_msg.o: ../../../lib/c/include/atomic.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+dns_msg.o: ../../../lib/c/include/atomicdflt.h
+dns_msg.o: ../../../../abi/include/abi/proc/task.h
+dns_msg.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+dns_msg.o: ../../../../abi/include/abi/syscall.h
+dns_msg.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+dns_msg.o: ../../../lib/c/include/types/inet.h
+dnsrsrv.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+dnsrsrv.o: ../../../lib/c/include/sys/types.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+dnsrsrv.o: ../../../../abi/include/abi/ipc/ipc.h
+dnsrsrv.o: ../../../lib/c/include/atomic.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+dnsrsrv.o: ../../../lib/c/include/atomicdflt.h
+dnsrsrv.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/stdbool.h
+dnsrsrv.o: ../../../../abi/include/abi/bool.h
+dnsrsrv.o: ../../../../abi/include/abi/proc/task.h
+dnsrsrv.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+dnsrsrv.o: ../../../../abi/include/abi/syscall.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+dnsrsrv.o: ../../../lib/c/include/fibril.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+dnsrsrv.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+dnsrsrv.o: ../../../lib/c/include/stddef.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+dnsrsrv.o: ../../../lib/c/include/sys/time.h
+dnsrsrv.o: ../../../../abi/include/abi/ddi/irq.h
+dnsrsrv.o: ../../../../abi/include/abi/ipc/event.h
+dnsrsrv.o: ../../../../abi/include/abi/ipc/interfaces.h
+dnsrsrv.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+dnsrsrv.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+dnsrsrv.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+dnsrsrv.o: ../../../lib/c/include/inttypes.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+dnsrsrv.o: ../../../lib/c/include/io/verify.h
+dnsrsrv.o: ../../../../abi/include/abi/log.h
+dnsrsrv.o: ../../../lib/c/include/ipc/dnsr.h
+dnsrsrv.o: ../../../lib/c/include/ipc/services.h ../../../lib/c/include/loc.h
+dnsrsrv.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/stdio.h
+dnsrsrv.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+dnsrsrv.o: ../../../lib/c/include/cc.h ../../../../abi/include/abi/kio.h
+dnsrsrv.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+dnsrsrv.o: ../../../lib/c/include/time.h
+dnsrsrv.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+dnsrsrv.o: ../../../lib/c/include/malloc.h
+dnsrsrv.o: ../../../lib/c/include/stacktrace.h ../../../lib/c/include/task.h
+dnsrsrv.o: ../../../lib/c/include/types/task.h dns_msg.h
+dnsrsrv.o: ../../../lib/c/include/inet/addr.h dns_std.h dns_type.h
+dnsrsrv.o: ../../../lib/c/include/inet/inet.h
+dnsrsrv.o: ../../../lib/c/include/types/inet.h query.h transport.h
+query.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+query.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+query.o: ../../../lib/c/include/sys/types.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+query.o: ../../../lib/c/include/inttypes.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+query.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+query.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+query.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+query.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+query.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+query.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+query.o: ../../../lib/c/include/str.h dns_msg.h
+query.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+query.o: ../../../lib/c/include/stddef.h ../../../lib/c/include/stdint.h
+query.o: ../../../lib/c/include/inet/addr.h dns_std.h dns_type.h
+query.o: ../../../lib/c/include/inet/inet.h ../../../lib/c/include/ipc/loc.h
+query.o: ../../../lib/c/include/ipc/common.h
+query.o: ../../../../abi/include/abi/ipc/ipc.h
+query.o: ../../../lib/c/include/atomic.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+query.o: ../../../lib/c/include/atomicdflt.h
+query.o: ../../../../abi/include/abi/proc/task.h
+query.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+query.o: ../../../../abi/include/abi/syscall.h
+query.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+query.o: ../../../lib/c/include/types/inet.h query.h transport.h
+transport.o: ../../../lib/c/include/adt/list.h
+transport.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stdbool.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+transport.o: ../../../../abi/include/abi/bool.h
+transport.o: ../../../lib/c/include/stddef.h
+transport.o: ../../../lib/c/include/sys/types.h
+transport.o: ../../../lib/c/include/errno.h
+transport.o: ../../../../abi/include/abi/errno.h
+transport.o: ../../../lib/c/include/fibril_synch.h
+transport.o: ../../../lib/c/include/fibril.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+transport.o: ../../../lib/c/include/libc.h
+transport.o: ../../../../abi/include/abi/syscall.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+transport.o: ../../../lib/c/include/sys/time.h
+transport.o: ../../../lib/c/include/inet/addr.h
+transport.o: ../../../lib/c/include/stdint.h
+transport.o: ../../../lib/c/include/inet/endpoint.h
+transport.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+transport.o: ../../../lib/c/include/ipc/common.h
+transport.o: ../../../../abi/include/abi/ipc/ipc.h
+transport.o: ../../../lib/c/include/atomic.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+transport.o: ../../../lib/c/include/atomicdflt.h
+transport.o: ../../../../abi/include/abi/proc/task.h
+transport.o: ../../../lib/c/include/futex.h ../../../lib/c/include/async.h
+transport.o: ../../../../abi/include/abi/ddi/irq.h
+transport.o: ../../../../abi/include/abi/ipc/event.h
+transport.o: ../../../../abi/include/abi/ipc/interfaces.h
+transport.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+transport.o: ../../../lib/c/include/inet/udp.h
+transport.o: ../../../lib/c/include/inet/inet.h
+transport.o: ../../../lib/c/include/types/inet.h
+transport.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+transport.o: ../../../lib/c/include/inttypes.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+transport.o: ../../../lib/c/include/io/verify.h
+transport.o: ../../../../abi/include/abi/log.h
+transport.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+transport.o: ../../../lib/c/include/time.h
+transport.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+transport.o: ../../../lib/c/include/malloc.h
+transport.o: ../../../lib/c/include/stacktrace.h dns_msg.h dns_std.h
+transport.o: dns_type.h transport.h
+# DO NOT DELETE

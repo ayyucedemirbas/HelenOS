@@ -1,0 +1,144 @@
+#ifndef SHLIB
+STARTUP(LIBC_PATH/arch/UARCH/src/entry.o)
+ENTRY(__entry)
+#endif
+
+PHDRS {
+#if defined(LOADER) || defined(DLEXE)
+	interp PT_INTERP;
+	text PT_LOAD FILEHDR PHDRS FLAGS(5);
+#else
+	text PT_LOAD FLAGS(5);
+#endif
+	data PT_LOAD FLAGS(6);
+	tls PT_TLS;
+#if defined(SHLIB) || defined(DLEXE)
+	dynamic PT_DYNAMIC;
+#endif
+	debug PT_NOTE;
+}
+
+SECTIONS {
+#ifdef LOADER
+	. = 0x70001000 + SIZEOF_HEADERS;
+#else
+	. = 0x1000 + SIZEOF_HEADERS;
+#endif
+	
+	.init : {
+		*(.init);
+	} :text
+	
+	.text : {
+		*(.text .text.*);
+		*(.rodata .rodata.*);
+	} :text
+	
+#if defined(SHLIB) || defined(DLEXE)
+	.rel.plt : {
+		*(.rel.plt);
+	}
+	/* 
+	 *.rel.dyn MUST FOLLOW IMMEDIATELY after .rel.plt 
+	 * without alignment gap or DT_REL will be broken
+	 */
+	.rel.dyn : {
+		*(.rel.*);
+	} :text
+	
+	.plt : {
+		*(.plt);
+	} :text
+	
+	.dynsym : {
+		*(.dynsym);
+	} :text
+	
+	.dynstr : {
+		*(.dynstr);
+	} :text
+	
+	.hash : {
+		*(.hash);
+	} :text
+#endif
+	
+#if defined(LOADER) || defined(DLEXE)
+	.interp : {
+		*(.interp);
+	} :interp :text
+#endif
+	
+	. = . + 0x1000;
+	
+#if defined(SHLIB) || defined(DLEXE)
+	.dynamic : {
+		*(.dynamic);
+	} :data :dynamic
+#endif
+	
+	.data : {
+		*(.data);
+	} :data
+	
+#if defined(SHLIB) || defined(DLEXE)
+	.data.rel : {
+		*(.data.rel .data.rel.*);
+	} :data
+	
+	.got : {
+		*(.got);
+	} :data
+	
+	.got.plt : {
+		*(.got.plt);
+	} :data
+#endif
+	
+	.tdata : {
+#ifndef DLEXE
+		_tdata_start = .;
+#endif
+		*(.tdata);
+		*(.gnu.linkonce.tb.*);
+#ifndef DLEXE
+		_tdata_end = .;
+#endif
+	} :data :tls
+	.tbss : {
+#ifndef DLEXE
+		_tbss_start = .;
+#endif
+		*(.tbss);
+#ifndef DLEXE
+		_tbss_end = .;
+#endif
+	} :data :tls
+	
+#ifndef DLEXE
+	_tls_alignment = MAX(ALIGNOF(.tdata), ALIGNOF(.tbss));
+#endif
+	
+	.bss : {
+		*(.dynbss);
+		*(COMMON);
+		*(.bss);
+	} :data
+	
+#ifdef CONFIG_LINE_DEBUG
+	.comment 0 : { *(.comment); } :debug
+	.debug_abbrev 0 : { *(.debug_abbrev); } :debug
+	.debug_aranges 0 : { *(.debug_aranges); } :debug
+	.debug_info 0 : { *(.debug_info); } :debug
+	.debug_line 0 : { *(.debug_line); } :debug
+	.debug_loc 0 : { *(.debug_loc); } :debug
+	.debug_pubnames 0 : { *(.debug_pubnames); } :debug
+	.debug_pubtypes 0 : { *(.debug_pubtypes); } :debug
+	.debug_ranges 0 : { *(.debug_ranges); } :debug
+	.debug_str 0 : { *(.debug_str); } :debug
+#endif
+	
+	/DISCARD/ : {
+		*(*);
+	}
+}

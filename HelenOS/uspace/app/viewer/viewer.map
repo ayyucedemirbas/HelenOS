@@ -1,0 +1,632 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/gui/libgui.a(canvas.o)
+                              viewer.o (update_canvas)
+../../lib/gui/libgui.a(connection.o)
+                              viewer.o (sig_connect)
+../../lib/gui/libgui.a(widget.o)
+                              ../../lib/gui/libgui.a(canvas.o) (widget_init)
+../../lib/gui/libgui.a(window.o)
+                              viewer.o (window_open)
+../../lib/gui/libgui.a(common.o)
+                              ../../lib/gui/libgui.a(window.o) (draw_icon_cross)
+../../lib/draw/libdraw.a(tga.o)
+                              viewer.o (decode_tga)
+../../lib/draw/libdraw.a(embedded.o)
+                              ../../lib/gui/libgui.a(window.o) (embedded_font_create)
+../../lib/draw/libdraw.a(bitmap_backend.o)
+                              ../../lib/draw/libdraw.a(embedded.o) (bitmap_font_create)
+../../lib/draw/libdraw.a(font-8x16.o)
+                              ../../lib/draw/libdraw.a(embedded.o) (fb_font_glyph)
+../../lib/draw/libdraw.a(drawctx.o)
+                              ../../lib/gui/libgui.a(canvas.o) (drawctx_init)
+../../lib/draw/libdraw.a(font.o)
+                              ../../lib/draw/libdraw.a(bitmap_backend.o) (font_create)
+../../lib/draw/libdraw.a(source.o)
+                              ../../lib/gui/libgui.a(canvas.o) (source_init)
+../../lib/draw/libdraw.a(surface.o)
+                              ../../lib/gui/libgui.a(window.o) (surface_create)
+../../lib/softrend/libsoftrend.a(compose.o)
+                              ../../lib/draw/libdraw.a(drawctx.o) (compose_src)
+../../lib/softrend/libsoftrend.a(filter.o)
+                              ../../lib/draw/libdraw.a(source.o) (filter_nearest)
+../../lib/softrend/libsoftrend.a(pixconv.o)
+                              ../../lib/draw/libdraw.a(tga.o) (bgr_888_2pixel)
+../../lib/softrend/libsoftrend.a(transform.o)
+                              ../../lib/draw/libdraw.a(source.o) (transform_invert)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x13c4 viewer.o
+ .debug_abbrev  0x0000000000000000      0x27c viewer.o
+ .debug_loc     0x0000000000000000      0x2f6 viewer.o
+ .debug_aranges
+                0x0000000000000000       0x28 viewer.o
+ .debug_ranges  0x0000000000000000       0xc0 viewer.o
+ .debug_line    0x0000000000000000      0x448 viewer.o
+ .debug_str     0x0000000000000000     0x117a viewer.o
+ .comment       0x0000000000000000       0x12 viewer.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 viewer.o
+ .eh_frame      0x0000000000000000       0xdc viewer.o
+ .debug_info    0x0000000000000000     0x161f ../../lib/gui/libgui.a(canvas.o)
+ .debug_abbrev  0x0000000000000000      0x285 ../../lib/gui/libgui.a(canvas.o)
+ .debug_loc     0x0000000000000000      0x1f9 ../../lib/gui/libgui.a(canvas.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/gui/libgui.a(canvas.o)
+ .debug_ranges  0x0000000000000000       0x30 ../../lib/gui/libgui.a(canvas.o)
+ .debug_line    0x0000000000000000      0x341 ../../lib/gui/libgui.a(canvas.o)
+ .debug_str     0x0000000000000000     0x109f ../../lib/gui/libgui.a(canvas.o)
+ .comment       0x0000000000000000       0x12 ../../lib/gui/libgui.a(canvas.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/gui/libgui.a(canvas.o)
+ .eh_frame      0x0000000000000000      0x1b8 ../../lib/gui/libgui.a(canvas.o)
+ .debug_info    0x0000000000000000     0x14db ../../lib/gui/libgui.a(connection.o)
+ .debug_abbrev  0x0000000000000000      0x290 ../../lib/gui/libgui.a(connection.o)
+ .debug_loc     0x0000000000000000      0x654 ../../lib/gui/libgui.a(connection.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/gui/libgui.a(connection.o)
+ .debug_ranges  0x0000000000000000       0xe8 ../../lib/gui/libgui.a(connection.o)
+ .debug_line    0x0000000000000000      0x39f ../../lib/gui/libgui.a(connection.o)
+ .debug_str     0x0000000000000000     0x113f ../../lib/gui/libgui.a(connection.o)
+ .comment       0x0000000000000000       0x12 ../../lib/gui/libgui.a(connection.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/gui/libgui.a(connection.o)
+ .eh_frame      0x0000000000000000       0xd8 ../../lib/gui/libgui.a(connection.o)
+ .debug_info    0x0000000000000000      0xa8e ../../lib/gui/libgui.a(widget.o)
+ .debug_abbrev  0x0000000000000000      0x1ad ../../lib/gui/libgui.a(widget.o)
+ .debug_loc     0x0000000000000000       0xf2 ../../lib/gui/libgui.a(widget.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/gui/libgui.a(widget.o)
+ .debug_ranges  0x0000000000000000       0x30 ../../lib/gui/libgui.a(widget.o)
+ .debug_line    0x0000000000000000      0x1dd ../../lib/gui/libgui.a(widget.o)
+ .debug_str     0x0000000000000000      0xba1 ../../lib/gui/libgui.a(widget.o)
+ .comment       0x0000000000000000       0x12 ../../lib/gui/libgui.a(widget.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/gui/libgui.a(widget.o)
+ .eh_frame      0x0000000000000000       0x9c ../../lib/gui/libgui.a(widget.o)
+ .debug_info    0x0000000000000000     0x2cea ../../lib/gui/libgui.a(window.o)
+ .debug_abbrev  0x0000000000000000      0x4e4 ../../lib/gui/libgui.a(window.o)
+ .debug_loc     0x0000000000000000     0x16d8 ../../lib/gui/libgui.a(window.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/gui/libgui.a(window.o)
+ .debug_ranges  0x0000000000000000      0x2d8 ../../lib/gui/libgui.a(window.o)
+ .debug_line    0x0000000000000000      0x832 ../../lib/gui/libgui.a(window.o)
+ .debug_str     0x0000000000000000     0x1ca3 ../../lib/gui/libgui.a(window.o)
+ .comment       0x0000000000000000       0x12 ../../lib/gui/libgui.a(window.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/gui/libgui.a(window.o)
+ .eh_frame      0x0000000000000000      0x3cc ../../lib/gui/libgui.a(window.o)
+ .debug_info    0x0000000000000000      0x764 ../../lib/gui/libgui.a(common.o)
+ .debug_abbrev  0x0000000000000000      0x156 ../../lib/gui/libgui.a(common.o)
+ .debug_loc     0x0000000000000000      0x6a8 ../../lib/gui/libgui.a(common.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/gui/libgui.a(common.o)
+ .debug_ranges  0x0000000000000000       0x58 ../../lib/gui/libgui.a(common.o)
+ .debug_line    0x0000000000000000      0x19c ../../lib/gui/libgui.a(common.o)
+ .debug_str     0x0000000000000000      0x4d0 ../../lib/gui/libgui.a(common.o)
+ .comment       0x0000000000000000       0x12 ../../lib/gui/libgui.a(common.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/gui/libgui.a(common.o)
+ .eh_frame      0x0000000000000000       0x74 ../../lib/gui/libgui.a(common.o)
+ .debug_info    0x0000000000000000      0x544 ../../lib/draw/libdraw.a(tga.o)
+ .debug_abbrev  0x0000000000000000      0x18a ../../lib/draw/libdraw.a(tga.o)
+ .debug_loc     0x0000000000000000      0x302 ../../lib/draw/libdraw.a(tga.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(tga.o)
+ .debug_ranges  0x0000000000000000       0x60 ../../lib/draw/libdraw.a(tga.o)
+ .debug_line    0x0000000000000000      0x188 ../../lib/draw/libdraw.a(tga.o)
+ .debug_str     0x0000000000000000      0x415 ../../lib/draw/libdraw.a(tga.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(tga.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(tga.o)
+ .eh_frame      0x0000000000000000       0x68 ../../lib/draw/libdraw.a(tga.o)
+ .debug_info    0x0000000000000000      0x7d9 ../../lib/draw/libdraw.a(embedded.o)
+ .debug_abbrev  0x0000000000000000      0x1c2 ../../lib/draw/libdraw.a(embedded.o)
+ .debug_loc     0x0000000000000000       0xdd ../../lib/draw/libdraw.a(embedded.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(embedded.o)
+ .debug_ranges  0x0000000000000000       0x18 ../../lib/draw/libdraw.a(embedded.o)
+ .debug_line    0x0000000000000000      0x1a8 ../../lib/draw/libdraw.a(embedded.o)
+ .debug_str     0x0000000000000000      0x571 ../../lib/draw/libdraw.a(embedded.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(embedded.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(embedded.o)
+ .eh_frame      0x0000000000000000       0xd0 ../../lib/draw/libdraw.a(embedded.o)
+ .debug_info    0x0000000000000000      0xcc6 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_abbrev  0x0000000000000000      0x283 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_loc     0x0000000000000000      0x4e4 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_ranges  0x0000000000000000       0x50 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_line    0x0000000000000000      0x2bd ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_str     0x0000000000000000      0x740 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .eh_frame      0x0000000000000000      0x120 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .debug_info    0x0000000000000000       0xfb ../../lib/draw/libdraw.a(font-8x16.o)
+ .debug_abbrev  0x0000000000000000       0xba ../../lib/draw/libdraw.a(font-8x16.o)
+ .debug_loc     0x0000000000000000       0x3e ../../lib/draw/libdraw.a(font-8x16.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(font-8x16.o)
+ .debug_line    0x0000000000000000      0x34e ../../lib/draw/libdraw.a(font-8x16.o)
+ .debug_str     0x0000000000000000      0x1b8 ../../lib/draw/libdraw.a(font-8x16.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(font-8x16.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(font-8x16.o)
+ .eh_frame      0x0000000000000000      0x298 ../../lib/draw/libdraw.a(font-8x16.o)
+ .debug_info    0x0000000000000000      0xcd2 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_abbrev  0x0000000000000000      0x271 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_loc     0x0000000000000000      0x3f1 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_ranges  0x0000000000000000      0x120 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_line    0x0000000000000000      0x2f6 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_str     0x0000000000000000      0x715 ../../lib/draw/libdraw.a(drawctx.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(drawctx.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(drawctx.o)
+ .eh_frame      0x0000000000000000      0x1d8 ../../lib/draw/libdraw.a(drawctx.o)
+ .debug_info    0x0000000000000000      0xbf0 ../../lib/draw/libdraw.a(font.o)
+ .debug_abbrev  0x0000000000000000      0x281 ../../lib/draw/libdraw.a(font.o)
+ .debug_loc     0x0000000000000000      0x46a ../../lib/draw/libdraw.a(font.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(font.o)
+ .debug_ranges  0x0000000000000000       0xd0 ../../lib/draw/libdraw.a(font.o)
+ .debug_line    0x0000000000000000      0x243 ../../lib/draw/libdraw.a(font.o)
+ .debug_str     0x0000000000000000      0x56d ../../lib/draw/libdraw.a(font.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(font.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(font.o)
+ .eh_frame      0x0000000000000000      0x154 ../../lib/draw/libdraw.a(font.o)
+ .debug_info    0x0000000000000000      0x62b ../../lib/draw/libdraw.a(source.o)
+ .debug_abbrev  0x0000000000000000      0x217 ../../lib/draw/libdraw.a(source.o)
+ .debug_loc     0x0000000000000000      0x22f ../../lib/draw/libdraw.a(source.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(source.o)
+ .debug_ranges  0x0000000000000000       0x58 ../../lib/draw/libdraw.a(source.o)
+ .debug_line    0x0000000000000000      0x1b7 ../../lib/draw/libdraw.a(source.o)
+ .debug_str     0x0000000000000000      0x457 ../../lib/draw/libdraw.a(source.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(source.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(source.o)
+ .eh_frame      0x0000000000000000      0x1c8 ../../lib/draw/libdraw.a(source.o)
+ .debug_info    0x0000000000000000      0x712 ../../lib/draw/libdraw.a(surface.o)
+ .debug_abbrev  0x0000000000000000      0x21c ../../lib/draw/libdraw.a(surface.o)
+ .debug_loc     0x0000000000000000      0x32f ../../lib/draw/libdraw.a(surface.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/draw/libdraw.a(surface.o)
+ .debug_ranges  0x0000000000000000       0x30 ../../lib/draw/libdraw.a(surface.o)
+ .debug_line    0x0000000000000000      0x1eb ../../lib/draw/libdraw.a(surface.o)
+ .debug_str     0x0000000000000000      0x3ee ../../lib/draw/libdraw.a(surface.o)
+ .comment       0x0000000000000000       0x12 ../../lib/draw/libdraw.a(surface.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/draw/libdraw.a(surface.o)
+ .eh_frame      0x0000000000000000      0x1bc ../../lib/draw/libdraw.a(surface.o)
+ .debug_info    0x0000000000000000      0x277 ../../lib/softrend/libsoftrend.a(compose.o)
+ .debug_abbrev  0x0000000000000000       0xce ../../lib/softrend/libsoftrend.a(compose.o)
+ .debug_loc     0x0000000000000000      0x3d6 ../../lib/softrend/libsoftrend.a(compose.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softrend/libsoftrend.a(compose.o)
+ .debug_line    0x0000000000000000       0xc0 ../../lib/softrend/libsoftrend.a(compose.o)
+ .debug_str     0x0000000000000000      0x218 ../../lib/softrend/libsoftrend.a(compose.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softrend/libsoftrend.a(compose.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softrend/libsoftrend.a(compose.o)
+ .eh_frame      0x0000000000000000      0x144 ../../lib/softrend/libsoftrend.a(compose.o)
+ .debug_info    0x0000000000000000      0xabb ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_abbrev  0x0000000000000000      0x1b4 ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_loc     0x0000000000000000     0x164e ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_ranges  0x0000000000000000      0x460 ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_line    0x0000000000000000      0x396 ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_str     0x0000000000000000      0x386 ../../lib/softrend/libsoftrend.a(filter.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softrend/libsoftrend.a(filter.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softrend/libsoftrend.a(filter.o)
+ .eh_frame      0x0000000000000000       0xb8 ../../lib/softrend/libsoftrend.a(filter.o)
+ .debug_info    0x0000000000000000      0xc08 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_abbrev  0x0000000000000000      0x1c5 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_loc     0x0000000000000000      0x159 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_ranges  0x0000000000000000       0x20 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_line    0x0000000000000000      0x295 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_str     0x0000000000000000      0x458 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .eh_frame      0x0000000000000000      0x520 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .debug_info    0x0000000000000000      0x6b7 ../../lib/softrend/libsoftrend.a(transform.o)
+ .debug_abbrev  0x0000000000000000      0x1ea ../../lib/softrend/libsoftrend.a(transform.o)
+ .debug_loc     0x0000000000000000      0xb81 ../../lib/softrend/libsoftrend.a(transform.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softrend/libsoftrend.a(transform.o)
+ .debug_ranges  0x0000000000000000      0x1c8 ../../lib/softrend/libsoftrend.a(transform.o)
+ .debug_line    0x0000000000000000      0x207 ../../lib/softrend/libsoftrend.a(transform.o)
+ .debug_str     0x0000000000000000      0x296 ../../lib/softrend/libsoftrend.a(transform.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softrend/libsoftrend.a(transform.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softrend/libsoftrend.a(transform.o)
+ .eh_frame      0x0000000000000000      0x144 ../../lib/softrend/libsoftrend.a(transform.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x67a0
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x2a7 viewer.o
+ *fill*         0x00000000000013d7        0x9 
+ .text.startup  0x00000000000013e0      0x2fb viewer.o
+                0x00000000000013e0                main
+ *fill*         0x00000000000016db        0x5 
+ .text          0x00000000000016e0      0x469 ../../lib/gui/libgui.a(canvas.o)
+                0x0000000000001a00                deinit_canvas
+                0x0000000000001a10                init_canvas
+                0x0000000000001a90                update_canvas
+                0x0000000000001ac0                create_canvas
+ *fill*         0x0000000000001b49        0x7 
+ .text          0x0000000000001b50      0x407 ../../lib/gui/libgui.a(connection.o)
+                0x0000000000001b50                sig_connect
+                0x0000000000001c70                sig_disconnect
+                0x0000000000001d60                sig_send
+                0x0000000000001de0                sig_post
+ *fill*         0x0000000000001f57        0x9 
+ .text          0x0000000000001f60      0x100 ../../lib/gui/libgui.a(widget.o)
+                0x0000000000001f60                widget_init
+                0x0000000000002000                widget_modify
+                0x0000000000002020                widget_get_data
+                0x0000000000002030                widget_deinit
+ .text          0x0000000000002060     0x1482 ../../lib/gui/libgui.a(window.o)
+                0x0000000000003160                window_open
+                0x0000000000003310                window_resize
+                0x0000000000003390                window_refresh
+                0x00000000000033d0                window_damage
+                0x0000000000003410                window_root
+                0x0000000000003420                window_exec
+                0x0000000000003480                window_claim
+                0x00000000000034b0                window_yield
+                0x00000000000034d0                window_close
+ *fill*         0x00000000000034e2        0xe 
+ .text          0x00000000000034f0      0x457 ../../lib/gui/libgui.a(common.o)
+                0x00000000000034f0                draw_icon_cross
+                0x0000000000003890                draw_bevel
+ *fill*         0x0000000000003947        0x9 
+ .text          0x0000000000003950      0x247 ../../lib/draw/libdraw.a(tga.o)
+                0x0000000000003950                decode_tga
+                0x0000000000003b90                encode_tga
+ *fill*         0x0000000000003b97        0x9 
+ .text          0x0000000000003ba0      0x147 ../../lib/draw/libdraw.a(embedded.o)
+                0x0000000000003cb0                embedded_font_create
+ *fill*         0x0000000000003ce7        0x9 
+ .text          0x0000000000003cf0      0x7f7 ../../lib/draw/libdraw.a(bitmap_backend.o)
+                0x0000000000004370                bitmap_font_create
+ *fill*         0x00000000000044e7        0x9 
+ .text          0x00000000000044f0      0x8d4 ../../lib/draw/libdraw.a(font-8x16.o)
+                0x00000000000044f0                fb_font_glyph
+ *fill*         0x0000000000004dc4        0xc 
+ .text          0x0000000000004dd0      0x490 ../../lib/draw/libdraw.a(drawctx.o)
+                0x0000000000004dd0                drawctx_init
+                0x0000000000004e40                drawctx_save
+                0x0000000000004ea0                drawctx_restore
+                0x0000000000004f20                drawctx_set_compose
+                0x0000000000004f30                drawctx_set_clip
+                0x0000000000004f90                drawctx_set_mask
+                0x0000000000004fa0                drawctx_set_source
+                0x0000000000004fb0                drawctx_set_font
+                0x0000000000004fc0                drawctx_transfer
+                0x00000000000051f0                drawctx_stroke
+                0x0000000000005220                drawctx_fill
+                0x0000000000005230                drawctx_print
+ .text          0x0000000000005260      0x2ff ../../lib/draw/libdraw.a(font.o)
+                0x0000000000005260                font_create
+                0x0000000000005290                font_release
+                0x00000000000052b0                font_get_metrics
+                0x00000000000052d0                font_resolve_glyph
+                0x00000000000052f0                font_get_glyph_metrics
+                0x0000000000005310                font_render_glyph
+                0x0000000000005330                font_get_box
+                0x0000000000005420                font_draw_text
+ *fill*         0x000000000000555f        0x1 
+ .text          0x0000000000005560      0x360 ../../lib/draw/libdraw.a(source.o)
+                0x0000000000005560                source_init
+                0x00000000000055b0                source_set_transform
+                0x00000000000055d0                source_reset_transform
+                0x00000000000055e0                source_set_filter
+                0x00000000000055f0                source_set_color
+                0x0000000000005600                source_set_texture
+                0x0000000000005620                source_set_alpha
+                0x0000000000005630                source_set_mask
+                0x0000000000005650                source_is_fast
+                0x0000000000005690                source_direct_access
+                0x0000000000005770                source_determine_pixel
+ .text          0x00000000000058c0      0x363 ../../lib/draw/libdraw.a(surface.o)
+                0x00000000000058c0                surface_create
+                0x0000000000005990                surface_destroy
+                0x00000000000059d0                surface_is_shared
+                0x00000000000059e0                surface_direct_access
+                0x00000000000059f0                surface_pixmap_access
+                0x0000000000005a00                surface_get_resolution
+                0x0000000000005a50                surface_get_damaged_region
+                0x0000000000005b10                surface_add_damaged_region
+                0x0000000000005b60                surface_reset_damaged_region
+                0x0000000000005b90                surface_put_pixel
+                0x0000000000005bf0                surface_get_pixel
+ *fill*         0x0000000000005c23        0xd 
+ .text          0x0000000000005c30      0x147 ../../lib/softrend/libsoftrend.a(compose.o)
+                0x0000000000005c30                compose_clr
+                0x0000000000005c40                compose_src
+                0x0000000000005c50                compose_dst
+                0x0000000000005c60                compose_over
+                0x0000000000005d30                compose_in
+                0x0000000000005d40                compose_out
+                0x0000000000005d50                compose_atop
+                0x0000000000005d60                compose_xor
+                0x0000000000005d70                compose_add
+ *fill*         0x0000000000005d77        0x9 
+ .text          0x0000000000005d80      0xb17 ../../lib/softrend/libsoftrend.a(filter.o)
+                0x0000000000005d80                filter_nearest
+                0x0000000000005f10                filter_bilinear
+                0x0000000000006890                filter_bicubic
+ *fill*         0x0000000000006897        0x9 
+ .text          0x00000000000068a0      0x8b0 ../../lib/softrend/libsoftrend.a(pixconv.o)
+                0x00000000000068a0                pixel2argb_8888
+                0x00000000000068b0                pixel2abgr_8888
+                0x0000000000006900                pixel2rgba_8888
+                0x0000000000006940                pixel2bgra_8888
+                0x0000000000006950                pixel2rgb_0888
+                0x0000000000006980                pixel2bgr_0888
+                0x00000000000069d0                pixel2rgb_8880
+                0x0000000000006a20                pixel2bgr_8880
+                0x0000000000006a70                pixel2rgb_888
+                0x0000000000006a90                pixel2bgr_888
+                0x0000000000006ab0                pixel2rgb_555_be
+                0x0000000000006af0                pixel2rgb_555_le
+                0x0000000000006b30                pixel2rgb_565_be
+                0x0000000000006b70                pixel2rgb_565_le
+                0x0000000000006ba0                pixel2bgr_323
+                0x0000000000006bd0                pixel2gray_8
+                0x0000000000006c50                visual_mask_8888
+                0x0000000000006ca0                visual_mask_0888
+                0x0000000000006ce0                visual_mask_8880
+                0x0000000000006d30                visual_mask_888
+                0x0000000000006d50                visual_mask_555
+                0x0000000000006d80                visual_mask_565
+                0x0000000000006db0                visual_mask_323
+                0x0000000000006df0                visual_mask_8
+                0x0000000000006e70                argb_8888_2pixel
+                0x0000000000006e80                abgr_8888_2pixel
+                0x0000000000006eb0                rgba_8888_2pixel
+                0x0000000000006ec0                bgra_8888_2pixel
+                0x0000000000006ed0                rgb_0888_2pixel
+                0x0000000000006f00                bgr_0888_2pixel
+                0x0000000000006f40                rgb_8880_2pixel
+                0x0000000000006f60                bgr_8880_2pixel
+                0x0000000000006f90                rgb_888_2pixel
+                0x0000000000006fc0                bgr_888_2pixel
+                0x0000000000006ff0                rgb_555_be_2pixel
+                0x0000000000007030                rgb_555_le_2pixel
+                0x0000000000007070                rgb_565_be_2pixel
+                0x00000000000070b0                rgb_565_le_2pixel
+                0x00000000000070f0                bgr_323_2pixel
+                0x0000000000007130                gray_8_2pixel
+ .text          0x0000000000007150      0x623 ../../lib/softrend/libsoftrend.a(transform.o)
+                0x0000000000007150                transform_product
+                0x0000000000007260                transform_invert
+                0x0000000000007340                transform_identity
+                0x0000000000007370                transform_translate
+                0x0000000000007430                transform_scale
+                0x0000000000007500                transform_rotate
+                0x0000000000007640                transform_is_fast
+                0x0000000000007710                transform_apply_linear
+                0x0000000000007740                transform_apply_affine
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000007773       0x7f viewer.o
+ *fill*         0x00000000000077f2        0x2 
+ .rodata.str1.4
+                0x00000000000077f4       0x24 viewer.o
+                                         0x22 (size before relaxing)
+ .rodata        0x0000000000007818       0x24 ../../lib/gui/libgui.a(window.o)
+ .rodata        0x000000000000783c       0x38 ../../lib/gui/libgui.a(common.o)
+ .rodata.cst4   0x0000000000007874        0x4 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .rodata.str1.1
+                0x0000000000007878       0x12 ../../lib/draw/libdraw.a(drawctx.o)
+ .rodata.str1.1
+                0x000000000000788a       0x20 ../../lib/draw/libdraw.a(source.o)
+ *fill*         0x00000000000078aa        0x2 
+ .rodata.cst4   0x00000000000078ac        0x4 ../../lib/draw/libdraw.a(source.o)
+ .rodata.str1.1
+                0x00000000000078b0       0x1b ../../lib/draw/libdraw.a(surface.o)
+ .rodata.cst4   0x00000000000078cb        0x4 ../../lib/softrend/libsoftrend.a(filter.o)
+ *fill*         0x00000000000078cb        0x1 
+ .rodata.cst4   0x00000000000078cc        0x4 ../../lib/softrend/libsoftrend.a(transform.o)
+
+.rel.plt        0x00000000000078d0      0x168
+ *(.rel.plt)
+ .rel.plt       0x00000000000078d0      0x168 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000007a38       0x10
+ *(.rel.*)
+ .rel.got       0x0000000000007a38        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000007a38       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000007a48        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000007a48        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000007a48        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000007a50      0x2e0
+ *(.plt)
+ .plt           0x0000000000007a50      0x2e0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007a60                __main
+                0x0000000000007a70                cos_f64
+                0x0000000000007a80                win_grab
+                0x0000000000007a90                task_retval
+                0x0000000000007aa0                loc_service_connect
+                0x0000000000007ab0                printf
+                0x0000000000007ac0                async_hangup
+                0x0000000000007ad0                fibril_rwlock_read_unlock
+                0x0000000000007ae0                str_decode
+                0x0000000000007af0                memcpy
+                0x0000000000007b00                malloc
+                0x0000000000007b10                trunc_f64
+                0x0000000000007b20                loc_service_get_id
+                0x0000000000007b30                as_area_destroy
+                0x0000000000007b40                win_resize
+                0x0000000000007b50                assert_abort
+                0x0000000000007b60                calloc
+                0x0000000000007b70                fstat
+                0x0000000000007b80                fibril_mutex_unlock
+                0x0000000000007b90                str_dup
+                0x0000000000007ba0                fibril_mutex_initialize
+                0x0000000000007bb0                read
+                0x0000000000007bc0                win_get_event
+                0x0000000000007bd0                prodcons_initialize
+                0x0000000000007be0                win_register
+                0x0000000000007bf0                fibril_rwlock_write_unlock
+                0x0000000000007c00                prodcons_consume
+                0x0000000000007c10                memset
+                0x0000000000007c20                sin_f64
+                0x0000000000007c30                win_damage
+                0x0000000000007c40                fibril_rwlock_write_lock
+                0x0000000000007c50                win_close
+                0x0000000000007c60                prodcons_produce
+                0x0000000000007c70                exit
+                0x0000000000007c80                fibril_create_generic
+                0x0000000000007c90                fibril_add_ready
+                0x0000000000007ca0                fibril_switch
+                0x0000000000007cb0                as_area_create
+                0x0000000000007cc0                __syscall_fast
+                0x0000000000007cd0                open
+                0x0000000000007ce0                fibril_rwlock_read_lock
+                0x0000000000007cf0                close
+                0x0000000000007d00                win_close_request
+                0x0000000000007d10                free
+                0x0000000000007d20                fibril_mutex_lock
+
+.dynsym         0x0000000000007d30      0x320
+ *(.dynsym)
+ .dynsym        0x0000000000007d30      0x320 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000008050      0x2a1
+ *(.dynstr)
+ .dynstr        0x0000000000008050      0x2a1 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000082f4      0x164
+ *(.hash)
+ .hash          0x00000000000082f4      0x164 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000008458       0x13
+ *(.interp)
+ .interp        0x0000000000008458       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000946b                . = (. + 0x1000)
+
+.dynamic        0x000000000000946c       0xb0
+ *(.dynamic)
+ .dynamic       0x000000000000946c       0xb0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000946c                _DYNAMIC
+
+.data           0x0000000000009520     0xb590
+ *(.data)
+ .data          0x0000000000009520        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000009520        0x0 viewer.o
+ .data          0x0000000000009520        0x0 ../../lib/gui/libgui.a(canvas.o)
+ .data          0x0000000000009520       0x1c ../../lib/gui/libgui.a(connection.o)
+ .data          0x000000000000953c        0x0 ../../lib/gui/libgui.a(widget.o)
+ .data          0x000000000000953c        0x0 ../../lib/gui/libgui.a(window.o)
+ .data          0x000000000000953c        0x0 ../../lib/gui/libgui.a(common.o)
+ .data          0x000000000000953c        0x0 ../../lib/draw/libdraw.a(tga.o)
+ .data          0x000000000000953c       0x1c ../../lib/draw/libdraw.a(embedded.o)
+                0x000000000000953c                font_metrics
+                0x0000000000009548                fd_embedded
+ .data          0x0000000000009558       0x14 ../../lib/draw/libdraw.a(bitmap_backend.o)
+                0x0000000000009558                bitmap_backend
+ *fill*         0x000000000000956c       0x14 
+ .data          0x0000000000009580     0xb530 ../../lib/draw/libdraw.a(font-8x16.o)
+                0x0000000000009580                fb_font
+ .data          0x0000000000014ab0        0x0 ../../lib/draw/libdraw.a(drawctx.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/draw/libdraw.a(font.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/draw/libdraw.a(source.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/draw/libdraw.a(surface.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/softrend/libsoftrend.a(compose.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/softrend/libsoftrend.a(filter.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .data          0x0000000000014ab0        0x0 ../../lib/softrend/libsoftrend.a(transform.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000014ab0        0x0
+ *(.got)
+ .got           0x0000000000014ab0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000014ab0       0xc0
+ *(.got.plt)
+ .got.plt       0x0000000000014ab0       0xc0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000014ab0                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000014b70       0x28
+ *(.dynbss)
+ .dynbss        0x0000000000014b70        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000014b70                __syscall_fast_func
+                0x0000000000014b74                async_futex
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000014b78        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x0000000000014b78       0x20 viewer.o
+ .bss           0x0000000000014b98        0x0 ../../lib/gui/libgui.a(canvas.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/gui/libgui.a(connection.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/gui/libgui.a(widget.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/gui/libgui.a(window.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/gui/libgui.a(common.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(tga.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(embedded.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(bitmap_backend.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(font-8x16.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(drawctx.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(font.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(source.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/draw/libdraw.a(surface.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/softrend/libsoftrend.a(compose.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/softrend/libsoftrend.a(filter.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/softrend/libsoftrend.a(pixconv.o)
+ .bss           0x0000000000014b98        0x0 ../../lib/softrend/libsoftrend.a(transform.o)
+
+/DISCARD/
+ *(*)
+LOAD viewer.o
+LOAD ../../lib/gui/libgui.a
+LOAD ../../lib/draw/libdraw.a
+LOAD ../../lib/softrend/libsoftrend.a
+LOAD ../../lib/softfloat/libsoftfloat.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+LOAD ../../lib/math/libmath.so.0
+OUTPUT(viewer elf32-i386)

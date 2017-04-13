@@ -1,0 +1,54 @@
+# DO NOT DELETE
+
+compose.o: compose.h ../../lib/c/include/io/pixel.h
+compose.o: ../../lib/c/include/sys/types.h
+compose.o: ../../lib/c/arch/ia32/include/libarch/types.h
+compose.o: ../../lib/c/arch/ia32/include/libarch/common.h
+compose.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+compose.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+filter.o: filter.h ../../lib/c/include/stdbool.h
+filter.o: ../../lib/c/arch/ia32/include/libarch/types.h
+filter.o: ../../lib/c/arch/ia32/include/libarch/common.h
+filter.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+filter.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+filter.o: ../../../abi/include/abi/bool.h ../../lib/c/include/io/pixelmap.h
+filter.o: ../../lib/c/include/sys/types.h ../../lib/c/include/unistd.h
+filter.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+filter.o: ../../lib/c/arch/ia32/include/libarch/config.h
+filter.o: ../../lib/c/include/io/pixel.h
+pixconv.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+pixconv.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+pixconv.o: ../../lib/c/arch/ia32/include/libarch/common.h pixconv.h
+pixconv.o: ../../lib/c/include/stdbool.h
+pixconv.o: ../../lib/c/arch/ia32/include/libarch/types.h
+pixconv.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+pixconv.o: ../../../abi/include/abi/bool.h ../../lib/c/include/io/pixel.h
+pixconv.o: ../../lib/c/include/sys/types.h
+rectangle.o: rectangle.h ../../lib/c/include/sys/types.h
+rectangle.o: ../../lib/c/arch/ia32/include/libarch/types.h
+rectangle.o: ../../lib/c/arch/ia32/include/libarch/common.h
+rectangle.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+rectangle.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+rectangle.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+transform.o: ../../lib/math/include/math.h
+transform.o: ../../lib/math/arch/ia32/include/libarch/math.h
+transform.o: ../../lib/math/include/acos.h ../../lib/math/include/mathtypes.h
+transform.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+transform.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+transform.o: ../../lib/c/arch/ia32/include/libarch/common.h
+transform.o: ../../lib/math/include/asin.h ../../lib/math/include/atan.h
+transform.o: ../../lib/math/include/atan2.h ../../lib/math/include/ceil.h
+transform.o: ../../lib/math/include/cosh.h ../../lib/math/include/exp.h
+transform.o: ../../lib/math/include/fabs.h ../../lib/math/include/floor.h
+transform.o: ../../lib/math/include/fmod.h ../../lib/math/include/frexp.h
+transform.o: ../../lib/math/include/ldexp.h ../../lib/math/include/log.h
+transform.o: ../../lib/math/include/log10.h ../../lib/math/include/modf.h
+transform.o: ../../lib/math/include/pow.h ../../lib/math/include/sinh.h
+transform.o: ../../lib/math/include/sqrt.h ../../lib/math/include/tan.h
+transform.o: ../../lib/math/include/tanh.h ../../lib/math/include/trig.h
+transform.o: ../../lib/math/include/trunc.h transform.h
+transform.o: ../../lib/c/include/stdbool.h
+transform.o: ../../lib/c/arch/ia32/include/libarch/types.h
+transform.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+transform.o: ../../../abi/include/abi/bool.h
+# DO NOT DELETE

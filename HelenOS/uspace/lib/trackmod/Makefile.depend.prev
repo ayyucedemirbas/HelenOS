@@ -1,0 +1,54 @@
+# DO NOT DELETE
+
+protracker.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+protracker.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+protracker.o: ../../lib/c/arch/ia32/include/libarch/types.h
+protracker.o: ../../lib/c/arch/ia32/include/libarch/common.h
+protracker.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+protracker.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+protracker.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+protracker.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+protracker.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+protracker.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+protracker.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+protracker.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+protracker.o: ../../lib/c/arch/ia32/include/libarch/config.h
+protracker.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+protracker.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+protracker.o: protracker.h types/trackmod.h ../../lib/c/include/stddef.h
+protracker.o: trackmod.h types/protracker.h
+trackmod.o: ../../lib/c/include/assert.h ../../lib/c/include/errno.h
+trackmod.o: ../../../abi/include/abi/errno.h ../../lib/c/include/stdio.h
+trackmod.o: ../../lib/c/include/sys/types.h
+trackmod.o: ../../lib/c/arch/ia32/include/libarch/types.h
+trackmod.o: ../../lib/c/arch/ia32/include/libarch/common.h
+trackmod.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+trackmod.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+trackmod.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+trackmod.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+trackmod.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+trackmod.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+trackmod.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+trackmod.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+trackmod.o: ../../lib/c/arch/ia32/include/libarch/config.h
+trackmod.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+trackmod.o: ../../lib/c/include/macros.h protracker.h types/trackmod.h
+trackmod.o: ../../lib/c/include/stddef.h ../../lib/c/include/stdint.h
+trackmod.o: trackmod.h xm.h
+xm.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+xm.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+xm.o: ../../lib/c/arch/ia32/include/libarch/types.h
+xm.o: ../../lib/c/arch/ia32/include/libarch/common.h
+xm.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+xm.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+xm.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+xm.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+xm.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+xm.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+xm.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+xm.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+xm.o: ../../lib/c/arch/ia32/include/libarch/config.h
+xm.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+xm.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h xm.h
+xm.o: types/trackmod.h ../../lib/c/include/stddef.h trackmod.h types/xm.h
+# DO NOT DELETE

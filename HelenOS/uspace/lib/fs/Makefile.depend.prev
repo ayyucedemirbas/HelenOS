@@ -1,0 +1,39 @@
+# DO NOT DELETE
+
+libfs.o: libfs.h ../../lib/c/include/ipc/vfs.h
+libfs.o: ../../lib/c/include/ipc/common.h ../../lib/c/include/sys/types.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libfs.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libfs.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+libfs.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+libfs.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+libfs.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libfs.o: ../../lib/c/include/async.h ../../lib/c/include/fibril.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libfs.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libfs.o: ../../lib/c/include/stddef.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libfs.o: ../../lib/c/include/sys/time.h ../../../abi/include/abi/ddi/irq.h
+libfs.o: ../../../abi/include/abi/ipc/event.h
+libfs.o: ../../../abi/include/abi/ipc/interfaces.h
+libfs.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libfs.o: ../../lib/c/include/loc.h ../../lib/c/include/ipc/loc.h
+libfs.o: ../../srv/vfs/vfs.h ../../lib/c/include/adt/hash_table.h
+libfs.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libfs.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libfs.o: ../../lib/c/include/macros.h ../../lib/c/include/fibril_synch.h
+libfs.o: ../../lib/c/include/task.h ../../lib/c/include/stdarg.h
+libfs.o: ../../lib/c/include/types/task.h ../../lib/c/include/errno.h
+libfs.o: ../../../abi/include/abi/errno.h ../../lib/c/include/as.h
+libfs.o: ../../../abi/include/abi/mm/as.h ../../lib/c/include/dirent.h
+libfs.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+libfs.o: ../../lib/c/include/sys/stat.h ../../lib/c/include/sys/statfs.h
+libfs.o: ../../lib/c/include/stdlib.h ../../lib/c/include/malloc.h
+libfs.o: ../../lib/c/include/stacktrace.h
+# DO NOT DELETE

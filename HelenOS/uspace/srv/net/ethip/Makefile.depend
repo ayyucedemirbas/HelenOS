@@ -1,0 +1,211 @@
+# DO NOT DELETE
+
+arp.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+arp.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+arp.o: ../../../lib/c/include/sys/types.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+arp.o: ../../../lib/c/include/inttypes.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+arp.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+arp.o: ../../../lib/c/include/inet/iplink_srv.h
+arp.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+arp.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+arp.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+arp.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+arp.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+arp.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+arp.o: ../../../lib/c/include/fibril.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+arp.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+arp.o: ../../../lib/c/include/stddef.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+arp.o: ../../../lib/c/include/sys/time.h
+arp.o: ../../../../abi/include/abi/ddi/irq.h
+arp.o: ../../../../abi/include/abi/ipc/event.h
+arp.o: ../../../../abi/include/abi/ipc/interfaces.h
+arp.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+arp.o: ../../../lib/c/include/fibril_synch.h
+arp.o: ../../../lib/c/include/inet/addr.h
+arp.o: ../../../lib/c/include/inet/iplink.h ../../../lib/c/include/stdlib.h
+arp.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+arp.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+arp.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+arp.o: arp.h ethip.h ../../../lib/c/include/loc.h
+arp.o: ../../../lib/c/include/ipc/loc.h atrans.h ethip_nic.h pdu.h std.h
+atrans.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+atrans.o: ../../../lib/c/include/stdbool.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+atrans.o: ../../../../abi/include/abi/bool.h ../../../lib/c/include/stddef.h
+atrans.o: ../../../lib/c/include/sys/types.h ../../../lib/c/include/errno.h
+atrans.o: ../../../../abi/include/abi/errno.h
+atrans.o: ../../../lib/c/include/fibril_synch.h
+atrans.o: ../../../lib/c/include/fibril.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+atrans.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+atrans.o: ../../../lib/c/include/sys/time.h
+atrans.o: ../../../lib/c/include/inet/iplink_srv.h
+atrans.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+atrans.o: ../../../../abi/include/abi/ipc/ipc.h
+atrans.o: ../../../lib/c/include/atomic.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+atrans.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+atrans.o: ../../../../abi/include/abi/proc/task.h
+atrans.o: ../../../lib/c/include/futex.h
+atrans.o: ../../../../abi/include/abi/ddi/irq.h
+atrans.o: ../../../../abi/include/abi/ipc/event.h
+atrans.o: ../../../../abi/include/abi/ipc/interfaces.h
+atrans.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+atrans.o: ../../../lib/c/include/inet/addr.h
+atrans.o: ../../../lib/c/include/inet/iplink.h
+atrans.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+atrans.o: ../../../lib/c/include/time.h
+atrans.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+atrans.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+atrans.o: atrans.h ethip.h ../../../lib/c/include/loc.h
+atrans.o: ../../../lib/c/include/ipc/loc.h
+ethip.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+ethip.o: ../../../lib/c/include/sys/types.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+ethip.o: ../../../../abi/include/abi/ipc/ipc.h
+ethip.o: ../../../lib/c/include/atomic.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+ethip.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+ethip.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+ethip.o: ../../../../abi/include/abi/proc/task.h
+ethip.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+ethip.o: ../../../../abi/include/abi/syscall.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+ethip.o: ../../../lib/c/include/fibril.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ethip.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+ethip.o: ../../../lib/c/include/stddef.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+ethip.o: ../../../lib/c/include/sys/time.h
+ethip.o: ../../../../abi/include/abi/ddi/irq.h
+ethip.o: ../../../../abi/include/abi/ipc/event.h
+ethip.o: ../../../../abi/include/abi/ipc/interfaces.h
+ethip.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+ethip.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+ethip.o: ../../../lib/c/include/inet/iplink_srv.h
+ethip.o: ../../../lib/c/include/fibril_synch.h
+ethip.o: ../../../lib/c/include/inet/addr.h
+ethip.o: ../../../lib/c/include/inet/iplink.h ../../../lib/c/include/io/log.h
+ethip.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/inttypes.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ethip.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+ethip.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+ethip.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/str.h
+ethip.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+ethip.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/stdlib.h
+ethip.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+ethip.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+ethip.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+ethip.o: ../../../lib/c/include/task.h ../../../lib/c/include/types/task.h
+ethip.o: arp.h ethip.h ethip_nic.h pdu.h std.h
+ethip_nic.o: ../../../lib/c/include/adt/list.h
+ethip_nic.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stdbool.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+ethip_nic.o: ../../../../abi/include/abi/bool.h
+ethip_nic.o: ../../../lib/c/include/stddef.h
+ethip_nic.o: ../../../lib/c/include/sys/types.h
+ethip_nic.o: ../../../lib/c/include/async.h
+ethip_nic.o: ../../../lib/c/include/ipc/common.h
+ethip_nic.o: ../../../../abi/include/abi/ipc/ipc.h
+ethip_nic.o: ../../../lib/c/include/atomic.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+ethip_nic.o: ../../../lib/c/include/atomicdflt.h
+ethip_nic.o: ../../../lib/c/include/stdint.h
+ethip_nic.o: ../../../../abi/include/abi/proc/task.h
+ethip_nic.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+ethip_nic.o: ../../../../abi/include/abi/syscall.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+ethip_nic.o: ../../../lib/c/include/fibril.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+ethip_nic.o: ../../../lib/c/include/sys/time.h
+ethip_nic.o: ../../../../abi/include/abi/ddi/irq.h
+ethip_nic.o: ../../../../abi/include/abi/ipc/event.h
+ethip_nic.o: ../../../../abi/include/abi/ipc/interfaces.h
+ethip_nic.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+ethip_nic.o: ../../../lib/c/include/errno.h
+ethip_nic.o: ../../../../abi/include/abi/errno.h
+ethip_nic.o: ../../../lib/c/include/fibril_synch.h
+ethip_nic.o: ../../../lib/c/include/inet/iplink_srv.h
+ethip_nic.o: ../../../lib/c/include/inet/addr.h
+ethip_nic.o: ../../../lib/c/include/inet/iplink.h
+ethip_nic.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+ethip_nic.o: ../../../lib/c/include/inttypes.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ethip_nic.o: ../../../lib/c/include/io/verify.h
+ethip_nic.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/loc.h
+ethip_nic.o: ../../../lib/c/include/ipc/loc.h
+ethip_nic.o: ../../../lib/drv/include/nic_iface.h
+ethip_nic.o: ../../../lib/c/include/nic/nic.h
+ethip_nic.o: ../../../lib/c/include/nic/eth_phys.h
+ethip_nic.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+ethip_nic.o: ../../../lib/c/include/time.h
+ethip_nic.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+ethip_nic.o: ../../../lib/c/include/malloc.h
+ethip_nic.o: ../../../lib/c/include/stacktrace.h ../../../lib/c/include/mem.h
+ethip_nic.o: ../../../lib/c/include/cc.h ethip.h ethip_nic.h pdu.h
+pdu.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/stdint.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+pdu.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+pdu.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+pdu.o: ../../../lib/c/include/sys/types.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+pdu.o: ../../../lib/c/include/inttypes.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+pdu.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+pdu.o: ../../../lib/c/include/macros.h ../../../lib/c/include/mem.h
+pdu.o: ../../../lib/c/include/cc.h ../../../lib/c/include/stdlib.h
+pdu.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+pdu.o: ../../../lib/c/include/sys/time.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+pdu.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+pdu.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+pdu.o: ethip.h ../../../lib/c/include/adt/list.h
+pdu.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stddef.h
+pdu.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+pdu.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+pdu.o: ../../../lib/c/include/atomicdflt.h
+pdu.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+pdu.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+pdu.o: ../../../lib/c/include/fibril.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+pdu.o: ../../../../abi/include/abi/ddi/irq.h
+pdu.o: ../../../../abi/include/abi/ipc/event.h
+pdu.o: ../../../../abi/include/abi/ipc/interfaces.h
+pdu.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+pdu.o: ../../../lib/c/include/inet/iplink_srv.h
+pdu.o: ../../../lib/c/include/fibril_synch.h
+pdu.o: ../../../lib/c/include/inet/addr.h
+pdu.o: ../../../lib/c/include/inet/iplink.h ../../../lib/c/include/loc.h
+pdu.o: ../../../lib/c/include/ipc/loc.h std.h pdu.h
+# DO NOT DELETE

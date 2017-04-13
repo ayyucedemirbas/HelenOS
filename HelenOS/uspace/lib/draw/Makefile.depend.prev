@@ -1,0 +1,211 @@
+# DO NOT DELETE
+
+codec/tga.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+codec/tga.o: ../../lib/c/include/sys/types.h
+codec/tga.o: ../../lib/c/arch/ia32/include/libarch/types.h
+codec/tga.o: ../../lib/c/arch/ia32/include/libarch/common.h
+codec/tga.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+codec/tga.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+codec/tga.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+codec/tga.o: ../../lib/c/arch/ia32/include/libarch/config.h
+codec/tga.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+codec/tga.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+codec/tga.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+codec/tga.o: ../../lib/c/include/align.h ../../lib/softrend/pixconv.h
+codec/tga.o: ../../lib/c/include/io/pixel.h codec/tga.h surface.h
+codec/tga.o: ../../lib/c/include/io/pixelmap.h
+codec/tga.gz.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+codec/tga.gz.o: ../../lib/compress/gzip.h ../../lib/c/include/sys/types.h
+codec/tga.gz.o: ../../lib/c/arch/ia32/include/libarch/types.h
+codec/tga.gz.o: ../../lib/c/arch/ia32/include/libarch/common.h
+codec/tga.gz.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+codec/tga.gz.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+codec/tga.gz.o: ../../lib/c/include/malloc.h codec/tga.gz.h surface.h
+codec/tga.gz.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+codec/tga.gz.o: ../../lib/c/include/io/pixelmap.h
+codec/tga.gz.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+codec/tga.gz.o: ../../lib/c/include/sys/time.h
+codec/tga.gz.o: ../../lib/c/arch/ia32/include/libarch/config.h
+codec/tga.gz.o: ../../lib/c/include/io/pixel.h codec/tga.h
+codec/webp.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+codec/webp.o: ../../lib/c/include/sys/types.h
+codec/webp.o: ../../lib/c/arch/ia32/include/libarch/types.h
+codec/webp.o: ../../lib/c/arch/ia32/include/libarch/common.h
+codec/webp.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+codec/webp.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+codec/webp.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+codec/webp.o: ../../lib/c/arch/ia32/include/libarch/config.h
+codec/webp.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+codec/webp.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+codec/webp.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+codec/webp.o: ../../lib/c/include/align.h ../../lib/softrend/pixconv.h
+codec/webp.o: ../../lib/c/include/io/pixel.h
+codec/webp.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+codec/webp.o: codec/webp.h surface.h ../../lib/c/include/io/pixelmap.h
+cursor/embedded.o: ../../lib/c/include/assert.h
+cursor/embedded.o: ../../lib/c/include/sys/types.h
+cursor/embedded.o: ../../lib/c/arch/ia32/include/libarch/types.h
+cursor/embedded.o: ../../lib/c/arch/ia32/include/libarch/common.h
+cursor/embedded.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+cursor/embedded.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+cursor/embedded.o: ../../lib/c/include/malloc.h gfx/cursor-11x18.h
+cursor/embedded.o: cursor/embedded.h cursor.h surface.h
+cursor/embedded.o: ../../lib/c/include/stdbool.h
+cursor/embedded.o: ../../../abi/include/abi/bool.h
+cursor/embedded.o: ../../lib/c/include/io/pixelmap.h
+cursor/embedded.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+cursor/embedded.o: ../../lib/c/include/sys/time.h
+cursor/embedded.o: ../../lib/c/arch/ia32/include/libarch/config.h
+cursor/embedded.o: ../../lib/c/include/io/pixel.h surface.h
+font/embedded.o: ../../lib/c/include/sys/types.h
+font/embedded.o: ../../lib/c/arch/ia32/include/libarch/types.h
+font/embedded.o: ../../lib/c/arch/ia32/include/libarch/common.h
+font/embedded.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+font/embedded.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+font/embedded.o: ../../lib/c/include/malloc.h ../../lib/c/include/errno.h
+font/embedded.o: ../../../abi/include/abi/errno.h gfx/font-8x16.h
+font/embedded.o: ../../lib/c/include/stdbool.h
+font/embedded.o: ../../../abi/include/abi/bool.h cursor/embedded.h cursor.h
+font/embedded.o: surface.h ../../lib/c/include/io/pixelmap.h
+font/embedded.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+font/embedded.o: ../../lib/c/include/sys/time.h
+font/embedded.o: ../../lib/c/arch/ia32/include/libarch/config.h
+font/embedded.o: ../../lib/c/include/io/pixel.h drawctx.h
+font/embedded.o: ../../lib/softrend/compose.h source.h
+font/embedded.o: ../../lib/softrend/transform.h ../../lib/softrend/filter.h
+font/embedded.o: path.h ../../lib/c/include/adt/list.h
+font/embedded.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+font/embedded.o: font.h font/bitmap_backend.h font.h surface.h source.h
+font/bitmap_backend.o: ../../lib/c/include/malloc.h
+font/bitmap_backend.o: ../../lib/c/include/sys/types.h
+font/bitmap_backend.o: ../../lib/c/arch/ia32/include/libarch/types.h
+font/bitmap_backend.o: ../../lib/c/arch/ia32/include/libarch/common.h
+font/bitmap_backend.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+font/bitmap_backend.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+font/bitmap_backend.o: ../../lib/c/include/errno.h
+font/bitmap_backend.o: ../../../abi/include/abi/errno.h font.h drawctx.h
+font/bitmap_backend.o: ../../lib/c/include/stdbool.h
+font/bitmap_backend.o: ../../../abi/include/abi/bool.h
+font/bitmap_backend.o: ../../lib/softrend/compose.h
+font/bitmap_backend.o: ../../lib/c/include/io/pixel.h surface.h
+font/bitmap_backend.o: ../../lib/c/include/io/pixelmap.h
+font/bitmap_backend.o: ../../lib/c/include/unistd.h
+font/bitmap_backend.o: ../../lib/c/include/time.h
+font/bitmap_backend.o: ../../lib/c/include/sys/time.h
+font/bitmap_backend.o: ../../lib/c/arch/ia32/include/libarch/config.h
+font/bitmap_backend.o: source.h ../../lib/softrend/transform.h
+font/bitmap_backend.o: ../../lib/softrend/filter.h path.h
+font/bitmap_backend.o: ../../lib/c/include/adt/list.h
+font/bitmap_backend.o: ../../lib/c/include/assert.h
+font/bitmap_backend.o: ../../lib/c/include/stddef.h font.h
+font/bitmap_backend.o: font/bitmap_backend.h surface.h source.h
+font/pcf.o: ../../lib/c/include/sys/types.h
+font/pcf.o: ../../lib/c/arch/ia32/include/libarch/types.h
+font/pcf.o: ../../lib/c/arch/ia32/include/libarch/common.h
+font/pcf.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+font/pcf.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+font/pcf.o: ../../lib/c/include/malloc.h ../../lib/c/include/errno.h
+font/pcf.o: ../../../abi/include/abi/errno.h ../../lib/c/include/byteorder.h
+font/pcf.o: ../../lib/c/include/stdint.h ../../lib/c/include/stdio.h
+font/pcf.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+font/pcf.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+font/pcf.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+font/pcf.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+font/pcf.o: ../../lib/c/include/align.h font/pcf.h font.h drawctx.h
+font/pcf.o: ../../lib/softrend/compose.h ../../lib/c/include/io/pixel.h
+font/pcf.o: surface.h ../../lib/c/include/io/pixelmap.h
+font/pcf.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+font/pcf.o: ../../lib/c/include/sys/time.h
+font/pcf.o: ../../lib/c/arch/ia32/include/libarch/config.h source.h
+font/pcf.o: ../../lib/softrend/transform.h ../../lib/softrend/filter.h path.h
+font/pcf.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+font/pcf.o: ../../lib/c/include/stddef.h font.h font/bitmap_backend.h
+font/pcf.o: surface.h source.h
+gfx/font-8x16.o: ../../lib/c/include/sys/types.h
+gfx/font-8x16.o: ../../lib/c/arch/ia32/include/libarch/types.h
+gfx/font-8x16.o: ../../lib/c/arch/ia32/include/libarch/common.h
+gfx/font-8x16.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+gfx/font-8x16.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+gfx/font-8x16.o: gfx/font-8x16.h ../../lib/c/include/stdbool.h
+gfx/font-8x16.o: ../../../abi/include/abi/bool.h
+gfx/cursor-11x18.o: gfx/cursor-11x18.h ../../lib/c/include/sys/types.h
+gfx/cursor-11x18.o: ../../lib/c/arch/ia32/include/libarch/types.h
+gfx/cursor-11x18.o: ../../lib/c/arch/ia32/include/libarch/common.h
+gfx/cursor-11x18.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+gfx/cursor-11x18.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+drawctx.o: ../../lib/c/include/assert.h ../../lib/c/include/adt/list.h
+drawctx.o: ../../lib/c/include/stdbool.h
+drawctx.o: ../../lib/c/arch/ia32/include/libarch/types.h
+drawctx.o: ../../lib/c/arch/ia32/include/libarch/common.h
+drawctx.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+drawctx.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+drawctx.o: ../../../abi/include/abi/bool.h ../../lib/c/include/stddef.h
+drawctx.o: ../../lib/c/include/sys/types.h ../../lib/c/include/malloc.h
+drawctx.o: drawctx.h ../../lib/softrend/compose.h
+drawctx.o: ../../lib/c/include/io/pixel.h surface.h
+drawctx.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+drawctx.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+drawctx.o: ../../lib/c/arch/ia32/include/libarch/config.h source.h
+drawctx.o: ../../lib/softrend/transform.h ../../lib/softrend/filter.h path.h
+drawctx.o: font.h
+cursor.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+cursor.o: ../../lib/c/arch/ia32/include/libarch/types.h
+cursor.o: ../../lib/c/arch/ia32/include/libarch/common.h
+cursor.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+cursor.o: ../../lib/c/arch/ia32/include/libarch/stdint.h cursor.h surface.h
+cursor.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+cursor.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+cursor.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+cursor.o: ../../lib/c/arch/ia32/include/libarch/config.h
+cursor.o: ../../lib/c/include/io/pixel.h cursor/embedded.h cursor.h
+font.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+font.o: ../../lib/c/arch/ia32/include/libarch/types.h
+font.o: ../../lib/c/arch/ia32/include/libarch/common.h
+font.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+font.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+font.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+font.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+font.o: ../../lib/c/include/cc.h ../../lib/c/include/stdbool.h
+font.o: ../../../abi/include/abi/bool.h font.h surface.h
+font.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+font.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+font.o: ../../lib/c/arch/ia32/include/libarch/config.h
+font.o: ../../lib/c/include/io/pixel.h source.h
+font.o: ../../lib/softrend/transform.h ../../lib/softrend/filter.h
+font.o: font/embedded.h font.h drawctx.h ../../lib/softrend/compose.h path.h
+font.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+font.o: ../../lib/c/include/stddef.h
+path.o: ../../lib/c/include/assert.h ../../lib/c/include/stdbool.h
+path.o: ../../lib/c/arch/ia32/include/libarch/types.h
+path.o: ../../lib/c/arch/ia32/include/libarch/common.h
+path.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+path.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+path.o: ../../../abi/include/abi/bool.h ../../lib/c/include/malloc.h
+path.o: ../../lib/c/include/sys/types.h path.h ../../lib/c/include/adt/list.h
+path.o: ../../lib/c/include/stddef.h
+source.o: ../../lib/c/include/assert.h source.h
+source.o: ../../lib/c/include/sys/types.h
+source.o: ../../lib/c/arch/ia32/include/libarch/types.h
+source.o: ../../lib/c/arch/ia32/include/libarch/common.h
+source.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+source.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+source.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+source.o: ../../lib/softrend/transform.h ../../lib/softrend/filter.h
+source.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+source.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+source.o: ../../lib/c/arch/ia32/include/libarch/config.h
+source.o: ../../lib/c/include/io/pixel.h surface.h
+surface.o: ../../lib/c/include/malloc.h ../../lib/c/include/sys/types.h
+surface.o: ../../lib/c/arch/ia32/include/libarch/types.h
+surface.o: ../../lib/c/arch/ia32/include/libarch/common.h
+surface.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+surface.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+surface.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+surface.o: ../../lib/c/include/as.h ../../../abi/include/abi/mm/as.h
+surface.o: ../../lib/c/arch/ia32/include/libarch/config.h
+surface.o: ../../lib/c/include/assert.h surface.h
+surface.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+surface.o: ../../lib/c/include/io/pixelmap.h ../../lib/c/include/unistd.h
+surface.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+surface.o: ../../lib/c/include/io/pixel.h
+# DO NOT DELETE

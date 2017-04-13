@@ -1,0 +1,1758 @@
+
+remcons:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 98 3f 00 00    	lea    0x3f98,%eax
+    1110:	c7 00 a0 26 00 00    	movl   $0x26a0,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 8e 13 00 00       	call   24b0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <remcons_clear>:
+    1130:	55                   	push   %ebp
+    1131:	89 e5                	mov    %esp,%ebp
+    1133:	5d                   	pop    %ebp
+    1134:	c3                   	ret    
+    1135:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1139:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001140 <remcons_get_pos>:
+    1140:	55                   	push   %ebp
+    1141:	89 e5                	mov    %esp,%ebp
+    1143:	8b 45 08             	mov    0x8(%ebp),%eax
+    1146:	8b 00                	mov    (%eax),%eax
+    1148:	8b 40 04             	mov    0x4(%eax),%eax
+    114b:	8b 90 9c 00 00 00    	mov    0x9c(%eax),%edx
+    1151:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1154:	89 10                	mov    %edx,(%eax)
+    1156:	8b 45 10             	mov    0x10(%ebp),%eax
+    1159:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    115f:	31 c0                	xor    %eax,%eax
+    1161:	5d                   	pop    %ebp
+    1162:	c3                   	ret    
+    1163:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1169:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001170 <remcons_get_size>:
+    1170:	55                   	push   %ebp
+    1171:	89 e5                	mov    %esp,%ebp
+    1173:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1176:	c7 00 64 00 00 00    	movl   $0x64,(%eax)
+    117c:	8b 45 10             	mov    0x10(%ebp),%eax
+    117f:	c7 00 01 00 00 00    	movl   $0x1,(%eax)
+    1185:	31 c0                	xor    %eax,%eax
+    1187:	5d                   	pop    %ebp
+    1188:	c3                   	ret    
+    1189:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00001190 <remcons_get_color_cap>:
+    1190:	55                   	push   %ebp
+    1191:	89 e5                	mov    %esp,%ebp
+    1193:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1196:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    119c:	31 c0                	xor    %eax,%eax
+    119e:	5d                   	pop    %ebp
+    119f:	c3                   	ret    
+
+000011a0 <remcons_new_conn>:
+    11a0:	55                   	push   %ebp
+    11a1:	89 e5                	mov    %esp,%ebp
+    11a3:	57                   	push   %edi
+    11a4:	56                   	push   %esi
+    11a5:	53                   	push   %ebx
+    11a6:	83 ec 18             	sub    $0x18,%esp
+    11a9:	8b 75 0c             	mov    0xc(%ebp),%esi
+    11ac:	56                   	push   %esi
+    11ad:	e8 fe 05 00 00       	call   17b0 <telnet_user_create>
+    11b2:	83 c4 10             	add    $0x10,%esp
+    11b5:	85 c0                	test   %eax,%eax
+    11b7:	0f 84 cb 01 00 00    	je     1388 <remcons_new_conn+0x1e8>
+    11bd:	83 ec 0c             	sub    $0xc,%esp
+    11c0:	89 c3                	mov    %eax,%ebx
+    11c2:	8d 40 20             	lea    0x20(%eax),%eax
+    11c5:	50                   	push   %eax
+    11c6:	e8 15 14 00 00       	call   25e0 <con_srvs_init@plt>
+    11cb:	c7 43 20 a0 3e 00 00 	movl   $0x3ea0,0x20(%ebx)
+    11d2:	89 5b 24             	mov    %ebx,0x24(%ebx)
+    11d5:	c7 43 28 e8 03 00 00 	movl   $0x3e8,0x28(%ebx)
+    11dc:	89 1c 24             	mov    %ebx,(%esp)
+    11df:	e8 9c 06 00 00       	call   1880 <telnet_user_add>
+    11e4:	58                   	pop    %eax
+    11e5:	8d 43 18             	lea    0x18(%ebx),%eax
+    11e8:	5a                   	pop    %edx
+    11e9:	50                   	push   %eax
+    11ea:	8b 4b 1c             	mov    0x1c(%ebx),%ecx
+    11ed:	51                   	push   %ecx
+    11ee:	e8 fd 12 00 00       	call   24f0 <loc_service_register@plt>
+    11f3:	83 c4 10             	add    $0x10,%esp
+    11f6:	85 c0                	test   %eax,%eax
+    11f8:	0f 85 22 01 00 00    	jne    1320 <remcons_new_conn+0x180>
+    11fe:	83 ec 0c             	sub    $0xc,%esp
+    1201:	8b 43 18             	mov    0x18(%ebx),%eax
+    1204:	50                   	push   %eax
+    1205:	8b 73 1c             	mov    0x1c(%ebx),%esi
+    1208:	56                   	push   %esi
+    1209:	50                   	push   %eax
+    120a:	8b 7b 10             	mov    0x10(%ebx),%edi
+    120d:	57                   	push   %edi
+    120e:	68 7c 20 00 00       	push   $0x207c
+    1213:	e8 b8 12 00 00       	call   24d0 <printf@plt>
+    1218:	83 c4 1c             	add    $0x1c,%esp
+    121b:	6a 00                	push   $0x0
+    121d:	53                   	push   %ebx
+    121e:	68 c0 13 00 00       	push   $0x13c0
+    1223:	e8 48 14 00 00       	call   2670 <fibril_create_generic@plt>
+    1228:	83 c4 10             	add    $0x10,%esp
+    122b:	85 c0                	test   %eax,%eax
+    122d:	0f 84 6a 01 00 00    	je     139d <remcons_new_conn+0x1fd>
+    1233:	83 ec 0c             	sub    $0xc,%esp
+    1236:	8d b3 88 00 00 00    	lea    0x88(%ebx),%esi
+    123c:	50                   	push   %eax
+    123d:	e8 3e 14 00 00       	call   2680 <fibril_add_ready@plt>
+    1242:	89 1c 24             	mov    %ebx,(%esp)
+    1245:	e8 b6 14 00 00       	call   2700 <fibril_mutex_lock@plt>
+    124a:	8a 83 90 00 00 00    	mov    0x90(%ebx),%al
+    1250:	8a 93 98 00 00 00    	mov    0x98(%ebx),%dl
+    1256:	83 c4 10             	add    $0x10,%esp
+    1259:	eb 3b                	jmp    1296 <remcons_new_conn+0xf6>
+    125b:	90                   	nop
+    125c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1260:	84 d2                	test   %dl,%dl
+    1262:	74 16                	je     127a <remcons_new_conn+0xda>
+    1264:	8b 93 84 00 00 00    	mov    0x84(%ebx),%edx
+    126a:	8b 83 80 00 00 00    	mov    0x80(%ebx),%eax
+    1270:	89 d7                	mov    %edx,%edi
+    1272:	09 c7                	or     %eax,%edi
+    1274:	0f 85 8e 00 00 00    	jne    1308 <remcons_new_conn+0x168>
+    127a:	50                   	push   %eax
+    127b:	68 e8 03 00 00       	push   $0x3e8
+    1280:	53                   	push   %ebx
+    1281:	56                   	push   %esi
+    1282:	e8 c9 12 00 00       	call   2550 <fibril_condvar_wait_timeout@plt>
+    1287:	8a 83 90 00 00 00    	mov    0x90(%ebx),%al
+    128d:	8a 93 98 00 00 00    	mov    0x98(%ebx),%dl
+    1293:	83 c4 10             	add    $0x10,%esp
+    1296:	84 c0                	test   %al,%al
+    1298:	74 c6                	je     1260 <remcons_new_conn+0xc0>
+    129a:	84 d2                	test   %dl,%dl
+    129c:	74 52                	je     12f0 <remcons_new_conn+0x150>
+    129e:	8b 83 94 00 00 00    	mov    0x94(%ebx),%eax
+    12a4:	85 c0                	test   %eax,%eax
+    12a6:	75 48                	jne    12f0 <remcons_new_conn+0x150>
+    12a8:	83 ec 0c             	sub    $0xc,%esp
+    12ab:	53                   	push   %ebx
+    12ac:	e8 ef 12 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    12b1:	8b 53 18             	mov    0x18(%ebx),%edx
+    12b4:	58                   	pop    %eax
+    12b5:	52                   	push   %edx
+    12b6:	e8 f5 12 00 00       	call   25b0 <loc_service_unregister@plt>
+    12bb:	83 c4 10             	add    $0x10,%esp
+    12be:	85 c0                	test   %eax,%eax
+    12c0:	0f 85 92 00 00 00    	jne    1358 <remcons_new_conn+0x1b8>
+    12c6:	51                   	push   %ecx
+    12c7:	8b 73 18             	mov    0x18(%ebx),%esi
+    12ca:	56                   	push   %esi
+    12cb:	8b 7b 10             	mov    0x10(%ebx),%edi
+    12ce:	57                   	push   %edi
+    12cf:	68 10 21 00 00       	push   $0x2110
+    12d4:	e8 f7 11 00 00       	call   24d0 <printf@plt>
+    12d9:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    12dc:	83 c4 10             	add    $0x10,%esp
+    12df:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    12e2:	5b                   	pop    %ebx
+    12e3:	5e                   	pop    %esi
+    12e4:	5f                   	pop    %edi
+    12e5:	5d                   	pop    %ebp
+    12e6:	e9 e5 05 00 00       	jmp    18d0 <telnet_user_destroy>
+    12eb:	90                   	nop
+    12ec:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    12f0:	c7 43 14 00 00 00 00 	movl   $0x0,0x14(%ebx)
+    12f7:	c6 83 98 00 00 00 01 	movb   $0x1,0x98(%ebx)
+    12fe:	c6 43 2c 01          	movb   $0x1,0x2c(%ebx)
+    1302:	eb 9a                	jmp    129e <remcons_new_conn+0xfe>
+    1304:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1308:	51                   	push   %ecx
+    1309:	51                   	push   %ecx
+    130a:	52                   	push   %edx
+    130b:	50                   	push   %eax
+    130c:	e8 bf 12 00 00       	call   25d0 <task_kill@plt>
+    1311:	83 c4 10             	add    $0x10,%esp
+    1314:	e9 61 ff ff ff       	jmp    127a <remcons_new_conn+0xda>
+    1319:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1320:	83 ec 0c             	sub    $0xc,%esp
+    1323:	50                   	push   %eax
+    1324:	e8 27 13 00 00       	call   2650 <str_error@plt>
+    1329:	5a                   	pop    %edx
+    132a:	59                   	pop    %ecx
+    132b:	50                   	push   %eax
+    132c:	8b 73 1c             	mov    0x1c(%ebx),%esi
+    132f:	56                   	push   %esi
+    1330:	8b 7b 18             	mov    0x18(%ebx),%edi
+    1333:	57                   	push   %edi
+    1334:	8b 43 10             	mov    0x10(%ebx),%eax
+    1337:	50                   	push   %eax
+    1338:	a1 a0 3f 00 00       	mov    0x3fa0,%eax
+    133d:	68 34 20 00 00       	push   $0x2034
+    1342:	50                   	push   %eax
+    1343:	e8 38 12 00 00       	call   2580 <fprintf@plt>
+    1348:	83 c4 20             	add    $0x20,%esp
+    134b:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    134e:	5b                   	pop    %ebx
+    134f:	5e                   	pop    %esi
+    1350:	5f                   	pop    %edi
+    1351:	5d                   	pop    %ebp
+    1352:	c3                   	ret    
+    1353:	90                   	nop
+    1354:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1358:	83 ec 0c             	sub    $0xc,%esp
+    135b:	50                   	push   %eax
+    135c:	e8 ef 12 00 00       	call   2650 <str_error@plt>
+    1361:	5a                   	pop    %edx
+    1362:	59                   	pop    %ecx
+    1363:	50                   	push   %eax
+    1364:	8b 73 1c             	mov    0x1c(%ebx),%esi
+    1367:	56                   	push   %esi
+    1368:	8b 7b 18             	mov    0x18(%ebx),%edi
+    136b:	57                   	push   %edi
+    136c:	8b 43 10             	mov    0x10(%ebx),%eax
+    136f:	50                   	push   %eax
+    1370:	a1 a0 3f 00 00       	mov    0x3fa0,%eax
+    1375:	68 bc 20 00 00       	push   $0x20bc
+    137a:	50                   	push   %eax
+    137b:	e8 00 12 00 00       	call   2580 <fprintf@plt>
+    1380:	83 c4 20             	add    $0x20,%esp
+    1383:	e9 3e ff ff ff       	jmp    12c6 <remcons_new_conn+0x126>
+    1388:	53                   	push   %ebx
+    1389:	68 24 01 00 00       	push   $0x124
+    138e:	68 9a 1f 00 00       	push   $0x1f9a
+    1393:	68 a4 1f 00 00       	push   $0x1fa4
+    1398:	e8 a3 11 00 00       	call   2540 <assert_abort@plt>
+    139d:	53                   	push   %ebx
+    139e:	68 38 01 00 00       	push   $0x138
+    13a3:	68 9a 1f 00 00       	push   $0x1f9a
+    13a8:	68 a9 1f 00 00       	push   $0x1fa9
+    13ad:	e8 8e 11 00 00       	call   2540 <assert_abort@plt>
+    13b2:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    13b9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000013c0 <spawn_task_fibril>:
+    13c0:	55                   	push   %ebp
+    13c1:	89 e5                	mov    %esp,%ebp
+    13c3:	56                   	push   %esi
+    13c4:	53                   	push   %ebx
+    13c5:	83 ec 48             	sub    $0x48,%esp
+    13c8:	8d 75 d0             	lea    -0x30(%ebp),%esi
+    13cb:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    13ce:	6a 00                	push   $0x0
+    13d0:	68 cc 1f 00 00       	push   $0x1fcc
+    13d5:	68 d6 1f 00 00       	push   $0x1fd6
+    13da:	68 d9 1f 00 00       	push   $0x1fd9
+    13df:	68 df 1f 00 00       	push   $0x1fdf
+    13e4:	8b 43 1c             	mov    0x1c(%ebx),%eax
+    13e7:	50                   	push   %eax
+    13e8:	8d 45 c8             	lea    -0x38(%ebp),%eax
+    13eb:	68 e4 1f 00 00       	push   $0x1fe4
+    13f0:	68 e4 1f 00 00       	push   $0x1fe4
+    13f5:	56                   	push   %esi
+    13f6:	50                   	push   %eax
+    13f7:	e8 d4 12 00 00       	call   26d0 <task_spawnl@plt>
+    13fc:	83 c4 30             	add    $0x30,%esp
+    13ff:	85 c0                	test   %eax,%eax
+    1401:	0f 85 a1 00 00 00    	jne    14a8 <spawn_task_fibril+0xe8>
+    1407:	83 ec 0c             	sub    $0xc,%esp
+    140a:	53                   	push   %ebx
+    140b:	e8 f0 12 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1410:	8b 55 cc             	mov    -0x34(%ebp),%edx
+    1413:	8b 45 c8             	mov    -0x38(%ebp),%eax
+    1416:	89 93 84 00 00 00    	mov    %edx,0x84(%ebx)
+    141c:	89 83 80 00 00 00    	mov    %eax,0x80(%ebx)
+    1422:	89 1c 24             	mov    %ebx,(%esp)
+    1425:	e8 76 11 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    142a:	83 c4 0c             	add    $0xc,%esp
+    142d:	8d 45 c4             	lea    -0x3c(%ebp),%eax
+    1430:	50                   	push   %eax
+    1431:	8d 45 c0             	lea    -0x40(%ebp),%eax
+    1434:	50                   	push   %eax
+    1435:	56                   	push   %esi
+    1436:	e8 a5 10 00 00       	call   24e0 <task_wait@plt>
+    143b:	8b 4d c0             	mov    -0x40(%ebp),%ecx
+    143e:	83 c4 10             	add    $0x10,%esp
+    1441:	8b 55 c4             	mov    -0x3c(%ebp),%edx
+    1444:	b8 b6 1f 00 00       	mov    $0x1fb6,%eax
+    1449:	85 c9                	test   %ecx,%ecx
+    144b:	75 53                	jne    14a0 <spawn_task_fibril+0xe0>
+    144d:	51                   	push   %ecx
+    144e:	51                   	push   %ecx
+    144f:	52                   	push   %edx
+    1450:	50                   	push   %eax
+    1451:	8b 73 18             	mov    0x18(%ebx),%esi
+    1454:	68 e4 1f 00 00       	push   $0x1fe4
+    1459:	56                   	push   %esi
+    145a:	8b 43 10             	mov    0x10(%ebx),%eax
+    145d:	50                   	push   %eax
+    145e:	68 90 21 00 00       	push   $0x2190
+    1463:	e8 68 10 00 00       	call   24d0 <printf@plt>
+    1468:	83 c4 14             	add    $0x14,%esp
+    146b:	53                   	push   %ebx
+    146c:	e8 8f 12 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1471:	8d 83 88 00 00 00    	lea    0x88(%ebx),%eax
+    1477:	c6 83 90 00 00 00 01 	movb   $0x1,0x90(%ebx)
+    147e:	c6 43 2c 01          	movb   $0x1,0x2c(%ebx)
+    1482:	89 04 24             	mov    %eax,(%esp)
+    1485:	e8 96 10 00 00       	call   2520 <fibril_condvar_signal@plt>
+    148a:	89 1c 24             	mov    %ebx,(%esp)
+    148d:	e8 0e 11 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    1492:	83 c4 10             	add    $0x10,%esp
+    1495:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1498:	31 c0                	xor    %eax,%eax
+    149a:	5b                   	pop    %ebx
+    149b:	5e                   	pop    %esi
+    149c:	5d                   	pop    %ebp
+    149d:	c3                   	ret    
+    149e:	66 90                	xchg   %ax,%ax
+    14a0:	b8 bf 1f 00 00       	mov    $0x1fbf,%eax
+    14a5:	eb a6                	jmp    144d <spawn_task_fibril+0x8d>
+    14a7:	90                   	nop
+    14a8:	83 ec 0c             	sub    $0xc,%esp
+    14ab:	50                   	push   %eax
+    14ac:	e8 9f 11 00 00       	call   2650 <str_error@plt>
+    14b1:	50                   	push   %eax
+    14b2:	68 cc 1f 00 00       	push   $0x1fcc
+    14b7:	8b 73 1c             	mov    0x1c(%ebx),%esi
+    14ba:	8b 43 18             	mov    0x18(%ebx),%eax
+    14bd:	56                   	push   %esi
+    14be:	68 e4 1f 00 00       	push   $0x1fe4
+    14c3:	50                   	push   %eax
+    14c4:	8b 43 10             	mov    0x10(%ebx),%eax
+    14c7:	50                   	push   %eax
+    14c8:	a1 a0 3f 00 00       	mov    0x3fa0,%eax
+    14cd:	68 3c 21 00 00       	push   $0x213c
+    14d2:	50                   	push   %eax
+    14d3:	e8 a8 10 00 00       	call   2580 <fprintf@plt>
+    14d8:	83 c4 24             	add    $0x24,%esp
+    14db:	eb 8e                	jmp    146b <spawn_task_fibril+0xab>
+    14dd:	8d 76 00             	lea    0x0(%esi),%esi
+
+000014e0 <remcons_set_pos>:
+    14e0:	55                   	push   %ebp
+    14e1:	89 e5                	mov    %esp,%ebp
+    14e3:	8b 45 08             	mov    0x8(%ebp),%eax
+    14e6:	8b 00                	mov    (%eax),%eax
+    14e8:	8b 40 04             	mov    0x4(%eax),%eax
+    14eb:	89 45 08             	mov    %eax,0x8(%ebp)
+    14ee:	5d                   	pop    %ebp
+    14ef:	e9 1c 0a 00 00       	jmp    1f10 <telnet_user_update_cursor_x>
+    14f4:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    14fa:	8d bf 00 00 00 00    	lea    0x0(%edi),%edi
+
+00001500 <remcons_write>:
+    1500:	55                   	push   %ebp
+    1501:	89 e5                	mov    %esp,%ebp
+    1503:	53                   	push   %ebx
+    1504:	83 ec 08             	sub    $0x8,%esp
+    1507:	8b 5d 10             	mov    0x10(%ebp),%ebx
+    150a:	8b 55 0c             	mov    0xc(%ebp),%edx
+    150d:	8b 45 08             	mov    0x8(%ebp),%eax
+    1510:	53                   	push   %ebx
+    1511:	52                   	push   %edx
+    1512:	8b 00                	mov    (%eax),%eax
+    1514:	8b 48 04             	mov    0x4(%eax),%ecx
+    1517:	51                   	push   %ecx
+    1518:	e8 13 09 00 00       	call   1e30 <telnet_user_send_data>
+    151d:	83 c4 10             	add    $0x10,%esp
+    1520:	85 c0                	test   %eax,%eax
+    1522:	75 02                	jne    1526 <remcons_write+0x26>
+    1524:	89 d8                	mov    %ebx,%eax
+    1526:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1529:	c9                   	leave  
+    152a:	c3                   	ret    
+    152b:	90                   	nop
+    152c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+00001530 <remcons_close>:
+    1530:	55                   	push   %ebp
+    1531:	89 e5                	mov    %esp,%ebp
+    1533:	56                   	push   %esi
+    1534:	53                   	push   %ebx
+    1535:	8b 75 08             	mov    0x8(%ebp),%esi
+    1538:	83 ec 0c             	sub    $0xc,%esp
+    153b:	8b 06                	mov    (%esi),%eax
+    153d:	8b 58 04             	mov    0x4(%eax),%ebx
+    1540:	53                   	push   %ebx
+    1541:	e8 aa 04 00 00       	call   19f0 <telnet_user_notify_client_disconnected>
+    1546:	8b 43 18             	mov    0x18(%ebx),%eax
+    1549:	56                   	push   %esi
+    154a:	50                   	push   %eax
+    154b:	8b 53 10             	mov    0x10(%ebx),%edx
+    154e:	52                   	push   %edx
+    154f:	68 cc 21 00 00       	push   $0x21cc
+    1554:	e8 77 0f 00 00       	call   24d0 <printf@plt>
+    1559:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    155c:	31 c0                	xor    %eax,%eax
+    155e:	5b                   	pop    %ebx
+    155f:	5e                   	pop    %esi
+    1560:	5d                   	pop    %ebp
+    1561:	c3                   	ret    
+    1562:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1569:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001570 <remcons_open>:
+    1570:	55                   	push   %ebp
+    1571:	89 e5                	mov    %esp,%ebp
+    1573:	53                   	push   %ebx
+    1574:	50                   	push   %eax
+    1575:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1578:	8b 10                	mov    (%eax),%edx
+    157a:	8b 5a 04             	mov    0x4(%edx),%ebx
+    157d:	50                   	push   %eax
+    157e:	8b 53 18             	mov    0x18(%ebx),%edx
+    1581:	52                   	push   %edx
+    1582:	8b 4b 10             	mov    0x10(%ebx),%ecx
+    1585:	51                   	push   %ecx
+    1586:	68 04 22 00 00       	push   $0x2204
+    158b:	e8 40 0f 00 00       	call   24d0 <printf@plt>
+    1590:	83 c4 0c             	add    $0xc,%esp
+    1593:	8b 5b 14             	mov    0x14(%ebx),%ebx
+    1596:	6a 09                	push   $0x9
+    1598:	68 80 22 00 00       	push   $0x2280
+    159d:	53                   	push   %ebx
+    159e:	e8 5d 0f 00 00       	call   2500 <tcp_conn_send@plt>
+    15a3:	31 c0                	xor    %eax,%eax
+    15a5:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    15a8:	c9                   	leave  
+    15a9:	c3                   	ret    
+    15aa:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+000015b0 <client_connection>:
+    15b0:	55                   	push   %ebp
+    15b1:	89 e5                	mov    %esp,%ebp
+    15b3:	56                   	push   %esi
+    15b4:	53                   	push   %ebx
+    15b5:	8b 75 0c             	mov    0xc(%ebp),%esi
+    15b8:	83 ec 0c             	sub    $0xc,%esp
+    15bb:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    15be:	8b 46 08             	mov    0x8(%esi),%eax
+    15c1:	50                   	push   %eax
+    15c2:	e8 79 03 00 00       	call   1940 <telnet_user_get_for_client_connection>
+    15c7:	83 c4 10             	add    $0x10,%esp
+    15ca:	85 c0                	test   %eax,%eax
+    15cc:	74 1a                	je     15e8 <client_connection+0x38>
+    15ce:	83 c0 20             	add    $0x20,%eax
+    15d1:	89 75 0c             	mov    %esi,0xc(%ebp)
+    15d4:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    15d7:	89 45 10             	mov    %eax,0x10(%ebp)
+    15da:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    15dd:	5b                   	pop    %ebx
+    15de:	5e                   	pop    %esi
+    15df:	5d                   	pop    %ebp
+    15e0:	e9 7b 0f 00 00       	jmp    2560 <con_conn@plt>
+    15e5:	8d 76 00             	lea    0x0(%esi),%esi
+    15e8:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    15eb:	c7 45 0c ff ff ff ff 	movl   $0xffffffff,0xc(%ebp)
+    15f2:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    15f5:	5b                   	pop    %ebx
+    15f6:	5e                   	pop    %esi
+    15f7:	5d                   	pop    %ebp
+    15f8:	e9 33 0f 00 00       	jmp    2530 <async_answer_0@plt>
+    15fd:	8d 76 00             	lea    0x0(%esi),%esi
+
+00001600 <remcons_get_event>:
+    1600:	55                   	push   %ebp
+    1601:	89 e5                	mov    %esp,%ebp
+    1603:	57                   	push   %edi
+    1604:	56                   	push   %esi
+    1605:	83 ec 28             	sub    $0x28,%esp
+    1608:	8d 75 e0             	lea    -0x20(%ebp),%esi
+    160b:	8b 45 08             	mov    0x8(%ebp),%eax
+    160e:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    1611:	56                   	push   %esi
+    1612:	8b 00                	mov    (%eax),%eax
+    1614:	8b 50 04             	mov    0x4(%eax),%edx
+    1617:	52                   	push   %edx
+    1618:	e8 73 04 00 00       	call   1a90 <telnet_user_get_next_keyboard_event>
+    161d:	83 c4 10             	add    $0x10,%esp
+    1620:	85 c0                	test   %eax,%eax
+    1622:	75 1c                	jne    1640 <remcons_get_event+0x40>
+    1624:	c7 47 08 00 00 00 00 	movl   $0x0,0x8(%edi)
+    162b:	b9 06 00 00 00       	mov    $0x6,%ecx
+    1630:	83 c7 0c             	add    $0xc,%edi
+    1633:	31 c0                	xor    %eax,%eax
+    1635:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+    1637:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    163a:	5e                   	pop    %esi
+    163b:	5f                   	pop    %edi
+    163c:	5d                   	pop    %ebp
+    163d:	c3                   	ret    
+    163e:	66 90                	xchg   %ax,%ax
+    1640:	50                   	push   %eax
+    1641:	6a 24                	push   $0x24
+    1643:	6a 00                	push   $0x0
+    1645:	57                   	push   %edi
+    1646:	e8 c5 0f 00 00       	call   2610 <memset@plt>
+    164b:	83 c4 10             	add    $0x10,%esp
+    164e:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1651:	31 c0                	xor    %eax,%eax
+    1653:	5e                   	pop    %esi
+    1654:	5f                   	pop    %edi
+    1655:	5d                   	pop    %ebp
+    1656:	c3                   	ret    
+    1657:	89 f6                	mov    %esi,%esi
+    1659:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001660 <remcons_sync>:
+    1660:	55                   	push   %ebp
+    1661:	89 e5                	mov    %esp,%ebp
+    1663:	5d                   	pop    %ebp
+    1664:	c3                   	ret    
+    1665:	66 90                	xchg   %ax,%ax
+    1667:	66 90                	xchg   %ax,%ax
+    1669:	66 90                	xchg   %ax,%ax
+    166b:	66 90                	xchg   %ax,%ax
+    166d:	66 90                	xchg   %ax,%ax
+    166f:	90                   	nop
+
+00001670 <main>:
+    1670:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1674:	83 e4 f0             	and    $0xfffffff0,%esp
+    1677:	ff 71 fc             	pushl  -0x4(%ecx)
+    167a:	55                   	push   %ebp
+    167b:	89 e5                	mov    %esp,%ebp
+    167d:	53                   	push   %ebx
+    167e:	51                   	push   %ecx
+    167f:	83 ec 28             	sub    $0x28,%esp
+    1682:	6a 00                	push   $0x0
+    1684:	68 b0 15 00 00       	push   $0x15b0
+    1689:	e8 32 10 00 00       	call   26c0 <async_set_fallback_port_handler@plt>
+    168e:	c7 04 24 f1 1f 00 00 	movl   $0x1ff1,(%esp)
+    1695:	e8 96 0f 00 00       	call   2630 <loc_server_register@plt>
+    169a:	83 c4 10             	add    $0x10,%esp
+    169d:	85 c0                	test   %eax,%eax
+    169f:	0f 85 b0 00 00 00    	jne    1755 <main+0xe5>
+    16a5:	83 ec 0c             	sub    $0xc,%esp
+    16a8:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    16ab:	50                   	push   %eax
+    16ac:	e8 ff 0f 00 00       	call   26b0 <tcp_create@plt>
+    16b1:	83 c4 10             	add    $0x10,%esp
+    16b4:	89 c3                	mov    %eax,%ebx
+    16b6:	85 c0                	test   %eax,%eax
+    16b8:	75 76                	jne    1730 <main+0xc0>
+    16ba:	83 ec 0c             	sub    $0xc,%esp
+    16bd:	8d 5d e0             	lea    -0x20(%ebp),%ebx
+    16c0:	53                   	push   %ebx
+    16c1:	e8 7a 0f 00 00       	call   2640 <inet_ep_init@plt>
+    16c6:	83 c4 0c             	add    $0xc,%esp
+    16c9:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    16cc:	66 c7 45 f4 af 08    	movw   $0x8af,-0xc(%ebp)
+    16d2:	50                   	push   %eax
+    16d3:	6a 00                	push   $0x0
+    16d5:	68 a4 3f 00 00       	push   $0x3fa4
+    16da:	6a 00                	push   $0x0
+    16dc:	68 80 3e 00 00       	push   $0x3e80
+    16e1:	53                   	push   %ebx
+    16e2:	ff 75 dc             	pushl  -0x24(%ebp)
+    16e5:	e8 a6 0e 00 00       	call   2590 <tcp_listener_create@plt>
+    16ea:	83 c4 20             	add    $0x20,%esp
+    16ed:	89 c3                	mov    %eax,%ebx
+    16ef:	85 c0                	test   %eax,%eax
+    16f1:	75 7f                	jne    1772 <main+0x102>
+    16f3:	52                   	push   %edx
+    16f4:	52                   	push   %edx
+    16f5:	68 f1 1f 00 00       	push   $0x1ff1
+    16fa:	68 5c 22 00 00       	push   $0x225c
+    16ff:	e8 cc 0d 00 00       	call   24d0 <printf@plt>
+    1704:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+    170b:	e8 b0 0d 00 00       	call   24c0 <task_retval@plt>
+    1710:	83 c8 ff             	or     $0xffffffff,%eax
+    1713:	f0 0f c1 05 9c 3f 00 	lock xadd %eax,0x3f9c
+    171a:	00 
+    171b:	83 c4 10             	add    $0x10,%esp
+    171e:	48                   	dec    %eax
+    171f:	78 6c                	js     178d <main+0x11d>
+    1721:	83 ec 0c             	sub    $0xc,%esp
+    1724:	6a 03                	push   $0x3
+    1726:	e8 65 0f 00 00       	call   2690 <fibril_switch@plt>
+    172b:	83 c4 10             	add    $0x10,%esp
+    172e:	eb 19                	jmp    1749 <main+0xd9>
+    1730:	50                   	push   %eax
+    1731:	68 f1 1f 00 00       	push   $0x1ff1
+    1736:	68 f9 1f 00 00       	push   $0x1ff9
+    173b:	ff 35 a0 3f 00 00    	pushl  0x3fa0
+    1741:	e8 3a 0e 00 00       	call   2580 <fprintf@plt>
+    1746:	83 c4 10             	add    $0x10,%esp
+    1749:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    174c:	89 d8                	mov    %ebx,%eax
+    174e:	59                   	pop    %ecx
+    174f:	5b                   	pop    %ebx
+    1750:	5d                   	pop    %ebp
+    1751:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    1754:	c3                   	ret    
+    1755:	89 c3                	mov    %eax,%ebx
+    1757:	50                   	push   %eax
+    1758:	68 f1 1f 00 00       	push   $0x1ff1
+    175d:	68 3c 22 00 00       	push   $0x223c
+    1762:	ff 35 a0 3f 00 00    	pushl  0x3fa0
+    1768:	e8 13 0e 00 00       	call   2580 <fprintf@plt>
+    176d:	83 c4 10             	add    $0x10,%esp
+    1770:	eb d7                	jmp    1749 <main+0xd9>
+    1772:	51                   	push   %ecx
+    1773:	68 f1 1f 00 00       	push   $0x1ff1
+    1778:	68 16 20 00 00       	push   $0x2016
+    177d:	ff 35 a0 3f 00 00    	pushl  0x3fa0
+    1783:	e8 f8 0d 00 00       	call   2580 <fprintf@plt>
+    1788:	83 c4 10             	add    $0x10,%esp
+    178b:	eb bc                	jmp    1749 <main+0xd9>
+    178d:	50                   	push   %eax
+    178e:	6a 0b                	push   $0xb
+    1790:	6a 00                	push   $0x0
+    1792:	6a 00                	push   $0x0
+    1794:	6a 00                	push   $0x0
+    1796:	6a 00                	push   $0x0
+    1798:	6a 00                	push   $0x0
+    179a:	68 9c 3f 00 00       	push   $0x3f9c
+    179f:	ff 15 98 3f 00 00    	call   *0x3f98
+    17a5:	83 c4 20             	add    $0x20,%esp
+    17a8:	e9 74 ff ff ff       	jmp    1721 <main+0xb1>
+    17ad:	66 90                	xchg   %ax,%ax
+    17af:	90                   	nop
+
+000017b0 <telnet_user_create>:
+    17b0:	55                   	push   %ebp
+    17b1:	89 e5                	mov    %esp,%ebp
+    17b3:	53                   	push   %ebx
+    17b4:	83 ec 10             	sub    $0x10,%esp
+    17b7:	68 a0 00 00 00       	push   $0xa0
+    17bc:	e8 4f 0d 00 00       	call   2510 <malloc@plt>
+    17c1:	83 c4 10             	add    $0x10,%esp
+    17c4:	89 c3                	mov    %eax,%ebx
+    17c6:	85 c0                	test   %eax,%eax
+    17c8:	0f 84 99 00 00 00    	je     1867 <telnet_user_create+0xb7>
+    17ce:	a1 b8 3f 00 00       	mov    0x3fb8,%eax
+    17d3:	40                   	inc    %eax
+    17d4:	89 43 10             	mov    %eax,0x10(%ebx)
+    17d7:	a3 b8 3f 00 00       	mov    %eax,0x3fb8
+    17dc:	50                   	push   %eax
+    17dd:	8d 43 1c             	lea    0x1c(%ebx),%eax
+    17e0:	68 ec 1f 00 00       	push   $0x1fec
+    17e5:	68 89 22 00 00       	push   $0x2289
+    17ea:	50                   	push   %eax
+    17eb:	e8 30 0e 00 00       	call   2620 <asprintf@plt>
+    17f0:	83 c4 10             	add    $0x10,%esp
+    17f3:	85 c0                	test   %eax,%eax
+    17f5:	78 79                	js     1870 <telnet_user_create+0xc0>
+    17f7:	83 ec 0c             	sub    $0xc,%esp
+    17fa:	8b 45 08             	mov    0x8(%ebp),%eax
+    17fd:	89 43 14             	mov    %eax,0x14(%ebx)
+    1800:	c7 43 18 ff ff ff ff 	movl   $0xffffffff,0x18(%ebx)
+    1807:	8d 43 30             	lea    0x30(%ebx),%eax
+    180a:	50                   	push   %eax
+    180b:	e8 e0 0d 00 00       	call   25f0 <prodcons_initialize@plt>
+    1810:	8d 83 88 00 00 00    	lea    0x88(%ebx),%eax
+    1816:	c7 43 50 00 00 00 00 	movl   $0x0,0x50(%ebx)
+    181d:	c7 43 54 00 00 00 00 	movl   $0x0,0x54(%ebx)
+    1824:	c7 43 78 00 00 00 00 	movl   $0x0,0x78(%ebx)
+    182b:	c7 43 7c 00 00 00 00 	movl   $0x0,0x7c(%ebx)
+    1832:	89 04 24             	mov    %eax,(%esp)
+    1835:	e8 36 0d 00 00       	call   2570 <fibril_condvar_initialize@plt>
+    183a:	89 1c 24             	mov    %ebx,(%esp)
+    183d:	e8 7e 0d 00 00       	call   25c0 <fibril_mutex_initialize@plt>
+    1842:	c6 83 90 00 00 00 00 	movb   $0x0,0x90(%ebx)
+    1849:	c6 83 98 00 00 00 00 	movb   $0x0,0x98(%ebx)
+    1850:	c7 83 94 00 00 00 00 	movl   $0x0,0x94(%ebx)
+    1857:	00 00 00 
+    185a:	c7 83 9c 00 00 00 00 	movl   $0x0,0x9c(%ebx)
+    1861:	00 00 00 
+    1864:	83 c4 10             	add    $0x10,%esp
+    1867:	89 d8                	mov    %ebx,%eax
+    1869:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    186c:	c9                   	leave  
+    186d:	c3                   	ret    
+    186e:	66 90                	xchg   %ax,%ax
+    1870:	83 ec 0c             	sub    $0xc,%esp
+    1873:	53                   	push   %ebx
+    1874:	31 db                	xor    %ebx,%ebx
+    1876:	e8 75 0e 00 00       	call   26f0 <free@plt>
+    187b:	83 c4 10             	add    $0x10,%esp
+    187e:	eb e7                	jmp    1867 <telnet_user_create+0xb7>
+
+00001880 <telnet_user_add>:
+    1880:	55                   	push   %ebp
+    1881:	89 e5                	mov    %esp,%ebp
+    1883:	53                   	push   %ebx
+    1884:	83 ec 10             	sub    $0x10,%esp
+    1887:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    188a:	68 e4 3e 00 00       	push   $0x3ee4
+    188f:	e8 6c 0e 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1894:	8b 15 dc 3e 00 00    	mov    0x3edc,%edx
+    189a:	8d 43 50             	lea    0x50(%ebx),%eax
+    189d:	c7 43 54 dc 3e 00 00 	movl   $0x3edc,0x54(%ebx)
+    18a4:	89 53 50             	mov    %edx,0x50(%ebx)
+    18a7:	83 c4 10             	add    $0x10,%esp
+    18aa:	89 42 04             	mov    %eax,0x4(%edx)
+    18ad:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    18b0:	a3 dc 3e 00 00       	mov    %eax,0x3edc
+    18b5:	c7 45 08 e4 3e 00 00 	movl   $0x3ee4,0x8(%ebp)
+    18bc:	c9                   	leave  
+    18bd:	e9 de 0c 00 00       	jmp    25a0 <fibril_mutex_unlock@plt>
+    18c2:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    18c9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+000018d0 <telnet_user_destroy>:
+    18d0:	55                   	push   %ebp
+    18d1:	89 e5                	mov    %esp,%ebp
+    18d3:	53                   	push   %ebx
+    18d4:	52                   	push   %edx
+    18d5:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    18d8:	85 db                	test   %ebx,%ebx
+    18da:	74 50                	je     192c <telnet_user_destroy+0x5c>
+    18dc:	83 ec 0c             	sub    $0xc,%esp
+    18df:	68 e4 3e 00 00       	push   $0x3ee4
+    18e4:	e8 17 0e 00 00       	call   2700 <fibril_mutex_lock@plt>
+    18e9:	8b 53 50             	mov    0x50(%ebx),%edx
+    18ec:	83 c4 10             	add    $0x10,%esp
+    18ef:	85 d2                	test   %edx,%edx
+    18f1:	74 0f                	je     1902 <telnet_user_destroy+0x32>
+    18f3:	8b 43 54             	mov    0x54(%ebx),%eax
+    18f6:	85 c0                	test   %eax,%eax
+    18f8:	74 08                	je     1902 <telnet_user_destroy+0x32>
+    18fa:	89 10                	mov    %edx,(%eax)
+    18fc:	8b 53 50             	mov    0x50(%ebx),%edx
+    18ff:	89 42 04             	mov    %eax,0x4(%edx)
+    1902:	83 ec 0c             	sub    $0xc,%esp
+    1905:	c7 43 50 00 00 00 00 	movl   $0x0,0x50(%ebx)
+    190c:	c7 43 54 00 00 00 00 	movl   $0x0,0x54(%ebx)
+    1913:	68 e4 3e 00 00       	push   $0x3ee4
+    1918:	e8 83 0c 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    191d:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    1920:	83 c4 10             	add    $0x10,%esp
+    1923:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1926:	c9                   	leave  
+    1927:	e9 c4 0d 00 00       	jmp    26f0 <free@plt>
+    192c:	50                   	push   %eax
+    192d:	6a 6d                	push   $0x6d
+    192f:	68 95 22 00 00       	push   $0x2295
+    1934:	68 a4 1f 00 00       	push   $0x1fa4
+    1939:	e8 02 0c 00 00       	call   2540 <assert_abort@plt>
+    193e:	66 90                	xchg   %ax,%ax
+
+00001940 <telnet_user_get_for_client_connection>:
+    1940:	55                   	push   %ebp
+    1941:	89 e5                	mov    %esp,%ebp
+    1943:	56                   	push   %esi
+    1944:	53                   	push   %ebx
+    1945:	83 ec 0c             	sub    $0xc,%esp
+    1948:	8b 75 08             	mov    0x8(%ebp),%esi
+    194b:	68 e4 3e 00 00       	push   $0x3ee4
+    1950:	e8 ab 0d 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1955:	8b 15 e0 3e 00 00    	mov    0x3ee0,%edx
+    195b:	83 c4 10             	add    $0x10,%esp
+    195e:	81 fa dc 3e 00 00    	cmp    $0x3edc,%edx
+    1964:	74 1d                	je     1983 <telnet_user_get_for_client_connection+0x43>
+    1966:	8d 5a b0             	lea    -0x50(%edx),%ebx
+    1969:	3b 73 18             	cmp    0x18(%ebx),%esi
+    196c:	75 07                	jne    1975 <telnet_user_get_for_client_connection+0x35>
+    196e:	eb 28                	jmp    1998 <telnet_user_get_for_client_connection+0x58>
+    1970:	39 73 18             	cmp    %esi,0x18(%ebx)
+    1973:	74 23                	je     1998 <telnet_user_get_for_client_connection+0x58>
+    1975:	8b 52 04             	mov    0x4(%edx),%edx
+    1978:	81 fa dc 3e 00 00    	cmp    $0x3edc,%edx
+    197e:	8d 5a b0             	lea    -0x50(%edx),%ebx
+    1981:	75 ed                	jne    1970 <telnet_user_get_for_client_connection+0x30>
+    1983:	83 ec 0c             	sub    $0xc,%esp
+    1986:	31 db                	xor    %ebx,%ebx
+    1988:	68 e4 3e 00 00       	push   $0x3ee4
+    198d:	e8 0e 0c 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    1992:	83 c4 10             	add    $0x10,%esp
+    1995:	eb 44                	jmp    19db <telnet_user_get_for_client_connection+0x9b>
+    1997:	90                   	nop
+    1998:	83 ec 0c             	sub    $0xc,%esp
+    199b:	53                   	push   %ebx
+    199c:	e8 5f 0d 00 00       	call   2700 <fibril_mutex_lock@plt>
+    19a1:	8b 83 94 00 00 00    	mov    0x94(%ebx),%eax
+    19a7:	83 c4 10             	add    $0x10,%esp
+    19aa:	40                   	inc    %eax
+    19ab:	89 83 94 00 00 00    	mov    %eax,0x94(%ebx)
+    19b1:	80 bb 90 00 00 00 00 	cmpb   $0x0,0x90(%ebx)
+    19b8:	75 2a                	jne    19e4 <telnet_user_get_for_client_connection+0xa4>
+    19ba:	80 bb 98 00 00 00 00 	cmpb   $0x0,0x98(%ebx)
+    19c1:	75 21                	jne    19e4 <telnet_user_get_for_client_connection+0xa4>
+    19c3:	83 ec 0c             	sub    $0xc,%esp
+    19c6:	53                   	push   %ebx
+    19c7:	e8 d4 0b 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    19cc:	c7 04 24 e4 3e 00 00 	movl   $0x3ee4,(%esp)
+    19d3:	e8 c8 0b 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    19d8:	83 c4 10             	add    $0x10,%esp
+    19db:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    19de:	89 d8                	mov    %ebx,%eax
+    19e0:	5b                   	pop    %ebx
+    19e1:	5e                   	pop    %esi
+    19e2:	5d                   	pop    %ebp
+    19e3:	c3                   	ret    
+    19e4:	a1 94 00 00 00       	mov    0x94,%eax
+    19e9:	0f 0b                	ud2    
+    19eb:	90                   	nop
+    19ec:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+000019f0 <telnet_user_notify_client_disconnected>:
+    19f0:	55                   	push   %ebp
+    19f1:	89 e5                	mov    %esp,%ebp
+    19f3:	53                   	push   %ebx
+    19f4:	83 ec 10             	sub    $0x10,%esp
+    19f7:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    19fa:	53                   	push   %ebx
+    19fb:	e8 00 0d 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1a00:	8b 83 94 00 00 00    	mov    0x94(%ebx),%eax
+    1a06:	83 c4 10             	add    $0x10,%esp
+    1a09:	85 c0                	test   %eax,%eax
+    1a0b:	7e 25                	jle    1a32 <telnet_user_notify_client_disconnected+0x42>
+    1a0d:	83 ec 0c             	sub    $0xc,%esp
+    1a10:	48                   	dec    %eax
+    1a11:	89 83 94 00 00 00    	mov    %eax,0x94(%ebx)
+    1a17:	8d 83 88 00 00 00    	lea    0x88(%ebx),%eax
+    1a1d:	50                   	push   %eax
+    1a1e:	e8 fd 0a 00 00       	call   2520 <fibril_condvar_signal@plt>
+    1a23:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    1a26:	83 c4 10             	add    $0x10,%esp
+    1a29:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1a2c:	c9                   	leave  
+    1a2d:	e9 6e 0b 00 00       	jmp    25a0 <fibril_mutex_unlock@plt>
+    1a32:	50                   	push   %eax
+    1a33:	68 a6 00 00 00       	push   $0xa6
+    1a38:	68 95 22 00 00       	push   $0x2295
+    1a3d:	68 ac 22 00 00       	push   $0x22ac
+    1a42:	e8 f9 0a 00 00       	call   2540 <assert_abort@plt>
+    1a47:	89 f6                	mov    %esi,%esi
+    1a49:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001a50 <telnet_user_is_zombie>:
+    1a50:	55                   	push   %ebp
+    1a51:	89 e5                	mov    %esp,%ebp
+    1a53:	53                   	push   %ebx
+    1a54:	83 ec 20             	sub    $0x20,%esp
+    1a57:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1a5a:	53                   	push   %ebx
+    1a5b:	e8 a0 0c 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1a60:	8a 83 98 00 00 00    	mov    0x98(%ebx),%al
+    1a66:	83 c4 10             	add    $0x10,%esp
+    1a69:	84 c0                	test   %al,%al
+    1a6b:	75 06                	jne    1a73 <telnet_user_is_zombie+0x23>
+    1a6d:	8a 83 90 00 00 00    	mov    0x90(%ebx),%al
+    1a73:	83 ec 0c             	sub    $0xc,%esp
+    1a76:	88 45 f7             	mov    %al,-0x9(%ebp)
+    1a79:	53                   	push   %ebx
+    1a7a:	e8 21 0b 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    1a7f:	8a 45 f7             	mov    -0x9(%ebp),%al
+    1a82:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1a85:	c9                   	leave  
+    1a86:	c3                   	ret    
+    1a87:	89 f6                	mov    %esi,%esi
+    1a89:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001a90 <telnet_user_get_next_keyboard_event>:
+    1a90:	55                   	push   %ebp
+    1a91:	89 e5                	mov    %esp,%ebp
+    1a93:	57                   	push   %edi
+    1a94:	56                   	push   %esi
+    1a95:	53                   	push   %ebx
+    1a96:	83 ec 38             	sub    $0x38,%esp
+    1a99:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1a9c:	53                   	push   %ebx
+    1a9d:	e8 5e 0c 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1aa2:	8d 43 48             	lea    0x48(%ebx),%eax
+    1aa5:	83 c4 10             	add    $0x10,%esp
+    1aa8:	39 43 4c             	cmp    %eax,0x4c(%ebx)
+    1aab:	74 3b                	je     1ae8 <telnet_user_get_next_keyboard_event+0x58>
+    1aad:	8d 73 30             	lea    0x30(%ebx),%esi
+    1ab0:	83 ec 0c             	sub    $0xc,%esp
+    1ab3:	56                   	push   %esi
+    1ab4:	e8 47 0b 00 00       	call   2600 <prodcons_consume@plt>
+    1ab9:	89 1c 24             	mov    %ebx,(%esp)
+    1abc:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1abf:	e8 dc 0a 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    1ac4:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1ac7:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    1aca:	89 c6                	mov    %eax,%esi
+    1acc:	b9 06 00 00 00       	mov    $0x6,%ecx
+    1ad1:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+    1ad3:	89 04 24             	mov    %eax,(%esp)
+    1ad6:	e8 15 0c 00 00       	call   26f0 <free@plt>
+    1adb:	83 c4 10             	add    $0x10,%esp
+    1ade:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1ae1:	31 c0                	xor    %eax,%eax
+    1ae3:	5b                   	pop    %ebx
+    1ae4:	5e                   	pop    %esi
+    1ae5:	5f                   	pop    %edi
+    1ae6:	5d                   	pop    %ebp
+    1ae7:	c3                   	ret    
+    1ae8:	8b 4b 78             	mov    0x78(%ebx),%ecx
+    1aeb:	8d 7b 58             	lea    0x58(%ebx),%edi
+    1aee:	8b 43 7c             	mov    0x7c(%ebx),%eax
+    1af1:	31 f6                	xor    %esi,%esi
+    1af3:	c6 45 d3 00          	movb   $0x0,-0x2d(%ebp)
+    1af7:	89 7d cc             	mov    %edi,-0x34(%ebp)
+    1afa:	89 4d d4             	mov    %ecx,-0x2c(%ebp)
+    1afd:	8d 76 00             	lea    0x0(%esi),%esi
+    1b00:	3b 45 d4             	cmp    -0x2c(%ebp),%eax
+    1b03:	73 25                	jae    1b2a <telnet_user_get_next_keyboard_event+0x9a>
+    1b05:	89 c2                	mov    %eax,%edx
+    1b07:	40                   	inc    %eax
+    1b08:	89 43 7c             	mov    %eax,0x7c(%ebx)
+    1b0b:	8a 54 13 58          	mov    0x58(%ebx,%edx,1),%dl
+    1b0f:	80 7d d3 00          	cmpb   $0x0,-0x2d(%ebp)
+    1b13:	74 6b                	je     1b80 <telnet_user_get_next_keyboard_event+0xf0>
+    1b15:	8d 7a 05             	lea    0x5(%edx),%edi
+    1b18:	89 f9                	mov    %edi,%ecx
+    1b1a:	80 f9 03             	cmp    $0x3,%cl
+    1b1d:	0f 87 5d 01 00 00    	ja     1c80 <telnet_user_get_next_keyboard_event+0x1f0>
+    1b23:	89 d6                	mov    %edx,%esi
+    1b25:	3b 45 d4             	cmp    -0x2c(%ebp),%eax
+    1b28:	72 db                	jb     1b05 <telnet_user_get_next_keyboard_event+0x75>
+    1b2a:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1b2d:	50                   	push   %eax
+    1b2e:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    1b31:	6a 20                	push   $0x20
+    1b33:	50                   	push   %eax
+    1b34:	8b 43 14             	mov    0x14(%ebx),%eax
+    1b37:	50                   	push   %eax
+    1b38:	e8 a3 0b 00 00       	call   26e0 <tcp_conn_recv_wait@plt>
+    1b3d:	83 c4 10             	add    $0x10,%esp
+    1b40:	85 c0                	test   %eax,%eax
+    1b42:	75 1c                	jne    1b60 <telnet_user_get_next_keyboard_event+0xd0>
+    1b44:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1b47:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1b4a:	85 c0                	test   %eax,%eax
+    1b4c:	0f 85 86 01 00 00    	jne    1cd8 <telnet_user_get_next_keyboard_event+0x248>
+    1b52:	c6 83 98 00 00 00 01 	movb   $0x1,0x98(%ebx)
+    1b59:	c6 43 2c 01          	movb   $0x1,0x2c(%ebx)
+    1b5d:	83 c8 ff             	or     $0xffffffff,%eax
+    1b60:	83 ec 0c             	sub    $0xc,%esp
+    1b63:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1b66:	53                   	push   %ebx
+    1b67:	e8 34 0a 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    1b6c:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1b6f:	83 c4 10             	add    $0x10,%esp
+    1b72:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1b75:	5b                   	pop    %ebx
+    1b76:	5e                   	pop    %esi
+    1b77:	5f                   	pop    %edi
+    1b78:	5d                   	pop    %ebp
+    1b79:	c3                   	ret    
+    1b7a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1b80:	80 fa ff             	cmp    $0xff,%dl
+    1b83:	0f 84 3f 01 00 00    	je     1cc8 <telnet_user_get_next_keyboard_event+0x238>
+    1b89:	84 d2                	test   %dl,%dl
+    1b8b:	0f 84 6f ff ff ff    	je     1b00 <telnet_user_get_next_keyboard_event+0x70>
+    1b91:	80 fa 0d             	cmp    $0xd,%dl
+    1b94:	0f 84 8e 01 00 00    	je     1d28 <telnet_user_get_next_keyboard_event+0x298>
+    1b9a:	83 ec 0c             	sub    $0xc,%esp
+    1b9d:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    1ba0:	0f be f2             	movsbl %dl,%esi
+    1ba3:	6a 18                	push   $0x18
+    1ba5:	e8 66 09 00 00       	call   2510 <malloc@plt>
+    1baa:	83 c4 10             	add    $0x10,%esp
+    1bad:	89 c7                	mov    %eax,%edi
+    1baf:	85 c0                	test   %eax,%eax
+    1bb1:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1bb4:	0f 84 5c 02 00 00    	je     1e16 <telnet_user_get_next_keyboard_event+0x386>
+    1bba:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    1bc0:	c7 40 04 00 00 00 00 	movl   $0x0,0x4(%eax)
+    1bc7:	c7 40 08 00 00 00 00 	movl   $0x0,0x8(%eax)
+    1bce:	89 70 14             	mov    %esi,0x14(%eax)
+    1bd1:	c7 40 10 00 00 00 00 	movl   $0x0,0x10(%eax)
+    1bd8:	80 fa 09             	cmp    $0x9,%dl
+    1bdb:	0f 84 ef 01 00 00    	je     1dd0 <telnet_user_get_next_keyboard_event+0x340>
+    1be1:	0f 8f 21 01 00 00    	jg     1d08 <telnet_user_get_next_keyboard_event+0x278>
+    1be7:	80 fa 08             	cmp    $0x8,%dl
+    1bea:	0f 85 26 01 00 00    	jne    1d16 <telnet_user_get_next_keyboard_event+0x286>
+    1bf0:	c7 47 0c 0e 00 00 00 	movl   $0xe,0xc(%edi)
+    1bf7:	c7 47 14 08 00 00 00 	movl   $0x8,0x14(%edi)
+    1bfe:	83 ec 0c             	sub    $0xc,%esp
+    1c01:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    1c04:	6a 18                	push   $0x18
+    1c06:	e8 05 09 00 00       	call   2510 <malloc@plt>
+    1c0b:	83 c4 10             	add    $0x10,%esp
+    1c0e:	85 c0                	test   %eax,%eax
+    1c10:	0f 84 00 02 00 00    	je     1e16 <telnet_user_get_next_keyboard_event+0x386>
+    1c16:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1c19:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    1c1f:	c7 40 04 00 00 00 00 	movl   $0x0,0x4(%eax)
+    1c26:	c7 40 08 01 00 00 00 	movl   $0x1,0x8(%eax)
+    1c2d:	89 70 14             	mov    %esi,0x14(%eax)
+    1c30:	c7 40 10 00 00 00 00 	movl   $0x0,0x10(%eax)
+    1c37:	80 fa 09             	cmp    $0x9,%dl
+    1c3a:	0f 84 ca 01 00 00    	je     1e0a <telnet_user_get_next_keyboard_event+0x37a>
+    1c40:	0f 8f 6a 01 00 00    	jg     1db0 <telnet_user_get_next_keyboard_event+0x320>
+    1c46:	80 fa 08             	cmp    $0x8,%dl
+    1c49:	0f 85 6f 01 00 00    	jne    1dbe <telnet_user_get_next_keyboard_event+0x32e>
+    1c4f:	c7 40 0c 0e 00 00 00 	movl   $0xe,0xc(%eax)
+    1c56:	c7 40 14 08 00 00 00 	movl   $0x8,0x14(%eax)
+    1c5d:	8d 73 30             	lea    0x30(%ebx),%esi
+    1c60:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1c63:	50                   	push   %eax
+    1c64:	50                   	push   %eax
+    1c65:	57                   	push   %edi
+    1c66:	56                   	push   %esi
+    1c67:	e8 f4 09 00 00       	call   2660 <prodcons_produce@plt>
+    1c6c:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1c6f:	5a                   	pop    %edx
+    1c70:	59                   	pop    %ecx
+    1c71:	50                   	push   %eax
+    1c72:	56                   	push   %esi
+    1c73:	e8 e8 09 00 00       	call   2660 <prodcons_produce@plt>
+    1c78:	83 c4 10             	add    $0x10,%esp
+    1c7b:	e9 30 fe ff ff       	jmp    1ab0 <telnet_user_get_next_keyboard_event+0x20>
+    1c80:	31 c0                	xor    %eax,%eax
+    1c82:	89 f1                	mov    %esi,%ecx
+    1c84:	88 d0                	mov    %dl,%al
+    1c86:	88 55 d4             	mov    %dl,-0x2c(%ebp)
+    1c89:	84 c9                	test   %cl,%cl
+    1c8b:	75 5b                	jne    1ce8 <telnet_user_get_next_keyboard_event+0x258>
+    1c8d:	83 ec 0c             	sub    $0xc,%esp
+    1c90:	50                   	push   %eax
+    1c91:	68 ff 00 00 00       	push   $0xff
+    1c96:	8b 7b 18             	mov    0x18(%ebx),%edi
+    1c99:	57                   	push   %edi
+    1c9a:	8b 43 10             	mov    0x10(%ebx),%eax
+    1c9d:	50                   	push   %eax
+    1c9e:	68 10 23 00 00       	push   $0x2310
+    1ca3:	e8 28 08 00 00       	call   24d0 <printf@plt>
+    1ca8:	8a 55 d4             	mov    -0x2c(%ebp),%dl
+    1cab:	8b 43 78             	mov    0x78(%ebx),%eax
+    1cae:	83 c4 20             	add    $0x20,%esp
+    1cb1:	89 45 d4             	mov    %eax,-0x2c(%ebp)
+    1cb4:	fe c2                	inc    %dl
+    1cb6:	8b 43 7c             	mov    0x7c(%ebx),%eax
+    1cb9:	0f 94 45 d3          	sete   -0x2d(%ebp)
+    1cbd:	e9 3e fe ff ff       	jmp    1b00 <telnet_user_get_next_keyboard_event+0x70>
+    1cc2:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1cc8:	c6 45 d3 01          	movb   $0x1,-0x2d(%ebp)
+    1ccc:	e9 2f fe ff ff       	jmp    1b00 <telnet_user_get_next_keyboard_event+0x70>
+    1cd1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1cd8:	89 43 78             	mov    %eax,0x78(%ebx)
+    1cdb:	31 d2                	xor    %edx,%edx
+    1cdd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1ce2:	e9 21 fe ff ff       	jmp    1b08 <telnet_user_get_next_keyboard_event+0x78>
+    1ce7:	90                   	nop
+    1ce8:	52                   	push   %edx
+    1ce9:	52                   	push   %edx
+    1cea:	50                   	push   %eax
+    1ceb:	89 f0                	mov    %esi,%eax
+    1ced:	25 ff 00 00 00       	and    $0xff,%eax
+    1cf2:	50                   	push   %eax
+    1cf3:	68 ff 00 00 00       	push   $0xff
+    1cf8:	8b 4b 18             	mov    0x18(%ebx),%ecx
+    1cfb:	51                   	push   %ecx
+    1cfc:	8b 7b 10             	mov    0x10(%ebx),%edi
+    1cff:	57                   	push   %edi
+    1d00:	68 d0 22 00 00       	push   $0x22d0
+    1d05:	eb 9c                	jmp    1ca3 <telnet_user_get_next_keyboard_event+0x213>
+    1d07:	90                   	nop
+    1d08:	80 fa 0a             	cmp    $0xa,%dl
+    1d0b:	74 54                	je     1d61 <telnet_user_get_next_keyboard_event+0x2d1>
+    1d0d:	80 fa 7f             	cmp    $0x7f,%dl
+    1d10:	0f 84 da fe ff ff    	je     1bf0 <telnet_user_get_next_keyboard_event+0x160>
+    1d16:	c7 47 0c 1d 00 00 00 	movl   $0x1d,0xc(%edi)
+    1d1d:	e9 dc fe ff ff       	jmp    1bfe <telnet_user_get_next_keyboard_event+0x16e>
+    1d22:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1d28:	83 ec 0c             	sub    $0xc,%esp
+    1d2b:	6a 18                	push   $0x18
+    1d2d:	e8 de 07 00 00       	call   2510 <malloc@plt>
+    1d32:	83 c4 10             	add    $0x10,%esp
+    1d35:	89 c7                	mov    %eax,%edi
+    1d37:	85 c0                	test   %eax,%eax
+    1d39:	0f 84 d7 00 00 00    	je     1e16 <telnet_user_get_next_keyboard_event+0x386>
+    1d3f:	c7 07 00 00 00 00    	movl   $0x0,(%edi)
+    1d45:	c7 47 04 00 00 00 00 	movl   $0x0,0x4(%edi)
+    1d4c:	c7 47 08 00 00 00 00 	movl   $0x0,0x8(%edi)
+    1d53:	c7 47 14 0a 00 00 00 	movl   $0xa,0x14(%edi)
+    1d5a:	c7 47 10 00 00 00 00 	movl   $0x0,0x10(%edi)
+    1d61:	83 ec 0c             	sub    $0xc,%esp
+    1d64:	c7 47 0c 2a 00 00 00 	movl   $0x2a,0xc(%edi)
+    1d6b:	6a 18                	push   $0x18
+    1d6d:	e8 9e 07 00 00       	call   2510 <malloc@plt>
+    1d72:	83 c4 10             	add    $0x10,%esp
+    1d75:	85 c0                	test   %eax,%eax
+    1d77:	0f 84 99 00 00 00    	je     1e16 <telnet_user_get_next_keyboard_event+0x386>
+    1d7d:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    1d83:	c7 40 04 00 00 00 00 	movl   $0x0,0x4(%eax)
+    1d8a:	c7 40 08 01 00 00 00 	movl   $0x1,0x8(%eax)
+    1d91:	c7 40 14 0a 00 00 00 	movl   $0xa,0x14(%eax)
+    1d98:	c7 40 10 00 00 00 00 	movl   $0x0,0x10(%eax)
+    1d9f:	c7 40 0c 2a 00 00 00 	movl   $0x2a,0xc(%eax)
+    1da6:	e9 b2 fe ff ff       	jmp    1c5d <telnet_user_get_next_keyboard_event+0x1cd>
+    1dab:	90                   	nop
+    1dac:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1db0:	80 fa 0a             	cmp    $0xa,%dl
+    1db3:	74 ea                	je     1d9f <telnet_user_get_next_keyboard_event+0x30f>
+    1db5:	80 fa 7f             	cmp    $0x7f,%dl
+    1db8:	0f 84 91 fe ff ff    	je     1c4f <telnet_user_get_next_keyboard_event+0x1bf>
+    1dbe:	c7 40 0c 1d 00 00 00 	movl   $0x1d,0xc(%eax)
+    1dc5:	e9 93 fe ff ff       	jmp    1c5d <telnet_user_get_next_keyboard_event+0x1cd>
+    1dca:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1dd0:	83 ec 0c             	sub    $0xc,%esp
+    1dd3:	c7 40 0c 0f 00 00 00 	movl   $0xf,0xc(%eax)
+    1dda:	6a 18                	push   $0x18
+    1ddc:	e8 2f 07 00 00       	call   2510 <malloc@plt>
+    1de1:	83 c4 10             	add    $0x10,%esp
+    1de4:	85 c0                	test   %eax,%eax
+    1de6:	74 2e                	je     1e16 <telnet_user_get_next_keyboard_event+0x386>
+    1de8:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+    1dee:	c7 40 04 00 00 00 00 	movl   $0x0,0x4(%eax)
+    1df5:	c7 40 08 01 00 00 00 	movl   $0x1,0x8(%eax)
+    1dfc:	c7 40 14 09 00 00 00 	movl   $0x9,0x14(%eax)
+    1e03:	c7 40 10 00 00 00 00 	movl   $0x0,0x10(%eax)
+    1e0a:	c7 40 0c 0f 00 00 00 	movl   $0xf,0xc(%eax)
+    1e11:	e9 47 fe ff ff       	jmp    1c5d <telnet_user_get_next_keyboard_event+0x1cd>
+    1e16:	53                   	push   %ebx
+    1e17:	68 df 00 00 00       	push   $0xdf
+    1e1c:	68 95 22 00 00       	push   $0x2295
+    1e21:	68 9c 22 00 00       	push   $0x229c
+    1e26:	e8 15 07 00 00       	call   2540 <assert_abort@plt>
+    1e2b:	90                   	nop
+    1e2c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+00001e30 <telnet_user_send_data>:
+    1e30:	55                   	push   %ebp
+    1e31:	89 e5                	mov    %esp,%ebp
+    1e33:	57                   	push   %edi
+    1e34:	56                   	push   %esi
+    1e35:	53                   	push   %ebx
+    1e36:	83 ec 28             	sub    $0x28,%esp
+    1e39:	8b 75 10             	mov    0x10(%ebp),%esi
+    1e3c:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1e3f:	53                   	push   %ebx
+    1e40:	e8 bb 08 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1e45:	8d 44 76 01          	lea    0x1(%esi,%esi,2),%eax
+    1e49:	89 04 24             	mov    %eax,(%esp)
+    1e4c:	e8 bf 06 00 00       	call   2510 <malloc@plt>
+    1e51:	83 c4 10             	add    $0x10,%esp
+    1e54:	85 c0                	test   %eax,%eax
+    1e56:	0f 84 9d 00 00 00    	je     1ef9 <telnet_user_send_data+0xc9>
+    1e5c:	31 c9                	xor    %ecx,%ecx
+    1e5e:	89 c7                	mov    %eax,%edi
+    1e60:	85 f6                	test   %esi,%esi
+    1e62:	74 59                	je     1ebd <telnet_user_send_data+0x8d>
+    1e64:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1e67:	8d 0c 30             	lea    (%eax,%esi,1),%ecx
+    1e6a:	89 4d e4             	mov    %ecx,-0x1c(%ebp)
+    1e6d:	31 c9                	xor    %ecx,%ecx
+    1e6f:	eb 27                	jmp    1e98 <telnet_user_send_data+0x68>
+    1e71:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1e78:	8d 71 01             	lea    0x1(%ecx),%esi
+    1e7b:	88 14 0f             	mov    %dl,(%edi,%ecx,1)
+    1e7e:	80 fa 08             	cmp    $0x8,%dl
+    1e81:	74 65                	je     1ee8 <telnet_user_send_data+0xb8>
+    1e83:	8b 8b 9c 00 00 00    	mov    0x9c(%ebx),%ecx
+    1e89:	41                   	inc    %ecx
+    1e8a:	89 8b 9c 00 00 00    	mov    %ecx,0x9c(%ebx)
+    1e90:	89 f1                	mov    %esi,%ecx
+    1e92:	40                   	inc    %eax
+    1e93:	39 45 e4             	cmp    %eax,-0x1c(%ebp)
+    1e96:	74 25                	je     1ebd <telnet_user_send_data+0x8d>
+    1e98:	8a 10                	mov    (%eax),%dl
+    1e9a:	80 fa 0a             	cmp    $0xa,%dl
+    1e9d:	75 d9                	jne    1e78 <telnet_user_send_data+0x48>
+    1e9f:	8d 51 01             	lea    0x1(%ecx),%edx
+    1ea2:	40                   	inc    %eax
+    1ea3:	c6 04 0f 0d          	movb   $0xd,(%edi,%ecx,1)
+    1ea7:	c7 83 9c 00 00 00 00 	movl   $0x0,0x9c(%ebx)
+    1eae:	00 00 00 
+    1eb1:	83 c1 02             	add    $0x2,%ecx
+    1eb4:	c6 04 17 0a          	movb   $0xa,(%edi,%edx,1)
+    1eb8:	39 45 e4             	cmp    %eax,-0x1c(%ebp)
+    1ebb:	75 db                	jne    1e98 <telnet_user_send_data+0x68>
+    1ebd:	50                   	push   %eax
+    1ebe:	51                   	push   %ecx
+    1ebf:	8b 53 14             	mov    0x14(%ebx),%edx
+    1ec2:	57                   	push   %edi
+    1ec3:	52                   	push   %edx
+    1ec4:	e8 37 06 00 00       	call   2500 <tcp_conn_send@plt>
+    1ec9:	89 3c 24             	mov    %edi,(%esp)
+    1ecc:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    1ecf:	e8 1c 08 00 00       	call   26f0 <free@plt>
+    1ed4:	89 1c 24             	mov    %ebx,(%esp)
+    1ed7:	e8 c4 06 00 00       	call   25a0 <fibril_mutex_unlock@plt>
+    1edc:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1edf:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1ee2:	5b                   	pop    %ebx
+    1ee3:	5e                   	pop    %esi
+    1ee4:	5f                   	pop    %edi
+    1ee5:	5d                   	pop    %ebp
+    1ee6:	c3                   	ret    
+    1ee7:	90                   	nop
+    1ee8:	8b 93 9c 00 00 00    	mov    0x9c(%ebx),%edx
+    1eee:	89 f1                	mov    %esi,%ecx
+    1ef0:	4a                   	dec    %edx
+    1ef1:	89 93 9c 00 00 00    	mov    %edx,0x9c(%ebx)
+    1ef7:	eb 99                	jmp    1e92 <telnet_user_send_data+0x62>
+    1ef9:	51                   	push   %ecx
+    1efa:	68 58 01 00 00       	push   $0x158
+    1eff:	68 95 22 00 00       	push   $0x2295
+    1f04:	68 a2 22 00 00       	push   $0x22a2
+    1f09:	e8 32 06 00 00       	call   2540 <assert_abort@plt>
+    1f0e:	66 90                	xchg   %ax,%ax
+
+00001f10 <telnet_user_update_cursor_x>:
+    1f10:	55                   	push   %ebp
+    1f11:	89 e5                	mov    %esp,%ebp
+    1f13:	57                   	push   %edi
+    1f14:	56                   	push   %esi
+    1f15:	53                   	push   %ebx
+    1f16:	83 ec 18             	sub    $0x18,%esp
+    1f19:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    1f1c:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    1f1f:	53                   	push   %ebx
+    1f20:	e8 db 07 00 00       	call   2700 <fibril_mutex_lock@plt>
+    1f25:	8b 83 9c 00 00 00    	mov    0x9c(%ebx),%eax
+    1f2b:	83 c4 10             	add    $0x10,%esp
+    1f2e:	48                   	dec    %eax
+    1f2f:	39 f8                	cmp    %edi,%eax
+    1f31:	74 15                	je     1f48 <telnet_user_update_cursor_x+0x38>
+    1f33:	89 bb 9c 00 00 00    	mov    %edi,0x9c(%ebx)
+    1f39:	89 5d 08             	mov    %ebx,0x8(%ebp)
+    1f3c:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1f3f:	5b                   	pop    %ebx
+    1f40:	5e                   	pop    %esi
+    1f41:	5f                   	pop    %edi
+    1f42:	5d                   	pop    %ebp
+    1f43:	e9 58 06 00 00       	jmp    25a0 <fibril_mutex_unlock@plt>
+    1f48:	83 ec 0c             	sub    $0xc,%esp
+    1f4b:	6a 04                	push   $0x4
+    1f4d:	e8 be 05 00 00       	call   2510 <malloc@plt>
+    1f52:	83 c4 10             	add    $0x10,%esp
+    1f55:	89 c6                	mov    %eax,%esi
+    1f57:	85 c0                	test   %eax,%eax
+    1f59:	74 2a                	je     1f85 <telnet_user_update_cursor_x+0x75>
+    1f5b:	c6 00 08             	movb   $0x8,(%eax)
+    1f5e:	8b 83 9c 00 00 00    	mov    0x9c(%ebx),%eax
+    1f64:	48                   	dec    %eax
+    1f65:	89 83 9c 00 00 00    	mov    %eax,0x9c(%ebx)
+    1f6b:	52                   	push   %edx
+    1f6c:	6a 01                	push   $0x1
+    1f6e:	56                   	push   %esi
+    1f6f:	8b 4b 14             	mov    0x14(%ebx),%ecx
+    1f72:	51                   	push   %ecx
+    1f73:	e8 88 05 00 00       	call   2500 <tcp_conn_send@plt>
+    1f78:	89 34 24             	mov    %esi,(%esp)
+    1f7b:	e8 70 07 00 00       	call   26f0 <free@plt>
+    1f80:	83 c4 10             	add    $0x10,%esp
+    1f83:	eb ae                	jmp    1f33 <telnet_user_update_cursor_x+0x23>
+    1f85:	53                   	push   %ebx
+    1f86:	68 58 01 00 00       	push   $0x158
+    1f8b:	68 95 22 00 00       	push   $0x2295
+    1f90:	68 a2 22 00 00       	push   $0x22a2
+    1f95:	e8 a6 05 00 00       	call   2540 <assert_abort@plt>
+    1f9a:	72 65                	jb     2001 <telnet_user_update_cursor_x+0xf1>
+    1f9c:	6d                   	insl   (%dx),%es:(%edi)
+    1f9d:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    1fa0:	73 2e                	jae    1fd0 <telnet_user_update_cursor_x+0xc0>
+    1fa2:	63 00                	arpl   %ax,(%eax)
+    1fa4:	75 73                	jne    2019 <telnet_user_update_cursor_x+0x109>
+    1fa6:	65 72 00             	gs jb  1fa9 <telnet_user_update_cursor_x+0x99>
+    1fa9:	73 70                	jae    201b <telnet_user_update_cursor_x+0x10b>
+    1fab:	61                   	popa   
+    1fac:	77 6e                	ja     201c <telnet_user_update_cursor_x+0x10c>
+    1fae:	5f                   	pop    %edi
+    1faf:	66 69 62 72 69 6c    	imul   $0x6c69,0x72(%edx),%sp
+    1fb5:	00 6e 6f             	add    %ch,0x6f(%esi)
+    1fb8:	72 6d                	jb     2027 <telnet_user_update_cursor_x+0x117>
+    1fba:	61                   	popa   
+    1fbb:	6c                   	insb   (%dx),%es:(%edi)
+    1fbc:	6c                   	insb   (%dx),%es:(%edi)
+    1fbd:	79 00                	jns    1fbf <telnet_user_update_cursor_x+0xaf>
+    1fbf:	75 6e                	jne    202f <telnet_user_update_cursor_x+0x11f>
+    1fc1:	65 78 70             	gs js  2034 <telnet_user_update_cursor_x+0x124>
+    1fc4:	65 63 74 65 64       	arpl   %si,%gs:0x64(%ebp,%eiz,2)
+    1fc9:	6c                   	insb   (%dx),%es:(%edi)
+    1fca:	79 00                	jns    1fcc <telnet_user_update_cursor_x+0xbc>
+    1fcc:	2f                   	das    
+    1fcd:	61                   	popa   
+    1fce:	70 70                	jo     2040 <telnet_user_update_cursor_x+0x130>
+    1fd0:	2f                   	das    
+    1fd1:	62 64 73 68          	bound  %esp,0x68(%ebx,%esi,2)
+    1fd5:	00 2d 2d 00 2d 2d    	add    %ch,0x2d2d002d
+    1fdb:	6d                   	insl   (%dx),%es:(%edi)
+    1fdc:	73 67                	jae    2045 <telnet_user_update_cursor_x+0x135>
+    1fde:	00 2f                	add    %ch,(%edi)
+    1fe0:	6c                   	insb   (%dx),%es:(%edi)
+    1fe1:	6f                   	outsl  %ds:(%esi),(%dx)
+    1fe2:	63 00                	arpl   %ax,(%eax)
+    1fe4:	2f                   	das    
+    1fe5:	61                   	popa   
+    1fe6:	70 70                	jo     2058 <telnet_user_update_cursor_x+0x148>
+    1fe8:	2f                   	das    
+    1fe9:	67 65 74 74          	addr16 gs je 2061 <telnet_user_update_cursor_x+0x151>
+    1fed:	65 72 6d             	gs jb  205d <telnet_user_update_cursor_x+0x14d>
+    1ff0:	00 72 65             	add    %dh,0x65(%edx)
+    1ff3:	6d                   	insl   (%dx),%es:(%edi)
+    1ff4:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    1ff7:	73 00                	jae    1ff9 <telnet_user_update_cursor_x+0xe9>
+    1ff9:	25 73 3a 20 45       	and    $0x45203a73,%eax
+    1ffe:	72 72                	jb     2072 <telnet_user_update_cursor_x+0x162>
+    2000:	6f                   	outsl  %ds:(%esi),(%dx)
+    2001:	72 20                	jb     2023 <telnet_user_update_cursor_x+0x113>
+    2003:	69 6e 69 74 69 61 6c 	imul   $0x6c616974,0x69(%esi),%ebp
+    200a:	69 7a 69 6e 67 20 54 	imul   $0x5420676e,0x69(%edx),%edi
+    2011:	43                   	inc    %ebx
+    2012:	50                   	push   %eax
+    2013:	2e 0a 00             	or     %cs:(%eax),%al
+    2016:	25 73 3a 20 45       	and    $0x45203a73,%eax
+    201b:	72 72                	jb     208f <telnet_user_update_cursor_x+0x17f>
+    201d:	6f                   	outsl  %ds:(%esi),(%dx)
+    201e:	72 20                	jb     2040 <telnet_user_update_cursor_x+0x130>
+    2020:	63 72 65             	arpl   %si,0x65(%edx)
+    2023:	61                   	popa   
+    2024:	74 69                	je     208f <telnet_user_update_cursor_x+0x17f>
+    2026:	6e                   	outsb  %ds:(%esi),(%dx)
+    2027:	67 20 6c 69          	and    %ch,0x69(%si)
+    202b:	73 74                	jae    20a1 <telnet_user_update_cursor_x+0x191>
+    202d:	65 6e                	outsb  %gs:(%esi),(%dx)
+    202f:	65 72 2e             	gs jb  2060 <telnet_user_update_cursor_x+0x150>
+    2032:	0a 00                	or     (%eax),%al
+    2034:	72 65                	jb     209b <telnet_user_update_cursor_x+0x18b>
+    2036:	6d                   	insl   (%dx),%es:(%edi)
+    2037:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    203a:	73 20                	jae    205c <telnet_user_update_cursor_x+0x14c>
+    203c:	5b                   	pop    %ebx
+    203d:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2040:	73 6f                	jae    20b1 <telnet_user_update_cursor_x+0x1a1>
+    2042:	6c                   	insb   (%dx),%es:(%edi)
+    2043:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    204a:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    204e:	20 45 52             	and    %al,0x52(%ebp)
+    2051:	52                   	push   %edx
+    2052:	4f                   	dec    %edi
+    2053:	52                   	push   %edx
+    2054:	3a 20                	cmp    (%eax),%ah
+    2056:	55                   	push   %ebp
+    2057:	6e                   	outsb  %ds:(%esi),(%dx)
+    2058:	61                   	popa   
+    2059:	62 6c 65 20          	bound  %ebp,0x20(%ebp,%eiz,2)
+    205d:	74 6f                	je     20ce <telnet_user_update_cursor_x+0x1be>
+    205f:	20 72 65             	and    %dh,0x65(%edx)
+    2062:	67 69 73 74 65 72 20 	imul   $0x25207265,0x74(%bp,%di),%esi
+    2069:	25 
+    206a:	73 20                	jae    208c <telnet_user_update_cursor_x+0x17c>
+    206c:	77 69                	ja     20d7 <telnet_user_update_cursor_x+0x1c7>
+    206e:	74 68                	je     20d8 <telnet_user_update_cursor_x+0x1c8>
+    2070:	20 6c 6f 63          	and    %ch,0x63(%edi,%ebp,2)
+    2074:	3a 20                	cmp    (%eax),%ah
+    2076:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    207b:	00 72 65             	add    %dh,0x65(%edx)
+    207e:	6d                   	insl   (%dx),%es:(%edi)
+    207f:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2082:	73 20                	jae    20a4 <telnet_user_update_cursor_x+0x194>
+    2084:	5b                   	pop    %ebx
+    2085:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2088:	73 6f                	jae    20f9 <telnet_user_update_cursor_x+0x1e9>
+    208a:	6c                   	insb   (%dx),%es:(%edi)
+    208b:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    2092:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    2096:	20 53 65             	and    %dl,0x65(%ebx)
+    2099:	72 76                	jb     2111 <telnet_user_update_cursor_x+0x201>
+    209b:	69 63 65 20 25 73 20 	imul   $0x20732520,0x65(%ebx),%esp
+    20a2:	72 65                	jb     2109 <telnet_user_update_cursor_x+0x1f9>
+    20a4:	67 69 73 74 65 72 64 	imul   $0x20647265,0x74(%bp,%di),%esi
+    20ab:	20 
+    20ac:	77 69                	ja     2117 <telnet_user_update_cursor_x+0x207>
+    20ae:	74 68                	je     2118 <telnet_user_update_cursor_x+0x208>
+    20b0:	20 69 64             	and    %ch,0x64(%ecx)
+    20b3:	20 25 75 2e 0a 00    	and    %ah,0xa2e75
+    20b9:	00 00                	add    %al,(%eax)
+    20bb:	00 72 65             	add    %dh,0x65(%edx)
+    20be:	6d                   	insl   (%dx),%es:(%edi)
+    20bf:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    20c2:	73 20                	jae    20e4 <telnet_user_update_cursor_x+0x1d4>
+    20c4:	5b                   	pop    %ebx
+    20c5:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    20c8:	73 6f                	jae    2139 <telnet_user_update_cursor_x+0x229>
+    20ca:	6c                   	insb   (%dx),%es:(%edi)
+    20cb:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    20d2:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    20d6:	20 45 52             	and    %al,0x52(%ebp)
+    20d9:	52                   	push   %edx
+    20da:	4f                   	dec    %edi
+    20db:	52                   	push   %edx
+    20dc:	3a 20                	cmp    (%eax),%ah
+    20de:	55                   	push   %ebp
+    20df:	6e                   	outsb  %ds:(%esi),(%dx)
+    20e0:	61                   	popa   
+    20e1:	62 6c 65 20          	bound  %ebp,0x20(%ebp,%eiz,2)
+    20e5:	74 6f                	je     2156 <telnet_user_update_cursor_x+0x246>
+    20e7:	20 75 6e             	and    %dh,0x6e(%ebp)
+    20ea:	72 65                	jb     2151 <telnet_user_update_cursor_x+0x241>
+    20ec:	67 69 73 74 65 72 20 	imul   $0x25207265,0x74(%bp,%di),%esi
+    20f3:	25 
+    20f4:	73 20                	jae    2116 <telnet_user_update_cursor_x+0x206>
+    20f6:	66 72 6f             	data16 jb 2168 <telnet_user_update_cursor_x+0x258>
+    20f9:	6d                   	insl   (%dx),%es:(%edi)
+    20fa:	20 6c 6f 63          	and    %ch,0x63(%edi,%ebp,2)
+    20fe:	3a 20                	cmp    (%eax),%ah
+    2100:	25 73 20 28 69       	and    $0x69282073,%eax
+    2105:	67 6e                	outsb  %ds:(%si),(%dx)
+    2107:	6f                   	outsl  %ds:(%esi),(%dx)
+    2108:	72 65                	jb     216f <telnet_user_update_cursor_x+0x25f>
+    210a:	64 29 2e             	sub    %ebp,%fs:(%esi)
+    210d:	0a 00                	or     (%eax),%al
+    210f:	00 72 65             	add    %dh,0x65(%edx)
+    2112:	6d                   	insl   (%dx),%es:(%edi)
+    2113:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2116:	73 20                	jae    2138 <telnet_user_update_cursor_x+0x228>
+    2118:	5b                   	pop    %ebx
+    2119:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    211c:	73 6f                	jae    218d <telnet_user_update_cursor_x+0x27d>
+    211e:	6c                   	insb   (%dx),%es:(%edi)
+    211f:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    2126:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    212a:	20 44 65 73          	and    %al,0x73(%ebp,%eiz,2)
+    212e:	74 72                	je     21a2 <telnet_user_update_cursor_x+0x292>
+    2130:	6f                   	outsl  %ds:(%esi),(%dx)
+    2131:	79 69                	jns    219c <telnet_user_update_cursor_x+0x28c>
+    2133:	6e                   	outsb  %ds:(%esi),(%dx)
+    2134:	67 2e 2e 2e 0a 00    	cs cs or %cs:(%bx,%si),%al
+    213a:	00 00                	add    %al,(%eax)
+    213c:	72 65                	jb     21a3 <telnet_user_update_cursor_x+0x293>
+    213e:	6d                   	insl   (%dx),%es:(%edi)
+    213f:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2142:	73 20                	jae    2164 <telnet_user_update_cursor_x+0x254>
+    2144:	5b                   	pop    %ebx
+    2145:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2148:	73 6f                	jae    21b9 <telnet_user_update_cursor_x+0x2a9>
+    214a:	6c                   	insb   (%dx),%es:(%edi)
+    214b:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    2152:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    2156:	20 45 52             	and    %al,0x52(%ebp)
+    2159:	52                   	push   %edx
+    215a:	4f                   	dec    %edi
+    215b:	52                   	push   %edx
+    215c:	3a 20                	cmp    (%eax),%ah
+    215e:	53                   	push   %ebx
+    215f:	70 61                	jo     21c2 <telnet_user_update_cursor_x+0x2b2>
+    2161:	77 6e                	ja     21d1 <telnet_user_update_cursor_x+0x2c1>
+    2163:	69 6e 67 20 60 25 73 	imul   $0x73256020,0x67(%esi),%ebp
+    216a:	20 25 73 20 2f 6c    	and    %ah,0x6c2f2073
+    2170:	6f                   	outsl  %ds:(%esi),(%dx)
+    2171:	63 20                	arpl   %sp,(%eax)
+    2173:	2d 2d 6d 73 67       	sub    $0x67736d2d,%eax
+    2178:	20 2d 2d 20 25 73    	and    %ch,0x7325202d
+    217e:	27                   	daa    
+    217f:	20 66 61             	and    %ah,0x61(%esi)
+    2182:	69 6c 65 64 3a 20 25 	imul   $0x7325203a,0x64(%ebp,%eiz,2),%ebp
+    2189:	73 
+    218a:	2e 0a 00             	or     %cs:(%eax),%al
+    218d:	00 00                	add    %al,(%eax)
+    218f:	00 72 65             	add    %dh,0x65(%edx)
+    2192:	6d                   	insl   (%dx),%es:(%edi)
+    2193:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2196:	73 20                	jae    21b8 <telnet_user_update_cursor_x+0x2a8>
+    2198:	5b                   	pop    %ebx
+    2199:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    219c:	73 6f                	jae    220d <telnet_user_update_cursor_x+0x2fd>
+    219e:	6c                   	insb   (%dx),%es:(%edi)
+    219f:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    21a6:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    21aa:	20 25 73 20 74 65    	and    %ah,0x65742073
+    21b0:	72 6d                	jb     221f <telnet_user_update_cursor_x+0x30f>
+    21b2:	69 6e 61 74 65 64 20 	imul   $0x20646574,0x61(%esi),%ebp
+    21b9:	25 73 2c 20 65       	and    $0x65202c73,%eax
+    21be:	78 69                	js     2229 <telnet_user_update_cursor_x+0x319>
+    21c0:	74 20                	je     21e2 <telnet_user_update_cursor_x+0x2d2>
+    21c2:	63 6f 64             	arpl   %bp,0x64(%edi)
+    21c5:	65 20 25 64 2e 0a 00 	and    %ah,%gs:0xa2e64
+    21cc:	72 65                	jb     2233 <telnet_user_update_cursor_x+0x323>
+    21ce:	6d                   	insl   (%dx),%es:(%edi)
+    21cf:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    21d2:	73 20                	jae    21f4 <telnet_user_update_cursor_x+0x2e4>
+    21d4:	5b                   	pop    %ebx
+    21d5:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    21d8:	73 6f                	jae    2249 <telnet_user_update_cursor_x+0x339>
+    21da:	6c                   	insb   (%dx),%es:(%edi)
+    21db:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    21e2:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    21e6:	20 43 6c             	and    %al,0x6c(%ebx)
+    21e9:	69 65 6e 74 20 64 69 	imul   $0x69642074,0x6e(%ebp),%esp
+    21f0:	73 63                	jae    2255 <telnet_user_update_cursor_x+0x345>
+    21f2:	6f                   	outsl  %ds:(%esi),(%dx)
+    21f3:	6e                   	outsb  %ds:(%esi),(%dx)
+    21f4:	6e                   	outsb  %ds:(%esi),(%dx)
+    21f5:	65 63 74 65 64       	arpl   %si,%gs:0x64(%ebp,%eiz,2)
+    21fa:	20 28                	and    %ch,(%eax)
+    21fc:	25 70 29 2e 0a       	and    $0xa2e2970,%eax
+    2201:	00 00                	add    %al,(%eax)
+    2203:	00 72 65             	add    %dh,0x65(%edx)
+    2206:	6d                   	insl   (%dx),%es:(%edi)
+    2207:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    220a:	73 20                	jae    222c <telnet_user_update_cursor_x+0x31c>
+    220c:	5b                   	pop    %ebx
+    220d:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2210:	73 6f                	jae    2281 <telnet_force_character_mode_command+0x1>
+    2212:	6c                   	insb   (%dx),%es:(%edi)
+    2213:	65 20 25 64 20 28 25 	and    %ah,%gs:0x25282064
+    221a:	64 29 5d 3a          	sub    %ebx,%fs:0x3a(%ebp)
+    221e:	20 4e 65             	and    %cl,0x65(%esi)
+    2221:	77 20                	ja     2243 <telnet_user_update_cursor_x+0x333>
+    2223:	63 6c 69 65          	arpl   %bp,0x65(%ecx,%ebp,2)
+    2227:	6e                   	outsb  %ds:(%esi),(%dx)
+    2228:	74 20                	je     224a <telnet_user_update_cursor_x+0x33a>
+    222a:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    222d:	6e                   	outsb  %ds:(%esi),(%dx)
+    222e:	65 63 74 65 64       	arpl   %si,%gs:0x64(%ebp,%eiz,2)
+    2233:	20 28                	and    %ch,(%eax)
+    2235:	25 70 29 2e 0a       	and    $0xa2e2970,%eax
+    223a:	00 00                	add    %al,(%eax)
+    223c:	25 73 3a 20 55       	and    $0x55203a73,%eax
+    2241:	6e                   	outsb  %ds:(%esi),(%dx)
+    2242:	61                   	popa   
+    2243:	62 6c 65 20          	bound  %ebp,0x20(%ebp,%eiz,2)
+    2247:	74 6f                	je     22b8 <telnet_force_character_mode_command+0x38>
+    2249:	20 72 65             	and    %dh,0x65(%edx)
+    224c:	67 69 73 74 65 72 20 	imul   $0x73207265,0x74(%bp,%di),%esi
+    2253:	73 
+    2254:	65 72 76             	gs jb  22cd <telnet_force_character_mode_command+0x4d>
+    2257:	65 72 0a             	gs jb  2264 <telnet_user_update_cursor_x+0x354>
+    225a:	00 00                	add    %al,(%eax)
+    225c:	25 73 3a 20 48       	and    $0x48203a73,%eax
+    2261:	65 6c                	gs insb (%dx),%es:(%edi)
+    2263:	65 6e                	outsb  %gs:(%esi),(%dx)
+    2265:	4f                   	dec    %edi
+    2266:	53                   	push   %ebx
+    2267:	20 52 65             	and    %dl,0x65(%edx)
+    226a:	6d                   	insl   (%dx),%es:(%edi)
+    226b:	6f                   	outsl  %ds:(%esi),(%dx)
+    226c:	74 65                	je     22d3 <telnet_force_character_mode_command+0x53>
+    226e:	20 63 6f             	and    %ah,0x6f(%ebx)
+    2271:	6e                   	outsb  %ds:(%esi),(%dx)
+    2272:	73 6f                	jae    22e3 <telnet_force_character_mode_command+0x63>
+    2274:	6c                   	insb   (%dx),%es:(%edi)
+    2275:	65 20 73 65          	and    %dh,%gs:0x65(%ebx)
+    2279:	72 76                	jb     22f1 <telnet_force_character_mode_command+0x71>
+    227b:	69                   	.byte 0x69
+    227c:	63 65 0a             	arpl   %sp,0xa(%ebp)
+	...
+
+00002280 <telnet_force_character_mode_command>:
+    2280:	ff fb 01 ff fb 03 ff fc 22 25 73 2f 74 65 6c 6e     ........"%s/teln
+    2290:	65 74 25 64 00 75 73 65 72 2e 63 00 65 76 65 6e     et%d.user.c.even
+    22a0:	74 00 63 6f 6e 76 65 72 74 65 64 00 75 73 65 72     t.converted.user
+    22b0:	2d 3e 6c 6f 63 73 72 76 5f 63 6f 6e 6e 65 63 74     ->locsrv_connect
+    22c0:	69 6f 6e 5f 63 6f 75 6e 74 20 3e 20 30 00 00 00     ion_count > 0...
+    22d0:	72 65 6d 63 6f 6e 73 20 5b 63 6f 6e 73 6f 6c 65     remcons [console
+    22e0:	20 25 64 20 28 25 64 29 5d 3a 20 49 67 6e 6f 72      %d (%d)]: Ignor
+    22f0:	69 6e 67 20 74 65 6c 6e 65 74 20 63 6f 6d 6d 61     ing telnet comma
+    2300:	6e 64 20 25 75 20 25 75 20 25 75 2e 0a 00 00 00     nd %u %u %u.....
+    2310:	72 65 6d 63 6f 6e 73 20 5b 63 6f 6e 73 6f 6c 65     remcons [console
+    2320:	20 25 64 20 28 25 64 29 5d 3a 20 49 67 6e 6f 72      %d (%d)]: Ignor
+    2330:	69 6e 67 20 74 65 6c 6e 65 74 20 63 6f 6d 6d 61     ing telnet comma
+    2340:	6e 64 20 25 75 20 25 75 2e 0a 00 00                 nd %u %u....
+
+Disassembly of section .plt:
+
+000024a0 <__main@plt-0x10>:
+    24a0:	ff 35 f8 3e 00 00    	pushl  0x3ef8
+    24a6:	ff 25 fc 3e 00 00    	jmp    *0x3efc
+    24ac:	00 00                	add    %al,(%eax)
+	...
+
+000024b0 <__main@plt>:
+    24b0:	ff 25 00 3f 00 00    	jmp    *0x3f00
+    24b6:	68 00 00 00 00       	push   $0x0
+    24bb:	e9 e0 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000024c0 <task_retval@plt>:
+    24c0:	ff 25 04 3f 00 00    	jmp    *0x3f04
+    24c6:	68 08 00 00 00       	push   $0x8
+    24cb:	e9 d0 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000024d0 <printf@plt>:
+    24d0:	ff 25 08 3f 00 00    	jmp    *0x3f08
+    24d6:	68 10 00 00 00       	push   $0x10
+    24db:	e9 c0 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000024e0 <task_wait@plt>:
+    24e0:	ff 25 0c 3f 00 00    	jmp    *0x3f0c
+    24e6:	68 18 00 00 00       	push   $0x18
+    24eb:	e9 b0 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000024f0 <loc_service_register@plt>:
+    24f0:	ff 25 10 3f 00 00    	jmp    *0x3f10
+    24f6:	68 20 00 00 00       	push   $0x20
+    24fb:	e9 a0 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002500 <tcp_conn_send@plt>:
+    2500:	ff 25 14 3f 00 00    	jmp    *0x3f14
+    2506:	68 28 00 00 00       	push   $0x28
+    250b:	e9 90 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002510 <malloc@plt>:
+    2510:	ff 25 18 3f 00 00    	jmp    *0x3f18
+    2516:	68 30 00 00 00       	push   $0x30
+    251b:	e9 80 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002520 <fibril_condvar_signal@plt>:
+    2520:	ff 25 1c 3f 00 00    	jmp    *0x3f1c
+    2526:	68 38 00 00 00       	push   $0x38
+    252b:	e9 70 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002530 <async_answer_0@plt>:
+    2530:	ff 25 20 3f 00 00    	jmp    *0x3f20
+    2536:	68 40 00 00 00       	push   $0x40
+    253b:	e9 60 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002540 <assert_abort@plt>:
+    2540:	ff 25 24 3f 00 00    	jmp    *0x3f24
+    2546:	68 48 00 00 00       	push   $0x48
+    254b:	e9 50 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002550 <fibril_condvar_wait_timeout@plt>:
+    2550:	ff 25 28 3f 00 00    	jmp    *0x3f28
+    2556:	68 50 00 00 00       	push   $0x50
+    255b:	e9 40 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002560 <con_conn@plt>:
+    2560:	ff 25 2c 3f 00 00    	jmp    *0x3f2c
+    2566:	68 58 00 00 00       	push   $0x58
+    256b:	e9 30 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002570 <fibril_condvar_initialize@plt>:
+    2570:	ff 25 30 3f 00 00    	jmp    *0x3f30
+    2576:	68 60 00 00 00       	push   $0x60
+    257b:	e9 20 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002580 <fprintf@plt>:
+    2580:	ff 25 34 3f 00 00    	jmp    *0x3f34
+    2586:	68 68 00 00 00       	push   $0x68
+    258b:	e9 10 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002590 <tcp_listener_create@plt>:
+    2590:	ff 25 38 3f 00 00    	jmp    *0x3f38
+    2596:	68 70 00 00 00       	push   $0x70
+    259b:	e9 00 ff ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000025a0 <fibril_mutex_unlock@plt>:
+    25a0:	ff 25 3c 3f 00 00    	jmp    *0x3f3c
+    25a6:	68 78 00 00 00       	push   $0x78
+    25ab:	e9 f0 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000025b0 <loc_service_unregister@plt>:
+    25b0:	ff 25 40 3f 00 00    	jmp    *0x3f40
+    25b6:	68 80 00 00 00       	push   $0x80
+    25bb:	e9 e0 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000025c0 <fibril_mutex_initialize@plt>:
+    25c0:	ff 25 44 3f 00 00    	jmp    *0x3f44
+    25c6:	68 88 00 00 00       	push   $0x88
+    25cb:	e9 d0 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000025d0 <task_kill@plt>:
+    25d0:	ff 25 48 3f 00 00    	jmp    *0x3f48
+    25d6:	68 90 00 00 00       	push   $0x90
+    25db:	e9 c0 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000025e0 <con_srvs_init@plt>:
+    25e0:	ff 25 4c 3f 00 00    	jmp    *0x3f4c
+    25e6:	68 98 00 00 00       	push   $0x98
+    25eb:	e9 b0 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000025f0 <prodcons_initialize@plt>:
+    25f0:	ff 25 50 3f 00 00    	jmp    *0x3f50
+    25f6:	68 a0 00 00 00       	push   $0xa0
+    25fb:	e9 a0 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002600 <prodcons_consume@plt>:
+    2600:	ff 25 54 3f 00 00    	jmp    *0x3f54
+    2606:	68 a8 00 00 00       	push   $0xa8
+    260b:	e9 90 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002610 <memset@plt>:
+    2610:	ff 25 58 3f 00 00    	jmp    *0x3f58
+    2616:	68 b0 00 00 00       	push   $0xb0
+    261b:	e9 80 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002620 <asprintf@plt>:
+    2620:	ff 25 5c 3f 00 00    	jmp    *0x3f5c
+    2626:	68 b8 00 00 00       	push   $0xb8
+    262b:	e9 70 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002630 <loc_server_register@plt>:
+    2630:	ff 25 60 3f 00 00    	jmp    *0x3f60
+    2636:	68 c0 00 00 00       	push   $0xc0
+    263b:	e9 60 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002640 <inet_ep_init@plt>:
+    2640:	ff 25 64 3f 00 00    	jmp    *0x3f64
+    2646:	68 c8 00 00 00       	push   $0xc8
+    264b:	e9 50 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002650 <str_error@plt>:
+    2650:	ff 25 68 3f 00 00    	jmp    *0x3f68
+    2656:	68 d0 00 00 00       	push   $0xd0
+    265b:	e9 40 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002660 <prodcons_produce@plt>:
+    2660:	ff 25 6c 3f 00 00    	jmp    *0x3f6c
+    2666:	68 d8 00 00 00       	push   $0xd8
+    266b:	e9 30 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002670 <fibril_create_generic@plt>:
+    2670:	ff 25 70 3f 00 00    	jmp    *0x3f70
+    2676:	68 e0 00 00 00       	push   $0xe0
+    267b:	e9 20 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002680 <fibril_add_ready@plt>:
+    2680:	ff 25 74 3f 00 00    	jmp    *0x3f74
+    2686:	68 e8 00 00 00       	push   $0xe8
+    268b:	e9 10 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002690 <fibril_switch@plt>:
+    2690:	ff 25 78 3f 00 00    	jmp    *0x3f78
+    2696:	68 f0 00 00 00       	push   $0xf0
+    269b:	e9 00 fe ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000026a0 <__syscall_fast@plt>:
+    26a0:	ff 25 7c 3f 00 00    	jmp    *0x3f7c
+    26a6:	68 f8 00 00 00       	push   $0xf8
+    26ab:	e9 f0 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000026b0 <tcp_create@plt>:
+    26b0:	ff 25 80 3f 00 00    	jmp    *0x3f80
+    26b6:	68 00 01 00 00       	push   $0x100
+    26bb:	e9 e0 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000026c0 <async_set_fallback_port_handler@plt>:
+    26c0:	ff 25 84 3f 00 00    	jmp    *0x3f84
+    26c6:	68 08 01 00 00       	push   $0x108
+    26cb:	e9 d0 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000026d0 <task_spawnl@plt>:
+    26d0:	ff 25 88 3f 00 00    	jmp    *0x3f88
+    26d6:	68 10 01 00 00       	push   $0x110
+    26db:	e9 c0 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000026e0 <tcp_conn_recv_wait@plt>:
+    26e0:	ff 25 8c 3f 00 00    	jmp    *0x3f8c
+    26e6:	68 18 01 00 00       	push   $0x118
+    26eb:	e9 b0 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+000026f0 <free@plt>:
+    26f0:	ff 25 90 3f 00 00    	jmp    *0x3f90
+    26f6:	68 20 01 00 00       	push   $0x120
+    26fb:	e9 a0 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>
+
+00002700 <fibril_mutex_lock@plt>:
+    2700:	ff 25 94 3f 00 00    	jmp    *0x3f94
+    2706:	68 28 01 00 00       	push   $0x128
+    270b:	e9 90 fd ff ff       	jmp    24a0 <telnet_force_character_mode_command+0x220>

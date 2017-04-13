@@ -1,0 +1,17 @@
+# DO NOT DELETE
+
+generic/bits.o: include/bits.h
+generic/comparison.o: include/comparison.h include/lltype.h
+generic/comparison.o: ../../lib/c/include/stdint.h
+generic/comparison.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+generic/comparison.o: ../../lib/c/arch/ia32/include/libarch/common.h
+generic/division.o: include/division.h
+generic/multiplication.o: include/multiplication.h
+generic/multiplication.o: ../../lib/c/include/stdint.h
+generic/multiplication.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+generic/multiplication.o: ../../lib/c/arch/ia32/include/libarch/common.h
+generic/shift.o: include/shift.h include/lltype.h
+generic/shift.o: ../../lib/c/include/stdint.h
+generic/shift.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+generic/shift.o: ../../lib/c/arch/ia32/include/libarch/common.h
+# DO NOT DELETE

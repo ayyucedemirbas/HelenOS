@@ -1,0 +1,268 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+dns_server_addr     0x14              transport.o
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x1bb6 dns_msg.o
+ .debug_abbrev  0x0000000000000000      0x3ed dns_msg.o
+ .debug_loc     0x0000000000000000     0x19a4 dns_msg.o
+ .debug_aranges
+                0x0000000000000000       0x28 dns_msg.o
+ .debug_ranges  0x0000000000000000      0x3e0 dns_msg.o
+ .debug_line    0x0000000000000000      0x672 dns_msg.o
+ .debug_str     0x0000000000000000      0xd30 dns_msg.o
+ .comment       0x0000000000000000       0x12 dns_msg.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 dns_msg.o
+ .eh_frame      0x0000000000000000      0x170 dns_msg.o
+ .debug_info    0x0000000000000000      0xbb3 dnsrsrv.o
+ .debug_abbrev  0x0000000000000000      0x29d dnsrsrv.o
+ .debug_loc     0x0000000000000000      0x3da dnsrsrv.o
+ .debug_aranges
+                0x0000000000000000       0x28 dnsrsrv.o
+ .debug_ranges  0x0000000000000000       0xd8 dnsrsrv.o
+ .debug_line    0x0000000000000000      0x2ed dnsrsrv.o
+ .debug_str     0x0000000000000000      0xa7a dnsrsrv.o
+ .comment       0x0000000000000000       0x12 dnsrsrv.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 dnsrsrv.o
+ .eh_frame      0x0000000000000000       0x80 dnsrsrv.o
+ .debug_info    0x0000000000000000      0xeac query.o
+ .debug_abbrev  0x0000000000000000      0x2c5 query.o
+ .debug_loc     0x0000000000000000      0x71d query.o
+ .debug_aranges
+                0x0000000000000000       0x20 query.o
+ .debug_ranges  0x0000000000000000      0x118 query.o
+ .debug_line    0x0000000000000000      0x360 query.o
+ .debug_str     0x0000000000000000      0xb16 query.o
+ .comment       0x0000000000000000       0x12 query.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 query.o
+ .eh_frame      0x0000000000000000      0x10c query.o
+ .debug_info    0x0000000000000000     0x12bb transport.o
+ .debug_abbrev  0x0000000000000000      0x32c transport.o
+ .debug_loc     0x0000000000000000      0x319 transport.o
+ .debug_aranges
+                0x0000000000000000       0x20 transport.o
+ .debug_ranges  0x0000000000000000       0x50 transport.o
+ .debug_line    0x0000000000000000      0x391 transport.o
+ .debug_str     0x0000000000000000      0xde7 transport.o
+ .comment       0x0000000000000000       0x12 transport.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 transport.o
+ .eh_frame      0x0000000000000000      0x120 transport.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130     0x2268
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0xdda dns_msg.o
+                0x0000000000001130                dns_name_decode
+                0x0000000000001440                dns_uint32_t_decode
+                0x0000000000001490                dns_addr128_t_decode
+                0x00000000000014d0                dns_message_encode
+                0x00000000000018b0                dns_message_new
+                0x00000000000018f0                dns_message_destroy
+                0x0000000000001a70                dns_message_decode
+ .text.unlikely
+                0x0000000000001f0a       0x1a dns_msg.o
+ *fill*         0x0000000000001f24        0xc 
+ .text          0x0000000000001f30      0x31a dnsrsrv.o
+ *fill*         0x000000000000224a        0x6 
+ .text.startup  0x0000000000002250      0x14a dnsrsrv.o
+                0x0000000000002250                main
+ *fill*         0x000000000000239a        0x6 
+ .text          0x00000000000023a0      0x781 query.o
+                0x0000000000002a70                dns_name2host
+                0x0000000000002b00                dns_hostinfo_destroy
+ *fill*         0x0000000000002b21        0xf 
+ .text          0x0000000000002b30      0x4da transport.o
+                0x0000000000002d30                transport_init
+                0x0000000000002dc0                transport_fini
+                0x0000000000002df0                dns_request
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x000000000000300a       0xc4 dns_msg.o
+                                         0xc6 (size before relaxing)
+ *fill*         0x00000000000030ce        0x2 
+ .rodata.str1.4
+                0x00000000000030d0       0x56 dns_msg.o
+ .rodata.str1.1
+                0x0000000000003126       0x72 dnsrsrv.o
+ .rodata.str1.4
+                0x0000000000003198       0xac dnsrsrv.o
+ .rodata.str1.1
+                0x0000000000003244       0x83 query.o
+ *fill*         0x00000000000032c7        0x1 
+ .rodata.str1.4
+                0x00000000000032c8       0x21 query.o
+ .rodata.str1.1
+                0x00000000000032e9       0x8b transport.o
+ .rodata.str1.4
+                0x0000000000003374       0x24 transport.o
+                                         0x23 (size before relaxing)
+
+.rel.plt        0x0000000000003398      0x188
+ *(.rel.plt)
+ .rel.plt       0x0000000000003398      0x188 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000003520       0x10
+ *(.rel.*)
+ .rel.got       0x0000000000003520        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000003520       0x10 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000003530        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000003530        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.unlikely
+                0x0000000000003530        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000003530        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000003530      0x320
+ *(.plt)
+ .plt           0x0000000000003530      0x320 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003540                __main
+                0x0000000000003550                task_retval
+                0x0000000000003560                printf
+                0x0000000000003570                udp_rmsg_read
+                0x0000000000003580                log_init
+                0x0000000000003590                loc_service_register
+                0x00000000000035a0                fibril_mutex_is_locked
+                0x00000000000035b0                str_decode
+                0x00000000000035c0                inet_addr_set6
+                0x00000000000035d0                async_data_read_finalize
+                0x00000000000035e0                memcpy
+                0x00000000000035f0                malloc
+                0x0000000000003600                async_answer_0
+                0x0000000000003610                log_msg
+                0x0000000000003620                assert_abort
+                0x0000000000003630                calloc
+                0x0000000000003640                udp_assoc_destroy
+                0x0000000000003650                fibril_condvar_wait_timeout
+                0x0000000000003660                fibril_condvar_initialize
+                0x0000000000003670                udp_assoc_create
+                0x0000000000003680                inet_ep2_init
+                0x0000000000003690                fibril_condvar_broadcast
+                0x00000000000036a0                inet_addr_set
+                0x00000000000036b0                fibril_mutex_unlock
+                0x00000000000036c0                str_dup
+                0x00000000000036d0                fibril_mutex_initialize
+                0x00000000000036e0                udp_rmsg_size
+                0x00000000000036f0                realloc
+                0x0000000000003700                str_cmp
+                0x0000000000003710                async_data_read_receive
+                0x0000000000003720                udp_destroy
+                0x0000000000003730                str_cpy
+                0x0000000000003740                loc_server_register
+                0x0000000000003750                async_get_call_timeout
+                0x0000000000003760                inet_ep_init
+                0x0000000000003770                str_size
+                0x0000000000003780                list_count
+                0x0000000000003790                udp_assoc_send_msg
+                0x00000000000037a0                async_data_write_finalize
+                0x00000000000037b0                async_data_write_accept
+                0x00000000000037c0                addr128_t_be2host
+                0x00000000000037d0                fibril_switch
+                0x00000000000037e0                __syscall_fast
+                0x00000000000037f0                udp_create
+                0x0000000000003800                async_set_fallback_port_handler
+                0x0000000000003810                async_data_write_receive
+                0x0000000000003820                free
+                0x0000000000003830                fibril_mutex_lock
+                0x0000000000003840                udp_rmsg_remote_ep
+
+.dynsym         0x0000000000003850      0x360
+ *(.dynsym)
+ .dynsym        0x0000000000003850      0x360 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000003bb0      0x346
+ *(.dynstr)
+ .dynstr        0x0000000000003bb0      0x346 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000003ef8      0x174
+ *(.hash)
+ .hash          0x0000000000003ef8      0x174 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x000000000000406c       0x13
+ *(.interp)
+ .interp        0x000000000000406c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000507f                . = (. + 0x1000)
+
+.dynamic        0x0000000000005080       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000005080       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005080                _DYNAMIC
+
+.data           0x0000000000005128       0x24
+ *(.data)
+ .data          0x0000000000005128        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000005128        0x0 dns_msg.o
+ .data          0x0000000000005128        0x0 dnsrsrv.o
+ .data          0x0000000000005128        0x0 query.o
+ .data          0x0000000000005128       0x24 transport.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x000000000000514c        0x0
+ *(.got)
+ .got           0x000000000000514c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x000000000000514c       0xd0
+ *(.got.plt)
+ .got.plt       0x000000000000514c       0xd0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000000514c                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000005220     0x1040
+ *(.dynbss)
+ .dynbss        0x0000000000005220        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005220                __syscall_fast_func
+                0x0000000000005224                async_futex
+ *(COMMON)
+ COMMON         0x0000000000005228       0x14 transport.o
+                0x0000000000005228                dns_server_addr
+ *(.bss)
+ .bss           0x000000000000523c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x000000000000523c        0x0 dns_msg.o
+ .bss           0x000000000000523c        0x0 dnsrsrv.o
+ .bss           0x000000000000523c        0x2 query.o
+ *fill*         0x000000000000523e        0x2 
+ .bss           0x0000000000005240     0x1020 transport.o
+
+/DISCARD/
+ *(*)
+LOAD dns_msg.o
+LOAD dnsrsrv.o
+LOAD query.o
+LOAD transport.o
+LOAD ../../../lib/c/libc.so.0
+LOAD ../../../lib/softint/libsoftint.so.0
+OUTPUT(dnsrsrv elf32-i386)

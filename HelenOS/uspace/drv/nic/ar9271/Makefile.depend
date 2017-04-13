@@ -1,0 +1,299 @@
+# DO NOT DELETE
+
+ath_usb.o: ../../../lib/usbdev/include/usb/dev/pipes.h
+ath_usb.o: ../../../lib/usb/include/usb/usb.h
+ath_usb.o: ../../../lib/c/include/stdbool.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+ath_usb.o: ../../../../abi/include/abi/bool.h
+ath_usb.o: ../../../lib/c/include/sys/types.h
+ath_usb.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/stdint.h
+ath_usb.o: ../../../lib/usb/include/usb/descriptor.h
+ath_usb.o: ../../../lib/drv/include/usb_iface.h
+ath_usb.o: ../../../lib/drv/include/ddf/driver.h
+ath_usb.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+ath_usb.o: ../../../../abi/include/abi/ipc/ipc.h
+ath_usb.o: ../../../lib/c/include/atomic.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+ath_usb.o: ../../../lib/c/include/atomicdflt.h
+ath_usb.o: ../../../../abi/include/abi/proc/task.h
+ath_usb.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+ath_usb.o: ../../../../abi/include/abi/syscall.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+ath_usb.o: ../../../lib/c/include/fibril.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ath_usb.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+ath_usb.o: ../../../lib/c/include/stddef.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+ath_usb.o: ../../../lib/c/include/sys/time.h
+ath_usb.o: ../../../../abi/include/abi/ddi/irq.h
+ath_usb.o: ../../../../abi/include/abi/ipc/event.h
+ath_usb.o: ../../../../abi/include/abi/ipc/interfaces.h
+ath_usb.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+ath_usb.o: ../../../lib/c/include/ipc/devman.h
+ath_usb.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/mem.h
+ath_usb.o: ../../../lib/c/include/cc.h ../../../lib/c/include/ipc/dev_iface.h
+ath_usb.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+ath_usb.o: ../../../lib/drv/include/dev_iface.h
+ath_usb.o: ../../../lib/usb/include/usb/debug.h
+ath_usb.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/stdarg.h
+ath_usb.o: ../../../lib/c/include/str.h ../../../lib/c/include/io/verify.h
+ath_usb.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/io/log.h
+ath_usb.o: ../../../lib/c/include/inttypes.h
+ath_usb.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ath_usb.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/errno.h
+ath_usb.o: ../../../../abi/include/abi/errno.h ath_usb.h
+ath_usb.o: ../../../lib/usbdev/include/usb/dev/driver.h
+ath_usb.o: ../../../lib/usbdev/include/usb/dev/device.h
+ath_usb.o: ../../../lib/usbdev/include/usb/dev/alternate_ifaces.h ath.h
+hw.o: ../../../lib/c/include/macros.h ../../../lib/usb/include/usb/debug.h
+hw.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/sys/types.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+hw.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/str.h
+hw.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+hw.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+hw.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/kio.h
+hw.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/inttypes.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+hw.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/unistd.h
+hw.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+hw.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+hw.o: ../../../lib/nic/include/nic.h ../../../lib/c/include/adt/list.h
+hw.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stddef.h
+hw.o: ../../../lib/c/include/adt/hash_table.h
+hw.o: ../../../lib/drv/include/ddf/driver.h ../../../lib/c/include/async.h
+hw.o: ../../../lib/c/include/ipc/common.h
+hw.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+hw.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+hw.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+hw.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+hw.o: ../../../lib/c/include/fibril.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hw.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+hw.o: ../../../../abi/include/abi/ddi/irq.h
+hw.o: ../../../../abi/include/abi/ipc/event.h
+hw.o: ../../../../abi/include/abi/ipc/interfaces.h
+hw.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+hw.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/malloc.h
+hw.o: ../../../lib/c/include/ipc/dev_iface.h
+hw.o: ../../../lib/drv/include/dev_iface.h
+hw.o: ../../../lib/c/include/device/hw_res_parsed.h
+hw.o: ../../../lib/c/include/device/hw_res.h
+hw.o: ../../../lib/c/include/device/pio_window.h
+hw.o: ../../../lib/drv/include/ops/nic.h
+hw.o: ../../../lib/c/include/ipc/services.h ../../../lib/c/include/nic/nic.h
+hw.o: ../../../lib/c/include/nic/eth_phys.h
+hw.o: ../../../lib/drv/include/ddf/driver.h
+hw.o: ../../../lib/ieee80211/include/ieee80211.h
+hw.o: ../../../lib/drv/include/ops/ieee80211.h
+hw.o: ../../../lib/c/include/ieee80211/ieee80211.h hw.h ar9271.h
+hw.o: ../../../lib/c/include/fibril_synch.h
+hw.o: ../../../lib/usbdev/include/usb/dev/driver.h
+hw.o: ../../../lib/usbdev/include/usb/dev/device.h
+hw.o: ../../../lib/usb/include/usb/usb.h ../../../lib/c/include/byteorder.h
+hw.o: ../../../lib/usb/include/usb/descriptor.h
+hw.o: ../../../lib/usbdev/include/usb/dev/alternate_ifaces.h
+hw.o: ../../../lib/usbdev/include/usb/dev/pipes.h
+hw.o: ../../../lib/drv/include/usb_iface.h htc.h ath.h wmi.h
+wmi.o: ../../../lib/usb/include/usb/debug.h ../../../lib/c/include/stdio.h
+wmi.o: ../../../lib/c/include/sys/types.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+wmi.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/str.h
+wmi.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+wmi.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+wmi.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/kio.h
+wmi.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/inttypes.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+wmi.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/errno.h
+wmi.o: ../../../../abi/include/abi/errno.h ../../../lib/c/include/malloc.h
+wmi.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/stdint.h
+wmi.o: wmi.h htc.h ../../../lib/ieee80211/include/ieee80211.h
+wmi.o: ../../../lib/drv/include/ddf/driver.h ../../../lib/c/include/async.h
+wmi.o: ../../../lib/c/include/ipc/common.h
+wmi.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+wmi.o: ../../../lib/c/include/atomicdflt.h
+wmi.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+wmi.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+wmi.o: ../../../lib/c/include/fibril.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+wmi.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+wmi.o: ../../../lib/c/include/stddef.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+wmi.o: ../../../lib/c/include/sys/time.h
+wmi.o: ../../../../abi/include/abi/ddi/irq.h
+wmi.o: ../../../../abi/include/abi/ipc/event.h
+wmi.o: ../../../../abi/include/abi/ipc/interfaces.h
+wmi.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+wmi.o: ../../../lib/c/include/ipc/devman.h
+wmi.o: ../../../lib/c/include/ipc/dev_iface.h ../../../lib/c/include/unistd.h
+wmi.o: ../../../lib/c/include/time.h
+wmi.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+wmi.o: ../../../lib/drv/include/dev_iface.h ../../../lib/nic/include/nic.h
+wmi.o: ../../../lib/c/include/adt/hash_table.h
+wmi.o: ../../../lib/c/include/macros.h
+wmi.o: ../../../lib/c/include/device/hw_res_parsed.h
+wmi.o: ../../../lib/c/include/device/hw_res.h
+wmi.o: ../../../lib/c/include/device/pio_window.h
+wmi.o: ../../../lib/drv/include/ops/nic.h
+wmi.o: ../../../lib/c/include/ipc/services.h ../../../lib/c/include/nic/nic.h
+wmi.o: ../../../lib/c/include/nic/eth_phys.h
+wmi.o: ../../../lib/drv/include/ddf/driver.h
+wmi.o: ../../../lib/drv/include/ops/ieee80211.h
+wmi.o: ../../../lib/c/include/ieee80211/ieee80211.h
+wmi.o: ../../../lib/c/include/fibril_synch.h
+wmi.o: ../../../lib/usbdev/include/usb/dev/driver.h
+wmi.o: ../../../lib/usbdev/include/usb/dev/device.h
+wmi.o: ../../../lib/usb/include/usb/usb.h
+wmi.o: ../../../lib/usb/include/usb/descriptor.h
+wmi.o: ../../../lib/usbdev/include/usb/dev/alternate_ifaces.h
+wmi.o: ../../../lib/usbdev/include/usb/dev/pipes.h
+wmi.o: ../../../lib/drv/include/usb_iface.h ath.h
+htc.o: ../../../lib/usb/include/usb/debug.h ../../../lib/c/include/stdio.h
+htc.o: ../../../lib/c/include/sys/types.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+htc.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/str.h
+htc.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+htc.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+htc.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/kio.h
+htc.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/inttypes.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+htc.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/byteorder.h
+htc.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/errno.h
+htc.o: ../../../../abi/include/abi/errno.h wmi.h htc.h
+htc.o: ../../../lib/ieee80211/include/ieee80211.h
+htc.o: ../../../lib/drv/include/ddf/driver.h ../../../lib/c/include/async.h
+htc.o: ../../../lib/c/include/ipc/common.h
+htc.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+htc.o: ../../../lib/c/include/atomicdflt.h
+htc.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+htc.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+htc.o: ../../../lib/c/include/fibril.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+htc.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+htc.o: ../../../lib/c/include/stddef.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+htc.o: ../../../lib/c/include/sys/time.h
+htc.o: ../../../../abi/include/abi/ddi/irq.h
+htc.o: ../../../../abi/include/abi/ipc/event.h
+htc.o: ../../../../abi/include/abi/ipc/interfaces.h
+htc.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+htc.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/malloc.h
+htc.o: ../../../lib/c/include/ipc/dev_iface.h ../../../lib/c/include/unistd.h
+htc.o: ../../../lib/c/include/time.h
+htc.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+htc.o: ../../../lib/drv/include/dev_iface.h ../../../lib/nic/include/nic.h
+htc.o: ../../../lib/c/include/adt/hash_table.h
+htc.o: ../../../lib/c/include/macros.h
+htc.o: ../../../lib/c/include/device/hw_res_parsed.h
+htc.o: ../../../lib/c/include/device/hw_res.h
+htc.o: ../../../lib/c/include/device/pio_window.h
+htc.o: ../../../lib/drv/include/ops/nic.h
+htc.o: ../../../lib/c/include/ipc/services.h ../../../lib/c/include/nic/nic.h
+htc.o: ../../../lib/c/include/nic/eth_phys.h
+htc.o: ../../../lib/drv/include/ddf/driver.h
+htc.o: ../../../lib/drv/include/ops/ieee80211.h
+htc.o: ../../../lib/c/include/ieee80211/ieee80211.h
+htc.o: ../../../lib/c/include/fibril_synch.h
+htc.o: ../../../lib/usbdev/include/usb/dev/driver.h
+htc.o: ../../../lib/usbdev/include/usb/dev/device.h
+htc.o: ../../../lib/usb/include/usb/usb.h
+htc.o: ../../../lib/usb/include/usb/descriptor.h
+htc.o: ../../../lib/usbdev/include/usb/dev/alternate_ifaces.h
+htc.o: ../../../lib/usbdev/include/usb/dev/pipes.h
+htc.o: ../../../lib/drv/include/usb_iface.h ath.h ar9271.h
+ar9271.o: ../../../lib/ieee80211/include/ieee80211.h
+ar9271.o: ../../../lib/drv/include/ddf/driver.h
+ar9271.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+ar9271.o: ../../../lib/c/include/sys/types.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+ar9271.o: ../../../../abi/include/abi/ipc/ipc.h
+ar9271.o: ../../../lib/c/include/atomic.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+ar9271.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+ar9271.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+ar9271.o: ../../../../abi/include/abi/proc/task.h
+ar9271.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+ar9271.o: ../../../../abi/include/abi/syscall.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+ar9271.o: ../../../lib/c/include/fibril.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+ar9271.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+ar9271.o: ../../../lib/c/include/stddef.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+ar9271.o: ../../../lib/c/include/sys/time.h
+ar9271.o: ../../../../abi/include/abi/ddi/irq.h
+ar9271.o: ../../../../abi/include/abi/ipc/event.h
+ar9271.o: ../../../../abi/include/abi/ipc/interfaces.h
+ar9271.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+ar9271.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/malloc.h
+ar9271.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+ar9271.o: ../../../lib/c/include/ipc/dev_iface.h
+ar9271.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+ar9271.o: ../../../lib/drv/include/dev_iface.h ../../../lib/nic/include/nic.h
+ar9271.o: ../../../lib/c/include/adt/hash_table.h
+ar9271.o: ../../../lib/c/include/macros.h
+ar9271.o: ../../../lib/c/include/device/hw_res_parsed.h
+ar9271.o: ../../../lib/c/include/device/hw_res.h
+ar9271.o: ../../../lib/c/include/device/pio_window.h
+ar9271.o: ../../../lib/c/include/str.h ../../../lib/drv/include/ops/nic.h
+ar9271.o: ../../../lib/c/include/ipc/services.h
+ar9271.o: ../../../lib/c/include/nic/nic.h
+ar9271.o: ../../../lib/c/include/nic/eth_phys.h
+ar9271.o: ../../../lib/drv/include/ddf/driver.h
+ar9271.o: ../../../lib/drv/include/ops/ieee80211.h
+ar9271.o: ../../../lib/c/include/ieee80211/ieee80211.h
+ar9271.o: ../../../lib/usb/include/usb/classes/classes.h
+ar9271.o: ../../../lib/usbdev/include/usb/dev/request.h
+ar9271.o: ../../../lib/c/include/l18n/langs.h
+ar9271.o: ../../../lib/usb/include/usb/usb.h
+ar9271.o: ../../../lib/c/include/byteorder.h
+ar9271.o: ../../../lib/usbdev/include/usb/dev/pipes.h
+ar9271.o: ../../../lib/usb/include/usb/descriptor.h
+ar9271.o: ../../../lib/drv/include/usb_iface.h
+ar9271.o: ../../../lib/usb/include/usb/request.h
+ar9271.o: ../../../lib/usbdev/include/usb/dev/poll.h
+ar9271.o: ../../../lib/usbdev/include/usb/dev/device.h
+ar9271.o: ../../../lib/usbdev/include/usb/dev/alternate_ifaces.h
+ar9271.o: ../../../lib/usb/include/usb/debug.h ../../../lib/c/include/stdio.h
+ar9271.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/io/verify.h
+ar9271.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/io/log.h
+ar9271.o: ../../../lib/c/include/inttypes.h
+ar9271.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+ar9271.o: ../../../../abi/include/abi/log.h
+ar9271.o: ../../../lib/drv/include/ddf/interrupt.h
+ar9271.o: ../../../lib/c/include/ddi.h ../../../lib/c/include/task.h
+ar9271.o: ../../../lib/c/include/types/task.h
+ar9271.o: ../../../lib/c/include/fibril_synch.h
+ar9271.o: ../../../lib/drv/include/ddf/driver.h
+ar9271.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+ar9271.o: ath_usb.h ../../../lib/usbdev/include/usb/dev/driver.h ath.h wmi.h
+ar9271.o: htc.h hw.h ar9271.h
+# DO NOT DELETE

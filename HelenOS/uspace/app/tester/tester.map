@@ -1,0 +1,1301 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/softfloat/libsoftfloat.a(add.o)
+                              float/softfloat1.o (__addsf3)
+../../lib/softfloat/libsoftfloat.a(sub.o)
+                              ../../lib/softfloat/libsoftfloat.a(add.o) (sub_float32)
+../../lib/softfloat/libsoftfloat.a(div.o)
+                              float/softfloat1.o (__divsf3)
+../../lib/softfloat/libsoftfloat.a(mul.o)
+                              float/softfloat1.o (__mulsf3)
+../../lib/softfloat/libsoftfloat.a(comparison.o)
+                              ../../lib/softfloat/libsoftfloat.a(add.o) (is_float32_nan)
+../../lib/softfloat/libsoftfloat.a(conversion.o)
+                              float/softfloat1.o (__floatsidf)
+../../lib/softfloat/libsoftfloat.a(common.o)
+                              ../../lib/softfloat/libsoftfloat.a(div.o) (finish_float64)
+../../lib/drv/libdrv.a(remote_char_dev.o)
+                              hw/misc/virtchar1.o (char_dev_read)
+
+Allocating common symbols
+Common symbol       size              file
+
+mem_blocks_count    0x4               mm/common.o
+test_quiet          0x1               tester.o
+test_argv           0x4               tester.o
+fd                  0x4               mm/pager1.o
+test_argc           0x4               tester.o
+mem_allocated       0x4               mm/common.o
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0x403 tester.o
+ .debug_abbrev  0x0000000000000000      0x186 tester.o
+ .debug_loc     0x0000000000000000      0x26c tester.o
+ .debug_aranges
+                0x0000000000000000       0x20 tester.o
+ .debug_ranges  0x0000000000000000       0x78 tester.o
+ .debug_line    0x0000000000000000      0x149 tester.o
+ .debug_str     0x0000000000000000      0x26a tester.o
+ .comment       0x0000000000000000       0x12 tester.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tester.o
+ .eh_frame      0x0000000000000000       0x60 tester.o
+ .debug_info    0x0000000000000000      0x2b6 util.o
+ .debug_abbrev  0x0000000000000000       0xea util.o
+ .debug_aranges
+                0x0000000000000000       0x20 util.o
+ .debug_line    0x0000000000000000       0xde util.o
+ .debug_str     0x0000000000000000      0x272 util.o
+ .comment       0x0000000000000000       0x12 util.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 util.o
+ .eh_frame      0x0000000000000000       0xb8 util.o
+ .debug_info    0x0000000000000000      0x3fe thread/thread1.o
+ .debug_abbrev  0x0000000000000000      0x199 thread/thread1.o
+ .debug_loc     0x0000000000000000      0x19e thread/thread1.o
+ .debug_aranges
+                0x0000000000000000       0x20 thread/thread1.o
+ .debug_ranges  0x0000000000000000       0x30 thread/thread1.o
+ .debug_line    0x0000000000000000      0x189 thread/thread1.o
+ .debug_str     0x0000000000000000      0x2c3 thread/thread1.o
+ .comment       0x0000000000000000       0x12 thread/thread1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 thread/thread1.o
+ .eh_frame      0x0000000000000000       0x60 thread/thread1.o
+ .debug_info    0x0000000000000000      0x2e8 thread/setjmp1.o
+ .debug_abbrev  0x0000000000000000      0x166 thread/setjmp1.o
+ .debug_loc     0x0000000000000000       0x1e thread/setjmp1.o
+ .debug_aranges
+                0x0000000000000000       0x20 thread/setjmp1.o
+ .debug_line    0x0000000000000000       0xe9 thread/setjmp1.o
+ .debug_str     0x0000000000000000      0x2ab thread/setjmp1.o
+ .comment       0x0000000000000000       0x12 thread/setjmp1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 thread/setjmp1.o
+ .eh_frame      0x0000000000000000       0x60 thread/setjmp1.o
+ .debug_info    0x0000000000000000      0x1fe print/print1.o
+ .debug_abbrev  0x0000000000000000       0xcc print/print1.o
+ .debug_aranges
+                0x0000000000000000       0x20 print/print1.o
+ .debug_line    0x0000000000000000       0xef print/print1.o
+ .debug_str     0x0000000000000000      0x20c print/print1.o
+ .comment       0x0000000000000000       0x12 print/print1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 print/print1.o
+ .eh_frame      0x0000000000000000       0x38 print/print1.o
+ .debug_info    0x0000000000000000      0x1fe print/print2.o
+ .debug_abbrev  0x0000000000000000       0xcc print/print2.o
+ .debug_aranges
+                0x0000000000000000       0x20 print/print2.o
+ .debug_line    0x0000000000000000       0xee print/print2.o
+ .debug_str     0x0000000000000000      0x20c print/print2.o
+ .comment       0x0000000000000000       0x12 print/print2.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 print/print2.o
+ .eh_frame      0x0000000000000000       0x38 print/print2.o
+ .debug_info    0x0000000000000000      0x246 print/print3.o
+ .debug_abbrev  0x0000000000000000       0xf3 print/print3.o
+ .debug_loc     0x0000000000000000       0xc1 print/print3.o
+ .debug_aranges
+                0x0000000000000000       0x20 print/print3.o
+ .debug_line    0x0000000000000000       0xd5 print/print3.o
+ .debug_str     0x0000000000000000      0x22c print/print3.o
+ .comment       0x0000000000000000       0x12 print/print3.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 print/print3.o
+ .eh_frame      0x0000000000000000       0x40 print/print3.o
+ .debug_info    0x0000000000000000      0x2a9 print/print4.o
+ .debug_abbrev  0x0000000000000000       0xf1 print/print4.o
+ .debug_loc     0x0000000000000000       0xba print/print4.o
+ .debug_aranges
+                0x0000000000000000       0x20 print/print4.o
+ .debug_ranges  0x0000000000000000       0x40 print/print4.o
+ .debug_line    0x0000000000000000      0x1b2 print/print4.o
+ .debug_str     0x0000000000000000      0x220 print/print4.o
+ .comment       0x0000000000000000       0x12 print/print4.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 print/print4.o
+ .eh_frame      0x0000000000000000       0x68 print/print4.o
+ .debug_info    0x0000000000000000      0x1ad print/print5.o
+ .debug_abbrev  0x0000000000000000       0xcc print/print5.o
+ .debug_aranges
+                0x0000000000000000       0x20 print/print5.o
+ .debug_line    0x0000000000000000       0xa5 print/print5.o
+ .debug_str     0x0000000000000000      0x20c print/print5.o
+ .comment       0x0000000000000000       0x12 print/print5.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 print/print5.o
+ .eh_frame      0x0000000000000000       0x38 print/print5.o
+ .debug_info    0x0000000000000000      0x292 print/print6.o
+ .debug_abbrev  0x0000000000000000      0x13f print/print6.o
+ .debug_loc     0x0000000000000000       0x7e print/print6.o
+ .debug_aranges
+                0x0000000000000000       0x20 print/print6.o
+ .debug_ranges  0x0000000000000000       0x18 print/print6.o
+ .debug_line    0x0000000000000000      0x111 print/print6.o
+ .debug_str     0x0000000000000000      0x25b print/print6.o
+ .comment       0x0000000000000000       0x12 print/print6.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 print/print6.o
+ .eh_frame      0x0000000000000000       0x58 print/print6.o
+ .debug_info    0x0000000000000000      0x7c8 console/console1.o
+ .debug_abbrev  0x0000000000000000      0x169 console/console1.o
+ .debug_loc     0x0000000000000000      0x149 console/console1.o
+ .debug_aranges
+                0x0000000000000000       0x20 console/console1.o
+ .debug_ranges  0x0000000000000000       0x18 console/console1.o
+ .debug_line    0x0000000000000000      0x293 console/console1.o
+ .debug_str     0x0000000000000000      0x91a console/console1.o
+ .comment       0x0000000000000000       0x12 console/console1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 console/console1.o
+ .eh_frame      0x0000000000000000       0x48 console/console1.o
+ .debug_info    0x0000000000000000      0x321 stdio/stdio1.o
+ .debug_abbrev  0x0000000000000000      0x11a stdio/stdio1.o
+ .debug_loc     0x0000000000000000       0xd4 stdio/stdio1.o
+ .debug_aranges
+                0x0000000000000000       0x20 stdio/stdio1.o
+ .debug_ranges  0x0000000000000000       0x18 stdio/stdio1.o
+ .debug_line    0x0000000000000000      0x16f stdio/stdio1.o
+ .debug_str     0x0000000000000000      0x262 stdio/stdio1.o
+ .comment       0x0000000000000000       0x12 stdio/stdio1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 stdio/stdio1.o
+ .eh_frame      0x0000000000000000       0x68 stdio/stdio1.o
+ .debug_info    0x0000000000000000      0x298 stdio/stdio2.o
+ .debug_abbrev  0x0000000000000000      0x102 stdio/stdio2.o
+ .debug_loc     0x0000000000000000       0xe1 stdio/stdio2.o
+ .debug_aranges
+                0x0000000000000000       0x20 stdio/stdio2.o
+ .debug_ranges  0x0000000000000000       0x18 stdio/stdio2.o
+ .debug_line    0x0000000000000000      0x121 stdio/stdio2.o
+ .debug_str     0x0000000000000000      0x236 stdio/stdio2.o
+ .comment       0x0000000000000000       0x12 stdio/stdio2.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 stdio/stdio2.o
+ .eh_frame      0x0000000000000000       0x54 stdio/stdio2.o
+ .debug_info    0x0000000000000000      0x1f8 stdio/logger1.o
+ .debug_abbrev  0x0000000000000000       0xfa stdio/logger1.o
+ .debug_loc     0x0000000000000000       0x4f stdio/logger1.o
+ .debug_aranges
+                0x0000000000000000       0x20 stdio/logger1.o
+ .debug_ranges  0x0000000000000000       0x18 stdio/logger1.o
+ .debug_line    0x0000000000000000      0x109 stdio/logger1.o
+ .debug_str     0x0000000000000000      0x27d stdio/logger1.o
+ .comment       0x0000000000000000       0x12 stdio/logger1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 stdio/logger1.o
+ .eh_frame      0x0000000000000000       0x3c stdio/logger1.o
+ .debug_info    0x0000000000000000      0x4b7 stdio/logger2.o
+ .debug_abbrev  0x0000000000000000      0x135 stdio/logger2.o
+ .debug_loc     0x0000000000000000       0x89 stdio/logger2.o
+ .debug_aranges
+                0x0000000000000000       0x20 stdio/logger2.o
+ .debug_line    0x0000000000000000      0x197 stdio/logger2.o
+ .debug_str     0x0000000000000000      0x72a stdio/logger2.o
+ .comment       0x0000000000000000       0x12 stdio/logger2.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 stdio/logger2.o
+ .eh_frame      0x0000000000000000       0x38 stdio/logger2.o
+ .debug_info    0x0000000000000000      0x160 fault/fault1.o
+ .debug_abbrev  0x0000000000000000       0xae fault/fault1.o
+ .debug_aranges
+                0x0000000000000000       0x20 fault/fault1.o
+ .debug_line    0x0000000000000000       0x75 fault/fault1.o
+ .debug_str     0x0000000000000000      0x1fb fault/fault1.o
+ .comment       0x0000000000000000       0x12 fault/fault1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fault/fault1.o
+ .eh_frame      0x0000000000000000       0x38 fault/fault1.o
+ .debug_info    0x0000000000000000      0x1b1 fault/fault2.o
+ .debug_abbrev  0x0000000000000000       0xf1 fault/fault2.o
+ .debug_aranges
+                0x0000000000000000       0x20 fault/fault2.o
+ .debug_line    0x0000000000000000       0x76 fault/fault2.o
+ .debug_str     0x0000000000000000      0x214 fault/fault2.o
+ .comment       0x0000000000000000       0x12 fault/fault2.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fault/fault2.o
+ .eh_frame      0x0000000000000000       0x38 fault/fault2.o
+ .debug_info    0x0000000000000000      0x180 fault/fault3.o
+ .debug_abbrev  0x0000000000000000       0xcc fault/fault3.o
+ .debug_aranges
+                0x0000000000000000       0x20 fault/fault3.o
+ .debug_line    0x0000000000000000       0x7f fault/fault3.o
+ .debug_str     0x0000000000000000      0x20a fault/fault3.o
+ .comment       0x0000000000000000       0x12 fault/fault3.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fault/fault3.o
+ .eh_frame      0x0000000000000000       0x34 fault/fault3.o
+ .debug_info    0x0000000000000000      0x40d float/float1.o
+ .debug_abbrev  0x0000000000000000      0x1c1 float/float1.o
+ .debug_loc     0x0000000000000000      0x26a float/float1.o
+ .debug_aranges
+                0x0000000000000000       0x20 float/float1.o
+ .debug_ranges  0x0000000000000000       0x90 float/float1.o
+ .debug_line    0x0000000000000000      0x1a0 float/float1.o
+ .debug_str     0x0000000000000000      0x2a0 float/float1.o
+ .comment       0x0000000000000000       0x12 float/float1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 float/float1.o
+ .eh_frame      0x0000000000000000       0x6c float/float1.o
+ .debug_info    0x0000000000000000     0x20a9 float/float2.o
+ .debug_abbrev  0x0000000000000000      0x256 float/float2.o
+ .debug_loc     0x0000000000000000     0x17fc float/float2.o
+ .debug_aranges
+                0x0000000000000000       0x20 float/float2.o
+ .debug_ranges  0x0000000000000000      0x738 float/float2.o
+ .debug_line    0x0000000000000000      0x9ad float/float2.o
+ .debug_str     0x0000000000000000      0x661 float/float2.o
+ .comment       0x0000000000000000       0x12 float/float2.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 float/float2.o
+ .eh_frame      0x0000000000000000       0x50 float/float2.o
+ .debug_info    0x0000000000000000     0x18f4 float/softfloat1.o
+ .debug_abbrev  0x0000000000000000      0x27c float/softfloat1.o
+ .debug_loc     0x0000000000000000     0x1feb float/softfloat1.o
+ .debug_aranges
+                0x0000000000000000       0x20 float/softfloat1.o
+ .debug_ranges  0x0000000000000000      0x500 float/softfloat1.o
+ .debug_line    0x0000000000000000      0x53d float/softfloat1.o
+ .debug_str     0x0000000000000000      0x56d float/softfloat1.o
+ .comment       0x0000000000000000       0x12 float/softfloat1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 float/softfloat1.o
+ .eh_frame      0x0000000000000000      0x248 float/softfloat1.o
+ .debug_info    0x0000000000000000      0x785 vfs/vfs1.o
+ .debug_abbrev  0x0000000000000000      0x20c vfs/vfs1.o
+ .debug_loc     0x0000000000000000      0x1f4 vfs/vfs1.o
+ .debug_aranges
+                0x0000000000000000       0x20 vfs/vfs1.o
+ .debug_ranges  0x0000000000000000       0x88 vfs/vfs1.o
+ .debug_line    0x0000000000000000      0x28b vfs/vfs1.o
+ .debug_str     0x0000000000000000      0x7cb vfs/vfs1.o
+ .comment       0x0000000000000000       0x12 vfs/vfs1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 vfs/vfs1.o
+ .eh_frame      0x0000000000000000       0x58 vfs/vfs1.o
+ .debug_info    0x0000000000000000      0x4ac ipc/ping_pong.o
+ .debug_abbrev  0x0000000000000000      0x169 ipc/ping_pong.o
+ .debug_loc     0x0000000000000000       0x75 ipc/ping_pong.o
+ .debug_aranges
+                0x0000000000000000       0x20 ipc/ping_pong.o
+ .debug_ranges  0x0000000000000000       0x18 ipc/ping_pong.o
+ .debug_line    0x0000000000000000      0x195 ipc/ping_pong.o
+ .debug_str     0x0000000000000000      0x6f5 ipc/ping_pong.o
+ .comment       0x0000000000000000       0x12 ipc/ping_pong.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ipc/ping_pong.o
+ .eh_frame      0x0000000000000000       0x48 ipc/ping_pong.o
+ .debug_info    0x0000000000000000      0xa50 ipc/starve.o
+ .debug_abbrev  0x0000000000000000      0x18e ipc/starve.o
+ .debug_loc     0x0000000000000000       0x3c ipc/starve.o
+ .debug_aranges
+                0x0000000000000000       0x20 ipc/starve.o
+ .debug_line    0x0000000000000000      0x237 ipc/starve.o
+ .debug_str     0x0000000000000000      0xc36 ipc/starve.o
+ .comment       0x0000000000000000       0x12 ipc/starve.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ipc/starve.o
+ .eh_frame      0x0000000000000000       0x54 ipc/starve.o
+ .debug_info    0x0000000000000000      0x180 loop/loop1.o
+ .debug_abbrev  0x0000000000000000       0xcc loop/loop1.o
+ .debug_aranges
+                0x0000000000000000       0x20 loop/loop1.o
+ .debug_line    0x0000000000000000       0x7a loop/loop1.o
+ .debug_str     0x0000000000000000      0x209 loop/loop1.o
+ .comment       0x0000000000000000       0x12 loop/loop1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 loop/loop1.o
+ .eh_frame      0x0000000000000000       0x34 loop/loop1.o
+ .debug_info    0x0000000000000000      0xfe9 mm/common.o
+ .debug_abbrev  0x0000000000000000      0x382 mm/common.o
+ .debug_loc     0x0000000000000000      0xba1 mm/common.o
+ .debug_aranges
+                0x0000000000000000       0x20 mm/common.o
+ .debug_ranges  0x0000000000000000      0x368 mm/common.o
+ .debug_line    0x0000000000000000      0x3e2 mm/common.o
+ .debug_str     0x0000000000000000      0x488 mm/common.o
+ .comment       0x0000000000000000       0x12 mm/common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mm/common.o
+ .eh_frame      0x0000000000000000      0x200 mm/common.o
+ .debug_info    0x0000000000000000      0x618 mm/malloc1.o
+ .debug_abbrev  0x0000000000000000      0x1a9 mm/malloc1.o
+ .debug_loc     0x0000000000000000      0x1dd mm/malloc1.o
+ .debug_aranges
+                0x0000000000000000       0x20 mm/malloc1.o
+ .debug_ranges  0x0000000000000000      0x178 mm/malloc1.o
+ .debug_line    0x0000000000000000      0x17f mm/malloc1.o
+ .debug_str     0x0000000000000000      0x3e3 mm/malloc1.o
+ .comment       0x0000000000000000       0x12 mm/malloc1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mm/malloc1.o
+ .eh_frame      0x0000000000000000       0x58 mm/malloc1.o
+ .debug_info    0x0000000000000000      0x1c2 mm/malloc2.o
+ .debug_abbrev  0x0000000000000000       0xdb mm/malloc2.o
+ .debug_loc     0x0000000000000000       0x6a mm/malloc2.o
+ .debug_aranges
+                0x0000000000000000       0x20 mm/malloc2.o
+ .debug_line    0x0000000000000000       0x9a mm/malloc2.o
+ .debug_str     0x0000000000000000      0x212 mm/malloc2.o
+ .comment       0x0000000000000000       0x12 mm/malloc2.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mm/malloc2.o
+ .eh_frame      0x0000000000000000       0x44 mm/malloc2.o
+ .debug_info    0x0000000000000000      0x6b0 mm/malloc3.o
+ .debug_abbrev  0x0000000000000000      0x1a9 mm/malloc3.o
+ .debug_loc     0x0000000000000000      0x21d mm/malloc3.o
+ .debug_aranges
+                0x0000000000000000       0x20 mm/malloc3.o
+ .debug_ranges  0x0000000000000000      0x198 mm/malloc3.o
+ .debug_line    0x0000000000000000      0x191 mm/malloc3.o
+ .debug_str     0x0000000000000000      0x406 mm/malloc3.o
+ .comment       0x0000000000000000       0x12 mm/malloc3.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mm/malloc3.o
+ .eh_frame      0x0000000000000000       0x58 mm/malloc3.o
+ .debug_info    0x0000000000000000      0x507 mm/mapping1.o
+ .debug_abbrev  0x0000000000000000      0x182 mm/mapping1.o
+ .debug_loc     0x0000000000000000      0x4dc mm/mapping1.o
+ .debug_aranges
+                0x0000000000000000       0x20 mm/mapping1.o
+ .debug_ranges  0x0000000000000000      0x150 mm/mapping1.o
+ .debug_line    0x0000000000000000      0x148 mm/mapping1.o
+ .debug_str     0x0000000000000000      0x2e8 mm/mapping1.o
+ .comment       0x0000000000000000       0x12 mm/mapping1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mm/mapping1.o
+ .eh_frame      0x0000000000000000       0x48 mm/mapping1.o
+ .debug_info    0x0000000000000000      0x858 mm/pager1.o
+ .debug_abbrev  0x0000000000000000      0x1fc mm/pager1.o
+ .debug_loc     0x0000000000000000      0x10c mm/pager1.o
+ .debug_aranges
+                0x0000000000000000       0x20 mm/pager1.o
+ .debug_ranges  0x0000000000000000       0x40 mm/pager1.o
+ .debug_line    0x0000000000000000      0x1ea mm/pager1.o
+ .debug_str     0x0000000000000000      0xc22 mm/pager1.o
+ .comment       0x0000000000000000       0x12 mm/pager1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 mm/pager1.o
+ .eh_frame      0x0000000000000000       0x50 mm/pager1.o
+ .debug_info    0x0000000000000000      0x747 hw/misc/virtchar1.o
+ .debug_abbrev  0x0000000000000000      0x1a9 hw/misc/virtchar1.o
+ .debug_loc     0x0000000000000000      0x16a hw/misc/virtchar1.o
+ .debug_aranges
+                0x0000000000000000       0x20 hw/misc/virtchar1.o
+ .debug_ranges  0x0000000000000000       0x30 hw/misc/virtchar1.o
+ .debug_line    0x0000000000000000      0x24a hw/misc/virtchar1.o
+ .debug_str     0x0000000000000000      0xacd hw/misc/virtchar1.o
+ .comment       0x0000000000000000       0x12 hw/misc/virtchar1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hw/misc/virtchar1.o
+ .eh_frame      0x0000000000000000       0x68 hw/misc/virtchar1.o
+ .debug_info    0x0000000000000000      0x951 hw/serial/serial1.o
+ .debug_abbrev  0x0000000000000000      0x183 hw/serial/serial1.o
+ .debug_loc     0x0000000000000000      0x2eb hw/serial/serial1.o
+ .debug_aranges
+                0x0000000000000000       0x20 hw/serial/serial1.o
+ .debug_ranges  0x0000000000000000       0x50 hw/serial/serial1.o
+ .debug_line    0x0000000000000000      0x2cb hw/serial/serial1.o
+ .debug_str     0x0000000000000000      0xc1b hw/serial/serial1.o
+ .comment       0x0000000000000000       0x12 hw/serial/serial1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 hw/serial/serial1.o
+ .eh_frame      0x0000000000000000       0x58 hw/serial/serial1.o
+ .debug_info    0x0000000000000000      0x91f ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_abbrev  0x0000000000000000      0x201 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_loc     0x0000000000000000     0x151c ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_ranges  0x0000000000000000       0x58 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_line    0x0000000000000000      0x3bb ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_str     0x0000000000000000      0x342 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .eh_frame      0x0000000000000000      0x274 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .debug_info    0x0000000000000000      0x94b ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_abbrev  0x0000000000000000      0x224 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_loc     0x0000000000000000     0x1766 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_ranges  0x0000000000000000       0x50 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_line    0x0000000000000000      0x3e6 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_str     0x0000000000000000      0x355 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .eh_frame      0x0000000000000000      0x21c ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .debug_info    0x0000000000000000      0xc4e ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_abbrev  0x0000000000000000      0x222 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_loc     0x0000000000000000      0xfec ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_ranges  0x0000000000000000       0x60 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_line    0x0000000000000000      0x43e ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_str     0x0000000000000000      0x462 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .eh_frame      0x0000000000000000      0x27c ../../lib/softfloat/libsoftfloat.a(div.o)
+ .debug_info    0x0000000000000000      0x8d6 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_abbrev  0x0000000000000000      0x224 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_loc     0x0000000000000000      0xdb2 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_ranges  0x0000000000000000       0x68 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_line    0x0000000000000000      0x37c ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_str     0x0000000000000000      0x3ad ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .eh_frame      0x0000000000000000      0x234 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .debug_info    0x0000000000000000     0x1aed ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_abbrev  0x0000000000000000      0x286 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_loc     0x0000000000000000     0x1a3b ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_ranges  0x0000000000000000      0x7d8 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_line    0x0000000000000000      0x9af ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_str     0x0000000000000000      0x494 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .eh_frame      0x0000000000000000      0xa04 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .debug_info    0x0000000000000000     0x235b ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_abbrev  0x0000000000000000      0x315 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_loc     0x0000000000000000     0x3186 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_ranges  0x0000000000000000      0x430 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_line    0x0000000000000000      0xa44 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_str     0x0000000000000000      0x752 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .eh_frame      0x0000000000000000      0xd38 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .debug_info    0x0000000000000000     0x1426 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_abbrev  0x0000000000000000      0x33f ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_loc     0x0000000000000000     0x1bf8 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_ranges  0x0000000000000000      0x390 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_line    0x0000000000000000      0x583 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_str     0x0000000000000000      0x3a4 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .comment       0x0000000000000000       0x12 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .eh_frame      0x0000000000000000      0x454 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .debug_info    0x0000000000000000      0x9f8 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_abbrev  0x0000000000000000      0x243 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_loc     0x0000000000000000      0x304 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_ranges  0x0000000000000000       0x40 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_line    0x0000000000000000      0x29f ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .debug_str     0x0000000000000000      0xa95 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .comment       0x0000000000000000       0x12 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/drv/libdrv.a(remote_char_dev.o)
+ .eh_frame      0x0000000000000000      0x120 ../../lib/drv/libdrv.a(remote_char_dev.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001140    0x19b30
+ *(.text .text.*)
+ .text          0x0000000000001140        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001140        0x0 tester.o
+ .text.startup  0x0000000000001140      0x265 tester.o
+                0x0000000000001140                main
+ *fill*         0x00000000000013a5        0xb 
+ .text          0x00000000000013b0      0x143 util.o
+                0x00000000000013b0                assert_eq_fn_uint8_t
+                0x0000000000001400                assert_eq_fn_uint16_t
+                0x0000000000001450                assert_eq_fn_uint32_t
+                0x0000000000001490                assert_eq_fn_uint64_t
+ *fill*         0x00000000000014f3        0xd 
+ .text          0x0000000000001500      0x1da thread/thread1.o
+                0x0000000000001550                test_thread1
+ *fill*         0x00000000000016da        0x6 
+ .text          0x00000000000016e0       0xc3 thread/setjmp1.o
+                0x0000000000001790                test_setjmp1
+ *fill*         0x00000000000017a3        0xd 
+ .text          0x00000000000017b0      0x216 print/print1.o
+                0x00000000000017b0                test_print1
+ *fill*         0x00000000000019c6        0xa 
+ .text          0x00000000000019d0      0x22b print/print2.o
+                0x00000000000019d0                test_print2
+ *fill*         0x0000000000001bfb        0x5 
+ .text          0x0000000000001c00      0x205 print/print3.o
+                0x0000000000001c00                test_print3
+ *fill*         0x0000000000001e05        0xb 
+ .text          0x0000000000001e10      0x496 print/print4.o
+                0x0000000000001e10                test_print4
+ *fill*         0x00000000000022a6        0xa 
+ .text          0x00000000000022b0       0xd0 print/print5.o
+                0x00000000000022b0                test_print5
+ .text          0x0000000000002380      0xc41 print/print6.o
+                0x0000000000002380                test_print6
+ *fill*         0x0000000000002fc1        0xf 
+ .text          0x0000000000002fd0      0x31e console/console1.o
+                0x0000000000002fd0                test_console1
+ *fill*         0x00000000000032ee        0x2 
+ .text          0x00000000000032f0      0x342 stdio/stdio1.o
+                0x00000000000032f0                test_stdio1
+ *fill*         0x0000000000003632        0xe 
+ .text          0x0000000000003640      0x2f2 stdio/stdio2.o
+                0x0000000000003640                test_stdio2
+ *fill*         0x0000000000003932        0xe 
+ .text          0x0000000000003940       0x26 stdio/logger1.o
+                0x0000000000003940                test_logger1
+ *fill*         0x0000000000003966        0xa 
+ .text          0x0000000000003970       0xdf stdio/logger2.o
+                0x0000000000003970                test_logger2
+ *fill*         0x0000000000003a4f        0x1 
+ .text          0x0000000000003a50       0x14 fault/fault1.o
+                0x0000000000003a50                test_fault1
+ *fill*         0x0000000000003a64        0xc 
+ .text          0x0000000000003a70       0x2f fault/fault2.o
+                0x0000000000003a70                test_fault2
+ *fill*         0x0000000000003a9f        0x1 
+ .text          0x0000000000003aa0        0xb fault/fault3.o
+                0x0000000000003aa0                test_fault3
+ *fill*         0x0000000000003aab        0x5 
+ .text          0x0000000000003ab0      0x1e1 float/float1.o
+                0x0000000000003b40                test_float1
+ *fill*         0x0000000000003c91        0xf 
+ .text          0x0000000000003ca0     0x1a01 float/float2.o
+                0x0000000000003ca0                test_float2
+ *fill*         0x00000000000056a1        0xf 
+ .text          0x00000000000056b0     0x106b float/softfloat1.o
+                0x0000000000005ad0                test_softfloat1
+ *fill*         0x000000000000671b        0x5 
+ .text          0x0000000000006720      0x492 vfs/vfs1.o
+                0x0000000000006720                test_vfs1
+ *fill*         0x0000000000006bb2        0xe 
+ .text          0x0000000000006bc0      0x114 ipc/ping_pong.o
+                0x0000000000006bc0                test_ping_pong
+ *fill*         0x0000000000006cd4        0xc 
+ .text          0x0000000000006ce0      0x145 ipc/starve.o
+                0x0000000000006ce0                test_starve_ipc
+ *fill*         0x0000000000006e25        0xb 
+ .text          0x0000000000006e30       0x26 loop/loop1.o
+                0x0000000000006e30                test_loop1
+ *fill*         0x0000000000006e56        0xa 
+ .text          0x0000000000006e60      0x8f1 mm/common.o
+                0x0000000000006fe0                init_mem
+                0x0000000000007000                done_mem
+                0x00000000000071e0                alloc_block
+                0x00000000000072d0                free_block
+                0x00000000000073d0                fill_block
+                0x0000000000007450                check_block
+                0x00000000000074d0                get_random_block
+                0x0000000000007580                map_area
+                0x0000000000007640                unmap_area
+                0x00000000000076e0                fill_area
+ *fill*         0x0000000000007751        0xf 
+ .text          0x0000000000007760      0x325 mm/malloc1.o
+                0x0000000000007760                test_malloc1
+ *fill*         0x0000000000007a85        0xb 
+ .text          0x0000000000007a90       0x9a mm/malloc2.o
+                0x0000000000007a90                test_malloc2
+ *fill*         0x0000000000007b2a        0x6 
+ .text          0x0000000000007b30      0x3d8 mm/malloc3.o
+                0x0000000000007b30                test_malloc3
+ *fill*         0x0000000000007f08        0x8 
+ .text          0x0000000000007f10      0x45f mm/mapping1.o
+                0x0000000000007f10                test_mapping1
+ *fill*         0x000000000000836f        0x1 
+ .text          0x0000000000008370      0x1ae mm/pager1.o
+                0x0000000000008370                test_pager1
+ *fill*         0x000000000000851e        0x2 
+ .text          0x0000000000008520      0x293 hw/misc/virtchar1.o
+                0x0000000000008520                test_virtchar1
+ *fill*         0x00000000000087b3        0xd 
+ .text          0x00000000000087c0      0x514 hw/serial/serial1.o
+                0x00000000000087c0                test_serial1
+ *fill*         0x0000000000008cd4        0xc 
+ .text          0x0000000000008ce0     0x19fa ../../lib/softfloat/libsoftfloat.a(add.o)
+                0x0000000000008ce0                add_float32
+                0x0000000000008f60                add_float64
+                0x0000000000009260                add_float128
+                0x0000000000009a00                __addsf3
+                0x0000000000009d10                __aeabi_fadd
+                0x000000000000a020                __adddf3
+                0x000000000000a380                __aeabi_dadd
+ *fill*         0x000000000000a6da        0x6 
+ .text          0x000000000000a6e0     0x1ab1 ../../lib/softfloat/libsoftfloat.a(sub.o)
+                0x000000000000a6e0                sub_float32
+                0x000000000000a9a0                sub_float64
+                0x000000000000ad60                sub_float128
+                0x000000000000b4e0                __subsf3
+                0x000000000000b7a0                __aeabi_fsub
+                0x000000000000ba60                __subdf3
+                0x000000000000be00                __aeabi_dsub
+ *fill*         0x000000000000c191        0xf 
+ .text          0x000000000000c1a0     0x2216 ../../lib/softfloat/libsoftfloat.a(div.o)
+                0x000000000000c1a0                div_float32
+                0x000000000000c500                div_float64
+                0x000000000000c910                div_float128
+                0x000000000000d420                __divsf3
+                0x000000000000d760                __aeabi_fdiv
+                0x000000000000daa0                __divdf3
+                0x000000000000df30                __aeabi_ddiv
+ *fill*         0x000000000000e3b6        0xa 
+ .text          0x000000000000e3c0     0x16ac ../../lib/softfloat/libsoftfloat.a(mul.o)
+                0x000000000000e3c0                mul_float32
+                0x000000000000e780                mul_float64
+                0x000000000000ea60                mul_float128
+                0x000000000000ef10                __mulsf3
+                0x000000000000f210                __aeabi_fmul
+                0x000000000000f510                __muldf3
+                0x000000000000f7c0                __aeabi_dmul
+ *fill*         0x000000000000fa6c        0x4 
+ .text          0x000000000000fa70     0x1faf ../../lib/softfloat/libsoftfloat.a(comparison.o)
+                0x000000000000fa70                is_float32_nan
+                0x000000000000fab0                is_float64_nan
+                0x000000000000faf0                is_float128_nan
+                0x000000000000fb40                is_float32_signan
+                0x000000000000fb80                is_float64_signan
+                0x000000000000fbd0                is_float128_signan
+                0x000000000000fc40                is_float32_infinity
+                0x000000000000fc60                is_float64_infinity
+                0x000000000000fca0                is_float128_infinity
+                0x000000000000fcf0                is_float32_zero
+                0x000000000000fd10                is_float64_zero
+                0x000000000000fd30                is_float128_zero
+                0x000000000000fd80                is_float32_eq
+                0x000000000000fdc0                is_float64_eq
+                0x000000000000fe10                is_float128_eq
+                0x000000000000fef0                is_float32_lt
+                0x000000000000ff70                is_float64_lt
+                0x0000000000010030                is_float128_lt
+                0x0000000000010170                is_float32_gt
+                0x00000000000101f0                is_float64_gt
+                0x00000000000102b0                is_float128_gt
+                0x00000000000103f0                __gtsf2
+                0x00000000000104d0                __gesf2
+                0x00000000000105e0                __ltsf2
+                0x00000000000106b0                __lesf2
+                0x00000000000107b0                __eqsf2
+                0x0000000000010820                __nesf2
+                0x0000000000010890                __cmpsf2
+                0x0000000000010990                __unordsf2
+                0x00000000000109e0                __aeabi_fcmpgt
+                0x0000000000010ac0                __aeabi_fcmplt
+                0x0000000000010b90                __aeabi_fcmpge
+                0x0000000000010ca0                __aeabi_fcmpeq
+                0x0000000000010d10                __gtdf2
+                0x0000000000010e30                __gedf2
+                0x0000000000010f70                __ltdf2
+                0x0000000000011090                __ledf2
+                0x00000000000111c0                __eqdf2
+                0x0000000000011270                __nedf2
+                0x0000000000011320                __cmpdf2
+                0x0000000000011450                __unorddf2
+                0x00000000000114c0                __aeabi_dcmplt
+                0x00000000000115e0                __aeabi_dcmpeq
+                0x0000000000011690                __aeabi_dcmpgt
+                0x00000000000117b0                __aeabi_dcmpge
+                0x00000000000118f0                __aeabi_dcmple
+ *fill*         0x0000000000011a1f        0x1 
+ .text          0x0000000000011a20     0x3f4e ../../lib/softfloat/libsoftfloat.a(conversion.o)
+                0x0000000000011b30                float32_to_float64
+                0x0000000000011cb0                float32_to_float128
+                0x0000000000011ef0                float64_to_float128
+                0x0000000000012120                float64_to_float32
+                0x00000000000122f0                float128_to_float32
+                0x0000000000012540                float128_to_float64
+                0x00000000000127b0                float32_to_uint32
+                0x0000000000012850                float32_to_int32
+                0x00000000000128e0                float32_to_uint64
+                0x00000000000129a0                float32_to_int64
+                0x0000000000012a40                float64_to_uint32
+                0x0000000000012b10                float64_to_int32
+                0x0000000000012be0                float64_to_uint64
+                0x0000000000012cc0                float64_to_int64
+                0x0000000000012da0                float128_to_uint32
+                0x0000000000012e30                float128_to_int32
+                0x0000000000012ec0                float128_to_uint64
+                0x0000000000012f50                float128_to_int64
+                0x0000000000012fd0                uint32_to_float32
+                0x0000000000013080                int32_to_float32
+                0x0000000000013170                uint64_to_float32
+                0x0000000000013240                int64_to_float32
+                0x0000000000013360                uint32_to_float64
+                0x0000000000013430                int32_to_float64
+                0x0000000000013540                uint64_to_float64
+                0x0000000000013650                int64_to_float64
+                0x00000000000137d0                uint32_to_float128
+                0x00000000000138f0                int32_to_float128
+                0x0000000000013a50                uint64_to_float128
+                0x0000000000013b70                int64_to_float128
+                0x0000000000013cf0                __floatsisf
+                0x0000000000013dd0                __floatdisf
+                0x0000000000013ee0                __floatunsisf
+                0x0000000000013f60                __floatundisf
+                0x0000000000014000                __fixsfsi
+                0x00000000000140a0                __fixsfdi
+                0x0000000000014150                __fixunssfsi
+                0x00000000000141f0                __fixunssfdi
+                0x00000000000142b0                __aeabi_f2iz
+                0x0000000000014350                __aeabi_f2uiz
+                0x00000000000143f0                __aeabi_i2f
+                0x00000000000144d0                __aeabi_l2f
+                0x00000000000145e0                __aeabi_ui2f
+                0x0000000000014660                __aeabi_ul2f
+                0x0000000000014700                __floatsidf
+                0x00000000000147e0                __floatdidf
+                0x0000000000014940                __floatunsidf
+                0x0000000000014a10                __floatundidf
+                0x0000000000014af0                __fixunsdfsi
+                0x0000000000014bc0                __fixunsdfdi
+                0x0000000000014cb0                __fixdfsi
+                0x0000000000014d80                __fixdfdi
+                0x0000000000014e70                __aeabi_i2d
+                0x0000000000014f50                __aeabi_ui2d
+                0x0000000000015020                __aeabi_l2d
+                0x0000000000015180                __aeabi_d2iz
+                0x0000000000015250                __aeabi_d2lz
+                0x0000000000015340                __aeabi_d2uiz
+                0x0000000000015410                __truncdfsf2
+                0x0000000000015570                __extendsfdf2
+                0x00000000000156c0                __aeabi_f2d
+                0x0000000000015810                __aeabi_d2f
+ *fill*         0x000000000001596e        0x2 
+ .text          0x0000000000015970     0x14dc ../../lib/softfloat/libsoftfloat.a(common.o)
+                0x0000000000015970                finish_float64
+                0x0000000000015b40                finish_float128
+                0x0000000000015e40                count_zeroes8
+                0x0000000000015e60                count_zeroes32
+                0x0000000000015ed0                count_zeroes64
+                0x0000000000015fe0                round_float32
+                0x0000000000016020                round_float64
+                0x0000000000016090                round_float128
+                0x00000000000161a0                lshift128
+                0x00000000000162b0                rshift128
+                0x00000000000163c0                and128
+                0x0000000000016400                or128
+                0x0000000000016440                xor128
+                0x0000000000016480                not128
+                0x00000000000164b0                eq128
+                0x00000000000164f0                le128
+                0x0000000000016570                lt128
+                0x00000000000165f0                add128
+                0x0000000000016660                sub128
+                0x00000000000166e0                mul64
+                0x00000000000167c0                mul128
+                0x0000000000016c60                div128est
+ *fill*         0x0000000000016e4c        0x4 
+ .text          0x0000000000016e50      0x341 ../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x0000000000017040                char_dev_read
+                0x00000000000170f0                char_dev_write
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000017191      0x37c tester.o
+                                        0x384 (size before relaxing)
+ *fill*         0x000000000001750d        0x3 
+ .rodata.str1.4
+                0x0000000000017510       0xb1 tester.o
+ *fill*         0x00000000000175c1        0x3 
+ .rodata.str1.4
+                0x00000000000175c4       0xe1 util.o
+ .rodata.str1.1
+                0x00000000000176a5       0x4b thread/thread1.o
+                                         0x4f (size before relaxing)
+ .rodata.str1.4
+                0x00000000000176f0       0x23 thread/thread1.o
+ *fill*         0x0000000000017713        0x1 
+ .rodata.str1.4
+                0x0000000000017714       0x98 thread/setjmp1.o
+ .rodata.str1.4
+                0x00000000000177ac      0x11a print/print1.o
+ .rodata.str1.1
+                0x00000000000178c6       0xd1 print/print1.o
+                                         0xd6 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000017997       0x4b print/print2.o
+ *fill*         0x00000000000179e2        0x2 
+ .rodata.str1.4
+                0x00000000000179e4      0x2d7 print/print2.o
+ *fill*         0x0000000000017cbb        0x1 
+ .rodata.str1.4
+                0x0000000000017cbc      0x327 print/print3.o
+ .rodata.str1.1
+                0x0000000000017fe3        0xa print/print3.o
+                                          0xf (size before relaxing)
+ *fill*         0x0000000000017fed        0x3 
+ .rodata.str1.4
+                0x0000000000017ff0      0x2c3 print/print4.o
+ .rodata.str1.1
+                0x00000000000182b3       0xd8 print/print4.o
+                                         0xdd (size before relaxing)
+ *fill*         0x000000000001838b        0x1 
+ .rodata.str4.4
+                0x000000000001838c      0x45c print/print4.o
+ .rodata.str1.1
+                0x00000000000187e8       0x51 print/print5.o
+ *fill*         0x0000000000018839        0x3 
+ .rodata.str1.4
+                0x000000000001883c       0xb6 print/print5.o
+ *fill*         0x00000000000188f2        0x2 
+ .rodata.str1.4
+                0x00000000000188f4       0x90 print/print6.o
+ .rodata.str1.1
+                0x0000000000018984      0x3b1 print/print6.o
+                                        0x3cc (size before relaxing)
+ *fill*         0x0000000000018d35        0x3 
+ .rodata.cst4   0x0000000000018d38       0x18 print/print6.o
+ .rodata.cst8   0x0000000000018d50       0x30 print/print6.o
+ .rodata.str1.1
+                0x0000000000018d80       0xb2 console/console1.o
+                                         0xb4 (size before relaxing)
+ *fill*         0x0000000000018e32        0xe 
+ .rodata        0x0000000000018e40       0x20 console/console1.o
+ .rodata.str1.1
+                0x0000000000018e60       0xdb stdio/stdio1.o
+                                         0xe9 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000018f3b       0x91 stdio/stdio2.o
+                                         0xd8 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000018fcc       0x1a stdio/logger1.o
+ .rodata.str1.1
+                0x0000000000018fe6       0x40 stdio/logger2.o
+ *fill*         0x0000000000019026        0x2 
+ .rodata.str1.4
+                0x0000000000019028       0x53 stdio/logger2.o
+ .rodata.str1.1
+                0x000000000001907b       0x17 fault/fault1.o
+ .rodata.str1.1
+                0x0000000000019092       0x21 fault/fault2.o
+ .rodata.str1.1
+                0x00000000000190b3        0xc float/float1.o
+                                         0x52 (size before relaxing)
+ *fill*         0x00000000000190bf        0x1 
+ .rodata.cst4   0x00000000000190c0        0x4 float/float1.o
+ .rodata.str1.1
+                0x00000000000190c4       0x1b float/float2.o
+ *fill*         0x00000000000190df        0x1 
+ .rodata.str1.4
+                0x00000000000190e0      0x61f float/float2.o
+ *fill*         0x00000000000196ff        0x1 
+ .rodata        0x0000000000019700      0x710 float/float2.o
+ .rodata.cst8   0x0000000000019e10       0x20 float/float2.o
+ .rodata.cst4   0x0000000000019e30        0x4 float/float2.o
+ .rodata.str1.4
+                0x0000000000019e34       0xb0 float/softfloat1.o
+ .rodata.str1.1
+                0x0000000000019ee4       0xf0 float/softfloat1.o
+                                         0xf4 (size before relaxing)
+ *fill*         0x0000000000019fd4        0xc 
+ .rodata        0x0000000000019fe0       0xc8 float/softfloat1.o
+ .rodata.cst4   0x000000000001a0a8        0x4 float/softfloat1.o
+                                          0x8 (size before relaxing)
+ .rodata.str1.1
+                0x000000000001a0ac      0x1b4 vfs/vfs1.o
+                                        0x1ba (size before relaxing)
+ .rodata.str1.1
+                0x000000000001a260       0x1c ipc/ping_pong.o
+                                         0x1e (size before relaxing)
+ .rodata.str1.4
+                0x000000000001a27c       0x5d ipc/ping_pong.o
+ *fill*         0x000000000001a2d9        0x3 
+ .rodata.str1.4
+                0x000000000001a2dc       0x89 ipc/starve.o
+ .rodata.str1.1
+                0x000000000001a365       0x2e ipc/starve.o
+ .rodata.str1.1
+                0x000000000001a393        0xb loop/loop1.o
+ .rodata.str1.1
+                0x000000000001a39e       0x66 mm/common.o
+ .rodata.str1.4
+                0x000000000001a404       0xd8 mm/common.o
+ .rodata.str1.1
+                0x000000000001a4dc       0xec mm/malloc1.o
+                                         0xf8 (size before relaxing)
+ .rodata.str1.4
+                0x000000000001a5c8       0x63 mm/malloc2.o
+ .rodata.str1.1
+                0x000000000001a62b        0x5 mm/malloc2.o
+ .rodata.str1.1
+                0x000000000001a630        0x5 mm/malloc3.o
+                                         0xff (size before relaxing)
+ *fill*         0x000000000001a635        0x3 
+ .rodata.str1.4
+                0x000000000001a638       0xde mm/mapping1.o
+ .rodata.str1.1
+                0x000000000001a716       0x51 mm/mapping1.o
+ .rodata.str1.1
+                0x000000000001a767       0x46 mm/pager1.o
+                                         0x72 (size before relaxing)
+ .rodata.str1.4
+                0x000000000001a7ad       0x23 mm/pager1.o
+ *fill*         0x000000000001a7ad        0x3 
+ .rodata        0x000000000001a7b0        0xd mm/pager1.o
+                0x000000000001a7b0                text
+ .rodata.str1.1
+                0x000000000001a7bd       0xc4 hw/misc/virtchar1.o
+ *fill*         0x000000000001a881        0x3 
+ .rodata.str1.4
+                0x000000000001a884       0xda hw/misc/virtchar1.o
+ *fill*         0x000000000001a95e        0x2 
+ .rodata.str1.4
+                0x000000000001a960      0x274 hw/serial/serial1.o
+                                        0x271 (size before relaxing)
+ .rodata.str1.1
+                0x000000000001abd4       0x7b hw/serial/serial1.o
+                                         0x8e (size before relaxing)
+ *fill*         0x000000000001ac4f        0x1 
+ .rodata.cst4   0x000000000001ac50        0x4 ../../lib/softfloat/libsoftfloat.a(div.o)
+ *fill*         0x000000000001ac54        0x4 
+ .rodata.cst8   0x000000000001ac58        0x8 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .rodata.cst4   0x000000000001ac60        0x4 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .rodata.cst8   0x000000000001ac60        0x8 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .rodata        0x000000000001ac60       0x10 ../../lib/drv/libdrv.a(remote_char_dev.o)
+                0x000000000001ac60                remote_char_dev_iface
+
+.rel.plt        0x000000000001ac70      0x360
+ *(.rel.plt)
+ .rel.plt       0x000000000001ac70      0x360 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x000000000001afd0       0x20
+ *(.rel.*)
+ .rel.got       0x000000000001afd0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x000000000001afd0       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x000000000001aff0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x000000000001aff0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x000000000001aff0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x000000000001aff0      0x6d0
+ *(.plt)
+ .plt           0x000000000001aff0      0x6d0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000001b000                longjmp
+                0x000000000001b010                putchar
+                0x000000000001b020                __main
+                0x000000000001b030                cos_f64
+                0x000000000001b040                thread_detach
+                0x000000000001b050                loc_service_connect
+                0x000000000001b060                float32_log
+                0x000000000001b070                printf
+                0x000000000001b080                async_hangup
+                0x000000000001b090                random
+                0x000000000001b0a0                async_wait_for
+                0x000000000001b0b0                snprintf
+                0x000000000001b0c0                context_save
+                0x000000000001b0d0                float32_exp
+                0x000000000001b0e0                log_init
+                0x000000000001b0f0                async_data_write_start
+                0x000000000001b100                float32_ceil
+                0x000000000001b110                float32_floor
+                0x000000000001b120                __errno
+                0x000000000001b130                float64_log10
+                0x000000000001b140                usleep
+                0x000000000001b150                service_connect_blocking
+                0x000000000001b160                async_data_read_finalize
+                0x000000000001b170                tv_sub_diff
+                0x000000000001b180                float64_atan
+                0x000000000001b190                float32_cosh
+                0x000000000001b1a0                malloc
+                0x000000000001b1b0                sleep
+                0x000000000001b1c0                float32_log10
+                0x000000000001b1d0                console_set_color
+                0x000000000001b1e0                ns_ping
+                0x000000000001b1f0                float32_sqrt
+                0x000000000001b200                async_req_fast
+                0x000000000001b210                float32_sinh
+                0x000000000001b220                rmdir
+                0x000000000001b230                trunc_f64
+                0x000000000001b240                loc_service_get_id
+                0x000000000001b250                readdir
+                0x000000000001b260                as_area_destroy
+                0x000000000001b270                async_answer_0
+                0x000000000001b280                async_send_fast
+                0x000000000001b290                log_msg
+                0x000000000001b2a0                stacktrace_print
+                0x000000000001b2b0                vfs_fd_session
+                0x000000000001b2c0                lseek
+                0x000000000001b2d0                __udivdi3
+                0x000000000001b2e0                abort
+                0x000000000001b2f0                console_init
+                0x000000000001b300                async_exchange_end
+                0x000000000001b310                rename
+                0x000000000001b320                write
+                0x000000000001b330                fprintf
+                0x000000000001b340                heap_check
+                0x000000000001b350                float64_fabs
+                0x000000000001b360                fseek
+                0x000000000001b370                float32_atan
+                0x000000000001b380                float32_tan
+                0x000000000001b390                ferror
+                0x000000000001b3a0                read
+                0x000000000001b3b0                as_get_physical_mapping
+                0x000000000001b3c0                unlink
+                0x000000000001b3d0                str_size_t
+                0x000000000001b3e0                float32_tanh
+                0x000000000001b3f0                str_cmp
+                0x000000000001b400                float64_tan
+                0x000000000001b410                fread
+                0x000000000001b420                console_set_style
+                0x000000000001b430                gettimeofday
+                0x000000000001b440                fopen
+                0x000000000001b450                async_data_read_receive
+                0x000000000001b460                sin_f64
+                0x000000000001b470                async_data_read_start
+                0x000000000001b480                fclose
+                0x000000000001b490                float64_log
+                0x000000000001b4a0                opendir
+                0x000000000001b4b0                async_as_area_create
+                0x000000000001b4c0                async_usleep
+                0x000000000001b4d0                fgetc
+                0x000000000001b4e0                console_flush
+                0x000000000001b4f0                float64_sqrt
+                0x000000000001b500                float64_sinh
+                0x000000000001b510                str_size
+                0x000000000001b520                float64_exp
+                0x000000000001b530                str_length
+                0x000000000001b540                async_answer_1
+                0x000000000001b550                async_exchange_begin
+                0x000000000001b560                str_error
+                0x000000000001b570                float64_tanh
+                0x000000000001b580                async_data_write_finalize
+                0x000000000001b590                console_set_rgb_color
+                0x000000000001b5a0                float32_fabs
+                0x000000000001b5b0                float64_ceil
+                0x000000000001b5c0                as_area_create
+                0x000000000001b5d0                __syscall_fast
+                0x000000000001b5e0                float64_cosh
+                0x000000000001b5f0                open
+                0x000000000001b600                float64_floor
+                0x000000000001b610                thread_create
+                0x000000000001b620                console_done
+                0x000000000001b630                log_create
+                0x000000000001b640                closedir
+                0x000000000001b650                console_get_event_timeout
+                0x000000000001b660                async_data_write_receive
+                0x000000000001b670                mkdir
+                0x000000000001b680                close
+                0x000000000001b690                thread_get_id
+                0x000000000001b6a0                free
+                0x000000000001b6b0                log_level_str
+
+.dynsym         0x000000000001b6c0      0x730
+ *(.dynsym)
+ .dynsym        0x000000000001b6c0      0x730 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x000000000001bdf0      0x565
+ *(.dynstr)
+ .dynstr        0x000000000001bdf0      0x565 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x000000000001c358      0x358
+ *(.hash)
+ .hash          0x000000000001c358      0x358 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x000000000001c6b0       0x13
+ *(.interp)
+ .interp        0x000000000001c6b0       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000001d6c3                . = (. + 0x1000)
+
+.dynamic        0x000000000001d6c4       0xb0
+ *(.dynamic)
+ .dynamic       0x000000000001d6c4       0xb0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000001d6c4                _DYNAMIC
+
+.data           0x000000000001d780      0x620
+ *(.data)
+ .data          0x000000000001d780        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x000000000001d780      0x1f0 tester.o
+                0x000000000001d780                tests
+ .data          0x000000000001d970        0x0 util.o
+ .data          0x000000000001d970        0x0 thread/thread1.o
+ .data          0x000000000001d970        0x0 thread/setjmp1.o
+ .data          0x000000000001d970        0x0 print/print1.o
+ .data          0x000000000001d970        0x0 print/print2.o
+ .data          0x000000000001d970        0x0 print/print3.o
+ .data          0x000000000001d970        0x0 print/print4.o
+ .data          0x000000000001d970        0x0 print/print5.o
+ .data          0x000000000001d970        0x0 print/print6.o
+ .data          0x000000000001d970        0x0 console/console1.o
+ .data          0x000000000001d970        0x0 stdio/stdio1.o
+ .data          0x000000000001d970        0x0 stdio/stdio2.o
+ .data          0x000000000001d970        0x0 stdio/logger1.o
+ .data          0x000000000001d970        0x0 stdio/logger2.o
+ .data          0x000000000001d970        0x0 fault/fault1.o
+ .data          0x000000000001d970        0x0 fault/fault2.o
+ .data          0x000000000001d970        0x0 fault/fault3.o
+ .data          0x000000000001d970        0x0 float/float1.o
+ .data          0x000000000001d970        0x0 float/float2.o
+ .data          0x000000000001d970        0x0 float/softfloat1.o
+ *fill*         0x000000000001d970       0x10 
+ .data          0x000000000001d980       0x39 vfs/vfs1.o
+ .data          0x000000000001d9b9        0x0 ipc/ping_pong.o
+ .data          0x000000000001d9b9        0x0 ipc/starve.o
+ .data          0x000000000001d9b9        0x0 loop/loop1.o
+ *fill*         0x000000000001d9b9        0x3 
+ .data          0x000000000001d9bc       0x10 mm/common.o
+ *fill*         0x000000000001d9cc       0x14 
+ .data          0x000000000001d9e0      0x148 mm/malloc1.o
+ .data          0x000000000001db28        0x0 mm/malloc2.o
+ *fill*         0x000000000001db28       0x18 
+ .data          0x000000000001db40      0x148 mm/malloc3.o
+ .data          0x000000000001dc88        0x0 mm/mapping1.o
+ .data          0x000000000001dc88        0x0 mm/pager1.o
+ .data          0x000000000001dc88        0x0 hw/misc/virtchar1.o
+ .data          0x000000000001dc88        0x0 hw/serial/serial1.o
+ .data          0x000000000001dc88        0x0 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .data          0x000000000001dc88        0x0 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .data          0x000000000001dc88        0x0 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .data          0x000000000001dc88        0x0 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .data          0x000000000001dc88        0x0 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .data          0x000000000001dc88        0x0 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ *fill*         0x000000000001dc88       0x18 
+ .data          0x000000000001dca0      0x100 ../../lib/softfloat/libsoftfloat.a(common.o)
+                0x000000000001dca0                zeroTable
+ .data          0x000000000001dda0        0x0 ../../lib/drv/libdrv.a(remote_char_dev.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x000000000001dda0        0x0
+ *(.got)
+ .got           0x000000000001dda0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x000000000001dda0      0x1bc
+ *(.got.plt)
+ .got.plt       0x000000000001dda0      0x1bc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000001dda0                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x000000000001df60       0xcd
+ *(.dynbss)
+ .dynbss        0x000000000001df60       0x24 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x000000000001df60                stdout
+                0x000000000001df70                stdin
+                0x000000000001df78                __syscall_fast_func
+                0x000000000001df80                stderr
+ *(COMMON)
+ COMMON         0x000000000001df84        0xc tester.o
+                0x000000000001df84                test_quiet
+                0x000000000001df88                test_argv
+                0x000000000001df8c                test_argc
+ COMMON         0x000000000001df90        0x8 mm/common.o
+                0x000000000001df90                mem_blocks_count
+                0x000000000001df94                mem_allocated
+ COMMON         0x000000000001df98        0x4 mm/pager1.o
+                0x000000000001df98                fd
+ *(.bss)
+ .bss           0x000000000001df9c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x000000000001df9c        0x0 tester.o
+ .bss           0x000000000001df9c        0x0 util.o
+ .bss           0x000000000001df9c        0x8 thread/thread1.o
+ *fill*         0x000000000001dfa4       0x1c 
+ .bss           0x000000000001dfc0       0x40 thread/setjmp1.o
+ .bss           0x000000000001e000        0x0 print/print1.o
+ .bss           0x000000000001e000        0x0 print/print2.o
+ .bss           0x000000000001e000        0x0 print/print3.o
+ .bss           0x000000000001e000        0x0 print/print4.o
+ .bss           0x000000000001e000        0x0 print/print5.o
+ .bss           0x000000000001e000        0x0 print/print6.o
+ .bss           0x000000000001e000        0x0 console/console1.o
+ .bss           0x000000000001e000       0x21 stdio/stdio1.o
+ .bss           0x000000000001e021        0x0 stdio/stdio2.o
+ .bss           0x000000000001e021        0x0 stdio/logger1.o
+ .bss           0x000000000001e021        0x0 stdio/logger2.o
+ .bss           0x000000000001e021        0x0 fault/fault1.o
+ .bss           0x000000000001e021        0x0 fault/fault2.o
+ .bss           0x000000000001e021        0x0 fault/fault3.o
+ *fill*         0x000000000001e021        0x3 
+ .bss           0x000000000001e024        0x8 float/float1.o
+ .bss           0x000000000001e02c        0x0 float/float2.o
+ .bss           0x000000000001e02c        0x0 float/softfloat1.o
+ .bss           0x000000000001e02c        0x0 vfs/vfs1.o
+ .bss           0x000000000001e02c        0x0 ipc/ping_pong.o
+ .bss           0x000000000001e02c        0x0 ipc/starve.o
+ .bss           0x000000000001e02c        0x0 loop/loop1.o
+ .bss           0x000000000001e02c        0x1 mm/common.o
+                0x000000000001e02c                error_flag
+ .bss           0x000000000001e02d        0x0 mm/malloc1.o
+ .bss           0x000000000001e02d        0x0 mm/malloc2.o
+ .bss           0x000000000001e02d        0x0 mm/malloc3.o
+ .bss           0x000000000001e02d        0x0 mm/mapping1.o
+ .bss           0x000000000001e02d        0x0 mm/pager1.o
+ .bss           0x000000000001e02d        0x0 hw/misc/virtchar1.o
+ .bss           0x000000000001e02d        0x0 hw/serial/serial1.o
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(add.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(sub.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(div.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(mul.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(comparison.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(conversion.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/softfloat/libsoftfloat.a(common.o)
+ .bss           0x000000000001e02d        0x0 ../../lib/drv/libdrv.a(remote_char_dev.o)
+
+/DISCARD/
+ *(*)
+LOAD tester.o
+LOAD util.o
+LOAD thread/thread1.o
+LOAD thread/setjmp1.o
+LOAD print/print1.o
+LOAD print/print2.o
+LOAD print/print3.o
+LOAD print/print4.o
+LOAD print/print5.o
+LOAD print/print6.o
+LOAD console/console1.o
+LOAD stdio/stdio1.o
+LOAD stdio/stdio2.o
+LOAD stdio/logger1.o
+LOAD stdio/logger2.o
+LOAD fault/fault1.o
+LOAD fault/fault2.o
+LOAD fault/fault3.o
+LOAD float/float1.o
+LOAD float/float2.o
+LOAD float/softfloat1.o
+LOAD vfs/vfs1.o
+LOAD ipc/ping_pong.o
+LOAD ipc/starve.o
+LOAD loop/loop1.o
+LOAD mm/common.o
+LOAD mm/malloc1.o
+LOAD mm/malloc2.o
+LOAD mm/malloc3.o
+LOAD mm/mapping1.o
+LOAD mm/pager1.o
+LOAD hw/misc/virtchar1.o
+LOAD hw/serial/serial1.o
+LOAD ../../lib/block/libblock.a
+LOAD ../../lib/softfloat/libsoftfloat.a
+LOAD ../../lib/drv/libdrv.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+LOAD ../../lib/math/libmath.so.0
+OUTPUT(tester elf32-i386)

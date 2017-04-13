@@ -1,0 +1,203 @@
+# DO NOT DELETE
+
+src/os/helenos.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/os/helenos.o: ../../lib/c/include/sys/types.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/os/helenos.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/os/helenos.o: ../../lib/c/include/malloc.h
+src/os/helenos.o: ../../lib/c/include/stacktrace.h
+src/os/helenos.o: ../../lib/c/include/stdbool.h
+src/os/helenos.o: ../../../abi/include/abi/bool.h ../../lib/c/include/str.h
+src/os/helenos.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/os/helenos.o: ../../lib/c/include/str_error.h ../../lib/c/include/errno.h
+src/os/helenos.o: ../../../abi/include/abi/errno.h
+src/os/helenos.o: ../../lib/c/include/assert.h ../../lib/c/include/stdio.h
+src/os/helenos.o: ../../lib/c/include/stdarg.h
+src/os/helenos.o: ../../lib/c/include/io/verify.h
+src/os/helenos.o: ../../../abi/include/abi/kio.h ../../lib/c/include/task.h
+src/os/helenos.o: ../../../abi/include/abi/proc/task.h
+src/os/helenos.o: ../../lib/c/include/async.h
+src/os/helenos.o: ../../lib/c/include/ipc/common.h
+src/os/helenos.o: ../../../abi/include/abi/ipc/ipc.h
+src/os/helenos.o: ../../lib/c/include/atomic.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/os/helenos.o: ../../lib/c/include/atomicdflt.h
+src/os/helenos.o: ../../lib/c/include/stdint.h ../../lib/c/include/futex.h
+src/os/helenos.o: ../../lib/c/include/libc.h
+src/os/helenos.o: ../../../abi/include/abi/syscall.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/os/helenos.o: ../../lib/c/include/fibril.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/os/helenos.o: ../../lib/c/include/adt/list.h ../../lib/c/include/stddef.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/os/helenos.o: ../../../abi/include/abi/ddi/irq.h
+src/os/helenos.o: ../../../abi/include/abi/ipc/event.h
+src/os/helenos.o: ../../../abi/include/abi/ipc/interfaces.h
+src/os/helenos.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/os/helenos.o: ../../lib/c/include/types/task.h
+src/os/helenos.o: ../../lib/c/include/fcntl.h
+src/os/helenos.o: ../../lib/c/include/fibril_synch.h src/internal.h
+src/os/helenos.o: include/pcut/pcut.h include/pcut/asserts.h
+src/os/helenos.o: include/pcut/tests.h include/pcut/helper.h
+src/os/helenos.o: include/pcut/datadef.h include/pcut/prevs.h
+src/assert.o: src/internal.h include/pcut/pcut.h include/pcut/asserts.h
+src/assert.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/assert.o: include/pcut/tests.h include/pcut/helper.h
+src/assert.o: include/pcut/datadef.h include/pcut/prevs.h
+src/assert.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/assert.o: ../../lib/c/include/sys/types.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/assert.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/assert.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/assert.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/assert.o: ../../lib/c/include/stddef.h ../../lib/c/include/setjmp.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/assert.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/assert.o: ../../lib/c/include/stdarg.h ../../lib/c/include/stdio.h
+src/assert.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/assert.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+src/assert.o: ../../../abi/include/abi/kio.h
+src/list.o: ../../lib/c/include/assert.h ../../lib/c/include/stdlib.h
+src/list.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/list.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/list.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/list.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/list.o: src/internal.h include/pcut/pcut.h include/pcut/asserts.h
+src/list.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/list.o: include/pcut/tests.h include/pcut/helper.h include/pcut/datadef.h
+src/list.o: include/pcut/prevs.h ../../lib/c/include/stddef.h
+src/main.o: src/internal.h include/pcut/pcut.h include/pcut/asserts.h
+src/main.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/main.o: include/pcut/tests.h include/pcut/helper.h include/pcut/datadef.h
+src/main.o: include/pcut/prevs.h ../../lib/c/include/stdlib.h
+src/main.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/main.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/main.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/main.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/main.o: ../../lib/c/include/stddef.h src/report/report.h src/internal.h
+src/main.o: ../../lib/c/include/assert.h ../../lib/c/include/stdio.h
+src/main.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/main.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/main.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/print.o: include/pcut/pcut.h include/pcut/asserts.h
+src/print.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/print.o: include/pcut/tests.h include/pcut/helper.h
+src/print.o: include/pcut/datadef.h include/pcut/prevs.h
+src/print.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/print.o: ../../lib/c/include/sys/types.h
+src/print.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/print.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/print.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/print.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/print.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/print.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/print.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/print.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/print.o: ../../lib/c/include/stddef.h ../../lib/c/include/stdio.h
+src/print.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/print.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/print.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/print.o: ../../lib/c/include/assert.h src/internal.h
+src/report/report.o: src/internal.h include/pcut/pcut.h
+src/report/report.o: include/pcut/asserts.h ../../lib/c/include/errno.h
+src/report/report.o: ../../../abi/include/abi/errno.h include/pcut/tests.h
+src/report/report.o: include/pcut/helper.h include/pcut/datadef.h
+src/report/report.o: include/pcut/prevs.h ../../lib/c/include/stdlib.h
+src/report/report.o: ../../lib/c/include/unistd.h
+src/report/report.o: ../../lib/c/include/sys/types.h
+src/report/report.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/report/report.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/report/report.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/report/report.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/report/report.o: ../../lib/c/include/time.h
+src/report/report.o: ../../lib/c/include/sys/time.h
+src/report/report.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/report/report.o: ../../lib/c/include/malloc.h
+src/report/report.o: ../../lib/c/include/stacktrace.h
+src/report/report.o: ../../lib/c/include/stdbool.h
+src/report/report.o: ../../../abi/include/abi/bool.h
+src/report/report.o: ../../lib/c/include/stddef.h ../../lib/c/include/stdio.h
+src/report/report.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/report/report.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/report/report.o: ../../lib/c/include/io/verify.h
+src/report/report.o: ../../../abi/include/abi/kio.h
+src/report/tap.o: src/internal.h include/pcut/pcut.h include/pcut/asserts.h
+src/report/tap.o: ../../lib/c/include/errno.h
+src/report/tap.o: ../../../abi/include/abi/errno.h include/pcut/tests.h
+src/report/tap.o: include/pcut/helper.h include/pcut/datadef.h
+src/report/tap.o: include/pcut/prevs.h ../../lib/c/include/stdlib.h
+src/report/tap.o: ../../lib/c/include/unistd.h
+src/report/tap.o: ../../lib/c/include/sys/types.h
+src/report/tap.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/report/tap.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/report/tap.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/report/tap.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/report/tap.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/report/tap.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/report/tap.o: ../../lib/c/include/malloc.h
+src/report/tap.o: ../../lib/c/include/stacktrace.h
+src/report/tap.o: ../../lib/c/include/stdbool.h
+src/report/tap.o: ../../../abi/include/abi/bool.h
+src/report/tap.o: ../../lib/c/include/stddef.h src/report/report.h
+src/report/tap.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+src/report/tap.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/report/tap.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+src/report/tap.o: ../../../abi/include/abi/kio.h
+src/report/xml.o: src/internal.h include/pcut/pcut.h include/pcut/asserts.h
+src/report/xml.o: ../../lib/c/include/errno.h
+src/report/xml.o: ../../../abi/include/abi/errno.h include/pcut/tests.h
+src/report/xml.o: include/pcut/helper.h include/pcut/datadef.h
+src/report/xml.o: include/pcut/prevs.h ../../lib/c/include/stdlib.h
+src/report/xml.o: ../../lib/c/include/unistd.h
+src/report/xml.o: ../../lib/c/include/sys/types.h
+src/report/xml.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/report/xml.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/report/xml.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/report/xml.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/report/xml.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/report/xml.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/report/xml.o: ../../lib/c/include/malloc.h
+src/report/xml.o: ../../lib/c/include/stacktrace.h
+src/report/xml.o: ../../lib/c/include/stdbool.h
+src/report/xml.o: ../../../abi/include/abi/bool.h
+src/report/xml.o: ../../lib/c/include/stddef.h src/report/report.h
+src/report/xml.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+src/report/xml.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/report/xml.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+src/report/xml.o: ../../../abi/include/abi/kio.h
+src/run.o: src/internal.h include/pcut/pcut.h include/pcut/asserts.h
+src/run.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/run.o: include/pcut/tests.h include/pcut/helper.h include/pcut/datadef.h
+src/run.o: include/pcut/prevs.h ../../lib/c/include/stdlib.h
+src/run.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/run.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/run.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/run.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/run.o: ../../lib/c/include/stddef.h ../../lib/c/include/setjmp.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+# DO NOT DELETE

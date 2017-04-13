@@ -1,0 +1,289 @@
+# DO NOT DELETE
+
+codec.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+codec.o: ../../../lib/c/include/sys/types.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+codec.o: ../../../../abi/include/abi/ipc/ipc.h
+codec.o: ../../../lib/c/include/atomic.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+codec.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+codec.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+codec.o: ../../../../abi/include/abi/proc/task.h
+codec.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+codec.o: ../../../../abi/include/abi/syscall.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+codec.o: ../../../lib/c/include/fibril.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+codec.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+codec.o: ../../../lib/c/include/stddef.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+codec.o: ../../../lib/c/include/sys/time.h
+codec.o: ../../../../abi/include/abi/ddi/irq.h
+codec.o: ../../../../abi/include/abi/ipc/event.h
+codec.o: ../../../../abi/include/abi/ipc/interfaces.h
+codec.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+codec.o: ../../../lib/c/include/bitops.h ../../../lib/drv/include/ddf/log.h
+codec.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+codec.o: ../../../lib/c/include/inttypes.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+codec.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+codec.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+codec.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+codec.o: ../../../lib/c/include/time.h
+codec.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+codec.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+codec.o: codec.h hdaudio.h ../../../lib/drv/include/ddf/driver.h
+codec.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/mem.h
+codec.o: ../../../lib/c/include/cc.h ../../../lib/c/include/ipc/dev_iface.h
+codec.o: ../../../lib/drv/include/dev_iface.h
+codec.o: ../../../lib/c/include/fibril_synch.h spec/regs.h stream.h
+codec.o: spec/bdl.h hdactl.h spec/codec.h spec/fmt.h
+regif.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/stdint.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+regif.o: ../../../lib/c/include/ddi.h ../../../lib/c/include/stdbool.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+regif.o: ../../../../abi/include/abi/bool.h
+regif.o: ../../../lib/c/include/sys/types.h ../../../lib/c/include/sys/time.h
+regif.o: ../../../../abi/include/abi/ddi/irq.h
+regif.o: ../../../lib/c/include/device/hw_res.h
+regif.o: ../../../lib/c/include/ipc/dev_iface.h
+regif.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/unistd.h
+regif.o: ../../../lib/c/include/time.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+regif.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+regif.o: ../../../../abi/include/abi/ipc/ipc.h
+regif.o: ../../../lib/c/include/atomic.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+regif.o: ../../../lib/c/include/atomicdflt.h
+regif.o: ../../../../abi/include/abi/proc/task.h
+regif.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+regif.o: ../../../../abi/include/abi/syscall.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+regif.o: ../../../lib/c/include/fibril.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+regif.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+regif.o: ../../../lib/c/include/stddef.h
+regif.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+regif.o: ../../../../abi/include/abi/ipc/event.h
+regif.o: ../../../../abi/include/abi/ipc/interfaces.h
+regif.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+regif.o: ../../../lib/c/include/device/hw_res_parsed.h
+regif.o: ../../../lib/c/include/device/pio_window.h
+regif.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+regif.o: ../../../lib/c/include/cc.h ../../../lib/c/include/task.h
+regif.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/types/task.h
+regif.o: regif.h
+hdactl.o: ../../../lib/c/include/as.h ../../../lib/c/include/sys/types.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+hdactl.o: ../../../../abi/include/abi/mm/as.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+hdactl.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+hdactl.o: ../../../../abi/include/abi/ipc/ipc.h
+hdactl.o: ../../../lib/c/include/atomic.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+hdactl.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+hdactl.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+hdactl.o: ../../../../abi/include/abi/proc/task.h
+hdactl.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+hdactl.o: ../../../../abi/include/abi/syscall.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+hdactl.o: ../../../lib/c/include/fibril.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hdactl.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+hdactl.o: ../../../lib/c/include/stddef.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+hdactl.o: ../../../lib/c/include/sys/time.h
+hdactl.o: ../../../../abi/include/abi/ddi/irq.h
+hdactl.o: ../../../../abi/include/abi/ipc/event.h
+hdactl.o: ../../../../abi/include/abi/ipc/interfaces.h
+hdactl.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+hdactl.o: ../../../lib/c/include/bitops.h ../../../lib/drv/include/ddf/log.h
+hdactl.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+hdactl.o: ../../../lib/c/include/inttypes.h
+hdactl.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+hdactl.o: ../../../lib/c/include/io/verify.h
+hdactl.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/ddi.h
+hdactl.o: ../../../lib/c/include/device/hw_res.h
+hdactl.o: ../../../lib/c/include/ipc/dev_iface.h
+hdactl.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/unistd.h
+hdactl.o: ../../../lib/c/include/time.h
+hdactl.o: ../../../lib/c/include/device/hw_res_parsed.h
+hdactl.o: ../../../lib/c/include/device/pio_window.h
+hdactl.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+hdactl.o: ../../../lib/c/include/cc.h ../../../lib/c/include/task.h
+hdactl.o: ../../../lib/c/include/types/task.h ../../../lib/c/include/errno.h
+hdactl.o: ../../../../abi/include/abi/errno.h
+hdactl.o: ../../../lib/c/include/fibril_synch.h
+hdactl.o: ../../../lib/c/include/macros.h codec.h hdaudio.h
+hdactl.o: ../../../lib/drv/include/ddf/driver.h
+hdactl.o: ../../../lib/c/include/ipc/devman.h
+hdactl.o: ../../../lib/drv/include/dev_iface.h spec/regs.h stream.h
+hdactl.o: spec/bdl.h hdactl.h regif.h
+hdaudio.o: ../../../lib/c/include/assert.h ../../../lib/c/include/bitops.h
+hdaudio.o: ../../../lib/c/include/sys/types.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+hdaudio.o: ../../../lib/c/include/ddi.h ../../../lib/c/include/stdbool.h
+hdaudio.o: ../../../../abi/include/abi/bool.h
+hdaudio.o: ../../../lib/c/include/sys/time.h
+hdaudio.o: ../../../../abi/include/abi/ddi/irq.h
+hdaudio.o: ../../../lib/c/include/device/hw_res.h
+hdaudio.o: ../../../lib/c/include/ipc/dev_iface.h
+hdaudio.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/unistd.h
+hdaudio.o: ../../../lib/c/include/time.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+hdaudio.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+hdaudio.o: ../../../../abi/include/abi/ipc/ipc.h
+hdaudio.o: ../../../lib/c/include/atomic.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+hdaudio.o: ../../../lib/c/include/atomicdflt.h
+hdaudio.o: ../../../lib/c/include/stdint.h
+hdaudio.o: ../../../../abi/include/abi/proc/task.h
+hdaudio.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+hdaudio.o: ../../../../abi/include/abi/syscall.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+hdaudio.o: ../../../lib/c/include/fibril.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+hdaudio.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/stddef.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+hdaudio.o: ../../../../abi/include/abi/ipc/event.h
+hdaudio.o: ../../../../abi/include/abi/ipc/interfaces.h
+hdaudio.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+hdaudio.o: ../../../lib/c/include/device/hw_res_parsed.h
+hdaudio.o: ../../../lib/c/include/device/pio_window.h
+hdaudio.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+hdaudio.o: ../../../lib/c/include/cc.h ../../../lib/c/include/task.h
+hdaudio.o: ../../../lib/c/include/stdarg.h
+hdaudio.o: ../../../lib/c/include/types/task.h ../../../lib/c/include/irc.h
+hdaudio.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/io/verify.h
+hdaudio.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/errno.h
+hdaudio.o: ../../../../abi/include/abi/errno.h
+hdaudio.o: ../../../lib/c/include/str_error.h
+hdaudio.o: ../../../lib/drv/include/ddf/driver.h
+hdaudio.o: ../../../lib/c/include/ipc/devman.h
+hdaudio.o: ../../../lib/drv/include/dev_iface.h
+hdaudio.o: ../../../lib/drv/include/ddf/interrupt.h
+hdaudio.o: ../../../lib/c/include/fibril_synch.h
+hdaudio.o: ../../../lib/drv/include/ddf/driver.h
+hdaudio.o: ../../../lib/drv/include/ddf/log.h ../../../lib/c/include/io/log.h
+hdaudio.o: ../../../lib/c/include/inttypes.h
+hdaudio.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+hdaudio.o: ../../../../abi/include/abi/log.h hdactl.h hdaudio.h spec/regs.h
+hdaudio.o: pcm_iface.h ../../../lib/drv/include/audio_pcm_iface.h
+hdaudio.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+hdaudio.o: ../../../lib/pcm/include/pcm/sample_format.h
+pcm_iface.o: ../../../lib/c/include/async.h
+pcm_iface.o: ../../../lib/c/include/ipc/common.h
+pcm_iface.o: ../../../lib/c/include/sys/types.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+pcm_iface.o: ../../../../abi/include/abi/ipc/ipc.h
+pcm_iface.o: ../../../lib/c/include/atomic.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+pcm_iface.o: ../../../lib/c/include/atomicdflt.h
+pcm_iface.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/stdbool.h
+pcm_iface.o: ../../../../abi/include/abi/bool.h
+pcm_iface.o: ../../../../abi/include/abi/proc/task.h
+pcm_iface.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+pcm_iface.o: ../../../../abi/include/abi/syscall.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+pcm_iface.o: ../../../lib/c/include/fibril.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+pcm_iface.o: ../../../lib/c/include/adt/list.h
+pcm_iface.o: ../../../lib/c/include/assert.h ../../../lib/c/include/stddef.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+pcm_iface.o: ../../../lib/c/include/sys/time.h
+pcm_iface.o: ../../../../abi/include/abi/ddi/irq.h
+pcm_iface.o: ../../../../abi/include/abi/ipc/event.h
+pcm_iface.o: ../../../../abi/include/abi/ipc/interfaces.h
+pcm_iface.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+pcm_iface.o: ../../../lib/drv/include/audio_pcm_iface.h
+pcm_iface.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+pcm_iface.o: ../../../lib/pcm/include/pcm/sample_format.h
+pcm_iface.o: ../../../lib/c/include/time.h
+pcm_iface.o: ../../../lib/drv/include/ddf/driver.h
+pcm_iface.o: ../../../lib/c/include/ipc/devman.h
+pcm_iface.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/mem.h
+pcm_iface.o: ../../../lib/c/include/cc.h
+pcm_iface.o: ../../../lib/c/include/ipc/dev_iface.h
+pcm_iface.o: ../../../lib/c/include/unistd.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+pcm_iface.o: ../../../lib/drv/include/dev_iface.h
+pcm_iface.o: ../../../lib/drv/include/ddf/log.h
+pcm_iface.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+pcm_iface.o: ../../../lib/c/include/inttypes.h
+pcm_iface.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+pcm_iface.o: ../../../lib/c/include/io/verify.h
+pcm_iface.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/errno.h
+pcm_iface.o: ../../../../abi/include/abi/errno.h codec.h hdaudio.h
+pcm_iface.o: ../../../lib/c/include/fibril_synch.h spec/regs.h stream.h
+pcm_iface.o: spec/bdl.h hdactl.h pcm_iface.h spec/fmt.h
+stream.o: ../../../lib/c/include/as.h ../../../lib/c/include/sys/types.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+stream.o: ../../../../abi/include/abi/mm/as.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+stream.o: ../../../lib/c/include/bitops.h ../../../lib/c/include/byteorder.h
+stream.o: ../../../lib/c/include/stdint.h ../../../lib/drv/include/ddf/log.h
+stream.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+stream.o: ../../../lib/c/include/inttypes.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+stream.o: ../../../lib/c/include/io/verify.h
+stream.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/ddi.h
+stream.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+stream.o: ../../../lib/c/include/sys/time.h
+stream.o: ../../../../abi/include/abi/ddi/irq.h
+stream.o: ../../../lib/c/include/device/hw_res.h
+stream.o: ../../../lib/c/include/ipc/dev_iface.h
+stream.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/unistd.h
+stream.o: ../../../lib/c/include/time.h ../../../lib/c/include/async.h
+stream.o: ../../../lib/c/include/ipc/common.h
+stream.o: ../../../../abi/include/abi/ipc/ipc.h
+stream.o: ../../../lib/c/include/atomic.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+stream.o: ../../../lib/c/include/atomicdflt.h
+stream.o: ../../../../abi/include/abi/proc/task.h
+stream.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+stream.o: ../../../../abi/include/abi/syscall.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+stream.o: ../../../lib/c/include/fibril.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+stream.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+stream.o: ../../../lib/c/include/stddef.h
+stream.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+stream.o: ../../../../abi/include/abi/ipc/event.h
+stream.o: ../../../../abi/include/abi/ipc/interfaces.h
+stream.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+stream.o: ../../../lib/c/include/device/hw_res_parsed.h
+stream.o: ../../../lib/c/include/device/pio_window.h
+stream.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+stream.o: ../../../lib/c/include/cc.h ../../../lib/c/include/task.h
+stream.o: ../../../lib/c/include/types/task.h ../../../lib/c/include/errno.h
+stream.o: ../../../../abi/include/abi/errno.h ../../../lib/c/include/macros.h
+stream.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/stacktrace.h
+stream.o: hdactl.h ../../../lib/c/include/fibril_synch.h hdaudio.h
+stream.o: ../../../lib/drv/include/ddf/driver.h
+stream.o: ../../../lib/c/include/ipc/devman.h
+stream.o: ../../../lib/drv/include/dev_iface.h spec/regs.h regif.h spec/bdl.h
+stream.o: stream.h
+# DO NOT DELETE

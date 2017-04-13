@@ -1,0 +1,122 @@
+# DO NOT DELETE
+
+trace.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/types.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/common.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+trace.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+trace.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+trace.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+trace.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+trace.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+trace.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/config.h
+trace.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+trace.o: ../../lib/c/include/fibril.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+trace.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+trace.o: ../../lib/c/include/stddef.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+trace.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+trace.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+trace.o: ../../lib/c/include/udebug.h ../../../abi/include/abi/udebug.h
+trace.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+trace.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+trace.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+trace.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+trace.o: ../../../abi/include/abi/ddi/irq.h
+trace.o: ../../../abi/include/abi/ipc/event.h
+trace.o: ../../../abi/include/abi/ipc/interfaces.h
+trace.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+trace.o: ../../lib/c/include/task.h ../../lib/c/include/types/task.h
+trace.o: ../../lib/c/include/loader/loader.h ../../lib/c/include/io/console.h
+trace.o: ../../lib/c/include/io/concaps.h ../../lib/c/include/io/kbd_event.h
+trace.o: ../../lib/c/include/io/keycode.h ../../lib/c/include/io/cons_event.h
+trace.o: ../../lib/c/include/io/pos_event.h
+trace.o: ../../lib/c/include/fibril_synch.h ../../lib/c/include/sys/typefmt.h
+trace.o: ../../lib/c/include/inttypes.h
+trace.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+trace.o: ../../lib/c/include/vfs/vfs.h ../../lib/c/include/ipc/vfs.h
+trace.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/vfs/vfs_mtab.h
+trace.o: proto.h ../../lib/c/include/adt/hash_table.h
+trace.o: ../../lib/c/include/macros.h trace.h
+trace.o: ../../lib/c/include/ipc/services.h ../../lib/c/include/ipc/console.h
+trace.o: syscalls.h ipcp.h errors.h
+syscalls.o: ../../../abi/include/abi/syscall.h syscalls.h
+syscalls.o: ../../lib/c/include/stdbool.h
+syscalls.o: ../../lib/c/arch/ia32/include/libarch/types.h
+syscalls.o: ../../lib/c/arch/ia32/include/libarch/common.h
+syscalls.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+syscalls.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+syscalls.o: ../../../abi/include/abi/bool.h ../../lib/c/include/unistd.h
+syscalls.o: ../../lib/c/include/sys/types.h ../../lib/c/include/time.h
+syscalls.o: ../../lib/c/include/sys/time.h
+syscalls.o: ../../lib/c/arch/ia32/include/libarch/config.h trace.h
+ipcp.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/types.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/common.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+ipcp.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+ipcp.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+ipcp.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+ipcp.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+ipcp.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+ipcp.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/config.h
+ipcp.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+ipcp.o: ../../lib/c/include/adt/hash_table.h ../../lib/c/include/adt/list.h
+ipcp.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+ipcp.o: ../../lib/c/include/macros.h ../../lib/c/include/sys/typefmt.h
+ipcp.o: ../../lib/c/include/inttypes.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+ipcp.o: ../../../abi/include/abi/ipc/methods.h ipc_desc.h proto.h
+ipcp.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+ipcp.o: ../../lib/c/include/atomic.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+ipcp.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+ipcp.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+ipcp.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+ipcp.o: ../../lib/c/arch/ia32/include/libarch/syscall.h trace.h ipcp.h
+ipc_desc.o: ../../../abi/include/abi/ipc/methods.h
+ipc_desc.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+ipc_desc.o: ../../lib/c/include/sys/types.h
+ipc_desc.o: ../../lib/c/arch/ia32/include/libarch/types.h
+ipc_desc.o: ../../lib/c/arch/ia32/include/libarch/common.h
+ipc_desc.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+ipc_desc.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+ipc_desc.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+ipc_desc.o: ../../lib/c/arch/ia32/include/libarch/config.h
+ipc_desc.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+ipc_desc.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+ipc_desc.o: ipc_desc.h
+proto.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/types.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/common.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+proto.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+proto.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+proto.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+proto.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+proto.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+proto.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/config.h
+proto.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+proto.o: ../../lib/c/include/adt/hash_table.h ../../lib/c/include/adt/list.h
+proto.o: ../../lib/c/include/assert.h ../../lib/c/include/stddef.h
+proto.o: ../../lib/c/include/macros.h trace.h proto.h
+proto.o: ../../lib/c/include/ipc/common.h ../../../abi/include/abi/ipc/ipc.h
+proto.o: ../../lib/c/include/atomic.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+proto.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+proto.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+proto.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+proto.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+errors.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+errors.o: errors.h
+# DO NOT DELETE

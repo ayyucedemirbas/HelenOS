@@ -1,0 +1,95 @@
+# DO NOT DELETE
+
+main.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+main.o: ../../../lib/drv/include/ddf/driver.h ../../../lib/c/include/async.h
+main.o: ../../../lib/c/include/ipc/common.h
+main.o: ../../../lib/c/include/sys/types.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+main.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+main.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+main.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+main.o: ../../../../abi/include/abi/proc/task.h
+main.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+main.o: ../../../../abi/include/abi/syscall.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+main.o: ../../../lib/c/include/fibril.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+main.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+main.o: ../../../lib/c/include/stddef.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+main.o: ../../../lib/c/include/sys/time.h
+main.o: ../../../../abi/include/abi/ddi/irq.h
+main.o: ../../../../abi/include/abi/ipc/event.h
+main.o: ../../../../abi/include/abi/ipc/interfaces.h
+main.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+main.o: ../../../lib/c/include/ipc/devman.h ../../../lib/c/include/malloc.h
+main.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+main.o: ../../../lib/c/include/ipc/dev_iface.h
+main.o: ../../../lib/c/include/unistd.h ../../../lib/c/include/time.h
+main.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+main.o: ../../../lib/drv/include/dev_iface.h
+main.o: ../../../lib/c/include/device/hw_res_parsed.h
+main.o: ../../../lib/c/include/device/hw_res.h
+main.o: ../../../lib/c/include/device/pio_window.h
+main.o: ../../../lib/c/include/str.h ../../../lib/c/include/errno.h
+main.o: ../../../../abi/include/abi/errno.h
+main.o: ../../../lib/c/include/str_error.h ../../../lib/drv/include/ddf/log.h
+main.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+main.o: ../../../lib/c/include/inttypes.h ../../../lib/c/include/io/verify.h
+main.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/stdio.h
+main.o: ../../../../abi/include/abi/kio.h atkbd.h
+atkbd.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+atkbd.o: ../../../lib/drv/include/ddf/log.h ../../../lib/c/include/io/log.h
+atkbd.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/sys/types.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+atkbd.o: ../../../lib/c/include/inttypes.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+atkbd.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+atkbd.o: ../../../lib/c/include/io/keycode.h
+atkbd.o: ../../../lib/c/include/io/chardev.h ../../../lib/c/include/async.h
+atkbd.o: ../../../lib/c/include/ipc/common.h
+atkbd.o: ../../../../abi/include/abi/ipc/ipc.h
+atkbd.o: ../../../lib/c/include/atomic.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+atkbd.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+atkbd.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+atkbd.o: ../../../../abi/include/abi/proc/task.h
+atkbd.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+atkbd.o: ../../../../abi/include/abi/syscall.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+atkbd.o: ../../../lib/c/include/fibril.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+atkbd.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+atkbd.o: ../../../lib/c/include/stddef.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+atkbd.o: ../../../lib/c/include/sys/time.h
+atkbd.o: ../../../../abi/include/abi/ddi/irq.h
+atkbd.o: ../../../../abi/include/abi/ipc/event.h
+atkbd.o: ../../../../abi/include/abi/ipc/interfaces.h
+atkbd.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+atkbd.o: ../../../lib/c/include/io/console.h
+atkbd.o: ../../../lib/c/include/io/concaps.h
+atkbd.o: ../../../lib/c/include/io/kbd_event.h
+atkbd.o: ../../../lib/c/include/io/cons_event.h
+atkbd.o: ../../../lib/c/include/io/pos_event.h ../../../lib/c/include/stdio.h
+atkbd.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+atkbd.o: ../../../lib/c/include/cc.h ../../../../abi/include/abi/kio.h
+atkbd.o: ../../../lib/c/include/ipc/kbdev.h
+atkbd.o: ../../../lib/c/include/ipc/dev_iface.h
+atkbd.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/unistd.h
+atkbd.o: ../../../lib/c/include/time.h
+atkbd.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+atkbd.o: ../../../../abi/include/abi/ipc/methods.h atkbd.h
+atkbd.o: ../../../lib/drv/include/ddf/driver.h
+atkbd.o: ../../../lib/c/include/ipc/devman.h
+atkbd.o: ../../../lib/drv/include/dev_iface.h
+# DO NOT DELETE

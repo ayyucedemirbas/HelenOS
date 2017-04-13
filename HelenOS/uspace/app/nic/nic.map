@@ -1,0 +1,235 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../lib/drv/libdrv.a(remote_nic.o)
+                              nic.o (nic_get_address)
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x1541 nic.o
+ .debug_abbrev  0x0000000000000000      0x31a nic.o
+ .debug_loc     0x0000000000000000      0xa3e nic.o
+ .debug_aranges
+                0x0000000000000000       0x28 nic.o
+ .debug_ranges  0x0000000000000000      0x1f8 nic.o
+ .debug_line    0x0000000000000000      0x42e nic.o
+ .debug_str     0x0000000000000000     0x1127 nic.o
+ .comment       0x0000000000000000       0x12 nic.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 nic.o
+ .eh_frame      0x0000000000000000       0xd8 nic.o
+ .debug_info    0x0000000000000000     0x55bd ../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_abbrev  0x0000000000000000      0x35f ../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_loc     0x0000000000000000     0x25cf ../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_aranges
+                0x0000000000000000       0x20 ../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_ranges  0x0000000000000000      0x180 ../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_line    0x0000000000000000      0xc19 ../../lib/drv/libdrv.a(remote_nic.o)
+ .debug_str     0x0000000000000000     0x261b ../../lib/drv/libdrv.a(remote_nic.o)
+ .comment       0x0000000000000000       0x12 ../../lib/drv/libdrv.a(remote_nic.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../lib/drv/libdrv.a(remote_nic.o)
+ .eh_frame      0x0000000000000000     0x1028 ../../lib/drv/libdrv.a(remote_nic.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001140     0x4a84
+ *(.text .text.*)
+ .text          0x0000000000001140        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001140      0x69b nic.o
+ *fill*         0x00000000000017db        0x5 
+ .text.startup  0x00000000000017e0      0x5da nic.o
+                0x00000000000017e0                main
+ *fill*         0x0000000000001dba        0x6 
+ .text          0x0000000000001dc0     0x3596 ../../lib/drv/libdrv.a(remote_nic.o)
+                0x0000000000003c90                nic_send_frame
+                0x0000000000003d20                nic_callback_create
+                0x0000000000003dc0                nic_get_state
+                0x0000000000003e30                nic_set_state
+                0x0000000000003e80                nic_get_address
+                0x0000000000003f10                nic_set_address
+                0x0000000000003fa0                nic_get_stats
+                0x0000000000004040                nic_get_device_info
+                0x00000000000040d0                nic_get_cable_state
+                0x0000000000004140                nic_get_operation_mode
+                0x00000000000041c0                nic_set_operation_mode
+                0x0000000000004210                nic_autoneg_enable
+                0x0000000000004260                nic_autoneg_disable
+                0x00000000000042b0                nic_autoneg_probe
+                0x0000000000004340                nic_autoneg_restart
+                0x0000000000004390                nic_get_pause
+                0x0000000000004410                nic_set_pause
+                0x0000000000004470                nic_unicast_get_mode
+                0x0000000000004540                nic_unicast_set_mode
+                0x0000000000004620                nic_multicast_get_mode
+                0x00000000000046f0                nic_multicast_set_mode
+                0x00000000000047d0                nic_broadcast_get_mode
+                0x0000000000004840                nic_broadcast_set_mode
+                0x0000000000004890                nic_defective_get_mode
+                0x0000000000004900                nic_defective_set_mode
+                0x0000000000004950                nic_blocked_sources_get
+                0x00000000000049f0                nic_blocked_sources_set
+                0x0000000000004ae0                nic_vlan_get_mask
+                0x0000000000004b80                nic_vlan_set_mask
+                0x0000000000004c20                nic_vlan_set_tag
+                0x0000000000004c90                nic_wol_virtue_add
+                0x0000000000004d70                nic_wol_virtue_remove
+                0x0000000000004dc0                nic_wol_virtue_probe
+                0x0000000000004e80                nic_wol_virtue_list
+                0x0000000000004f90                nic_wol_virtue_get_caps
+                0x0000000000005010                nic_wol_load_info
+                0x00000000000050e0                nic_offload_probe
+                0x0000000000005180                nic_offload_set
+                0x00000000000051d0                nic_poll_get_mode
+                0x0000000000005270                nic_poll_set_mode
+                0x0000000000005310                nic_poll_now
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000005356      0x28d nic.o
+                                        0x29a (size before relaxing)
+ *fill*         0x00000000000055e3        0x1 
+ .rodata.str1.4
+                0x00000000000055e4      0x430 nic.o
+                                        0x42d (size before relaxing)
+ .rodata        0x0000000000005a14       0x14 nic.o
+ .rodata.str1.1
+                0x0000000000005a28       0xd6 ../../lib/drv/libdrv.a(remote_nic.o)
+                                         0xe4 (size before relaxing)
+ *fill*         0x0000000000005afe        0x2 
+ .rodata        0x0000000000005b00       0xc4 ../../lib/drv/libdrv.a(remote_nic.o)
+                0x0000000000005b00                remote_nic_iface
+
+.rel.plt        0x0000000000005bc4      0x118
+ *(.rel.plt)
+ .rel.plt       0x0000000000005bc4      0x118 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000005cdc        0x8
+ *(.rel.*)
+ .rel.got       0x0000000000005cdc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000005cdc        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000005ce4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000005ce4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000005ce4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000005cf0      0x240
+ *(.plt)
+ .plt           0x0000000000005cf0      0x240 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000005d00                __main
+                0x0000000000005d10                loc_category_get_id
+                0x0000000000005d20                loc_service_connect
+                0x0000000000005d30                printf
+                0x0000000000005d40                async_wait_for
+                0x0000000000005d50                str_uint32_t
+                0x0000000000005d60                async_data_write_start
+                0x0000000000005d70                async_data_read_finalize
+                0x0000000000005d80                malloc
+                0x0000000000005d90                async_req_fast
+                0x0000000000005da0                async_answer_0
+                0x0000000000005db0                async_send_fast
+                0x0000000000005dc0                async_exchange_end
+                0x0000000000005dd0                loc_service_get_name
+                0x0000000000005de0                assert_abort
+                0x0000000000005df0                str_uint8_t
+                0x0000000000005e00                async_answer_2
+                0x0000000000005e10                async_answer_4
+                0x0000000000005e20                async_create_callback_port
+                0x0000000000005e30                str_cmp
+                0x0000000000005e40                memset
+                0x0000000000005e50                async_data_read_receive
+                0x0000000000005e60                async_data_read_start
+                0x0000000000005e70                asprintf
+                0x0000000000005e80                loc_category_get_svcs
+                0x0000000000005e90                str_size
+                0x0000000000005ea0                async_answer_1
+                0x0000000000005eb0                async_exchange_begin
+                0x0000000000005ec0                async_answer_3
+                0x0000000000005ed0                async_data_write_finalize
+                0x0000000000005ee0                async_data_write_accept
+                0x0000000000005ef0                async_forget
+                0x0000000000005f00                __syscall_fast
+                0x0000000000005f10                async_data_write_receive
+                0x0000000000005f20                free
+
+.dynsym         0x0000000000005f30      0x270
+ *(.dynsym)
+ .dynsym        0x0000000000005f30      0x270 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x00000000000061a0      0x265
+ *(.dynstr)
+ .dynstr        0x00000000000061a0      0x265 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000006408      0x138
+ *(.hash)
+ .hash          0x0000000000006408      0x138 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000006540       0x13
+ *(.interp)
+ .interp        0x0000000000006540       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007553                . = (. + 0x1000)
+
+.dynamic        0x0000000000007554       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000007554       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007554                _DYNAMIC
+
+.data           0x00000000000075fc        0x0
+ *(.data)
+ .data          0x00000000000075fc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000075fc        0x0 nic.o
+ .data          0x00000000000075fc        0x0 ../../lib/drv/libdrv.a(remote_nic.o)
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000075fc        0x0
+ *(.got)
+ .got           0x00000000000075fc        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000075fc       0x98
+ *(.got.plt)
+ .got.plt       0x00000000000075fc       0x98 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000075fc                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000007698        0x4
+ *(.dynbss)
+ *fill*         0x0000000000007698        0x0 
+ .dynbss        0x0000000000007698        0x4 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000007698                __syscall_fast_func
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000769c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x000000000000769c        0x0 nic.o
+ .bss           0x000000000000769c        0x0 ../../lib/drv/libdrv.a(remote_nic.o)
+
+/DISCARD/
+ *(*)
+LOAD nic.o
+LOAD ../../lib/drv/libdrv.a
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(nic elf32-i386)

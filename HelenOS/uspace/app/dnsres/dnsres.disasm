@@ -1,0 +1,263 @@
+
+dnsres:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 a8 26 00 00    	lea    0x26a8,%eax
+    1110:	c7 00 00 14 00 00    	movl   $0x1400,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 7e 02 00 00       	call   13a0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <main>:
+    1130:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1134:	83 e4 f0             	and    $0xfffffff0,%esp
+    1137:	ff 71 fc             	pushl  -0x4(%ecx)
+    113a:	55                   	push   %ebp
+    113b:	89 e5                	mov    %esp,%ebp
+    113d:	56                   	push   %esi
+    113e:	53                   	push   %ebx
+    113f:	51                   	push   %ecx
+    1140:	83 ec 1c             	sub    $0x1c,%esp
+    1143:	8b 19                	mov    (%ecx),%ebx
+    1145:	8b 71 04             	mov    0x4(%ecx),%esi
+    1148:	8d 43 fe             	lea    -0x2(%ebx),%eax
+    114b:	83 f8 01             	cmp    $0x1,%eax
+    114e:	76 26                	jbe    1176 <main+0x46>
+    1150:	50                   	push   %eax
+    1151:	50                   	push   %eax
+    1152:	68 b0 12 00 00       	push   $0x12b0
+    1157:	68 08 13 00 00       	push   $0x1308
+    115c:	bb 01 00 00 00       	mov    $0x1,%ebx
+    1161:	e8 4a 02 00 00       	call   13b0 <printf@plt>
+    1166:	83 c4 10             	add    $0x10,%esp
+    1169:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    116c:	89 d8                	mov    %ebx,%eax
+    116e:	59                   	pop    %ecx
+    116f:	5b                   	pop    %ebx
+    1170:	5e                   	pop    %esi
+    1171:	5d                   	pop    %ebp
+    1172:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    1175:	c3                   	ret    
+    1176:	50                   	push   %eax
+    1177:	50                   	push   %eax
+    1178:	68 b7 12 00 00       	push   $0x12b7
+    117d:	ff 76 04             	pushl  0x4(%esi)
+    1180:	e8 5b 02 00 00       	call   13e0 <str_cmp@plt>
+    1185:	83 c4 10             	add    $0x10,%esp
+    1188:	85 c0                	test   %eax,%eax
+    118a:	0f 85 ad 00 00 00    	jne    123d <main+0x10d>
+    1190:	83 fb 02             	cmp    $0x2,%ebx
+    1193:	74 bb                	je     1150 <main+0x20>
+    1195:	8b 76 08             	mov    0x8(%esi),%esi
+    1198:	b8 01 00 00 00       	mov    $0x1,%eax
+    119d:	25 ff ff 00 00       	and    $0xffff,%eax
+    11a2:	52                   	push   %edx
+    11a3:	50                   	push   %eax
+    11a4:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    11a7:	50                   	push   %eax
+    11a8:	56                   	push   %esi
+    11a9:	e8 42 02 00 00       	call   13f0 <dnsr_name2host@plt>
+    11ae:	83 c4 10             	add    $0x10,%esp
+    11b1:	89 c3                	mov    %eax,%ebx
+    11b3:	85 c0                	test   %eax,%eax
+    11b5:	75 6d                	jne    1224 <main+0xf4>
+    11b7:	50                   	push   %eax
+    11b8:	50                   	push   %eax
+    11b9:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    11bc:	50                   	push   %eax
+    11bd:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    11c0:	83 c0 04             	add    $0x4,%eax
+    11c3:	50                   	push   %eax
+    11c4:	e8 f7 01 00 00       	call   13c0 <inet_addr_format@plt>
+    11c9:	83 c4 10             	add    $0x10,%esp
+    11cc:	89 c3                	mov    %eax,%ebx
+    11ce:	85 c0                	test   %eax,%eax
+    11d0:	0f 85 93 00 00 00    	jne    1269 <main+0x139>
+    11d6:	50                   	push   %eax
+    11d7:	50                   	push   %eax
+    11d8:	56                   	push   %esi
+    11d9:	68 d8 12 00 00       	push   $0x12d8
+    11de:	e8 cd 01 00 00       	call   13b0 <printf@plt>
+    11e3:	58                   	pop    %eax
+    11e4:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    11e7:	5a                   	pop    %edx
+    11e8:	ff 30                	pushl  (%eax)
+    11ea:	56                   	push   %esi
+    11eb:	e8 f0 01 00 00       	call   13e0 <str_cmp@plt>
+    11f0:	83 c4 10             	add    $0x10,%esp
+    11f3:	85 c0                	test   %eax,%eax
+    11f5:	0f 85 9c 00 00 00    	jne    1297 <main+0x167>
+    11fb:	50                   	push   %eax
+    11fc:	50                   	push   %eax
+    11fd:	ff 75 e4             	pushl  -0x1c(%ebp)
+    1200:	68 fb 12 00 00       	push   $0x12fb
+    1205:	e8 a6 01 00 00       	call   13b0 <printf@plt>
+    120a:	5a                   	pop    %edx
+    120b:	ff 75 e0             	pushl  -0x20(%ebp)
+    120e:	e8 bd 01 00 00       	call   13d0 <dnsr_hostinfo_destroy@plt>
+    1213:	59                   	pop    %ecx
+    1214:	ff 75 e4             	pushl  -0x1c(%ebp)
+    1217:	e8 f4 01 00 00       	call   1410 <free@plt>
+    121c:	83 c4 10             	add    $0x10,%esp
+    121f:	e9 45 ff ff ff       	jmp    1169 <main+0x39>
+    1224:	50                   	push   %eax
+    1225:	56                   	push   %esi
+    1226:	68 b0 12 00 00       	push   $0x12b0
+    122b:	68 bd 12 00 00       	push   $0x12bd
+    1230:	e8 7b 01 00 00       	call   13b0 <printf@plt>
+    1235:	83 c4 10             	add    $0x10,%esp
+    1238:	e9 2c ff ff ff       	jmp    1169 <main+0x39>
+    123d:	51                   	push   %ecx
+    123e:	51                   	push   %ecx
+    123f:	68 ba 12 00 00       	push   $0x12ba
+    1244:	ff 76 04             	pushl  0x4(%esi)
+    1247:	e8 94 01 00 00       	call   13e0 <str_cmp@plt>
+    124c:	83 c4 10             	add    $0x10,%esp
+    124f:	85 c0                	test   %eax,%eax
+    1251:	75 3a                	jne    128d <main+0x15d>
+    1253:	83 fb 02             	cmp    $0x2,%ebx
+    1256:	0f 84 f4 fe ff ff    	je     1150 <main+0x20>
+    125c:	8b 76 08             	mov    0x8(%esi),%esi
+    125f:	b8 02 00 00 00       	mov    $0x2,%eax
+    1264:	e9 34 ff ff ff       	jmp    119d <main+0x6d>
+    1269:	83 ec 0c             	sub    $0xc,%esp
+    126c:	ff 75 e0             	pushl  -0x20(%ebp)
+    126f:	e8 5c 01 00 00       	call   13d0 <dnsr_hostinfo_destroy@plt>
+    1274:	59                   	pop    %ecx
+    1275:	5e                   	pop    %esi
+    1276:	68 b0 12 00 00       	push   $0x12b0
+    127b:	68 28 13 00 00       	push   $0x1328
+    1280:	e8 2b 01 00 00       	call   13b0 <printf@plt>
+    1285:	83 c4 10             	add    $0x10,%esp
+    1288:	e9 dc fe ff ff       	jmp    1169 <main+0x39>
+    128d:	8b 76 04             	mov    0x4(%esi),%esi
+    1290:	31 c0                	xor    %eax,%eax
+    1292:	e9 06 ff ff ff       	jmp    119d <main+0x6d>
+    1297:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    129a:	56                   	push   %esi
+    129b:	56                   	push   %esi
+    129c:	ff 30                	pushl  (%eax)
+    129e:	68 e7 12 00 00       	push   $0x12e7
+    12a3:	e8 08 01 00 00       	call   13b0 <printf@plt>
+    12a8:	83 c4 10             	add    $0x10,%esp
+    12ab:	e9 4b ff ff ff       	jmp    11fb <main+0xcb>
+    12b0:	64 6e                	outsb  %fs:(%esi),(%dx)
+    12b2:	73 72                	jae    1326 <main+0x1f6>
+    12b4:	65 73 00             	gs jae 12b7 <main+0x187>
+    12b7:	2d 34 00 2d 36       	sub    $0x362d0034,%eax
+    12bc:	00 25 73 3a 20 45    	add    %ah,0x45203a73
+    12c2:	72 72                	jb     1336 <main+0x206>
+    12c4:	6f                   	outsl  %ds:(%esi),(%dx)
+    12c5:	72 20                	jb     12e7 <main+0x1b7>
+    12c7:	72 65                	jb     132e <main+0x1fe>
+    12c9:	73 6f                	jae    133a <main+0x20a>
+    12cb:	6c                   	insb   (%dx),%es:(%edi)
+    12cc:	76 69                	jbe    1337 <main+0x207>
+    12ce:	6e                   	outsb  %ds:(%esi),(%dx)
+    12cf:	67 20 27             	and    %ah,(%bx)
+    12d2:	25 73 27 2e 0a       	and    $0xa2e2773,%eax
+    12d7:	00 48 6f             	add    %cl,0x6f(%eax)
+    12da:	73 74                	jae    1350 <main+0x220>
+    12dc:	20 6e 61             	and    %ch,0x61(%esi)
+    12df:	6d                   	insl   (%dx),%es:(%edi)
+    12e0:	65 3a 20             	cmp    %gs:(%eax),%ah
+    12e3:	25 73 0a 00 43       	and    $0x43000a73,%eax
+    12e8:	61                   	popa   
+    12e9:	6e                   	outsb  %ds:(%esi),(%dx)
+    12ea:	6f                   	outsl  %ds:(%esi),(%dx)
+    12eb:	6e                   	outsb  %ds:(%esi),(%dx)
+    12ec:	69 63 61 6c 20 6e 61 	imul   $0x616e206c,0x61(%ebx),%esp
+    12f3:	6d                   	insl   (%dx),%es:(%edi)
+    12f4:	65 3a 20             	cmp    %gs:(%eax),%ah
+    12f7:	25 73 0a 00 41       	and    $0x41000a73,%eax
+    12fc:	64 64 72 65          	fs fs jb 1365 <main+0x235>
+    1300:	73 73                	jae    1375 <main+0x245>
+    1302:	3a 20                	cmp    (%eax),%ah
+    1304:	25 73 0a 00 53       	and    $0x53000a73,%eax
+    1309:	79 6e                	jns    1379 <main+0x249>
+    130b:	74 61                	je     136e <main+0x23e>
+    130d:	78 3a                	js     1349 <main+0x219>
+    130f:	20 25 73 20 5b 2d    	and    %ah,0x2d5b2073
+    1315:	34 7c                	xor    $0x7c,%al
+    1317:	2d 36 5d 20 3c       	sub    $0x3c205d36,%eax
+    131c:	68 6f 73 74 2d       	push   $0x2d74736f
+    1321:	6e                   	outsb  %ds:(%esi),(%dx)
+    1322:	61                   	popa   
+    1323:	6d                   	insl   (%dx),%es:(%edi)
+    1324:	65 3e 0a 00          	gs or  %ds:(%eax),%al
+    1328:	25 73 3a 20 45       	and    $0x45203a73,%eax
+    132d:	72 72                	jb     13a1 <__main@plt+0x1>
+    132f:	6f                   	outsl  %ds:(%esi),(%dx)
+    1330:	72 20                	jb     1352 <main+0x222>
+    1332:	66 6f                	outsw  %ds:(%esi),(%dx)
+    1334:	72 6d                	jb     13a3 <__main@plt+0x3>
+    1336:	61                   	popa   
+    1337:	74 74                	je     13ad <__main@plt+0xd>
+    1339:	69 6e 67 20 61 64 64 	imul   $0x64646120,0x67(%esi),%ebp
+    1340:	72 65                	jb     13a7 <__main@plt+0x7>
+    1342:	73 73                	jae    13b7 <printf@plt+0x7>
+    1344:	2e 0a 00             	or     %cs:(%eax),%al
+	...
+
+Disassembly of section .plt:
+
+00001390 <__main@plt-0x10>:
+    1390:	ff 35 7c 26 00 00    	pushl  0x267c
+    1396:	ff 25 80 26 00 00    	jmp    *0x2680
+    139c:	00 00                	add    %al,(%eax)
+	...
+
+000013a0 <__main@plt>:
+    13a0:	ff 25 84 26 00 00    	jmp    *0x2684
+    13a6:	68 00 00 00 00       	push   $0x0
+    13ab:	e9 e0 ff ff ff       	jmp    1390 <main+0x260>
+
+000013b0 <printf@plt>:
+    13b0:	ff 25 88 26 00 00    	jmp    *0x2688
+    13b6:	68 08 00 00 00       	push   $0x8
+    13bb:	e9 d0 ff ff ff       	jmp    1390 <main+0x260>
+
+000013c0 <inet_addr_format@plt>:
+    13c0:	ff 25 8c 26 00 00    	jmp    *0x268c
+    13c6:	68 10 00 00 00       	push   $0x10
+    13cb:	e9 c0 ff ff ff       	jmp    1390 <main+0x260>
+
+000013d0 <dnsr_hostinfo_destroy@plt>:
+    13d0:	ff 25 90 26 00 00    	jmp    *0x2690
+    13d6:	68 18 00 00 00       	push   $0x18
+    13db:	e9 b0 ff ff ff       	jmp    1390 <main+0x260>
+
+000013e0 <str_cmp@plt>:
+    13e0:	ff 25 94 26 00 00    	jmp    *0x2694
+    13e6:	68 20 00 00 00       	push   $0x20
+    13eb:	e9 a0 ff ff ff       	jmp    1390 <main+0x260>
+
+000013f0 <dnsr_name2host@plt>:
+    13f0:	ff 25 98 26 00 00    	jmp    *0x2698
+    13f6:	68 28 00 00 00       	push   $0x28
+    13fb:	e9 90 ff ff ff       	jmp    1390 <main+0x260>
+
+00001400 <__syscall_fast@plt>:
+    1400:	ff 25 9c 26 00 00    	jmp    *0x269c
+    1406:	68 30 00 00 00       	push   $0x30
+    140b:	e9 80 ff ff ff       	jmp    1390 <main+0x260>
+
+00001410 <free@plt>:
+    1410:	ff 25 a0 26 00 00    	jmp    *0x26a0
+    1416:	68 38 00 00 00       	push   $0x38
+    141b:	e9 70 ff ff ff       	jmp    1390 <main+0x260>

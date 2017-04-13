@@ -1,0 +1,148 @@
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0xc43 rcubench.o
+ .debug_abbrev  0x0000000000000000      0x333 rcubench.o
+ .debug_loc     0x0000000000000000      0x649 rcubench.o
+ .debug_aranges
+                0x0000000000000000       0x28 rcubench.o
+ .debug_ranges  0x0000000000000000      0x150 rcubench.o
+ .debug_line    0x0000000000000000      0x351 rcubench.o
+ .debug_str     0x0000000000000000      0x968 rcubench.o
+ .comment       0x0000000000000000       0x12 rcubench.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 rcubench.o
+ .eh_frame      0x0000000000000000      0x14c rcubench.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130      0x9b8
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x1ff rcubench.o
+ *fill*         0x000000000000132f        0x1 
+ .text.startup  0x0000000000001330      0x3f0 rcubench.o
+                0x0000000000001330                main
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000001720       0xb5 rcubench.o
+                                         0xbb (size before relaxing)
+ *fill*         0x00000000000017d5        0x3 
+ .rodata.str1.4
+                0x00000000000017d8      0x310 rcubench.o
+                                        0x30d (size before relaxing)
+
+.rel.plt        0x0000000000001ae8       0x88
+ *(.rel.plt)
+ .rel.plt       0x0000000000001ae8       0x88 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000001b70        0x8
+ *(.rel.*)
+ .rel.got       0x0000000000001b70        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000001b70        0x8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000001b78        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000001b78        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000001b78        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000001b80      0x120
+ *(.plt)
+ .plt           0x0000000000001b80      0x120 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000001b90                __main
+                0x0000000000001ba0                thread_detach
+                0x0000000000001bb0                printf
+                0x0000000000001bc0                str_uint32_t
+                0x0000000000001bd0                tv_sub_diff
+                0x0000000000001be0                futex_initialize
+                0x0000000000001bf0                __udivdi3
+                0x0000000000001c00                abort
+                0x0000000000001c10                assert_abort
+                0x0000000000001c20                vprintf
+                0x0000000000001c30                str_cmp
+                0x0000000000001c40                fopen
+                0x0000000000001c50                fclose
+                0x0000000000001c60                getuptime
+                0x0000000000001c70                __syscall_fast
+                0x0000000000001c80                thread_create
+                0x0000000000001c90                vfprintf
+
+.dynsym         0x0000000000001ca0      0x150
+ *(.dynsym)
+ .dynsym        0x0000000000001ca0      0x150 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000001df0       0xda
+ *(.dynstr)
+ .dynstr        0x0000000000001df0       0xda /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x0000000000001ecc       0xa0
+ *(.hash)
+ .hash          0x0000000000001ecc       0xa0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000001f6c       0x13
+ *(.interp)
+ .interp        0x0000000000001f6c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002f7f                . = (. + 0x1000)
+
+.dynamic        0x0000000000002f80       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000002f80       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002f80                _DYNAMIC
+
+.data           0x0000000000003028        0x0
+ *(.data)
+ .data          0x0000000000003028        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000003028        0x0 rcubench.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000003028        0x0
+ *(.got)
+ .got           0x0000000000003028        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000003028       0x50
+ *(.got.plt)
+ .got.plt       0x0000000000003028       0x50 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003028                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000003078        0x8
+ *(.dynbss)
+ *fill*         0x0000000000003078        0x0 
+ .dynbss        0x0000000000003078        0x4 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003078                __syscall_fast_func
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000307c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .bss           0x000000000000307c        0x4 rcubench.o
+
+/DISCARD/
+ *(*)
+LOAD rcubench.o
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(rcubench elf32-i386)

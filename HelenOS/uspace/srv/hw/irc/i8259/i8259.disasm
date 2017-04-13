@@ -1,0 +1,363 @@
+
+i8259:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 18 29 00 00    	lea    0x2918,%eax
+    1110:	c7 00 30 15 00 00    	movl   $0x1530,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 7e 03 00 00       	call   14a0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <i8259_connection>:
+    1130:	55                   	push   %ebp
+    1131:	89 e5                	mov    %esp,%ebp
+    1133:	57                   	push   %edi
+    1134:	56                   	push   %esi
+    1135:	53                   	push   %ebx
+    1136:	83 ec 54             	sub    $0x54,%esp
+    1139:	8d 5d c4             	lea    -0x3c(%ebp),%ebx
+    113c:	8b 45 08             	mov    0x8(%ebp),%eax
+    113f:	be 01 00 00 00       	mov    $0x1,%esi
+    1144:	6a 00                	push   $0x0
+    1146:	50                   	push   %eax
+    1147:	e8 94 03 00 00       	call   14e0 <async_answer_0@plt>
+    114c:	83 c4 10             	add    $0x10,%esp
+    114f:	90                   	nop
+    1150:	57                   	push   %edi
+    1151:	57                   	push   %edi
+    1152:	6a 00                	push   $0x0
+    1154:	53                   	push   %ebx
+    1155:	e8 b6 03 00 00       	call   1510 <async_get_call_timeout@plt>
+    115a:	83 c4 10             	add    $0x10,%esp
+    115d:	89 c7                	mov    %eax,%edi
+    115f:	8b 45 c4             	mov    -0x3c(%ebp),%eax
+    1162:	85 c0                	test   %eax,%eax
+    1164:	0f 84 9e 00 00 00    	je     1208 <i8259_connection+0xd8>
+    116a:	3d 00 04 00 00       	cmp    $0x400,%eax
+    116f:	74 17                	je     1188 <i8259_connection+0x58>
+    1171:	3d 01 04 00 00       	cmp    $0x401,%eax
+    1176:	75 78                	jne    11f0 <i8259_connection+0xc0>
+    1178:	52                   	push   %edx
+    1179:	52                   	push   %edx
+    117a:	6a 00                	push   $0x0
+    117c:	57                   	push   %edi
+    117d:	e8 5e 03 00 00       	call   14e0 <async_answer_0@plt>
+    1182:	83 c4 10             	add    $0x10,%esp
+    1185:	eb c9                	jmp    1150 <i8259_connection+0x20>
+    1187:	90                   	nop
+    1188:	8b 4d c8             	mov    -0x38(%ebp),%ecx
+    118b:	83 f9 0f             	cmp    $0xf,%ecx
+    118e:	0f 87 cc 00 00 00    	ja     1260 <i8259_connection+0x130>
+    1194:	89 f2                	mov    %esi,%edx
+    1196:	d3 e2                	shl    %cl,%edx
+    1198:	84 d2                	test   %dl,%dl
+    119a:	0f 85 80 00 00 00    	jne    1220 <i8259_connection+0xf0>
+    11a0:	31 c9                	xor    %ecx,%ecx
+    11a2:	66 c1 ea 08          	shr    $0x8,%dx
+    11a6:	74 36                	je     11de <i8259_connection+0xae>
+    11a8:	83 ec 0c             	sub    $0xc,%esp
+    11ab:	a1 20 29 00 00       	mov    0x2920,%eax
+    11b0:	40                   	inc    %eax
+    11b1:	89 4d b0             	mov    %ecx,-0x50(%ebp)
+    11b4:	50                   	push   %eax
+    11b5:	89 55 b4             	mov    %edx,-0x4c(%ebp)
+    11b8:	e8 33 03 00 00       	call   14f0 <pio_read_8@plt>
+    11bd:	5a                   	pop    %edx
+    11be:	8b 55 b4             	mov    -0x4c(%ebp),%edx
+    11c1:	59                   	pop    %ecx
+    11c2:	83 f2 ff             	xor    $0xffffffff,%edx
+    11c5:	21 c2                	and    %eax,%edx
+    11c7:	31 c0                	xor    %eax,%eax
+    11c9:	88 d0                	mov    %dl,%al
+    11cb:	50                   	push   %eax
+    11cc:	a1 20 29 00 00       	mov    0x2920,%eax
+    11d1:	40                   	inc    %eax
+    11d2:	50                   	push   %eax
+    11d3:	e8 28 03 00 00       	call   1500 <pio_write_8@plt>
+    11d8:	83 c4 10             	add    $0x10,%esp
+    11db:	8b 4d b0             	mov    -0x50(%ebp),%ecx
+    11de:	50                   	push   %eax
+    11df:	50                   	push   %eax
+    11e0:	51                   	push   %ecx
+    11e1:	57                   	push   %edi
+    11e2:	e8 f9 02 00 00       	call   14e0 <async_answer_0@plt>
+    11e7:	83 c4 10             	add    $0x10,%esp
+    11ea:	e9 61 ff ff ff       	jmp    1150 <i8259_connection+0x20>
+    11ef:	90                   	nop
+    11f0:	50                   	push   %eax
+    11f1:	50                   	push   %eax
+    11f2:	6a f2                	push   $0xfffffff2
+    11f4:	57                   	push   %edi
+    11f5:	e8 e6 02 00 00       	call   14e0 <async_answer_0@plt>
+    11fa:	83 c4 10             	add    $0x10,%esp
+    11fd:	e9 4e ff ff ff       	jmp    1150 <i8259_connection+0x20>
+    1202:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1208:	53                   	push   %ebx
+    1209:	53                   	push   %ebx
+    120a:	6a 00                	push   $0x0
+    120c:	57                   	push   %edi
+    120d:	e8 ce 02 00 00       	call   14e0 <async_answer_0@plt>
+    1212:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1215:	5b                   	pop    %ebx
+    1216:	5e                   	pop    %esi
+    1217:	5f                   	pop    %edi
+    1218:	5d                   	pop    %ebp
+    1219:	c3                   	ret    
+    121a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1220:	83 ec 0c             	sub    $0xc,%esp
+    1223:	a1 24 29 00 00       	mov    0x2924,%eax
+    1228:	40                   	inc    %eax
+    1229:	89 55 b4             	mov    %edx,-0x4c(%ebp)
+    122c:	50                   	push   %eax
+    122d:	e8 be 02 00 00       	call   14f0 <pio_read_8@plt>
+    1232:	5a                   	pop    %edx
+    1233:	8b 55 b4             	mov    -0x4c(%ebp),%edx
+    1236:	59                   	pop    %ecx
+    1237:	88 d1                	mov    %dl,%cl
+    1239:	83 f1 ff             	xor    $0xffffffff,%ecx
+    123c:	21 c8                	and    %ecx,%eax
+    123e:	25 ff 00 00 00       	and    $0xff,%eax
+    1243:	50                   	push   %eax
+    1244:	a1 24 29 00 00       	mov    0x2924,%eax
+    1249:	40                   	inc    %eax
+    124a:	50                   	push   %eax
+    124b:	e8 b0 02 00 00       	call   1500 <pio_write_8@plt>
+    1250:	83 c4 10             	add    $0x10,%esp
+    1253:	8b 55 b4             	mov    -0x4c(%ebp),%edx
+    1256:	e9 45 ff ff ff       	jmp    11a0 <i8259_connection+0x70>
+    125b:	90                   	nop
+    125c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1260:	83 c9 ff             	or     $0xffffffff,%ecx
+    1263:	e9 76 ff ff ff       	jmp    11de <i8259_connection+0xae>
+    1268:	66 90                	xchg   %ax,%ax
+    126a:	66 90                	xchg   %ax,%ax
+    126c:	66 90                	xchg   %ax,%ax
+    126e:	66 90                	xchg   %ax,%ax
+
+00001270 <main>:
+    1270:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1274:	83 e4 f0             	and    $0xfffffff0,%esp
+    1277:	ff 71 fc             	pushl  -0x4(%ecx)
+    127a:	55                   	push   %ebp
+    127b:	89 e5                	mov    %esp,%ebp
+    127d:	53                   	push   %ebx
+    127e:	51                   	push   %ecx
+    127f:	83 ec 18             	sub    $0x18,%esp
+    1282:	68 9a 13 00 00       	push   $0x139a
+    1287:	68 a0 13 00 00       	push   $0x13a0
+    128c:	e8 3f 02 00 00       	call   14d0 <printf@plt>
+    1291:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1294:	5a                   	pop    %edx
+    1295:	59                   	pop    %ecx
+    1296:	50                   	push   %eax
+    1297:	68 9a 13 00 00       	push   $0x139a
+    129c:	e8 0f 02 00 00       	call   14b0 <sysinfo_get_value@plt>
+    12a1:	83 c4 10             	add    $0x10,%esp
+    12a4:	85 c0                	test   %eax,%eax
+    12a6:	75 07                	jne    12af <main+0x3f>
+    12a8:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    12ab:	85 c0                	test   %eax,%eax
+    12ad:	75 23                	jne    12d2 <main+0x62>
+    12af:	50                   	push   %eax
+    12b0:	50                   	push   %eax
+    12b1:	68 9a 13 00 00       	push   $0x139a
+    12b6:	68 ba 13 00 00       	push   $0x13ba
+    12bb:	e8 10 02 00 00       	call   14d0 <printf@plt>
+    12c0:	83 c4 10             	add    $0x10,%esp
+    12c3:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    12c6:	83 cb ff             	or     $0xffffffff,%ebx
+    12c9:	89 d8                	mov    %ebx,%eax
+    12cb:	59                   	pop    %ecx
+    12cc:	5b                   	pop    %ebx
+    12cd:	5d                   	pop    %ebp
+    12ce:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    12d1:	c3                   	ret    
+    12d2:	50                   	push   %eax
+    12d3:	68 24 29 00 00       	push   $0x2924
+    12d8:	6a 02                	push   $0x2
+    12da:	6a 20                	push   $0x20
+    12dc:	e8 af 01 00 00       	call   1490 <pio_enable@plt>
+    12e1:	83 c4 10             	add    $0x10,%esp
+    12e4:	85 c0                	test   %eax,%eax
+    12e6:	75 7c                	jne    1364 <main+0xf4>
+    12e8:	50                   	push   %eax
+    12e9:	68 20 29 00 00       	push   $0x2920
+    12ee:	6a 02                	push   $0x2
+    12f0:	68 a0 00 00 00       	push   $0xa0
+    12f5:	e8 96 01 00 00       	call   1490 <pio_enable@plt>
+    12fa:	83 c4 10             	add    $0x10,%esp
+    12fd:	89 c3                	mov    %eax,%ebx
+    12ff:	85 c0                	test   %eax,%eax
+    1301:	75 61                	jne    1364 <main+0xf4>
+    1303:	52                   	push   %edx
+    1304:	52                   	push   %edx
+    1305:	6a 00                	push   $0x0
+    1307:	68 30 11 00 00       	push   $0x1130
+    130c:	e8 2f 02 00 00       	call   1540 <async_set_fallback_port_handler@plt>
+    1311:	c7 04 24 69 72 63 20 	movl   $0x20637269,(%esp)
+    1318:	e8 33 02 00 00       	call   1550 <service_register@plt>
+    131d:	59                   	pop    %ecx
+    131e:	58                   	pop    %eax
+    131f:	68 9a 13 00 00       	push   $0x139a
+    1324:	68 e8 13 00 00       	push   $0x13e8
+    1329:	e8 a2 01 00 00       	call   14d0 <printf@plt>
+    132e:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+    1335:	e8 86 01 00 00       	call   14c0 <task_retval@plt>
+    133a:	83 c8 ff             	or     $0xffffffff,%eax
+    133d:	f0 0f c1 05 1c 29 00 	lock xadd %eax,0x291c
+    1344:	00 
+    1345:	83 c4 10             	add    $0x10,%esp
+    1348:	48                   	dec    %eax
+    1349:	78 32                	js     137d <main+0x10d>
+    134b:	83 ec 0c             	sub    $0xc,%esp
+    134e:	6a 03                	push   $0x3
+    1350:	e8 cb 01 00 00       	call   1520 <fibril_switch@plt>
+    1355:	83 c4 10             	add    $0x10,%esp
+    1358:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    135b:	89 d8                	mov    %ebx,%eax
+    135d:	59                   	pop    %ecx
+    135e:	5b                   	pop    %ebx
+    135f:	5d                   	pop    %ebp
+    1360:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    1363:	c3                   	ret    
+    1364:	50                   	push   %eax
+    1365:	50                   	push   %eax
+    1366:	68 9a 13 00 00       	push   $0x139a
+    136b:	68 ce 13 00 00       	push   $0x13ce
+    1370:	e8 5b 01 00 00       	call   14d0 <printf@plt>
+    1375:	83 c4 10             	add    $0x10,%esp
+    1378:	e9 46 ff ff ff       	jmp    12c3 <main+0x53>
+    137d:	50                   	push   %eax
+    137e:	6a 0b                	push   $0xb
+    1380:	6a 00                	push   $0x0
+    1382:	6a 00                	push   $0x0
+    1384:	6a 00                	push   $0x0
+    1386:	6a 00                	push   $0x0
+    1388:	6a 00                	push   $0x0
+    138a:	68 1c 29 00 00       	push   $0x291c
+    138f:	ff 15 18 29 00 00    	call   *0x2918
+    1395:	83 c4 20             	add    $0x20,%esp
+    1398:	eb b1                	jmp    134b <main+0xdb>
+    139a:	69 38 32 35 39 00    	imul   $0x393532,(%eax),%edi
+    13a0:	25 73 3a 20 48       	and    $0x48203a73,%eax
+    13a5:	65 6c                	gs insb (%dx),%es:(%edi)
+    13a7:	65 6e                	outsb  %gs:(%esi),(%dx)
+    13a9:	4f                   	dec    %edi
+    13aa:	53                   	push   %ebx
+    13ab:	20 69 38             	and    %ch,0x38(%ecx)
+    13ae:	32 35 39 20 64 72    	xor    0x72642039,%dh
+    13b4:	69 76 65 72 0a 00 25 	imul   $0x25000a72,0x65(%esi),%esi
+    13bb:	73 3a                	jae    13f7 <main+0x187>
+    13bd:	20 4e 6f             	and    %cl,0x6f(%esi)
+    13c0:	20 69 38             	and    %ch,0x38(%ecx)
+    13c3:	32 35 39 20 66 6f    	xor    0x6f662039,%dh
+    13c9:	75 6e                	jne    1439 <main+0x1c9>
+    13cb:	64 0a 00             	or     %fs:(%eax),%al
+    13ce:	25 73 3a 20 69       	and    $0x69203a73,%eax
+    13d3:	38 32                	cmp    %dh,(%edx)
+    13d5:	35 39 20 6e 6f       	xor    $0x6f6e2039,%eax
+    13da:	74 20                	je     13fc <main+0x18c>
+    13dc:	61                   	popa   
+    13dd:	63 63 65             	arpl   %sp,0x65(%ebx)
+    13e0:	73 73                	jae    1455 <main+0x1e5>
+    13e2:	69 62 6c 65 0a 00 25 	imul   $0x25000a65,0x6c(%edx),%esp
+    13e9:	73 3a                	jae    1425 <main+0x1b5>
+    13eb:	20 41 63             	and    %al,0x63(%ecx)
+    13ee:	63 65 70             	arpl   %sp,0x70(%ebp)
+    13f1:	74 69                	je     145c <main+0x1ec>
+    13f3:	6e                   	outsb  %ds:(%esi),(%dx)
+    13f4:	67 20 63 6f          	and    %ah,0x6f(%bp,%di)
+    13f8:	6e                   	outsb  %ds:(%esi),(%dx)
+    13f9:	6e                   	outsb  %ds:(%esi),(%dx)
+    13fa:	65 63 74 69 6f       	arpl   %si,%gs:0x6f(%ecx,%ebp,2)
+    13ff:	6e                   	outsb  %ds:(%esi),(%dx)
+    1400:	73 0a                	jae    140c <main+0x19c>
+	...
+
+Disassembly of section .plt:
+
+00001480 <pio_enable@plt-0x10>:
+    1480:	ff 35 dc 28 00 00    	pushl  0x28dc
+    1486:	ff 25 e0 28 00 00    	jmp    *0x28e0
+    148c:	00 00                	add    %al,(%eax)
+	...
+
+00001490 <pio_enable@plt>:
+    1490:	ff 25 e4 28 00 00    	jmp    *0x28e4
+    1496:	68 00 00 00 00       	push   $0x0
+    149b:	e9 e0 ff ff ff       	jmp    1480 <main+0x210>
+
+000014a0 <__main@plt>:
+    14a0:	ff 25 e8 28 00 00    	jmp    *0x28e8
+    14a6:	68 08 00 00 00       	push   $0x8
+    14ab:	e9 d0 ff ff ff       	jmp    1480 <main+0x210>
+
+000014b0 <sysinfo_get_value@plt>:
+    14b0:	ff 25 ec 28 00 00    	jmp    *0x28ec
+    14b6:	68 10 00 00 00       	push   $0x10
+    14bb:	e9 c0 ff ff ff       	jmp    1480 <main+0x210>
+
+000014c0 <task_retval@plt>:
+    14c0:	ff 25 f0 28 00 00    	jmp    *0x28f0
+    14c6:	68 18 00 00 00       	push   $0x18
+    14cb:	e9 b0 ff ff ff       	jmp    1480 <main+0x210>
+
+000014d0 <printf@plt>:
+    14d0:	ff 25 f4 28 00 00    	jmp    *0x28f4
+    14d6:	68 20 00 00 00       	push   $0x20
+    14db:	e9 a0 ff ff ff       	jmp    1480 <main+0x210>
+
+000014e0 <async_answer_0@plt>:
+    14e0:	ff 25 f8 28 00 00    	jmp    *0x28f8
+    14e6:	68 28 00 00 00       	push   $0x28
+    14eb:	e9 90 ff ff ff       	jmp    1480 <main+0x210>
+
+000014f0 <pio_read_8@plt>:
+    14f0:	ff 25 fc 28 00 00    	jmp    *0x28fc
+    14f6:	68 30 00 00 00       	push   $0x30
+    14fb:	e9 80 ff ff ff       	jmp    1480 <main+0x210>
+
+00001500 <pio_write_8@plt>:
+    1500:	ff 25 00 29 00 00    	jmp    *0x2900
+    1506:	68 38 00 00 00       	push   $0x38
+    150b:	e9 70 ff ff ff       	jmp    1480 <main+0x210>
+
+00001510 <async_get_call_timeout@plt>:
+    1510:	ff 25 04 29 00 00    	jmp    *0x2904
+    1516:	68 40 00 00 00       	push   $0x40
+    151b:	e9 60 ff ff ff       	jmp    1480 <main+0x210>
+
+00001520 <fibril_switch@plt>:
+    1520:	ff 25 08 29 00 00    	jmp    *0x2908
+    1526:	68 48 00 00 00       	push   $0x48
+    152b:	e9 50 ff ff ff       	jmp    1480 <main+0x210>
+
+00001530 <__syscall_fast@plt>:
+    1530:	ff 25 0c 29 00 00    	jmp    *0x290c
+    1536:	68 50 00 00 00       	push   $0x50
+    153b:	e9 40 ff ff ff       	jmp    1480 <main+0x210>
+
+00001540 <async_set_fallback_port_handler@plt>:
+    1540:	ff 25 10 29 00 00    	jmp    *0x2910
+    1546:	68 58 00 00 00       	push   $0x58
+    154b:	e9 30 ff ff ff       	jmp    1480 <main+0x210>
+
+00001550 <service_register@plt>:
+    1550:	ff 25 14 29 00 00    	jmp    *0x2914
+    1556:	68 60 00 00 00       	push   $0x60
+    155b:	e9 20 ff ff ff       	jmp    1480 <main+0x210>

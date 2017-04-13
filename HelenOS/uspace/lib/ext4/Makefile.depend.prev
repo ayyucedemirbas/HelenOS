@@ -1,0 +1,529 @@
+# DO NOT DELETE
+
+libext4_balloc.o: ../../lib/c/include/errno.h
+libext4_balloc.o: ../../../abi/include/abi/errno.h
+libext4_balloc.o: ../../lib/c/include/sys/types.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/stdint.h libext4.h
+libext4_balloc.o: libext4_balloc.h libext4_types.h ../../lib/block/block.h
+libext4_balloc.o: ../../lib/c/include/stdint.h ../../lib/c/include/async.h
+libext4_balloc.o: ../../lib/c/include/ipc/common.h
+libext4_balloc.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_balloc.o: ../../lib/c/include/atomic.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_balloc.o: ../../lib/c/include/atomicdflt.h
+libext4_balloc.o: ../../lib/c/include/stdbool.h
+libext4_balloc.o: ../../../abi/include/abi/bool.h
+libext4_balloc.o: ../../../abi/include/abi/proc/task.h
+libext4_balloc.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_balloc.o: ../../../abi/include/abi/syscall.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_balloc.o: ../../lib/c/include/fibril.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_balloc.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libext4_balloc.o: ../../lib/c/include/stddef.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_balloc.o: ../../lib/c/include/sys/time.h
+libext4_balloc.o: ../../../abi/include/abi/ddi/irq.h
+libext4_balloc.o: ../../../abi/include/abi/ipc/event.h
+libext4_balloc.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_balloc.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_balloc.o: ../../lib/c/include/fibril_synch.h
+libext4_balloc.o: ../../lib/c/include/adt/hash_table.h
+libext4_balloc.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_balloc.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_balloc.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_balloc.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_balloc.o: libext4_block_group.h libext4_directory.h
+libext4_balloc.o: libext4_directory_index.h libext4_extent.h
+libext4_balloc.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_balloc.o: libext4_inode.h libext4_superblock.h
+libext4_balloc.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_balloc.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_balloc.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_balloc.o: ../../../abi/include/abi/kio.h
+libext4_bitmap.o: ../../lib/c/include/errno.h
+libext4_bitmap.o: ../../../abi/include/abi/errno.h ../../lib/block/block.h
+libext4_bitmap.o: ../../lib/c/include/stdint.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_bitmap.o: ../../lib/c/include/async.h
+libext4_bitmap.o: ../../lib/c/include/ipc/common.h
+libext4_bitmap.o: ../../lib/c/include/sys/types.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_bitmap.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_bitmap.o: ../../lib/c/include/atomic.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_bitmap.o: ../../lib/c/include/atomicdflt.h
+libext4_bitmap.o: ../../lib/c/include/stdbool.h
+libext4_bitmap.o: ../../../abi/include/abi/bool.h
+libext4_bitmap.o: ../../../abi/include/abi/proc/task.h
+libext4_bitmap.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_bitmap.o: ../../../abi/include/abi/syscall.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_bitmap.o: ../../lib/c/include/fibril.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_bitmap.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libext4_bitmap.o: ../../lib/c/include/stddef.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_bitmap.o: ../../lib/c/include/sys/time.h
+libext4_bitmap.o: ../../../abi/include/abi/ddi/irq.h
+libext4_bitmap.o: ../../../abi/include/abi/ipc/event.h
+libext4_bitmap.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_bitmap.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_bitmap.o: ../../lib/c/include/fibril_synch.h
+libext4_bitmap.o: ../../lib/c/include/adt/hash_table.h
+libext4_bitmap.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_bitmap.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_bitmap.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_bitmap.o: ../../lib/c/include/ipc/loc.h libext4.h libext4_balloc.h
+libext4_bitmap.o: libext4_types.h libext4_bitmap.h libext4_block_group.h
+libext4_bitmap.o: libext4_directory.h libext4_directory_index.h
+libext4_bitmap.o: libext4_extent.h libext4_filesystem.h libext4_hash.h
+libext4_bitmap.o: libext4_ialloc.h libext4_inode.h libext4_superblock.h
+libext4_bitmap.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_bitmap.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_bitmap.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_bitmap.o: ../../../abi/include/abi/kio.h
+libext4_block_group.o: ../../lib/c/include/byteorder.h
+libext4_block_group.o: ../../lib/c/include/stdint.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_block_group.o: libext4.h libext4_balloc.h
+libext4_block_group.o: ../../lib/c/include/sys/types.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_block_group.o: libext4_types.h ../../lib/block/block.h
+libext4_block_group.o: ../../lib/c/include/async.h
+libext4_block_group.o: ../../lib/c/include/ipc/common.h
+libext4_block_group.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_block_group.o: ../../lib/c/include/atomic.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_block_group.o: ../../lib/c/include/atomicdflt.h
+libext4_block_group.o: ../../lib/c/include/stdbool.h
+libext4_block_group.o: ../../../abi/include/abi/bool.h
+libext4_block_group.o: ../../../abi/include/abi/proc/task.h
+libext4_block_group.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_block_group.o: ../../../abi/include/abi/syscall.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_block_group.o: ../../lib/c/include/fibril.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_block_group.o: ../../lib/c/include/adt/list.h
+libext4_block_group.o: ../../lib/c/include/assert.h
+libext4_block_group.o: ../../lib/c/include/stddef.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_block_group.o: ../../lib/c/include/sys/time.h
+libext4_block_group.o: ../../../abi/include/abi/ddi/irq.h
+libext4_block_group.o: ../../../abi/include/abi/ipc/event.h
+libext4_block_group.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_block_group.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_block_group.o: ../../lib/c/include/fibril_synch.h
+libext4_block_group.o: ../../lib/c/include/adt/hash_table.h
+libext4_block_group.o: ../../lib/c/include/unistd.h
+libext4_block_group.o: ../../lib/c/include/time.h
+libext4_block_group.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_block_group.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_block_group.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_block_group.o: libext4_block_group.h libext4_directory.h
+libext4_block_group.o: libext4_directory_index.h libext4_extent.h
+libext4_block_group.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_block_group.o: libext4_inode.h libext4_superblock.h
+libext4_block_group.o: ../../lib/c/include/stdio.h
+libext4_block_group.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+libext4_block_group.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+libext4_block_group.o: ../../lib/c/include/io/verify.h
+libext4_block_group.o: ../../../abi/include/abi/kio.h
+libext4_directory.o: ../../lib/c/include/byteorder.h
+libext4_directory.o: ../../lib/c/include/stdint.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_directory.o: ../../lib/c/include/errno.h
+libext4_directory.o: ../../../abi/include/abi/errno.h
+libext4_directory.o: ../../lib/c/include/malloc.h
+libext4_directory.o: ../../lib/c/include/sys/types.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/stddef.h libext4.h
+libext4_directory.o: libext4_balloc.h libext4_types.h ../../lib/block/block.h
+libext4_directory.o: ../../lib/c/include/async.h
+libext4_directory.o: ../../lib/c/include/ipc/common.h
+libext4_directory.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_directory.o: ../../lib/c/include/atomic.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_directory.o: ../../lib/c/include/atomicdflt.h
+libext4_directory.o: ../../lib/c/include/stdbool.h
+libext4_directory.o: ../../../abi/include/abi/bool.h
+libext4_directory.o: ../../../abi/include/abi/proc/task.h
+libext4_directory.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_directory.o: ../../../abi/include/abi/syscall.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_directory.o: ../../lib/c/include/fibril.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_directory.o: ../../lib/c/include/adt/list.h
+libext4_directory.o: ../../lib/c/include/assert.h
+libext4_directory.o: ../../lib/c/include/stddef.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_directory.o: ../../lib/c/include/sys/time.h
+libext4_directory.o: ../../../abi/include/abi/ddi/irq.h
+libext4_directory.o: ../../../abi/include/abi/ipc/event.h
+libext4_directory.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_directory.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_directory.o: ../../lib/c/include/fibril_synch.h
+libext4_directory.o: ../../lib/c/include/adt/hash_table.h
+libext4_directory.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_directory.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_directory.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_directory.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_directory.o: libext4_block_group.h libext4_directory.h
+libext4_directory.o: libext4_directory_index.h libext4_extent.h
+libext4_directory.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_directory.o: libext4_inode.h libext4_superblock.h
+libext4_directory.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_directory.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_directory.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_directory.o: ../../../abi/include/abi/kio.h
+libext4_directory_index.o: ../../lib/c/include/byteorder.h
+libext4_directory_index.o: ../../lib/c/include/stdint.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_directory_index.o: ../../lib/c/include/errno.h
+libext4_directory_index.o: ../../../abi/include/abi/errno.h
+libext4_directory_index.o: ../../lib/c/include/malloc.h
+libext4_directory_index.o: ../../lib/c/include/sys/types.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_directory_index.o: ../../lib/c/include/sort.h
+libext4_directory_index.o: ../../lib/c/include/stdbool.h
+libext4_directory_index.o: ../../../abi/include/abi/bool.h libext4.h
+libext4_directory_index.o: libext4_balloc.h libext4_types.h
+libext4_directory_index.o: ../../lib/block/block.h
+libext4_directory_index.o: ../../lib/c/include/async.h
+libext4_directory_index.o: ../../lib/c/include/ipc/common.h
+libext4_directory_index.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_directory_index.o: ../../lib/c/include/atomic.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_directory_index.o: ../../lib/c/include/atomicdflt.h
+libext4_directory_index.o: ../../../abi/include/abi/proc/task.h
+libext4_directory_index.o: ../../lib/c/include/futex.h
+libext4_directory_index.o: ../../lib/c/include/libc.h
+libext4_directory_index.o: ../../../abi/include/abi/syscall.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_directory_index.o: ../../lib/c/include/fibril.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_directory_index.o: ../../lib/c/include/adt/list.h
+libext4_directory_index.o: ../../lib/c/include/assert.h
+libext4_directory_index.o: ../../lib/c/include/stddef.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_directory_index.o: ../../lib/c/include/sys/time.h
+libext4_directory_index.o: ../../../abi/include/abi/ddi/irq.h
+libext4_directory_index.o: ../../../abi/include/abi/ipc/event.h
+libext4_directory_index.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_directory_index.o: ../../../abi/include/abi/fourcc.h
+libext4_directory_index.o: ../../../common.h
+libext4_directory_index.o: ../../lib/c/include/fibril_synch.h
+libext4_directory_index.o: ../../lib/c/include/adt/hash_table.h
+libext4_directory_index.o: ../../lib/c/include/unistd.h
+libext4_directory_index.o: ../../lib/c/include/time.h
+libext4_directory_index.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_directory_index.o: ../../lib/c/include/macros.h
+libext4_directory_index.o: ../../lib/c/include/loc.h
+libext4_directory_index.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_directory_index.o: libext4_block_group.h libext4_directory.h
+libext4_directory_index.o: libext4_directory_index.h libext4_extent.h
+libext4_directory_index.o: libext4_filesystem.h libext4_hash.h
+libext4_directory_index.o: libext4_ialloc.h libext4_inode.h
+libext4_directory_index.o: libext4_superblock.h ../../lib/c/include/stdio.h
+libext4_directory_index.o: ../../lib/c/include/stdarg.h
+libext4_directory_index.o: ../../lib/c/include/str.h
+libext4_directory_index.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+libext4_directory_index.o: ../../lib/c/include/io/verify.h
+libext4_directory_index.o: ../../../abi/include/abi/kio.h
+libext4_extent.o: ../../lib/c/include/byteorder.h
+libext4_extent.o: ../../lib/c/include/stdint.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_extent.o: ../../lib/c/include/errno.h
+libext4_extent.o: ../../../abi/include/abi/errno.h
+libext4_extent.o: ../../lib/c/include/malloc.h
+libext4_extent.o: ../../lib/c/include/sys/types.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/stddef.h libext4.h
+libext4_extent.o: libext4_balloc.h libext4_types.h ../../lib/block/block.h
+libext4_extent.o: ../../lib/c/include/async.h
+libext4_extent.o: ../../lib/c/include/ipc/common.h
+libext4_extent.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_extent.o: ../../lib/c/include/atomic.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_extent.o: ../../lib/c/include/atomicdflt.h
+libext4_extent.o: ../../lib/c/include/stdbool.h
+libext4_extent.o: ../../../abi/include/abi/bool.h
+libext4_extent.o: ../../../abi/include/abi/proc/task.h
+libext4_extent.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_extent.o: ../../../abi/include/abi/syscall.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_extent.o: ../../lib/c/include/fibril.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_extent.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libext4_extent.o: ../../lib/c/include/stddef.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_extent.o: ../../lib/c/include/sys/time.h
+libext4_extent.o: ../../../abi/include/abi/ddi/irq.h
+libext4_extent.o: ../../../abi/include/abi/ipc/event.h
+libext4_extent.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_extent.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_extent.o: ../../lib/c/include/fibril_synch.h
+libext4_extent.o: ../../lib/c/include/adt/hash_table.h
+libext4_extent.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_extent.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_extent.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_extent.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_extent.o: libext4_block_group.h libext4_directory.h
+libext4_extent.o: libext4_directory_index.h libext4_extent.h
+libext4_extent.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_extent.o: libext4_inode.h libext4_superblock.h
+libext4_extent.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_extent.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_extent.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_extent.o: ../../../abi/include/abi/kio.h
+libext4_filesystem.o: ../../lib/c/include/byteorder.h
+libext4_filesystem.o: ../../lib/c/include/stdint.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_filesystem.o: ../../lib/c/include/errno.h
+libext4_filesystem.o: ../../../abi/include/abi/errno.h
+libext4_filesystem.o: ../../lib/c/include/malloc.h
+libext4_filesystem.o: ../../lib/c/include/sys/types.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_filesystem.o: ../../lib/c/include/ipc/vfs.h
+libext4_filesystem.o: ../../lib/c/include/ipc/common.h
+libext4_filesystem.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_filesystem.o: ../../lib/c/include/atomic.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_filesystem.o: ../../lib/c/include/atomicdflt.h
+libext4_filesystem.o: ../../lib/c/include/stdbool.h
+libext4_filesystem.o: ../../../abi/include/abi/bool.h
+libext4_filesystem.o: ../../../abi/include/abi/proc/task.h
+libext4_filesystem.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_filesystem.o: ../../../abi/include/abi/syscall.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_filesystem.o: ../../lib/c/include/align.h ../../lib/crypto/crypto.h
+libext4_filesystem.o: libext4.h libext4_balloc.h libext4_types.h
+libext4_filesystem.o: ../../lib/block/block.h ../../lib/c/include/async.h
+libext4_filesystem.o: ../../lib/c/include/fibril.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_filesystem.o: ../../lib/c/include/adt/list.h
+libext4_filesystem.o: ../../lib/c/include/assert.h
+libext4_filesystem.o: ../../lib/c/include/stddef.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_filesystem.o: ../../lib/c/include/sys/time.h
+libext4_filesystem.o: ../../../abi/include/abi/ddi/irq.h
+libext4_filesystem.o: ../../../abi/include/abi/ipc/event.h
+libext4_filesystem.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_filesystem.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_filesystem.o: ../../lib/c/include/fibril_synch.h
+libext4_filesystem.o: ../../lib/c/include/adt/hash_table.h
+libext4_filesystem.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_filesystem.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_filesystem.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_filesystem.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_filesystem.o: libext4_block_group.h libext4_directory.h
+libext4_filesystem.o: libext4_directory_index.h libext4_extent.h
+libext4_filesystem.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_filesystem.o: libext4_inode.h libext4_superblock.h
+libext4_filesystem.o: ../../lib/c/include/stdio.h
+libext4_filesystem.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+libext4_filesystem.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+libext4_filesystem.o: ../../lib/c/include/io/verify.h
+libext4_filesystem.o: ../../../abi/include/abi/kio.h
+libext4_hash.o: libext4.h libext4_balloc.h ../../lib/c/include/sys/types.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_hash.o: libext4_types.h ../../lib/block/block.h
+libext4_hash.o: ../../lib/c/include/stdint.h ../../lib/c/include/async.h
+libext4_hash.o: ../../lib/c/include/ipc/common.h
+libext4_hash.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_hash.o: ../../lib/c/include/atomic.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_hash.o: ../../lib/c/include/atomicdflt.h
+libext4_hash.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+libext4_hash.o: ../../../abi/include/abi/proc/task.h
+libext4_hash.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_hash.o: ../../../abi/include/abi/syscall.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_hash.o: ../../lib/c/include/fibril.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_hash.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libext4_hash.o: ../../lib/c/include/stddef.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_hash.o: ../../lib/c/include/sys/time.h
+libext4_hash.o: ../../../abi/include/abi/ddi/irq.h
+libext4_hash.o: ../../../abi/include/abi/ipc/event.h
+libext4_hash.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_hash.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_hash.o: ../../lib/c/include/fibril_synch.h
+libext4_hash.o: ../../lib/c/include/adt/hash_table.h
+libext4_hash.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_hash.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_hash.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_hash.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_hash.o: libext4_block_group.h libext4_directory.h
+libext4_hash.o: libext4_directory_index.h libext4_extent.h
+libext4_hash.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_hash.o: libext4_inode.h libext4_superblock.h
+libext4_hash.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_hash.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_hash.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_hash.o: ../../../abi/include/abi/kio.h ../../lib/c/include/errno.h
+libext4_hash.o: ../../../abi/include/abi/errno.h
+libext4_ialloc.o: ../../lib/c/include/errno.h
+libext4_ialloc.o: ../../../abi/include/abi/errno.h ../../lib/c/include/time.h
+libext4_ialloc.o: ../../lib/c/include/sys/time.h
+libext4_ialloc.o: ../../lib/c/include/sys/types.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/stdint.h libext4.h
+libext4_ialloc.o: libext4_balloc.h libext4_types.h ../../lib/block/block.h
+libext4_ialloc.o: ../../lib/c/include/stdint.h ../../lib/c/include/async.h
+libext4_ialloc.o: ../../lib/c/include/ipc/common.h
+libext4_ialloc.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_ialloc.o: ../../lib/c/include/atomic.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_ialloc.o: ../../lib/c/include/atomicdflt.h
+libext4_ialloc.o: ../../lib/c/include/stdbool.h
+libext4_ialloc.o: ../../../abi/include/abi/bool.h
+libext4_ialloc.o: ../../../abi/include/abi/proc/task.h
+libext4_ialloc.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_ialloc.o: ../../../abi/include/abi/syscall.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_ialloc.o: ../../lib/c/include/fibril.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_ialloc.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libext4_ialloc.o: ../../lib/c/include/stddef.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_ialloc.o: ../../../abi/include/abi/ddi/irq.h
+libext4_ialloc.o: ../../../abi/include/abi/ipc/event.h
+libext4_ialloc.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_ialloc.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_ialloc.o: ../../lib/c/include/fibril_synch.h
+libext4_ialloc.o: ../../lib/c/include/adt/hash_table.h
+libext4_ialloc.o: ../../lib/c/include/unistd.h
+libext4_ialloc.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_ialloc.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_ialloc.o: ../../lib/c/include/ipc/loc.h libext4_bitmap.h
+libext4_ialloc.o: libext4_block_group.h libext4_directory.h
+libext4_ialloc.o: libext4_directory_index.h libext4_extent.h
+libext4_ialloc.o: libext4_filesystem.h libext4_hash.h libext4_ialloc.h
+libext4_ialloc.o: libext4_inode.h libext4_superblock.h
+libext4_ialloc.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_ialloc.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_ialloc.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_ialloc.o: ../../../abi/include/abi/kio.h
+libext4_inode.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_inode.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+libext4_inode.o: ../../lib/block/block.h ../../lib/c/include/async.h
+libext4_inode.o: ../../lib/c/include/ipc/common.h
+libext4_inode.o: ../../lib/c/include/sys/types.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_inode.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_inode.o: ../../lib/c/include/atomic.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_inode.o: ../../lib/c/include/atomicdflt.h
+libext4_inode.o: ../../lib/c/include/stdbool.h
+libext4_inode.o: ../../../abi/include/abi/bool.h
+libext4_inode.o: ../../../abi/include/abi/proc/task.h
+libext4_inode.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_inode.o: ../../../abi/include/abi/syscall.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_inode.o: ../../lib/c/include/fibril.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_inode.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+libext4_inode.o: ../../lib/c/include/stddef.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_inode.o: ../../lib/c/include/sys/time.h
+libext4_inode.o: ../../../abi/include/abi/ddi/irq.h
+libext4_inode.o: ../../../abi/include/abi/ipc/event.h
+libext4_inode.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_inode.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_inode.o: ../../lib/c/include/fibril_synch.h
+libext4_inode.o: ../../lib/c/include/adt/hash_table.h
+libext4_inode.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_inode.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_inode.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_inode.o: ../../lib/c/include/ipc/loc.h libext4.h libext4_balloc.h
+libext4_inode.o: libext4_types.h libext4_bitmap.h libext4_block_group.h
+libext4_inode.o: libext4_directory.h libext4_directory_index.h
+libext4_inode.o: libext4_extent.h libext4_filesystem.h libext4_hash.h
+libext4_inode.o: libext4_ialloc.h libext4_inode.h libext4_superblock.h
+libext4_inode.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+libext4_inode.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+libext4_inode.o: ../../lib/c/include/cc.h ../../lib/c/include/io/verify.h
+libext4_inode.o: ../../../abi/include/abi/kio.h
+libext4_superblock.o: ../../lib/c/include/byteorder.h
+libext4_superblock.o: ../../lib/c/include/stdint.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/common.h
+libext4_superblock.o: ../../lib/c/include/errno.h
+libext4_superblock.o: ../../../abi/include/abi/errno.h
+libext4_superblock.o: ../../lib/block/block.h ../../lib/c/include/async.h
+libext4_superblock.o: ../../lib/c/include/ipc/common.h
+libext4_superblock.o: ../../lib/c/include/sys/types.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/types.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+libext4_superblock.o: ../../../abi/include/abi/ipc/ipc.h
+libext4_superblock.o: ../../lib/c/include/atomic.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+libext4_superblock.o: ../../lib/c/include/atomicdflt.h
+libext4_superblock.o: ../../lib/c/include/stdbool.h
+libext4_superblock.o: ../../../abi/include/abi/bool.h
+libext4_superblock.o: ../../../abi/include/abi/proc/task.h
+libext4_superblock.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+libext4_superblock.o: ../../../abi/include/abi/syscall.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+libext4_superblock.o: ../../lib/c/include/fibril.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+libext4_superblock.o: ../../lib/c/include/adt/list.h
+libext4_superblock.o: ../../lib/c/include/assert.h
+libext4_superblock.o: ../../lib/c/include/stddef.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+libext4_superblock.o: ../../lib/c/include/sys/time.h
+libext4_superblock.o: ../../../abi/include/abi/ddi/irq.h
+libext4_superblock.o: ../../../abi/include/abi/ipc/event.h
+libext4_superblock.o: ../../../abi/include/abi/ipc/interfaces.h
+libext4_superblock.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+libext4_superblock.o: ../../lib/c/include/fibril_synch.h
+libext4_superblock.o: ../../lib/c/include/adt/hash_table.h
+libext4_superblock.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+libext4_superblock.o: ../../lib/c/arch/ia32/include/libarch/config.h
+libext4_superblock.o: ../../lib/c/include/macros.h ../../lib/c/include/loc.h
+libext4_superblock.o: ../../lib/c/include/ipc/loc.h
+libext4_superblock.o: ../../lib/c/include/malloc.h libext4.h libext4_balloc.h
+libext4_superblock.o: libext4_types.h libext4_bitmap.h libext4_block_group.h
+libext4_superblock.o: libext4_directory.h libext4_directory_index.h
+libext4_superblock.o: libext4_extent.h libext4_filesystem.h libext4_hash.h
+libext4_superblock.o: libext4_ialloc.h libext4_inode.h libext4_superblock.h
+libext4_superblock.o: ../../lib/c/include/stdio.h
+libext4_superblock.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+libext4_superblock.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+libext4_superblock.o: ../../lib/c/include/io/verify.h
+libext4_superblock.o: ../../../abi/include/abi/kio.h
+# DO NOT DELETE

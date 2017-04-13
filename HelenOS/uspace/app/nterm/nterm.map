@@ -1,0 +1,167 @@
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000      0xae6 conn.o
+ .debug_abbrev  0x0000000000000000      0x1fc conn.o
+ .debug_loc     0x0000000000000000       0x84 conn.o
+ .debug_aranges
+                0x0000000000000000       0x20 conn.o
+ .debug_line    0x0000000000000000      0x246 conn.o
+ .debug_str     0x0000000000000000      0xa44 conn.o
+ .comment       0x0000000000000000       0x12 conn.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 conn.o
+ .eh_frame      0x0000000000000000       0xc4 conn.o
+ .debug_info    0x0000000000000000      0xba9 nterm.o
+ .debug_abbrev  0x0000000000000000      0x278 nterm.o
+ .debug_loc     0x0000000000000000      0x11f nterm.o
+ .debug_aranges
+                0x0000000000000000       0x28 nterm.o
+ .debug_ranges  0x0000000000000000       0x60 nterm.o
+ .debug_line    0x0000000000000000      0x271 nterm.o
+ .debug_str     0x0000000000000000      0xcb5 nterm.o
+ .comment       0x0000000000000000       0x12 nterm.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 nterm.o
+ .eh_frame      0x0000000000000000       0x78 nterm.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130      0x3da
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x18f conn.o
+                0x00000000000011a0                conn_open
+                0x0000000000001290                conn_send
+ *fill*         0x00000000000012bf        0x1 
+ .text          0x00000000000012c0       0x2d nterm.o
+                0x00000000000012c0                nterm_received
+ *fill*         0x00000000000012ed        0x3 
+ .text.startup  0x00000000000012f0      0x163 nterm.o
+                0x00000000000012f0                main
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x0000000000001453       0x57 conn.o
+ .rodata.str1.1
+                0x00000000000014aa       0x60 nterm.o
+
+.rel.plt        0x000000000000150c       0x90
+ *(.rel.plt)
+ .rel.plt       0x000000000000150c       0x90 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x000000000000159c       0x18
+ *(.rel.*)
+ .rel.got       0x000000000000159c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x000000000000159c       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x00000000000015b4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x00000000000015b4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x00000000000015b4        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x00000000000015c0      0x130
+ *(.plt)
+ .plt           0x00000000000015c0      0x130 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000015d0                __main
+                0x00000000000015e0                printf
+                0x00000000000015f0                tcp_conn_send
+                0x0000000000001600                inet_hostport_plookup_one
+                0x0000000000001610                tcp_conn_recv
+                0x0000000000001620                fflush
+                0x0000000000001630                console_get_event
+                0x0000000000001640                tcp_conn_wait_connected
+                0x0000000000001650                console_init
+                0x0000000000001660                tcp_conn_create
+                0x0000000000001670                inet_addr_format
+                0x0000000000001680                inet_ep2_init
+                0x0000000000001690                tcp_destroy
+                0x00000000000016a0                fwrite
+                0x00000000000016b0                chr_encode
+                0x00000000000016c0                tcp_conn_destroy
+                0x00000000000016d0                __syscall_fast
+                0x00000000000016e0                tcp_create
+
+.dynsym         0x00000000000016f0      0x180
+ *(.dynsym)
+ .dynsym        0x00000000000016f0      0x180 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x0000000000001870      0x13e
+ *(.dynstr)
+ .dynstr        0x0000000000001870      0x13e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x00000000000019b0       0xac
+ *(.hash)
+ .hash          0x00000000000019b0       0xac /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x0000000000001a5c       0x13
+ *(.interp)
+ .interp        0x0000000000001a5c       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002a6f                . = (. + 0x1000)
+
+.dynamic        0x0000000000002a70       0xa8
+ *(.dynamic)
+ .dynamic       0x0000000000002a70       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002a70                _DYNAMIC
+
+.data           0x0000000000002b18       0x14
+ *(.data)
+ .data          0x0000000000002b18        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x0000000000002b18       0x14 conn.o
+ .data          0x0000000000002b2c        0x0 nterm.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x0000000000002b2c        0x0
+ *(.got)
+ .got           0x0000000000002b2c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x0000000000002b2c       0x54
+ *(.got.plt)
+ .got.plt       0x0000000000002b2c       0x54 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002b2c                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000002b80      0x430
+ *(.dynbss)
+ .dynbss        0x0000000000002b80       0x1c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000002b80                stdout
+                0x0000000000002b90                stdin
+                0x0000000000002b98                __syscall_fast_func
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000002b9c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x0000000000002b9c        0x4 
+ .bss           0x0000000000002ba0      0x408 conn.o
+ .bss           0x0000000000002fa8        0x8 nterm.o
+
+/DISCARD/
+ *(*)
+LOAD conn.o
+LOAD nterm.o
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(nterm elf32-i386)

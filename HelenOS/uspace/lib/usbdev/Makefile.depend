@@ -1,0 +1,340 @@
+# DO NOT DELETE
+
+src/altiface.o: include/usb/dev/alternate_ifaces.h
+src/altiface.o: ../../lib/usb/include/usb/descriptor.h
+src/altiface.o: ../../lib/c/include/sys/types.h
+src/altiface.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/altiface.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/altiface.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/altiface.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/altiface.o: include/usb/dev/dp.h ../../lib/c/include/assert.h
+src/altiface.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/altiface.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/altiface.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/altiface.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/altiface.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/altiface.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/driver.o: include/usb/dev/driver.h include/usb/dev/device.h
+src/driver.o: ../../lib/drv/include/ddf/driver.h ../../lib/c/include/async.h
+src/driver.o: ../../lib/c/include/ipc/common.h
+src/driver.o: ../../lib/c/include/sys/types.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/driver.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/driver.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+src/driver.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/driver.o: ../../../abi/include/abi/proc/task.h
+src/driver.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+src/driver.o: ../../../abi/include/abi/syscall.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/driver.o: ../../lib/c/include/fibril.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/driver.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/driver.o: ../../lib/c/include/stddef.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/driver.o: ../../lib/c/include/sys/time.h
+src/driver.o: ../../../abi/include/abi/ddi/irq.h
+src/driver.o: ../../../abi/include/abi/ipc/event.h
+src/driver.o: ../../../abi/include/abi/ipc/interfaces.h
+src/driver.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/driver.o: ../../lib/c/include/ipc/devman.h ../../lib/c/include/malloc.h
+src/driver.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/driver.o: ../../lib/c/include/ipc/dev_iface.h
+src/driver.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/driver.o: ../../lib/drv/include/dev_iface.h
+src/driver.o: ../../lib/usb/include/usb/usb.h ../../lib/c/include/byteorder.h
+src/driver.o: ../../lib/usb/include/usb/descriptor.h
+src/driver.o: include/usb/dev/alternate_ifaces.h include/usb/dev/pipes.h
+src/driver.o: ../../lib/drv/include/usb_iface.h
+src/driver.o: ../../lib/usb/include/usb/debug.h ../../lib/c/include/stdio.h
+src/driver.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/driver.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/driver.o: ../../lib/c/include/io/log.h ../../lib/c/include/inttypes.h
+src/driver.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+src/driver.o: ../../../abi/include/abi/log.h ../../lib/c/include/errno.h
+src/driver.o: ../../../abi/include/abi/errno.h
+src/driver.o: ../../lib/c/include/str_error.h
+src/devdrv.o: ../../lib/drv/include/usb_iface.h
+src/devdrv.o: ../../lib/drv/include/ddf/driver.h ../../lib/c/include/async.h
+src/devdrv.o: ../../lib/c/include/ipc/common.h
+src/devdrv.o: ../../lib/c/include/sys/types.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/devdrv.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/devdrv.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+src/devdrv.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/devdrv.o: ../../../abi/include/abi/proc/task.h
+src/devdrv.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+src/devdrv.o: ../../../abi/include/abi/syscall.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/devdrv.o: ../../lib/c/include/fibril.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/devdrv.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/devdrv.o: ../../lib/c/include/stddef.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/devdrv.o: ../../lib/c/include/sys/time.h
+src/devdrv.o: ../../../abi/include/abi/ddi/irq.h
+src/devdrv.o: ../../../abi/include/abi/ipc/event.h
+src/devdrv.o: ../../../abi/include/abi/ipc/interfaces.h
+src/devdrv.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/devdrv.o: ../../lib/c/include/ipc/devman.h ../../lib/c/include/malloc.h
+src/devdrv.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/devdrv.o: ../../lib/c/include/ipc/dev_iface.h
+src/devdrv.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/devdrv.o: ../../lib/drv/include/dev_iface.h
+src/devdrv.o: ../../lib/usb/include/usb/usb.h ../../lib/c/include/byteorder.h
+src/devdrv.o: include/usb/dev/alternate_ifaces.h
+src/devdrv.o: ../../lib/usb/include/usb/descriptor.h include/usb/dev/device.h
+src/devdrv.o: include/usb/dev/pipes.h include/usb/dev/request.h
+src/devdrv.o: ../../lib/c/include/l18n/langs.h
+src/devdrv.o: ../../lib/usb/include/usb/request.h
+src/devdrv.o: ../../lib/usb/include/usb/debug.h ../../lib/c/include/stdio.h
+src/devdrv.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/devdrv.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/devdrv.o: ../../lib/c/include/io/log.h ../../lib/c/include/inttypes.h
+src/devdrv.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+src/devdrv.o: ../../../abi/include/abi/log.h ../../lib/c/include/devman.h
+src/devdrv.o: ../../lib/c/include/ipc/loc.h ../../lib/c/include/errno.h
+src/devdrv.o: ../../../abi/include/abi/errno.h ../../lib/c/include/stdlib.h
+src/devdrv.o: ../../lib/c/include/stacktrace.h
+src/devpoll.o: include/usb/dev/device.h ../../lib/drv/include/ddf/driver.h
+src/devpoll.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+src/devpoll.o: ../../lib/c/include/sys/types.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/devpoll.o: ../../../abi/include/abi/ipc/ipc.h
+src/devpoll.o: ../../lib/c/include/atomic.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/devpoll.o: ../../lib/c/include/atomicdflt.h ../../lib/c/include/stdint.h
+src/devpoll.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/devpoll.o: ../../../abi/include/abi/proc/task.h
+src/devpoll.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+src/devpoll.o: ../../../abi/include/abi/syscall.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/devpoll.o: ../../lib/c/include/fibril.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/devpoll.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/devpoll.o: ../../lib/c/include/stddef.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/devpoll.o: ../../lib/c/include/sys/time.h
+src/devpoll.o: ../../../abi/include/abi/ddi/irq.h
+src/devpoll.o: ../../../abi/include/abi/ipc/event.h
+src/devpoll.o: ../../../abi/include/abi/ipc/interfaces.h
+src/devpoll.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/devpoll.o: ../../lib/c/include/ipc/devman.h ../../lib/c/include/malloc.h
+src/devpoll.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/devpoll.o: ../../lib/c/include/ipc/dev_iface.h
+src/devpoll.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/devpoll.o: ../../lib/drv/include/dev_iface.h
+src/devpoll.o: ../../lib/usb/include/usb/usb.h
+src/devpoll.o: ../../lib/c/include/byteorder.h
+src/devpoll.o: ../../lib/usb/include/usb/descriptor.h
+src/devpoll.o: include/usb/dev/alternate_ifaces.h include/usb/dev/pipes.h
+src/devpoll.o: ../../lib/drv/include/usb_iface.h include/usb/dev/poll.h
+src/devpoll.o: include/usb/dev/request.h ../../lib/c/include/l18n/langs.h
+src/devpoll.o: ../../lib/usb/include/usb/request.h
+src/devpoll.o: ../../lib/usb/include/usb/classes/classes.h
+src/devpoll.o: ../../lib/usb/include/usb/debug.h ../../lib/c/include/stdio.h
+src/devpoll.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/devpoll.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/devpoll.o: ../../lib/c/include/io/log.h ../../lib/c/include/inttypes.h
+src/devpoll.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+src/devpoll.o: ../../../abi/include/abi/log.h ../../lib/c/include/errno.h
+src/devpoll.o: ../../../abi/include/abi/errno.h ../../lib/c/include/stdlib.h
+src/devpoll.o: ../../lib/c/include/stacktrace.h
+src/devpoll.o: ../../lib/c/include/str_error.h
+src/dp.o: include/usb/dev/dp.h ../../lib/c/include/sys/types.h
+src/dp.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/dp.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/dp.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/dp.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/dp.o: ../../lib/usb/include/usb/descriptor.h ../../lib/c/include/assert.h
+src/dp.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/dp.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/dp.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/dp.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/dp.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/dp.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/pipes.o: include/usb/dev/pipes.h ../../lib/usb/include/usb/usb.h
+src/pipes.o: ../../lib/c/include/stdbool.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/pipes.o: ../../../abi/include/abi/bool.h ../../lib/c/include/sys/types.h
+src/pipes.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+src/pipes.o: ../../lib/usb/include/usb/descriptor.h
+src/pipes.o: ../../lib/drv/include/usb_iface.h
+src/pipes.o: ../../lib/drv/include/ddf/driver.h ../../lib/c/include/async.h
+src/pipes.o: ../../lib/c/include/ipc/common.h
+src/pipes.o: ../../../abi/include/abi/ipc/ipc.h ../../lib/c/include/atomic.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/pipes.o: ../../lib/c/include/atomicdflt.h
+src/pipes.o: ../../../abi/include/abi/proc/task.h ../../lib/c/include/futex.h
+src/pipes.o: ../../lib/c/include/libc.h ../../../abi/include/abi/syscall.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/pipes.o: ../../lib/c/include/fibril.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/pipes.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/pipes.o: ../../lib/c/include/stddef.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/pipes.o: ../../lib/c/include/sys/time.h
+src/pipes.o: ../../../abi/include/abi/ddi/irq.h
+src/pipes.o: ../../../abi/include/abi/ipc/event.h
+src/pipes.o: ../../../abi/include/abi/ipc/interfaces.h
+src/pipes.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/pipes.o: ../../lib/c/include/ipc/devman.h ../../lib/c/include/malloc.h
+src/pipes.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/pipes.o: ../../lib/c/include/ipc/dev_iface.h ../../lib/c/include/unistd.h
+src/pipes.o: ../../lib/c/include/time.h
+src/pipes.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/pipes.o: ../../lib/drv/include/dev_iface.h include/usb/dev/request.h
+src/pipes.o: ../../lib/c/include/l18n/langs.h
+src/pipes.o: ../../lib/usb/include/usb/request.h ../../lib/c/include/errno.h
+src/pipes.o: ../../../abi/include/abi/errno.h
+src/pipesinit.o: include/usb/dev/pipes.h ../../lib/usb/include/usb/usb.h
+src/pipesinit.o: ../../lib/c/include/stdbool.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/pipesinit.o: ../../../abi/include/abi/bool.h
+src/pipesinit.o: ../../lib/c/include/sys/types.h
+src/pipesinit.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+src/pipesinit.o: ../../lib/usb/include/usb/descriptor.h
+src/pipesinit.o: ../../lib/drv/include/usb_iface.h
+src/pipesinit.o: ../../lib/drv/include/ddf/driver.h
+src/pipesinit.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+src/pipesinit.o: ../../../abi/include/abi/ipc/ipc.h
+src/pipesinit.o: ../../lib/c/include/atomic.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/pipesinit.o: ../../lib/c/include/atomicdflt.h
+src/pipesinit.o: ../../../abi/include/abi/proc/task.h
+src/pipesinit.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+src/pipesinit.o: ../../../abi/include/abi/syscall.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/pipesinit.o: ../../lib/c/include/fibril.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/pipesinit.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/pipesinit.o: ../../lib/c/include/stddef.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/pipesinit.o: ../../lib/c/include/sys/time.h
+src/pipesinit.o: ../../../abi/include/abi/ddi/irq.h
+src/pipesinit.o: ../../../abi/include/abi/ipc/event.h
+src/pipesinit.o: ../../../abi/include/abi/ipc/interfaces.h
+src/pipesinit.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/pipesinit.o: ../../lib/c/include/ipc/devman.h
+src/pipesinit.o: ../../lib/c/include/malloc.h ../../lib/c/include/mem.h
+src/pipesinit.o: ../../lib/c/include/cc.h ../../lib/c/include/ipc/dev_iface.h
+src/pipesinit.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/pipesinit.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/pipesinit.o: ../../lib/drv/include/dev_iface.h include/usb/dev/dp.h
+src/pipesinit.o: include/usb/dev/request.h ../../lib/c/include/l18n/langs.h
+src/pipesinit.o: ../../lib/usb/include/usb/request.h
+src/pipesinit.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/recognise.o: include/usb/dev/pipes.h ../../lib/usb/include/usb/usb.h
+src/recognise.o: ../../lib/c/include/stdbool.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/recognise.o: ../../../abi/include/abi/bool.h
+src/recognise.o: ../../lib/c/include/sys/types.h
+src/recognise.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+src/recognise.o: ../../lib/usb/include/usb/descriptor.h
+src/recognise.o: ../../lib/drv/include/usb_iface.h
+src/recognise.o: ../../lib/drv/include/ddf/driver.h
+src/recognise.o: ../../lib/c/include/async.h ../../lib/c/include/ipc/common.h
+src/recognise.o: ../../../abi/include/abi/ipc/ipc.h
+src/recognise.o: ../../lib/c/include/atomic.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/recognise.o: ../../lib/c/include/atomicdflt.h
+src/recognise.o: ../../../abi/include/abi/proc/task.h
+src/recognise.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+src/recognise.o: ../../../abi/include/abi/syscall.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/recognise.o: ../../lib/c/include/fibril.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/recognise.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/recognise.o: ../../lib/c/include/stddef.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/recognise.o: ../../lib/c/include/sys/time.h
+src/recognise.o: ../../../abi/include/abi/ddi/irq.h
+src/recognise.o: ../../../abi/include/abi/ipc/event.h
+src/recognise.o: ../../../abi/include/abi/ipc/interfaces.h
+src/recognise.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/recognise.o: ../../lib/c/include/ipc/devman.h
+src/recognise.o: ../../lib/c/include/malloc.h ../../lib/c/include/mem.h
+src/recognise.o: ../../lib/c/include/cc.h ../../lib/c/include/ipc/dev_iface.h
+src/recognise.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/recognise.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/recognise.o: ../../lib/drv/include/dev_iface.h
+src/recognise.o: include/usb/dev/recognise.h ../../lib/c/include/devman.h
+src/recognise.o: ../../lib/c/include/ipc/loc.h include/usb/dev/request.h
+src/recognise.o: ../../lib/c/include/l18n/langs.h
+src/recognise.o: ../../lib/usb/include/usb/request.h
+src/recognise.o: ../../lib/usb/include/usb/classes/classes.h
+src/recognise.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/recognise.o: ../../lib/c/include/stdio.h ../../lib/c/include/stdarg.h
+src/recognise.o: ../../lib/c/include/str.h ../../lib/c/include/io/verify.h
+src/recognise.o: ../../../abi/include/abi/kio.h
+src/request.o: include/usb/dev/request.h ../../lib/c/include/sys/types.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/request.o: ../../lib/c/include/l18n/langs.h
+src/request.o: ../../lib/usb/include/usb/usb.h ../../lib/c/include/stdbool.h
+src/request.o: ../../../abi/include/abi/bool.h
+src/request.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+src/request.o: include/usb/dev/pipes.h ../../lib/usb/include/usb/descriptor.h
+src/request.o: ../../lib/drv/include/usb_iface.h
+src/request.o: ../../lib/drv/include/ddf/driver.h ../../lib/c/include/async.h
+src/request.o: ../../lib/c/include/ipc/common.h
+src/request.o: ../../../abi/include/abi/ipc/ipc.h
+src/request.o: ../../lib/c/include/atomic.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/request.o: ../../lib/c/include/atomicdflt.h
+src/request.o: ../../../abi/include/abi/proc/task.h
+src/request.o: ../../lib/c/include/futex.h ../../lib/c/include/libc.h
+src/request.o: ../../../abi/include/abi/syscall.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/request.o: ../../lib/c/include/fibril.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/request.o: ../../lib/c/include/adt/list.h ../../lib/c/include/assert.h
+src/request.o: ../../lib/c/include/stddef.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/request.o: ../../lib/c/include/sys/time.h
+src/request.o: ../../../abi/include/abi/ddi/irq.h
+src/request.o: ../../../abi/include/abi/ipc/event.h
+src/request.o: ../../../abi/include/abi/ipc/interfaces.h
+src/request.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/request.o: ../../lib/c/include/ipc/devman.h ../../lib/c/include/malloc.h
+src/request.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/request.o: ../../lib/c/include/ipc/dev_iface.h
+src/request.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/request.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/request.o: ../../lib/drv/include/dev_iface.h
+src/request.o: ../../lib/usb/include/usb/request.h
+src/request.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/request.o: ../../lib/c/include/stdlib.h ../../lib/c/include/stacktrace.h
+src/request.o: ../../lib/c/include/str.h
+# DO NOT DELETE

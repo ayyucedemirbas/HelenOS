@@ -1,0 +1,242 @@
+# DO NOT DELETE
+
+assoc.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+assoc.o: ../../../lib/c/include/stdbool.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+assoc.o: ../../../../abi/include/abi/bool.h ../../../lib/c/include/stddef.h
+assoc.o: ../../../lib/c/include/sys/types.h ../../../lib/c/include/errno.h
+assoc.o: ../../../../abi/include/abi/errno.h
+assoc.o: ../../../lib/c/include/fibril_synch.h
+assoc.o: ../../../lib/c/include/fibril.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+assoc.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+assoc.o: ../../../lib/c/include/sys/time.h
+assoc.o: ../../../lib/c/include/inet/endpoint.h
+assoc.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/inet/addr.h
+assoc.o: ../../../lib/c/include/loc.h ../../../lib/c/include/ipc/loc.h
+assoc.o: ../../../lib/c/include/ipc/common.h
+assoc.o: ../../../../abi/include/abi/ipc/ipc.h
+assoc.o: ../../../lib/c/include/atomic.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+assoc.o: ../../../lib/c/include/atomicdflt.h
+assoc.o: ../../../../abi/include/abi/proc/task.h
+assoc.o: ../../../lib/c/include/futex.h ../../../lib/c/include/async.h
+assoc.o: ../../../../abi/include/abi/ddi/irq.h
+assoc.o: ../../../../abi/include/abi/ipc/event.h
+assoc.o: ../../../../abi/include/abi/ipc/interfaces.h
+assoc.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+assoc.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+assoc.o: ../../../lib/c/include/inttypes.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+assoc.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+assoc.o: ../../../lib/nettl/include/nettl/amap.h
+assoc.o: ../../../lib/nettl/include/nettl/portrng.h
+assoc.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+assoc.o: ../../../lib/c/include/time.h
+assoc.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+assoc.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+assoc.o: assoc.h udp_type.h msg.h pdu.h std.h udp_inet.h
+msg.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+msg.o: ../../../lib/c/include/sys/types.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+msg.o: ../../../lib/c/include/inttypes.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+msg.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+msg.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+msg.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+msg.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+msg.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+msg.o: msg.h udp_type.h ../../../lib/c/include/async.h
+msg.o: ../../../lib/c/include/ipc/common.h
+msg.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+msg.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+msg.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+msg.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+msg.o: ../../../lib/c/include/fibril.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+msg.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+msg.o: ../../../lib/c/include/stddef.h
+msg.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+msg.o: ../../../../abi/include/abi/ddi/irq.h
+msg.o: ../../../../abi/include/abi/ipc/event.h
+msg.o: ../../../../abi/include/abi/ipc/interfaces.h
+msg.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+msg.o: ../../../lib/c/include/fibril_synch.h
+msg.o: ../../../lib/c/include/inet/endpoint.h
+msg.o: ../../../lib/c/include/inet/addr.h ../../../lib/c/include/loc.h
+msg.o: ../../../lib/c/include/ipc/loc.h
+pdu.o: ../../../lib/c/include/bitops.h ../../../lib/c/include/sys/types.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+pdu.o: ../../../lib/c/include/byteorder.h ../../../lib/c/include/stdint.h
+pdu.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+pdu.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+pdu.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+pdu.o: ../../../lib/c/include/time.h ../../../lib/c/include/sys/time.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+pdu.o: ../../../lib/c/include/malloc.h ../../../lib/c/include/stacktrace.h
+pdu.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+pdu.o: ../../../lib/c/include/inet/addr.h msg.h udp_type.h
+pdu.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+pdu.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+pdu.o: ../../../lib/c/include/atomicdflt.h
+pdu.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+pdu.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+pdu.o: ../../../lib/c/include/fibril.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+pdu.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+pdu.o: ../../../lib/c/include/stddef.h
+pdu.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+pdu.o: ../../../../abi/include/abi/ddi/irq.h
+pdu.o: ../../../../abi/include/abi/ipc/event.h
+pdu.o: ../../../../abi/include/abi/ipc/interfaces.h
+pdu.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+pdu.o: ../../../lib/c/include/fibril_synch.h
+pdu.o: ../../../lib/c/include/inet/endpoint.h ../../../lib/c/include/loc.h
+pdu.o: ../../../lib/c/include/ipc/loc.h pdu.h std.h
+service.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+service.o: ../../../lib/c/include/sys/types.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+service.o: ../../../../abi/include/abi/ipc/ipc.h
+service.o: ../../../lib/c/include/atomic.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+service.o: ../../../lib/c/include/atomicdflt.h
+service.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/stdbool.h
+service.o: ../../../../abi/include/abi/bool.h
+service.o: ../../../../abi/include/abi/proc/task.h
+service.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+service.o: ../../../../abi/include/abi/syscall.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+service.o: ../../../lib/c/include/fibril.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+service.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+service.o: ../../../lib/c/include/stddef.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+service.o: ../../../lib/c/include/sys/time.h
+service.o: ../../../../abi/include/abi/ddi/irq.h
+service.o: ../../../../abi/include/abi/ipc/event.h
+service.o: ../../../../abi/include/abi/ipc/interfaces.h
+service.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+service.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+service.o: ../../../lib/c/include/inet/endpoint.h
+service.o: ../../../lib/c/include/inet/addr.h ../../../lib/c/include/loc.h
+service.o: ../../../lib/c/include/ipc/loc.h ../../../lib/c/include/io/log.h
+service.o: ../../../lib/c/include/stdarg.h ../../../lib/c/include/inttypes.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+service.o: ../../../lib/c/include/io/verify.h
+service.o: ../../../../abi/include/abi/log.h
+service.o: ../../../lib/c/include/ipc/services.h
+service.o: ../../../lib/c/include/ipc/udp.h ../../../lib/c/include/macros.h
+service.o: ../../../lib/c/include/stdlib.h ../../../lib/c/include/unistd.h
+service.o: ../../../lib/c/include/time.h
+service.o: ../../../lib/c/arch/ia32/include/libarch/config.h
+service.o: ../../../lib/c/include/malloc.h
+service.o: ../../../lib/c/include/stacktrace.h assoc.h udp_type.h
+service.o: ../../../lib/c/include/fibril_synch.h msg.h service.h
+udp.o: ../../../lib/c/include/async.h ../../../lib/c/include/ipc/common.h
+udp.o: ../../../lib/c/include/sys/types.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+udp.o: ../../../../abi/include/abi/ipc/ipc.h ../../../lib/c/include/atomic.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+udp.o: ../../../lib/c/include/atomicdflt.h ../../../lib/c/include/stdint.h
+udp.o: ../../../lib/c/include/stdbool.h ../../../../abi/include/abi/bool.h
+udp.o: ../../../../abi/include/abi/proc/task.h ../../../lib/c/include/futex.h
+udp.o: ../../../lib/c/include/libc.h ../../../../abi/include/abi/syscall.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+udp.o: ../../../lib/c/include/fibril.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+udp.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+udp.o: ../../../lib/c/include/stddef.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+udp.o: ../../../lib/c/include/sys/time.h
+udp.o: ../../../../abi/include/abi/ddi/irq.h
+udp.o: ../../../../abi/include/abi/ipc/event.h
+udp.o: ../../../../abi/include/abi/ipc/interfaces.h
+udp.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+udp.o: ../../../lib/c/include/errno.h ../../../../abi/include/abi/errno.h
+udp.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+udp.o: ../../../lib/c/include/inttypes.h
+udp.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+udp.o: ../../../lib/c/include/io/verify.h ../../../../abi/include/abi/log.h
+udp.o: ../../../lib/c/include/stdio.h ../../../lib/c/include/str.h
+udp.o: ../../../lib/c/include/mem.h ../../../lib/c/include/cc.h
+udp.o: ../../../../abi/include/abi/kio.h ../../../lib/c/include/task.h
+udp.o: ../../../lib/c/include/types/task.h assoc.h
+udp.o: ../../../lib/c/include/inet/endpoint.h
+udp.o: ../../../lib/c/include/inet/addr.h ../../../lib/c/include/loc.h
+udp.o: ../../../lib/c/include/ipc/loc.h udp_type.h
+udp.o: ../../../lib/c/include/fibril_synch.h service.h udp_inet.h
+udp_inet.o: ../../../lib/c/include/bitops.h
+udp_inet.o: ../../../lib/c/include/sys/types.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/types.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/common.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/stddef.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/stdint.h
+udp_inet.o: ../../../lib/c/include/byteorder.h
+udp_inet.o: ../../../lib/c/include/stdint.h ../../../lib/c/include/errno.h
+udp_inet.o: ../../../../abi/include/abi/errno.h
+udp_inet.o: ../../../lib/c/include/inet/inet.h
+udp_inet.o: ../../../lib/c/include/inet/addr.h
+udp_inet.o: ../../../lib/c/include/ipc/loc.h
+udp_inet.o: ../../../lib/c/include/ipc/common.h
+udp_inet.o: ../../../../abi/include/abi/ipc/ipc.h
+udp_inet.o: ../../../lib/c/include/atomic.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/atomic.h
+udp_inet.o: ../../../lib/c/include/atomicdflt.h
+udp_inet.o: ../../../lib/c/include/stdbool.h
+udp_inet.o: ../../../../abi/include/abi/bool.h
+udp_inet.o: ../../../../abi/include/abi/proc/task.h
+udp_inet.o: ../../../lib/c/include/futex.h ../../../lib/c/include/libc.h
+udp_inet.o: ../../../../abi/include/abi/syscall.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/syscall.h
+udp_inet.o: ../../../lib/c/include/types/inet.h
+udp_inet.o: ../../../lib/c/include/io/log.h ../../../lib/c/include/stdarg.h
+udp_inet.o: ../../../lib/c/include/inttypes.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/inttypes.h
+udp_inet.o: ../../../lib/c/include/io/verify.h
+udp_inet.o: ../../../../abi/include/abi/log.h ../../../lib/c/include/stdio.h
+udp_inet.o: ../../../lib/c/include/str.h ../../../lib/c/include/mem.h
+udp_inet.o: ../../../lib/c/include/cc.h ../../../../abi/include/abi/kio.h
+udp_inet.o: ../../../lib/c/include/task.h ../../../lib/c/include/async.h
+udp_inet.o: ../../../lib/c/include/fibril.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/fibril.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/fibril_context.h
+udp_inet.o: ../../../lib/c/include/adt/list.h ../../../lib/c/include/assert.h
+udp_inet.o: ../../../lib/c/include/stddef.h
+udp_inet.o: ../../../lib/c/arch/ia32/include/libarch/tls.h
+udp_inet.o: ../../../lib/c/include/sys/time.h
+udp_inet.o: ../../../../abi/include/abi/ddi/irq.h
+udp_inet.o: ../../../../abi/include/abi/ipc/event.h
+udp_inet.o: ../../../../abi/include/abi/ipc/interfaces.h
+udp_inet.o: ../../../../abi/include/abi/fourcc.h ../../../../common.h
+udp_inet.o: ../../../lib/c/include/types/task.h assoc.h
+udp_inet.o: ../../../lib/c/include/inet/endpoint.h
+udp_inet.o: ../../../lib/c/include/loc.h udp_type.h
+udp_inet.o: ../../../lib/c/include/fibril_synch.h pdu.h std.h udp_inet.h
+# DO NOT DELETE

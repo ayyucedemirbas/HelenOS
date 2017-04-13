@@ -1,0 +1,157 @@
+
+Discarded input sections
+
+ .debug_line    0x0000000000000000       0x53 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000       0x6c /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_abbrev  0x0000000000000000       0x14 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .debug_info    0x0000000000000000     0x134a websrv.o
+ .debug_abbrev  0x0000000000000000      0x329 websrv.o
+ .debug_loc     0x0000000000000000      0x82a websrv.o
+ .debug_aranges
+                0x0000000000000000       0x28 websrv.o
+ .debug_ranges  0x0000000000000000      0x1c8 websrv.o
+ .debug_line    0x0000000000000000      0x3c7 websrv.o
+ .debug_str     0x0000000000000000      0xbc1 websrv.o
+ .comment       0x0000000000000000       0x12 websrv.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 websrv.o
+ .eh_frame      0x0000000000000000       0xa0 websrv.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                . = (0x1000 + SIZEOF_HEADERS)
+
+.init           0x00000000000010f4       0x2e
+ *(.init)
+ .init          0x00000000000010f4       0x2e /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000010f4                __entry
+
+.text           0x0000000000001130      0xd30
+ *(.text .text.*)
+ .text          0x0000000000001130        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .text          0x0000000000001130      0x523 websrv.o
+ *fill*         0x0000000000001653        0xd 
+ .text.startup  0x0000000000001660      0x293 websrv.o
+                0x0000000000001660                main
+ *(.rodata .rodata.*)
+ .rodata.str1.1
+                0x00000000000018f3      0x156 websrv.o
+ *fill*         0x0000000000001a49        0x3 
+ .rodata.str1.4
+                0x0000000000001a4c      0x414 websrv.o
+                                        0x413 (size before relaxing)
+
+.rel.plt        0x0000000000001e60       0xc8
+ *(.rel.plt)
+ .rel.plt       0x0000000000001e60       0xc8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.rel.dyn        0x0000000000001f28       0x18
+ *(.rel.*)
+ .rel.got       0x0000000000001f28        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.bss       0x0000000000001f28       0x18 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.init      0x0000000000001f40        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text      0x0000000000001f40        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .rel.text.startup
+                0x0000000000001f40        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.plt            0x0000000000001f40      0x1a0
+ *(.plt)
+ .plt           0x0000000000001f40      0x1a0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000001f50                __main
+                0x0000000000001f60                task_retval
+                0x0000000000001f70                printf
+                0x0000000000001f80                tcp_conn_send_fin
+                0x0000000000001f90                tcp_conn_send
+                0x0000000000001fa0                str_chr
+                0x0000000000001fb0                assert_abort
+                0x0000000000001fc0                fprintf
+                0x0000000000001fd0                tcp_listener_create
+                0x0000000000001fe0                read
+                0x0000000000001ff0                str_cmp
+                0x0000000000002000                arg_parse_int
+                0x0000000000002010                asprintf
+                0x0000000000002020                inet_ep_init
+                0x0000000000002030                str_size
+                0x0000000000002040                str_lcmp
+                0x0000000000002050                str_error
+                0x0000000000002060                exit
+                0x0000000000002070                fibril_switch
+                0x0000000000002080                __syscall_fast
+                0x0000000000002090                open
+                0x00000000000020a0                tcp_create
+                0x00000000000020b0                tcp_conn_recv_wait
+                0x00000000000020c0                close
+                0x00000000000020d0                free
+
+.dynsym         0x00000000000020e0      0x1f0
+ *(.dynsym)
+ .dynsym        0x00000000000020e0      0x1f0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.dynstr         0x00000000000022d0      0x14b
+ *(.dynstr)
+ .dynstr        0x00000000000022d0      0x14b /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.hash           0x000000000000241c       0xc8
+ *(.hash)
+ .hash          0x000000000000241c       0xc8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.interp         0x00000000000024e4       0x13
+ *(.interp)
+ .interp        0x00000000000024e4       0x13 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000034f7                . = (. + 0x1000)
+
+.dynamic        0x00000000000034f8       0xa8
+ *(.dynamic)
+ .dynamic       0x00000000000034f8       0xa8 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000034f8                _DYNAMIC
+
+.data           0x00000000000035a0        0x8
+ *(.data)
+ .data          0x00000000000035a0        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ .data          0x00000000000035a0        0x8 websrv.o
+
+.data.rel
+ *(.data.rel .data.rel.*)
+
+.got            0x00000000000035a8        0x0
+ *(.got)
+ .got           0x00000000000035a8        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+
+.got.plt        0x00000000000035a8       0x70
+ *(.got.plt)
+ .got.plt       0x00000000000035a8       0x70 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x00000000000035a8                _GLOBAL_OFFSET_TABLE_
+
+.tdata
+ *(.tdata)
+ *(.gnu.linkonce.tb.*)
+
+.tbss
+ *(.tbss)
+
+.bss            0x0000000000003620      0xc94
+ *(.dynbss)
+ .dynbss        0x0000000000003620        0xc /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+                0x0000000000003620                __syscall_fast_func
+                0x0000000000003624                async_futex
+                0x0000000000003628                stderr
+ *(COMMON)
+ *(.bss)
+ .bss           0x000000000000362c        0x0 /home/ayyuce/Desktop/HlnOS/HelenOS/uspace/lib/c/arch/ia32/src/entry.o
+ *fill*         0x000000000000362c       0x14 
+ .bss           0x0000000000003640      0xc74 websrv.o
+
+/DISCARD/
+ *(*)
+LOAD websrv.o
+LOAD ../../lib/c/libc.so.0
+LOAD ../../lib/softint/libsoftint.so.0
+OUTPUT(websrv elf32-i386)

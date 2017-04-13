@@ -1,0 +1,802 @@
+# DO NOT DELETE
+
+src/builtin/bi_boxed.o: src/builtin.h src/mytypes.h
+src/builtin/bi_boxed.o: ../../lib/c/include/errno.h
+src/builtin/bi_boxed.o: ../../../abi/include/abi/errno.h
+src/builtin/bi_boxed.o: ../../lib/c/include/unistd.h
+src/builtin/bi_boxed.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_boxed.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_boxed.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_boxed.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_boxed.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_boxed.o: ../../lib/c/include/time.h
+src/builtin/bi_boxed.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_boxed.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_boxed.o: src/bigint_t.h ../../lib/c/include/stdint.h
+src/builtin/bi_boxed.o: src/builtin_t.h src/run_t.h src/intmap_t.h
+src/builtin/bi_boxed.o: src/list_t.h src/compat.h src/cspan_t.h src/input_t.h
+src/builtin/bi_boxed.o: ../../lib/c/include/stdio.h
+src/builtin/bi_boxed.o: ../../lib/c/include/stdarg.h
+src/builtin/bi_boxed.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/builtin/bi_boxed.o: ../../lib/c/include/cc.h
+src/builtin/bi_boxed.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_boxed.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_boxed.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_boxed.o: ../../../abi/include/abi/kio.h src/lex_t.h
+src/builtin/bi_boxed.o: src/parse_t.h src/rdata_t.h src/stree_t.h
+src/builtin/bi_boxed.o: src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/builtin/bi_boxed.o: src/mytypes.h src/builtin/bi_boxed.h
+src/builtin/bi_error.o: ../../lib/c/include/assert.h src/builtin.h
+src/builtin/bi_error.o: src/mytypes.h ../../lib/c/include/errno.h
+src/builtin/bi_error.o: ../../../abi/include/abi/errno.h
+src/builtin/bi_error.o: ../../lib/c/include/unistd.h
+src/builtin/bi_error.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_error.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_error.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_error.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_error.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_error.o: ../../lib/c/include/time.h
+src/builtin/bi_error.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_error.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_error.o: src/bigint_t.h ../../lib/c/include/stdint.h
+src/builtin/bi_error.o: src/builtin_t.h src/run_t.h src/intmap_t.h
+src/builtin/bi_error.o: src/list_t.h src/compat.h src/cspan_t.h src/input_t.h
+src/builtin/bi_error.o: ../../lib/c/include/stdio.h
+src/builtin/bi_error.o: ../../lib/c/include/stdarg.h
+src/builtin/bi_error.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/builtin/bi_error.o: ../../lib/c/include/cc.h
+src/builtin/bi_error.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_error.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_error.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_error.o: ../../../abi/include/abi/kio.h src/lex_t.h
+src/builtin/bi_error.o: src/parse_t.h src/rdata_t.h src/stree_t.h
+src/builtin/bi_error.o: src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/builtin/bi_error.o: src/mytypes.h src/symbol.h src/builtin/bi_error.h
+src/builtin/bi_char.o: ../../lib/c/include/stdio.h
+src/builtin/bi_char.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_char.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_char.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_char.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_char.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_char.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/builtin/bi_char.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/builtin/bi_char.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_char.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_char.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_char.o: ../../../abi/include/abi/kio.h
+src/builtin/bi_char.o: ../../lib/c/include/stdlib.h
+src/builtin/bi_char.o: ../../lib/c/include/unistd.h
+src/builtin/bi_char.o: ../../lib/c/include/time.h
+src/builtin/bi_char.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_char.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_char.o: ../../lib/c/include/malloc.h
+src/builtin/bi_char.o: ../../lib/c/include/stacktrace.h
+src/builtin/bi_char.o: ../../lib/c/include/assert.h src/bigint.h
+src/builtin/bi_char.o: src/mytypes.h ../../lib/c/include/errno.h
+src/builtin/bi_char.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/builtin/bi_char.o: ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin/bi_char.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/builtin/bi_char.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/builtin/bi_char.o: src/rdata_t.h src/stree_t.h src/strtab_t.h
+src/builtin/bi_char.o: src/stype_t.h src/tdata_t.h src/builtin.h src/debug.h
+src/builtin/bi_char.o: src/mytypes.h src/os/os.h src/rdata.h src/run.h
+src/builtin/bi_char.o: src/strtab.h src/builtin/bi_char.h
+src/builtin/bi_console.o: ../../lib/c/include/stdio.h
+src/builtin/bi_console.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_console.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_console.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_console.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_console.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_console.o: ../../lib/c/include/stdarg.h
+src/builtin/bi_console.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/builtin/bi_console.o: ../../lib/c/include/cc.h
+src/builtin/bi_console.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_console.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_console.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_console.o: ../../../abi/include/abi/kio.h
+src/builtin/bi_console.o: ../../lib/c/include/stdlib.h
+src/builtin/bi_console.o: ../../lib/c/include/unistd.h
+src/builtin/bi_console.o: ../../lib/c/include/time.h
+src/builtin/bi_console.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_console.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_console.o: ../../lib/c/include/malloc.h
+src/builtin/bi_console.o: ../../lib/c/include/stacktrace.h
+src/builtin/bi_console.o: ../../lib/c/include/assert.h src/bigint.h
+src/builtin/bi_console.o: src/mytypes.h ../../lib/c/include/errno.h
+src/builtin/bi_console.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/builtin/bi_console.o: ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin/bi_console.o: src/run_t.h src/intmap_t.h src/list_t.h
+src/builtin/bi_console.o: src/compat.h src/cspan_t.h src/input_t.h
+src/builtin/bi_console.o: src/lex_t.h src/parse_t.h src/rdata_t.h
+src/builtin/bi_console.o: src/stree_t.h src/strtab_t.h src/stype_t.h
+src/builtin/bi_console.o: src/tdata_t.h src/builtin.h src/list.h
+src/builtin/bi_console.o: src/mytypes.h src/run.h src/stree.h src/strtab.h
+src/builtin/bi_console.o: src/symbol.h src/builtin/bi_console.h
+src/builtin/bi_int.o: ../../lib/c/include/stdio.h
+src/builtin/bi_int.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_int.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_int.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_int.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_int.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_int.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/builtin/bi_int.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/builtin/bi_int.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_int.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_int.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_int.o: ../../../abi/include/abi/kio.h
+src/builtin/bi_int.o: ../../lib/c/include/stdlib.h
+src/builtin/bi_int.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/builtin/bi_int.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_int.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_int.o: ../../lib/c/include/malloc.h
+src/builtin/bi_int.o: ../../lib/c/include/stacktrace.h
+src/builtin/bi_int.o: ../../lib/c/include/assert.h src/bigint.h src/mytypes.h
+src/builtin/bi_int.o: ../../lib/c/include/errno.h
+src/builtin/bi_int.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/builtin/bi_int.o: ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin/bi_int.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/builtin/bi_int.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/builtin/bi_int.o: src/rdata_t.h src/stree_t.h src/strtab_t.h
+src/builtin/bi_int.o: src/stype_t.h src/tdata_t.h src/builtin.h src/debug.h
+src/builtin/bi_int.o: src/mytypes.h src/os/os.h src/rdata.h src/run.h
+src/builtin/bi_int.o: src/strtab.h src/builtin/bi_int.h
+src/builtin/bi_task.o: ../../lib/c/include/stdio.h
+src/builtin/bi_task.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_task.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_task.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_task.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_task.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_task.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/builtin/bi_task.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/builtin/bi_task.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_task.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_task.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_task.o: ../../../abi/include/abi/kio.h
+src/builtin/bi_task.o: ../../lib/c/include/stdlib.h
+src/builtin/bi_task.o: ../../lib/c/include/unistd.h
+src/builtin/bi_task.o: ../../lib/c/include/time.h
+src/builtin/bi_task.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_task.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_task.o: ../../lib/c/include/malloc.h
+src/builtin/bi_task.o: ../../lib/c/include/stacktrace.h
+src/builtin/bi_task.o: ../../lib/c/include/assert.h src/builtin.h
+src/builtin/bi_task.o: src/mytypes.h ../../lib/c/include/errno.h
+src/builtin/bi_task.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/builtin/bi_task.o: ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin/bi_task.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/builtin/bi_task.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/builtin/bi_task.o: src/rdata_t.h src/stree_t.h src/strtab_t.h
+src/builtin/bi_task.o: src/stype_t.h src/tdata_t.h src/list.h src/mytypes.h
+src/builtin/bi_task.o: src/os/os.h src/run.h src/strtab.h
+src/builtin/bi_task.o: src/builtin/bi_task.h
+src/builtin/bi_textfile.o: ../../lib/c/include/stdio.h
+src/builtin/bi_textfile.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_textfile.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_textfile.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_textfile.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_textfile.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_textfile.o: ../../lib/c/include/stdarg.h
+src/builtin/bi_textfile.o: ../../lib/c/include/str.h
+src/builtin/bi_textfile.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/builtin/bi_textfile.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_textfile.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_textfile.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_textfile.o: ../../../abi/include/abi/kio.h
+src/builtin/bi_textfile.o: ../../lib/c/include/stdlib.h
+src/builtin/bi_textfile.o: ../../lib/c/include/unistd.h
+src/builtin/bi_textfile.o: ../../lib/c/include/time.h
+src/builtin/bi_textfile.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_textfile.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_textfile.o: ../../lib/c/include/malloc.h
+src/builtin/bi_textfile.o: ../../lib/c/include/stacktrace.h
+src/builtin/bi_textfile.o: ../../lib/c/include/assert.h src/bigint.h
+src/builtin/bi_textfile.o: src/mytypes.h ../../lib/c/include/errno.h
+src/builtin/bi_textfile.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/builtin/bi_textfile.o: ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin/bi_textfile.o: src/run_t.h src/intmap_t.h src/list_t.h
+src/builtin/bi_textfile.o: src/compat.h src/cspan_t.h src/input_t.h
+src/builtin/bi_textfile.o: src/lex_t.h src/parse_t.h src/rdata_t.h
+src/builtin/bi_textfile.o: src/stree_t.h src/strtab_t.h src/stype_t.h
+src/builtin/bi_textfile.o: src/tdata_t.h src/builtin.h src/debug.h
+src/builtin/bi_textfile.o: src/mytypes.h src/os/os.h src/rdata.h src/run.h
+src/builtin/bi_textfile.o: src/strtab.h src/builtin/bi_textfile.h
+src/builtin/bi_string.o: ../../lib/c/include/stdio.h
+src/builtin/bi_string.o: ../../lib/c/include/sys/types.h
+src/builtin/bi_string.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin/bi_string.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin/bi_string.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin/bi_string.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin/bi_string.o: ../../lib/c/include/stdarg.h
+src/builtin/bi_string.o: ../../lib/c/include/str.h ../../lib/c/include/mem.h
+src/builtin/bi_string.o: ../../lib/c/include/cc.h
+src/builtin/bi_string.o: ../../lib/c/include/stdbool.h
+src/builtin/bi_string.o: ../../../abi/include/abi/bool.h
+src/builtin/bi_string.o: ../../lib/c/include/io/verify.h
+src/builtin/bi_string.o: ../../../abi/include/abi/kio.h
+src/builtin/bi_string.o: ../../lib/c/include/stdlib.h
+src/builtin/bi_string.o: ../../lib/c/include/unistd.h
+src/builtin/bi_string.o: ../../lib/c/include/time.h
+src/builtin/bi_string.o: ../../lib/c/include/sys/time.h
+src/builtin/bi_string.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin/bi_string.o: ../../lib/c/include/malloc.h
+src/builtin/bi_string.o: ../../lib/c/include/stacktrace.h
+src/builtin/bi_string.o: ../../lib/c/include/assert.h src/bigint.h
+src/builtin/bi_string.o: src/mytypes.h ../../lib/c/include/errno.h
+src/builtin/bi_string.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/builtin/bi_string.o: ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin/bi_string.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/builtin/bi_string.o: src/cspan_t.h src/input_t.h src/lex_t.h
+src/builtin/bi_string.o: src/parse_t.h src/rdata_t.h src/stree_t.h
+src/builtin/bi_string.o: src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/builtin/bi_string.o: src/builtin.h src/debug.h src/mytypes.h src/os/os.h
+src/builtin/bi_string.o: src/rdata.h src/run.h src/strtab.h
+src/builtin/bi_string.o: src/builtin/bi_string.h
+src/os/helenos.o: ../../lib/c/include/assert.h ../../lib/c/include/errno.h
+src/os/helenos.o: ../../../abi/include/abi/errno.h
+src/os/helenos.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/os/helenos.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/os/helenos.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/os/helenos.o: ../../lib/c/include/stdbool.h
+src/os/helenos.o: ../../../abi/include/abi/bool.h
+src/os/helenos.o: ../../lib/c/include/io/verify.h
+src/os/helenos.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+src/os/helenos.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/os/helenos.o: ../../lib/c/include/sys/time.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/os/helenos.o: ../../lib/c/include/malloc.h
+src/os/helenos.o: ../../lib/c/include/stacktrace.h ../../lib/c/include/task.h
+src/os/helenos.o: ../../../abi/include/abi/proc/task.h
+src/os/helenos.o: ../../lib/c/include/async.h
+src/os/helenos.o: ../../lib/c/include/ipc/common.h
+src/os/helenos.o: ../../../abi/include/abi/ipc/ipc.h
+src/os/helenos.o: ../../lib/c/include/atomic.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/atomic.h
+src/os/helenos.o: ../../lib/c/include/atomicdflt.h
+src/os/helenos.o: ../../lib/c/include/stdint.h ../../lib/c/include/futex.h
+src/os/helenos.o: ../../lib/c/include/libc.h
+src/os/helenos.o: ../../../abi/include/abi/syscall.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/syscall.h
+src/os/helenos.o: ../../lib/c/include/fibril.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/fibril.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/fibril_context.h
+src/os/helenos.o: ../../lib/c/include/adt/list.h ../../lib/c/include/stddef.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/tls.h
+src/os/helenos.o: ../../../abi/include/abi/ddi/irq.h
+src/os/helenos.o: ../../../abi/include/abi/ipc/event.h
+src/os/helenos.o: ../../../abi/include/abi/ipc/interfaces.h
+src/os/helenos.o: ../../../abi/include/abi/fourcc.h ../../../common.h
+src/os/helenos.o: ../../lib/c/include/types/task.h ../../lib/clui/tinput.h
+src/os/helenos.o: ../../lib/c/include/inttypes.h
+src/os/helenos.o: ../../lib/c/arch/ia32/include/libarch/inttypes.h
+src/os/helenos.o: ../../lib/c/include/io/console.h
+src/os/helenos.o: ../../lib/c/include/io/concaps.h
+src/os/helenos.o: ../../lib/c/include/io/kbd_event.h
+src/os/helenos.o: ../../lib/c/include/io/keycode.h
+src/os/helenos.o: ../../lib/c/include/io/cons_event.h
+src/os/helenos.o: ../../lib/c/include/io/pos_event.h
+src/os/helenos.o: ../../lib/c/include/str_error.h src/os/os.h
+src/ancr.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/ancr.o: ../../lib/c/include/sys/types.h
+src/ancr.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/ancr.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/ancr.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/ancr.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/ancr.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/ancr.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/ancr.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/ancr.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/ancr.o: ../../lib/c/include/assert.h src/builtin.h src/mytypes.h
+src/ancr.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/ancr.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/ancr.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/ancr.o: src/cspan_t.h src/input_t.h ../../lib/c/include/stdio.h
+src/ancr.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/ancr.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/ancr.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/ancr.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/ancr.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/cspan.h src/list.h
+src/ancr.o: src/stree.h src/strtab.h src/symbol.h src/ancr.h
+src/bigint.o: ../../lib/c/include/assert.h ../../lib/c/include/stdio.h
+src/bigint.o: ../../lib/c/include/sys/types.h
+src/bigint.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/bigint.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/bigint.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/bigint.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/bigint.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/bigint.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/bigint.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/bigint.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/bigint.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/bigint.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/bigint.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/bigint.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/bigint.o: src/debug.h src/mytypes.h ../../lib/c/include/errno.h
+src/bigint.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/bigint.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/bigint.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/bigint.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/bigint.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/bigint.o: src/bigint.h
+src/builtin.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/builtin.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/builtin.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/builtin.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/builtin.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/builtin.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/builtin.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/builtin.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/builtin.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/builtin.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/builtin.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/builtin.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/builtin.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/builtin.o: ../../lib/c/include/assert.h src/builtin/bi_boxed.h
+src/builtin.o: src/mytypes.h src/builtin/bi_error.h src/builtin/bi_char.h
+src/builtin.o: src/builtin/bi_console.h src/builtin/bi_int.h
+src/builtin.o: src/builtin/bi_task.h src/builtin/bi_textfile.h
+src/builtin.o: src/builtin/bi_string.h src/input.h src/mytypes.h
+src/builtin.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/builtin.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/builtin.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/builtin.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/builtin.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/builtin.o: src/tdata_t.h src/intmap.h src/lex.h src/list.h src/os/os.h
+src/builtin.o: src/parse.h src/rdata.h src/run.h src/stree.h src/strtab.h
+src/builtin.o: src/symbol.h src/builtin.h
+src/cspan.o: ../../lib/c/include/assert.h ../../lib/c/include/stdio.h
+src/cspan.o: ../../lib/c/include/sys/types.h
+src/cspan.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/cspan.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/cspan.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/cspan.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/cspan.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/cspan.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/cspan.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/cspan.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/cspan.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/cspan.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/cspan.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/cspan.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/cspan.o: src/mytypes.h ../../lib/c/include/errno.h
+src/cspan.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/cspan.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/cspan.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/cspan.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/cspan.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/cspan.o: src/cspan.h
+src/imode.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/imode.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/imode.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/imode.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/imode.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/imode.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/imode.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/imode.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/imode.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/imode.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/imode.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/imode.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/imode.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/imode.o: src/os/os.h src/ancr.h src/mytypes.h ../../lib/c/include/errno.h
+src/imode.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/imode.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/imode.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/imode.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/imode.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/imode.o: ../../lib/c/include/assert.h src/builtin.h src/intmap.h
+src/imode.o: src/list.h src/program.h src/rdata.h src/stree.h src/strtab.h
+src/imode.o: src/stype.h src/input.h src/lex.h src/parse.h src/run.h
+src/imode.o: src/imode.h
+src/input.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/input.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/input.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/input.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/input.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/input.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/input.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/input.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/input.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/input.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/input.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/input.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/input.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/input.o: src/mytypes.h ../../lib/c/include/errno.h
+src/input.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/input.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/input.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/input.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/input.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/input.o: src/os/os.h src/strtab.h src/input.h
+src/intmap.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/intmap.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/intmap.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/intmap.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/intmap.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/intmap.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/intmap.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/intmap.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/intmap.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/intmap.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/intmap.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/intmap.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/intmap.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/intmap.o: ../../lib/c/include/assert.h src/list.h src/mytypes.h
+src/intmap.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/intmap.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/intmap.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/intmap.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/intmap.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/intmap.o: src/tdata_t.h src/intmap.h
+src/lex.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/lex.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/lex.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/lex.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/lex.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/lex.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/lex.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/lex.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/lex.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/lex.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/lex.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/lex.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/lex.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/lex.o: src/bigint.h src/mytypes.h ../../lib/c/include/errno.h
+src/lex.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/lex.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/lex.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/lex.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/lex.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/lex.o: src/cspan.h src/input.h src/os/os.h src/strtab.h src/lex.h
+src/list.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/list.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/list.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/list.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/list.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/list.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/list.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/list.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/list.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/list.o: ../../lib/c/include/assert.h src/mytypes.h
+src/list.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/list.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/list.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/list.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/list.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/list.o: src/tdata_t.h src/list.h
+src/main.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/main.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/main.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/main.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/main.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/main.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/main.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/main.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/main.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/main.o: src/ancr.h src/mytypes.h ../../lib/c/include/errno.h
+src/main.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/main.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/main.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/main.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/main.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/main.o: src/os/os.h src/builtin.h src/imode.h src/program.h src/strtab.h
+src/main.o: src/stree.h src/stype.h src/input.h src/lex.h src/parse.h
+src/main.o: src/run.h
+src/p_expr.o: ../../lib/c/include/assert.h ../../lib/c/include/stdlib.h
+src/p_expr.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/p_expr.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/p_expr.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/p_expr.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/p_expr.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/p_expr.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/p_expr.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/p_expr.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/p_expr.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/p_expr.o: src/bigint.h src/mytypes.h ../../lib/c/include/errno.h
+src/p_expr.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/p_expr.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/p_expr.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/p_expr.o: src/input_t.h ../../lib/c/include/stdio.h
+src/p_expr.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/p_expr.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/p_expr.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/p_expr.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/p_expr.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/cspan.h
+src/p_expr.o: src/debug.h src/lex.h src/list.h src/p_type.h src/parse.h
+src/p_expr.o: src/stree.h src/p_expr.h
+src/p_type.o: ../../lib/c/include/assert.h ../../lib/c/include/stdlib.h
+src/p_type.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/p_type.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/p_type.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/p_type.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/p_type.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/p_type.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/p_type.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/p_type.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/p_type.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/p_type.o: src/cspan.h src/mytypes.h ../../lib/c/include/errno.h
+src/p_type.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/p_type.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/p_type.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/p_type.o: src/input_t.h ../../lib/c/include/stdio.h
+src/p_type.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/p_type.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/p_type.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/p_type.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/p_type.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/debug.h
+src/p_type.o: src/lex.h src/list.h src/parse.h src/p_expr.h src/stree.h
+src/p_type.o: src/p_type.h
+src/parse.o: ../../lib/c/include/assert.h ../../lib/c/include/stdlib.h
+src/parse.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/parse.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/parse.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/parse.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/parse.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/parse.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/parse.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/parse.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/parse.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/parse.o: src/cspan.h src/mytypes.h ../../lib/c/include/errno.h
+src/parse.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/parse.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/parse.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/parse.o: src/input_t.h ../../lib/c/include/stdio.h
+src/parse.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/parse.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/parse.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/parse.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/parse.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/debug.h src/lex.h
+src/parse.o: src/list.h src/p_expr.h src/p_type.h src/stree.h src/strtab.h
+src/parse.o: src/symbol.h src/parse.h
+src/program.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/program.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/program.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/program.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/program.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/program.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/program.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/program.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/program.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/program.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/program.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/program.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/program.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/program.o: src/os/os.h src/mytypes.h ../../lib/c/include/errno.h
+src/program.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/program.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/program.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/program.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/program.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/program.o: src/stype.h src/input.h src/lex.h src/parse.h src/program.h
+src/rdata.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/rdata.o: ../../lib/c/include/sys/types.h
+src/rdata.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/rdata.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/rdata.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/rdata.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/rdata.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/rdata.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/rdata.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/rdata.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/rdata.o: ../../lib/c/include/assert.h src/bigint.h src/mytypes.h
+src/rdata.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/rdata.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/rdata.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/rdata.o: src/cspan_t.h src/input_t.h ../../lib/c/include/stdio.h
+src/rdata.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/rdata.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/rdata.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/rdata.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/rdata.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/list.h
+src/rdata.o: src/stree.h src/symbol.h src/strtab.h src/rdata.h
+src/run.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/run.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/run.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/run.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/run.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/run.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/run.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/run.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/run.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/run.o: ../../lib/c/include/assert.h src/bigint.h src/mytypes.h
+src/run.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/run.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/run.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/run.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/run.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/run.o: src/builtin.h src/cspan.h src/debug.h src/intmap.h src/list.h
+src/run.o: src/rdata.h src/run_expr.h src/run_texpr.h src/stree.h
+src/run.o: src/strtab.h src/symbol.h src/tdata.h src/run.h
+src/run_expr.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/run_expr.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/run_expr.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/run_expr.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/run_expr.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/run_expr.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/run_expr.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/run_expr.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/run_expr.o: ../../lib/c/include/io/verify.h
+src/run_expr.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+src/run_expr.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/run_expr.o: ../../lib/c/include/sys/time.h
+src/run_expr.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/run_expr.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/run_expr.o: ../../lib/c/include/assert.h src/bigint.h src/mytypes.h
+src/run_expr.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/run_expr.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/run_expr.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/run_expr.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/run_expr.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/run_expr.o: src/tdata_t.h src/debug.h src/intmap.h src/list.h src/os/os.h
+src/run_expr.o: src/rdata.h src/run.h src/run_texpr.h src/symbol.h
+src/run_expr.o: src/stree.h src/strtab.h src/tdata.h src/run_expr.h
+src/run_texpr.o: ../../lib/c/include/assert.h ../../lib/c/include/stdlib.h
+src/run_texpr.o: ../../lib/c/include/unistd.h ../../lib/c/include/sys/types.h
+src/run_texpr.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/run_texpr.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/run_texpr.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/run_texpr.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/run_texpr.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/run_texpr.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/run_texpr.o: ../../lib/c/include/malloc.h
+src/run_texpr.o: ../../lib/c/include/stacktrace.h
+src/run_texpr.o: ../../lib/c/include/stdbool.h
+src/run_texpr.o: ../../../abi/include/abi/bool.h src/cspan.h src/mytypes.h
+src/run_texpr.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/run_texpr.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/run_texpr.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/run_texpr.o: src/cspan_t.h src/input_t.h ../../lib/c/include/stdio.h
+src/run_texpr.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/run_texpr.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/run_texpr.o: ../../lib/c/include/io/verify.h
+src/run_texpr.o: ../../../abi/include/abi/kio.h src/lex_t.h src/parse_t.h
+src/run_texpr.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/run_texpr.o: src/tdata_t.h src/debug.h src/list.h src/stree.h
+src/run_texpr.o: src/strtab.h src/symbol.h src/tdata.h src/run_texpr.h
+src/stree.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/stree.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/stree.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/stree.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/stree.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/stree.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/stree.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/stree.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/stree.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/stree.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/stree.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/stree.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/stree.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/stree.o: ../../lib/c/include/assert.h src/list.h src/mytypes.h
+src/stree.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/stree.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/stree.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/stree.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/stree.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/stree.o: src/tdata_t.h src/stree.h
+src/strtab.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/strtab.o: ../../lib/c/include/sys/types.h
+src/strtab.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/strtab.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/strtab.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/strtab.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/strtab.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/strtab.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/strtab.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/strtab.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/strtab.o: src/mytypes.h ../../lib/c/include/errno.h
+src/strtab.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/strtab.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/strtab.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/strtab.o: src/input_t.h ../../lib/c/include/stdio.h
+src/strtab.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/strtab.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/strtab.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/strtab.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/strtab.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/os/os.h
+src/strtab.o: src/list.h src/strtab.h
+src/stype.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/stype.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/stype.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/stype.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/stype.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/stype.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/stype.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/stype.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/stype.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/stype.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/stype.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/stype.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/stype.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/stype.o: ../../lib/c/include/assert.h src/cspan.h src/mytypes.h
+src/stype.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/stype.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/stype.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/stype.o: src/cspan_t.h src/input_t.h src/lex_t.h src/parse_t.h
+src/stype.o: src/rdata_t.h src/stree_t.h src/strtab_t.h src/stype_t.h
+src/stype.o: src/tdata_t.h src/debug.h src/intmap.h src/list.h
+src/stype.o: src/run_texpr.h src/stree.h src/strtab.h src/stype_expr.h
+src/stype.o: src/symbol.h src/tdata.h src/stype.h
+src/stype_expr.o: ../../lib/c/include/stdio.h ../../lib/c/include/sys/types.h
+src/stype_expr.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/stype_expr.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/stype_expr.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/stype_expr.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/stype_expr.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/stype_expr.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/stype_expr.o: ../../lib/c/include/stdbool.h
+src/stype_expr.o: ../../../abi/include/abi/bool.h
+src/stype_expr.o: ../../lib/c/include/io/verify.h
+src/stype_expr.o: ../../../abi/include/abi/kio.h ../../lib/c/include/stdlib.h
+src/stype_expr.o: ../../lib/c/include/unistd.h ../../lib/c/include/time.h
+src/stype_expr.o: ../../lib/c/include/sys/time.h
+src/stype_expr.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/stype_expr.o: ../../lib/c/include/malloc.h
+src/stype_expr.o: ../../lib/c/include/stacktrace.h
+src/stype_expr.o: ../../lib/c/include/assert.h src/cspan.h src/mytypes.h
+src/stype_expr.o: ../../lib/c/include/errno.h
+src/stype_expr.o: ../../../abi/include/abi/errno.h src/bigint_t.h
+src/stype_expr.o: ../../lib/c/include/stdint.h src/builtin_t.h src/run_t.h
+src/stype_expr.o: src/intmap_t.h src/list_t.h src/compat.h src/cspan_t.h
+src/stype_expr.o: src/input_t.h src/lex_t.h src/parse_t.h src/rdata_t.h
+src/stype_expr.o: src/stree_t.h src/strtab_t.h src/stype_t.h src/tdata_t.h
+src/stype_expr.o: src/debug.h src/list.h src/run_texpr.h src/stree.h
+src/stype_expr.o: src/strtab.h src/stype.h src/symbol.h src/tdata.h
+src/stype_expr.o: src/stype_expr.h
+src/symbol.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/symbol.o: ../../lib/c/include/sys/types.h
+src/symbol.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/symbol.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/symbol.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/symbol.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/symbol.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/symbol.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/symbol.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/symbol.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/symbol.o: ../../lib/c/include/assert.h src/list.h src/mytypes.h
+src/symbol.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/symbol.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/symbol.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/symbol.o: src/cspan_t.h src/input_t.h ../../lib/c/include/stdio.h
+src/symbol.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/symbol.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/symbol.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/symbol.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/symbol.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/strtab.h
+src/symbol.o: src/stree.h src/symbol.h
+src/tdata.o: ../../lib/c/include/stdlib.h ../../lib/c/include/unistd.h
+src/tdata.o: ../../lib/c/include/sys/types.h
+src/tdata.o: ../../lib/c/arch/ia32/include/libarch/types.h
+src/tdata.o: ../../lib/c/arch/ia32/include/libarch/common.h
+src/tdata.o: ../../lib/c/arch/ia32/include/libarch/stddef.h
+src/tdata.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+src/tdata.o: ../../lib/c/include/time.h ../../lib/c/include/sys/time.h
+src/tdata.o: ../../lib/c/arch/ia32/include/libarch/config.h
+src/tdata.o: ../../lib/c/include/malloc.h ../../lib/c/include/stacktrace.h
+src/tdata.o: ../../lib/c/include/stdbool.h ../../../abi/include/abi/bool.h
+src/tdata.o: ../../lib/c/include/assert.h src/intmap.h src/mytypes.h
+src/tdata.o: ../../lib/c/include/errno.h ../../../abi/include/abi/errno.h
+src/tdata.o: src/bigint_t.h ../../lib/c/include/stdint.h src/builtin_t.h
+src/tdata.o: src/run_t.h src/intmap_t.h src/list_t.h src/compat.h
+src/tdata.o: src/cspan_t.h src/input_t.h ../../lib/c/include/stdio.h
+src/tdata.o: ../../lib/c/include/stdarg.h ../../lib/c/include/str.h
+src/tdata.o: ../../lib/c/include/mem.h ../../lib/c/include/cc.h
+src/tdata.o: ../../lib/c/include/io/verify.h ../../../abi/include/abi/kio.h
+src/tdata.o: src/lex_t.h src/parse_t.h src/rdata_t.h src/stree_t.h
+src/tdata.o: src/strtab_t.h src/stype_t.h src/tdata_t.h src/list.h
+src/tdata.o: src/stree.h src/strtab.h src/symbol.h src/tdata.h
+# DO NOT DELETE

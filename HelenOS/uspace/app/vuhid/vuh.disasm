@@ -1,0 +1,3378 @@
+
+vuh:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+000010f4 <__entry>:
+    10f4:	66 8c d0             	mov    %ss,%ax
+    10f7:	8e d8                	mov    %eax,%ds
+    10f9:	8e c0                	mov    %eax,%es
+    10fb:	8e e0                	mov    %eax,%fs
+    10fd:	b8 01 00 00 00       	mov    $0x1,%eax
+    1102:	0f a2                	cpuid  
+    1104:	0f ba e2 0b          	bt     $0xb,%edx
+    1108:	73 0c                	jae    1116 <__entry+0x22>
+    110a:	8d 05 68 52 00 00    	lea    0x5268,%eax
+    1110:	c7 00 40 35 00 00    	movl   $0x3540,(%eax)
+    1116:	6a 00                	push   $0x0
+    1118:	6a 00                	push   $0x0
+    111a:	89 e5                	mov    %esp,%ebp
+    111c:	57                   	push   %edi
+    111d:	e8 ce 21 00 00       	call   32f0 <__main@plt>
+
+Disassembly of section .text:
+
+00001130 <print_help.part.0>:
+    1130:	55                   	push   %ebp
+    1131:	89 e5                	mov    %esp,%ebp
+    1133:	83 ec 10             	sub    $0x10,%esp
+    1136:	50                   	push   %eax
+    1137:	68 a6 2c 00 00       	push   $0x2ca6
+    113c:	e8 cf 21 00 00       	call   3310 <printf@plt>
+    1141:	c7 04 24 c3 2c 00 00 	movl   $0x2cc3,(%esp)
+    1148:	e8 c3 21 00 00       	call   3310 <printf@plt>
+    114d:	c7 04 24 c8 2d 00 00 	movl   $0x2dc8,(%esp)
+    1154:	e8 b7 21 00 00       	call   3310 <printf@plt>
+    1159:	c7 04 24 f8 2d 00 00 	movl   $0x2df8,(%esp)
+    1160:	e8 ab 21 00 00       	call   3310 <printf@plt>
+    1165:	c7 04 24 30 2e 00 00 	movl   $0x2e30,(%esp)
+    116c:	e8 9f 21 00 00       	call   3310 <printf@plt>
+    1171:	58                   	pop    %eax
+    1172:	5a                   	pop    %edx
+    1173:	68 d9 2c 00 00       	push   $0x2cd9
+    1178:	68 64 2e 00 00       	push   $0x2e64
+    117d:	e8 8e 21 00 00       	call   3310 <printf@plt>
+    1182:	83 c4 10             	add    $0x10,%esp
+    1185:	c9                   	leave  
+    1186:	c3                   	ret    
+    1187:	66 90                	xchg   %ax,%ax
+    1189:	66 90                	xchg   %ax,%ax
+    118b:	66 90                	xchg   %ax,%ax
+    118d:	66 90                	xchg   %ax,%ax
+    118f:	90                   	nop
+
+00001190 <main>:
+    1190:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1194:	83 e4 f0             	and    $0xfffffff0,%esp
+    1197:	ff 71 fc             	pushl  -0x4(%ecx)
+    119a:	55                   	push   %ebp
+    119b:	89 e5                	mov    %esp,%ebp
+    119d:	57                   	push   %edi
+    119e:	56                   	push   %esi
+    119f:	53                   	push   %ebx
+    11a0:	51                   	push   %ecx
+    11a1:	83 ec 08             	sub    $0x8,%esp
+    11a4:	8b 19                	mov    (%ecx),%ebx
+    11a6:	8b 71 04             	mov    0x4(%ecx),%esi
+    11a9:	83 fb 01             	cmp    $0x1,%ebx
+    11ac:	0f 84 a7 00 00 00    	je     1259 <main+0xc9>
+    11b2:	83 ec 0c             	sub    $0xc,%esp
+    11b5:	6a 00                	push   $0x0
+    11b7:	68 40 4d 00 00       	push   $0x4d40
+    11bc:	68 1f 2d 00 00       	push   $0x2d1f
+    11c1:	56                   	push   %esi
+    11c2:	53                   	push   %ebx
+    11c3:	e8 68 21 00 00       	call   3330 <getopt_long@plt>
+    11c8:	83 c4 20             	add    $0x20,%esp
+    11cb:	85 c0                	test   %eax,%eax
+    11cd:	0f 8e 91 00 00 00    	jle    1264 <main+0xd4>
+    11d3:	83 f8 68             	cmp    $0x68,%eax
+    11d6:	74 64                	je     123c <main+0xac>
+    11d8:	83 f8 6c             	cmp    $0x6c,%eax
+    11db:	74 11                	je     11ee <main+0x5e>
+    11dd:	83 f8 63             	cmp    $0x63,%eax
+    11e0:	75 d0                	jne    11b2 <main+0x22>
+    11e2:	a1 60 52 00 00       	mov    0x5260,%eax
+    11e7:	a3 20 4d 00 00       	mov    %eax,0x4d20
+    11ec:	eb c4                	jmp    11b2 <main+0x22>
+    11ee:	83 ec 0c             	sub    $0xc,%esp
+    11f1:	bb 70 4f 00 00       	mov    $0x4f70,%ebx
+    11f6:	68 01 2d 00 00       	push   $0x2d01
+    11fb:	e8 10 21 00 00       	call   3310 <printf@plt>
+    1200:	a1 70 4f 00 00       	mov    0x4f70,%eax
+    1205:	83 c4 10             	add    $0x10,%esp
+    1208:	85 c0                	test   %eax,%eax
+    120a:	74 22                	je     122e <main+0x9e>
+    120c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1210:	52                   	push   %edx
+    1211:	83 c3 04             	add    $0x4,%ebx
+    1214:	8b 08                	mov    (%eax),%ecx
+    1216:	51                   	push   %ecx
+    1217:	8b 70 04             	mov    0x4(%eax),%esi
+    121a:	56                   	push   %esi
+    121b:	68 15 2d 00 00       	push   $0x2d15
+    1220:	e8 eb 20 00 00       	call   3310 <printf@plt>
+    1225:	8b 03                	mov    (%ebx),%eax
+    1227:	83 c4 10             	add    $0x10,%esp
+    122a:	85 c0                	test   %eax,%eax
+    122c:	75 e2                	jne    1210 <main+0x80>
+    122e:	31 c0                	xor    %eax,%eax
+    1230:	8d 65 f0             	lea    -0x10(%ebp),%esp
+    1233:	59                   	pop    %ecx
+    1234:	5b                   	pop    %ebx
+    1235:	5e                   	pop    %esi
+    1236:	5f                   	pop    %edi
+    1237:	5d                   	pop    %ebp
+    1238:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    123b:	c3                   	ret    
+    123c:	a1 60 52 00 00       	mov    0x5260,%eax
+    1241:	85 c0                	test   %eax,%eax
+    1243:	74 14                	je     1259 <main+0xc9>
+    1245:	57                   	push   %edi
+    1246:	57                   	push   %edi
+    1247:	50                   	push   %eax
+    1248:	68 ed 2c 00 00       	push   $0x2ced
+    124d:	e8 be 20 00 00       	call   3310 <printf@plt>
+    1252:	83 c4 10             	add    $0x10,%esp
+    1255:	31 c0                	xor    %eax,%eax
+    1257:	eb d7                	jmp    1230 <main+0xa0>
+    1259:	8b 06                	mov    (%esi),%eax
+    125b:	e8 d0 fe ff ff       	call   1130 <print_help.part.0>
+    1260:	31 c0                	xor    %eax,%eax
+    1262:	eb cc                	jmp    1230 <main+0xa0>
+    1264:	83 ec 0c             	sub    $0xc,%esp
+    1267:	68 24 2d 00 00       	push   $0x2d24
+    126c:	e8 df 20 00 00       	call   3350 <log_init@plt>
+    1271:	c7 04 24 48 4e 00 00 	movl   $0x4e48,(%esp)
+    1278:	e8 b3 21 00 00       	call   3430 <fibril_mutex_initialize@plt>
+    127d:	c7 04 24 58 4e 00 00 	movl   $0x4e58,(%esp)
+    1284:	e8 67 21 00 00       	call   33f0 <fibril_condvar_initialize@plt>
+    1289:	8b 3d 64 52 00 00    	mov    0x5264,%edi
+    128f:	83 c4 10             	add    $0x10,%esp
+    1292:	39 df                	cmp    %ebx,%edi
+    1294:	7d 52                	jge    12e8 <main+0x158>
+    1296:	50                   	push   %eax
+    1297:	68 80 4d 00 00       	push   $0x4d80
+    129c:	ff 34 be             	pushl  (%esi,%edi,4)
+    129f:	68 70 4f 00 00       	push   $0x4f70
+    12a4:	e8 d7 01 00 00       	call   1480 <add_interface_by_id>
+    12a9:	83 c4 10             	add    $0x10,%esp
+    12ac:	85 c0                	test   %eax,%eax
+    12ae:	74 23                	je     12d3 <main+0x143>
+    12b0:	83 ec 0c             	sub    $0xc,%esp
+    12b3:	50                   	push   %eax
+    12b4:	e8 37 22 00 00       	call   34f0 <str_error@plt>
+    12b9:	50                   	push   %eax
+    12ba:	ff 34 be             	pushl  (%esi,%edi,4)
+    12bd:	68 ac 2e 00 00       	push   $0x2eac
+    12c2:	47                   	inc    %edi
+    12c3:	ff 35 70 52 00 00    	pushl  0x5270
+    12c9:	e8 32 21 00 00       	call   3400 <fprintf@plt>
+    12ce:	83 c4 20             	add    $0x20,%esp
+    12d1:	eb bf                	jmp    1292 <main+0x102>
+    12d3:	50                   	push   %eax
+    12d4:	50                   	push   %eax
+    12d5:	ff 34 be             	pushl  (%esi,%edi,4)
+    12d8:	68 2a 2d 00 00       	push   $0x2d2a
+    12dd:	47                   	inc    %edi
+    12de:	e8 2d 20 00 00       	call   3310 <printf@plt>
+    12e3:	83 c4 10             	add    $0x10,%esp
+    12e6:	eb aa                	jmp    1292 <main+0x102>
+    12e8:	31 db                	xor    %ebx,%ebx
+    12ea:	eb 26                	jmp    1312 <main+0x182>
+    12ec:	8b 40 04             	mov    0x4(%eax),%eax
+    12ef:	51                   	push   %ecx
+    12f0:	6a 00                	push   $0x0
+    12f2:	8d 04 d8             	lea    (%eax,%ebx,8),%eax
+    12f5:	43                   	inc    %ebx
+    12f6:	ff 70 04             	pushl  0x4(%eax)
+    12f9:	ff 30                	pushl  (%eax)
+    12fb:	e8 50 16 00 00       	call   2950 <usb_debug_str_buffer>
+    1300:	50                   	push   %eax
+    1301:	68 3e 2d 00 00       	push   $0x2d3e
+    1306:	6a 04                	push   $0x4
+    1308:	6a ff                	push   $0xffffffff
+    130a:	e8 b1 20 00 00       	call   33c0 <log_msg@plt>
+    130f:	83 c4 20             	add    $0x20,%esp
+    1312:	a1 90 4d 00 00       	mov    0x4d90,%eax
+    1317:	8b 40 04             	mov    0x4(%eax),%eax
+    131a:	3b 58 08             	cmp    0x8(%eax),%ebx
+    131d:	7c cd                	jl     12ec <main+0x15c>
+    131f:	52                   	push   %edx
+    1320:	52                   	push   %edx
+    1321:	ff 35 20 4d 00 00    	pushl  0x4d20
+    1327:	68 80 4d 00 00       	push   $0x4d80
+    132c:	e8 ff 09 00 00       	call   1d30 <usbvirt_device_plug>
+    1331:	83 c4 10             	add    $0x10,%esp
+    1334:	89 c3                	mov    %eax,%ebx
+    1336:	85 c0                	test   %eax,%eax
+    1338:	75 3e                	jne    1378 <main+0x1e8>
+    133a:	50                   	push   %eax
+    133b:	50                   	push   %eax
+    133c:	ff 35 20 4d 00 00    	pushl  0x4d20
+    1342:	68 5b 2d 00 00       	push   $0x2d5b
+    1347:	e8 c4 1f 00 00       	call   3310 <printf@plt>
+    134c:	c7 04 24 80 4d 00 00 	movl   $0x4d80,(%esp)
+    1353:	e8 58 06 00 00       	call   19b0 <wait_for_interfaces_death>
+    1358:	c7 04 24 76 2d 00 00 	movl   $0x2d76,(%esp)
+    135f:	e8 ac 1f 00 00       	call   3310 <printf@plt>
+    1364:	c7 04 24 80 4d 00 00 	movl   $0x4d80,(%esp)
+    136b:	e8 70 0a 00 00       	call   1de0 <usbvirt_device_unplug>
+    1370:	83 c4 10             	add    $0x10,%esp
+    1373:	e9 b6 fe ff ff       	jmp    122e <main+0x9e>
+    1378:	83 ec 0c             	sub    $0xc,%esp
+    137b:	50                   	push   %eax
+    137c:	e8 6f 21 00 00       	call   34f0 <str_error@plt>
+    1381:	83 c4 0c             	add    $0xc,%esp
+    1384:	50                   	push   %eax
+    1385:	ff 35 20 4d 00 00    	pushl  0x4d20
+    138b:	68 cc 2e 00 00       	push   $0x2ecc
+    1390:	e8 7b 1f 00 00       	call   3310 <printf@plt>
+    1395:	83 c4 10             	add    $0x10,%esp
+    1398:	89 d8                	mov    %ebx,%eax
+    139a:	e9 91 fe ff ff       	jmp    1230 <main+0xa0>
+    139f:	90                   	nop
+
+000013a0 <on_data_from_device>:
+    13a0:	55                   	push   %ebp
+    13a1:	89 e5                	mov    %esp,%ebp
+    13a3:	56                   	push   %esi
+    13a4:	53                   	push   %ebx
+    13a5:	8b 45 08             	mov    0x8(%ebp),%eax
+    13a8:	8b 4d 14             	mov    0x14(%ebp),%ecx
+    13ab:	0f bf 55 0c          	movswl 0xc(%ebp),%edx
+    13af:	8b 40 08             	mov    0x8(%eax),%eax
+    13b2:	8b 5d 18             	mov    0x18(%ebp),%ebx
+    13b5:	8b 75 1c             	mov    0x1c(%ebp),%esi
+    13b8:	8b 04 90             	mov    (%eax,%edx,4),%eax
+    13bb:	85 c0                	test   %eax,%eax
+    13bd:	74 22                	je     13e1 <on_data_from_device+0x41>
+    13bf:	8b 50 20             	mov    0x20(%eax),%edx
+    13c2:	85 d2                	test   %edx,%edx
+    13c4:	74 12                	je     13d8 <on_data_from_device+0x38>
+    13c6:	89 75 14             	mov    %esi,0x14(%ebp)
+    13c9:	89 5d 10             	mov    %ebx,0x10(%ebp)
+    13cc:	89 4d 0c             	mov    %ecx,0xc(%ebp)
+    13cf:	89 45 08             	mov    %eax,0x8(%ebp)
+    13d2:	5b                   	pop    %ebx
+    13d3:	5e                   	pop    %esi
+    13d4:	5d                   	pop    %ebp
+    13d5:	ff e2                	jmp    *%edx
+    13d7:	90                   	nop
+    13d8:	b8 d4 fe ff ff       	mov    $0xfffffed4,%eax
+    13dd:	5b                   	pop    %ebx
+    13de:	5e                   	pop    %esi
+    13df:	5d                   	pop    %ebp
+    13e0:	c3                   	ret    
+    13e1:	b8 d3 fe ff ff       	mov    $0xfffffed3,%eax
+    13e6:	eb f5                	jmp    13dd <on_data_from_device+0x3d>
+    13e8:	90                   	nop
+    13e9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+000013f0 <on_data_to_device>:
+    13f0:	55                   	push   %ebp
+    13f1:	89 e5                	mov    %esp,%ebp
+    13f3:	53                   	push   %ebx
+    13f4:	8b 45 08             	mov    0x8(%ebp),%eax
+    13f7:	8b 4d 14             	mov    0x14(%ebp),%ecx
+    13fa:	0f bf 55 0c          	movswl 0xc(%ebp),%edx
+    13fe:	8b 40 08             	mov    0x8(%eax),%eax
+    1401:	8b 5d 18             	mov    0x18(%ebp),%ebx
+    1404:	8b 44 90 44          	mov    0x44(%eax,%edx,4),%eax
+    1408:	85 c0                	test   %eax,%eax
+    140a:	74 1c                	je     1428 <on_data_to_device+0x38>
+    140c:	8b 50 24             	mov    0x24(%eax),%edx
+    140f:	85 d2                	test   %edx,%edx
+    1411:	74 0d                	je     1420 <on_data_to_device+0x30>
+    1413:	89 5d 10             	mov    %ebx,0x10(%ebp)
+    1416:	89 4d 0c             	mov    %ecx,0xc(%ebp)
+    1419:	89 45 08             	mov    %eax,0x8(%ebp)
+    141c:	5b                   	pop    %ebx
+    141d:	5d                   	pop    %ebp
+    141e:	ff e2                	jmp    *%edx
+    1420:	b8 d4 fe ff ff       	mov    $0xfffffed4,%eax
+    1425:	5b                   	pop    %ebx
+    1426:	5d                   	pop    %ebp
+    1427:	c3                   	ret    
+    1428:	b8 d3 fe ff ff       	mov    $0xfffffed3,%eax
+    142d:	eb f6                	jmp    1425 <on_data_to_device+0x35>
+    142f:	90                   	nop
+
+00001430 <interface_life_fibril>:
+    1430:	55                   	push   %ebp
+    1431:	89 e5                	mov    %esp,%ebp
+    1433:	56                   	push   %esi
+    1434:	53                   	push   %ebx
+    1435:	8b 45 08             	mov    0x8(%ebp),%eax
+    1438:	8b 50 28             	mov    0x28(%eax),%edx
+    143b:	8b 58 34             	mov    0x34(%eax),%ebx
+    143e:	85 d2                	test   %edx,%edx
+    1440:	74 09                	je     144b <interface_life_fibril+0x1b>
+    1442:	83 ec 0c             	sub    $0xc,%esp
+    1445:	50                   	push   %eax
+    1446:	ff d2                	call   *%edx
+    1448:	83 c4 10             	add    $0x10,%esp
+    144b:	83 ec 0c             	sub    $0xc,%esp
+    144e:	8d b3 a8 00 00 00    	lea    0xa8(%ebx),%esi
+    1454:	81 c3 b8 00 00 00    	add    $0xb8,%ebx
+    145a:	56                   	push   %esi
+    145b:	e8 00 21 00 00       	call   3560 <fibril_mutex_lock@plt>
+    1460:	8b 43 0c             	mov    0xc(%ebx),%eax
+    1463:	40                   	inc    %eax
+    1464:	89 43 0c             	mov    %eax,0xc(%ebx)
+    1467:	89 1c 24             	mov    %ebx,(%esp)
+    146a:	e8 a1 1f 00 00       	call   3410 <fibril_condvar_broadcast@plt>
+    146f:	89 34 24             	mov    %esi,(%esp)
+    1472:	e8 a9 1f 00 00       	call   3420 <fibril_mutex_unlock@plt>
+    1477:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    147a:	31 c0                	xor    %eax,%eax
+    147c:	5b                   	pop    %ebx
+    147d:	5e                   	pop    %esi
+    147e:	5d                   	pop    %ebp
+    147f:	c3                   	ret    
+
+00001480 <add_interface_by_id>:
+    1480:	55                   	push   %ebp
+    1481:	89 e5                	mov    %esp,%ebp
+    1483:	57                   	push   %edi
+    1484:	56                   	push   %esi
+    1485:	53                   	push   %ebx
+    1486:	83 ec 2c             	sub    $0x2c,%esp
+    1489:	8b 7d 08             	mov    0x8(%ebp),%edi
+    148c:	8b 75 0c             	mov    0xc(%ebp),%esi
+    148f:	85 ff                	test   %edi,%edi
+    1491:	0f 84 29 03 00 00    	je     17c0 <add_interface_by_id+0x340>
+    1497:	85 f6                	test   %esi,%esi
+    1499:	0f 84 21 03 00 00    	je     17c0 <add_interface_by_id+0x340>
+    149f:	8b 07                	mov    (%edi),%eax
+    14a1:	85 c0                	test   %eax,%eax
+    14a3:	75 18                	jne    14bd <add_interface_by_id+0x3d>
+    14a5:	e9 16 03 00 00       	jmp    17c0 <add_interface_by_id+0x340>
+    14aa:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    14b0:	83 c7 04             	add    $0x4,%edi
+    14b3:	8b 07                	mov    (%edi),%eax
+    14b5:	85 c0                	test   %eax,%eax
+    14b7:	0f 84 03 03 00 00    	je     17c0 <add_interface_by_id+0x340>
+    14bd:	52                   	push   %edx
+    14be:	52                   	push   %edx
+    14bf:	56                   	push   %esi
+    14c0:	8b 48 04             	mov    0x4(%eax),%ecx
+    14c3:	51                   	push   %ecx
+    14c4:	e8 97 1f 00 00       	call   3460 <str_cmp@plt>
+    14c9:	83 c4 10             	add    $0x10,%esp
+    14cc:	85 c0                	test   %eax,%eax
+    14ce:	75 e0                	jne    14b0 <add_interface_by_id+0x30>
+    14d0:	8b 37                	mov    (%edi),%esi
+    14d2:	89 c3                	mov    %eax,%ebx
+    14d4:	85 f6                	test   %esi,%esi
+    14d6:	0f 84 e4 02 00 00    	je     17c0 <add_interface_by_id+0x340>
+    14dc:	8b 46 18             	mov    0x18(%esi),%eax
+    14df:	85 c0                	test   %eax,%eax
+    14e1:	0f 85 49 03 00 00    	jne    1830 <add_interface_by_id+0x3b0>
+    14e7:	8b 56 1c             	mov    0x1c(%esi),%edx
+    14ea:	85 d2                	test   %edx,%edx
+    14ec:	0f 84 9c 04 00 00    	je     198e <add_interface_by_id+0x50e>
+    14f2:	8b 4e 34             	mov    0x34(%esi),%ecx
+    14f5:	85 c9                	test   %ecx,%ecx
+    14f7:	0f 85 33 04 00 00    	jne    1930 <add_interface_by_id+0x4b0>
+    14fd:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1500:	8b 49 08             	mov    0x8(%ecx),%ecx
+    1503:	89 4d e4             	mov    %ecx,-0x1c(%ebp)
+    1506:	8b 4d e4             	mov    -0x1c(%ebp),%ecx
+    1509:	83 b9 84 00 00 00 0f 	cmpl   $0xf,0x84(%ecx)
+    1510:	0f 87 44 04 00 00    	ja     195a <add_interface_by_id+0x4da>
+    1516:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1519:	8b 49 10             	mov    0x10(%ecx),%ecx
+    151c:	8b 49 04             	mov    0x4(%ecx),%ecx
+    151f:	8b 09                	mov    (%ecx),%ecx
+    1521:	80 79 04 07          	cmpb   $0x7,0x4(%ecx)
+    1525:	0f 87 2f 04 00 00    	ja     195a <add_interface_by_id+0x4da>
+    152b:	85 c0                	test   %eax,%eax
+    152d:	0f 84 2d 03 00 00    	je     1860 <add_interface_by_id+0x3e0>
+    1533:	85 d2                	test   %edx,%edx
+    1535:	0f 95 c2             	setne  %dl
+    1538:	81 e2 ff 00 00 00    	and    $0xff,%edx
+    153e:	42                   	inc    %edx
+    153f:	83 ec 0c             	sub    $0xc,%esp
+    1542:	89 55 e0             	mov    %edx,-0x20(%ebp)
+    1545:	6a 09                	push   $0x9
+    1547:	e8 34 1e 00 00       	call   3380 <malloc@plt>
+    154c:	83 c4 10             	add    $0x10,%esp
+    154f:	89 c7                	mov    %eax,%edi
+    1551:	85 c0                	test   %eax,%eax
+    1553:	0f 84 f2 03 00 00    	je     194b <add_interface_by_id+0x4cb>
+    1559:	c6 00 09             	movb   $0x9,(%eax)
+    155c:	c6 40 01 04          	movb   $0x4,0x1(%eax)
+    1560:	8b 45 10             	mov    0x10(%ebp),%eax
+    1563:	8b 55 e0             	mov    -0x20(%ebp),%edx
+    1566:	8b 40 10             	mov    0x10(%eax),%eax
+    1569:	8b 40 04             	mov    0x4(%eax),%eax
+    156c:	8b 00                	mov    (%eax),%eax
+    156e:	8a 40 04             	mov    0x4(%eax),%al
+    1571:	c6 47 03 00          	movb   $0x0,0x3(%edi)
+    1575:	88 47 02             	mov    %al,0x2(%edi)
+    1578:	88 57 04             	mov    %dl,0x4(%edi)
+    157b:	c6 47 05 03          	movb   $0x3,0x5(%edi)
+    157f:	8b 46 08             	mov    0x8(%esi),%eax
+    1582:	88 47 06             	mov    %al,0x6(%edi)
+    1585:	8b 46 0c             	mov    0xc(%esi),%eax
+    1588:	c6 47 08 00          	movb   $0x0,0x8(%edi)
+    158c:	88 47 07             	mov    %al,0x7(%edi)
+    158f:	8b 46 10             	mov    0x10(%esi),%eax
+    1592:	85 c0                	test   %eax,%eax
+    1594:	0f 84 ee 02 00 00    	je     1888 <add_interface_by_id+0x408>
+    159a:	83 ec 0c             	sub    $0xc,%esp
+    159d:	6a 09                	push   $0x9
+    159f:	e8 dc 1d 00 00       	call   3380 <malloc@plt>
+    15a4:	83 c4 10             	add    $0x10,%esp
+    15a7:	89 c2                	mov    %eax,%edx
+    15a9:	85 c0                	test   %eax,%eax
+    15ab:	0f 84 8e 03 00 00    	je     193f <add_interface_by_id+0x4bf>
+    15b1:	c6 00 09             	movb   $0x9,(%eax)
+    15b4:	c6 40 01 21          	movb   $0x21,0x1(%eax)
+    15b8:	c6 40 04 00          	movb   $0x0,0x4(%eax)
+    15bc:	c6 40 05 01          	movb   $0x1,0x5(%eax)
+    15c0:	c6 40 06 22          	movb   $0x22,0x6(%eax)
+    15c4:	66 c7 40 02 01 01    	movw   $0x101,0x2(%eax)
+    15ca:	8b 46 14             	mov    0x14(%esi),%eax
+    15cd:	66 c7 45 d6 12 00    	movw   $0x12,-0x2a(%ebp)
+    15d3:	66 89 42 07          	mov    %ax,0x7(%edx)
+    15d7:	8b 46 18             	mov    0x18(%esi),%eax
+    15da:	66 c7 45 d0 19 00    	movw   $0x19,-0x30(%ebp)
+    15e0:	b9 20 00 00 00       	mov    $0x20,%ecx
+    15e5:	c7 45 d8 04 00 00 00 	movl   $0x4,-0x28(%ebp)
+    15ec:	c7 45 cc 03 00 00 00 	movl   $0x3,-0x34(%ebp)
+    15f3:	c7 45 e0 02 00 00 00 	movl   $0x2,-0x20(%ebp)
+    15fa:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+    1601:	85 c0                	test   %eax,%eax
+    1603:	0f 85 b9 02 00 00    	jne    18c2 <add_interface_by_id+0x442>
+    1609:	8b 46 1c             	mov    0x1c(%esi),%eax
+    160c:	85 c0                	test   %eax,%eax
+    160e:	0f 84 64 02 00 00    	je     1878 <add_interface_by_id+0x3f8>
+    1614:	83 ec 0c             	sub    $0xc,%esp
+    1617:	89 55 e0             	mov    %edx,-0x20(%ebp)
+    161a:	6a 07                	push   $0x7
+    161c:	e8 5f 1d 00 00       	call   3380 <malloc@plt>
+    1621:	83 c4 10             	add    $0x10,%esp
+    1624:	89 c1                	mov    %eax,%ecx
+    1626:	89 45 d8             	mov    %eax,-0x28(%ebp)
+    1629:	85 c0                	test   %eax,%eax
+    162b:	8b 55 e0             	mov    -0x20(%ebp),%edx
+    162e:	0f 84 9c 01 00 00    	je     17d0 <add_interface_by_id+0x350>
+    1634:	c6 00 07             	movb   $0x7,(%eax)
+    1637:	c6 40 01 05          	movb   $0x5,0x1(%eax)
+    163b:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    163e:	8b 80 84 00 00 00    	mov    0x84(%eax),%eax
+    1644:	c6 41 03 03          	movb   $0x3,0x3(%ecx)
+    1648:	88 41 02             	mov    %al,0x2(%ecx)
+    164b:	8b 46 1c             	mov    0x1c(%esi),%eax
+    164e:	c6 41 06 0a          	movb   $0xa,0x6(%ecx)
+    1652:	66 89 41 04          	mov    %ax,0x4(%ecx)
+    1656:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    1659:	66 89 45 d6          	mov    %ax,-0x2a(%ebp)
+    165d:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    1660:	89 45 e0             	mov    %eax,-0x20(%ebp)
+    1663:	8b 45 10             	mov    0x10(%ebp),%eax
+    1666:	89 55 d0             	mov    %edx,-0x30(%ebp)
+    1669:	8b 40 10             	mov    0x10(%eax),%eax
+    166c:	8b 48 04             	mov    0x4(%eax),%ecx
+    166f:	50                   	push   %eax
+    1670:	50                   	push   %eax
+    1671:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    1674:	8b 51 08             	mov    0x8(%ecx),%edx
+    1677:	8b 49 04             	mov    0x4(%ecx),%ecx
+    167a:	01 d0                	add    %edx,%eax
+    167c:	c1 e0 03             	shl    $0x3,%eax
+    167f:	50                   	push   %eax
+    1680:	51                   	push   %ecx
+    1681:	e8 ba 1d 00 00       	call   3440 <realloc@plt>
+    1686:	83 c4 10             	add    $0x10,%esp
+    1689:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    168c:	85 c0                	test   %eax,%eax
+    168e:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    1691:	0f 84 39 01 00 00    	je     17d0 <add_interface_by_id+0x350>
+    1697:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    169a:	89 46 34             	mov    %eax,0x34(%esi)
+    169d:	50                   	push   %eax
+    169e:	6a 00                	push   $0x0
+    16a0:	56                   	push   %esi
+    16a1:	68 30 14 00 00       	push   $0x1430
+    16a6:	e8 75 1e 00 00       	call   3520 <fibril_create_generic@plt>
+    16ab:	83 c4 10             	add    $0x10,%esp
+    16ae:	89 45 c8             	mov    %eax,-0x38(%ebp)
+    16b1:	85 c0                	test   %eax,%eax
+    16b3:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    16b6:	0f 84 14 01 00 00    	je     17d0 <add_interface_by_id+0x350>
+    16bc:	8b 45 10             	mov    0x10(%ebp),%eax
+    16bf:	8b 4d cc             	mov    -0x34(%ebp),%ecx
+    16c2:	8b 40 10             	mov    0x10(%eax),%eax
+    16c5:	8b 40 04             	mov    0x4(%eax),%eax
+    16c8:	89 45 d0             	mov    %eax,-0x30(%ebp)
+    16cb:	89 48 04             	mov    %ecx,0x4(%eax)
+    16ce:	8b 40 08             	mov    0x8(%eax),%eax
+    16d1:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    16d4:	8d 04 c1             	lea    (%ecx,%eax,8),%eax
+    16d7:	31 c9                	xor    %ecx,%ecx
+    16d9:	85 d2                	test   %edx,%edx
+    16db:	89 38                	mov    %edi,(%eax)
+    16dd:	8a 0f                	mov    (%edi),%cl
+    16df:	89 48 04             	mov    %ecx,0x4(%eax)
+    16e2:	0f 84 7c 02 00 00    	je     1964 <add_interface_by_id+0x4e4>
+    16e8:	89 50 08             	mov    %edx,0x8(%eax)
+    16eb:	83 c0 10             	add    $0x10,%eax
+    16ee:	8a 0a                	mov    (%edx),%cl
+    16f0:	81 e1 ff 00 00 00    	and    $0xff,%ecx
+    16f6:	89 48 fc             	mov    %ecx,-0x4(%eax)
+    16f9:	8b 55 dc             	mov    -0x24(%ebp),%edx
+    16fc:	85 d2                	test   %edx,%edx
+    16fe:	74 0e                	je     170e <add_interface_by_id+0x28e>
+    1700:	89 d1                	mov    %edx,%ecx
+    1702:	89 10                	mov    %edx,(%eax)
+    1704:	31 d2                	xor    %edx,%edx
+    1706:	83 c0 08             	add    $0x8,%eax
+    1709:	8a 11                	mov    (%ecx),%dl
+    170b:	89 50 fc             	mov    %edx,-0x4(%eax)
+    170e:	8b 55 d8             	mov    -0x28(%ebp),%edx
+    1711:	85 d2                	test   %edx,%edx
+    1713:	74 0b                	je     1720 <add_interface_by_id+0x2a0>
+    1715:	89 d1                	mov    %edx,%ecx
+    1717:	89 10                	mov    %edx,(%eax)
+    1719:	31 d2                	xor    %edx,%edx
+    171b:	8a 11                	mov    (%ecx),%dl
+    171d:	89 50 04             	mov    %edx,0x4(%eax)
+    1720:	8b 55 cc             	mov    -0x34(%ebp),%edx
+    1723:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    1726:	01 d0                	add    %edx,%eax
+    1728:	8b 55 d0             	mov    -0x30(%ebp),%edx
+    172b:	8b 4e 18             	mov    0x18(%esi),%ecx
+    172e:	89 42 08             	mov    %eax,0x8(%edx)
+    1731:	85 c9                	test   %ecx,%ecx
+    1733:	74 1b                	je     1750 <add_interface_by_id+0x2d0>
+    1735:	8b 4d e4             	mov    -0x1c(%ebp),%ecx
+    1738:	8b 55 10             	mov    0x10(%ebp),%edx
+    173b:	8b 41 40             	mov    0x40(%ecx),%eax
+    173e:	8b 52 0c             	mov    0xc(%edx),%edx
+    1741:	89 34 81             	mov    %esi,(%ecx,%eax,4)
+    1744:	c7 44 82 40 a0 13 00 	movl   $0x13a0,0x40(%edx,%eax,4)
+    174b:	00 
+    174c:	40                   	inc    %eax
+    174d:	89 41 40             	mov    %eax,0x40(%ecx)
+    1750:	8b 46 1c             	mov    0x1c(%esi),%eax
+    1753:	85 c0                	test   %eax,%eax
+    1755:	74 21                	je     1778 <add_interface_by_id+0x2f8>
+    1757:	8b 4d e4             	mov    -0x1c(%ebp),%ecx
+    175a:	8b 55 10             	mov    0x10(%ebp),%edx
+    175d:	8b 81 84 00 00 00    	mov    0x84(%ecx),%eax
+    1763:	8b 52 0c             	mov    0xc(%edx),%edx
+    1766:	89 74 81 44          	mov    %esi,0x44(%ecx,%eax,4)
+    176a:	c7 04 82 f0 13 00 00 	movl   $0x13f0,(%edx,%eax,4)
+    1771:	40                   	inc    %eax
+    1772:	89 81 84 00 00 00    	mov    %eax,0x84(%ecx)
+    1778:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    177b:	31 c9                	xor    %ecx,%ecx
+    177d:	8b 7d e4             	mov    -0x1c(%ebp),%edi
+    1780:	83 ec 0c             	sub    $0xc,%esp
+    1783:	8b 00                	mov    (%eax),%eax
+    1785:	8a 50 04             	mov    0x4(%eax),%dl
+    1788:	88 d1                	mov    %dl,%cl
+    178a:	42                   	inc    %edx
+    178b:	89 b4 8f 88 00 00 00 	mov    %esi,0x88(%edi,%ecx,4)
+    1792:	88 50 04             	mov    %dl,0x4(%eax)
+    1795:	66 8b 75 d6          	mov    -0x2a(%ebp),%si
+    1799:	66 01 70 02          	add    %si,0x2(%eax)
+    179d:	8b 87 c0 00 00 00    	mov    0xc0(%edi),%eax
+    17a3:	40                   	inc    %eax
+    17a4:	89 87 c0 00 00 00    	mov    %eax,0xc0(%edi)
+    17aa:	8b 45 c8             	mov    -0x38(%ebp),%eax
+    17ad:	50                   	push   %eax
+    17ae:	e8 7d 1d 00 00       	call   3530 <fibril_add_ready@plt>
+    17b3:	83 c4 10             	add    $0x10,%esp
+    17b6:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    17b9:	89 d8                	mov    %ebx,%eax
+    17bb:	5b                   	pop    %ebx
+    17bc:	5e                   	pop    %esi
+    17bd:	5f                   	pop    %edi
+    17be:	5d                   	pop    %ebp
+    17bf:	c3                   	ret    
+    17c0:	83 cb ff             	or     $0xffffffff,%ebx
+    17c3:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    17c6:	89 d8                	mov    %ebx,%eax
+    17c8:	5b                   	pop    %ebx
+    17c9:	5e                   	pop    %esi
+    17ca:	5f                   	pop    %edi
+    17cb:	5d                   	pop    %ebp
+    17cc:	c3                   	ret    
+    17cd:	8d 76 00             	lea    0x0(%esi),%esi
+    17d0:	83 ec 0c             	sub    $0xc,%esp
+    17d3:	89 55 e4             	mov    %edx,-0x1c(%ebp)
+    17d6:	57                   	push   %edi
+    17d7:	e8 74 1d 00 00       	call   3550 <free@plt>
+    17dc:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    17df:	83 c4 10             	add    $0x10,%esp
+    17e2:	85 d2                	test   %edx,%edx
+    17e4:	74 0c                	je     17f2 <add_interface_by_id+0x372>
+    17e6:	83 ec 0c             	sub    $0xc,%esp
+    17e9:	52                   	push   %edx
+    17ea:	e8 61 1d 00 00       	call   3550 <free@plt>
+    17ef:	83 c4 10             	add    $0x10,%esp
+    17f2:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    17f5:	85 c0                	test   %eax,%eax
+    17f7:	74 0c                	je     1805 <add_interface_by_id+0x385>
+    17f9:	83 ec 0c             	sub    $0xc,%esp
+    17fc:	50                   	push   %eax
+    17fd:	e8 4e 1d 00 00       	call   3550 <free@plt>
+    1802:	83 c4 10             	add    $0x10,%esp
+    1805:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    1808:	85 c0                	test   %eax,%eax
+    180a:	0f 84 3b 01 00 00    	je     194b <add_interface_by_id+0x4cb>
+    1810:	83 ec 0c             	sub    $0xc,%esp
+    1813:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1818:	50                   	push   %eax
+    1819:	e8 32 1d 00 00       	call   3550 <free@plt>
+    181e:	83 c4 10             	add    $0x10,%esp
+    1821:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1824:	89 d8                	mov    %ebx,%eax
+    1826:	5b                   	pop    %ebx
+    1827:	5e                   	pop    %esi
+    1828:	5f                   	pop    %edi
+    1829:	5d                   	pop    %ebp
+    182a:	c3                   	ret    
+    182b:	90                   	nop
+    182c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1830:	8b 7e 34             	mov    0x34(%esi),%edi
+    1833:	85 ff                	test   %edi,%edi
+    1835:	0f 85 f5 00 00 00    	jne    1930 <add_interface_by_id+0x4b0>
+    183b:	8b 55 10             	mov    0x10(%ebp),%edx
+    183e:	8b 52 08             	mov    0x8(%edx),%edx
+    1841:	89 55 e4             	mov    %edx,-0x1c(%ebp)
+    1844:	83 7a 40 0f          	cmpl   $0xf,0x40(%edx)
+    1848:	0f 87 0c 01 00 00    	ja     195a <add_interface_by_id+0x4da>
+    184e:	8b 56 1c             	mov    0x1c(%esi),%edx
+    1851:	85 d2                	test   %edx,%edx
+    1853:	0f 84 bd fc ff ff    	je     1516 <add_interface_by_id+0x96>
+    1859:	e9 a8 fc ff ff       	jmp    1506 <add_interface_by_id+0x86>
+    185e:	66 90                	xchg   %ax,%ax
+    1860:	85 d2                	test   %edx,%edx
+    1862:	0f 84 30 01 00 00    	je     1998 <add_interface_by_id+0x518>
+    1868:	ba 01 00 00 00       	mov    $0x1,%edx
+    186d:	e9 cd fc ff ff       	jmp    153f <add_interface_by_id+0xbf>
+    1872:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1878:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+    187f:	e9 df fd ff ff       	jmp    1663 <add_interface_by_id+0x1e3>
+    1884:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1888:	8b 46 18             	mov    0x18(%esi),%eax
+    188b:	31 d2                	xor    %edx,%edx
+    188d:	66 c7 45 d6 09 00    	movw   $0x9,-0x2a(%ebp)
+    1893:	66 c7 45 d0 10 00    	movw   $0x10,-0x30(%ebp)
+    1899:	b9 17 00 00 00       	mov    $0x17,%ecx
+    189e:	c7 45 d8 03 00 00 00 	movl   $0x3,-0x28(%ebp)
+    18a5:	c7 45 cc 02 00 00 00 	movl   $0x2,-0x34(%ebp)
+    18ac:	c7 45 e0 01 00 00 00 	movl   $0x1,-0x20(%ebp)
+    18b3:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+    18ba:	85 c0                	test   %eax,%eax
+    18bc:	0f 84 47 fd ff ff    	je     1609 <add_interface_by_id+0x189>
+    18c2:	83 ec 0c             	sub    $0xc,%esp
+    18c5:	89 4d c8             	mov    %ecx,-0x38(%ebp)
+    18c8:	89 55 e0             	mov    %edx,-0x20(%ebp)
+    18cb:	6a 07                	push   $0x7
+    18cd:	e8 ae 1a 00 00       	call   3380 <malloc@plt>
+    18d2:	83 c4 10             	add    $0x10,%esp
+    18d5:	89 c1                	mov    %eax,%ecx
+    18d7:	89 45 dc             	mov    %eax,-0x24(%ebp)
+    18da:	85 c0                	test   %eax,%eax
+    18dc:	8b 55 e0             	mov    -0x20(%ebp),%edx
+    18df:	0f 84 87 00 00 00    	je     196c <add_interface_by_id+0x4ec>
+    18e5:	c6 00 07             	movb   $0x7,(%eax)
+    18e8:	c6 40 01 05          	movb   $0x5,0x1(%eax)
+    18ec:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    18ef:	8b 40 40             	mov    0x40(%eax),%eax
+    18f2:	c6 41 03 03          	movb   $0x3,0x3(%ecx)
+    18f6:	89 45 e0             	mov    %eax,-0x20(%ebp)
+    18f9:	8a 45 e0             	mov    -0x20(%ebp),%al
+    18fc:	83 c8 80             	or     $0xffffff80,%eax
+    18ff:	88 41 02             	mov    %al,0x2(%ecx)
+    1902:	8b 46 18             	mov    0x18(%esi),%eax
+    1905:	c6 41 06 0a          	movb   $0xa,0x6(%ecx)
+    1909:	66 89 41 04          	mov    %ax,0x4(%ecx)
+    190d:	8b 45 d0             	mov    -0x30(%ebp),%eax
+    1910:	66 89 45 d6          	mov    %ax,-0x2a(%ebp)
+    1914:	8b 45 cc             	mov    -0x34(%ebp),%eax
+    1917:	8b 4d c8             	mov    -0x38(%ebp),%ecx
+    191a:	89 45 e0             	mov    %eax,-0x20(%ebp)
+    191d:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    1920:	66 89 4d d0          	mov    %cx,-0x30(%ebp)
+    1924:	89 45 cc             	mov    %eax,-0x34(%ebp)
+    1927:	e9 dd fc ff ff       	jmp    1609 <add_interface_by_id+0x189>
+    192c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1930:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1933:	bb f7 ff ff ff       	mov    $0xfffffff7,%ebx
+    1938:	89 d8                	mov    %ebx,%eax
+    193a:	5b                   	pop    %ebx
+    193b:	5e                   	pop    %esi
+    193c:	5f                   	pop    %edi
+    193d:	5d                   	pop    %ebp
+    193e:	c3                   	ret    
+    193f:	83 ec 0c             	sub    $0xc,%esp
+    1942:	57                   	push   %edi
+    1943:	e8 08 1c 00 00       	call   3550 <free@plt>
+    1948:	83 c4 10             	add    $0x10,%esp
+    194b:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    194e:	bb fe ff ff ff       	mov    $0xfffffffe,%ebx
+    1953:	89 d8                	mov    %ebx,%eax
+    1955:	5b                   	pop    %ebx
+    1956:	5e                   	pop    %esi
+    1957:	5f                   	pop    %edi
+    1958:	5d                   	pop    %ebp
+    1959:	c3                   	ret    
+    195a:	bb fd ff ff ff       	mov    $0xfffffffd,%ebx
+    195f:	e9 5f fe ff ff       	jmp    17c3 <add_interface_by_id+0x343>
+    1964:	83 c0 08             	add    $0x8,%eax
+    1967:	e9 8d fd ff ff       	jmp    16f9 <add_interface_by_id+0x279>
+    196c:	83 ec 0c             	sub    $0xc,%esp
+    196f:	89 55 e4             	mov    %edx,-0x1c(%ebp)
+    1972:	57                   	push   %edi
+    1973:	e8 d8 1b 00 00       	call   3550 <free@plt>
+    1978:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    197b:	83 c4 10             	add    $0x10,%esp
+    197e:	85 d2                	test   %edx,%edx
+    1980:	74 c9                	je     194b <add_interface_by_id+0x4cb>
+    1982:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+    1989:	e9 58 fe ff ff       	jmp    17e6 <add_interface_by_id+0x366>
+    198e:	bb d2 fe ff ff       	mov    $0xfffffed2,%ebx
+    1993:	e9 2b fe ff ff       	jmp    17c3 <add_interface_by_id+0x343>
+    1998:	50                   	push   %eax
+    1999:	68 b6 00 00 00       	push   $0xb6
+    199e:	68 0e 30 00 00       	push   $0x300e
+    19a3:	68 ff 2e 00 00       	push   $0x2eff
+    19a8:	e8 33 1a 00 00       	call   33e0 <assert_abort@plt>
+    19ad:	8d 76 00             	lea    0x0(%esi),%esi
+
+000019b0 <wait_for_interfaces_death>:
+    19b0:	55                   	push   %ebp
+    19b1:	89 e5                	mov    %esp,%ebp
+    19b3:	57                   	push   %edi
+    19b4:	56                   	push   %esi
+    19b5:	53                   	push   %ebx
+    19b6:	83 ec 18             	sub    $0x18,%esp
+    19b9:	8b 45 08             	mov    0x8(%ebp),%eax
+    19bc:	8b 58 08             	mov    0x8(%eax),%ebx
+    19bf:	8d b3 a8 00 00 00    	lea    0xa8(%ebx),%esi
+    19c5:	8d bb b8 00 00 00    	lea    0xb8(%ebx),%edi
+    19cb:	56                   	push   %esi
+    19cc:	e8 8f 1b 00 00       	call   3560 <fibril_mutex_lock@plt>
+    19d1:	8b 83 c0 00 00 00    	mov    0xc0(%ebx),%eax
+    19d7:	83 c4 10             	add    $0x10,%esp
+    19da:	39 83 c4 00 00 00    	cmp    %eax,0xc4(%ebx)
+    19e0:	73 20                	jae    1a02 <wait_for_interfaces_death+0x52>
+    19e2:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    19e8:	50                   	push   %eax
+    19e9:	50                   	push   %eax
+    19ea:	56                   	push   %esi
+    19eb:	57                   	push   %edi
+    19ec:	e8 bf 19 00 00       	call   33b0 <fibril_condvar_wait@plt>
+    19f1:	8b 83 c0 00 00 00    	mov    0xc0(%ebx),%eax
+    19f7:	83 c4 10             	add    $0x10,%esp
+    19fa:	39 83 c4 00 00 00    	cmp    %eax,0xc4(%ebx)
+    1a00:	72 e6                	jb     19e8 <wait_for_interfaces_death+0x38>
+    1a02:	89 75 08             	mov    %esi,0x8(%ebp)
+    1a05:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1a08:	5b                   	pop    %ebx
+    1a09:	5e                   	pop    %esi
+    1a0a:	5f                   	pop    %edi
+    1a0b:	5d                   	pop    %ebp
+    1a0c:	e9 0f 1a 00 00       	jmp    3420 <fibril_mutex_unlock@plt>
+    1a11:	66 90                	xchg   %ax,%ax
+    1a13:	66 90                	xchg   %ax,%ax
+    1a15:	66 90                	xchg   %ax,%ax
+    1a17:	66 90                	xchg   %ax,%ax
+    1a19:	66 90                	xchg   %ax,%ax
+    1a1b:	66 90                	xchg   %ax,%ax
+    1a1d:	66 90                	xchg   %ax,%ax
+    1a1f:	90                   	nop
+
+00001a20 <interface_life_live>:
+    1a20:	55                   	push   %ebp
+    1a21:	89 e5                	mov    %esp,%ebp
+    1a23:	53                   	push   %ebx
+    1a24:	83 ec 10             	sub    $0x10,%esp
+    1a27:	8b 45 08             	mov    0x8(%ebp),%eax
+    1a2a:	8b 58 30             	mov    0x30(%eax),%ebx
+    1a2d:	c7 43 08 00 00 00 00 	movl   $0x0,0x8(%ebx)
+    1a34:	c7 43 0c ff ff ff ff 	movl   $0xffffffff,0xc(%ebx)
+    1a3b:	68 40 4b 4c 00       	push   $0x4c4b40
+    1a40:	e8 5b 1a 00 00       	call   34a0 <async_usleep@plt>
+    1a45:	8b 53 14             	mov    0x14(%ebx),%edx
+    1a48:	52                   	push   %edx
+    1a49:	68 1b 2d 00 00       	push   $0x2d1b
+    1a4e:	6a 04                	push   $0x4
+    1a50:	6a ff                	push   $0xffffffff
+    1a52:	e8 69 19 00 00       	call   33c0 <log_msg@plt>
+    1a57:	8b 43 04             	mov    0x4(%ebx),%eax
+    1a5a:	83 c4 20             	add    $0x20,%esp
+    1a5d:	39 43 08             	cmp    %eax,0x8(%ebx)
+    1a60:	73 2d                	jae    1a8f <interface_life_live+0x6f>
+    1a62:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1a68:	8b 43 10             	mov    0x10(%ebx),%eax
+    1a6b:	83 ec 0c             	sub    $0xc,%esp
+    1a6e:	8d 04 80             	lea    (%eax,%eax,4),%eax
+    1a71:	8d 04 80             	lea    (%eax,%eax,4),%eax
+    1a74:	8d 04 80             	lea    (%eax,%eax,4),%eax
+    1a77:	c1 e0 03             	shl    $0x3,%eax
+    1a7a:	50                   	push   %eax
+    1a7b:	e8 20 1a 00 00       	call   34a0 <async_usleep@plt>
+    1a80:	8b 43 08             	mov    0x8(%ebx),%eax
+    1a83:	83 c4 10             	add    $0x10,%esp
+    1a86:	40                   	inc    %eax
+    1a87:	89 43 08             	mov    %eax,0x8(%ebx)
+    1a8a:	39 43 04             	cmp    %eax,0x4(%ebx)
+    1a8d:	77 d9                	ja     1a68 <interface_life_live+0x48>
+    1a8f:	8b 43 18             	mov    0x18(%ebx),%eax
+    1a92:	50                   	push   %eax
+    1a93:	68 1b 2d 00 00       	push   $0x2d1b
+    1a98:	6a 04                	push   $0x4
+    1a9a:	6a ff                	push   $0xffffffff
+    1a9c:	e8 1f 19 00 00       	call   33c0 <log_msg@plt>
+    1aa1:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1aa4:	c9                   	leave  
+    1aa5:	c3                   	ret    
+    1aa6:	8d 76 00             	lea    0x0(%esi),%esi
+    1aa9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001ab0 <interface_live_on_data_in>:
+    1ab0:	55                   	push   %ebp
+    1ab1:	89 e5                	mov    %esp,%ebp
+    1ab3:	57                   	push   %edi
+    1ab4:	56                   	push   %esi
+    1ab5:	53                   	push   %ebx
+    1ab6:	83 ec 0c             	sub    $0xc,%esp
+    1ab9:	8b 55 08             	mov    0x8(%ebp),%edx
+    1abc:	8b 7d 14             	mov    0x14(%ebp),%edi
+    1abf:	8b 5a 30             	mov    0x30(%edx),%ebx
+    1ac2:	8b 73 08             	mov    0x8(%ebx),%esi
+    1ac5:	3b 73 04             	cmp    0x4(%ebx),%esi
+    1ac8:	73 46                	jae    1b10 <interface_live_on_data_in+0x60>
+    1aca:	3b 73 0c             	cmp    0xc(%ebx),%esi
+    1acd:	74 49                	je     1b18 <interface_live_on_data_in+0x68>
+    1acf:	8b 42 18             	mov    0x18(%edx),%eax
+    1ad2:	89 c1                	mov    %eax,%ecx
+    1ad4:	3b 45 10             	cmp    0x10(%ebp),%eax
+    1ad7:	77 2f                	ja     1b08 <interface_live_on_data_in+0x58>
+    1ad9:	85 ff                	test   %edi,%edi
+    1adb:	74 05                	je     1ae2 <interface_live_on_data_in+0x32>
+    1add:	89 0f                	mov    %ecx,(%edi)
+    1adf:	8b 42 18             	mov    0x18(%edx),%eax
+    1ae2:	0f af c6             	imul   %esi,%eax
+    1ae5:	52                   	push   %edx
+    1ae6:	51                   	push   %ecx
+    1ae7:	8b 0b                	mov    (%ebx),%ecx
+    1ae9:	8b 7d 0c             	mov    0xc(%ebp),%edi
+    1aec:	01 c8                	add    %ecx,%eax
+    1aee:	50                   	push   %eax
+    1aef:	57                   	push   %edi
+    1af0:	e8 7b 18 00 00       	call   3370 <memcpy@plt>
+    1af5:	89 73 0c             	mov    %esi,0xc(%ebx)
+    1af8:	83 c4 10             	add    $0x10,%esp
+    1afb:	31 c0                	xor    %eax,%eax
+    1afd:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1b00:	5b                   	pop    %ebx
+    1b01:	5e                   	pop    %esi
+    1b02:	5f                   	pop    %edi
+    1b03:	5d                   	pop    %ebp
+    1b04:	c3                   	ret    
+    1b05:	8d 76 00             	lea    0x0(%esi),%esi
+    1b08:	8b 4d 10             	mov    0x10(%ebp),%ecx
+    1b0b:	eb cc                	jmp    1ad9 <interface_live_on_data_in+0x29>
+    1b0d:	8d 76 00             	lea    0x0(%esi),%esi
+    1b10:	b8 d4 fe ff ff       	mov    $0xfffffed4,%eax
+    1b15:	eb e6                	jmp    1afd <interface_live_on_data_in+0x4d>
+    1b17:	90                   	nop
+    1b18:	b8 d1 fe ff ff       	mov    $0xfffffed1,%eax
+    1b1d:	eb de                	jmp    1afd <interface_live_on_data_in+0x4d>
+    1b1f:	90                   	nop
+
+00001b20 <req_get_descriptor>:
+    1b20:	55                   	push   %ebp
+    1b21:	89 e5                	mov    %esp,%ebp
+    1b23:	83 ec 08             	sub    $0x8,%esp
+    1b26:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1b29:	8b 55 08             	mov    0x8(%ebp),%edx
+    1b2c:	80 78 03 22          	cmpb   $0x22,0x3(%eax)
+    1b30:	8b 52 08             	mov    0x8(%edx),%edx
+    1b33:	75 3b                	jne    1b70 <req_get_descriptor+0x50>
+    1b35:	31 c9                	xor    %ecx,%ecx
+    1b37:	66 8b 48 04          	mov    0x4(%eax),%cx
+    1b3b:	8b 94 8a 88 00 00 00 	mov    0x88(%edx,%ecx,4),%edx
+    1b42:	85 d2                	test   %edx,%edx
+    1b44:	74 2a                	je     1b70 <req_get_descriptor+0x50>
+    1b46:	8b 4a 10             	mov    0x10(%edx),%ecx
+    1b49:	85 c9                	test   %ecx,%ecx
+    1b4b:	74 2b                	je     1b78 <req_get_descriptor+0x58>
+    1b4d:	83 ec 0c             	sub    $0xc,%esp
+    1b50:	8b 52 14             	mov    0x14(%edx),%edx
+    1b53:	52                   	push   %edx
+    1b54:	8b 55 10             	mov    0x10(%ebp),%edx
+    1b57:	51                   	push   %ecx
+    1b58:	8b 4d 14             	mov    0x14(%ebp),%ecx
+    1b5b:	51                   	push   %ecx
+    1b5c:	52                   	push   %edx
+    1b5d:	50                   	push   %eax
+    1b5e:	e8 2d 0a 00 00       	call   2590 <usbvirt_control_reply_helper>
+    1b63:	83 c4 20             	add    $0x20,%esp
+    1b66:	31 c0                	xor    %eax,%eax
+    1b68:	c9                   	leave  
+    1b69:	c3                   	ret    
+    1b6a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    1b70:	b8 fb ff ff ff       	mov    $0xfffffffb,%eax
+    1b75:	c9                   	leave  
+    1b76:	c3                   	ret    
+    1b77:	90                   	nop
+    1b78:	83 c8 ff             	or     $0xffffffff,%eax
+    1b7b:	c9                   	leave  
+    1b7c:	c3                   	ret    
+    1b7d:	8d 76 00             	lea    0x0(%esi),%esi
+
+00001b80 <req_set_protocol>:
+    1b80:	55                   	push   %ebp
+    1b81:	31 c9                	xor    %ecx,%ecx
+    1b83:	89 e5                	mov    %esp,%ebp
+    1b85:	53                   	push   %ebx
+    1b86:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1b89:	8b 55 08             	mov    0x8(%ebp),%edx
+    1b8c:	66 8b 58 04          	mov    0x4(%eax),%bx
+    1b90:	8b 52 08             	mov    0x8(%edx),%edx
+    1b93:	81 e3 ff ff 00 00    	and    $0xffff,%ebx
+    1b99:	66 8b 48 02          	mov    0x2(%eax),%cx
+    1b9d:	8b 84 9a 88 00 00 00 	mov    0x88(%edx,%ebx,4),%eax
+    1ba4:	85 c0                	test   %eax,%eax
+    1ba6:	74 08                	je     1bb0 <req_set_protocol+0x30>
+    1ba8:	89 48 2c             	mov    %ecx,0x2c(%eax)
+    1bab:	31 c0                	xor    %eax,%eax
+    1bad:	5b                   	pop    %ebx
+    1bae:	5d                   	pop    %ebp
+    1baf:	c3                   	ret    
+    1bb0:	83 c8 ff             	or     $0xffffffff,%eax
+    1bb3:	eb f8                	jmp    1bad <req_set_protocol+0x2d>
+    1bb5:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1bb9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001bc0 <req_set_report>:
+    1bc0:	55                   	push   %ebp
+    1bc1:	31 c9                	xor    %ecx,%ecx
+    1bc3:	89 e5                	mov    %esp,%ebp
+    1bc5:	53                   	push   %ebx
+    1bc6:	8b 55 0c             	mov    0xc(%ebp),%edx
+    1bc9:	8b 45 08             	mov    0x8(%ebp),%eax
+    1bcc:	8b 5d 10             	mov    0x10(%ebp),%ebx
+    1bcf:	8b 40 08             	mov    0x8(%eax),%eax
+    1bd2:	66 8b 4a 04          	mov    0x4(%edx),%cx
+    1bd6:	8b 84 88 88 00 00 00 	mov    0x88(%eax,%ecx,4),%eax
+    1bdd:	85 c0                	test   %eax,%eax
+    1bdf:	74 27                	je     1c08 <req_set_report+0x48>
+    1be1:	31 c9                	xor    %ecx,%ecx
+    1be3:	66 8b 4a 06          	mov    0x6(%edx),%cx
+    1be7:	8b 50 24             	mov    0x24(%eax),%edx
+    1bea:	85 d2                	test   %edx,%edx
+    1bec:	74 12                	je     1c00 <req_set_report+0x40>
+    1bee:	89 5d 0c             	mov    %ebx,0xc(%ebp)
+    1bf1:	89 4d 10             	mov    %ecx,0x10(%ebp)
+    1bf4:	89 45 08             	mov    %eax,0x8(%ebp)
+    1bf7:	5b                   	pop    %ebx
+    1bf8:	5d                   	pop    %ebp
+    1bf9:	ff e2                	jmp    *%edx
+    1bfb:	90                   	nop
+    1bfc:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1c00:	b8 f5 ff ff ff       	mov    $0xfffffff5,%eax
+    1c05:	5b                   	pop    %ebx
+    1c06:	5d                   	pop    %ebp
+    1c07:	c3                   	ret    
+    1c08:	83 c8 ff             	or     $0xffffffff,%eax
+    1c0b:	eb f8                	jmp    1c05 <req_set_report+0x45>
+    1c0d:	66 90                	xchg   %ax,%ax
+    1c0f:	90                   	nop
+
+00001c10 <on_data_out>:
+    1c10:	55                   	push   %ebp
+    1c11:	89 e5                	mov    %esp,%ebp
+    1c13:	56                   	push   %esi
+    1c14:	53                   	push   %ebx
+    1c15:	8b 55 10             	mov    0x10(%ebp),%edx
+    1c18:	85 d2                	test   %edx,%edx
+    1c1a:	74 7c                	je     1c98 <on_data_out+0x88>
+    1c1c:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1c1f:	8a 00                	mov    (%eax),%al
+    1c21:	88 c2                	mov    %al,%dl
+    1c23:	83 e2 10             	and    $0x10,%edx
+    1c26:	80 fa 01             	cmp    $0x1,%dl
+    1c29:	88 c2                	mov    %al,%dl
+    1c2b:	19 f6                	sbb    %esi,%esi
+    1c2d:	83 e2 08             	and    $0x8,%edx
+    1c30:	83 e6 c2             	and    $0xffffffc2,%esi
+    1c33:	83 c6 6b             	add    $0x6b,%esi
+    1c36:	80 fa 01             	cmp    $0x1,%dl
+    1c39:	19 db                	sbb    %ebx,%ebx
+    1c3b:	88 c2                	mov    %al,%dl
+    1c3d:	83 e3 ca             	and    $0xffffffca,%ebx
+    1c40:	83 e2 04             	and    $0x4,%edx
+    1c43:	83 c3 63             	add    $0x63,%ebx
+    1c46:	80 fa 01             	cmp    $0x1,%dl
+    1c49:	19 c9                	sbb    %ecx,%ecx
+    1c4b:	88 c2                	mov    %al,%dl
+    1c4d:	83 e1 ba             	and    $0xffffffba,%ecx
+    1c50:	83 e2 02             	and    $0x2,%edx
+    1c53:	83 c1 73             	add    $0x73,%ecx
+    1c56:	80 fa 01             	cmp    $0x1,%dl
+    1c59:	19 d2                	sbb    %edx,%edx
+    1c5b:	83 e0 01             	and    $0x1,%eax
+    1c5e:	83 e2 ec             	and    $0xffffffec,%edx
+    1c61:	83 c2 41             	add    $0x41,%edx
+    1c64:	3c 01                	cmp    $0x1,%al
+    1c66:	19 c0                	sbb    %eax,%eax
+    1c68:	83 ec 0c             	sub    $0xc,%esp
+    1c6b:	83 e0 fd             	and    $0xfffffffd,%eax
+    1c6e:	83 c0 30             	add    $0x30,%eax
+    1c71:	56                   	push   %esi
+    1c72:	53                   	push   %ebx
+    1c73:	51                   	push   %ecx
+    1c74:	52                   	push   %edx
+    1c75:	50                   	push   %eax
+    1c76:	8b 45 08             	mov    0x8(%ebp),%eax
+    1c79:	8b 00                	mov    (%eax),%eax
+    1c7b:	50                   	push   %eax
+    1c7c:	68 0c 2f 00 00       	push   $0x2f0c
+    1c81:	6a 03                	push   $0x3
+    1c83:	6a ff                	push   $0xffffffff
+    1c85:	e8 36 17 00 00       	call   33c0 <log_msg@plt>
+    1c8a:	83 c4 30             	add    $0x30,%esp
+    1c8d:	31 c0                	xor    %eax,%eax
+    1c8f:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1c92:	5b                   	pop    %ebx
+    1c93:	5e                   	pop    %esi
+    1c94:	5d                   	pop    %ebp
+    1c95:	c3                   	ret    
+    1c96:	66 90                	xchg   %ax,%ax
+    1c98:	b8 d2 fe ff ff       	mov    $0xfffffed2,%eax
+    1c9d:	eb f0                	jmp    1c8f <on_data_out+0x7f>
+    1c9f:	90                   	nop
+
+00001ca0 <callback_connection>:
+    1ca0:	55                   	push   %ebp
+    1ca1:	89 e5                	mov    %esp,%ebp
+    1ca3:	56                   	push   %esi
+    1ca4:	53                   	push   %ebx
+    1ca5:	83 ec 30             	sub    $0x30,%esp
+    1ca8:	a1 80 52 00 00       	mov    0x5280,%eax
+    1cad:	85 c0                	test   %eax,%eax
+    1caf:	74 68                	je     1d19 <callback_connection+0x79>
+    1cb1:	50                   	push   %eax
+    1cb2:	50                   	push   %eax
+    1cb3:	8b 45 08             	mov    0x8(%ebp),%eax
+    1cb6:	6a 00                	push   $0x0
+    1cb8:	50                   	push   %eax
+    1cb9:	8d 75 d4             	lea    -0x2c(%ebp),%esi
+    1cbc:	e8 df 16 00 00       	call   33a0 <async_answer_0@plt>
+    1cc1:	83 c4 10             	add    $0x10,%esp
+    1cc4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1cc8:	53                   	push   %ebx
+    1cc9:	53                   	push   %ebx
+    1cca:	6a 00                	push   $0x0
+    1ccc:	56                   	push   %esi
+    1ccd:	e8 de 17 00 00       	call   34b0 <async_get_call_timeout@plt>
+    1cd2:	83 c4 0c             	add    $0xc,%esp
+    1cd5:	89 c3                	mov    %eax,%ebx
+    1cd7:	56                   	push   %esi
+    1cd8:	50                   	push   %eax
+    1cd9:	a1 80 52 00 00       	mov    0x5280,%eax
+    1cde:	50                   	push   %eax
+    1cdf:	e8 ec 01 00 00       	call   1ed0 <usbvirt_ipc_handle_call>
+    1ce4:	83 c4 10             	add    $0x10,%esp
+    1ce7:	84 c0                	test   %al,%al
+    1ce9:	75 dd                	jne    1cc8 <callback_connection+0x28>
+    1ceb:	8b 4d d4             	mov    -0x2c(%ebp),%ecx
+    1cee:	85 c9                	test   %ecx,%ecx
+    1cf0:	74 16                	je     1d08 <callback_connection+0x68>
+    1cf2:	50                   	push   %eax
+    1cf3:	50                   	push   %eax
+    1cf4:	6a f2                	push   $0xfffffff2
+    1cf6:	53                   	push   %ebx
+    1cf7:	e8 a4 16 00 00       	call   33a0 <async_answer_0@plt>
+    1cfc:	83 c4 10             	add    $0x10,%esp
+    1cff:	eb c7                	jmp    1cc8 <callback_connection+0x28>
+    1d01:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    1d08:	52                   	push   %edx
+    1d09:	52                   	push   %edx
+    1d0a:	6a 00                	push   $0x0
+    1d0c:	53                   	push   %ebx
+    1d0d:	e8 8e 16 00 00       	call   33a0 <async_answer_0@plt>
+    1d12:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    1d15:	5b                   	pop    %ebx
+    1d16:	5e                   	pop    %esi
+    1d17:	5d                   	pop    %ebp
+    1d18:	c3                   	ret    
+    1d19:	50                   	push   %eax
+    1d1a:	6a 3a                	push   $0x3a
+    1d1c:	68 0a 30 00 00       	push   $0x300a
+    1d21:	68 17 30 00 00       	push   $0x3017
+    1d26:	e8 b5 16 00 00       	call   33e0 <assert_abort@plt>
+    1d2b:	90                   	nop
+    1d2c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+
+00001d30 <usbvirt_device_plug>:
+    1d30:	a1 80 52 00 00       	mov    0x5280,%eax
+    1d35:	85 c0                	test   %eax,%eax
+    1d37:	0f 85 93 00 00 00    	jne    1dd0 <usbvirt_device_plug+0xa0>
+    1d3d:	55                   	push   %ebp
+    1d3e:	89 e5                	mov    %esp,%ebp
+    1d40:	53                   	push   %ebx
+    1d41:	83 ec 28             	sub    $0x28,%esp
+    1d44:	8d 45 f0             	lea    -0x10(%ebp),%eax
+    1d47:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    1d4a:	6a 00                	push   $0x0
+    1d4c:	50                   	push   %eax
+    1d4d:	51                   	push   %ecx
+    1d4e:	e8 ad 17 00 00       	call   3500 <devman_fun_get_handle@plt>
+    1d53:	83 c4 10             	add    $0x10,%esp
+    1d56:	85 c0                	test   %eax,%eax
+    1d58:	74 06                	je     1d60 <usbvirt_device_plug+0x30>
+    1d5a:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1d5d:	c9                   	leave  
+    1d5e:	c3                   	ret    
+    1d5f:	90                   	nop
+    1d60:	8b 55 f0             	mov    -0x10(%ebp),%edx
+    1d63:	50                   	push   %eax
+    1d64:	50                   	push   %eax
+    1d65:	6a 00                	push   $0x0
+    1d67:	52                   	push   %edx
+    1d68:	e8 93 15 00 00       	call   3300 <devman_device_connect@plt>
+    1d6d:	83 c4 10             	add    $0x10,%esp
+    1d70:	85 c0                	test   %eax,%eax
+    1d72:	74 62                	je     1dd6 <usbvirt_device_plug+0xa6>
+    1d74:	8b 55 08             	mov    0x8(%ebp),%edx
+    1d77:	83 ec 0c             	sub    $0xc,%esp
+    1d7a:	89 15 80 52 00 00    	mov    %edx,0x5280
+    1d80:	89 42 1c             	mov    %eax,0x1c(%edx)
+    1d83:	50                   	push   %eax
+    1d84:	e8 57 17 00 00       	call   34e0 <async_exchange_begin@plt>
+    1d89:	83 c4 0c             	add    $0xc,%esp
+    1d8c:	89 c3                	mov    %eax,%ebx
+    1d8e:	8d 45 f4             	lea    -0xc(%ebp),%eax
+    1d91:	50                   	push   %eax
+    1d92:	6a 00                	push   $0x0
+    1d94:	68 a0 1c 00 00       	push   $0x1ca0
+    1d99:	6a 00                	push   $0x0
+    1d9b:	6a 00                	push   $0x0
+    1d9d:	68 56 9f 8b ed       	push   $0xed8b9f56
+    1da2:	53                   	push   %ebx
+    1da3:	e8 a8 16 00 00       	call   3450 <async_create_callback_port@plt>
+    1da8:	83 c4 14             	add    $0x14,%esp
+    1dab:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    1dae:	53                   	push   %ebx
+    1daf:	e8 1c 16 00 00       	call   33d0 <async_exchange_end@plt>
+    1db4:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1db7:	83 c4 10             	add    $0x10,%esp
+    1dba:	85 c0                	test   %eax,%eax
+    1dbc:	74 9c                	je     1d5a <usbvirt_device_plug+0x2a>
+    1dbe:	c7 05 80 52 00 00 00 	movl   $0x0,0x5280
+    1dc5:	00 00 00 
+    1dc8:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1dcb:	c9                   	leave  
+    1dcc:	c3                   	ret    
+    1dcd:	8d 76 00             	lea    0x0(%esi),%esi
+    1dd0:	b8 fd ff ff ff       	mov    $0xfffffffd,%eax
+    1dd5:	c3                   	ret    
+    1dd6:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    1ddb:	e9 7a ff ff ff       	jmp    1d5a <usbvirt_device_plug+0x2a>
+
+00001de0 <usbvirt_device_unplug>:
+    1de0:	55                   	push   %ebp
+    1de1:	89 e5                	mov    %esp,%ebp
+    1de3:	8b 45 08             	mov    0x8(%ebp),%eax
+    1de6:	8b 40 1c             	mov    0x1c(%eax),%eax
+    1de9:	89 45 08             	mov    %eax,0x8(%ebp)
+    1dec:	5d                   	pop    %ebp
+    1ded:	e9 2e 15 00 00       	jmp    3320 <async_hangup@plt>
+    1df2:	66 90                	xchg   %ax,%ax
+    1df4:	66 90                	xchg   %ax,%ax
+    1df6:	66 90                	xchg   %ax,%ax
+    1df8:	66 90                	xchg   %ax,%ax
+    1dfa:	66 90                	xchg   %ax,%ax
+    1dfc:	66 90                	xchg   %ax,%ax
+    1dfe:	66 90                	xchg   %ax,%ax
+
+00001e00 <ipc_data_in.isra.3>:
+    1e00:	55                   	push   %ebp
+    1e01:	89 e5                	mov    %esp,%ebp
+    1e03:	57                   	push   %edi
+    1e04:	56                   	push   %esi
+    1e05:	53                   	push   %ebx
+    1e06:	83 ec 34             	sub    $0x34,%esp
+    1e09:	89 c6                	mov    %eax,%esi
+    1e0b:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    1e0e:	89 55 d4             	mov    %edx,-0x2c(%ebp)
+    1e11:	50                   	push   %eax
+    1e12:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1e15:	50                   	push   %eax
+    1e16:	89 cb                	mov    %ecx,%ebx
+    1e18:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+    1e1f:	e8 5c 16 00 00       	call   3480 <async_data_read_receive@plt>
+    1e24:	83 c4 10             	add    $0x10,%esp
+    1e27:	84 c0                	test   %al,%al
+    1e29:	75 15                	jne    1e40 <ipc_data_in.isra.3+0x40>
+    1e2b:	50                   	push   %eax
+    1e2c:	50                   	push   %eax
+    1e2d:	6a f8                	push   $0xfffffff8
+    1e2f:	53                   	push   %ebx
+    1e30:	e8 6b 15 00 00       	call   33a0 <async_answer_0@plt>
+    1e35:	83 c4 10             	add    $0x10,%esp
+    1e38:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1e3b:	5b                   	pop    %ebx
+    1e3c:	5e                   	pop    %esi
+    1e3d:	5f                   	pop    %edi
+    1e3e:	5d                   	pop    %ebp
+    1e3f:	c3                   	ret    
+    1e40:	83 ec 0c             	sub    $0xc,%esp
+    1e43:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    1e46:	50                   	push   %eax
+    1e47:	e8 34 15 00 00       	call   3380 <malloc@plt>
+    1e4c:	83 c4 10             	add    $0x10,%esp
+    1e4f:	89 c7                	mov    %eax,%edi
+    1e51:	85 c0                	test   %eax,%eax
+    1e53:	74 4b                	je     1ea0 <ipc_data_in.isra.3+0xa0>
+    1e55:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1e58:	51                   	push   %ecx
+    1e59:	51                   	push   %ecx
+    1e5a:	50                   	push   %eax
+    1e5b:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    1e5e:	50                   	push   %eax
+    1e5f:	57                   	push   %edi
+    1e60:	0f bf 45 08          	movswl 0x8(%ebp),%eax
+    1e64:	50                   	push   %eax
+    1e65:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    1e68:	50                   	push   %eax
+    1e69:	56                   	push   %esi
+    1e6a:	e8 b1 09 00 00       	call   2820 <usbvirt_data_in>
+    1e6f:	83 c4 20             	add    $0x20,%esp
+    1e72:	89 c6                	mov    %eax,%esi
+    1e74:	85 c0                	test   %eax,%eax
+    1e76:	74 38                	je     1eb0 <ipc_data_in.isra.3+0xb0>
+    1e78:	50                   	push   %eax
+    1e79:	50                   	push   %eax
+    1e7a:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    1e7d:	56                   	push   %esi
+    1e7e:	50                   	push   %eax
+    1e7f:	e8 1c 15 00 00       	call   33a0 <async_answer_0@plt>
+    1e84:	58                   	pop    %eax
+    1e85:	5a                   	pop    %edx
+    1e86:	56                   	push   %esi
+    1e87:	53                   	push   %ebx
+    1e88:	e8 13 15 00 00       	call   33a0 <async_answer_0@plt>
+    1e8d:	89 3c 24             	mov    %edi,(%esp)
+    1e90:	e8 bb 16 00 00       	call   3550 <free@plt>
+    1e95:	83 c4 10             	add    $0x10,%esp
+    1e98:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1e9b:	5b                   	pop    %ebx
+    1e9c:	5e                   	pop    %esi
+    1e9d:	5f                   	pop    %edi
+    1e9e:	5d                   	pop    %ebp
+    1e9f:	c3                   	ret    
+    1ea0:	50                   	push   %eax
+    1ea1:	50                   	push   %eax
+    1ea2:	6a fe                	push   $0xfffffffe
+    1ea4:	53                   	push   %ebx
+    1ea5:	e8 f6 14 00 00       	call   33a0 <async_answer_0@plt>
+    1eaa:	83 c4 10             	add    $0x10,%esp
+    1ead:	eb 89                	jmp    1e38 <ipc_data_in.isra.3+0x38>
+    1eaf:	90                   	nop
+    1eb0:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    1eb3:	8b 4d e0             	mov    -0x20(%ebp),%ecx
+    1eb6:	50                   	push   %eax
+    1eb7:	52                   	push   %edx
+    1eb8:	57                   	push   %edi
+    1eb9:	51                   	push   %ecx
+    1eba:	e8 a1 14 00 00       	call   3360 <async_data_read_finalize@plt>
+    1ebf:	5e                   	pop    %esi
+    1ec0:	58                   	pop    %eax
+    1ec1:	6a 00                	push   $0x0
+    1ec3:	eb c2                	jmp    1e87 <ipc_data_in.isra.3+0x87>
+    1ec5:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1ec9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00001ed0 <usbvirt_ipc_handle_call>:
+    1ed0:	55                   	push   %ebp
+    1ed1:	89 e5                	mov    %esp,%ebp
+    1ed3:	57                   	push   %edi
+    1ed4:	56                   	push   %esi
+    1ed5:	53                   	push   %ebx
+    1ed6:	83 ec 2c             	sub    $0x2c,%esp
+    1ed9:	8b 55 10             	mov    0x10(%ebp),%edx
+    1edc:	8b 02                	mov    (%edx),%eax
+    1ede:	2d 50 04 00 00       	sub    $0x450,%eax
+    1ee3:	83 f8 06             	cmp    $0x6,%eax
+    1ee6:	0f 87 f6 03 00 00    	ja     22e2 <usbvirt_ipc_handle_call+0x412>
+    1eec:	ff 24 85 24 30 00 00 	jmp    *0x3024(,%eax,4)
+    1ef3:	90                   	nop
+    1ef4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1ef8:	83 ec 0c             	sub    $0xc,%esp
+    1efb:	8b 42 04             	mov    0x4(%edx),%eax
+    1efe:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    1f01:	ba 02 00 00 00       	mov    $0x2,%edx
+    1f06:	50                   	push   %eax
+    1f07:	8b 45 08             	mov    0x8(%ebp),%eax
+    1f0a:	e8 f1 fe ff ff       	call   1e00 <ipc_data_in.isra.3>
+    1f0f:	b3 01                	mov    $0x1,%bl
+    1f11:	83 c4 10             	add    $0x10,%esp
+    1f14:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1f17:	88 d8                	mov    %bl,%al
+    1f19:	5b                   	pop    %ebx
+    1f1a:	5e                   	pop    %esi
+    1f1b:	5f                   	pop    %edi
+    1f1c:	5d                   	pop    %ebp
+    1f1d:	c3                   	ret    
+    1f1e:	66 90                	xchg   %ax,%ax
+    1f20:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1f23:	8b 5a 04             	mov    0x4(%edx),%ebx
+    1f26:	56                   	push   %esi
+    1f27:	56                   	push   %esi
+    1f28:	50                   	push   %eax
+    1f29:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1f2c:	6a 00                	push   $0x0
+    1f2e:	c7 45 e0 00 00 00 00 	movl   $0x0,-0x20(%ebp)
+    1f35:	6a 00                	push   $0x0
+    1f37:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+    1f3e:	6a 01                	push   $0x1
+    1f40:	6a 00                	push   $0x0
+    1f42:	50                   	push   %eax
+    1f43:	e8 c8 15 00 00       	call   3510 <async_data_write_accept@plt>
+    1f48:	83 c4 20             	add    $0x20,%esp
+    1f4b:	85 c0                	test   %eax,%eax
+    1f4d:	0f 85 bd 02 00 00    	jne    2210 <usbvirt_ipc_handle_call+0x340>
+    1f53:	83 ec 0c             	sub    $0xc,%esp
+    1f56:	8b 75 e4             	mov    -0x1c(%ebp),%esi
+    1f59:	8b 7d e0             	mov    -0x20(%ebp),%edi
+    1f5c:	0f bf db             	movswl %bx,%ebx
+    1f5f:	56                   	push   %esi
+    1f60:	57                   	push   %edi
+    1f61:	53                   	push   %ebx
+    1f62:	6a 02                	push   $0x2
+    1f64:	8b 45 08             	mov    0x8(%ebp),%eax
+    1f67:	50                   	push   %eax
+    1f68:	e8 63 08 00 00       	call   27d0 <usbvirt_data_out>
+    1f6d:	83 c4 18             	add    $0x18,%esp
+    1f70:	8b 55 0c             	mov    0xc(%ebp),%edx
+    1f73:	50                   	push   %eax
+    1f74:	52                   	push   %edx
+    1f75:	e8 26 14 00 00       	call   33a0 <async_answer_0@plt>
+    1f7a:	8b 5d e0             	mov    -0x20(%ebp),%ebx
+    1f7d:	59                   	pop    %ecx
+    1f7e:	53                   	push   %ebx
+    1f7f:	e8 cc 15 00 00       	call   3550 <free@plt>
+    1f84:	83 c4 10             	add    $0x10,%esp
+    1f87:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    1f8a:	b3 01                	mov    $0x1,%bl
+    1f8c:	88 d8                	mov    %bl,%al
+    1f8e:	5b                   	pop    %ebx
+    1f8f:	5e                   	pop    %esi
+    1f90:	5f                   	pop    %edi
+    1f91:	5d                   	pop    %ebp
+    1f92:	c3                   	ret    
+    1f93:	90                   	nop
+    1f94:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    1f98:	8b 45 08             	mov    0x8(%ebp),%eax
+    1f9b:	8b 40 04             	mov    0x4(%eax),%eax
+    1f9e:	85 c0                	test   %eax,%eax
+    1fa0:	0f 84 18 03 00 00    	je     22be <usbvirt_ipc_handle_call+0x3ee>
+    1fa6:	83 ec 0c             	sub    $0xc,%esp
+    1fa9:	50                   	push   %eax
+    1faa:	e8 11 15 00 00       	call   34c0 <str_size@plt>
+    1faf:	89 c6                	mov    %eax,%esi
+    1fb1:	58                   	pop    %eax
+    1fb2:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    1fb5:	5a                   	pop    %edx
+    1fb6:	50                   	push   %eax
+    1fb7:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1fba:	50                   	push   %eax
+    1fbb:	e8 c0 14 00 00       	call   3480 <async_data_read_receive@plt>
+    1fc0:	83 c4 10             	add    $0x10,%esp
+    1fc3:	88 c3                	mov    %al,%bl
+    1fc5:	84 c0                	test   %al,%al
+    1fc7:	0f 84 83 02 00 00    	je     2250 <usbvirt_ipc_handle_call+0x380>
+    1fcd:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    1fd0:	39 c6                	cmp    %eax,%esi
+    1fd2:	73 05                	jae    1fd9 <usbvirt_ipc_handle_call+0x109>
+    1fd4:	89 75 e4             	mov    %esi,-0x1c(%ebp)
+    1fd7:	89 f0                	mov    %esi,%eax
+    1fd9:	52                   	push   %edx
+    1fda:	50                   	push   %eax
+    1fdb:	8b 45 08             	mov    0x8(%ebp),%eax
+    1fde:	8b 75 e0             	mov    -0x20(%ebp),%esi
+    1fe1:	8b 48 04             	mov    0x4(%eax),%ecx
+    1fe4:	51                   	push   %ecx
+    1fe5:	56                   	push   %esi
+    1fe6:	e8 75 13 00 00       	call   3360 <async_data_read_finalize@plt>
+    1feb:	83 c4 0c             	add    $0xc,%esp
+    1fee:	8b 7d e4             	mov    -0x1c(%ebp),%edi
+    1ff1:	8b 45 0c             	mov    0xc(%ebp),%eax
+    1ff4:	57                   	push   %edi
+    1ff5:	6a 00                	push   $0x0
+    1ff7:	50                   	push   %eax
+    1ff8:	e8 d3 14 00 00       	call   34d0 <async_answer_1@plt>
+    1ffd:	83 c4 10             	add    $0x10,%esp
+    2000:	e9 0f ff ff ff       	jmp    1f14 <usbvirt_ipc_handle_call+0x44>
+    2005:	8d 76 00             	lea    0x0(%esi),%esi
+    2008:	50                   	push   %eax
+    2009:	50                   	push   %eax
+    200a:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    200d:	c7 45 d4 00 00 00 00 	movl   $0x0,-0x2c(%ebp)
+    2014:	50                   	push   %eax
+    2015:	8d 45 d4             	lea    -0x2c(%ebp),%eax
+    2018:	6a 00                	push   $0x0
+    201a:	c7 45 d8 00 00 00 00 	movl   $0x0,-0x28(%ebp)
+    2021:	68 00 04 00 00       	push   $0x400
+    2026:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+    202d:	6a 01                	push   $0x1
+    202f:	6a 00                	push   $0x0
+    2031:	50                   	push   %eax
+    2032:	e8 d9 14 00 00       	call   3510 <async_data_write_accept@plt>
+    2037:	83 c4 20             	add    $0x20,%esp
+    203a:	85 c0                	test   %eax,%eax
+    203c:	0f 85 ce 01 00 00    	jne    2210 <usbvirt_ipc_handle_call+0x340>
+    2042:	50                   	push   %eax
+    2043:	50                   	push   %eax
+    2044:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    2047:	50                   	push   %eax
+    2048:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    204b:	50                   	push   %eax
+    204c:	e8 2f 14 00 00       	call   3480 <async_data_read_receive@plt>
+    2051:	83 c4 10             	add    $0x10,%esp
+    2054:	88 c3                	mov    %al,%bl
+    2056:	84 c0                	test   %al,%al
+    2058:	0f 84 ca 01 00 00    	je     2228 <usbvirt_ipc_handle_call+0x358>
+    205e:	83 ec 0c             	sub    $0xc,%esp
+    2061:	8b 75 dc             	mov    -0x24(%ebp),%esi
+    2064:	56                   	push   %esi
+    2065:	e8 16 13 00 00       	call   3380 <malloc@plt>
+    206a:	83 c4 10             	add    $0x10,%esp
+    206d:	89 c6                	mov    %eax,%esi
+    206f:	85 c0                	test   %eax,%eax
+    2071:	0f 84 62 02 00 00    	je     22d9 <usbvirt_ipc_handle_call+0x409>
+    2077:	50                   	push   %eax
+    2078:	50                   	push   %eax
+    2079:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    207c:	50                   	push   %eax
+    207d:	8b 45 dc             	mov    -0x24(%ebp),%eax
+    2080:	50                   	push   %eax
+    2081:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    2084:	56                   	push   %esi
+    2085:	50                   	push   %eax
+    2086:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    2089:	50                   	push   %eax
+    208a:	8b 45 08             	mov    0x8(%ebp),%eax
+    208d:	50                   	push   %eax
+    208e:	e8 3d 06 00 00       	call   26d0 <usbvirt_control_read>
+    2093:	83 c4 20             	add    $0x20,%esp
+    2096:	89 c7                	mov    %eax,%edi
+    2098:	85 c0                	test   %eax,%eax
+    209a:	0f 84 e8 01 00 00    	je     2288 <usbvirt_ipc_handle_call+0x3b8>
+    20a0:	50                   	push   %eax
+    20a1:	50                   	push   %eax
+    20a2:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    20a5:	57                   	push   %edi
+    20a6:	50                   	push   %eax
+    20a7:	e8 f4 12 00 00       	call   33a0 <async_answer_0@plt>
+    20ac:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    20af:	58                   	pop    %eax
+    20b0:	5a                   	pop    %edx
+    20b1:	57                   	push   %edi
+    20b2:	51                   	push   %ecx
+    20b3:	e8 e8 12 00 00       	call   33a0 <async_answer_0@plt>
+    20b8:	8b 7d d4             	mov    -0x2c(%ebp),%edi
+    20bb:	5b                   	pop    %ebx
+    20bc:	57                   	push   %edi
+    20bd:	e8 8e 14 00 00       	call   3550 <free@plt>
+    20c2:	89 34 24             	mov    %esi,(%esp)
+    20c5:	e8 86 14 00 00       	call   3550 <free@plt>
+    20ca:	83 c4 10             	add    $0x10,%esp
+    20cd:	b3 01                	mov    $0x1,%bl
+    20cf:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    20d2:	88 d8                	mov    %bl,%al
+    20d4:	5b                   	pop    %ebx
+    20d5:	5e                   	pop    %esi
+    20d6:	5f                   	pop    %edi
+    20d7:	5d                   	pop    %ebp
+    20d8:	c3                   	ret    
+    20d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    20e0:	83 ec 0c             	sub    $0xc,%esp
+    20e3:	8b 42 04             	mov    0x4(%edx),%eax
+    20e6:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    20e9:	ba 03 00 00 00       	mov    $0x3,%edx
+    20ee:	50                   	push   %eax
+    20ef:	8b 45 08             	mov    0x8(%ebp),%eax
+    20f2:	e8 09 fd ff ff       	call   1e00 <ipc_data_in.isra.3>
+    20f7:	83 c4 10             	add    $0x10,%esp
+    20fa:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    20fd:	b3 01                	mov    $0x1,%bl
+    20ff:	88 d8                	mov    %bl,%al
+    2101:	5b                   	pop    %ebx
+    2102:	5e                   	pop    %esi
+    2103:	5f                   	pop    %edi
+    2104:	5d                   	pop    %ebp
+    2105:	c3                   	ret    
+    2106:	66 90                	xchg   %ax,%ax
+    2108:	8b 5a 04             	mov    0x4(%edx),%ebx
+    210b:	50                   	push   %eax
+    210c:	50                   	push   %eax
+    210d:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    2110:	50                   	push   %eax
+    2111:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    2114:	6a 00                	push   $0x0
+    2116:	c7 45 e0 00 00 00 00 	movl   $0x0,-0x20(%ebp)
+    211d:	6a 00                	push   $0x0
+    211f:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+    2126:	6a 01                	push   $0x1
+    2128:	6a 00                	push   $0x0
+    212a:	50                   	push   %eax
+    212b:	e8 e0 13 00 00       	call   3510 <async_data_write_accept@plt>
+    2130:	83 c4 20             	add    $0x20,%esp
+    2133:	85 c0                	test   %eax,%eax
+    2135:	0f 85 d5 00 00 00    	jne    2210 <usbvirt_ipc_handle_call+0x340>
+    213b:	83 ec 0c             	sub    $0xc,%esp
+    213e:	8b 7d e4             	mov    -0x1c(%ebp),%edi
+    2141:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    2144:	0f bf db             	movswl %bx,%ebx
+    2147:	57                   	push   %edi
+    2148:	50                   	push   %eax
+    2149:	53                   	push   %ebx
+    214a:	6a 03                	push   $0x3
+    214c:	e9 13 fe ff ff       	jmp    1f64 <usbvirt_ipc_handle_call+0x94>
+    2151:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2158:	8b 42 04             	mov    0x4(%edx),%eax
+    215b:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%ebp)
+    2162:	89 45 d8             	mov    %eax,-0x28(%ebp)
+    2165:	50                   	push   %eax
+    2166:	50                   	push   %eax
+    2167:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+    216a:	50                   	push   %eax
+    216b:	8d 45 dc             	lea    -0x24(%ebp),%eax
+    216e:	6a 00                	push   $0x0
+    2170:	c7 45 e0 00 00 00 00 	movl   $0x0,-0x20(%ebp)
+    2177:	6a 00                	push   $0x0
+    2179:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+    2180:	6a 01                	push   $0x1
+    2182:	6a 00                	push   $0x0
+    2184:	50                   	push   %eax
+    2185:	e8 86 13 00 00       	call   3510 <async_data_write_accept@plt>
+    218a:	83 c4 20             	add    $0x20,%esp
+    218d:	85 c0                	test   %eax,%eax
+    218f:	75 7f                	jne    2210 <usbvirt_ipc_handle_call+0x340>
+    2191:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    2194:	85 c0                	test   %eax,%eax
+    2196:	74 25                	je     21bd <usbvirt_ipc_handle_call+0x2ed>
+    2198:	8d 45 d8             	lea    -0x28(%ebp),%eax
+    219b:	57                   	push   %edi
+    219c:	57                   	push   %edi
+    219d:	50                   	push   %eax
+    219e:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    21a1:	6a 00                	push   $0x0
+    21a3:	6a 00                	push   $0x0
+    21a5:	6a 01                	push   $0x1
+    21a7:	6a 00                	push   $0x0
+    21a9:	50                   	push   %eax
+    21aa:	e8 61 13 00 00       	call   3510 <async_data_write_accept@plt>
+    21af:	83 c4 20             	add    $0x20,%esp
+    21b2:	85 c0                	test   %eax,%eax
+    21b4:	0f 85 ae 00 00 00    	jne    2268 <usbvirt_ipc_handle_call+0x398>
+    21ba:	8b 45 d8             	mov    -0x28(%ebp),%eax
+    21bd:	83 ec 0c             	sub    $0xc,%esp
+    21c0:	8b 55 dc             	mov    -0x24(%ebp),%edx
+    21c3:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    21c6:	50                   	push   %eax
+    21c7:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    21ca:	50                   	push   %eax
+    21cb:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    21ce:	50                   	push   %eax
+    21cf:	52                   	push   %edx
+    21d0:	51                   	push   %ecx
+    21d1:	e8 0a 04 00 00       	call   25e0 <usbvirt_control_write>
+    21d6:	83 c4 18             	add    $0x18,%esp
+    21d9:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+    21dc:	50                   	push   %eax
+    21dd:	53                   	push   %ebx
+    21de:	e8 bd 11 00 00       	call   33a0 <async_answer_0@plt>
+    21e3:	8b 7d dc             	mov    -0x24(%ebp),%edi
+    21e6:	5e                   	pop    %esi
+    21e7:	57                   	push   %edi
+    21e8:	e8 63 13 00 00       	call   3550 <free@plt>
+    21ed:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    21f0:	83 c4 10             	add    $0x10,%esp
+    21f3:	85 c0                	test   %eax,%eax
+    21f5:	0f 84 d2 fe ff ff    	je     20cd <usbvirt_ipc_handle_call+0x1fd>
+    21fb:	83 ec 0c             	sub    $0xc,%esp
+    21fe:	b3 01                	mov    $0x1,%bl
+    2200:	50                   	push   %eax
+    2201:	e8 4a 13 00 00       	call   3550 <free@plt>
+    2206:	83 c4 10             	add    $0x10,%esp
+    2209:	e9 c1 fe ff ff       	jmp    20cf <usbvirt_ipc_handle_call+0x1ff>
+    220e:	66 90                	xchg   %ax,%ax
+    2210:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    2213:	52                   	push   %edx
+    2214:	52                   	push   %edx
+    2215:	50                   	push   %eax
+    2216:	51                   	push   %ecx
+    2217:	b3 01                	mov    $0x1,%bl
+    2219:	e8 82 11 00 00       	call   33a0 <async_answer_0@plt>
+    221e:	83 c4 10             	add    $0x10,%esp
+    2221:	e9 a9 fe ff ff       	jmp    20cf <usbvirt_ipc_handle_call+0x1ff>
+    2226:	66 90                	xchg   %ax,%ax
+    2228:	57                   	push   %edi
+    2229:	57                   	push   %edi
+    222a:	6a f8                	push   $0xfffffff8
+    222c:	8b 45 0c             	mov    0xc(%ebp),%eax
+    222f:	b3 01                	mov    $0x1,%bl
+    2231:	50                   	push   %eax
+    2232:	e8 69 11 00 00       	call   33a0 <async_answer_0@plt>
+    2237:	8b 4d d4             	mov    -0x2c(%ebp),%ecx
+    223a:	5a                   	pop    %edx
+    223b:	51                   	push   %ecx
+    223c:	e8 0f 13 00 00       	call   3550 <free@plt>
+    2241:	83 c4 10             	add    $0x10,%esp
+    2244:	e9 86 fe ff ff       	jmp    20cf <usbvirt_ipc_handle_call+0x1ff>
+    2249:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    2250:	50                   	push   %eax
+    2251:	50                   	push   %eax
+    2252:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2255:	6a f2                	push   $0xfffffff2
+    2257:	50                   	push   %eax
+    2258:	b3 01                	mov    $0x1,%bl
+    225a:	e8 41 11 00 00       	call   33a0 <async_answer_0@plt>
+    225f:	83 c4 10             	add    $0x10,%esp
+    2262:	e9 ad fc ff ff       	jmp    1f14 <usbvirt_ipc_handle_call+0x44>
+    2267:	90                   	nop
+    2268:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    226b:	52                   	push   %edx
+    226c:	52                   	push   %edx
+    226d:	50                   	push   %eax
+    226e:	51                   	push   %ecx
+    226f:	e8 2c 11 00 00       	call   33a0 <async_answer_0@plt>
+    2274:	8b 75 dc             	mov    -0x24(%ebp),%esi
+    2277:	5b                   	pop    %ebx
+    2278:	56                   	push   %esi
+    2279:	b3 01                	mov    $0x1,%bl
+    227b:	e8 d0 12 00 00       	call   3550 <free@plt>
+    2280:	83 c4 10             	add    $0x10,%esp
+    2283:	e9 47 fe ff ff       	jmp    20cf <usbvirt_ipc_handle_call+0x1ff>
+    2288:	50                   	push   %eax
+    2289:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+    228c:	50                   	push   %eax
+    228d:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    2290:	56                   	push   %esi
+    2291:	50                   	push   %eax
+    2292:	e8 c9 10 00 00       	call   3360 <async_data_read_finalize@plt>
+    2297:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    229a:	58                   	pop    %eax
+    229b:	5a                   	pop    %edx
+    229c:	6a 00                	push   $0x0
+    229e:	51                   	push   %ecx
+    229f:	e8 fc 10 00 00       	call   33a0 <async_answer_0@plt>
+    22a4:	8b 45 d4             	mov    -0x2c(%ebp),%eax
+    22a7:	5f                   	pop    %edi
+    22a8:	50                   	push   %eax
+    22a9:	e8 a2 12 00 00       	call   3550 <free@plt>
+    22ae:	89 34 24             	mov    %esi,(%esp)
+    22b1:	e8 9a 12 00 00       	call   3550 <free@plt>
+    22b6:	83 c4 10             	add    $0x10,%esp
+    22b9:	e9 56 fc ff ff       	jmp    1f14 <usbvirt_ipc_handle_call+0x44>
+    22be:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+    22c1:	51                   	push   %ecx
+    22c2:	51                   	push   %ecx
+    22c3:	6a ff                	push   $0xffffffff
+    22c5:	53                   	push   %ebx
+    22c6:	e8 d5 10 00 00       	call   33a0 <async_answer_0@plt>
+    22cb:	8b 45 08             	mov    0x8(%ebp),%eax
+    22ce:	83 c4 10             	add    $0x10,%esp
+    22d1:	8b 40 04             	mov    0x4(%eax),%eax
+    22d4:	e9 cd fc ff ff       	jmp    1fa6 <usbvirt_ipc_handle_call+0xd6>
+    22d9:	53                   	push   %ebx
+    22da:	53                   	push   %ebx
+    22db:	6a fe                	push   $0xfffffffe
+    22dd:	e9 4a ff ff ff       	jmp    222c <usbvirt_ipc_handle_call+0x35c>
+    22e2:	31 db                	xor    %ebx,%ebx
+    22e4:	e9 2b fc ff ff       	jmp    1f14 <usbvirt_ipc_handle_call+0x44>
+    22e9:	66 90                	xchg   %ax,%ax
+    22eb:	66 90                	xchg   %ax,%ax
+    22ed:	66 90                	xchg   %ax,%ax
+    22ef:	90                   	nop
+
+000022f0 <req_set_address>:
+    22f0:	55                   	push   %ebp
+    22f1:	89 e5                	mov    %esp,%ebp
+    22f3:	8b 45 0c             	mov    0xc(%ebp),%eax
+    22f6:	66 8b 48 04          	mov    0x4(%eax),%cx
+    22fa:	66 8b 50 02          	mov    0x2(%eax),%dx
+    22fe:	66 0b 48 06          	or     0x6(%eax),%cx
+    2302:	75 14                	jne    2318 <req_set_address+0x28>
+    2304:	66 83 fa 7f          	cmp    $0x7f,%dx
+    2308:	77 0e                	ja     2318 <req_set_address+0x28>
+    230a:	8b 45 08             	mov    0x8(%ebp),%eax
+    230d:	66 89 50 14          	mov    %dx,0x14(%eax)
+    2311:	31 c0                	xor    %eax,%eax
+    2313:	5d                   	pop    %ebp
+    2314:	c3                   	ret    
+    2315:	8d 76 00             	lea    0x0(%esi),%esi
+    2318:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    231d:	5d                   	pop    %ebp
+    231e:	c3                   	ret    
+    231f:	90                   	nop
+
+00002320 <req_set_configuration>:
+    2320:	55                   	push   %ebp
+    2321:	89 e5                	mov    %esp,%ebp
+    2323:	56                   	push   %esi
+    2324:	53                   	push   %ebx
+    2325:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2328:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    232b:	66 8b 48 04          	mov    0x4(%eax),%cx
+    232f:	66 8b 50 02          	mov    0x2(%eax),%dx
+    2333:	66 0b 48 06          	or     0x6(%eax),%cx
+    2337:	75 47                	jne    2380 <req_set_configuration+0x60>
+    2339:	66 81 fa ff 00       	cmp    $0xff,%dx
+    233e:	77 40                	ja     2380 <req_set_configuration+0x60>
+    2340:	8b 4b 18             	mov    0x18(%ebx),%ecx
+    2343:	31 c0                	xor    %eax,%eax
+    2345:	85 c9                	test   %ecx,%ecx
+    2347:	74 2a                	je     2373 <req_set_configuration+0x53>
+    2349:	31 c0                	xor    %eax,%eax
+    234b:	66 85 d2             	test   %dx,%dx
+    234e:	0f 95 c0             	setne  %al
+    2351:	89 c6                	mov    %eax,%esi
+    2353:	8b 43 0c             	mov    0xc(%ebx),%eax
+    2356:	46                   	inc    %esi
+    2357:	85 c0                	test   %eax,%eax
+    2359:	74 13                	je     236e <req_set_configuration+0x4e>
+    235b:	8b 80 84 00 00 00    	mov    0x84(%eax),%eax
+    2361:	85 c0                	test   %eax,%eax
+    2363:	74 09                	je     236e <req_set_configuration+0x4e>
+    2365:	52                   	push   %edx
+    2366:	56                   	push   %esi
+    2367:	51                   	push   %ecx
+    2368:	53                   	push   %ebx
+    2369:	ff d0                	call   *%eax
+    236b:	83 c4 10             	add    $0x10,%esp
+    236e:	89 73 18             	mov    %esi,0x18(%ebx)
+    2371:	31 c0                	xor    %eax,%eax
+    2373:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2376:	5b                   	pop    %ebx
+    2377:	5e                   	pop    %esi
+    2378:	5d                   	pop    %ebp
+    2379:	c3                   	ret    
+    237a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    2380:	b8 f2 ff ff ff       	mov    $0xfffffff2,%eax
+    2385:	eb ec                	jmp    2373 <req_set_configuration+0x53>
+    2387:	89 f6                	mov    %esi,%esi
+    2389:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00002390 <req_get_dev_status>:
+    2390:	55                   	push   %ebp
+    2391:	89 e5                	mov    %esp,%ebp
+    2393:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2396:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    2399:	8b 55 10             	mov    0x10(%ebp),%edx
+    239c:	66 83 78 06 02       	cmpw   $0x2,0x6(%eax)
+    23a1:	75 25                	jne    23c8 <req_get_dev_status+0x38>
+    23a3:	80 79 01 00          	cmpb   $0x0,0x1(%ecx)
+    23a7:	0f 95 c0             	setne  %al
+    23aa:	01 c0                	add    %eax,%eax
+    23ac:	0b 01                	or     (%ecx),%eax
+    23ae:	c6 42 01 00          	movb   $0x0,0x1(%edx)
+    23b2:	88 02                	mov    %al,(%edx)
+    23b4:	8b 45 14             	mov    0x14(%ebp),%eax
+    23b7:	c7 00 02 00 00 00    	movl   $0x2,(%eax)
+    23bd:	31 c0                	xor    %eax,%eax
+    23bf:	5d                   	pop    %ebp
+    23c0:	c3                   	ret    
+    23c1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+    23c8:	b8 d3 fe ff ff       	mov    $0xfffffed3,%eax
+    23cd:	5d                   	pop    %ebp
+    23ce:	c3                   	ret    
+    23cf:	90                   	nop
+
+000023d0 <req_get_iface_ep_status>:
+    23d0:	55                   	push   %ebp
+    23d1:	89 e5                	mov    %esp,%ebp
+    23d3:	8b 55 0c             	mov    0xc(%ebp),%edx
+    23d6:	8b 45 10             	mov    0x10(%ebp),%eax
+    23d9:	66 83 7a 06 02       	cmpw   $0x2,0x6(%edx)
+    23de:	75 18                	jne    23f8 <req_get_iface_ep_status+0x28>
+    23e0:	c6 00 00             	movb   $0x0,(%eax)
+    23e3:	c6 40 01 00          	movb   $0x0,0x1(%eax)
+    23e7:	8b 45 14             	mov    0x14(%ebp),%eax
+    23ea:	c7 00 02 00 00 00    	movl   $0x2,(%eax)
+    23f0:	31 c0                	xor    %eax,%eax
+    23f2:	5d                   	pop    %ebp
+    23f3:	c3                   	ret    
+    23f4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    23f8:	b8 d3 fe ff ff       	mov    $0xfffffed3,%eax
+    23fd:	5d                   	pop    %ebp
+    23fe:	c3                   	ret    
+    23ff:	90                   	nop
+
+00002400 <req_get_descriptor>:
+    2400:	55                   	push   %ebp
+    2401:	89 e5                	mov    %esp,%ebp
+    2403:	57                   	push   %edi
+    2404:	56                   	push   %esi
+    2405:	53                   	push   %ebx
+    2406:	83 ec 1c             	sub    $0x1c,%esp
+    2409:	8b 45 0c             	mov    0xc(%ebp),%eax
+    240c:	8a 50 03             	mov    0x3(%eax),%dl
+    240f:	8a 40 02             	mov    0x2(%eax),%al
+    2412:	80 fa 01             	cmp    $0x1,%dl
+    2415:	75 59                	jne    2470 <req_get_descriptor+0x70>
+    2417:	84 c0                	test   %al,%al
+    2419:	75 55                	jne    2470 <req_get_descriptor+0x70>
+    241b:	8b 45 08             	mov    0x8(%ebp),%eax
+    241e:	8b 40 10             	mov    0x10(%eax),%eax
+    2421:	85 c0                	test   %eax,%eax
+    2423:	0f 84 3f 01 00 00    	je     2568 <req_get_descriptor+0x168>
+    2429:	8b 00                	mov    (%eax),%eax
+    242b:	85 c0                	test   %eax,%eax
+    242d:	0f 84 35 01 00 00    	je     2568 <req_get_descriptor+0x168>
+    2433:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    2436:	31 d2                	xor    %edx,%edx
+    2438:	31 db                	xor    %ebx,%ebx
+    243a:	66 8b 51 06          	mov    0x6(%ecx),%dx
+    243e:	8a 18                	mov    (%eax),%bl
+    2440:	39 d3                	cmp    %edx,%ebx
+    2442:	76 02                	jbe    2446 <req_get_descriptor+0x46>
+    2444:	89 d3                	mov    %edx,%ebx
+    2446:	8b 7d 10             	mov    0x10(%ebp),%edi
+    2449:	56                   	push   %esi
+    244a:	53                   	push   %ebx
+    244b:	50                   	push   %eax
+    244c:	57                   	push   %edi
+    244d:	e8 1e 0f 00 00       	call   3370 <memcpy@plt>
+    2452:	8b 45 14             	mov    0x14(%ebp),%eax
+    2455:	83 c4 10             	add    $0x10,%esp
+    2458:	85 c0                	test   %eax,%eax
+    245a:	0f 84 18 01 00 00    	je     2578 <req_get_descriptor+0x178>
+    2460:	8b 45 14             	mov    0x14(%ebp),%eax
+    2463:	89 18                	mov    %ebx,(%eax)
+    2465:	31 c0                	xor    %eax,%eax
+    2467:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    246a:	5b                   	pop    %ebx
+    246b:	5e                   	pop    %esi
+    246c:	5f                   	pop    %edi
+    246d:	5d                   	pop    %ebp
+    246e:	c3                   	ret    
+    246f:	90                   	nop
+    2470:	80 fa 02             	cmp    $0x2,%dl
+    2473:	0f 85 ef 00 00 00    	jne    2568 <req_get_descriptor+0x168>
+    2479:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    247c:	8b 51 10             	mov    0x10(%ecx),%edx
+    247f:	85 d2                	test   %edx,%edx
+    2481:	0f 84 e1 00 00 00    	je     2568 <req_get_descriptor+0x168>
+    2487:	25 ff 00 00 00       	and    $0xff,%eax
+    248c:	3b 42 08             	cmp    0x8(%edx),%eax
+    248f:	0f 83 d3 00 00 00    	jae    2568 <req_get_descriptor+0x168>
+    2495:	8d 0c 40             	lea    (%eax,%eax,2),%ecx
+    2498:	8b 42 04             	mov    0x4(%edx),%eax
+    249b:	83 ec 0c             	sub    $0xc,%esp
+    249e:	8d 3c 88             	lea    (%eax,%ecx,4),%edi
+    24a1:	8b 07                	mov    (%edi),%eax
+    24a3:	66 8b 48 02          	mov    0x2(%eax),%cx
+    24a7:	81 e1 ff ff 00 00    	and    $0xffff,%ecx
+    24ad:	51                   	push   %ecx
+    24ae:	e8 cd 0e 00 00       	call   3380 <malloc@plt>
+    24b3:	83 c4 10             	add    $0x10,%esp
+    24b6:	89 c6                	mov    %eax,%esi
+    24b8:	89 45 e0             	mov    %eax,-0x20(%ebp)
+    24bb:	85 c0                	test   %eax,%eax
+    24bd:	0f 84 bc 00 00 00    	je     257f <req_get_descriptor+0x17f>
+    24c3:	8b 07                	mov    (%edi),%eax
+    24c5:	52                   	push   %edx
+    24c6:	31 d2                	xor    %edx,%edx
+    24c8:	8a 10                	mov    (%eax),%dl
+    24ca:	52                   	push   %edx
+    24cb:	50                   	push   %eax
+    24cc:	56                   	push   %esi
+    24cd:	e8 9e 0e 00 00       	call   3370 <memcpy@plt>
+    24d2:	8b 07                	mov    (%edi),%eax
+    24d4:	31 d2                	xor    %edx,%edx
+    24d6:	8b 4f 08             	mov    0x8(%edi),%ecx
+    24d9:	83 c4 10             	add    $0x10,%esp
+    24dc:	8a 10                	mov    (%eax),%dl
+    24de:	01 f2                	add    %esi,%edx
+    24e0:	85 c9                	test   %ecx,%ecx
+    24e2:	74 36                	je     251a <req_get_descriptor+0x11a>
+    24e4:	89 d0                	mov    %edx,%eax
+    24e6:	31 db                	xor    %ebx,%ebx
+    24e8:	89 fa                	mov    %edi,%edx
+    24ea:	89 c7                	mov    %eax,%edi
+    24ec:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    24f0:	8b 42 04             	mov    0x4(%edx),%eax
+    24f3:	89 55 e4             	mov    %edx,-0x1c(%ebp)
+    24f6:	8d 34 d8             	lea    (%eax,%ebx,8),%esi
+    24f9:	50                   	push   %eax
+    24fa:	43                   	inc    %ebx
+    24fb:	8b 46 04             	mov    0x4(%esi),%eax
+    24fe:	50                   	push   %eax
+    24ff:	8b 06                	mov    (%esi),%eax
+    2501:	50                   	push   %eax
+    2502:	57                   	push   %edi
+    2503:	e8 68 0e 00 00       	call   3370 <memcpy@plt>
+    2508:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+    250b:	8b 46 04             	mov    0x4(%esi),%eax
+    250e:	83 c4 10             	add    $0x10,%esp
+    2511:	01 c7                	add    %eax,%edi
+    2513:	39 5a 08             	cmp    %ebx,0x8(%edx)
+    2516:	77 d8                	ja     24f0 <req_get_descriptor+0xf0>
+    2518:	8b 02                	mov    (%edx),%eax
+    251a:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    251d:	31 d2                	xor    %edx,%edx
+    251f:	31 db                	xor    %ebx,%ebx
+    2521:	66 8b 51 06          	mov    0x6(%ecx),%dx
+    2525:	66 8b 58 02          	mov    0x2(%eax),%bx
+    2529:	39 d3                	cmp    %edx,%ebx
+    252b:	76 02                	jbe    252f <req_get_descriptor+0x12f>
+    252d:	89 d3                	mov    %edx,%ebx
+    252f:	8b 4d e0             	mov    -0x20(%ebp),%ecx
+    2532:	8b 75 10             	mov    0x10(%ebp),%esi
+    2535:	52                   	push   %edx
+    2536:	53                   	push   %ebx
+    2537:	51                   	push   %ecx
+    2538:	56                   	push   %esi
+    2539:	e8 32 0e 00 00       	call   3370 <memcpy@plt>
+    253e:	8b 7d 14             	mov    0x14(%ebp),%edi
+    2541:	83 c4 10             	add    $0x10,%esp
+    2544:	85 ff                	test   %edi,%edi
+    2546:	74 05                	je     254d <req_get_descriptor+0x14d>
+    2548:	8b 45 14             	mov    0x14(%ebp),%eax
+    254b:	89 18                	mov    %ebx,(%eax)
+    254d:	83 ec 0c             	sub    $0xc,%esp
+    2550:	8b 45 e0             	mov    -0x20(%ebp),%eax
+    2553:	50                   	push   %eax
+    2554:	e8 f7 0f 00 00       	call   3550 <free@plt>
+    2559:	83 c4 10             	add    $0x10,%esp
+    255c:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    255f:	31 c0                	xor    %eax,%eax
+    2561:	5b                   	pop    %ebx
+    2562:	5e                   	pop    %esi
+    2563:	5f                   	pop    %edi
+    2564:	5d                   	pop    %ebp
+    2565:	c3                   	ret    
+    2566:	66 90                	xchg   %ax,%ax
+    2568:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    256b:	b8 fb ff ff ff       	mov    $0xfffffffb,%eax
+    2570:	5b                   	pop    %ebx
+    2571:	5e                   	pop    %esi
+    2572:	5f                   	pop    %edi
+    2573:	5d                   	pop    %ebp
+    2574:	c3                   	ret    
+    2575:	8d 76 00             	lea    0x0(%esi),%esi
+    2578:	31 c0                	xor    %eax,%eax
+    257a:	e9 e8 fe ff ff       	jmp    2467 <req_get_descriptor+0x67>
+    257f:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+    2584:	e9 de fe ff ff       	jmp    2467 <req_get_descriptor+0x67>
+    2589:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+00002590 <usbvirt_control_reply_helper>:
+    2590:	55                   	push   %ebp
+    2591:	89 e5                	mov    %esp,%ebp
+    2593:	56                   	push   %esi
+    2594:	53                   	push   %ebx
+    2595:	31 db                	xor    %ebx,%ebx
+    2597:	8b 45 08             	mov    0x8(%ebp),%eax
+    259a:	8b 75 10             	mov    0x10(%ebp),%esi
+    259d:	66 8b 58 06          	mov    0x6(%eax),%bx
+    25a1:	3b 5d 18             	cmp    0x18(%ebp),%ebx
+    25a4:	76 03                	jbe    25a9 <usbvirt_control_reply_helper+0x19>
+    25a6:	8b 5d 18             	mov    0x18(%ebp),%ebx
+    25a9:	8b 55 14             	mov    0x14(%ebp),%edx
+    25ac:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    25af:	50                   	push   %eax
+    25b0:	53                   	push   %ebx
+    25b1:	52                   	push   %edx
+    25b2:	51                   	push   %ecx
+    25b3:	e8 b8 0d 00 00       	call   3370 <memcpy@plt>
+    25b8:	83 c4 10             	add    $0x10,%esp
+    25bb:	85 f6                	test   %esi,%esi
+    25bd:	74 02                	je     25c1 <usbvirt_control_reply_helper+0x31>
+    25bf:	89 1e                	mov    %ebx,(%esi)
+    25c1:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    25c4:	5b                   	pop    %ebx
+    25c5:	5e                   	pop    %esi
+    25c6:	5d                   	pop    %ebp
+    25c7:	c3                   	ret    
+    25c8:	90                   	nop
+    25c9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+000025d0 <req_nop>:
+    25d0:	55                   	push   %ebp
+    25d1:	31 c0                	xor    %eax,%eax
+    25d3:	89 e5                	mov    %esp,%ebp
+    25d5:	5d                   	pop    %ebp
+    25d6:	c3                   	ret    
+    25d7:	66 90                	xchg   %ax,%ax
+    25d9:	66 90                	xchg   %ax,%ax
+    25db:	66 90                	xchg   %ax,%ax
+    25dd:	66 90                	xchg   %ax,%ax
+    25df:	90                   	nop
+
+000025e0 <usbvirt_control_write>:
+    25e0:	55                   	push   %ebp
+    25e1:	89 e5                	mov    %esp,%ebp
+    25e3:	56                   	push   %esi
+    25e4:	53                   	push   %ebx
+    25e5:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    25e8:	8b 75 0c             	mov    0xc(%ebp),%esi
+    25eb:	85 db                	test   %ebx,%ebx
+    25ed:	0f 84 ca 00 00 00    	je     26bd <usbvirt_control_write+0xdd>
+    25f3:	8b 43 0c             	mov    0xc(%ebx),%eax
+    25f6:	85 c0                	test   %eax,%eax
+    25f8:	0f 84 ad 00 00 00    	je     26ab <usbvirt_control_write+0xcb>
+    25fe:	83 7d 10 08          	cmpl   $0x8,0x10(%ebp)
+    2602:	75 34                	jne    2638 <usbvirt_control_write+0x58>
+    2604:	31 d2                	xor    %edx,%edx
+    2606:	66 8b 56 06          	mov    0x6(%esi),%dx
+    260a:	39 55 18             	cmp    %edx,0x18(%ebp)
+    260d:	75 29                	jne    2638 <usbvirt_control_write+0x58>
+    260f:	83 ec 0c             	sub    $0xc,%esp
+    2612:	8b 55 14             	mov    0x14(%ebp),%edx
+    2615:	6a 00                	push   $0x0
+    2617:	52                   	push   %edx
+    2618:	56                   	push   %esi
+    2619:	8b 88 80 00 00 00    	mov    0x80(%eax),%ecx
+    261f:	51                   	push   %ecx
+    2620:	53                   	push   %ebx
+    2621:	e8 6a 02 00 00       	call   2890 <process_control_transfer>
+    2626:	83 c4 20             	add    $0x20,%esp
+    2629:	83 f8 fb             	cmp    $0xfffffffb,%eax
+    262c:	74 1a                	je     2648 <usbvirt_control_write+0x68>
+    262e:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2631:	5b                   	pop    %ebx
+    2632:	5e                   	pop    %esi
+    2633:	5d                   	pop    %ebp
+    2634:	c3                   	ret    
+    2635:	8d 76 00             	lea    0x0(%esi),%esi
+    2638:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    263b:	b8 d3 fe ff ff       	mov    $0xfffffed3,%eax
+    2640:	5b                   	pop    %ebx
+    2641:	5e                   	pop    %esi
+    2642:	5d                   	pop    %ebp
+    2643:	c3                   	ret    
+    2644:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2648:	83 ec 0c             	sub    $0xc,%esp
+    264b:	8b 45 14             	mov    0x14(%ebp),%eax
+    264e:	6a 00                	push   $0x0
+    2650:	50                   	push   %eax
+    2651:	56                   	push   %esi
+    2652:	68 60 51 00 00       	push   $0x5160
+    2657:	53                   	push   %ebx
+    2658:	e8 33 02 00 00       	call   2890 <process_control_transfer>
+    265d:	83 c4 20             	add    $0x20,%esp
+    2660:	83 f8 fb             	cmp    $0xfffffffb,%eax
+    2663:	75 c9                	jne    262e <usbvirt_control_write+0x4e>
+    2665:	bb a2 30 00 00       	mov    $0x30a2,%ebx
+    266a:	80 3e 00             	cmpb   $0x0,(%esi)
+    266d:	78 15                	js     2684 <usbvirt_control_write+0xa4>
+    266f:	8b 5d 14             	mov    0x14(%ebp),%ebx
+    2672:	8b 4d 18             	mov    0x18(%ebp),%ecx
+    2675:	52                   	push   %edx
+    2676:	6a 0a                	push   $0xa
+    2678:	51                   	push   %ecx
+    2679:	53                   	push   %ebx
+    267a:	e8 d1 02 00 00       	call   2950 <usb_debug_str_buffer>
+    267f:	83 c4 10             	add    $0x10,%esp
+    2682:	89 c3                	mov    %eax,%ebx
+    2684:	50                   	push   %eax
+    2685:	6a 0a                	push   $0xa
+    2687:	6a 08                	push   $0x8
+    2689:	56                   	push   %esi
+    268a:	e8 c1 02 00 00       	call   2950 <usb_debug_str_buffer>
+    268f:	89 1c 24             	mov    %ebx,(%esp)
+    2692:	50                   	push   %eax
+    2693:	68 c4 30 00 00       	push   $0x30c4
+    2698:	6a 02                	push   $0x2
+    269a:	6a ff                	push   $0xffffffff
+    269c:	e8 1f 0d 00 00       	call   33c0 <log_msg@plt>
+    26a1:	83 c4 20             	add    $0x20,%esp
+    26a4:	b8 d4 fe ff ff       	mov    $0xfffffed4,%eax
+    26a9:	eb 83                	jmp    262e <usbvirt_control_write+0x4e>
+    26ab:	53                   	push   %ebx
+    26ac:	6a 39                	push   $0x39
+    26ae:	68 a5 30 00 00       	push   $0x30a5
+    26b3:	68 b8 30 00 00       	push   $0x30b8
+    26b8:	e8 23 0d 00 00       	call   33e0 <assert_abort@plt>
+    26bd:	56                   	push   %esi
+    26be:	6a 38                	push   $0x38
+    26c0:	68 a5 30 00 00       	push   $0x30a5
+    26c5:	68 b4 30 00 00       	push   $0x30b4
+    26ca:	e8 11 0d 00 00       	call   33e0 <assert_abort@plt>
+    26cf:	90                   	nop
+
+000026d0 <usbvirt_control_read>:
+    26d0:	55                   	push   %ebp
+    26d1:	89 e5                	mov    %esp,%ebp
+    26d3:	56                   	push   %esi
+    26d4:	53                   	push   %ebx
+    26d5:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    26d8:	8b 75 0c             	mov    0xc(%ebp),%esi
+    26db:	85 db                	test   %ebx,%ebx
+    26dd:	0f 84 cc 00 00 00    	je     27af <usbvirt_control_read+0xdf>
+    26e3:	8b 43 0c             	mov    0xc(%ebx),%eax
+    26e6:	85 c0                	test   %eax,%eax
+    26e8:	0f 84 af 00 00 00    	je     279d <usbvirt_control_read+0xcd>
+    26ee:	83 7d 10 08          	cmpl   $0x8,0x10(%ebp)
+    26f2:	75 34                	jne    2728 <usbvirt_control_read+0x58>
+    26f4:	31 d2                	xor    %edx,%edx
+    26f6:	66 8b 56 06          	mov    0x6(%esi),%dx
+    26fa:	39 55 18             	cmp    %edx,0x18(%ebp)
+    26fd:	75 29                	jne    2728 <usbvirt_control_read+0x58>
+    26ff:	83 ec 0c             	sub    $0xc,%esp
+    2702:	8b 55 1c             	mov    0x1c(%ebp),%edx
+    2705:	8b 4d 14             	mov    0x14(%ebp),%ecx
+    2708:	52                   	push   %edx
+    2709:	51                   	push   %ecx
+    270a:	56                   	push   %esi
+    270b:	8b 80 80 00 00 00    	mov    0x80(%eax),%eax
+    2711:	50                   	push   %eax
+    2712:	53                   	push   %ebx
+    2713:	e8 78 01 00 00       	call   2890 <process_control_transfer>
+    2718:	83 c4 20             	add    $0x20,%esp
+    271b:	83 f8 fb             	cmp    $0xfffffffb,%eax
+    271e:	74 18                	je     2738 <usbvirt_control_read+0x68>
+    2720:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2723:	5b                   	pop    %ebx
+    2724:	5e                   	pop    %esi
+    2725:	5d                   	pop    %ebp
+    2726:	c3                   	ret    
+    2727:	90                   	nop
+    2728:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    272b:	b8 d3 fe ff ff       	mov    $0xfffffed3,%eax
+    2730:	5b                   	pop    %ebx
+    2731:	5e                   	pop    %esi
+    2732:	5d                   	pop    %ebp
+    2733:	c3                   	ret    
+    2734:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2738:	83 ec 0c             	sub    $0xc,%esp
+    273b:	8b 45 1c             	mov    0x1c(%ebp),%eax
+    273e:	50                   	push   %eax
+    273f:	8b 45 14             	mov    0x14(%ebp),%eax
+    2742:	50                   	push   %eax
+    2743:	56                   	push   %esi
+    2744:	68 60 51 00 00       	push   $0x5160
+    2749:	53                   	push   %ebx
+    274a:	e8 41 01 00 00       	call   2890 <process_control_transfer>
+    274f:	83 c4 20             	add    $0x20,%esp
+    2752:	83 f8 fb             	cmp    $0xfffffffb,%eax
+    2755:	75 c9                	jne    2720 <usbvirt_control_read+0x50>
+    2757:	bb a2 30 00 00       	mov    $0x30a2,%ebx
+    275c:	80 3e 00             	cmpb   $0x0,(%esi)
+    275f:	78 15                	js     2776 <usbvirt_control_read+0xa6>
+    2761:	8b 5d 14             	mov    0x14(%ebp),%ebx
+    2764:	8b 4d 18             	mov    0x18(%ebp),%ecx
+    2767:	52                   	push   %edx
+    2768:	6a 0a                	push   $0xa
+    276a:	51                   	push   %ecx
+    276b:	53                   	push   %ebx
+    276c:	e8 df 01 00 00       	call   2950 <usb_debug_str_buffer>
+    2771:	83 c4 10             	add    $0x10,%esp
+    2774:	89 c3                	mov    %eax,%ebx
+    2776:	50                   	push   %eax
+    2777:	6a 0a                	push   $0xa
+    2779:	6a 08                	push   $0x8
+    277b:	56                   	push   %esi
+    277c:	e8 cf 01 00 00       	call   2950 <usb_debug_str_buffer>
+    2781:	89 1c 24             	mov    %ebx,(%esp)
+    2784:	50                   	push   %eax
+    2785:	68 c4 30 00 00       	push   $0x30c4
+    278a:	6a 02                	push   $0x2
+    278c:	6a ff                	push   $0xffffffff
+    278e:	e8 2d 0c 00 00       	call   33c0 <log_msg@plt>
+    2793:	83 c4 20             	add    $0x20,%esp
+    2796:	b8 d4 fe ff ff       	mov    $0xfffffed4,%eax
+    279b:	eb 83                	jmp    2720 <usbvirt_control_read+0x50>
+    279d:	50                   	push   %eax
+    279e:	6a 39                	push   $0x39
+    27a0:	68 a5 30 00 00       	push   $0x30a5
+    27a5:	68 b8 30 00 00       	push   $0x30b8
+    27aa:	e8 31 0c 00 00       	call   33e0 <assert_abort@plt>
+    27af:	50                   	push   %eax
+    27b0:	6a 38                	push   $0x38
+    27b2:	68 a5 30 00 00       	push   $0x30a5
+    27b7:	68 b4 30 00 00       	push   $0x30b4
+    27bc:	e8 1f 0c 00 00       	call   33e0 <assert_abort@plt>
+    27c1:	eb 0d                	jmp    27d0 <usbvirt_data_out>
+    27c3:	90                   	nop
+    27c4:	90                   	nop
+    27c5:	90                   	nop
+    27c6:	90                   	nop
+    27c7:	90                   	nop
+    27c8:	90                   	nop
+    27c9:	90                   	nop
+    27ca:	90                   	nop
+    27cb:	90                   	nop
+    27cc:	90                   	nop
+    27cd:	90                   	nop
+    27ce:	90                   	nop
+    27cf:	90                   	nop
+
+000027d0 <usbvirt_data_out>:
+    27d0:	55                   	push   %ebp
+    27d1:	89 e5                	mov    %esp,%ebp
+    27d3:	57                   	push   %edi
+    27d4:	56                   	push   %esi
+    27d5:	53                   	push   %ebx
+    27d6:	8b 45 10             	mov    0x10(%ebp),%eax
+    27d9:	8b 55 08             	mov    0x8(%ebp),%edx
+    27dc:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+    27df:	8d 48 ff             	lea    -0x1(%eax),%ecx
+    27e2:	66 83 f9 0e          	cmp    $0xe,%cx
+    27e6:	77 20                	ja     2808 <usbvirt_data_out+0x38>
+    27e8:	8b 4a 0c             	mov    0xc(%edx),%ecx
+    27eb:	85 c9                	test   %ecx,%ecx
+    27ed:	74 29                	je     2818 <usbvirt_data_out+0x48>
+    27ef:	98                   	cwtl   
+    27f0:	8b 0c 81             	mov    (%ecx,%eax,4),%ecx
+    27f3:	85 c9                	test   %ecx,%ecx
+    27f5:	74 21                	je     2818 <usbvirt_data_out+0x48>
+    27f7:	89 5d 10             	mov    %ebx,0x10(%ebp)
+    27fa:	89 45 0c             	mov    %eax,0xc(%ebp)
+    27fd:	5b                   	pop    %ebx
+    27fe:	5e                   	pop    %esi
+    27ff:	5f                   	pop    %edi
+    2800:	5d                   	pop    %ebp
+    2801:	ff e1                	jmp    *%ecx
+    2803:	90                   	nop
+    2804:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    2808:	b8 f8 fe ff ff       	mov    $0xfffffef8,%eax
+    280d:	5b                   	pop    %ebx
+    280e:	5e                   	pop    %esi
+    280f:	5f                   	pop    %edi
+    2810:	5d                   	pop    %ebp
+    2811:	c3                   	ret    
+    2812:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+    2818:	b8 f5 ff ff ff       	mov    $0xfffffff5,%eax
+    281d:	eb ee                	jmp    280d <usbvirt_data_out+0x3d>
+    281f:	90                   	nop
+
+00002820 <usbvirt_data_in>:
+    2820:	55                   	push   %ebp
+    2821:	89 e5                	mov    %esp,%ebp
+    2823:	56                   	push   %esi
+    2824:	53                   	push   %ebx
+    2825:	83 ec 10             	sub    $0x10,%esp
+    2828:	8b 45 10             	mov    0x10(%ebp),%eax
+    282b:	8b 55 08             	mov    0x8(%ebp),%edx
+    282e:	8b 5d 1c             	mov    0x1c(%ebp),%ebx
+    2831:	8d 48 ff             	lea    -0x1(%eax),%ecx
+    2834:	66 83 f9 0e          	cmp    $0xe,%cx
+    2838:	77 3e                	ja     2878 <usbvirt_data_in+0x58>
+    283a:	8b 4a 0c             	mov    0xc(%edx),%ecx
+    283d:	85 c9                	test   %ecx,%ecx
+    283f:	74 3f                	je     2880 <usbvirt_data_in+0x60>
+    2841:	98                   	cwtl   
+    2842:	8b 4c 81 40          	mov    0x40(%ecx,%eax,4),%ecx
+    2846:	85 c9                	test   %ecx,%ecx
+    2848:	74 36                	je     2880 <usbvirt_data_in+0x60>
+    284a:	56                   	push   %esi
+    284b:	56                   	push   %esi
+    284c:	8d 75 f4             	lea    -0xc(%ebp),%esi
+    284f:	56                   	push   %esi
+    2850:	8b 75 18             	mov    0x18(%ebp),%esi
+    2853:	56                   	push   %esi
+    2854:	8b 75 14             	mov    0x14(%ebp),%esi
+    2857:	56                   	push   %esi
+    2858:	8b 75 0c             	mov    0xc(%ebp),%esi
+    285b:	56                   	push   %esi
+    285c:	50                   	push   %eax
+    285d:	52                   	push   %edx
+    285e:	ff d1                	call   *%ecx
+    2860:	83 c4 20             	add    $0x20,%esp
+    2863:	85 c0                	test   %eax,%eax
+    2865:	75 09                	jne    2870 <usbvirt_data_in+0x50>
+    2867:	85 db                	test   %ebx,%ebx
+    2869:	74 05                	je     2870 <usbvirt_data_in+0x50>
+    286b:	8b 55 f4             	mov    -0xc(%ebp),%edx
+    286e:	89 13                	mov    %edx,(%ebx)
+    2870:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    2873:	5b                   	pop    %ebx
+    2874:	5e                   	pop    %esi
+    2875:	5d                   	pop    %ebp
+    2876:	c3                   	ret    
+    2877:	90                   	nop
+    2878:	b8 f8 fe ff ff       	mov    $0xfffffef8,%eax
+    287d:	eb f1                	jmp    2870 <usbvirt_data_in+0x50>
+    287f:	90                   	nop
+    2880:	b8 f5 ff ff ff       	mov    $0xfffffff5,%eax
+    2885:	eb e9                	jmp    2870 <usbvirt_data_in+0x50>
+    2887:	66 90                	xchg   %ax,%ax
+    2889:	66 90                	xchg   %ax,%ax
+    288b:	66 90                	xchg   %ax,%ax
+    288d:	66 90                	xchg   %ax,%ax
+    288f:	90                   	nop
+
+00002890 <process_control_transfer>:
+    2890:	55                   	push   %ebp
+    2891:	89 e5                	mov    %esp,%ebp
+    2893:	57                   	push   %edi
+    2894:	56                   	push   %esi
+    2895:	53                   	push   %ebx
+    2896:	83 ec 0c             	sub    $0xc,%esp
+    2899:	8b 7d 08             	mov    0x8(%ebp),%edi
+    289c:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+    289f:	8b 75 10             	mov    0x10(%ebp),%esi
+    28a2:	85 ff                	test   %edi,%edi
+    28a4:	74 7f                	je     2925 <process_control_transfer+0x95>
+    28a6:	85 f6                	test   %esi,%esi
+    28a8:	0f 84 89 00 00 00    	je     2937 <process_control_transfer+0xa7>
+    28ae:	85 db                	test   %ebx,%ebx
+    28b0:	74 66                	je     2918 <process_control_transfer+0x88>
+    28b2:	8b 43 08             	mov    0x8(%ebx),%eax
+    28b5:	85 c0                	test   %eax,%eax
+    28b7:	75 11                	jne    28ca <process_control_transfer+0x3a>
+    28b9:	eb 5d                	jmp    2918 <process_control_transfer+0x88>
+    28bb:	90                   	nop
+    28bc:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+    28c0:	83 c3 0c             	add    $0xc,%ebx
+    28c3:	8b 43 08             	mov    0x8(%ebx),%eax
+    28c6:	85 c0                	test   %eax,%eax
+    28c8:	74 4e                	je     2918 <process_control_transfer+0x88>
+    28ca:	8a 46 01             	mov    0x1(%esi),%al
+    28cd:	38 43 01             	cmp    %al,0x1(%ebx)
+    28d0:	75 ee                	jne    28c0 <process_control_transfer+0x30>
+    28d2:	8a 06                	mov    (%esi),%al
+    28d4:	38 03                	cmp    %al,(%ebx)
+    28d6:	75 e8                	jne    28c0 <process_control_transfer+0x30>
+    28d8:	50                   	push   %eax
+    28d9:	6a 00                	push   $0x0
+    28db:	6a 08                	push   $0x8
+    28dd:	56                   	push   %esi
+    28de:	e8 6d 00 00 00       	call   2950 <usb_debug_str_buffer>
+    28e3:	89 04 24             	mov    %eax,(%esp)
+    28e6:	8b 53 04             	mov    0x4(%ebx),%edx
+    28e9:	52                   	push   %edx
+    28ea:	68 09 31 00 00       	push   $0x3109
+    28ef:	6a 04                	push   $0x4
+    28f1:	6a ff                	push   $0xffffffff
+    28f3:	e8 c8 0a 00 00       	call   33c0 <log_msg@plt>
+    28f8:	83 c4 20             	add    $0x20,%esp
+    28fb:	8b 4d 18             	mov    0x18(%ebp),%ecx
+    28fe:	8b 45 14             	mov    0x14(%ebp),%eax
+    2901:	51                   	push   %ecx
+    2902:	50                   	push   %eax
+    2903:	56                   	push   %esi
+    2904:	57                   	push   %edi
+    2905:	ff 53 08             	call   *0x8(%ebx)
+    2908:	83 c4 10             	add    $0x10,%esp
+    290b:	83 f8 fb             	cmp    $0xfffffffb,%eax
+    290e:	74 b0                	je     28c0 <process_control_transfer+0x30>
+    2910:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2913:	5b                   	pop    %ebx
+    2914:	5e                   	pop    %esi
+    2915:	5f                   	pop    %edi
+    2916:	5d                   	pop    %ebp
+    2917:	c3                   	ret    
+    2918:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    291b:	b8 fb ff ff ff       	mov    $0xfffffffb,%eax
+    2920:	5b                   	pop    %ebx
+    2921:	5e                   	pop    %esi
+    2922:	5f                   	pop    %edi
+    2923:	5d                   	pop    %ebp
+    2924:	c3                   	ret    
+    2925:	50                   	push   %eax
+    2926:	6a 38                	push   $0x38
+    2928:	68 f0 30 00 00       	push   $0x30f0
+    292d:	68 b4 30 00 00       	push   $0x30b4
+    2932:	e8 a9 0a 00 00       	call   33e0 <assert_abort@plt>
+    2937:	50                   	push   %eax
+    2938:	6a 39                	push   $0x39
+    293a:	68 f0 30 00 00       	push   $0x30f0
+    293f:	68 03 31 00 00       	push   $0x3103
+    2944:	e8 97 0a 00 00       	call   33e0 <assert_abort@plt>
+    2949:	66 90                	xchg   %ax,%ax
+    294b:	66 90                	xchg   %ax,%ax
+    294d:	66 90                	xchg   %ax,%ax
+    294f:	90                   	nop
+
+00002950 <usb_debug_str_buffer>:
+    2950:	55                   	push   %ebp
+    2951:	89 e5                	mov    %esp,%ebp
+    2953:	56                   	push   %esi
+    2954:	65 8b 35 00 00 00 00 	mov    %gs:0x0,%esi
+    295b:	53                   	push   %ebx
+    295c:	50                   	push   %eax
+    295d:	68 f0 00 00 00       	push   $0xf0
+    2962:	6a 00                	push   $0x0
+    2964:	8d 9e 20 fe ff ff    	lea    -0x1e0(%esi),%ebx
+    296a:	8b 96 1c fe ff ff    	mov    -0x1e4(%esi),%edx
+    2970:	89 d0                	mov    %edx,%eax
+    2972:	c1 e0 04             	shl    $0x4,%eax
+    2975:	29 d0                	sub    %edx,%eax
+    2977:	c1 e0 04             	shl    $0x4,%eax
+    297a:	01 d8                	add    %ebx,%eax
+    297c:	50                   	push   %eax
+    297d:	e8 ee 0a 00 00       	call   3470 <memset@plt>
+    2982:	8b 45 10             	mov    0x10(%ebp),%eax
+    2985:	5a                   	pop    %edx
+    2986:	59                   	pop    %ecx
+    2987:	50                   	push   %eax
+    2988:	8b 45 0c             	mov    0xc(%ebp),%eax
+    298b:	50                   	push   %eax
+    298c:	8b 45 08             	mov    0x8(%ebp),%eax
+    298f:	6a 01                	push   $0x1
+    2991:	50                   	push   %eax
+    2992:	68 f0 00 00 00       	push   $0xf0
+    2997:	8b 96 1c fe ff ff    	mov    -0x1e4(%esi),%edx
+    299d:	89 d0                	mov    %edx,%eax
+    299f:	c1 e0 04             	shl    $0x4,%eax
+    29a2:	29 d0                	sub    %edx,%eax
+    29a4:	c1 e0 04             	shl    $0x4,%eax
+    29a7:	01 d8                	add    %ebx,%eax
+    29a9:	50                   	push   %eax
+    29aa:	e8 31 00 00 00       	call   29e0 <ddf_dump_buffer>
+    29af:	8b 96 1c fe ff ff    	mov    -0x1e4(%esi),%edx
+    29b5:	b8 01 00 00 00       	mov    $0x1,%eax
+    29ba:	29 d0                	sub    %edx,%eax
+    29bc:	89 86 1c fe ff ff    	mov    %eax,-0x1e4(%esi)
+    29c2:	89 d0                	mov    %edx,%eax
+    29c4:	c1 e0 04             	shl    $0x4,%eax
+    29c7:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    29ca:	29 d0                	sub    %edx,%eax
+    29cc:	c1 e0 04             	shl    $0x4,%eax
+    29cf:	01 d8                	add    %ebx,%eax
+    29d1:	5b                   	pop    %ebx
+    29d2:	5e                   	pop    %esi
+    29d3:	5d                   	pop    %ebp
+    29d4:	c3                   	ret    
+    29d5:	66 90                	xchg   %ax,%ax
+    29d7:	66 90                	xchg   %ax,%ax
+    29d9:	66 90                	xchg   %ax,%ax
+    29db:	66 90                	xchg   %ax,%ax
+    29dd:	66 90                	xchg   %ax,%ax
+    29df:	90                   	nop
+
+000029e0 <ddf_dump_buffer>:
+    29e0:	55                   	push   %ebp
+    29e1:	89 e5                	mov    %esp,%ebp
+    29e3:	57                   	push   %edi
+    29e4:	56                   	push   %esi
+    29e5:	53                   	push   %ebx
+    29e6:	83 ec 3c             	sub    $0x3c,%esp
+    29e9:	8b 45 0c             	mov    0xc(%ebp),%eax
+    29ec:	85 c0                	test   %eax,%eax
+    29ee:	8b 45 08             	mov    0x8(%ebp),%eax
+    29f1:	0f 94 c2             	sete   %dl
+    29f4:	85 c0                	test   %eax,%eax
+    29f6:	0f 94 c0             	sete   %al
+    29f9:	08 c2                	or     %al,%dl
+    29fb:	88 55 bb             	mov    %dl,-0x45(%ebp)
+    29fe:	0f 85 14 01 00 00    	jne    2b18 <ddf_dump_buffer+0x138>
+    2a04:	83 7d 0c 02          	cmpl   $0x2,0xc(%ebp)
+    2a08:	0f 86 7a 01 00 00    	jbe    2b88 <ddf_dump_buffer+0x1a8>
+    2a0e:	8b 75 10             	mov    0x10(%ebp),%esi
+    2a11:	85 f6                	test   %esi,%esi
+    2a13:	0f 84 e9 00 00 00    	je     2b02 <ddf_dump_buffer+0x122>
+    2a19:	8b 45 18             	mov    0x18(%ebp),%eax
+    2a1c:	85 c0                	test   %eax,%eax
+    2a1e:	0f 84 84 01 00 00    	je     2ba8 <ddf_dump_buffer+0x1c8>
+    2a24:	8b 45 18             	mov    0x18(%ebp),%eax
+    2a27:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    2a2a:	8b 45 1c             	mov    0x1c(%ebp),%eax
+    2a2d:	39 45 18             	cmp    %eax,0x18(%ebp)
+    2a30:	0f 87 4a 01 00 00    	ja     2b80 <ddf_dump_buffer+0x1a0>
+    2a36:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2a39:	48                   	dec    %eax
+    2a3a:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2a3d:	8b 45 bc             	mov    -0x44(%ebp),%eax
+    2a40:	85 c0                	test   %eax,%eax
+    2a42:	0f 84 f8 01 00 00    	je     2c40 <ddf_dump_buffer+0x260>
+    2a48:	50                   	push   %eax
+    2a49:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2a4c:	68 22 31 00 00       	push   $0x3122
+    2a51:	50                   	push   %eax
+    2a52:	8b 45 08             	mov    0x8(%ebp),%eax
+    2a55:	50                   	push   %eax
+    2a56:	e8 35 0a 00 00       	call   3490 <str_cpy@plt>
+    2a5b:	83 c4 10             	add    $0x10,%esp
+    2a5e:	8b 75 10             	mov    0x10(%ebp),%esi
+    2a61:	31 db                	xor    %ebx,%ebx
+    2a63:	b8 22 31 00 00       	mov    $0x3122,%eax
+    2a68:	8d 7d c8             	lea    -0x38(%ebp),%edi
+    2a6b:	eb 6e                	jmp    2adb <ddf_dump_buffer+0xfb>
+    2a6d:	8d 76 00             	lea    0x0(%esi),%esi
+    2a70:	83 ec 0c             	sub    $0xc,%esp
+    2a73:	8b 16                	mov    (%esi),%edx
+    2a75:	52                   	push   %edx
+    2a76:	50                   	push   %eax
+    2a77:	68 35 31 00 00       	push   $0x3135
+    2a7c:	6a 20                	push   $0x20
+    2a7e:	57                   	push   %edi
+    2a7f:	e8 bc 08 00 00       	call   3340 <snprintf@plt>
+    2a84:	83 c4 20             	add    $0x20,%esp
+    2a87:	85 c0                	test   %eax,%eax
+    2a89:	0f 88 02 02 00 00    	js     2c91 <ddf_dump_buffer+0x2b1>
+    2a8f:	3b 45 c4             	cmp    -0x3c(%ebp),%eax
+    2a92:	89 45 c0             	mov    %eax,-0x40(%ebp)
+    2a95:	0f 87 a5 00 00 00    	ja     2b40 <ddf_dump_buffer+0x160>
+    2a9b:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2a9e:	51                   	push   %ecx
+    2a9f:	57                   	push   %edi
+    2aa0:	50                   	push   %eax
+    2aa1:	8b 45 08             	mov    0x8(%ebp),%eax
+    2aa4:	43                   	inc    %ebx
+    2aa5:	50                   	push   %eax
+    2aa6:	e8 e5 08 00 00       	call   3390 <str_append@plt>
+    2aab:	8b 55 c4             	mov    -0x3c(%ebp),%edx
+    2aae:	8b 45 c0             	mov    -0x40(%ebp),%eax
+    2ab1:	29 c2                	sub    %eax,%edx
+    2ab3:	83 c4 10             	add    $0x10,%esp
+    2ab6:	89 55 c4             	mov    %edx,-0x3c(%ebp)
+    2ab9:	3b 5d bc             	cmp    -0x44(%ebp),%ebx
+    2abc:	0f 83 7e 00 00 00    	jae    2b40 <ddf_dump_buffer+0x160>
+    2ac2:	39 5d 18             	cmp    %ebx,0x18(%ebp)
+    2ac5:	76 51                	jbe    2b18 <ddf_dump_buffer+0x138>
+    2ac7:	b8 23 31 00 00       	mov    $0x3123,%eax
+    2acc:	f6 c3 03             	test   $0x3,%bl
+    2acf:	74 05                	je     2ad6 <ddf_dump_buffer+0xf6>
+    2ad1:	b8 24 31 00 00       	mov    $0x3124,%eax
+    2ad6:	8b 4d 14             	mov    0x14(%ebp),%ecx
+    2ad9:	01 ce                	add    %ecx,%esi
+    2adb:	83 7d 14 02          	cmpl   $0x2,0x14(%ebp)
+    2adf:	74 3f                	je     2b20 <ddf_dump_buffer+0x140>
+    2ae1:	83 7d 14 04          	cmpl   $0x4,0x14(%ebp)
+    2ae5:	74 89                	je     2a70 <ddf_dump_buffer+0x90>
+    2ae7:	83 ec 0c             	sub    $0xc,%esp
+    2aea:	31 d2                	xor    %edx,%edx
+    2aec:	8a 16                	mov    (%esi),%dl
+    2aee:	52                   	push   %edx
+    2aef:	50                   	push   %eax
+    2af0:	68 44 31 00 00       	push   $0x3144
+    2af5:	6a 20                	push   $0x20
+    2af7:	57                   	push   %edi
+    2af8:	e8 43 08 00 00       	call   3340 <snprintf@plt>
+    2afd:	83 c4 20             	add    $0x20,%esp
+    2b00:	eb 85                	jmp    2a87 <ddf_dump_buffer+0xa7>
+    2b02:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+    2b05:	8b 5d 08             	mov    0x8(%ebp),%ebx
+    2b08:	52                   	push   %edx
+    2b09:	68 26 31 00 00       	push   $0x3126
+    2b0e:	51                   	push   %ecx
+    2b0f:	53                   	push   %ebx
+    2b10:	e8 7b 09 00 00       	call   3490 <str_cpy@plt>
+    2b15:	83 c4 10             	add    $0x10,%esp
+    2b18:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2b1b:	5b                   	pop    %ebx
+    2b1c:	5e                   	pop    %esi
+    2b1d:	5f                   	pop    %edi
+    2b1e:	5d                   	pop    %ebp
+    2b1f:	c3                   	ret    
+    2b20:	83 ec 0c             	sub    $0xc,%esp
+    2b23:	31 d2                	xor    %edx,%edx
+    2b25:	66 8b 16             	mov    (%esi),%dx
+    2b28:	52                   	push   %edx
+    2b29:	50                   	push   %eax
+    2b2a:	68 3c 31 00 00       	push   $0x313c
+    2b2f:	6a 20                	push   $0x20
+    2b31:	57                   	push   %edi
+    2b32:	e8 09 08 00 00       	call   3340 <snprintf@plt>
+    2b37:	83 c4 20             	add    $0x20,%esp
+    2b3a:	e9 48 ff ff ff       	jmp    2a87 <ddf_dump_buffer+0xa7>
+    2b3f:	90                   	nop
+    2b40:	3b 5d 18             	cmp    0x18(%ebp),%ebx
+    2b43:	73 d3                	jae    2b18 <ddf_dump_buffer+0x138>
+    2b45:	80 7d bb 00          	cmpb   $0x0,-0x45(%ebp)
+    2b49:	74 cd                	je     2b18 <ddf_dump_buffer+0x138>
+    2b4b:	83 ec 0c             	sub    $0xc,%esp
+    2b4e:	8b 45 08             	mov    0x8(%ebp),%eax
+    2b51:	50                   	push   %eax
+    2b52:	e8 69 09 00 00       	call   34c0 <str_size@plt>
+    2b57:	8b 55 18             	mov    0x18(%ebp),%edx
+    2b5a:	29 da                	sub    %ebx,%edx
+    2b5c:	52                   	push   %edx
+    2b5d:	8b 55 0c             	mov    0xc(%ebp),%edx
+    2b60:	29 c2                	sub    %eax,%edx
+    2b62:	68 6b 31 00 00       	push   $0x316b
+    2b67:	52                   	push   %edx
+    2b68:	8b 55 08             	mov    0x8(%ebp),%edx
+    2b6b:	01 d0                	add    %edx,%eax
+    2b6d:	50                   	push   %eax
+    2b6e:	e8 cd 07 00 00       	call   3340 <snprintf@plt>
+    2b73:	83 c4 20             	add    $0x20,%esp
+    2b76:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2b79:	5b                   	pop    %ebx
+    2b7a:	5e                   	pop    %esi
+    2b7b:	5f                   	pop    %edi
+    2b7c:	5d                   	pop    %ebp
+    2b7d:	c3                   	ret    
+    2b7e:	66 90                	xchg   %ax,%ax
+    2b80:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    2b83:	e9 ae fe ff ff       	jmp    2a36 <ddf_dump_buffer+0x56>
+    2b88:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2b8b:	57                   	push   %edi
+    2b8c:	68 71 31 00 00       	push   $0x3171
+    2b91:	50                   	push   %eax
+    2b92:	8b 45 08             	mov    0x8(%ebp),%eax
+    2b95:	50                   	push   %eax
+    2b96:	e8 f5 08 00 00       	call   3490 <str_cpy@plt>
+    2b9b:	83 c4 10             	add    $0x10,%esp
+    2b9e:	8d 65 f4             	lea    -0xc(%ebp),%esp
+    2ba1:	5b                   	pop    %ebx
+    2ba2:	5e                   	pop    %esi
+    2ba3:	5f                   	pop    %edi
+    2ba4:	5d                   	pop    %ebp
+    2ba5:	c3                   	ret    
+    2ba6:	66 90                	xchg   %ax,%ax
+    2ba8:	50                   	push   %eax
+    2ba9:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2bac:	68 2d 31 00 00       	push   $0x312d
+    2bb1:	50                   	push   %eax
+    2bb2:	8b 45 08             	mov    0x8(%ebp),%eax
+    2bb5:	50                   	push   %eax
+    2bb6:	e8 d5 08 00 00       	call   3490 <str_cpy@plt>
+    2bbb:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2bbe:	83 c4 10             	add    $0x10,%esp
+    2bc1:	48                   	dec    %eax
+    2bc2:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2bc5:	83 f8 0f             	cmp    $0xf,%eax
+    2bc8:	0f 86 a8 00 00 00    	jbe    2c76 <ddf_dump_buffer+0x296>
+    2bce:	8b 45 18             	mov    0x18(%ebp),%eax
+    2bd1:	8b 7d 18             	mov    0x18(%ebp),%edi
+    2bd4:	c1 e8 02             	shr    $0x2,%eax
+    2bd7:	83 ec 0c             	sub    $0xc,%esp
+    2bda:	29 c7                	sub    %eax,%edi
+    2bdc:	8d 58 ff             	lea    -0x1(%eax),%ebx
+    2bdf:	8b 45 14             	mov    0x14(%ebp),%eax
+    2be2:	68 23 31 00 00       	push   $0x3123
+    2be7:	8d 34 00             	lea    (%eax,%eax,1),%esi
+    2bea:	8b 45 18             	mov    0x18(%ebp),%eax
+    2bed:	0f af f0             	imul   %eax,%esi
+    2bf0:	e8 cb 08 00 00       	call   34c0 <str_size@plt>
+    2bf5:	c7 04 24 24 31 00 00 	movl   $0x3124,(%esp)
+    2bfc:	0f af d8             	imul   %eax,%ebx
+    2bff:	e8 bc 08 00 00       	call   34c0 <str_size@plt>
+    2c04:	83 c4 10             	add    $0x10,%esp
+    2c07:	0f af f8             	imul   %eax,%edi
+    2c0a:	01 fb                	add    %edi,%ebx
+    2c0c:	01 de                	add    %ebx,%esi
+    2c0e:	39 75 c4             	cmp    %esi,-0x3c(%ebp)
+    2c11:	72 54                	jb     2c67 <ddf_dump_buffer+0x287>
+    2c13:	8b 75 0c             	mov    0xc(%ebp),%esi
+    2c16:	8b 7d 08             	mov    0x8(%ebp),%edi
+    2c19:	53                   	push   %ebx
+    2c1a:	68 22 31 00 00       	push   $0x3122
+    2c1f:	56                   	push   %esi
+    2c20:	57                   	push   %edi
+    2c21:	e8 6a 08 00 00       	call   3490 <str_cpy@plt>
+    2c26:	8b 45 18             	mov    0x18(%ebp),%eax
+    2c29:	83 c4 10             	add    $0x10,%esp
+    2c2c:	85 c0                	test   %eax,%eax
+    2c2e:	0f 84 e4 fe ff ff    	je     2b18 <ddf_dump_buffer+0x138>
+    2c34:	8b 45 18             	mov    0x18(%ebp),%eax
+    2c37:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    2c3a:	e9 1f fe ff ff       	jmp    2a5e <ddf_dump_buffer+0x7e>
+    2c3f:	90                   	nop
+    2c40:	83 7d c4 0f          	cmpl   $0xf,-0x3c(%ebp)
+    2c44:	77 88                	ja     2bce <ddf_dump_buffer+0x1ee>
+    2c46:	8b 75 0c             	mov    0xc(%ebp),%esi
+    2c49:	8b 7d 08             	mov    0x8(%ebp),%edi
+    2c4c:	53                   	push   %ebx
+    2c4d:	68 22 31 00 00       	push   $0x3122
+    2c52:	56                   	push   %esi
+    2c53:	57                   	push   %edi
+    2c54:	e8 37 08 00 00       	call   3490 <str_cpy@plt>
+    2c59:	8b 45 18             	mov    0x18(%ebp),%eax
+    2c5c:	83 c4 10             	add    $0x10,%esp
+    2c5f:	89 45 bc             	mov    %eax,-0x44(%ebp)
+    2c62:	e9 f7 fd ff ff       	jmp    2a5e <ddf_dump_buffer+0x7e>
+    2c67:	8b 45 0c             	mov    0xc(%ebp),%eax
+    2c6a:	c6 45 bb 01          	movb   $0x1,-0x45(%ebp)
+    2c6e:	83 e8 11             	sub    $0x11,%eax
+    2c71:	89 45 c4             	mov    %eax,-0x3c(%ebp)
+    2c74:	eb 9d                	jmp    2c13 <ddf_dump_buffer+0x233>
+    2c76:	8b 55 0c             	mov    0xc(%ebp),%edx
+    2c79:	8b 4d 08             	mov    0x8(%ebp),%ecx
+    2c7c:	50                   	push   %eax
+    2c7d:	68 22 31 00 00       	push   $0x3122
+    2c82:	52                   	push   %edx
+    2c83:	51                   	push   %ecx
+    2c84:	e8 07 08 00 00       	call   3490 <str_cpy@plt>
+    2c89:	83 c4 10             	add    $0x10,%esp
+    2c8c:	e9 87 fe ff ff       	jmp    2b18 <ddf_dump_buffer+0x138>
+    2c91:	51                   	push   %ecx
+    2c92:	68 b3 00 00 00       	push   $0xb3
+    2c97:	68 4d 31 00 00       	push   $0x314d
+    2c9c:	68 5e 31 00 00       	push   $0x315e
+    2ca1:	e8 3a 07 00 00       	call   33e0 <assert_abort@plt>
+    2ca6:	55                   	push   %ebp
+    2ca7:	73 61                	jae    2d0a <ddf_dump_buffer+0x32a>
+    2ca9:	67 65 3a 20          	cmp    %gs:(%bx,%si),%ah
+    2cad:	25 73 20 5b 6f       	and    $0x6f5b2073,%eax
+    2cb2:	70 74                	jo     2d28 <ddf_dump_buffer+0x348>
+    2cb4:	69 6f 6e 73 5d 20 64 	imul   $0x64205d73,0x6e(%edi),%ebp
+    2cbb:	65 76 69             	gs jbe 2d27 <ddf_dump_buffer+0x347>
+    2cbe:	63 65 2e             	arpl   %sp,0x2e(%ebp)
+    2cc1:	0a 00                	or     (%eax),%al
+    2cc3:	09 2d 68 2c 20 2d    	or     %ebp,0x2d202c68
+    2cc9:	2d 68 65 6c 70       	sub    $0x706c6568,%eax
+    2cce:	20 5b 64             	and    %bl,0x64(%ebx)
+    2cd1:	65 76 69             	gs jbe 2d3d <ddf_dump_buffer+0x35d>
+    2cd4:	63 65 5d             	arpl   %sp,0x5d(%ebp)
+    2cd7:	0a 00                	or     (%eax),%al
+    2cd9:	2f                   	das    
+    2cda:	76 69                	jbe    2d45 <ddf_dump_buffer+0x365>
+    2cdc:	72 74                	jb     2d52 <ddf_dump_buffer+0x372>
+    2cde:	2f                   	das    
+    2cdf:	75 73                	jne    2d54 <ddf_dump_buffer+0x374>
+    2ce1:	62 68 63             	bound  %ebp,0x63(%eax)
+    2ce4:	2f                   	das    
+    2ce5:	76 69                	jbe    2d50 <ddf_dump_buffer+0x370>
+    2ce7:	72 74                	jb     2d5d <ddf_dump_buffer+0x37d>
+    2ce9:	75 61                	jne    2d4c <ddf_dump_buffer+0x36c>
+    2ceb:	6c                   	insb   (%dx),%es:(%edi)
+    2cec:	00 48 45             	add    %cl,0x45(%eax)
+    2cef:	4c                   	dec    %esp
+    2cf0:	50                   	push   %eax
+    2cf1:	20 66 6f             	and    %ah,0x6f(%esi)
+    2cf4:	72 20                	jb     2d16 <ddf_dump_buffer+0x336>
+    2cf6:	6d                   	insl   (%dx),%es:(%edi)
+    2cf7:	6f                   	outsl  %ds:(%esi),(%dx)
+    2cf8:	64 75 6c             	fs jne 2d67 <ddf_dump_buffer+0x387>
+    2cfb:	65 20 25 73 0a 00 41 	and    %ah,%gs:0x41000a73
+    2d02:	76 61                	jbe    2d65 <ddf_dump_buffer+0x385>
+    2d04:	69 6c 61 62 6c 65 20 	imul   $0x6420656c,0x62(%ecx,%eiz,2),%ebp
+    2d0b:	64 
+    2d0c:	65 76 69             	gs jbe 2d78 <ddf_dump_buffer+0x398>
+    2d0f:	63 65 73             	arpl   %sp,0x73(%ebp)
+    2d12:	3a 0a                	cmp    (%edx),%cl
+    2d14:	00 09                	add    %cl,(%ecx)
+    2d16:	60                   	pusha  
+    2d17:	25 73 27 09 25       	and    $0x25092773,%eax
+    2d1c:	73 0a                	jae    2d28 <ddf_dump_buffer+0x348>
+    2d1e:	00 68 63             	add    %ch,0x63(%eax)
+    2d21:	3a 6c 00 76          	cmp    0x76(%eax,%eax,1),%ch
+    2d25:	75 68                	jne    2d8f <ddf_dump_buffer+0x3af>
+    2d27:	69 64 00 41 64 64 65 	imul   $0x64656464,0x41(%eax,%eax,1),%esp
+    2d2e:	64 
+    2d2f:	20 64 65 76          	and    %ah,0x76(%ebp,%eiz,2)
+    2d33:	69 63 65 20 60 25 73 	imul   $0x73256020,0x65(%ebx),%esp
+    2d3a:	27                   	daa    
+    2d3b:	2e 0a 00             	or     %cs:(%eax),%al
+    2d3e:	46                   	inc    %esi
+    2d3f:	6f                   	outsl  %ds:(%esi),(%dx)
+    2d40:	75 6e                	jne    2db0 <ddf_dump_buffer+0x3d0>
+    2d42:	64 20 65 78          	and    %ah,%fs:0x78(%ebp)
+    2d46:	74 72                	je     2dba <ddf_dump_buffer+0x3da>
+    2d48:	61                   	popa   
+    2d49:	20 64 65 73          	and    %ah,0x73(%ebp,%eiz,2)
+    2d4d:	63 72 69             	arpl   %si,0x69(%edx)
+    2d50:	70 74                	jo     2dc6 <ddf_dump_buffer+0x3e6>
+    2d52:	6f                   	outsl  %ds:(%esi),(%dx)
+    2d53:	72 3a                	jb     2d8f <ddf_dump_buffer+0x3af>
+    2d55:	20 25 73 2e 0a 00    	and    %ah,0xa2e73
+    2d5b:	43                   	inc    %ebx
+    2d5c:	6f                   	outsl  %ds:(%esi),(%dx)
+    2d5d:	6e                   	outsb  %ds:(%esi),(%dx)
+    2d5e:	6e                   	outsb  %ds:(%esi),(%dx)
+    2d5f:	65 63 74 65 64       	arpl   %si,%gs:0x64(%ebp,%eiz,2)
+    2d64:	20 74 6f 20          	and    %dh,0x20(%edi,%ebp,2)
+    2d68:	56                   	push   %esi
+    2d69:	48                   	dec    %eax
+    2d6a:	43                   	inc    %ebx
+    2d6b:	44                   	inc    %esp
+    2d6c:	20 60 25             	and    %ah,0x25(%eax)
+    2d6f:	73 27                	jae    2d98 <ddf_dump_buffer+0x3b8>
+    2d71:	2e 2e 2e 0a 00       	cs cs or %cs:(%eax),%al
+    2d76:	54                   	push   %esp
+    2d77:	65 72 6d             	gs jb  2de7 <ddf_dump_buffer+0x407>
+    2d7a:	69 6e 61 74 69 6e 67 	imul   $0x676e6974,0x61(%esi),%ebp
+    2d81:	2e 2e 2e 0a 00       	cs cs or %cs:(%eax),%al
+    2d86:	68 65 6c 70 00       	push   $0x706c65
+    2d8b:	63 6f 6e             	arpl   %bp,0x6e(%edi)
+    2d8e:	74 72                	je     2e02 <ddf_dump_buffer+0x422>
+    2d90:	6f                   	outsl  %ds:(%esi),(%dx)
+    2d91:	6c                   	insb   (%dx),%es:(%edi)
+    2d92:	6c                   	insb   (%dx),%es:(%edi)
+    2d93:	65 72 00             	gs jb  2d96 <ddf_dump_buffer+0x3b6>
+    2d96:	6c                   	insb   (%dx),%es:(%edi)
+    2d97:	69 73 74 00 48 49 44 	imul   $0x44494800,0x74(%ebx),%esi
+    2d9e:	00 47 65             	add    %al,0x65(%edi)
+    2da1:	74 5f                	je     2e02 <ddf_dump_buffer+0x422>
+    2da3:	44                   	inc    %esp
+    2da4:	65 73 63             	gs jae 2e0a <ddf_dump_buffer+0x42a>
+    2da7:	72 69                	jb     2e12 <ddf_dump_buffer+0x432>
+    2da9:	70 74                	jo     2e1f <ddf_dump_buffer+0x43f>
+    2dab:	6f                   	outsl  %ds:(%esi),(%dx)
+    2dac:	72 00                	jb     2dae <ddf_dump_buffer+0x3ce>
+    2dae:	53                   	push   %ebx
+    2daf:	65 74 5f             	gs je  2e11 <ddf_dump_buffer+0x431>
+    2db2:	50                   	push   %eax
+    2db3:	72 6f                	jb     2e24 <ddf_dump_buffer+0x444>
+    2db5:	74 6f                	je     2e26 <ddf_dump_buffer+0x446>
+    2db7:	63 6f 6c             	arpl   %bp,0x6c(%edi)
+    2dba:	00 53 65             	add    %dl,0x65(%ebx)
+    2dbd:	74 5f                	je     2e1e <ddf_dump_buffer+0x43e>
+    2dbf:	52                   	push   %edx
+    2dc0:	65 70 6f             	gs jo  2e32 <ddf_dump_buffer+0x452>
+    2dc3:	72 74                	jb     2e39 <ddf_dump_buffer+0x459>
+    2dc5:	00 66 90             	add    %ah,-0x70(%esi)
+    2dc8:	09 09                	or     %ecx,(%ecx)
+    2dca:	6f                   	outsl  %ds:(%esi),(%dx)
+    2dcb:	20 57 69             	and    %dl,0x69(%edi)
+    2dce:	74 68                	je     2e38 <ddf_dump_buffer+0x458>
+    2dd0:	20 6e 6f             	and    %ch,0x6f(%esi)
+    2dd3:	20 61 72             	and    %ah,0x72(%ecx)
+    2dd6:	67 75 6d             	addr16 jne 2e46 <ddf_dump_buffer+0x466>
+    2dd9:	65 6e                	outsb  %gs:(%esi),(%dx)
+    2ddb:	74 20                	je     2dfd <ddf_dump_buffer+0x41d>
+    2ddd:	70 72                	jo     2e51 <ddf_dump_buffer+0x471>
+    2ddf:	69 6e 74 20 74 68 69 	imul   $0x69687420,0x74(%esi),%ebp
+    2de6:	73 20                	jae    2e08 <ddf_dump_buffer+0x428>
+    2de8:	68 65 6c 70 20       	push   $0x20706c65
+    2ded:	61                   	popa   
+    2dee:	6e                   	outsb  %ds:(%esi),(%dx)
+    2def:	64 20 65 78          	and    %ah,%fs:0x78(%ebp)
+    2df3:	69 74 2e 0a 00 09 09 	imul   $0x6f090900,0xa(%esi,%ebp,1),%esi
+    2dfa:	6f 
+    2dfb:	20 57 69             	and    %dl,0x69(%edi)
+    2dfe:	74 68                	je     2e68 <ddf_dump_buffer+0x488>
+    2e00:	20 61 72             	and    %ah,0x72(%ecx)
+    2e03:	67 75 6d             	addr16 jne 2e73 <ddf_dump_buffer+0x493>
+    2e06:	65 6e                	outsb  %gs:(%esi),(%dx)
+    2e08:	74 20                	je     2e2a <ddf_dump_buffer+0x44a>
+    2e0a:	70 72                	jo     2e7e <ddf_dump_buffer+0x49e>
+    2e0c:	69 6e 74 20 64 65 76 	imul   $0x76656420,0x74(%esi),%ebp
+    2e13:	69 63 65 20 73 70 65 	imul   $0x65707320,0x65(%ebx),%esp
+    2e1a:	63 69 66             	arpl   %bp,0x66(%ecx)
+    2e1d:	69 63 20 68 65 6c 70 	imul   $0x706c6568,0x20(%ebx),%esp
+    2e24:	20 61 6e             	and    %ah,0x6e(%ecx)
+    2e27:	64 20 65 78          	and    %ah,%fs:0x78(%ebp)
+    2e2b:	69 74 2e 0a 00 09 2d 	imul   $0x6c2d0900,0xa(%esi,%ebp,1),%esi
+    2e32:	6c 
+    2e33:	2c 20                	sub    $0x20,%al
+    2e35:	2d 2d 6c 69 73       	sub    $0x73696c2d,%eax
+    2e3a:	74 20                	je     2e5c <ddf_dump_buffer+0x47c>
+    2e3c:	0a 09                	or     (%ecx),%cl
+    2e3e:	09 50 72             	or     %edx,0x72(%eax)
+    2e41:	69 6e 74 20 6c 69 73 	imul   $0x73696c20,0x74(%esi),%ebp
+    2e48:	74 20                	je     2e6a <ddf_dump_buffer+0x48a>
+    2e4a:	6f                   	outsl  %ds:(%esi),(%dx)
+    2e4b:	66 20 61 76          	data16 and %ah,0x76(%ecx)
+    2e4f:	61                   	popa   
+    2e50:	69 6c 61 62 6c 65 20 	imul   $0x6420656c,0x62(%ecx,%eiz,2),%ebp
+    2e57:	64 
+    2e58:	65 76 69             	gs jbe 2ec4 <ddf_dump_buffer+0x4e4>
+    2e5b:	63 65 73             	arpl   %sp,0x73(%ebp)
+    2e5e:	2e 0a 00             	or     %cs:(%eax),%al
+    2e61:	00 00                	add    %al,(%eax)
+    2e63:	00 09                	add    %cl,(%ecx)
+    2e65:	2d 63 2c 20 2d       	sub    $0x2d202c63,%eax
+    2e6a:	2d 63 6f 6e 74       	sub    $0x746e6f63,%eax
+    2e6f:	72 6f                	jb     2ee0 <ddf_dump_buffer+0x500>
+    2e71:	6c                   	insb   (%dx),%es:(%edi)
+    2e72:	6c                   	insb   (%dx),%es:(%edi)
+    2e73:	65 72 20             	gs jb  2e96 <ddf_dump_buffer+0x4b6>
+    2e76:	0a 09                	or     (%ecx),%cl
+    2e78:	09 55 73             	or     %edx,0x73(%ebp)
+    2e7b:	65 20 70 72          	and    %dh,%gs:0x72(%eax)
+    2e7f:	6f                   	outsl  %ds:(%esi),(%dx)
+    2e80:	76 69                	jbe    2eeb <ddf_dump_buffer+0x50b>
+    2e82:	64 65 64 20 76 69    	fs gs and %dh,%fs:0x69(%esi)
+    2e88:	72 74                	jb     2efe <ddf_dump_buffer+0x51e>
+    2e8a:	75 61                	jne    2eed <ddf_dump_buffer+0x50d>
+    2e8c:	6c                   	insb   (%dx),%es:(%edi)
+    2e8d:	20 68 63             	and    %ch,0x63(%eax)
+    2e90:	20 69 6e             	and    %ch,0x6e(%ecx)
+    2e93:	73 74                	jae    2f09 <ddf_dump_buffer+0x529>
+    2e95:	65 61                	gs popa 
+    2e97:	64 20 6f 66          	and    %ch,%fs:0x66(%edi)
+    2e9b:	20 64 65 66          	and    %ah,0x66(%ebp,%eiz,2)
+    2e9f:	61                   	popa   
+    2ea0:	75 6c                	jne    2f0e <ddf_dump_buffer+0x52e>
+    2ea2:	74 20                	je     2ec4 <ddf_dump_buffer+0x4e4>
+    2ea4:	28 25 73 29 0a 00    	sub    %ah,0xa2973
+    2eaa:	00 00                	add    %al,(%eax)
+    2eac:	46                   	inc    %esi
+    2ead:	61                   	popa   
+    2eae:	69 6c 65 64 20 74 6f 	imul   $0x206f7420,0x64(%ebp,%eiz,2),%ebp
+    2eb5:	20 
+    2eb6:	61                   	popa   
+    2eb7:	64 64 20 64 65 76    	fs and %ah,%fs:0x76(%ebp,%eiz,2)
+    2ebd:	69 63 65 20 60 25 73 	imul   $0x73256020,0x65(%ebx),%esp
+    2ec4:	27                   	daa    
+    2ec5:	3a 20                	cmp    (%eax),%ah
+    2ec7:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    2ecc:	55                   	push   %ebp
+    2ecd:	6e                   	outsb  %ds:(%esi),(%dx)
+    2ece:	61                   	popa   
+    2ecf:	62 6c 65 20          	bound  %ebp,0x20(%ebp,%eiz,2)
+    2ed3:	74 6f                	je     2f44 <ddf_dump_buffer+0x564>
+    2ed5:	20 73 74             	and    %dh,0x74(%ebx)
+    2ed8:	61                   	popa   
+    2ed9:	72 74                	jb     2f4f <ddf_dump_buffer+0x56f>
+    2edb:	20 63 6f             	and    %ah,0x6f(%ebx)
+    2ede:	6d                   	insl   (%dx),%es:(%edi)
+    2edf:	6d                   	insl   (%dx),%es:(%edi)
+    2ee0:	75 6e                	jne    2f50 <ddf_dump_buffer+0x570>
+    2ee2:	69 63 61 74 69 6f 6e 	imul   $0x6e6f6974,0x61(%ebx),%esp
+    2ee9:	20 77 69             	and    %dh,0x69(%edi)
+    2eec:	74 68                	je     2f56 <ddf_dump_buffer+0x576>
+    2eee:	20 56 48             	and    %dl,0x48(%esi)
+    2ef1:	43                   	inc    %ebx
+    2ef2:	44                   	inc    %esp
+    2ef3:	20 60 25             	and    %ah,0x25(%eax)
+    2ef6:	73 27                	jae    2f1f <ddf_dump_buffer+0x53f>
+    2ef8:	3a 20                	cmp    (%eax),%ah
+    2efa:	25 73 2e 0a 00       	and    $0xa2e73,%eax
+    2eff:	65 70 5f             	gs jo  2f61 <ddf_dump_buffer+0x581>
+    2f02:	63 6f 75             	arpl   %bp,0x75(%edi)
+    2f05:	6e                   	outsb  %ds:(%esi),(%dx)
+    2f06:	74 20                	je     2f28 <ddf_dump_buffer+0x548>
+    2f08:	3e 20 30             	and    %dh,%ds:(%eax)
+    2f0b:	00 25 73 3a 20 4c    	add    %ah,0x4c203a73
+    2f11:	45                   	inc    %ebp
+    2f12:	44                   	inc    %esp
+    2f13:	73 20                	jae    2f35 <ddf_dump_buffer+0x555>
+    2f15:	3d 20 25 63 25       	cmp    $0x25632520,%eax
+    2f1a:	63 25 63 25 63 25    	arpl   %sp,0x25632563
+    2f20:	63 0a                	arpl   %cx,(%edx)
+    2f22:	00 62 6f             	add    %ah,0x6f(%edx)
+    2f25:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f26:	74 20                	je     2f48 <ddf_dump_buffer+0x568>
+    2f28:	6b 65 79 62          	imul   $0x62,0x79(%ebp),%esp
+    2f2c:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f2d:	61                   	popa   
+    2f2e:	72 64                	jb     2f94 <ddf_dump_buffer+0x5b4>
+    2f30:	00 62 6f             	add    %ah,0x6f(%edx)
+    2f33:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f34:	74 00                	je     2f36 <ddf_dump_buffer+0x556>
+    2f36:	42                   	inc    %edx
+    2f37:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f38:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f39:	74 20                	je     2f5b <ddf_dump_buffer+0x57b>
+    2f3b:	6b 65 79 62          	imul   $0x62,0x79(%ebp),%esp
+    2f3f:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f40:	61                   	popa   
+    2f41:	72 64                	jb     2fa7 <ddf_dump_buffer+0x5c7>
+    2f43:	20 64 69 65          	and    %ah,0x65(%ecx,%ebp,2)
+    2f47:	64 2e 00 66 90       	fs add %ah,%cs:-0x70(%esi)
+    2f4c:	42                   	inc    %edx
+    2f4d:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f4e:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f4f:	74 20                	je     2f71 <ddf_dump_buffer+0x591>
+    2f51:	6b 65 79 62          	imul   $0x62,0x79(%ebp),%esp
+    2f55:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f56:	61                   	popa   
+    2f57:	72 64                	jb     2fbd <ddf_dump_buffer+0x5dd>
+    2f59:	20 63 6f             	and    %ah,0x6f(%ebx)
+    2f5c:	6d                   	insl   (%dx),%es:(%edi)
+    2f5d:	65 73 20             	gs jae 2f80 <ddf_dump_buffer+0x5a0>
+    2f60:	74 6f                	je     2fd1 <ddf_dump_buffer+0x5f1>
+    2f62:	20 6c 69 66          	and    %ch,0x66(%ecx,%ebp,2)
+    2f66:	65 2e 2e 2e 00 90 4c 	gs cs cs add %dl,%cs:0x69676f4c(%eax)
+    2f6d:	6f 67 69 
+    2f70:	74 65                	je     2fd7 <ddf_dump_buffer+0x5f7>
+    2f72:	63 68 20             	arpl   %bp,0x20(%eax)
+    2f75:	55                   	push   %ebp
+    2f76:	6e                   	outsb  %ds:(%esi),(%dx)
+    2f77:	69 66 79 69 6e 67 20 	imul   $0x20676e69,0x79(%esi),%esp
+    2f7e:	52                   	push   %edx
+    2f7f:	65 63 65 69          	arpl   %sp,%gs:0x69(%ebp)
+    2f83:	76 65                	jbe    2fea <ddf_dump_buffer+0x60a>
+    2f85:	72 2c                	jb     2fb3 <ddf_dump_buffer+0x5d3>
+    2f87:	20 69 6e             	and    %ch,0x6e(%ecx)
+    2f8a:	74 65                	je     2ff1 <ddf_dump_buffer+0x611>
+    2f8c:	72 66                	jb     2ff4 <ddf_dump_buffer+0x614>
+    2f8e:	61                   	popa   
+    2f8f:	63 65 20             	arpl   %sp,0x20(%ebp)
+    2f92:	31 20                	xor    %esp,(%eax)
+    2f94:	28 6d 6f             	sub    %ch,0x6f(%ebp)
+    2f97:	75 73                	jne    300c <ddf_dump_buffer+0x62c>
+    2f99:	65 29 00             	sub    %eax,%gs:(%eax)
+    2f9c:	4d                   	dec    %ebp
+    2f9d:	6f                   	outsl  %ds:(%esi),(%dx)
+    2f9e:	75 73                	jne    3013 <ddf_dump_buffer+0x633>
+    2fa0:	65 20 6f 66          	and    %ch,%gs:0x66(%edi)
+    2fa4:	20 4c 6f 67          	and    %cl,0x67(%edi,%ebp,2)
+    2fa8:	69 74 65 63 68 20 55 	imul   $0x6e552068,0x63(%ebp,%eiz,2),%esi
+    2faf:	6e 
+    2fb0:	69 66 79 69 6e 67 20 	imul   $0x20676e69,0x79(%esi),%esp
+    2fb7:	52                   	push   %edx
+    2fb8:	65 63 65 69          	arpl   %sp,%gs:0x69(%ebp)
+    2fbc:	76 65                	jbe    3023 <ddf_dump_buffer+0x643>
+    2fbe:	72 20                	jb     2fe0 <ddf_dump_buffer+0x600>
+    2fc0:	63 6f 6d             	arpl   %bp,0x6d(%edi)
+    2fc3:	65 73 20             	gs jae 2fe6 <ddf_dump_buffer+0x606>
+    2fc6:	74 6f                	je     3037 <ddf_dump_buffer+0x657>
+    2fc8:	20 6c 69 66          	and    %ch,0x66(%ecx,%ebp,2)
+    2fcc:	65 2e 2e 2e 00 00    	gs cs cs add %al,%cs:(%eax)
+    2fd2:	00 00                	add    %al,(%eax)
+    2fd4:	4d                   	dec    %ebp
+    2fd5:	6f                   	outsl  %ds:(%esi),(%dx)
+    2fd6:	75 73                	jne    304b <ddf_dump_buffer+0x66b>
+    2fd8:	65 20 6f 66          	and    %ch,%gs:0x66(%edi)
+    2fdc:	20 4c 6f 67          	and    %cl,0x67(%edi,%ebp,2)
+    2fe0:	69 74 65 63 68 20 55 	imul   $0x6e552068,0x63(%ebp,%eiz,2),%esi
+    2fe7:	6e 
+    2fe8:	69 66 79 69 6e 67 20 	imul   $0x20676e69,0x79(%esi),%esp
+    2fef:	52                   	push   %edx
+    2ff0:	65 63 65 69          	arpl   %sp,%gs:0x69(%ebp)
+    2ff4:	76 65                	jbe    305b <ddf_dump_buffer+0x67b>
+    2ff6:	72 20                	jb     3018 <ddf_dump_buffer+0x638>
+    2ff8:	64 69 73 63 6f 6e 6e 	imul   $0x656e6e6f,%fs:0x63(%ebx),%esi
+    2fff:	65 
+    3000:	63 74 65 64          	arpl   %si,0x64(%ebp,%eiz,2)
+    3004:	2e 00 6c 77 31       	add    %ch,%cs:0x31(%edi,%esi,2)
+    3009:	00 73 72             	add    %dh,0x72(%ebx)
+    300c:	63 2f                	arpl   %bp,(%edi)
+    300e:	64 65 76 69          	fs gs jbe 307b <ddf_dump_buffer+0x69b>
+    3012:	63 65 2e             	arpl   %sp,0x2e(%ebp)
+    3015:	63 00                	arpl   %ax,(%eax)
+    3017:	44                   	inc    %esp
+    3018:	45                   	inc    %ebp
+    3019:	56                   	push   %esi
+    301a:	20 21                	and    %ah,(%ecx)
+    301c:	3d 20 4e 55 4c       	cmp    $0x4c554e20,%eax
+    3021:	4c                   	dec    %esp
+    3022:	00 90 98 1f 00 00    	add    %dl,0x1f98(%eax)
+    3028:	08 20                	or     %ah,(%eax)
+    302a:	00 00                	add    %al,(%eax)
+    302c:	58                   	pop    %eax
+    302d:	21 00                	and    %eax,(%eax)
+    302f:	00 e0                	add    %ah,%al
+    3031:	20 00                	and    %al,(%eax)
+    3033:	00 08                	add    %cl,(%eax)
+    3035:	21 00                	and    %eax,(%eax)
+    3037:	00 f8                	add    %bh,%al
+    3039:	1e                   	push   %ds
+    303a:	00 00                	add    %al,(%eax)
+    303c:	20 1f                	and    %bl,(%edi)
+    303e:	00 00                	add    %al,(%eax)
+    3040:	53                   	push   %ebx
+    3041:	65 74 41             	gs je  3085 <ddf_dump_buffer+0x6a5>
+    3044:	64 64 72 65          	fs fs jb 30ad <ddf_dump_buffer+0x6cd>
+    3048:	73 73                	jae    30bd <ddf_dump_buffer+0x6dd>
+    304a:	00 47 65             	add    %al,0x65(%edi)
+    304d:	74 53                	je     30a2 <ddf_dump_buffer+0x6c2>
+    304f:	74 64                	je     30b5 <ddf_dump_buffer+0x6d5>
+    3051:	44                   	inc    %esp
+    3052:	65 73 63             	gs jae 30b8 <ddf_dump_buffer+0x6d8>
+    3055:	72 69                	jb     30c0 <ddf_dump_buffer+0x6e0>
+    3057:	70 74                	jo     30cd <ddf_dump_buffer+0x6ed>
+    3059:	6f                   	outsl  %ds:(%esi),(%dx)
+    305a:	72 00                	jb     305c <ddf_dump_buffer+0x67c>
+    305c:	53                   	push   %ebx
+    305d:	65 74 43             	gs je  30a3 <ddf_dump_buffer+0x6c3>
+    3060:	6f                   	outsl  %ds:(%esi),(%dx)
+    3061:	6e                   	outsb  %ds:(%esi),(%dx)
+    3062:	66 69 67 75 72 61    	imul   $0x6172,0x75(%edi),%sp
+    3068:	74 69                	je     30d3 <ddf_dump_buffer+0x6f3>
+    306a:	6f                   	outsl  %ds:(%esi),(%dx)
+    306b:	6e                   	outsb  %ds:(%esi),(%dx)
+    306c:	00 47 65             	add    %al,0x65(%edi)
+    306f:	74 44                	je     30b5 <ddf_dump_buffer+0x6d5>
+    3071:	65 76 69             	gs jbe 30dd <ddf_dump_buffer+0x6fd>
+    3074:	63 65 53             	arpl   %sp,0x53(%ebp)
+    3077:	74 61                	je     30da <ddf_dump_buffer+0x6fa>
+    3079:	74 75                	je     30f0 <ddf_dump_buffer+0x710>
+    307b:	73 00                	jae    307d <ddf_dump_buffer+0x69d>
+    307d:	47                   	inc    %edi
+    307e:	65 74 49             	gs je  30ca <ddf_dump_buffer+0x6ea>
+    3081:	6e                   	outsb  %ds:(%esi),(%dx)
+    3082:	74 65                	je     30e9 <ddf_dump_buffer+0x709>
+    3084:	72 66                	jb     30ec <ddf_dump_buffer+0x70c>
+    3086:	61                   	popa   
+    3087:	63 65 53             	arpl   %sp,0x53(%ebp)
+    308a:	74 61                	je     30ed <ddf_dump_buffer+0x70d>
+    308c:	74 75                	je     3103 <ddf_dump_buffer+0x723>
+    308e:	73 00                	jae    3090 <ddf_dump_buffer+0x6b0>
+    3090:	47                   	inc    %edi
+    3091:	65 74 45             	gs je  30d9 <ddf_dump_buffer+0x6f9>
+    3094:	6e                   	outsb  %ds:(%esi),(%dx)
+    3095:	64 70 6f             	fs jo  3107 <ddf_dump_buffer+0x727>
+    3098:	69 6e 74 53 74 61 74 	imul   $0x74617453,0x74(%esi),%ebp
+    309f:	75 73                	jne    3114 <ddf_dump_buffer+0x734>
+    30a1:	00 49 4e             	add    %cl,0x4e(%ecx)
+    30a4:	00 73 72             	add    %dh,0x72(%ebx)
+    30a7:	63 2f                	arpl   %bp,(%edi)
+    30a9:	74 72                	je     311d <ddf_dump_buffer+0x73d>
+    30ab:	61                   	popa   
+    30ac:	6e                   	outsb  %ds:(%esi),(%dx)
+    30ad:	73 66                	jae    3115 <ddf_dump_buffer+0x735>
+    30af:	65 72 2e             	gs jb  30e0 <ddf_dump_buffer+0x700>
+    30b2:	63 00                	arpl   %ax,(%eax)
+    30b4:	64 65 76 00          	fs gs jbe 30b8 <ddf_dump_buffer+0x6d8>
+    30b8:	64 65 76 2d          	fs gs jbe 30e9 <ddf_dump_buffer+0x709>
+    30bc:	3e 6f                	outsl  %ds:(%esi),(%dx)
+    30be:	70 73                	jo     3133 <ddf_dump_buffer+0x753>
+    30c0:	00 66 90             	add    %ah,-0x70(%esi)
+    30c3:	90                   	nop
+    30c4:	43                   	inc    %ebx
+    30c5:	6f                   	outsl  %ds:(%esi),(%dx)
+    30c6:	6e                   	outsb  %ds:(%esi),(%dx)
+    30c7:	74 72                	je     313b <ddf_dump_buffer+0x75b>
+    30c9:	6f                   	outsl  %ds:(%esi),(%dx)
+    30ca:	6c                   	insb   (%dx),%es:(%edi)
+    30cb:	20 74 72 61          	and    %dh,0x61(%edx,%esi,2)
+    30cf:	6e                   	outsb  %ds:(%esi),(%dx)
+    30d0:	73 66                	jae    3138 <ddf_dump_buffer+0x758>
+    30d2:	65 72 20             	gs jb  30f5 <ddf_dump_buffer+0x715>
+    30d5:	7b 25                	jnp    30fc <ddf_dump_buffer+0x71c>
+    30d7:	73 20                	jae    30f9 <ddf_dump_buffer+0x719>
+    30d9:	28 25 73 29 7d 20    	sub    %ah,0x207d2973
+    30df:	6e                   	outsb  %ds:(%esi),(%dx)
+    30e0:	6f                   	outsl  %ds:(%esi),(%dx)
+    30e1:	74 20                	je     3103 <ddf_dump_buffer+0x723>
+    30e3:	68 61 6e 64 6c       	push   $0x6c646e61
+    30e8:	65 64 2e 0a 00       	gs fs or %cs:(%eax),%al
+    30ed:	00 00                	add    %al,(%eax)
+    30ef:	00 73 72             	add    %dh,0x72(%ebx)
+    30f2:	63 2f                	arpl   %bp,(%edi)
+    30f4:	63 74 72 6c          	arpl   %si,0x6c(%edx,%esi,2)
+    30f8:	74 72                	je     316c <ddf_dump_buffer+0x78c>
+    30fa:	61                   	popa   
+    30fb:	6e                   	outsb  %ds:(%esi),(%dx)
+    30fc:	73 66                	jae    3164 <ddf_dump_buffer+0x784>
+    30fe:	65 72 2e             	gs jb  312f <ddf_dump_buffer+0x74f>
+    3101:	63 00                	arpl   %ax,(%eax)
+    3103:	73 65                	jae    316a <ddf_dump_buffer+0x78a>
+    3105:	74 75                	je     317c <ddf_dump_buffer+0x79c>
+    3107:	70 00                	jo     3109 <ddf_dump_buffer+0x729>
+    3109:	43                   	inc    %ebx
+    310a:	6f                   	outsl  %ds:(%esi),(%dx)
+    310b:	6e                   	outsb  %ds:(%esi),(%dx)
+    310c:	74 72                	je     3180 <ddf_dump_buffer+0x7a0>
+    310e:	6f                   	outsl  %ds:(%esi),(%dx)
+    310f:	6c                   	insb   (%dx),%es:(%edi)
+    3110:	20 74 72 61          	and    %dh,0x61(%edx,%esi,2)
+    3114:	6e                   	outsb  %ds:(%esi),(%dx)
+    3115:	73 66                	jae    317d <ddf_dump_buffer+0x79d>
+    3117:	65 72 3a             	gs jb  3154 <ddf_dump_buffer+0x774>
+    311a:	20 25 73 28 25 73    	and    %ah,0x73252873
+    3120:	29 0a                	sub    %ecx,(%edx)
+    3122:	00 20                	add    %ah,(%eax)
+    3124:	20 00                	and    %al,(%eax)
+    3126:	28 6e 75             	sub    %ch,0x75(%esi)
+    3129:	6c                   	insb   (%dx),%es:(%edi)
+    312a:	6c                   	insb   (%dx),%es:(%edi)
+    312b:	29 00                	sub    %eax,(%eax)
+    312d:	28 65 6d             	sub    %ah,0x6d(%ebp)
+    3130:	70 74                	jo     31a6 <ddf_dump_buffer+0x7c6>
+    3132:	79 29                	jns    315d <ddf_dump_buffer+0x77d>
+    3134:	00 25 73 25 30 38    	add    %ah,0x38302573
+    313a:	78 00                	js     313c <ddf_dump_buffer+0x75c>
+    313c:	25 73 25 30 34       	and    $0x34302573,%eax
+    3141:	68 78 00 25 73       	push   $0x73250078
+    3146:	25 30 32 68 68       	and    $0x68683230,%eax
+    314b:	78 00                	js     314d <ddf_dump_buffer+0x76d>
+    314d:	67 65 6e             	outsb  %gs:(%si),(%dx)
+    3150:	65 72 69             	gs jb  31bc <ddf_dump_buffer+0x7dc>
+    3153:	63 2f                	arpl   %bp,(%edi)
+    3155:	6c                   	insb   (%dx),%es:(%edi)
+    3156:	6f                   	outsl  %ds:(%esi),(%dx)
+    3157:	67 62 75 66          	bound  %esi,0x66(%di)
+    315b:	2e 63 00             	arpl   %ax,%cs:(%eax)
+    315e:	70 72                	jo     31d2 <ddf_dump_buffer+0x7f2>
+    3160:	69 6e 74 65 64 20 3e 	imul   $0x3e206465,0x74(%esi),%ebp
+    3167:	3d 20 30 00 20       	cmp    $0x20003020,%eax
+    316c:	28 25 7a 75 29 2e    	sub    %ah,0x2e29757a
+    3172:	2e                   	cs
+    3173:	2e                   	cs
+	...
+
+Disassembly of section .plt:
+
+000032e0 <__main@plt-0x10>:
+    32e0:	ff 35 b8 51 00 00    	pushl  0x51b8
+    32e6:	ff 25 bc 51 00 00    	jmp    *0x51bc
+    32ec:	00 00                	add    %al,(%eax)
+	...
+
+000032f0 <__main@plt>:
+    32f0:	ff 25 c0 51 00 00    	jmp    *0x51c0
+    32f6:	68 00 00 00 00       	push   $0x0
+    32fb:	e9 e0 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003300 <devman_device_connect@plt>:
+    3300:	ff 25 c4 51 00 00    	jmp    *0x51c4
+    3306:	68 08 00 00 00       	push   $0x8
+    330b:	e9 d0 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003310 <printf@plt>:
+    3310:	ff 25 c8 51 00 00    	jmp    *0x51c8
+    3316:	68 10 00 00 00       	push   $0x10
+    331b:	e9 c0 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003320 <async_hangup@plt>:
+    3320:	ff 25 cc 51 00 00    	jmp    *0x51cc
+    3326:	68 18 00 00 00       	push   $0x18
+    332b:	e9 b0 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003330 <getopt_long@plt>:
+    3330:	ff 25 d0 51 00 00    	jmp    *0x51d0
+    3336:	68 20 00 00 00       	push   $0x20
+    333b:	e9 a0 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003340 <snprintf@plt>:
+    3340:	ff 25 d4 51 00 00    	jmp    *0x51d4
+    3346:	68 28 00 00 00       	push   $0x28
+    334b:	e9 90 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003350 <log_init@plt>:
+    3350:	ff 25 d8 51 00 00    	jmp    *0x51d8
+    3356:	68 30 00 00 00       	push   $0x30
+    335b:	e9 80 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003360 <async_data_read_finalize@plt>:
+    3360:	ff 25 dc 51 00 00    	jmp    *0x51dc
+    3366:	68 38 00 00 00       	push   $0x38
+    336b:	e9 70 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003370 <memcpy@plt>:
+    3370:	ff 25 e0 51 00 00    	jmp    *0x51e0
+    3376:	68 40 00 00 00       	push   $0x40
+    337b:	e9 60 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003380 <malloc@plt>:
+    3380:	ff 25 e4 51 00 00    	jmp    *0x51e4
+    3386:	68 48 00 00 00       	push   $0x48
+    338b:	e9 50 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003390 <str_append@plt>:
+    3390:	ff 25 e8 51 00 00    	jmp    *0x51e8
+    3396:	68 50 00 00 00       	push   $0x50
+    339b:	e9 40 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000033a0 <async_answer_0@plt>:
+    33a0:	ff 25 ec 51 00 00    	jmp    *0x51ec
+    33a6:	68 58 00 00 00       	push   $0x58
+    33ab:	e9 30 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000033b0 <fibril_condvar_wait@plt>:
+    33b0:	ff 25 f0 51 00 00    	jmp    *0x51f0
+    33b6:	68 60 00 00 00       	push   $0x60
+    33bb:	e9 20 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000033c0 <log_msg@plt>:
+    33c0:	ff 25 f4 51 00 00    	jmp    *0x51f4
+    33c6:	68 68 00 00 00       	push   $0x68
+    33cb:	e9 10 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000033d0 <async_exchange_end@plt>:
+    33d0:	ff 25 f8 51 00 00    	jmp    *0x51f8
+    33d6:	68 70 00 00 00       	push   $0x70
+    33db:	e9 00 ff ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000033e0 <assert_abort@plt>:
+    33e0:	ff 25 fc 51 00 00    	jmp    *0x51fc
+    33e6:	68 78 00 00 00       	push   $0x78
+    33eb:	e9 f0 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000033f0 <fibril_condvar_initialize@plt>:
+    33f0:	ff 25 00 52 00 00    	jmp    *0x5200
+    33f6:	68 80 00 00 00       	push   $0x80
+    33fb:	e9 e0 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003400 <fprintf@plt>:
+    3400:	ff 25 04 52 00 00    	jmp    *0x5204
+    3406:	68 88 00 00 00       	push   $0x88
+    340b:	e9 d0 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003410 <fibril_condvar_broadcast@plt>:
+    3410:	ff 25 08 52 00 00    	jmp    *0x5208
+    3416:	68 90 00 00 00       	push   $0x90
+    341b:	e9 c0 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003420 <fibril_mutex_unlock@plt>:
+    3420:	ff 25 0c 52 00 00    	jmp    *0x520c
+    3426:	68 98 00 00 00       	push   $0x98
+    342b:	e9 b0 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003430 <fibril_mutex_initialize@plt>:
+    3430:	ff 25 10 52 00 00    	jmp    *0x5210
+    3436:	68 a0 00 00 00       	push   $0xa0
+    343b:	e9 a0 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003440 <realloc@plt>:
+    3440:	ff 25 14 52 00 00    	jmp    *0x5214
+    3446:	68 a8 00 00 00       	push   $0xa8
+    344b:	e9 90 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003450 <async_create_callback_port@plt>:
+    3450:	ff 25 18 52 00 00    	jmp    *0x5218
+    3456:	68 b0 00 00 00       	push   $0xb0
+    345b:	e9 80 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003460 <str_cmp@plt>:
+    3460:	ff 25 1c 52 00 00    	jmp    *0x521c
+    3466:	68 b8 00 00 00       	push   $0xb8
+    346b:	e9 70 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003470 <memset@plt>:
+    3470:	ff 25 20 52 00 00    	jmp    *0x5220
+    3476:	68 c0 00 00 00       	push   $0xc0
+    347b:	e9 60 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003480 <async_data_read_receive@plt>:
+    3480:	ff 25 24 52 00 00    	jmp    *0x5224
+    3486:	68 c8 00 00 00       	push   $0xc8
+    348b:	e9 50 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003490 <str_cpy@plt>:
+    3490:	ff 25 28 52 00 00    	jmp    *0x5228
+    3496:	68 d0 00 00 00       	push   $0xd0
+    349b:	e9 40 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000034a0 <async_usleep@plt>:
+    34a0:	ff 25 2c 52 00 00    	jmp    *0x522c
+    34a6:	68 d8 00 00 00       	push   $0xd8
+    34ab:	e9 30 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000034b0 <async_get_call_timeout@plt>:
+    34b0:	ff 25 30 52 00 00    	jmp    *0x5230
+    34b6:	68 e0 00 00 00       	push   $0xe0
+    34bb:	e9 20 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000034c0 <str_size@plt>:
+    34c0:	ff 25 34 52 00 00    	jmp    *0x5234
+    34c6:	68 e8 00 00 00       	push   $0xe8
+    34cb:	e9 10 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000034d0 <async_answer_1@plt>:
+    34d0:	ff 25 38 52 00 00    	jmp    *0x5238
+    34d6:	68 f0 00 00 00       	push   $0xf0
+    34db:	e9 00 fe ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000034e0 <async_exchange_begin@plt>:
+    34e0:	ff 25 3c 52 00 00    	jmp    *0x523c
+    34e6:	68 f8 00 00 00       	push   $0xf8
+    34eb:	e9 f0 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+000034f0 <str_error@plt>:
+    34f0:	ff 25 40 52 00 00    	jmp    *0x5240
+    34f6:	68 00 01 00 00       	push   $0x100
+    34fb:	e9 e0 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003500 <devman_fun_get_handle@plt>:
+    3500:	ff 25 44 52 00 00    	jmp    *0x5244
+    3506:	68 08 01 00 00       	push   $0x108
+    350b:	e9 d0 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003510 <async_data_write_accept@plt>:
+    3510:	ff 25 48 52 00 00    	jmp    *0x5248
+    3516:	68 10 01 00 00       	push   $0x110
+    351b:	e9 c0 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003520 <fibril_create_generic@plt>:
+    3520:	ff 25 4c 52 00 00    	jmp    *0x524c
+    3526:	68 18 01 00 00       	push   $0x118
+    352b:	e9 b0 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003530 <fibril_add_ready@plt>:
+    3530:	ff 25 50 52 00 00    	jmp    *0x5250
+    3536:	68 20 01 00 00       	push   $0x120
+    353b:	e9 a0 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003540 <__syscall_fast@plt>:
+    3540:	ff 25 54 52 00 00    	jmp    *0x5254
+    3546:	68 28 01 00 00       	push   $0x128
+    354b:	e9 90 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003550 <free@plt>:
+    3550:	ff 25 58 52 00 00    	jmp    *0x5258
+    3556:	68 30 01 00 00       	push   $0x130
+    355b:	e9 80 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>
+
+00003560 <fibril_mutex_lock@plt>:
+    3560:	ff 25 5c 52 00 00    	jmp    *0x525c
+    3566:	68 38 01 00 00       	push   $0x138
+    356b:	e9 70 fd ff ff       	jmp    32e0 <ddf_dump_buffer+0x900>

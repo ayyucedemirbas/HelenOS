@@ -1,0 +1,39 @@
+# DO NOT DELETE
+
+common.o: common.h ../../lib/math/include/mathtypes.h
+common.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+common.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+common.o: ../../lib/c/arch/ia32/include/libarch/common.h
+add.o: add.h ../../lib/math/include/mathtypes.h
+add.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+add.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+add.o: ../../lib/c/arch/ia32/include/libarch/common.h comparison.h common.h
+add.o: sub.h
+sub.o: sub.h ../../lib/math/include/mathtypes.h
+sub.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+sub.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+sub.o: ../../lib/c/arch/ia32/include/libarch/common.h comparison.h common.h
+sub.o: add.h
+div.o: add.h ../../lib/math/include/mathtypes.h
+div.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+div.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+div.o: ../../lib/c/arch/ia32/include/libarch/common.h div.h comparison.h
+div.o: mul.h common.h
+mul.o: mul.h ../../lib/math/include/mathtypes.h
+mul.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+mul.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+mul.o: ../../lib/c/arch/ia32/include/libarch/common.h comparison.h common.h
+neg.o: neg.h ../../lib/math/include/mathtypes.h
+neg.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+neg.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+neg.o: ../../lib/c/arch/ia32/include/libarch/common.h common.h
+comparison.o: comparison.h ../../lib/math/include/mathtypes.h
+comparison.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+comparison.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+comparison.o: ../../lib/c/arch/ia32/include/libarch/common.h common.h
+conversion.o: conversion.h ../../lib/math/include/mathtypes.h
+conversion.o: ../../lib/c/include/byteorder.h ../../lib/c/include/stdint.h
+conversion.o: ../../lib/c/arch/ia32/include/libarch/stdint.h
+conversion.o: ../../lib/c/arch/ia32/include/libarch/common.h comparison.h
+conversion.o: common.h
+# DO NOT DELETE
